@@ -23,6 +23,7 @@
     "eval:ai:controlled-fixture-patch": "tsx scripts/ai-eval-controlled-fixture-patch.ts",
     "qa:learning-quality": "pnpm qa:content && tsx scripts/generate-content-quality-assets.ts",
     "content:quality-assets": "tsx scripts/generate-content-quality-assets.ts",
+    "content:d7-register": "tsx scripts/content-d7-signoff-sweep.ts",
     "content:transcript-sources": "tsx scripts/apply-source-transcripts.ts --dry-run",
     "content:pilot-feedback": "tsx scripts/analyze-pilot-feedback.ts",
     "env:audit": "tsx scripts/env-audit.ts",

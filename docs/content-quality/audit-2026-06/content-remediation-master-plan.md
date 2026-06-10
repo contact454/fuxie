@@ -12,10 +12,11 @@ Ngày lập: 2026-06 · Trạng thái: Đang thực thi · Liên quan: PR #21 (`
 - `scripts/content-status-board.ts`: 36/36 cell `qaMachine=pass`; `cells with machine defect: 0`.
 - D3 topic-match: 36/36 cell `D3=pass`; 6 listening items regenerated for real topic mismatch, 16 functional-topic false positives covered by audited semantic evidence in `topic-evidence-overrides.json`.
 - `scripts/content-qa.ts`: 1.193 file scanned, 0 errors, 0 warnings.
+- `scripts/content-d7-signoff-sweep.ts`: D7 register đã tạo từ board + manifest + sample packs, bao phủ 36/36 cell và 120 review inputs; 0 sample file thiếu.
 - `docs/content-quality/audit-2026-06/cell-ownership-map.md`: đã gán owner/workstream cho đủ 36 cell.
 - `.github/workflows/ci.yml`: CI `check-quick` chạy `pnpm qa:german-lint --diff` với LanguageTool service + PBT.
 - `scripts/content-generation-guard.ts`: guard foundation chặn D1/D2/D3/D4/D5 trước khi generator ghi nội dung.
-- Tồn đọng không được tự chứng nhận: 35/36 cell còn `academicSignoff=pending`; 6/6 listening cell còn `audio=pending`. Vì vậy chương trình hiện **machine-clean**, chưa **release-signed** toàn bộ.
+- Tồn đọng không được tự chứng nhận: 35/36 cell còn `academicSignoff=pending`; 6/6 listening cell còn `audio=pending`. Vì vậy chương trình hiện **machine-clean**, chưa **release-signed** toàn bộ; register D7 dùng để điều phối quyết định còn lại, không tự ký thay reviewer.
 
 ---
 

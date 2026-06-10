@@ -40,6 +40,7 @@ Vai phoi hop: German Academic Lead, German Curriculum Designer, Vietnamese-Germa
 
 - `pnpm qa:content` (= `tsx scripts/content-qa.ts`): **0 lỗi / 0 cảnh báo** trên 1193 file.
 - `tsx scripts/content-status-board.ts`: **36/36 cell qaMachine=pass**, `cells with machine defect: 0` trên 1.187 tracked content files.
+- `tsx scripts/content-d7-signoff-sweep.ts`: **36/36 cell** trong D7 register, **120 review inputs** (60 human spot-check + D2 24 + D3 24 + D4 12), **0 missing sample file**.
 - `tests/content-audit/content-generation-guard.spec.ts` + `program-quality.spec.ts`: **13/13 pass** cho guard generator + board/gate invariants.
 - `tests/content-audit/*.spec.ts`: **18/18 pass** (gate zero-boilerplate reading đã bật).
 - Answer integrity: 1,282 đáp án reading bất biến (regenerate script assert immutable `answer`/`options`/`stem` mỗi file).
@@ -47,7 +48,7 @@ Vai phoi hop: German Academic Lead, German Curriculum Designer, Vietnamese-Germa
 
 ## 5. Còn lại — cần phán đoán con người (không auto được)
 
-- **Academic_Signoff toàn chương trình:** hiện `signoff-manifest.json` có 1/36 cell signed (`reading/C2`), 35/36 pending. Machine-clean không đồng nghĩa release-signed.
+- **Academic_Signoff toàn chương trình:** hiện `signoff-manifest.json` có 1/36 cell signed (`reading/C2`), 35/36 pending. Machine-clean không đồng nghĩa release-signed. D7 tracking hiện tập trung ở `docs/content-quality/audit-2026-06/d7-signoff-register.md`.
 - **Audio_Restubbing listening:** 6/6 listening cell còn `audio=pending`; mọi transcript đã đổi cần audio parity/re-record trước khi gọi là Done đủ.
 
 - **Review thủ công Layer 2 sâu:** D1 proofreading, D2 level-fit, D3 ngữ nghĩa đáp án, D4 naturalness, D7 transcript-khớp-script, D8 blueprint fidelity. Mẫu phân tầng đã lập sẵn (`tmp/d2-/d3-/d4-manual-sample.json`).

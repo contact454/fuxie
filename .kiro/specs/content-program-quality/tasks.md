@@ -38,6 +38,7 @@ Dựng khung chương trình quản lý chất lượng + remediation cho 1.187 
 
 - [x] 3. Signoff manifest D7 (người cập nhật)
   - Tạo `docs/content-quality/audit-2026-06/signoff-manifest.json` khởi tạo 36 cell, `signoff: pending` (trung thực: CHƯA có người Đức duyệt cell nào). Board đọc manifest cho D7 + audio; máy không tự đặt Done-đủ.
+  - `scripts/content-d7-signoff-sweep.ts` sinh `d7-signoff-register.{json,md}` từ board + manifest + 60 human spot-check samples + D2/D3/D4 manual sample packs; register hiện 36/36 cell, 120 review inputs, 0 missing sample file, và giữ 35/36 cell ở trạng thái pending native review.
   - _Requirements: 3.1, 3.2, 3.3_
 
 - [x] 4. CI hook chặn PR content
@@ -62,6 +63,7 @@ Dựng khung chương trình quản lý chất lượng + remediation cho 1.187 
 - [x] 7. Báo cáo + tiêu chí đợt + bàn giao governance
   - Scanner xuất `status-board.{md,json}` theo cell; trạng thái hiện tại: 36/36 cell `Done (máy)`, 1/36 `Done (đủ)`.
   - D3 advisory đã sạch toàn board: 6 listening item được tái tạo đúng topic, lỗi chữ Đức `aktüll/genaür/beqümer` đã sửa, và schema `opinion_texts` được đưa vào content extraction.
+  - D7 register xuất rõ blocker còn lại: 35/36 cell pending academic/native review, 6/6 listening cell pending audio parity/restub; không có sample file nào thiếu.
   - `cell-ownership-map.md` định nghĩa owner, next gate, và quy tắc governance: Status_Board là nguồn máy, signoff manifest là nguồn D7/audio.
   - Release criterion giữ nguyên: "Done (đủ)" cần Academic_Signoff và listening audio không pending; các cell pending không được coi là release-signed dù machine-clean.
   - _Requirements: 4.1, 4.4, 6.1, 6.2, 6.3_

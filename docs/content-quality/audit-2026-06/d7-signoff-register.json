@@ -1,0 +1,2214 @@
+{
+  "generatedAt": "2026-06-10T08:37:20.722Z",
+  "sources": {
+    "statusBoard": "docs/content-quality/audit-2026-06/status-board.json",
+    "signoffManifest": "docs/content-quality/audit-2026-06/signoff-manifest.json",
+    "humanSpotCheckSamples": "docs/content-quality/human-spot-check-samples.md",
+    "d2ManualSample": "tmp/d2-manual-sample.json",
+    "d3ManualSample": "tmp/d3-manual-sample.json",
+    "d4ManualSample": "tmp/d4-manual-sample.json"
+  },
+  "summary": {
+    "totalCells": 36,
+    "totalFiles": 1187,
+    "qaMachinePassCells": 36,
+    "d3PassCells": 36,
+    "academicSignedCells": 1,
+    "academicPendingCells": 35,
+    "audioPendingCells": 6,
+    "releaseSignedCells": 1,
+    "humanSpotCheckSamples": 60,
+    "d2ManualSamples": 24,
+    "d3ManualSamples": 24,
+    "d4ManualSamples": 12,
+    "missingSampleFiles": 0
+  },
+  "rules": [
+    "D1-D6 machine pass is necessary but not sufficient for release-grade content.",
+    "D7 signoff must be recorded in signoff-manifest.json by an accountable reviewer.",
+    "Listening cells also require audio parity/restub state to be non-pending before Done (du).",
+    "AI advisory review may prepare evidence, but native/human signoff remains pending until explicitly recorded."
+  ],
+  "cells": [
+    {
+      "cell": "reading/A1",
+      "files": 30,
+      "d1": "pass",
+      "d2": "pass",
+      "d3": "pass",
+      "d4": "n/a",
+      "d5": "pass",
+      "qaMachine": "pass",
+      "academicSignoff": "pending",
+      "audio": "n/a",
+      "status": "Done (máy)",
+      "violations": [],
+      "d3EvidenceOverrides": [],
+      "requiredReviewer": "German Academic Lead",
+      "decisionState": "pending_native_review",
+      "manualSampleCounts": {
+        "human-spot-check": 3,
+        "d2-manual-sample": 2,
+        "d3-manual-sample": 2
+      },
+      "blockers": [
+        "academic/native D7 signoff pending"
+      ],
+      "nextAction": "Run D7 academic/native review and record decision in signoff-manifest.json."
+    },
+    {
+      "cell": "listening/A1",
+      "files": 32,
+      "d1": "pass",
+      "d2": "pass",
+      "d3": "pass",
+      "d4": "pass",
+      "d5": "pass",
+      "qaMachine": "pass",
+      "academicSignoff": "pending",
+      "audio": "pending",
+      "status": "Done (máy)",
+      "violations": [],
+      "d3EvidenceOverrides": [
+        "L-A1-GOETHE-001-T1",
+        "L-A1-GOETHE-003-T1",
+        "L-A1-GOETHE-003-T2",
+        "L-A1-GOETHE-004-T1",
+        "L-A1-GOETHE-005-T2",
+        "L-A1-GOETHE-005-T3",
+        "L-A1-GOETHE-010-T1",
+        "L-A1-GOETHE-010-T2",
+        "L-A1-GOETHE-010-T3"
+      ],
+      "requiredReviewer": "German Academic Lead + Audio Script & Voice Producer",
+      "decisionState": "pending_native_review",
+      "manualSampleCounts": {
+        "human-spot-check": 3,
+        "d2-manual-sample": 2,
+        "d3-manual-sample": 2
+      },
+      "blockers": [
+        "academic/native D7 signoff pending",
+        "listening audio parity/restub pending"
+      ],
+      "nextAction": "Run D7 academic review, then Audio_Restubbing/parity before final signoff."
+    },
+    {
+      "cell": "writing/A1",
+      "files": 35,
+      "d1": "pass",
+      "d2": "pass",
+      "d3": "pass",
+      "d4": "n/a",
+      "d5": "n/a",
+      "qaMachine": "pass",
+      "academicSignoff": "pending",
+      "audio": "n/a",
+      "status": "Done (máy)",
+      "violations": [],
+      "d3EvidenceOverrides": [],
+      "requiredReviewer": "German Academic Lead",
+      "decisionState": "pending_native_review",
+      "manualSampleCounts": {
+        "human-spot-check": 1
+      },
+      "blockers": [
+        "academic/native D7 signoff pending"
+      ],
+      "nextAction": "Run D7 academic/native review and record decision in signoff-manifest.json."
+    },
+    {
+      "cell": "speaking/A1",
+      "files": 10,
+      "d1": "pass",
+      "d2": "pass",
+      "d3": "n/a",
+      "d4": "n/a",
+      "d5": "n/a",
+      "qaMachine": "pass",
+      "academicSignoff": "pending",
+      "audio": "n/a",
+      "status": "Done (máy)",
+      "violations": [],
+      "d3EvidenceOverrides": [],
+      "requiredReviewer": "German Academic Lead",
+      "decisionState": "pending_native_review",
+      "manualSampleCounts": {
+        "human-spot-check": 1
+      },
+      "blockers": [
+        "academic/native D7 signoff pending"
+      ],
+      "nextAction": "Run D7 academic/native review and record decision in signoff-manifest.json."
+    },
+    {
+      "cell": "vocabulary/A1",
+      "files": 21,
+      "d1": "pass",
+      "d2": "pass",
+      "d3": "n/a",
+      "d4": "n/a",
+      "d5": "n/a",
+      "qaMachine": "pass",
+      "academicSignoff": "pending",
+      "audio": "n/a",
+      "status": "Done (máy)",
+      "violations": [],
+      "d3EvidenceOverrides": [],
+      "requiredReviewer": "German Academic Lead + Content QA / Linguistic Reviewer",
+      "decisionState": "pending_native_review",
+      "manualSampleCounts": {
+        "human-spot-check": 1,
+        "d4-manual-sample": 2
+      },
+      "blockers": [
+        "academic/native D7 signoff pending"
+      ],
+      "nextAction": "Run D7 academic/native review and record decision in signoff-manifest.json."
+    },
+    {
+      "cell": "grammar/A1",
+      "files": 1,
+      "d1": "pass",
+      "d2": "pass",
+      "d3": "n/a",
+      "d4": "n/a",
+      "d5": "n/a",
+      "qaMachine": "pass",
+      "academicSignoff": "pending",
+      "audio": "n/a",
+      "status": "Done (máy)",
+      "violations": [],
+      "d3EvidenceOverrides": [],
+      "requiredReviewer": "German Academic Lead + Content QA / Linguistic Reviewer",
+      "decisionState": "pending_native_review",
+      "manualSampleCounts": {
+        "human-spot-check": 1
+      },
+      "blockers": [
+        "academic/native D7 signoff pending"
+      ],
+      "nextAction": "Run D7 academic/native review and record decision in signoff-manifest.json."
+    },
+    {
+      "cell": "reading/A2",
+      "files": 40,
+      "d1": "pass",
+      "d2": "pass",
+      "d3": "pass",
+      "d4": "n/a",
+      "d5": "pass",
+      "qaMachine": "pass",
+      "academicSignoff": "pending",
+      "audio": "n/a",
+      "status": "Done (máy)",
+      "violations": [],
+      "d3EvidenceOverrides": [],
+      "requiredReviewer": "German Academic Lead",
+      "decisionState": "pending_native_review",
+      "manualSampleCounts": {
+        "human-spot-check": 3,
+        "d2-manual-sample": 2,
+        "d3-manual-sample": 2
+      },
+      "blockers": [
+        "academic/native D7 signoff pending"
+      ],
+      "nextAction": "Run D7 academic/native review and record decision in signoff-manifest.json."
+    },
+    {
+      "cell": "listening/A2",
+      "files": 40,
+      "d1": "pass",
+      "d2": "pass",
+      "d3": "pass",
+      "d4": "pass",
+      "d5": "pass",
+      "qaMachine": "pass",
+      "academicSignoff": "pending",
+      "audio": "pending",
+      "status": "Done (máy)",
+      "violations": [],
+      "d3EvidenceOverrides": [
+        "L-A2-GOETHE-005-T3",
+        "L-A2-GOETHE-006-T2",
+        "L-A2-GOETHE-006-T3"
+      ],
+      "requiredReviewer": "German Academic Lead + Audio Script & Voice Producer",
+      "decisionState": "pending_native_review",
+      "manualSampleCounts": {
+        "human-spot-check": 3,
+        "d2-manual-sample": 2,
+        "d3-manual-sample": 2
+      },
+      "blockers": [
+        "academic/native D7 signoff pending",
+        "listening audio parity/restub pending"
+      ],
+      "nextAction": "Run D7 academic review, then Audio_Restubbing/parity before final signoff."
+    },
+    {
+      "cell": "writing/A2",
+      "files": 35,
+      "d1": "pass",
+      "d2": "pass",
+      "d3": "pass",
+      "d4": "n/a",
+      "d5": "n/a",
+      "qaMachine": "pass",
+      "academicSignoff": "pending",
+      "audio": "n/a",
+      "status": "Done (máy)",
+      "violations": [],
+      "d3EvidenceOverrides": [],
+      "requiredReviewer": "German Academic Lead",
+      "decisionState": "pending_native_review",
+      "manualSampleCounts": {
+        "human-spot-check": 1
+      },
+      "blockers": [
+        "academic/native D7 signoff pending"
+      ],
+      "nextAction": "Run D7 academic/native review and record decision in signoff-manifest.json."
+    },
+    {
+      "cell": "speaking/A2",
+      "files": 8,
+      "d1": "pass",
+      "d2": "pass",
+      "d3": "n/a",
+      "d4": "n/a",
+      "d5": "n/a",
+      "qaMachine": "pass",
+      "academicSignoff": "pending",
+      "audio": "n/a",
+      "status": "Done (máy)",
+      "violations": [],
+      "d3EvidenceOverrides": [],
+      "requiredReviewer": "German Academic Lead",
+      "decisionState": "pending_native_review",
+      "manualSampleCounts": {
+        "human-spot-check": 1
+      },
+      "blockers": [
+        "academic/native D7 signoff pending"
+      ],
+      "nextAction": "Run D7 academic/native review and record decision in signoff-manifest.json."
+    },
+    {
+      "cell": "vocabulary/A2",
+      "files": 26,
+      "d1": "pass",
+      "d2": "pass",
+      "d3": "n/a",
+      "d4": "n/a",
+      "d5": "n/a",
+      "qaMachine": "pass",
+      "academicSignoff": "pending",
+      "audio": "n/a",
+      "status": "Done (máy)",
+      "violations": [],
+      "d3EvidenceOverrides": [],
+      "requiredReviewer": "German Academic Lead + Content QA / Linguistic Reviewer",
+      "decisionState": "pending_native_review",
+      "manualSampleCounts": {
+        "human-spot-check": 1,
+        "d4-manual-sample": 2
+      },
+      "blockers": [
+        "academic/native D7 signoff pending"
+      ],
+      "nextAction": "Run D7 academic/native review and record decision in signoff-manifest.json."
+    },
+    {
+      "cell": "grammar/A2",
+      "files": 1,
+      "d1": "pass",
+      "d2": "pass",
+      "d3": "n/a",
+      "d4": "n/a",
+      "d5": "n/a",
+      "qaMachine": "pass",
+      "academicSignoff": "pending",
+      "audio": "n/a",
+      "status": "Done (máy)",
+      "violations": [],
+      "d3EvidenceOverrides": [],
+      "requiredReviewer": "German Academic Lead + Content QA / Linguistic Reviewer",
+      "decisionState": "pending_native_review",
+      "manualSampleCounts": {
+        "human-spot-check": 1
+      },
+      "blockers": [
+        "academic/native D7 signoff pending"
+      ],
+      "nextAction": "Run D7 academic/native review and record decision in signoff-manifest.json."
+    },
+    {
+      "cell": "reading/B1",
+      "files": 50,
+      "d1": "pass",
+      "d2": "pass",
+      "d3": "pass",
+      "d4": "n/a",
+      "d5": "pass",
+      "qaMachine": "pass",
+      "academicSignoff": "pending",
+      "audio": "n/a",
+      "status": "Done (máy)",
+      "violations": [],
+      "d3EvidenceOverrides": [],
+      "requiredReviewer": "German Academic Lead",
+      "decisionState": "pending_native_review",
+      "manualSampleCounts": {
+        "human-spot-check": 3,
+        "d2-manual-sample": 2,
+        "d3-manual-sample": 2
+      },
+      "blockers": [
+        "academic/native D7 signoff pending"
+      ],
+      "nextAction": "Run D7 academic/native review and record decision in signoff-manifest.json."
+    },
+    {
+      "cell": "listening/B1",
+      "files": 44,
+      "d1": "pass",
+      "d2": "pass",
+      "d3": "pass",
+      "d4": "pass",
+      "d5": "pass",
+      "qaMachine": "pass",
+      "academicSignoff": "pending",
+      "audio": "pending",
+      "status": "Done (máy)",
+      "violations": [],
+      "d3EvidenceOverrides": [
+        "L-B1-GOETHE-003-T2",
+        "L-B1-GOETHE-005-T3"
+      ],
+      "requiredReviewer": "German Academic Lead + Audio Script & Voice Producer",
+      "decisionState": "pending_native_review",
+      "manualSampleCounts": {
+        "human-spot-check": 3,
+        "d2-manual-sample": 2,
+        "d3-manual-sample": 2
+      },
+      "blockers": [
+        "academic/native D7 signoff pending",
+        "listening audio parity/restub pending"
+      ],
+      "nextAction": "Run D7 academic review, then Audio_Restubbing/parity before final signoff."
+    },
+    {
+      "cell": "writing/B1",
+      "files": 50,
+      "d1": "pass",
+      "d2": "pass",
+      "d3": "pass",
+      "d4": "n/a",
+      "d5": "n/a",
+      "qaMachine": "pass",
+      "academicSignoff": "pending",
+      "audio": "n/a",
+      "status": "Done (máy)",
+      "violations": [],
+      "d3EvidenceOverrides": [],
+      "requiredReviewer": "German Academic Lead",
+      "decisionState": "pending_native_review",
+      "manualSampleCounts": {
+        "human-spot-check": 1
+      },
+      "blockers": [
+        "academic/native D7 signoff pending"
+      ],
+      "nextAction": "Run D7 academic/native review and record decision in signoff-manifest.json."
+    },
+    {
+      "cell": "speaking/B1",
+      "files": 6,
+      "d1": "pass",
+      "d2": "pass",
+      "d3": "n/a",
+      "d4": "n/a",
+      "d5": "n/a",
+      "qaMachine": "pass",
+      "academicSignoff": "pending",
+      "audio": "n/a",
+      "status": "Done (máy)",
+      "violations": [],
+      "d3EvidenceOverrides": [],
+      "requiredReviewer": "German Academic Lead",
+      "decisionState": "pending_native_review",
+      "manualSampleCounts": {
+        "human-spot-check": 1
+      },
+      "blockers": [
+        "academic/native D7 signoff pending"
+      ],
+      "nextAction": "Run D7 academic/native review and record decision in signoff-manifest.json."
+    },
+    {
+      "cell": "vocabulary/B1",
+      "files": 42,
+      "d1": "pass",
+      "d2": "pass",
+      "d3": "n/a",
+      "d4": "n/a",
+      "d5": "n/a",
+      "qaMachine": "pass",
+      "academicSignoff": "pending",
+      "audio": "n/a",
+      "status": "Done (máy)",
+      "violations": [],
+      "d3EvidenceOverrides": [],
+      "requiredReviewer": "German Academic Lead + Content QA / Linguistic Reviewer",
+      "decisionState": "pending_native_review",
+      "manualSampleCounts": {
+        "human-spot-check": 1,
+        "d4-manual-sample": 2
+      },
+      "blockers": [
+        "academic/native D7 signoff pending"
+      ],
+      "nextAction": "Run D7 academic/native review and record decision in signoff-manifest.json."
+    },
+    {
+      "cell": "grammar/B1",
+      "files": 1,
+      "d1": "pass",
+      "d2": "pass",
+      "d3": "n/a",
+      "d4": "n/a",
+      "d5": "n/a",
+      "qaMachine": "pass",
+      "academicSignoff": "pending",
+      "audio": "n/a",
+      "status": "Done (máy)",
+      "violations": [],
+      "d3EvidenceOverrides": [],
+      "requiredReviewer": "German Academic Lead + Content QA / Linguistic Reviewer",
+      "decisionState": "pending_native_review",
+      "manualSampleCounts": {
+        "human-spot-check": 1
+      },
+      "blockers": [
+        "academic/native D7 signoff pending"
+      ],
+      "nextAction": "Run D7 academic/native review and record decision in signoff-manifest.json."
+    },
+    {
+      "cell": "reading/B2",
+      "files": 50,
+      "d1": "pass",
+      "d2": "pass",
+      "d3": "pass",
+      "d4": "n/a",
+      "d5": "pass",
+      "qaMachine": "pass",
+      "academicSignoff": "pending",
+      "audio": "n/a",
+      "status": "Done (máy)",
+      "violations": [],
+      "d3EvidenceOverrides": [],
+      "requiredReviewer": "German Academic Lead",
+      "decisionState": "pending_native_review",
+      "manualSampleCounts": {
+        "human-spot-check": 3,
+        "d2-manual-sample": 2,
+        "d3-manual-sample": 2
+      },
+      "blockers": [
+        "academic/native D7 signoff pending"
+      ],
+      "nextAction": "Run D7 academic/native review and record decision in signoff-manifest.json."
+    },
+    {
+      "cell": "listening/B2",
+      "files": 48,
+      "d1": "pass",
+      "d2": "pass",
+      "d3": "pass",
+      "d4": "pass",
+      "d5": "pass",
+      "qaMachine": "pass",
+      "academicSignoff": "pending",
+      "audio": "pending",
+      "status": "Done (máy)",
+      "violations": [],
+      "d3EvidenceOverrides": [
+        "L-B2-GOETHE-002-T1",
+        "L-B2-GOETHE-002-T4"
+      ],
+      "requiredReviewer": "German Academic Lead + Audio Script & Voice Producer",
+      "decisionState": "pending_native_review",
+      "manualSampleCounts": {
+        "human-spot-check": 3,
+        "d2-manual-sample": 2,
+        "d3-manual-sample": 2
+      },
+      "blockers": [
+        "academic/native D7 signoff pending",
+        "listening audio parity/restub pending"
+      ],
+      "nextAction": "Run D7 academic review, then Audio_Restubbing/parity before final signoff."
+    },
+    {
+      "cell": "writing/B2",
+      "files": 40,
+      "d1": "pass",
+      "d2": "pass",
+      "d3": "pass",
+      "d4": "n/a",
+      "d5": "n/a",
+      "qaMachine": "pass",
+      "academicSignoff": "pending",
+      "audio": "n/a",
+      "status": "Done (máy)",
+      "violations": [],
+      "d3EvidenceOverrides": [],
+      "requiredReviewer": "German Academic Lead",
+      "decisionState": "pending_native_review",
+      "manualSampleCounts": {
+        "human-spot-check": 1
+      },
+      "blockers": [
+        "academic/native D7 signoff pending"
+      ],
+      "nextAction": "Run D7 academic/native review and record decision in signoff-manifest.json."
+    },
+    {
+      "cell": "speaking/B2",
+      "files": 10,
+      "d1": "pass",
+      "d2": "pass",
+      "d3": "n/a",
+      "d4": "n/a",
+      "d5": "n/a",
+      "qaMachine": "pass",
+      "academicSignoff": "pending",
+      "audio": "n/a",
+      "status": "Done (máy)",
+      "violations": [],
+      "d3EvidenceOverrides": [],
+      "requiredReviewer": "German Academic Lead",
+      "decisionState": "pending_native_review",
+      "manualSampleCounts": {
+        "human-spot-check": 1
+      },
+      "blockers": [
+        "academic/native D7 signoff pending"
+      ],
+      "nextAction": "Run D7 academic/native review and record decision in signoff-manifest.json."
+    },
+    {
+      "cell": "vocabulary/B2",
+      "files": 60,
+      "d1": "pass",
+      "d2": "pass",
+      "d3": "n/a",
+      "d4": "n/a",
+      "d5": "n/a",
+      "qaMachine": "pass",
+      "academicSignoff": "pending",
+      "audio": "n/a",
+      "status": "Done (máy)",
+      "violations": [],
+      "d3EvidenceOverrides": [],
+      "requiredReviewer": "German Academic Lead + Content QA / Linguistic Reviewer",
+      "decisionState": "pending_native_review",
+      "manualSampleCounts": {
+        "human-spot-check": 1,
+        "d4-manual-sample": 2
+      },
+      "blockers": [
+        "academic/native D7 signoff pending"
+      ],
+      "nextAction": "Run D7 academic/native review and record decision in signoff-manifest.json."
+    },
+    {
+      "cell": "grammar/B2",
+      "files": 1,
+      "d1": "pass",
+      "d2": "pass",
+      "d3": "n/a",
+      "d4": "n/a",
+      "d5": "n/a",
+      "qaMachine": "pass",
+      "academicSignoff": "pending",
+      "audio": "n/a",
+      "status": "Done (máy)",
+      "violations": [],
+      "d3EvidenceOverrides": [],
+      "requiredReviewer": "German Academic Lead + Content QA / Linguistic Reviewer",
+      "decisionState": "pending_native_review",
+      "manualSampleCounts": {
+        "human-spot-check": 1
+      },
+      "blockers": [
+        "academic/native D7 signoff pending"
+      ],
+      "nextAction": "Run D7 academic/native review and record decision in signoff-manifest.json."
+    },
+    {
+      "cell": "reading/C1",
+      "files": 48,
+      "d1": "pass",
+      "d2": "pass",
+      "d3": "pass",
+      "d4": "n/a",
+      "d5": "pass",
+      "qaMachine": "pass",
+      "academicSignoff": "pending",
+      "audio": "n/a",
+      "status": "Done (máy)",
+      "violations": [],
+      "d3EvidenceOverrides": [],
+      "requiredReviewer": "German Academic Lead",
+      "decisionState": "pending_native_review",
+      "manualSampleCounts": {
+        "human-spot-check": 3,
+        "d2-manual-sample": 2,
+        "d3-manual-sample": 2
+      },
+      "blockers": [
+        "academic/native D7 signoff pending"
+      ],
+      "nextAction": "Run D7 academic/native review and record decision in signoff-manifest.json."
+    },
+    {
+      "cell": "listening/C1",
+      "files": 52,
+      "d1": "pass",
+      "d2": "pass",
+      "d3": "pass",
+      "d4": "pass",
+      "d5": "pass",
+      "qaMachine": "pass",
+      "academicSignoff": "pending",
+      "audio": "pending",
+      "status": "Done (máy)",
+      "violations": [],
+      "d3EvidenceOverrides": [],
+      "requiredReviewer": "German Academic Lead + Audio Script & Voice Producer",
+      "decisionState": "pending_native_review",
+      "manualSampleCounts": {
+        "human-spot-check": 3,
+        "d2-manual-sample": 2,
+        "d3-manual-sample": 2
+      },
+      "blockers": [
+        "academic/native D7 signoff pending",
+        "listening audio parity/restub pending"
+      ],
+      "nextAction": "Run D7 academic review, then Audio_Restubbing/parity before final signoff."
+    },
+    {
+      "cell": "writing/C1",
+      "files": 35,
+      "d1": "pass",
+      "d2": "pass",
+      "d3": "pass",
+      "d4": "n/a",
+      "d5": "n/a",
+      "qaMachine": "pass",
+      "academicSignoff": "pending",
+      "audio": "n/a",
+      "status": "Done (máy)",
+      "violations": [],
+      "d3EvidenceOverrides": [],
+      "requiredReviewer": "German Academic Lead",
+      "decisionState": "pending_native_review",
+      "manualSampleCounts": {
+        "human-spot-check": 1
+      },
+      "blockers": [
+        "academic/native D7 signoff pending"
+      ],
+      "nextAction": "Run D7 academic/native review and record decision in signoff-manifest.json."
+    },
+    {
+      "cell": "speaking/C1",
+      "files": 8,
+      "d1": "pass",
+      "d2": "pass",
+      "d3": "n/a",
+      "d4": "n/a",
+      "d5": "n/a",
+      "qaMachine": "pass",
+      "academicSignoff": "pending",
+      "audio": "n/a",
+      "status": "Done (máy)",
+      "violations": [],
+      "d3EvidenceOverrides": [],
+      "requiredReviewer": "German Academic Lead",
+      "decisionState": "pending_native_review",
+      "manualSampleCounts": {
+        "human-spot-check": 1
+      },
+      "blockers": [
+        "academic/native D7 signoff pending"
+      ],
+      "nextAction": "Run D7 academic/native review and record decision in signoff-manifest.json."
+    },
+    {
+      "cell": "vocabulary/C1",
+      "files": 75,
+      "d1": "pass",
+      "d2": "pass",
+      "d3": "n/a",
+      "d4": "n/a",
+      "d5": "n/a",
+      "qaMachine": "pass",
+      "academicSignoff": "pending",
+      "audio": "n/a",
+      "status": "Done (máy)",
+      "violations": [],
+      "d3EvidenceOverrides": [],
+      "requiredReviewer": "German Academic Lead + Content QA / Linguistic Reviewer",
+      "decisionState": "pending_native_review",
+      "manualSampleCounts": {
+        "human-spot-check": 1,
+        "d4-manual-sample": 2
+      },
+      "blockers": [
+        "academic/native D7 signoff pending"
+      ],
+      "nextAction": "Run D7 academic/native review and record decision in signoff-manifest.json."
+    },
+    {
+      "cell": "grammar/C1",
+      "files": 1,
+      "d1": "pass",
+      "d2": "pass",
+      "d3": "n/a",
+      "d4": "n/a",
+      "d5": "n/a",
+      "qaMachine": "pass",
+      "academicSignoff": "pending",
+      "audio": "n/a",
+      "status": "Done (máy)",
+      "violations": [],
+      "d3EvidenceOverrides": [],
+      "requiredReviewer": "German Academic Lead + Content QA / Linguistic Reviewer",
+      "decisionState": "pending_native_review",
+      "manualSampleCounts": {
+        "human-spot-check": 1
+      },
+      "blockers": [
+        "academic/native D7 signoff pending"
+      ],
+      "nextAction": "Run D7 academic/native review and record decision in signoff-manifest.json."
+    },
+    {
+      "cell": "reading/C2",
+      "files": 48,
+      "d1": "pass",
+      "d2": "pass",
+      "d3": "pass",
+      "d4": "n/a",
+      "d5": "pass",
+      "qaMachine": "pass",
+      "academicSignoff": "signed",
+      "audio": "n/a",
+      "status": "Done (đủ)",
+      "violations": [],
+      "d3EvidenceOverrides": [],
+      "requiredReviewer": "German Academic Lead",
+      "decisionState": "signed",
+      "manualSampleCounts": {
+        "human-spot-check": 3,
+        "d2-manual-sample": 2,
+        "d3-manual-sample": 2
+      },
+      "blockers": [],
+      "nextAction": "Optional native spot-check; keep evidence attached."
+    },
+    {
+      "cell": "listening/C2",
+      "files": 52,
+      "d1": "pass",
+      "d2": "pass",
+      "d3": "pass",
+      "d4": "pass",
+      "d5": "pass",
+      "qaMachine": "pass",
+      "academicSignoff": "pending",
+      "audio": "pending",
+      "status": "Done (máy)",
+      "violations": [],
+      "d3EvidenceOverrides": [],
+      "requiredReviewer": "German Academic Lead + Audio Script & Voice Producer",
+      "decisionState": "pending_native_review",
+      "manualSampleCounts": {
+        "human-spot-check": 2,
+        "d2-manual-sample": 2,
+        "d3-manual-sample": 2
+      },
+      "blockers": [
+        "academic/native D7 signoff pending",
+        "listening audio parity/restub pending"
+      ],
+      "nextAction": "Run D7 academic review, then Audio_Restubbing/parity before final signoff."
+    },
+    {
+      "cell": "writing/C2",
+      "files": 35,
+      "d1": "pass",
+      "d2": "pass",
+      "d3": "pass",
+      "d4": "n/a",
+      "d5": "n/a",
+      "qaMachine": "pass",
+      "academicSignoff": "pending",
+      "audio": "n/a",
+      "status": "Done (máy)",
+      "violations": [],
+      "d3EvidenceOverrides": [],
+      "requiredReviewer": "German Academic Lead",
+      "decisionState": "pending_native_review",
+      "manualSampleCounts": {
+        "human-spot-check": 1
+      },
+      "blockers": [
+        "academic/native D7 signoff pending"
+      ],
+      "nextAction": "Run D7 academic/native review and record decision in signoff-manifest.json."
+    },
+    {
+      "cell": "speaking/C2",
+      "files": 6,
+      "d1": "pass",
+      "d2": "pass",
+      "d3": "n/a",
+      "d4": "n/a",
+      "d5": "n/a",
+      "qaMachine": "pass",
+      "academicSignoff": "pending",
+      "audio": "n/a",
+      "status": "Done (máy)",
+      "violations": [],
+      "d3EvidenceOverrides": [],
+      "requiredReviewer": "German Academic Lead",
+      "decisionState": "pending_native_review",
+      "manualSampleCounts": {
+        "human-spot-check": 1
+      },
+      "blockers": [
+        "academic/native D7 signoff pending"
+      ],
+      "nextAction": "Run D7 academic/native review and record decision in signoff-manifest.json."
+    },
+    {
+      "cell": "vocabulary/C2",
+      "files": 145,
+      "d1": "pass",
+      "d2": "pass",
+      "d3": "n/a",
+      "d4": "n/a",
+      "d5": "n/a",
+      "qaMachine": "pass",
+      "academicSignoff": "pending",
+      "audio": "n/a",
+      "status": "Done (máy)",
+      "violations": [],
+      "d3EvidenceOverrides": [],
+      "requiredReviewer": "German Academic Lead + Content QA / Linguistic Reviewer",
+      "decisionState": "pending_native_review",
+      "manualSampleCounts": {
+        "human-spot-check": 2,
+        "d4-manual-sample": 2
+      },
+      "blockers": [
+        "academic/native D7 signoff pending"
+      ],
+      "nextAction": "Run D7 academic/native review and record decision in signoff-manifest.json."
+    },
+    {
+      "cell": "grammar/C2",
+      "files": 1,
+      "d1": "pass",
+      "d2": "pass",
+      "d3": "n/a",
+      "d4": "n/a",
+      "d5": "n/a",
+      "qaMachine": "pass",
+      "academicSignoff": "pending",
+      "audio": "n/a",
+      "status": "Done (máy)",
+      "violations": [],
+      "d3EvidenceOverrides": [],
+      "requiredReviewer": "German Academic Lead + Content QA / Linguistic Reviewer",
+      "decisionState": "pending_native_review",
+      "manualSampleCounts": {
+        "human-spot-check": 1
+      },
+      "blockers": [
+        "academic/native D7 signoff pending"
+      ],
+      "nextAction": "Run D7 academic/native review and record decision in signoff-manifest.json."
+    }
+  ],
+  "sampleInputs": [
+    {
+      "source": "human-spot-check",
+      "dimension": "D7 academic spot-check",
+      "file": "content/a1/listening/L-A1-GOETHE-001-T1.json",
+      "id": "L-A1-GOETHE-001-T1",
+      "level": "A1",
+      "module": "listening",
+      "cell": "listening/A1",
+      "reviewer": "German Academic Lead",
+      "status": "pending_human_review",
+      "exists": true
+    },
+    {
+      "source": "human-spot-check",
+      "dimension": "D7 academic spot-check",
+      "file": "content/a1/reading/A1-T1-001.json",
+      "id": "A1-T1-001",
+      "level": "A1",
+      "module": "reading",
+      "cell": "reading/A1",
+      "reviewer": "German Academic Lead",
+      "status": "pending_human_review",
+      "exists": true
+    },
+    {
+      "source": "human-spot-check",
+      "dimension": "D7 academic spot-check",
+      "file": "content/a1/writing/W-A1-T1-001.json",
+      "id": "W-A1-T1-001",
+      "level": "A1",
+      "module": "writing",
+      "cell": "writing/A1",
+      "reviewer": "German Academic Lead",
+      "status": "pending_human_review",
+      "exists": true
+    },
+    {
+      "source": "human-spot-check",
+      "dimension": "D7 academic spot-check",
+      "file": "content/a1/speaking/a1-alltag.json",
+      "id": "a1-alltag",
+      "level": "A1",
+      "module": "speaking",
+      "cell": "speaking/A1",
+      "reviewer": "German Academic Lead",
+      "status": "pending_human_review",
+      "exists": true
+    },
+    {
+      "source": "human-spot-check",
+      "dimension": "D7 academic spot-check",
+      "file": "content/a1/vocabulary/01-person.json",
+      "id": "a1-person",
+      "level": "A1",
+      "module": "vocabulary",
+      "cell": "vocabulary/A1",
+      "reviewer": "Content QA / Linguistic Reviewer",
+      "status": "pending_human_review",
+      "exists": true
+    },
+    {
+      "source": "human-spot-check",
+      "dimension": "D7 academic spot-check",
+      "file": "content/a1/grammar/grammar-topics.json",
+      "id": "grammar-topics",
+      "level": "A1",
+      "module": "grammar",
+      "cell": "grammar/A1",
+      "reviewer": "Content QA / Linguistic Reviewer",
+      "status": "pending_human_review",
+      "exists": true
+    },
+    {
+      "source": "human-spot-check",
+      "dimension": "D7 academic spot-check",
+      "file": "content/a1/listening/L-A1-GOETHE-004-T3.json",
+      "id": "L-A1-GOETHE-004-T3",
+      "level": "A1",
+      "module": "listening",
+      "cell": "listening/A1",
+      "reviewer": "German Academic Lead",
+      "status": "pending_human_review",
+      "exists": true
+    },
+    {
+      "source": "human-spot-check",
+      "dimension": "D7 academic spot-check",
+      "file": "content/a1/listening/L-A1-GOETHE-008-T3.json",
+      "id": "L-A1-GOETHE-008-T3",
+      "level": "A1",
+      "module": "listening",
+      "cell": "listening/A1",
+      "reviewer": "German Academic Lead",
+      "status": "pending_human_review",
+      "exists": true
+    },
+    {
+      "source": "human-spot-check",
+      "dimension": "D7 academic spot-check",
+      "file": "content/a1/reading/A1-T1-004.json",
+      "id": "A1-T1-004",
+      "level": "A1",
+      "module": "reading",
+      "cell": "reading/A1",
+      "reviewer": "German Academic Lead",
+      "status": "pending_human_review",
+      "exists": true
+    },
+    {
+      "source": "human-spot-check",
+      "dimension": "D7 academic spot-check",
+      "file": "content/a1/reading/A1-T2-006.json",
+      "id": "A1-T2-006",
+      "level": "A1",
+      "module": "reading",
+      "cell": "reading/A1",
+      "reviewer": "German Academic Lead",
+      "status": "pending_human_review",
+      "exists": true
+    },
+    {
+      "source": "human-spot-check",
+      "dimension": "D7 academic spot-check",
+      "file": "content/a2/listening/L-A2-GOETHE-001-T1.json",
+      "id": "L-A2-GOETHE-001-T1",
+      "level": "A2",
+      "module": "listening",
+      "cell": "listening/A2",
+      "reviewer": "German Academic Lead",
+      "status": "pending_human_review",
+      "exists": true
+    },
+    {
+      "source": "human-spot-check",
+      "dimension": "D7 academic spot-check",
+      "file": "content/a2/reading/A2-T1-001.json",
+      "id": "A2-T1-001",
+      "level": "A2",
+      "module": "reading",
+      "cell": "reading/A2",
+      "reviewer": "German Academic Lead",
+      "status": "pending_human_review",
+      "exists": true
+    },
+    {
+      "source": "human-spot-check",
+      "dimension": "D7 academic spot-check",
+      "file": "content/a2/writing/W-A2-T1-001.json",
+      "id": "W-A2-T1-001",
+      "level": "A2",
+      "module": "writing",
+      "cell": "writing/A2",
+      "reviewer": "German Academic Lead",
+      "status": "pending_human_review",
+      "exists": true
+    },
+    {
+      "source": "human-spot-check",
+      "dimension": "D7 academic spot-check",
+      "file": "content/a2/speaking/a2-alltag.json",
+      "id": "a2-alltag",
+      "level": "A2",
+      "module": "speaking",
+      "cell": "speaking/A2",
+      "reviewer": "German Academic Lead",
+      "status": "pending_human_review",
+      "exists": true
+    },
+    {
+      "source": "human-spot-check",
+      "dimension": "D7 academic spot-check",
+      "file": "content/a2/vocabulary/01-person-identitaet.json",
+      "id": "a2-person-identitaet",
+      "level": "A2",
+      "module": "vocabulary",
+      "cell": "vocabulary/A2",
+      "reviewer": "Content QA / Linguistic Reviewer",
+      "status": "pending_human_review",
+      "exists": true
+    },
+    {
+      "source": "human-spot-check",
+      "dimension": "D7 academic spot-check",
+      "file": "content/a2/grammar/grammar-topics.json",
+      "id": "grammar-topics",
+      "level": "A2",
+      "module": "grammar",
+      "cell": "grammar/A2",
+      "reviewer": "Content QA / Linguistic Reviewer",
+      "status": "pending_human_review",
+      "exists": true
+    },
+    {
+      "source": "human-spot-check",
+      "dimension": "D7 academic spot-check",
+      "file": "content/a2/listening/L-A2-GOETHE-004-T3.json",
+      "id": "L-A2-GOETHE-004-T3",
+      "level": "A2",
+      "module": "listening",
+      "cell": "listening/A2",
+      "reviewer": "German Academic Lead",
+      "status": "pending_human_review",
+      "exists": true
+    },
+    {
+      "source": "human-spot-check",
+      "dimension": "D7 academic spot-check",
+      "file": "content/a2/listening/L-A2-GOETHE-008-T2.json",
+      "id": "L-A2-GOETHE-008-T2",
+      "level": "A2",
+      "module": "listening",
+      "cell": "listening/A2",
+      "reviewer": "German Academic Lead",
+      "status": "pending_human_review",
+      "exists": true
+    },
+    {
+      "source": "human-spot-check",
+      "dimension": "D7 academic spot-check",
+      "file": "content/a2/reading/A2-T1-005.json",
+      "id": "A2-T1-005",
+      "level": "A2",
+      "module": "reading",
+      "cell": "reading/A2",
+      "reviewer": "German Academic Lead",
+      "status": "pending_human_review",
+      "exists": true
+    },
+    {
+      "source": "human-spot-check",
+      "dimension": "D7 academic spot-check",
+      "file": "content/a2/reading/A2-T2-010.json",
+      "id": "A2-T2-010",
+      "level": "A2",
+      "module": "reading",
+      "cell": "reading/A2",
+      "reviewer": "German Academic Lead",
+      "status": "pending_human_review",
+      "exists": true
+    },
+    {
+      "source": "human-spot-check",
+      "dimension": "D7 academic spot-check",
+      "file": "content/b1/listening/L-B1-GOETHE-001-T1.json",
+      "id": "L-B1-GOETHE-001-T1",
+      "level": "B1",
+      "module": "listening",
+      "cell": "listening/B1",
+      "reviewer": "German Academic Lead",
+      "status": "pending_human_review",
+      "exists": true
+    },
+    {
+      "source": "human-spot-check",
+      "dimension": "D7 academic spot-check",
+      "file": "content/b1/reading/B1-T1-001.json",
+      "id": "B1-T1-001",
+      "level": "B1",
+      "module": "reading",
+      "cell": "reading/B1",
+      "reviewer": "German Academic Lead",
+      "status": "pending_human_review",
+      "exists": true
+    },
+    {
+      "source": "human-spot-check",
+      "dimension": "D7 academic spot-check",
+      "file": "content/b1/writing/W-B1-T1-001.json",
+      "id": "W-B1-T1-001",
+      "level": "B1",
+      "module": "writing",
+      "cell": "writing/B1",
+      "reviewer": "German Academic Lead",
+      "status": "pending_human_review",
+      "exists": true
+    },
+    {
+      "source": "human-spot-check",
+      "dimension": "D7 academic spot-check",
+      "file": "content/b1/speaking/b1-einkaufen.json",
+      "id": "b1-einkaufen",
+      "level": "B1",
+      "module": "speaking",
+      "cell": "speaking/B1",
+      "reviewer": "German Academic Lead",
+      "status": "pending_human_review",
+      "exists": true
+    },
+    {
+      "source": "human-spot-check",
+      "dimension": "D7 academic spot-check",
+      "file": "content/b1/vocabulary/01-persoenlichkeit-charakter.json",
+      "id": "b1-persoenlichkeit-charakter",
+      "level": "B1",
+      "module": "vocabulary",
+      "cell": "vocabulary/B1",
+      "reviewer": "Content QA / Linguistic Reviewer",
+      "status": "pending_human_review",
+      "exists": true
+    },
+    {
+      "source": "human-spot-check",
+      "dimension": "D7 academic spot-check",
+      "file": "content/b1/grammar/grammar-topics.json",
+      "id": "grammar-topics",
+      "level": "B1",
+      "module": "grammar",
+      "cell": "grammar/B1",
+      "reviewer": "Content QA / Linguistic Reviewer",
+      "status": "pending_human_review",
+      "exists": true
+    },
+    {
+      "source": "human-spot-check",
+      "dimension": "D7 academic spot-check",
+      "file": "content/b1/listening/L-B1-GOETHE-005-T3.json",
+      "id": "L-B1-GOETHE-005-T3",
+      "level": "B1",
+      "module": "listening",
+      "cell": "listening/B1",
+      "reviewer": "German Academic Lead",
+      "status": "pending_human_review",
+      "exists": true
+    },
+    {
+      "source": "human-spot-check",
+      "dimension": "D7 academic spot-check",
+      "file": "content/b1/listening/L-B1-GOETHE-010-T2.json",
+      "id": "L-B1-GOETHE-010-T2",
+      "level": "B1",
+      "module": "listening",
+      "cell": "listening/B1",
+      "reviewer": "German Academic Lead",
+      "status": "pending_human_review",
+      "exists": true
+    },
+    {
+      "source": "human-spot-check",
+      "dimension": "D7 academic spot-check",
+      "file": "content/b1/reading/B1-T2-003.json",
+      "id": "B1-T2-003",
+      "level": "B1",
+      "module": "reading",
+      "cell": "reading/B1",
+      "reviewer": "German Academic Lead",
+      "status": "pending_human_review",
+      "exists": true
+    },
+    {
+      "source": "human-spot-check",
+      "dimension": "D7 academic spot-check",
+      "file": "content/b1/reading/B1-T4-002.json",
+      "id": "B1-T4-002",
+      "level": "B1",
+      "module": "reading",
+      "cell": "reading/B1",
+      "reviewer": "German Academic Lead",
+      "status": "pending_human_review",
+      "exists": true
+    },
+    {
+      "source": "human-spot-check",
+      "dimension": "D7 academic spot-check",
+      "file": "content/b2/listening/L-B2-GOETHE-001-T1.json",
+      "id": "L-B2-GOETHE-001-T1",
+      "level": "B2",
+      "module": "listening",
+      "cell": "listening/B2",
+      "reviewer": "German Academic Lead",
+      "status": "pending_human_review",
+      "exists": true
+    },
+    {
+      "source": "human-spot-check",
+      "dimension": "D7 academic spot-check",
+      "file": "content/b2/reading/B2-T1-001.json",
+      "id": "B2-T1-001",
+      "level": "B2",
+      "module": "reading",
+      "cell": "reading/B2",
+      "reviewer": "German Academic Lead",
+      "status": "pending_human_review",
+      "exists": true
+    },
+    {
+      "source": "human-spot-check",
+      "dimension": "D7 academic spot-check",
+      "file": "content/b2/writing/W-B2-T1-001.json",
+      "id": "W-B2-T1-001",
+      "level": "B2",
+      "module": "writing",
+      "cell": "writing/B2",
+      "reviewer": "German Academic Lead",
+      "status": "pending_human_review",
+      "exists": true
+    },
+    {
+      "source": "human-spot-check",
+      "dimension": "D7 academic spot-check",
+      "file": "content/b2/speaking/b2-arbeit.json",
+      "id": "b2-arbeit",
+      "level": "B2",
+      "module": "speaking",
+      "cell": "speaking/B2",
+      "reviewer": "German Academic Lead",
+      "status": "pending_human_review",
+      "exists": true
+    },
+    {
+      "source": "human-spot-check",
+      "dimension": "D7 academic spot-check",
+      "file": "content/b2/vocabulary/01-identitaet-selbstbild.json",
+      "id": "b2-identitaet-selbstbild",
+      "level": "B2",
+      "module": "vocabulary",
+      "cell": "vocabulary/B2",
+      "reviewer": "Content QA / Linguistic Reviewer",
+      "status": "pending_human_review",
+      "exists": true
+    },
+    {
+      "source": "human-spot-check",
+      "dimension": "D7 academic spot-check",
+      "file": "content/b2/grammar/grammar-topics.json",
+      "id": "grammar-topics",
+      "level": "B2",
+      "module": "grammar",
+      "cell": "grammar/B2",
+      "reviewer": "Content QA / Linguistic Reviewer",
+      "status": "pending_human_review",
+      "exists": true
+    },
+    {
+      "source": "human-spot-check",
+      "dimension": "D7 academic spot-check",
+      "file": "content/b2/listening/L-B2-GOETHE-005-T4.json",
+      "id": "L-B2-GOETHE-005-T4",
+      "level": "B2",
+      "module": "listening",
+      "cell": "listening/B2",
+      "reviewer": "German Academic Lead",
+      "status": "pending_human_review",
+      "exists": true
+    },
+    {
+      "source": "human-spot-check",
+      "dimension": "D7 academic spot-check",
+      "file": "content/b2/listening/L-B2-GOETHE-010-T4.json",
+      "id": "L-B2-GOETHE-010-T4",
+      "level": "B2",
+      "module": "listening",
+      "cell": "listening/B2",
+      "reviewer": "German Academic Lead",
+      "status": "pending_human_review",
+      "exists": true
+    },
+    {
+      "source": "human-spot-check",
+      "dimension": "D7 academic spot-check",
+      "file": "content/b2/reading/B2-T2-002.json",
+      "id": "B2-T2-002",
+      "level": "B2",
+      "module": "reading",
+      "cell": "reading/B2",
+      "reviewer": "German Academic Lead",
+      "status": "pending_human_review",
+      "exists": true
+    },
+    {
+      "source": "human-spot-check",
+      "dimension": "D7 academic spot-check",
+      "file": "content/b2/reading/B2-T4-002.json",
+      "id": "B2-T4-002",
+      "level": "B2",
+      "module": "reading",
+      "cell": "reading/B2",
+      "reviewer": "German Academic Lead",
+      "status": "pending_human_review",
+      "exists": true
+    },
+    {
+      "source": "human-spot-check",
+      "dimension": "D7 academic spot-check",
+      "file": "content/c1/listening/L-C1-GOETHE-001-T1.json",
+      "id": "L-C1-GOETHE-001-T1",
+      "level": "C1",
+      "module": "listening",
+      "cell": "listening/C1",
+      "reviewer": "German Academic Lead",
+      "status": "pending_human_review",
+      "exists": true
+    },
+    {
+      "source": "human-spot-check",
+      "dimension": "D7 academic spot-check",
+      "file": "content/c1/reading/C1-T1-001.json",
+      "id": "C1-T1-001",
+      "level": "C1",
+      "module": "reading",
+      "cell": "reading/C1",
+      "reviewer": "German Academic Lead",
+      "status": "pending_human_review",
+      "exists": true
+    },
+    {
+      "source": "human-spot-check",
+      "dimension": "D7 academic spot-check",
+      "file": "content/c1/writing/W-C1-T1-001.json",
+      "id": "W-C1-T1-001",
+      "level": "C1",
+      "module": "writing",
+      "cell": "writing/C1",
+      "reviewer": "German Academic Lead",
+      "status": "pending_human_review",
+      "exists": true
+    },
+    {
+      "source": "human-spot-check",
+      "dimension": "D7 academic spot-check",
+      "file": "content/c1/speaking/c1-arbeit.json",
+      "id": "c1-arbeit",
+      "level": "C1",
+      "module": "speaking",
+      "cell": "speaking/C1",
+      "reviewer": "German Academic Lead",
+      "status": "pending_human_review",
+      "exists": true
+    },
+    {
+      "source": "human-spot-check",
+      "dimension": "D7 academic spot-check",
+      "file": "content/c1/vocabulary/01-gesellschaftskritik-diskurs.json",
+      "id": "c1-gesellschaftskritik-diskurs",
+      "level": "C1",
+      "module": "vocabulary",
+      "cell": "vocabulary/C1",
+      "reviewer": "Content QA / Linguistic Reviewer",
+      "status": "pending_human_review",
+      "exists": true
+    },
+    {
+      "source": "human-spot-check",
+      "dimension": "D7 academic spot-check",
+      "file": "content/c1/grammar/grammar-topics.json",
+      "id": "grammar-topics",
+      "level": "C1",
+      "module": "grammar",
+      "cell": "grammar/C1",
+      "reviewer": "Content QA / Linguistic Reviewer",
+      "status": "pending_human_review",
+      "exists": true
+    },
+    {
+      "source": "human-spot-check",
+      "dimension": "D7 academic spot-check",
+      "file": "content/c1/listening/L-C1-GOETHE-006-T1.json",
+      "id": "L-C1-GOETHE-006-T1",
+      "level": "C1",
+      "module": "listening",
+      "cell": "listening/C1",
+      "reviewer": "German Academic Lead",
+      "status": "pending_human_review",
+      "exists": true
+    },
+    {
+      "source": "human-spot-check",
+      "dimension": "D7 academic spot-check",
+      "file": "content/c1/listening/L-C1-GOETHE-011-T2.json",
+      "id": "L-C1-GOETHE-011-T2",
+      "level": "C1",
+      "module": "listening",
+      "cell": "listening/C1",
+      "reviewer": "German Academic Lead",
+      "status": "pending_human_review",
+      "exists": true
+    },
+    {
+      "source": "human-spot-check",
+      "dimension": "D7 academic spot-check",
+      "file": "content/c1/reading/C1-T1-011.json",
+      "id": "C1-T1-011",
+      "level": "C1",
+      "module": "reading",
+      "cell": "reading/C1",
+      "reviewer": "German Academic Lead",
+      "status": "pending_human_review",
+      "exists": true
+    },
+    {
+      "source": "human-spot-check",
+      "dimension": "D7 academic spot-check",
+      "file": "content/c1/reading/C1-T3-008.json",
+      "id": "C1-T3-008",
+      "level": "C1",
+      "module": "reading",
+      "cell": "reading/C1",
+      "reviewer": "German Academic Lead",
+      "status": "pending_human_review",
+      "exists": true
+    },
+    {
+      "source": "human-spot-check",
+      "dimension": "D7 academic spot-check",
+      "file": "content/c2/listening/L-C2-GOETHE-001-T1.json",
+      "id": "L-C2-GOETHE-001-T1",
+      "level": "C2",
+      "module": "listening",
+      "cell": "listening/C2",
+      "reviewer": "German Academic Lead",
+      "status": "pending_human_review",
+      "exists": true
+    },
+    {
+      "source": "human-spot-check",
+      "dimension": "D7 academic spot-check",
+      "file": "content/c2/reading/C2-T1-001.json",
+      "id": "C2-T1-001",
+      "level": "C2",
+      "module": "reading",
+      "cell": "reading/C2",
+      "reviewer": "German Academic Lead",
+      "status": "pending_human_review",
+      "exists": true
+    },
+    {
+      "source": "human-spot-check",
+      "dimension": "D7 academic spot-check",
+      "file": "content/c2/writing/W-C2-T1-001.json",
+      "id": "W-C2-T1-001",
+      "level": "C2",
+      "module": "writing",
+      "cell": "writing/C2",
+      "reviewer": "German Academic Lead",
+      "status": "pending_human_review",
+      "exists": true
+    },
+    {
+      "source": "human-spot-check",
+      "dimension": "D7 academic spot-check",
+      "file": "content/c2/speaking/c2-kunst.json",
+      "id": "c2-kunst",
+      "level": "C2",
+      "module": "speaking",
+      "cell": "speaking/C2",
+      "reviewer": "German Academic Lead",
+      "status": "pending_human_review",
+      "exists": true
+    },
+    {
+      "source": "human-spot-check",
+      "dimension": "D7 academic spot-check",
+      "file": "content/c2/vocabulary/01-epistemologie-wissenschaftstheorie.json",
+      "id": "c2-epistemologie-wissenschaftstheorie",
+      "level": "C2",
+      "module": "vocabulary",
+      "cell": "vocabulary/C2",
+      "reviewer": "Content QA / Linguistic Reviewer",
+      "status": "pending_human_review",
+      "exists": true
+    },
+    {
+      "source": "human-spot-check",
+      "dimension": "D7 academic spot-check",
+      "file": "content/c2/grammar/grammar-topics.json",
+      "id": "grammar-topics",
+      "level": "C2",
+      "module": "grammar",
+      "cell": "grammar/C2",
+      "reviewer": "Content QA / Linguistic Reviewer",
+      "status": "pending_human_review",
+      "exists": true
+    },
+    {
+      "source": "human-spot-check",
+      "dimension": "D7 academic spot-check",
+      "file": "content/c2/listening/L-C2-GOETHE-010-T1.json",
+      "id": "L-C2-GOETHE-010-T1",
+      "level": "C2",
+      "module": "listening",
+      "cell": "listening/C2",
+      "reviewer": "German Academic Lead",
+      "status": "pending_human_review",
+      "exists": true
+    },
+    {
+      "source": "human-spot-check",
+      "dimension": "D7 academic spot-check",
+      "file": "content/c2/reading/C2-T1-004.json",
+      "id": "C2-T1-004",
+      "level": "C2",
+      "module": "reading",
+      "cell": "reading/C2",
+      "reviewer": "German Academic Lead",
+      "status": "pending_human_review",
+      "exists": true
+    },
+    {
+      "source": "human-spot-check",
+      "dimension": "D7 academic spot-check",
+      "file": "content/c2/reading/C2-T3-008.json",
+      "id": "C2-T3-008",
+      "level": "C2",
+      "module": "reading",
+      "cell": "reading/C2",
+      "reviewer": "German Academic Lead",
+      "status": "pending_human_review",
+      "exists": true
+    },
+    {
+      "source": "human-spot-check",
+      "dimension": "D7 academic spot-check",
+      "file": "content/c2/vocabulary/06-anthropologie-ethnografie.json",
+      "id": "c2-anthropologie-ethnografie",
+      "level": "C2",
+      "module": "vocabulary",
+      "cell": "vocabulary/C2",
+      "reviewer": "Content QA / Linguistic Reviewer",
+      "status": "pending_human_review",
+      "exists": true
+    },
+    {
+      "source": "d2-manual-sample",
+      "dimension": "D2 level-fit deep review",
+      "file": "content/a1/listening/L-A1-GOETHE-001-T1.json",
+      "level": "A1",
+      "module": "listening",
+      "cell": "listening/A1",
+      "exists": true
+    },
+    {
+      "source": "d2-manual-sample",
+      "dimension": "D2 level-fit deep review",
+      "file": "content/a1/listening/L-A1-GOETHE-006-T2.json",
+      "level": "A1",
+      "module": "listening",
+      "cell": "listening/A1",
+      "exists": true
+    },
+    {
+      "source": "d2-manual-sample",
+      "dimension": "D2 level-fit deep review",
+      "file": "content/a1/reading/A1-T1-001.json",
+      "level": "A1",
+      "module": "reading",
+      "cell": "reading/A1",
+      "exists": true
+    },
+    {
+      "source": "d2-manual-sample",
+      "dimension": "D2 level-fit deep review",
+      "file": "content/a1/reading/A1-T2-006.json",
+      "level": "A1",
+      "module": "reading",
+      "cell": "reading/A1",
+      "exists": true
+    },
+    {
+      "source": "d2-manual-sample",
+      "dimension": "D2 level-fit deep review",
+      "file": "content/a2/listening/L-A2-GOETHE-001-T1.json",
+      "level": "A2",
+      "module": "listening",
+      "cell": "listening/A2",
+      "exists": true
+    },
+    {
+      "source": "d2-manual-sample",
+      "dimension": "D2 level-fit deep review",
+      "file": "content/a2/listening/L-A2-GOETHE-006-T1.json",
+      "level": "A2",
+      "module": "listening",
+      "cell": "listening/A2",
+      "exists": true
+    },
+    {
+      "source": "d2-manual-sample",
+      "dimension": "D2 level-fit deep review",
+      "file": "content/a2/reading/A2-T1-001.json",
+      "level": "A2",
+      "module": "reading",
+      "cell": "reading/A2",
+      "exists": true
+    },
+    {
+      "source": "d2-manual-sample",
+      "dimension": "D2 level-fit deep review",
+      "file": "content/a2/reading/A2-T3-001.json",
+      "level": "A2",
+      "module": "reading",
+      "cell": "reading/A2",
+      "exists": true
+    },
+    {
+      "source": "d2-manual-sample",
+      "dimension": "D2 level-fit deep review",
+      "file": "content/b1/listening/L-B1-GOETHE-001-T1.json",
+      "level": "B1",
+      "module": "listening",
+      "cell": "listening/B1",
+      "exists": true
+    },
+    {
+      "source": "d2-manual-sample",
+      "dimension": "D2 level-fit deep review",
+      "file": "content/b1/listening/L-B1-GOETHE-006-T3.json",
+      "level": "B1",
+      "module": "listening",
+      "cell": "listening/B1",
+      "exists": true
+    },
+    {
+      "source": "d2-manual-sample",
+      "dimension": "D2 level-fit deep review",
+      "file": "content/b1/reading/B1-T1-001.json",
+      "level": "B1",
+      "module": "reading",
+      "cell": "reading/B1",
+      "exists": true
+    },
+    {
+      "source": "d2-manual-sample",
+      "dimension": "D2 level-fit deep review",
+      "file": "content/b1/reading/B1-T3-006.json",
+      "level": "B1",
+      "module": "reading",
+      "cell": "reading/B1",
+      "exists": true
+    },
+    {
+      "source": "d2-manual-sample",
+      "dimension": "D2 level-fit deep review",
+      "file": "content/b2/listening/L-B2-GOETHE-001-T1.json",
+      "level": "B2",
+      "module": "listening",
+      "cell": "listening/B2",
+      "exists": true
+    },
+    {
+      "source": "d2-manual-sample",
+      "dimension": "D2 level-fit deep review",
+      "file": "content/b2/listening/L-B2-GOETHE-007-T1.json",
+      "level": "B2",
+      "module": "listening",
+      "cell": "listening/B2",
+      "exists": true
+    },
+    {
+      "source": "d2-manual-sample",
+      "dimension": "D2 level-fit deep review",
+      "file": "content/b2/reading/B2-T1-001.json",
+      "level": "B2",
+      "module": "reading",
+      "cell": "reading/B2",
+      "exists": true
+    },
+    {
+      "source": "d2-manual-sample",
+      "dimension": "D2 level-fit deep review",
+      "file": "content/b2/reading/B2-T3-006.json",
+      "level": "B2",
+      "module": "reading",
+      "cell": "reading/B2",
+      "exists": true
+    },
+    {
+      "source": "d2-manual-sample",
+      "dimension": "D2 level-fit deep review",
+      "file": "content/c1/listening/L-C1-GOETHE-001-T1.json",
+      "level": "C1",
+      "module": "listening",
+      "cell": "listening/C1",
+      "exists": true
+    },
+    {
+      "source": "d2-manual-sample",
+      "dimension": "D2 level-fit deep review",
+      "file": "content/c1/listening/L-C1-GOETHE-007-T3.json",
+      "level": "C1",
+      "module": "listening",
+      "cell": "listening/C1",
+      "exists": true
+    },
+    {
+      "source": "d2-manual-sample",
+      "dimension": "D2 level-fit deep review",
+      "file": "content/c1/reading/C1-T1-001.json",
+      "level": "C1",
+      "module": "reading",
+      "cell": "reading/C1",
+      "exists": true
+    },
+    {
+      "source": "d2-manual-sample",
+      "dimension": "D2 level-fit deep review",
+      "file": "content/c1/reading/C1-T3-001.json",
+      "level": "C1",
+      "module": "reading",
+      "cell": "reading/C1",
+      "exists": true
+    },
+    {
+      "source": "d2-manual-sample",
+      "dimension": "D2 level-fit deep review",
+      "file": "content/c2/listening/L-C2-GOETHE-001-T1.json",
+      "level": "C2",
+      "module": "listening",
+      "cell": "listening/C2",
+      "exists": true
+    },
+    {
+      "source": "d2-manual-sample",
+      "dimension": "D2 level-fit deep review",
+      "file": "content/c2/listening/L-C2-GOETHE-009-T3.json",
+      "level": "C2",
+      "module": "listening",
+      "cell": "listening/C2",
+      "exists": true
+    },
+    {
+      "source": "d2-manual-sample",
+      "dimension": "D2 level-fit deep review",
+      "file": "content/c2/reading/C2-T1-001.json",
+      "level": "C2",
+      "module": "reading",
+      "cell": "reading/C2",
+      "exists": true
+    },
+    {
+      "source": "d2-manual-sample",
+      "dimension": "D2 level-fit deep review",
+      "file": "content/c2/reading/C2-T3-001.json",
+      "level": "C2",
+      "module": "reading",
+      "cell": "reading/C2",
+      "exists": true
+    },
+    {
+      "source": "d3-manual-sample",
+      "dimension": "D3 semantic answer/distractor review",
+      "file": "content/a1/listening/L-A1-GOETHE-001-T1.json",
+      "level": "A1",
+      "module": "listening",
+      "cell": "listening/A1",
+      "exists": true
+    },
+    {
+      "source": "d3-manual-sample",
+      "dimension": "D3 semantic answer/distractor review",
+      "file": "content/a1/listening/L-A1-GOETHE-006-T2.json",
+      "level": "A1",
+      "module": "listening",
+      "cell": "listening/A1",
+      "exists": true
+    },
+    {
+      "source": "d3-manual-sample",
+      "dimension": "D3 semantic answer/distractor review",
+      "file": "content/a1/reading/A1-T1-001.json",
+      "level": "A1",
+      "module": "reading",
+      "cell": "reading/A1",
+      "exists": true
+    },
+    {
+      "source": "d3-manual-sample",
+      "dimension": "D3 semantic answer/distractor review",
+      "file": "content/a1/reading/A1-T2-005.json",
+      "level": "A1",
+      "module": "reading",
+      "cell": "reading/A1",
+      "exists": true
+    },
+    {
+      "source": "d3-manual-sample",
+      "dimension": "D3 semantic answer/distractor review",
+      "file": "content/a2/listening/L-A2-GOETHE-001-T1.json",
+      "level": "A2",
+      "module": "listening",
+      "cell": "listening/A2",
+      "exists": true
+    },
+    {
+      "source": "d3-manual-sample",
+      "dimension": "D3 semantic answer/distractor review",
+      "file": "content/a2/listening/L-A2-GOETHE-006-T1.json",
+      "level": "A2",
+      "module": "listening",
+      "cell": "listening/A2",
+      "exists": true
+    },
+    {
+      "source": "d3-manual-sample",
+      "dimension": "D3 semantic answer/distractor review",
+      "file": "content/a2/reading/A2-T1-001.json",
+      "level": "A2",
+      "module": "reading",
+      "cell": "reading/A2",
+      "exists": true
+    },
+    {
+      "source": "d3-manual-sample",
+      "dimension": "D3 semantic answer/distractor review",
+      "file": "content/a2/reading/A2-T3-001.json",
+      "level": "A2",
+      "module": "reading",
+      "cell": "reading/A2",
+      "exists": true
+    },
+    {
+      "source": "d3-manual-sample",
+      "dimension": "D3 semantic answer/distractor review",
+      "file": "content/b1/listening/L-B1-GOETHE-001-T1.json",
+      "level": "B1",
+      "module": "listening",
+      "cell": "listening/B1",
+      "exists": true
+    },
+    {
+      "source": "d3-manual-sample",
+      "dimension": "D3 semantic answer/distractor review",
+      "file": "content/b1/listening/L-B1-GOETHE-006-T3.json",
+      "level": "B1",
+      "module": "listening",
+      "cell": "listening/B1",
+      "exists": true
+    },
+    {
+      "source": "d3-manual-sample",
+      "dimension": "D3 semantic answer/distractor review",
+      "file": "content/b1/reading/B1-T1-001.json",
+      "level": "B1",
+      "module": "reading",
+      "cell": "reading/B1",
+      "exists": true
+    },
+    {
+      "source": "d3-manual-sample",
+      "dimension": "D3 semantic answer/distractor review",
+      "file": "content/b1/reading/B1-T3-006.json",
+      "level": "B1",
+      "module": "reading",
+      "cell": "reading/B1",
+      "exists": true
+    },
+    {
+      "source": "d3-manual-sample",
+      "dimension": "D3 semantic answer/distractor review",
+      "file": "content/b2/listening/L-B2-GOETHE-001-T1.json",
+      "level": "B2",
+      "module": "listening",
+      "cell": "listening/B2",
+      "exists": true
+    },
+    {
+      "source": "d3-manual-sample",
+      "dimension": "D3 semantic answer/distractor review",
+      "file": "content/b2/listening/L-B2-GOETHE-007-T1.json",
+      "level": "B2",
+      "module": "listening",
+      "cell": "listening/B2",
+      "exists": true
+    },
+    {
+      "source": "d3-manual-sample",
+      "dimension": "D3 semantic answer/distractor review",
+      "file": "content/b2/reading/B2-T1-001.json",
+      "level": "B2",
+      "module": "reading",
+      "cell": "reading/B2",
+      "exists": true
+    },
+    {
+      "source": "d3-manual-sample",
+      "dimension": "D3 semantic answer/distractor review",
+      "file": "content/b2/reading/B2-T3-006.json",
+      "level": "B2",
+      "module": "reading",
+      "cell": "reading/B2",
+      "exists": true
+    },
+    {
+      "source": "d3-manual-sample",
+      "dimension": "D3 semantic answer/distractor review",
+      "file": "content/c1/listening/L-C1-GOETHE-001-T1.json",
+      "level": "C1",
+      "module": "listening",
+      "cell": "listening/C1",
+      "exists": true
+    },
+    {
+      "source": "d3-manual-sample",
+      "dimension": "D3 semantic answer/distractor review",
+      "file": "content/c1/listening/L-C1-GOETHE-007-T3.json",
+      "level": "C1",
+      "module": "listening",
+      "cell": "listening/C1",
+      "exists": true
+    },
+    {
+      "source": "d3-manual-sample",
+      "dimension": "D3 semantic answer/distractor review",
+      "file": "content/c1/reading/C1-T1-001.json",
+      "level": "C1",
+      "module": "reading",
+      "cell": "reading/C1",
+      "exists": true
+    },
+    {
+      "source": "d3-manual-sample",
+      "dimension": "D3 semantic answer/distractor review",
+      "file": "content/c1/reading/C1-T3-001.json",
+      "level": "C1",
+      "module": "reading",
+      "cell": "reading/C1",
+      "exists": true
+    },
+    {
+      "source": "d3-manual-sample",
+      "dimension": "D3 semantic answer/distractor review",
+      "file": "content/c2/listening/L-C2-GOETHE-001-T1.json",
+      "level": "C2",
+      "module": "listening",
+      "cell": "listening/C2",
+      "exists": true
+    },
+    {
+      "source": "d3-manual-sample",
+      "dimension": "D3 semantic answer/distractor review",
+      "file": "content/c2/listening/L-C2-GOETHE-009-T3.json",
+      "level": "C2",
+      "module": "listening",
+      "cell": "listening/C2",
+      "exists": true
+    },
+    {
+      "source": "d3-manual-sample",
+      "dimension": "D3 semantic answer/distractor review",
+      "file": "content/c2/reading/C2-T1-001.json",
+      "level": "C2",
+      "module": "reading",
+      "cell": "reading/C2",
+      "exists": true
+    },
+    {
+      "source": "d3-manual-sample",
+      "dimension": "D3 semantic answer/distractor review",
+      "file": "content/c2/reading/C2-T3-001.json",
+      "level": "C2",
+      "module": "reading",
+      "cell": "reading/C2",
+      "exists": true
+    },
+    {
+      "source": "d4-manual-sample",
+      "dimension": "D4 Vietnamese naturalness review",
+      "file": "content/a1/vocabulary/01-person.json",
+      "level": "A1",
+      "module": "vocabulary",
+      "cell": "vocabulary/A1",
+      "exists": true
+    },
+    {
+      "source": "d4-manual-sample",
+      "dimension": "D4 Vietnamese naturalness review",
+      "file": "content/a1/vocabulary/11-freizeit.json",
+      "level": "A1",
+      "module": "vocabulary",
+      "cell": "vocabulary/A1",
+      "exists": true
+    },
+    {
+      "source": "d4-manual-sample",
+      "dimension": "D4 Vietnamese naturalness review",
+      "file": "content/a2/vocabulary/01-person-identitaet.json",
+      "level": "A2",
+      "module": "vocabulary",
+      "cell": "vocabulary/A2",
+      "exists": true
+    },
+    {
+      "source": "d4-manual-sample",
+      "dimension": "D4 Vietnamese naturalness review",
+      "file": "content/a2/vocabulary/14-zeit-feiertage.json",
+      "level": "A2",
+      "module": "vocabulary",
+      "cell": "vocabulary/A2",
+      "exists": true
+    },
+    {
+      "source": "d4-manual-sample",
+      "dimension": "D4 Vietnamese naturalness review",
+      "file": "content/b1/vocabulary/01-persoenlichkeit-charakter.json",
+      "level": "B1",
+      "module": "vocabulary",
+      "cell": "vocabulary/B1",
+      "exists": true
+    },
+    {
+      "source": "d4-manual-sample",
+      "dimension": "D4 Vietnamese naturalness review",
+      "file": "content/b1/vocabulary/22-musik-instrumente.json",
+      "level": "B1",
+      "module": "vocabulary",
+      "cell": "vocabulary/B1",
+      "exists": true
+    },
+    {
+      "source": "d4-manual-sample",
+      "dimension": "D4 Vietnamese naturalness review",
+      "file": "content/b2/vocabulary/01-identitaet-selbstbild.json",
+      "level": "B2",
+      "module": "vocabulary",
+      "cell": "vocabulary/B2",
+      "exists": true
+    },
+    {
+      "source": "d4-manual-sample",
+      "dimension": "D4 Vietnamese naturalness review",
+      "file": "content/b2/vocabulary/31-arbeitsrecht-gewerkschaft.json",
+      "level": "B2",
+      "module": "vocabulary",
+      "cell": "vocabulary/B2",
+      "exists": true
+    },
+    {
+      "source": "d4-manual-sample",
+      "dimension": "D4 Vietnamese naturalness review",
+      "file": "content/c1/vocabulary/01-gesellschaftskritik-diskurs.json",
+      "level": "C1",
+      "module": "vocabulary",
+      "cell": "vocabulary/C1",
+      "exists": true
+    },
+    {
+      "source": "d4-manual-sample",
+      "dimension": "D4 Vietnamese naturalness review",
+      "file": "content/c1/vocabulary/38-pressefreiheit-zensur.json",
+      "level": "C1",
+      "module": "vocabulary",
+      "cell": "vocabulary/C1",
+      "exists": true
+    },
+    {
+      "source": "d4-manual-sample",
+      "dimension": "D4 Vietnamese naturalness review",
+      "file": "content/c2/vocabulary/01-epistemologie-wissenschaftstheorie.json",
+      "level": "C2",
+      "module": "vocabulary",
+      "cell": "vocabulary/C2",
+      "exists": true
+    },
+    {
+      "source": "d4-manual-sample",
+      "dimension": "D4 Vietnamese naturalness review",
+      "file": "content/c2/vocabulary/27-uebersetzungswissenschaft.json",
+      "level": "C2",
+      "module": "vocabulary",
+      "cell": "vocabulary/C2",
+      "exists": true
+    }
+  ]
+}
