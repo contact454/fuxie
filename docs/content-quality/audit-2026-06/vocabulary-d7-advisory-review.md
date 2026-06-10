@@ -22,7 +22,9 @@ Ngay review: 2026-06-10
 - 3 bang chia duoc can chinh theo ban canonical da co trong corpus Fuxie.
 - 138 bang chia hien tai duoc can chinh bang quy tac dong tu yeu/regular present tense, gom ca dang tach duoc, phan than, va loanword `silencen` theo mau Duden `slicen`.
 - 0 bang chia dong tu con `auto_generated_needs_spot_check`; `entbergen` duoc sua stem-vowel theo Duden (`entbirgst`, `entbirgt`).
+- Review pack cho native reviewer da duoc tao: `vocabulary-d7-review-pack.{json,md,csv}` gom 1.482 dong queue, trong do 626 dong P1, bao phu plural morphology, article/genus policy, loanword policy, semantic-definition va example-lexeme flags.
 - Regression gate: `tests/content-audit/vocabulary-d7-readiness.spec.ts`.
+- Review-pack gate: `tests/content-audit/vocabulary-d7-review-pack.spec.ts`.
 - Remediation runner: `scripts/apply-vocabulary-d7-remediation.ts` (dry-run mac dinh, `--write` de ghi).
 
 Nguon lexicon mot lan: [viorelsfetea/german-verbs-database](https://github.com/viorelsfetea/german-verbs-database). Trang thai `lexicon_aligned_needs_native_signoff` chi khang dinh cac dang hien tai da duoc doi chieu voi lexicon, khong phai native signoff.
@@ -32,6 +34,7 @@ Nguon spot-check bo sung: [Duden `entbergen`](https://www.duden.de/konjugation/e
 
 - Khong con bang chia dong tu nao o trang thai `auto_generated_needs_spot_check`.
 - `silencen` van la loanword chuyen nganh hiem; form da duoc dua ve boundary `regular_rule_needs_native_signoff`, nhung native reviewer can xac nhan co nen giu lexeme nay hay thay bang `stilllegen`/`unterdruecken` trong bai hoc.
+- 1.482 dong trong review pack van co `reviewerVerdict` trong; day la hang doi lam viec, khong phai phe duyet.
 - Co `isIrregular` chua duoc tai xac minh toan bo; learner UI hien tai doc cac dang `praesens`, khong dung co nay lam noi dung hien thi.
 - Hinh thai so nhieu cua danh tu moi duoc sua blocker schema/literal-null. Do chinh xac tu vung cua tung dang so nhieu van can lexicon va native review.
 - Dinh nghia, ban dich Viet, vi du, CEFR fit va tinh tu nhien chua duoc nguoi ban ngu duyet tung entry.

@@ -23,6 +23,7 @@ Audit va remediate 369 file vocabulary, 10.461 entry tren 6 level. Workstream na
   - Ghi `docs/content-quality/audit-2026-06/vocabulary-d7-advisory-review.md`.
 
 - [ ] 4. Native review va Academic_Signoff
+  - Dung `docs/content-quality/audit-2026-06/vocabulary-d7-review-pack.csv` lam working queue cho reviewer.
   - Spot-check 2 bang chia hiem da resolve khoi `auto_generated_needs_spot_check`: `silencen`, `entbergen`.
   - Quyet dinh loanword policy cho `silencen` (giu loanword chuyen nganh hay thay bang `stilllegen`/`unterdruecken`).
   - Duyet plural morphology, genus, nghia, vi du, dich Viet va CEFR fit theo cell.
@@ -36,6 +37,7 @@ Audit va remediate 369 file vocabulary, 10.461 entry tren 6 level. Workstream na
 - [x] 138 conjugation con lai duoc can chinh bang regular-rule present tense va gan `regular_rule_needs_native_signoff`.
 - [x] Phase regular-rule cham 95 file, giam auto-review tu 139 xuong 2.
 - [x] Phase rare-verb cleanup cham 2 file, giam auto-review tu 2 xuong 0.
+- [x] Vocabulary D7 review pack da tao 1.482 dong queue (626 P1) bao phu plural/genus/loanword/semantic/example flags tren 6 vocabulary cell.
 - [ ] Final native review, loanword policy, plural morphology, genus, nghia/vi du va CEFR fit van pending.
 
 ## Notes

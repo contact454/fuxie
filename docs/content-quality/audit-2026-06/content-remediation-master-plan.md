@@ -12,11 +12,11 @@ Ngày lập: 2026-06 · Trạng thái: Đang thực thi · Liên quan: PR #21 (`
 - `scripts/content-status-board.ts`: 36/36 cell `qaMachine=pass`; `cells with machine defect: 0`.
 - D3 topic-match: 36/36 cell `D3=pass`; 6 listening items regenerated for real topic mismatch, 16 functional-topic false positives covered by audited semantic evidence in `topic-evidence-overrides.json`.
 - `scripts/content-qa.ts`: 1.193 file scanned, 0 errors, 0 warnings.
-- `scripts/content-d7-signoff-sweep.ts`: D7 register đã tạo từ board + manifest + sample packs, bao phủ 36/36 cell và 120 review inputs; 0 sample file thiếu.
+- `scripts/content-d7-signoff-sweep.ts`: D7 register đã tạo từ board + manifest + sample packs, bao phủ 36/36 cell, 120 general review inputs, và 1.482 Vocabulary D7 review rows; 0 sample file thiếu.
 - Grammar D7 advisory: 6/6 grammar cells now have a uniform 3-exercise scaffold; C1/C2 remediation adds recognition + production practice while leaving final native signoff pending.
 - Speaking D7 advisory: 48/48 files and 2,304 sentences checked; 79 pseudo-IPA and 6 blank IPA entries remediated, while final native signoff remains pending.
 - Writing D7 advisory: 230/230 files checked and 216 model answers remediated for objective length/template/token blockers; final native and exam-authenticity signoff remains pending.
-- Vocabulary D7 advisory: 369/369 files and 10,461 entries checked; 239 files carry D7 remediation notes for objective schema, lexeme, semantic, and present-conjugation blockers. No `auto_generated_needs_spot_check` conjugations remain; loanword policy, plural morphology, and final native signoff remain pending.
+- Vocabulary D7 advisory: 369/369 files and 10,461 entries checked; 239 files carry D7 remediation notes for objective schema, lexeme, semantic, and present-conjugation blockers. No `auto_generated_needs_spot_check` conjugations remain; `vocabulary-d7-review-pack.{json,md,csv}` now queues 1.482 rows (626 P1) for loanword policy, plural morphology, genus/article policy, semantic definition, example fit, and final native signoff.
 - `docs/content-quality/audit-2026-06/cell-ownership-map.md`: đã gán owner/workstream cho đủ 36 cell.
 - `.github/workflows/ci.yml`: CI `check-quick` chạy `pnpm qa:german-lint --diff` với LanguageTool service + PBT.
 - `scripts/content-generation-guard.ts`: guard foundation chặn D1/D2/D3/D4/D5 trước khi generator ghi nội dung.

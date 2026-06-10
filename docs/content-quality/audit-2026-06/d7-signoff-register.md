@@ -1,6 +1,6 @@
 # D7 Academic Signoff Register
 
-Generated: 2026-06-10T14:00:08.714Z
+Generated: 2026-06-10T14:05:32.387Z
 
 ## Summary
 
@@ -9,6 +9,7 @@ Generated: 2026-06-10T14:00:08.714Z
 - Academic signed: 1/36; pending: 35/36.
 - Listening audio pending: 6/6.
 - Review inputs: human=60, D2=24, D3=24, D4=12.
+- Vocabulary D7 review queue: 1482 rows, including 626 P1 rows.
 - Missing sample files: 0.
 
 ## Rules
@@ -64,6 +65,7 @@ Generated: 2026-06-10T14:00:08.714Z
 - statusBoard: `docs/content-quality/audit-2026-06/status-board.json`
 - signoffManifest: `docs/content-quality/audit-2026-06/signoff-manifest.json`
 - humanSpotCheckSamples: `docs/content-quality/human-spot-check-samples.md`
+- vocabularyD7ReviewPack: `docs/content-quality/audit-2026-06/vocabulary-d7-review-pack.json`
 - d2ManualSample: `tmp/d2-manual-sample.json`
 - d3ManualSample: `tmp/d3-manual-sample.json`
 - d4ManualSample: `tmp/d4-manual-sample.json`

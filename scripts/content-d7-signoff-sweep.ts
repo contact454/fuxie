@@ -19,6 +19,7 @@ const AUDIT = path.join(DOCS, 'audit-2026-06')
 const STATUS_BOARD = path.join(AUDIT, 'status-board.json')
 const SIGNOFF_MANIFEST = path.join(AUDIT, 'signoff-manifest.json')
 const HUMAN_SPOT_CHECK = path.join(DOCS, 'human-spot-check-samples.md')
+const VOCABULARY_D7_REVIEW_PACK = path.join(AUDIT, 'vocabulary-d7-review-pack.json')
 const OUTPUT_JSON = path.join(AUDIT, 'd7-signoff-register.json')
 const OUTPUT_MD = path.join(AUDIT, 'd7-signoff-register.md')
 
@@ -167,6 +168,9 @@ function nextActionForCell(cell: BoardCell): string {
 function buildRegister(now = new Date().toISOString()): D7Register {
   const board = readJson<{ cells: BoardCell[]; totalCells: number; totalFiles: number }>(STATUS_BOARD)
   const manifest = readJson<Record<string, { signoff?: string }>>(SIGNOFF_MANIFEST)
+  const vocabularyReviewPack = fs.existsSync(VOCABULARY_D7_REVIEW_PACK)
+    ? readJson<{ summary?: { reviewItems?: number; byPriority?: Record<string, number> } }>(VOCABULARY_D7_REVIEW_PACK)
+    : null
   const sampleInputs = [
     ...parseHumanSpotCheckSamples(fs.readFileSync(HUMAN_SPOT_CHECK, 'utf8')),
     ...loadManualSamples(),
@@ -206,6 +210,7 @@ function buildRegister(now = new Date().toISOString()): D7Register {
       statusBoard: rel(STATUS_BOARD),
       signoffManifest: rel(SIGNOFF_MANIFEST),
       humanSpotCheckSamples: rel(HUMAN_SPOT_CHECK),
+      vocabularyD7ReviewPack: rel(VOCABULARY_D7_REVIEW_PACK),
       d2ManualSample: 'tmp/d2-manual-sample.json',
       d3ManualSample: 'tmp/d3-manual-sample.json',
       d4ManualSample: 'tmp/d4-manual-sample.json',
@@ -223,6 +228,8 @@ function buildRegister(now = new Date().toISOString()): D7Register {
       d2ManualSamples: sampleInputs.filter((s) => s.source === 'd2-manual-sample').length,
       d3ManualSamples: sampleInputs.filter((s) => s.source === 'd3-manual-sample').length,
       d4ManualSamples: sampleInputs.filter((s) => s.source === 'd4-manual-sample').length,
+      vocabularyD7ReviewRows: vocabularyReviewPack?.summary?.reviewItems ?? 0,
+      vocabularyD7P1Rows: vocabularyReviewPack?.summary?.byPriority?.P1 ?? 0,
       missingSampleFiles: sampleInputs.filter((s) => !s.exists).length,
     },
     rules: [
@@ -249,6 +256,7 @@ function renderMarkdown(register: D7Register): string {
   lines.push(`- Academic signed: ${register.summary.academicSignedCells}/${register.summary.totalCells}; pending: ${register.summary.academicPendingCells}/${register.summary.totalCells}.`)
   lines.push(`- Listening audio pending: ${register.summary.audioPendingCells}/6.`)
   lines.push(`- Review inputs: human=${register.summary.humanSpotCheckSamples}, D2=${register.summary.d2ManualSamples}, D3=${register.summary.d3ManualSamples}, D4=${register.summary.d4ManualSamples}.`)
+  lines.push(`- Vocabulary D7 review queue: ${register.summary.vocabularyD7ReviewRows} rows, including ${register.summary.vocabularyD7P1Rows} P1 rows.`)
   lines.push(`- Missing sample files: ${register.summary.missingSampleFiles}.`)
   lines.push('')
   lines.push('## Rules')
@@ -284,6 +292,8 @@ function validateRegister(register: D7Register): string[] {
   if (register.summary.d2ManualSamples !== 24) errors.push(`expected 24 D2 samples, got ${register.summary.d2ManualSamples}`)
   if (register.summary.d3ManualSamples !== 24) errors.push(`expected 24 D3 samples, got ${register.summary.d3ManualSamples}`)
   if (register.summary.d4ManualSamples !== 12) errors.push(`expected 12 D4 samples, got ${register.summary.d4ManualSamples}`)
+  if (register.summary.vocabularyD7ReviewRows !== 1482) errors.push(`expected 1482 vocabulary D7 review rows, got ${register.summary.vocabularyD7ReviewRows}`)
+  if (register.summary.vocabularyD7P1Rows !== 626) errors.push(`expected 626 vocabulary D7 P1 rows, got ${register.summary.vocabularyD7P1Rows}`)
   if (register.summary.missingSampleFiles !== 0) errors.push(`missing sample files: ${register.summary.missingSampleFiles}`)
   for (const cell of register.cells) {
     if (cell.status === 'Done (đủ)' && cell.academicSignoff !== 'signed') {
