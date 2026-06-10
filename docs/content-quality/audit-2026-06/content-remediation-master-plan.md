@@ -3,9 +3,18 @@
 Vai chinh: Project Manager / Delivery Manager
 Vai phoi hop: Content QA / Linguistic Reviewer, German Academic Lead, German Curriculum Designer, AI / LLM Engineer, CTO / Tech Lead, Speech / Audio Engineer
 
-Ngày lập: 2026-06 · Trạng thái: DRAFT để CEO/CTO duyệt · Liên quan: PR #21 (`chore/content-audit-remediation-2026-06`)
+Ngày lập: 2026-06 · Trạng thái: Đang thực thi · Liên quan: PR #21 (`chore/content-audit-remediation-2026-06`)
 
 > Mục tiêu của tài liệu này: thay cách vá lắt nhắt từng cụm bằng **một chương trình (program) thống nhất** quản lý chất lượng + remediation cho **toàn bộ 1.187 item content**, mọi module, A1→C2. Một inventory, một bộ cổng QA, một bảng theo dõi, một định nghĩa "Done".
+
+## Cập nhật thực thi 2026-06-10
+
+- `scripts/content-status-board.ts`: 36/36 cell `qaMachine=pass`; `cells with machine defect: 0`.
+- `scripts/content-qa.ts`: 1.193 file scanned, 0 errors, 0 warnings.
+- `docs/content-quality/audit-2026-06/cell-ownership-map.md`: đã gán owner/workstream cho đủ 36 cell.
+- `.github/workflows/ci.yml`: CI `check-quick` chạy `pnpm qa:german-lint --diff` với LanguageTool service + PBT.
+- `scripts/content-generation-guard.ts`: guard foundation chặn D1/D2/D3/D4/D5 trước khi generator ghi nội dung.
+- Tồn đọng không được tự chứng nhận: 35/36 cell còn `academicSignoff=pending`; 6/6 listening cell còn `audio=pending`. Vì vậy chương trình hiện **machine-clean**, chưa **release-signed** toàn bộ.
 
 ---
 

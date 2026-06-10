@@ -31,30 +31,37 @@ Dựng khung chương trình quản lý chất lượng + remediation cho 1.187 
   - _Requirements: 2.1, 2.2, 2.3_
 
 - [x] 2. Status_Board generator (36 cell, sinh từ scanner)
-  - `scripts/content-status-board.ts`: chạy cổng máy D1–D5 (tái dùng `lib/listening-scan`, `lib/cefr-stem-markers`, `apply-c2-article-regen`, `apply-c2-teil2-regen`) + đọc manifest → sinh `docs/content-quality/audit-2026-06/status-board.{md,json}` với 36 cell. **Đã chạy: 36 cell / 1187 item, 11 cell có defect máy.**
+  - `scripts/content-status-board.ts`: chạy cổng máy D1–D5 (tái dùng `lib/listening-scan`, `lib/cefr-stem-markers`, `apply-c2-article-regen`, `apply-c2-teil2-regen`) + đọc manifest → sinh `docs/content-quality/audit-2026-06/status-board.{md,json}` với 36 cell.
+  - **Cập nhật 2026-06-10:** sau remediation C1/C2 listening, board hiện `36/36 qaMachine=pass`, `cells with machine defect: 0`; `academicSignoff/audio` vẫn đọc từ manifest và chưa tự động ký.
   - _Requirements: 1.1, 1.2, 1.3_
 
 - [x] 3. Signoff manifest D7 (người cập nhật)
   - Tạo `docs/content-quality/audit-2026-06/signoff-manifest.json` khởi tạo 36 cell, `signoff: pending` (trung thực: CHƯA có người Đức duyệt cell nào). Board đọc manifest cho D7 + audio; máy không tự đặt Done-đủ.
   - _Requirements: 3.1, 3.2, 3.3_
 
-- [ ] 4. CI hook chặn PR content
-  - Cắm cổng máy (Task 1) vào CI: PR đụng `content/**` chạy D1–D6, fail nếu vi phạm mới so baseline; tái dùng `vitest.property.config.ts` + `tests/content-audit/*`.
+- [x] 4. CI hook chặn PR content
+  - `.github/workflows/ci.yml` job `check-quick` đã chạy Tier-1 German gate `pnpm qa:german-lint --diff` với LanguageTool service container và không `continue-on-error`.
+  - `pnpm test:property --exclude "**/exploration.spec.ts"` giữ PBT content-audit/program-quality trong CI; `program-quality.spec.ts` bảo vệ board completeness, SSOT reuse, và no-machine-auto-signoff.
   - _Requirements: 2.4, 6.3_
 
-- [ ] 5. Hợp nhất spec con + gán chủ cell
-  - Bảng ánh xạ cell → spec con: reading C2-T1/T3 (done), C2-T2 (`content-c2-teil2-regeneration`), stems (`content-cefr-stem-regeneration`), listening B1–C2 (`content-listening-regeneration`).
-  - Đề xuất spec con MỚI cho cell chưa có chủ: `content-vocabulary-audit` (369 item), `content-writing-audit`, `content-speaking-grammar-audit`.
+- [x] 5. Hợp nhất spec con + gán chủ cell
+  - Bảng ánh xạ cell → spec con/owner đã ghi tại `docs/content-quality/audit-2026-06/cell-ownership-map.md`.
+  - Reading remediation được gắn vào `content-c2-placeholder-regeneration`, `content-c2-teil2-regeneration`, `content-c2-teil3-regeneration`, `content-cefr-stem-regeneration`, `reading-explanation-regeneration`.
+  - Listening B1–C2 được gắn vào `content-listening-regeneration`; listening A1/A2 vào listening spot-check + audio parity.
+  - Cell chưa có spec remediation riêng được gán owner/workstream: `content-vocabulary-audit` (369 item), `content-writing-audit`, `content-speaking-grammar-audit`.
   - _Requirements: 5.1, 5.2, 5.3_
 
 - [ ] 6. Fix generator gốc + guard (Đợt 0)
-  - Theo ticket `TICKET-content-generator-filler-rootcause.md` (5 cụm): điều tra module/prompt sinh D1–D4 + thêm fail-fast guard reject output dính GENERIC_OPENER/_T2, BROKEN_STEM_MARKERS, overlap≥0.5, dupRatio≥0.2, topic mismatch — KHÔNG ghi `content/`.
+  - [x] Guard foundation: `scripts/content-generation-guard.ts` cung cấp `validateGeneratedBatch`/`assertGeneratedBatchClean` để generator gọi trước khi ghi `content/`.
+  - [x] Guard tái dùng SSOT: `GENERIC_OPENER/_T2`, `BROKEN_STEM_MARKERS`, `overlapScore` qua `cellDuplicatePairs`, `internalDupRatio`, và `topicKeywords`/content extraction hiện có.
+  - [x] Tests: `tests/content-audit/content-generation-guard.spec.ts` chứng minh guard reject D1 filler, D2 duplicate batch, D3 topic mismatch, D4 looped transcript, D5 broken-stem và pass batch sạch.
+  - [ ] Còn lại: truy nguồn module/prompt/commit sinh ra 5 cụm defect lịch sử và cắm guard trực tiếp vào generator sản xuất đang tạo content mới (nếu generator đó còn active).
   - _Requirements: 4.3, 6.4_
 
-- [ ] 7. Báo cáo + tiêu chí đợt + bàn giao governance
-  - Scanner xuất số defect còn lại theo cell định kỳ; định nghĩa tiêu chí hoàn thành mỗi đợt (số cell Done máy / Done đủ).
-  - Property 4: `content/` READ-ONLY tới khi sign-off (hash/CI).
-  - Cập nhật master plan + Status_Board làm dashboard chính thức; bàn giao cho PM theo dõi.
+- [x] 7. Báo cáo + tiêu chí đợt + bàn giao governance
+  - Scanner xuất `status-board.{md,json}` theo cell; trạng thái hiện tại: 36/36 cell `Done (máy)`, 1/36 `Done (đủ)`.
+  - `cell-ownership-map.md` định nghĩa owner, next gate, và quy tắc governance: Status_Board là nguồn máy, signoff manifest là nguồn D7/audio.
+  - Release criterion giữ nguyên: "Done (đủ)" cần Academic_Signoff và listening audio không pending; các cell pending không được coi là release-signed dù machine-clean.
   - _Requirements: 4.1, 4.4, 6.1, 6.2, 6.3_
 
 ## Notes

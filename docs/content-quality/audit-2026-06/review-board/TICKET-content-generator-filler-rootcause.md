@@ -2,10 +2,10 @@
 
 - **Priority:** P0 (root cause của 5 cụm defect; nhiều cụm đã/đang remediate qua spec riêng)
 - **Owner đề xuất:** AI / LLM Engineer (chinh) · CTO / Tech Lead (phoi hop) · Content QA / Linguistic Reviewer (verify)
-- **Status:** OPEN
+- **Status:** PARTIAL — guard foundation shipped; generator-origin trace still open
 - **Phát hiện bởi:** Kiro-agent content review pilot (spec `fuxie-content-review-board`)
 - **Liên quan:** PR #21 (`chore/content-audit-remediation-2026-06`)
-- **Ngày mở:** 2026-06 · **Cập nhật:** 2026-06 (mở rộng từ 2 cụm → 5 cụm sau quét sâu 1.187 file)
+- **Ngày mở:** 2026-06 · **Cập nhật:** 2026-06-10 (guard foundation added; machine board now 0 defect cells)
 
 ## Bối cảnh
 
@@ -24,12 +24,20 @@ Quét sâu toàn bộ 1.187 file content (audit 2026-06, `cross-content-duplicat
 ## Yêu cầu (Definition of Done)
 
 - [ ] Xác định module/prompt/bước sinh ra: (a) filler opener T1 `Der vorliegende … widmet sich dem Thema …`, (b) filler opener T3 `Der wissenschaftliche Diskurs um das Thema …`, (c) filler cloze T2 `Der folgende Bericht untersucht das Thema '…' aus interdisziplinärer Perspektive`, (d) stem nối template, (e) listening copy block N→N+10; truy ra commit/script gốc.
-- [ ] Thêm **fail-fast guard trong generator**: nếu output dính bất kỳ `GENERIC_OPENER` (xem `scripts/apply-c2-article-regen.ts`), `GENERIC_OPENER_T2` (`scripts/apply-c2-teil2-regen.ts`), hoặc khớp `BROKEN_STEM_MARKERS` (`scripts/lib/cefr-stem-markers.ts`) → reject/raise, KHÔNG ghi ra `content/`.
-- [ ] Thêm guard "duplicate body": phát hiện nhiều file chia sẻ `article.text` / `section_cloze.text` / transcript gần-trùng (tái dùng `overlapScore` của `scripts/lib/listening-scan.ts`) ở khâu sinh hàng loạt; chặn cả mẫu copy N↔N+10 trong listening.
-- [ ] Thêm guard "topic↔nội dung": keyword `topic`/`title` phải xuất hiện trong nội dung học (transcript/article/cloze) — tái dùng `transcriptMatchesTopic`.
-- [ ] Thêm guard "cấu trúc thật": nếu khai "N Sendungen/Gespräche" thì phải có N đoạn khác nhau thật (dupRatio nội bộ < 0.2).
-- [ ] Cắm các cổng deterministic trên vào CI (tái dùng Tier-1 của `fuxie-content-review-board` + `tests/content-audit/*`) để chặn tái sinh ở PR mới.
-- [ ] Đã quét toàn bộ level/teil (1.187 file) — xác nhận 5 cụm trên là toàn bộ defect đo được; A1/A2 reading, vocabulary, grammar, speaking, writing (trừ a1/writing nghi false-positive) sạch.
+- [x] Thêm **fail-fast guard foundation**: `scripts/content-generation-guard.ts` reject/raise trước khi ghi nếu output dính `GENERIC_OPENER`, `GENERIC_OPENER_T2`, hoặc `BROKEN_STEM_MARKERS`.
+- [x] Thêm guard "duplicate body": `validateGeneratedBatch` phát hiện nhiều candidate chia sẻ body gần-trùng qua `cellDuplicatePairs`/`overlapScore`, chặn mẫu copy batch.
+- [x] Thêm guard "topic↔nội dung": keyword `topic`/`title` phải xuất hiện trong nội dung học trước khi candidate được coi là sạch.
+- [x] Thêm guard "cấu trúc thật": transcript candidate có `internalDupRatio >= 0.2` bị reject.
+- [x] Cắm cổng deterministic vào CI: `.github/workflows/ci.yml` chạy `pnpm qa:german-lint --diff` với LanguageTool service; PBT content-audit chạy trong `pnpm test:property`.
+- [x] Đã quét toàn bộ 36 cell / 1.187 tracked files bằng Status_Board — `cells with machine defect: 0` sau remediation 2026-06-10.
+- [ ] Còn lại: cắm `assertGeneratedBatchClean` trực tiếp vào generator sản xuất đang active sau khi xác định module/prompt gốc.
+
+## Guard foundation shipped
+
+- Code: `scripts/content-generation-guard.ts`
+- Tests: `tests/content-audit/content-generation-guard.spec.ts`
+- Covered historical defect families: D1 filler opener, D2 duplicate body, D3 topic mismatch, D4 repeated listening segments, D5 broken-stem.
+- Verification: focused Vitest run passed (`content-generation-guard.spec.ts` + `program-quality.spec.ts`, 13/13 tests).
 
 ## Phạm vi & ràng buộc
 
