@@ -9,6 +9,7 @@ Generated for the Kiro content-audit remediation program, 2026-06. This map assi
 
 - Inventory: 36 cells, 1,187 content files/items tracked by `docs/content-quality/audit-2026-06/status-board.json`.
 - Machine gate: 36/36 cells `qaMachine=pass` after `scripts/content-status-board.ts` on 2026-06-10.
+- D3 topic-match: 36/36 cells `d3=pass`; 16 semantic evidence overrides are audited in `topic-evidence-overrides.json` and remain non-D7 evidence.
 - Academic signoff: 1/36 cells signed in `signoff-manifest.json`; remaining cells require German Academic Lead or delegated native reviewer signoff before "Done (du)".
 - Audio: 6/6 listening cells remain `audio=pending`; regenerated transcripts require Audio_Restubbing before release-grade listening signoff.
 - Release stance: machine-clean, not fully release-signed.
@@ -57,6 +58,7 @@ Generated for the Kiro content-audit remediation program, 2026-06. This map assi
 ## Governance Rules
 
 - `scripts/content-status-board.ts` remains the machine-status source of truth.
+- `docs/content-quality/audit-2026-06/topic-evidence-overrides.json` may clear D3 only when the evidence term is present in the content and audit metadata is complete; it does not grant academic signoff.
 - `docs/content-quality/audit-2026-06/signoff-manifest.json` remains the human/audio status source of truth.
 - A content cell can be called "Done (may)" when D1-D6 pass.
 - A content cell can be called "Done (du)" only after D7 is signed and, for listening, audio is no longer pending.

@@ -10,6 +10,7 @@ Ngày lập: 2026-06 · Trạng thái: Đang thực thi · Liên quan: PR #21 (`
 ## Cập nhật thực thi 2026-06-10
 
 - `scripts/content-status-board.ts`: 36/36 cell `qaMachine=pass`; `cells with machine defect: 0`.
+- D3 topic-match: 36/36 cell `D3=pass`; 6 listening items regenerated for real topic mismatch, 16 functional-topic false positives covered by audited semantic evidence in `topic-evidence-overrides.json`.
 - `scripts/content-qa.ts`: 1.193 file scanned, 0 errors, 0 warnings.
 - `docs/content-quality/audit-2026-06/cell-ownership-map.md`: đã gán owner/workstream cho đủ 36 cell.
 - `.github/workflows/ci.yml`: CI `check-quick` chạy `pnpm qa:german-lint --diff` với LanguageTool service + PBT.
@@ -44,7 +45,8 @@ Tổng hợp từ quét sâu 1.187 file (`cross-content-duplicate-scan.md`) + đ
 | reading C2-T3 (12 file) | filler "Der wissenschaftliche Diskurs…" | P0 | ✅ đã chữa (`content-c2-teil3-regeneration`) |
 | reading C2-T2 (12 file) | filler cloze "Der folgende Bericht…" | P0 | 🔧 spec + 12 nháp dry-run pass, chờ duyệt (`content-c2-teil2-regeneration`) |
 | reading B2/C1/C2 stems (~93 câu) | broken-stem nối template | P1 | ✅ đã chữa (`content-cefr-stem-regeneration`) |
-| listening B1/B2/C1/C2 (~60+ file) | transcript nhân bản N↔N+10 + topic mismatch + cấu trúc "N Sendungen" giả | P0/P1 | 🔧 foundation + B2 worklist (20 file) + 1 nháp, chờ duyệt (`content-listening-regeneration`) |
+| listening B1/B2/C1/C2 (~60+ file) | transcript nhân bản N↔N+10 + topic mismatch + cấu trúc "N Sendungen" giả | P0/P1 | ✅ sạch theo máy; còn D7 + Audio_Restubbing (`content-listening-regeneration`) |
+| listening A1/A2/B1 D3 advisory | topic descriptor chức năng hoặc transcript lệch thật | P1/P2 | ✅ 6 item regenerate + 16 semantic evidence overrides; D3 board = pass |
 | writing A1 (10 file) | nghi near-duplicate khung đề | nghi P2 / false-pos | ⏳ chưa xác minh đọc |
 | vocabulary, grammar, speaking, reading A1/A2/B1, writing A2–C2, listening A1/A2 | — | — | ✅ sạch theo phép đo overlap/opener (cần đọc mẫu xác nhận) |
 
@@ -58,7 +60,7 @@ Tổng hợp từ quét sâu 1.187 file (`cross-content-duplicate-scan.md`) + đ
 | --- | --- | --- | --- |
 | D1 | Filler/placeholder opener | regex GENERIC_OPENER(_T2) | reading, (listening intro) |
 | D2 | Nội dung nhân bản giữa ID | overlapScore ≥ 0.5 trong cùng cell | reading, listening, writing |
-| D3 | Topic ↔ nội dung mismatch | keyword(topic/title) ⊄ nội dung | mọi module có topic |
+| D3 | Topic ↔ nội dung mismatch | keyword(topic/title/opinion question) hoặc semantic evidence ⊂ nội dung | mọi module có topic |
 | D4 | Cấu trúc giả ("N Sendungen/Gespräche") | dupRatio nội bộ ≥ 0.2 | listening |
 | D5 | Broken-stem (nối template) | BROKEN_STEM_MARKERS | reading, listening questions |
 | D6 | Đáp án không xác minh được | key_evidence ⊄ nội dung / answer ∉ options | mọi module có câu hỏi |
@@ -75,7 +77,7 @@ Hợp nhất các công cụ rời rạc đã xây thành **một CLI duy nhất
 1. `qa:content` (schema + cơ bản) — đã có, baseline 0.
 2. `qa:duplicate` — overlapScore trong từng cell < 0.5 (tái dùng `lib/listening-scan.overlapScore`); mở rộng cho reading/writing field nội dung học.
 3. `qa:opener` — GENERIC_OPENER + GENERIC_OPENER_T2 = 0.
-4. `qa:topic-match` — keyword topic ⊂ nội dung (tái dùng `transcriptMatchesTopic`, tổng quát hoá).
+4. `qa:topic-match` — keyword topic/title/opinion question hoặc audited semantic evidence ⊂ nội dung (`scripts/lib/topic-evidence.ts`).
 5. `qa:stem` — BROKEN_STEM_MARKERS = 0.
 6. `qa:answer-integrity` — key_evidence ⊂ nội dung + answer hợp lệ.
 7. `qa:german-lint` — LanguageTool (khi có), lỗi ngữ pháp Đức = 0 mới.

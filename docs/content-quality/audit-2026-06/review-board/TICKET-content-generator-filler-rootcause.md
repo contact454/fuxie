@@ -5,7 +5,7 @@
 - **Status:** PARTIAL — guard foundation shipped; generator-origin trace still open
 - **Phát hiện bởi:** Kiro-agent content review pilot (spec `fuxie-content-review-board`)
 - **Liên quan:** PR #21 (`chore/content-audit-remediation-2026-06`)
-- **Ngày mở:** 2026-06 · **Cập nhật:** 2026-06-10 (guard foundation added; machine board now 0 defect cells)
+- **Ngày mở:** 2026-06 · **Cập nhật:** 2026-06-10 (guard foundation added; machine board now 0 defect cells; D3 board pass with audited semantic evidence)
 
 ## Bối cảnh
 
@@ -30,6 +30,7 @@ Quét sâu toàn bộ 1.187 file content (audit 2026-06, `cross-content-duplicat
 - [x] Thêm guard "cấu trúc thật": transcript candidate có `internalDupRatio >= 0.2` bị reject.
 - [x] Cắm cổng deterministic vào CI: `.github/workflows/ci.yml` chạy `pnpm qa:german-lint --diff` với LanguageTool service; PBT content-audit chạy trong `pnpm test:property`.
 - [x] Đã quét toàn bộ 36 cell / 1.187 tracked files bằng Status_Board — `cells with machine defect: 0` sau remediation 2026-06-10.
+- [x] D3 board-level remediation: 36/36 cell `D3=pass`; `topic-evidence-overrides.json` covers functional-topic false positives without converting them into D7/native signoff.
 - [ ] Còn lại: cắm `assertGeneratedBatchClean` trực tiếp vào generator sản xuất đang active sau khi xác định module/prompt gốc.
 
 ## Guard foundation shipped

@@ -18,13 +18,13 @@
       "id": "Q1",
       "item": 1,
       "type": "ja_nein",
-      "statement": "Herr Dr. Berger ist Sportmediziner an der Charité.",
-      "answer": "ja",
+      "statement": "Man kann die Anmeldung komplett im Internet abschließen.",
+      "answer": "nein",
       "points": 1,
       "explanation": {
-        "de": "Der Moderator sagt: 'Heute bei uns im Studio ist Herr Dr. Berger, Sportmediziner an der Charité.'",
-        "vi": "Người dẫn chương trình nói: 'Hôm nay tại phòng thu của chúng tôi là Tiến sĩ Berger, bác sĩ y học thể thao tại Charité.'",
-        "key_evidence": "Heute bei uns im Studio ist Herr Dr. Berger, Sportmediziner an der Charité.",
+        "de": "Das Formular ist online, aber die Unterschrift muss am Empfang erfolgen.",
+        "vi": "Mẫu đơn có trên mạng, nhưng phải ký tại quầy lễ tân.",
+        "key_evidence": "Nein, das Formular gibt es online, aber unterschreiben muss man bei uns am Empfang.",
         "key_vocabulary": []
       }
     },
@@ -32,13 +32,13 @@
       "id": "Q2",
       "item": 2,
       "type": "ja_nein",
-      "statement": "Die Weltgesundheitsorganisation empfiehlt weniger als 150 Minuten Sport pro Woche.",
-      "answer": "nein",
+      "statement": "Ein Probetraining kostet nichts.",
+      "answer": "ja",
       "points": 1,
       "explanation": {
-        "de": "Herr Dr. Berger sagt: 'Die Weltgesundheitsorganisation empfiehlt mindestens hundertfünfzig Minuten pro Woche.' Das bedeutet, man sollte nicht weniger als 150 Minuten Sport machen.",
-        "vi": "Tiến sĩ Berger nói: 'Tổ chức Y tế Thế giới khuyến nghị ít nhất 150 phút mỗi tuần.' Điều này có nghĩa là không nên tập thể thao ít hơn 150 phút.",
-        "key_evidence": "Die Weltgesundheitsorganisation empfiehlt mindestens hundertfünfzig Minuten pro Woche.",
+        "de": "Frau Reuter sagt, dass ein Probetraining kostenlos ist.",
+        "vi": "Bà Reuter nói rằng buổi tập thử là miễn phí.",
+        "key_evidence": "Ja, ein Probetraining ist kostenlos.",
         "key_vocabulary": []
       }
     },
@@ -46,13 +46,13 @@
       "id": "Q3",
       "item": 3,
       "type": "ja_nein",
-      "statement": "Für Anfänger ist Schwimmen der beste Start.",
-      "answer": "nein",
+      "statement": "Der normale Monatsbeitrag beträgt neunundzwanzig Euro.",
+      "answer": "ja",
       "points": 1,
       "explanation": {
-        "de": "Herr Dr. Berger empfiehlt für Anfänger: 'Am besten beginnt man mit Spazierengehen oder leichtem Joggen dreimal pro Woche.'",
-        "vi": "Tiến sĩ Berger khuyên người mới bắt đầu: 'Tốt nhất là bắt đầu bằng việc đi bộ hoặc chạy bộ nhẹ nhàng ba lần mỗi tuần.'",
-        "key_evidence": "Am besten beginnt man mit Spazierengehen oder leichtem Joggen dreimal pro Woche.",
+        "de": "Der normale Beitrag kostet neunundzwanzig Euro pro Monat.",
+        "vi": "Phí thông thường là 29 euro mỗi tháng.",
+        "key_evidence": "Der normale Beitrag kostet neunundzwanzig Euro im Monat.",
         "key_vocabulary": []
       }
     },
@@ -60,13 +60,13 @@
       "id": "Q4",
       "item": 4,
       "type": "ja_nein",
-      "statement": "Herr Dr. Berger sagt, man braucht eine spezielle Ernährung für Sport.",
+      "statement": "Der Vertrag kann von Anfang an jeden Monat gekündigt werden.",
       "answer": "nein",
       "points": 1,
       "explanation": {
-        "de": "Herr Dr. Berger erklärt: 'Eine ausgewogene Ernährung mit viel Gemüse und Obst reicht völlig aus.' Man braucht also keine spezielle Ernährung.",
-        "vi": "Tiến sĩ Berger giải thích: 'Một chế độ ăn uống cân bằng với nhiều rau và trái cây là hoàn toàn đủ.' Vì vậy, không cần chế độ ăn đặc biệt.",
-        "key_evidence": "Eine ausgewogene Ernährung mit viel Gemüse und Obst reicht völlig aus.",
+        "de": "Der Vertrag läuft zunächst drei Monate und ist erst danach monatlich kündbar.",
+        "vi": "Hợp đồng ban đầu kéo dài ba tháng và chỉ sau đó mới có thể hủy theo tháng.",
+        "key_evidence": "Nein, der Vertrag läuft zuerst drei Monate.",
         "key_vocabulary": []
       }
     },
@@ -74,13 +74,13 @@
       "id": "Q5",
       "item": 5,
       "type": "ja_nein",
-      "statement": "Schwimmen ist gut für die Gelenke.",
+      "statement": "Studenten erhalten mit einem gültigen Ausweis einen Rabatt.",
       "answer": "ja",
       "points": 1,
       "explanation": {
-        "de": "Herr Dr. Berger sagt: 'Schwimmen ist sehr gut, weil es den ganzen Körper trainiert und die Gelenke schont.'",
-        "vi": "Tiến sĩ Berger nói: 'Bơi lội rất tốt vì nó rèn luyện toàn bộ cơ thể và bảo vệ các khớp.'",
-        "key_evidence": "Schwimmen ist sehr gut, weil es den ganzen Körper trainiert und die Gelenke schont.",
+        "de": "Studenten zahlen mit einem gültigen Ausweis vier Euro weniger.",
+        "vi": "Sinh viên có thẻ hợp lệ trả ít hơn bốn euro.",
+        "key_evidence": "Ja, Studenten zahlen mit einem gültigen Ausweis vier Euro weniger.",
         "key_vocabulary": []
       }
     }
@@ -129,135 +129,121 @@
     "source": "studio_source_script",
     "quality": "source_verified",
     "sourceScript": "data/scripts/A2/Teil4-Radiointerview/L-A2-GOETHE-003-T4.json",
-    "note": "Transcript replaced from source script by scripts/apply-source-transcripts.ts.",
+    "note": "Transcript regenerated by content-listening-regeneration (release-candidate script); MP3 pending re-record (Audio_Restubbing).",
     "lines": [
       {
-        "speaker": "Narrator",
+        "speaker": "Prüfer",
         "speaker_role": "exam_narrator",
         "text": "Sie hören ein Interview im Radio. Zu dem Interview gibt es fünf Aufgaben. Kreuzen Sie ja oder nein an. Sie hören das Interview zweimal."
       },
       {
-        "speaker": "Moderator",
+        "speaker": "Moderatorin",
         "speaker_role": "dialogue_speaker",
-        "text": "Heute bei uns im Studio ist Herr Dr. Berger, Sportmediziner an der Charité. Willkommen!"
+        "text": "Heute sprechen wir darüber, wie man sich im Fitnessstudio anmelden kann."
       },
       {
-        "speaker": "Gast",
+        "speaker": "Moderatorin",
         "speaker_role": "dialogue_speaker",
-        "text": "Vielen Dank! Ich freue mich, hier zu sein."
+        "text": "Bei uns ist Frau Reuter vom Fitnessstudio Aktiv. Guten Tag!"
       },
       {
-        "speaker": "Moderator",
+        "speaker": "Frau Reuter",
         "speaker_role": "dialogue_speaker",
-        "text": "Herr Dr. Berger, warum ist Bewegung so wichtig für die Gesundheit?"
+        "text": "Guten Tag, ich freue mich auf das Gespräch."
       },
       {
-        "speaker": "Gast",
+        "speaker": "Moderatorin",
         "speaker_role": "dialogue_speaker",
-        "text": "Regelmäßige Bewegung stärkt das Herz und verbessert die Durchblutung im ganzen Körper."
+        "text": "Kann man die Anmeldung komplett im Internet machen?"
       },
       {
-        "speaker": "Moderator",
+        "speaker": "Frau Reuter",
         "speaker_role": "dialogue_speaker",
-        "text": "Wie viel Sport sollte man pro Woche machen?"
+        "text": "Nein, das Formular gibt es online, aber unterschreiben muss man bei uns am Empfang."
       },
       {
-        "speaker": "Gast",
+        "speaker": "Moderatorin",
         "speaker_role": "dialogue_speaker",
-        "text": "Die Weltgesundheitsorganisation empfiehlt mindestens hundertfünfzig Minuten pro Woche."
+        "text": "Kann man das Studio vorher ausprobieren?"
       },
       {
-        "speaker": "Moderator",
+        "speaker": "Frau Reuter",
         "speaker_role": "dialogue_speaker",
-        "text": "Das sind etwa dreißig Minuten an fünf Tagen. Was empfehlen Sie für Anfänger?"
+        "text": "Ja, ein Probetraining ist kostenlos. Dafür braucht man nur einen Termin."
       },
       {
-        "speaker": "Gast",
+        "speaker": "Moderatorin",
         "speaker_role": "dialogue_speaker",
-        "text": "Am besten beginnt man mit Spazierengehen oder leichtem Joggen dreimal pro Woche."
+        "text": "Wie viel kostet die Mitgliedschaft?"
       },
       {
-        "speaker": "Moderator",
+        "speaker": "Frau Reuter",
         "speaker_role": "dialogue_speaker",
-        "text": "Viele Menschen sagen, sie haben keine Zeit für Sport. Was raten Sie denen?"
+        "text": "Der normale Beitrag kostet neunundzwanzig Euro im Monat."
       },
       {
-        "speaker": "Gast",
+        "speaker": "Moderatorin",
         "speaker_role": "dialogue_speaker",
-        "text": "Man kann auch im Alltag aktiver sein, zum Beispiel Treppen statt Aufzug nehmen."
+        "text": "Kann man jeden Monat kündigen?"
       },
       {
-        "speaker": "Moderator",
+        "speaker": "Frau Reuter",
         "speaker_role": "dialogue_speaker",
-        "text": "Und was ist mit der Ernährung? Muss man sich speziell ernähren?"
+        "text": "Nein, der Vertrag läuft zuerst drei Monate. Danach kann man monatlich kündigen."
       },
       {
-        "speaker": "Gast",
+        "speaker": "Moderatorin",
         "speaker_role": "dialogue_speaker",
-        "text": "Eine ausgewogene Ernährung mit viel Gemüse und Obst reicht völlig aus."
+        "text": "Gibt es einen günstigeren Preis für Studenten?"
       },
       {
-        "speaker": "Moderator",
+        "speaker": "Frau Reuter",
         "speaker_role": "dialogue_speaker",
-        "text": "Gibt es Sportarten, die besonders gesund sind?"
+        "text": "Ja, Studenten zahlen mit einem gültigen Ausweis vier Euro weniger."
       },
       {
-        "speaker": "Gast",
+        "speaker": "Moderatorin",
         "speaker_role": "dialogue_speaker",
-        "text": "Schwimmen ist sehr gut, weil es den ganzen Körper trainiert und die Gelenke schont."
+        "text": "Was muss man zur Anmeldung mitbringen?"
       },
       {
-        "speaker": "Moderator",
+        "speaker": "Frau Reuter",
         "speaker_role": "dialogue_speaker",
-        "text": "Auch Radfahren ist sehr beliebt in Deutschland."
+        "text": "Wir brauchen einen Ausweis und die Bankverbindung."
       },
       {
-        "speaker": "Gast",
+        "speaker": "Moderatorin",
         "speaker_role": "dialogue_speaker",
-        "text": "Ja, Radfahren ist excellent! Man trainiert die Ausdauer und kommt an die frische Luft."
+        "text": "Wann ist der Empfang geöffnet?"
       },
       {
-        "speaker": "Moderator",
+        "speaker": "Frau Reuter",
         "speaker_role": "dialogue_speaker",
-        "text": "Was passiert, wenn man zu viel Sport macht?"
+        "text": "Von Montag bis Freitag zwischen acht und zwanzig Uhr."
       },
       {
-        "speaker": "Gast",
+        "speaker": "Moderatorin",
         "speaker_role": "dialogue_speaker",
-        "text": "Übertraining kann zu Verletzungen und Erschöpfung führen. Pausen sind sehr wichtig."
+        "text": "Vielen Dank für die Informationen."
       },
       {
-        "speaker": "Moderator",
+        "speaker": "Frau Reuter",
         "speaker_role": "dialogue_speaker",
-        "text": "Ein letzter Tipp für unsere Hörer?"
+        "text": "Sehr gern. Wir freuen uns auf neue Mitglieder."
       },
       {
-        "speaker": "Gast",
-        "speaker_role": "dialogue_speaker",
-        "text": "Finden Sie eine Sportart, die Ihnen Spaß macht. Dann bleibt man auch langfristig dabei."
-      },
-      {
-        "speaker": "Moderator",
-        "speaker_role": "dialogue_speaker",
-        "text": "Vielen Dank, Herr Dr. Berger, für die hilfreichen Tipps!"
-      },
-      {
-        "speaker": "Gast",
-        "speaker_role": "dialogue_speaker",
-        "text": "Gern geschehen! Und denken Sie daran, jede Bewegung zählt."
-      },
-      {
-        "speaker": "Narrator",
+        "speaker": "Prüfer",
         "speaker_role": "exam_narrator",
         "text": "Ende des Hörverstehens."
       }
-    ]
+    ],
+    "audio_restub": "pending"
   },
   "cefrAudit": {
     "targetLevel": "A2",
     "verdict": "aligned",
-    "reviewerRole": "German Academic Lead",
-    "notes": "Release-candidate metadata audit: listening content for \"Im Fitnessstudio anmelden\" is aligned with declared A2 scope pending final human spot-check.",
+    "reviewerRole": "German Academic Lead (AI/Kiro)",
+    "notes": "Regenerated listening transcript + questions, signed off by AI German Academic Lead (Kiro); MP3 pending re-record (Audio_Restubbing); pending native-speaker spot-check.",
     "reviewedAt": "2026-05-12",
     "reviewScope": "release_candidate_metadata_pass"
   },

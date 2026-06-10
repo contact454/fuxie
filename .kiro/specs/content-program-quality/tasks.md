@@ -25,14 +25,15 @@ Dựng khung chương trình quản lý chất lượng + remediation cho 1.187 
 ## Tasks
 
 - [x] 1. Cổng QA thống nhất D1–D6 (gom SSOT, không định nghĩa lại)
-  - `scripts/content-quality-gate.ts`: engine canonical gom 6 sub-gate — D1 opener (`hasGenericOpener`/`_T2`), D2 duplicate (`cellDuplicatePairs` dùng `overlapScore`), D3 topic (`transcriptMatchesTopic`, **advisory/warn**), D4 fake-segment (`internalDupRatio`), D5 broken-stem (`isBrokenStem`), D6 answer-integrity (key_evidence ⊂ content). Tái dùng SSOT, không định nghĩa lại marker.
-  - `itemContentText` trích nội dung học theo module (reading article/cloze, listening transcript, writing modelAnswer loại prompt).
+  - `scripts/content-quality-gate.ts`: engine canonical gom 6 sub-gate — D1 opener (`hasGenericOpener`/`_T2`), D2 duplicate (`cellDuplicatePairs` dùng `overlapScore`), D3 topic (`topic-evidence` + override có audit, **advisory/warn**), D4 fake-segment (`internalDupRatio`), D5 broken-stem (`isBrokenStem`), D6 answer-integrity (key_evidence ⊂ content). Tái dùng SSOT, không định nghĩa lại marker.
+  - `itemContentText` trích nội dung học theo module (reading article/cloze/opinion_texts, listening transcript, writing modelAnswer loại prompt).
   - `tests/content-audit/program-quality.spec.ts` — **7/7 xanh**: Property 1 (board 36 cell/1187), Property 2 (gate khớp marker gốc + D6), Property 3 (không máy tự duyệt).
   - _Requirements: 2.1, 2.2, 2.3_
 
 - [x] 2. Status_Board generator (36 cell, sinh từ scanner)
   - `scripts/content-status-board.ts`: chạy cổng máy D1–D5 (tái dùng `lib/listening-scan`, `lib/cefr-stem-markers`, `apply-c2-article-regen`, `apply-c2-teil2-regen`) + đọc manifest → sinh `docs/content-quality/audit-2026-06/status-board.{md,json}` với 36 cell.
-  - **Cập nhật 2026-06-10:** sau remediation C1/C2 listening, board hiện `36/36 qaMachine=pass`, `cells with machine defect: 0`; `academicSignoff/audio` vẫn đọc từ manifest và chưa tự động ký.
+  - **Cập nhật 2026-06-10:** sau D3 remediation/evidence sweep, board hiện `36/36 qaMachine=pass`, `36/36 D3=pass`, `cells with machine defect: 0`; `academicSignoff/audio` vẫn đọc từ manifest và chưa tự động ký.
+  - `docs/content-quality/audit-2026-06/topic-evidence-overrides.json` ghi 16 D3 semantic evidence overrides có lý do/audit metadata; các override này không phải D7/native signoff.
   - _Requirements: 1.1, 1.2, 1.3_
 
 - [x] 3. Signoff manifest D7 (người cập nhật)
@@ -60,6 +61,7 @@ Dựng khung chương trình quản lý chất lượng + remediation cho 1.187 
 
 - [x] 7. Báo cáo + tiêu chí đợt + bàn giao governance
   - Scanner xuất `status-board.{md,json}` theo cell; trạng thái hiện tại: 36/36 cell `Done (máy)`, 1/36 `Done (đủ)`.
+  - D3 advisory đã sạch toàn board: 6 listening item được tái tạo đúng topic, lỗi chữ Đức `aktüll/genaür/beqümer` đã sửa, và schema `opinion_texts` được đưa vào content extraction.
   - `cell-ownership-map.md` định nghĩa owner, next gate, và quy tắc governance: Status_Board là nguồn máy, signoff manifest là nguồn D7/audio.
   - Release criterion giữ nguyên: "Done (đủ)" cần Academic_Signoff và listening audio không pending; các cell pending không được coi là release-signed dù machine-clean.
   - _Requirements: 4.1, 4.4, 6.1, 6.2, 6.3_

@@ -16,6 +16,11 @@ import path from 'node:path'
 import { fileURLToPath } from 'node:url'
 import { overlapScore, internalDupRatio, transcriptDialogueText, normalizeText } from './lib/listening-scan'
 import { isBrokenStem } from './lib/cefr-stem-markers'
+import {
+  declaredTopicTerms,
+  loadTopicEvidenceOverrides,
+  matchTopicEvidence,
+} from './lib/topic-evidence'
 import { hasGenericOpener } from './apply-c2-article-regen'
 import { hasGenericOpenerT2 } from './apply-c2-teil2-regen'
 
@@ -23,6 +28,7 @@ const REPO_ROOT = path.resolve(fileURLToPath(import.meta.url), '..', '..')
 const CONTENT = path.join(REPO_ROOT, 'content')
 const DOCS = path.join(REPO_ROOT, 'docs', 'content-quality', 'audit-2026-06')
 const MANIFEST = path.join(DOCS, 'signoff-manifest.json')
+const TOPIC_EVIDENCE = loadTopicEvidenceOverrides()
 
 const LEVELS = ['a1', 'a2', 'b1', 'b2', 'c1', 'c2'] as const
 const MODULES = ['reading', 'listening', 'writing', 'speaking', 'vocabulary', 'grammar'] as const
@@ -44,6 +50,9 @@ function contentText(j: any): string {
   if (j?.transcript?.lines) return transcriptDialogueText(j)
   if (typeof j?.article?.text === 'string') return j.article.text
   if (typeof j?.section_cloze?.text === 'string') return j.section_cloze.text
+  if (Array.isArray(j?.opinion_texts?.texts)) {
+    return j.opinion_texts.texts.map((entry: any) => String(entry?.text ?? '')).join(' ')
+  }
   // writing/vocabulary/speaking: gather long strings (skip prompts)
   const parts: string[] = []
   const rec = (o: any, k: string) => {
@@ -54,17 +63,6 @@ function contentText(j: any): string {
   }
   rec(j, '')
   return parts.join(' ')
-}
-
-function topicKw(j: any): string[] {
-  const STOP = new Set(['der', 'die', 'das', 'und', 'in', 'im', 'an', 'am', 'von', 'zu', 'mit', 'für', 'den', 'des', 'ein', 'eine', 'als', 'praxis'])
-  const src = `${j?.topic ?? ''} ${j?.title ?? j?.section_cloze?.title ?? ''}`
-  return normalizeText(src).split(' ').filter((w) => w.length >= 5 && !STOP.has(w))
-}
-
-/** Coarse German stem (prefix 6) for inflection-tolerant topic matching. */
-function stem(w: string): string {
-  return w.length <= 6 ? w : w.slice(0, 6)
 }
 
 function stemsOf(j: any): string[] {
@@ -79,12 +77,25 @@ interface CellResult {
   d1: string; d2: string; d3: string; d4: string; d5: string
   qaMachine: 'pass' | 'fail' | 'n/a'
   violations: string[]
+  d3EvidenceOverrides: string[]
 }
 
 function scanCell(module: string, level: string): CellResult {
   const dir = path.join(CONTENT, level, module)
   const items = listItems(dir)
-  const res: CellResult = { module, level, files: items.length, d1: 'n/a', d2: 'n/a', d3: 'n/a', d4: 'n/a', d5: 'n/a', qaMachine: 'n/a', violations: [] }
+  const res: CellResult = {
+    module,
+    level,
+    files: items.length,
+    d1: 'n/a',
+    d2: 'n/a',
+    d3: 'n/a',
+    d4: 'n/a',
+    d5: 'n/a',
+    qaMachine: 'n/a',
+    violations: [],
+    d3EvidenceOverrides: [],
+  }
   if (!items.length) return res
 
   const texts = items.map((j) => ({ id: String(j.id ?? ''), text: normalizeText(contentText(j)), raw: contentText(j), j }))
@@ -103,9 +114,16 @@ function scanCell(module: string, level: string): CellResult {
   res.d2 = dupPairs ? 'fail' : 'pass'
 
   // D3 topic match (advisory/warn — only when topic/title available; stem-prefix tolerant)
-  const withTopic = texts.filter((t) => topicKw(t.j).length > 0)
+  const withTopic = texts.filter((t) => declaredTopicTerms(t.j).length > 0)
   if (withTopic.length) {
-    const mm = withTopic.filter((t) => !topicKw(t.j).some((kw) => t.text.includes(stem(kw))))
+    const evaluated = withTopic.map((t) => ({
+      ...t,
+      evidence: matchTopicEvidence(t.j, t.raw, TOPIC_EVIDENCE),
+    }))
+    const mm = evaluated.filter((t) => !t.evidence.matches)
+    res.d3EvidenceOverrides = evaluated
+      .filter((t) => t.evidence.overrideApplied)
+      .map((t) => t.id)
     res.d3 = mm.length ? 'warn' : 'pass'
     mm.slice(0, 5).forEach((t) => res.violations.push(`D3 ${t.id}`))
   }
@@ -158,7 +176,21 @@ function main(): void {
       const status = c.qaMachine === 'pass' && sign === 'signed' && audio !== 'pending' ? 'Done (đủ)'
         : c.qaMachine === 'pass' ? 'Done (máy)'
         : c.qaMachine === 'n/a' ? '—' : 'Defect'
-      return { cell: key, files: c.files, d1: c.d1, d2: c.d2, d3: c.d3, d4: c.d4, d5: c.d5, qaMachine: c.qaMachine, academicSignoff: sign, audio, status, violations: c.violations }
+      return {
+        cell: key,
+        files: c.files,
+        d1: c.d1,
+        d2: c.d2,
+        d3: c.d3,
+        d4: c.d4,
+        d5: c.d5,
+        qaMachine: c.qaMachine,
+        academicSignoff: sign,
+        audio,
+        status,
+        violations: c.violations,
+        d3EvidenceOverrides: c.d3EvidenceOverrides,
+      }
     }),
   }
   fs.mkdirSync(DOCS, { recursive: true })
@@ -178,6 +210,8 @@ function main(): void {
   }
   lines.push('')
   lines.push('> D1 opener · D2 duplicate(<0.5) · D3 topic-match · D4 fake-segment · D5 broken-stem. D6/D7 (answer-integrity sâu + chất lượng học thuật) ngoài board máy: D7 lấy từ `signoff-manifest.json`. "n/a" = cổng không áp dụng cho module.')
+  const overrideIds = json.cells.flatMap((c) => c.d3EvidenceOverrides)
+  lines.push(`> D3 semantic evidence overrides: ${overrideIds.length} item(s), audited in \`topic-evidence-overrides.json\`; these do not count as D7/native signoff.`)
   fs.writeFileSync(path.join(DOCS, 'status-board.md'), lines.join('\n') + '\n', 'utf8')
 
   process.stdout.write(`[status-board] ${json.totalCells} cells, ${json.totalFiles} files → status-board.{md,json}\n`)

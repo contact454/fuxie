@@ -10,10 +10,13 @@
  * markers). D3 (topic-match) is ADVISORY (warn). D1/D2/D4/D5/D6 are hard gates.
  * Used by the status-board generator + CI. Never writes to content/.
  */
-import { overlapScore, internalDupRatio, transcriptDialogueText, transcriptMatchesTopic, normalizeText } from './lib/listening-scan'
+import { overlapScore, internalDupRatio, transcriptDialogueText, normalizeText } from './lib/listening-scan'
 import { isBrokenStem } from './lib/cefr-stem-markers'
+import { loadTopicEvidenceOverrides, matchTopicEvidence } from './lib/topic-evidence'
 import { hasGenericOpener } from './apply-c2-article-regen'
 import { hasGenericOpenerT2 } from './apply-c2-teil2-regen'
+
+const TOPIC_EVIDENCE = loadTopicEvidenceOverrides()
 
 export type GateVerdict = 'pass' | 'fail' | 'warn' | 'n/a'
 
@@ -31,6 +34,9 @@ export function itemContentText(j: any): string {
   if (j?.transcript?.lines) return transcriptDialogueText(j)
   if (typeof j?.article?.text === 'string') return j.article.text
   if (typeof j?.section_cloze?.text === 'string') return j.section_cloze.text
+  if (Array.isArray(j?.opinion_texts?.texts)) {
+    return j.opinion_texts.texts.map((entry: any) => String(entry?.text ?? '')).join(' ')
+  }
   const parts: string[] = []
   const rec = (o: any, k: string) => {
     if (o == null) return
@@ -72,7 +78,7 @@ export function runItemGates(j: any): ItemGateResult {
 
   // D3 topic-match (advisory) — only when a topic/title exists
   if ((j?.topic ?? j?.title ?? j?.section_cloze?.title)) {
-    res.d3 = transcriptMatchesTopic(j) ? 'pass' : 'warn'
+    res.d3 = matchTopicEvidence(j, raw, TOPIC_EVIDENCE).matches ? 'pass' : 'warn'
   }
 
   // D4 fake-segment (listening)
