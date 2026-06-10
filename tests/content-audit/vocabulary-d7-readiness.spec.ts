@@ -165,10 +165,10 @@ describe('vocabulary D7 readiness', () => {
       }
     }
 
-    expect(statuses.lexicon_aligned_needs_native_signoff).toBe(1113)
+    expect(statuses.lexicon_aligned_needs_native_signoff).toBe(1114)
     expect(statuses.corpus_canonicalized_needs_native_signoff).toBe(3)
-    expect(statuses.regular_rule_needs_native_signoff).toBe(137)
-    expect(statuses.auto_generated_needs_spot_check).toBe(2)
+    expect(statuses.regular_rule_needs_native_signoff).toBe(138)
+    expect(statuses.auto_generated_needs_spot_check ?? 0).toBe(0)
   })
 
   it('locks the confirmed lexical, semantic, and conjugation corrections', () => {
@@ -229,6 +229,28 @@ describe('vocabulary D7 readiness', () => {
       wir: 'bilden uns weiter',
       ihr: 'bildet euch weiter',
       sie_Sie: 'bilden sich weiter',
+    })
+    expect(
+      findWord('content/c2/vocabulary/113-epigenetik.json', 'silencen').conjugation
+        ?.praesens,
+    ).toEqual({
+      ich: 'silence',
+      du: 'silencst',
+      er_sie_es: 'silenct',
+      wir: 'silencen',
+      ihr: 'silenct',
+      sie_Sie: 'silencen',
+    })
+    expect(
+      findWord('content/c2/vocabulary/114-technikphilosophie.json', 'entbergen').conjugation
+        ?.praesens,
+    ).toEqual({
+      ich: 'entberge',
+      du: 'entbirgst',
+      er_sie_es: 'entbirgt',
+      wir: 'entbergen',
+      ihr: 'entbergt',
+      sie_Sie: 'entbergen',
     })
   })
 

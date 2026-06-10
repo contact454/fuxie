@@ -8,7 +8,7 @@ const AUTO_REVIEW = 'auto_generated_needs_spot_check'
 const LEXICON_REVIEW = 'lexicon_aligned_needs_native_signoff'
 const CORPUS_REVIEW = 'corpus_canonicalized_needs_native_signoff'
 const REGULAR_RULE_REVIEW = 'regular_rule_needs_native_signoff'
-const UNSAFE_REGULAR_BASES = new Set(['entbergen', 'silencen'])
+const UNSAFE_REGULAR_BASES = new Set(['entbergen'])
 const SEPARABLE_PREFIXES = [
   'auseinander',
   'zusammen',
@@ -63,6 +63,22 @@ type VocabularyFile = {
   words: VocabularyWord[]
   cefrAudit?: { notes?: string }
   [key: string]: unknown
+}
+
+const KNOWN_CONJUGATION_FIXES: Record<string, Partial<Conjugation> & { praesens: PresentForms }> = {
+  'content/c2/vocabulary/114-technikphilosophie.json::entbergen': {
+    praesens: {
+      ich: 'entberge',
+      du: 'entbirgst',
+      er_sie_es: 'entbirgt',
+      wir: 'entbergen',
+      ihr: 'entbergt',
+      sie_Sie: 'entbergen',
+    },
+    isIrregular: true,
+    isSeparable: false,
+    reviewStatus: LEXICON_REVIEW,
+  },
 }
 
 type LexiconRow = {
@@ -346,6 +362,27 @@ function applyKnownFixes(
   return changed
 }
 
+function applyKnownConjugationFix(
+  file: string,
+  word: VocabularyWord,
+  reasons: Record<string, number>,
+): boolean {
+  if (word.wordType !== 'VERB') return false
+  const key = `${relativeFile(file)}::${word.word}`
+  const fix = KNOWN_CONJUGATION_FIXES[key]
+  if (!fix) return false
+
+  const next = {
+    ...word.conjugation,
+    ...fix,
+  }
+  if (JSON.stringify(word.conjugation ?? {}) === JSON.stringify(next)) return false
+
+  word.conjugation = next
+  reasons['known-conjugation-fix'] = (reasons['known-conjugation-fix'] ?? 0) + 1
+  return true
+}
+
 function validate(records: RecordItem[]) {
   const errors: string[] = []
   let files = 0
@@ -430,6 +467,7 @@ function main() {
         changed = true
       }
       if (applyKnownFixes(record.file, word, reasons)) changed = true
+      if (applyKnownConjugationFix(record.file, word, reasons)) changed = true
 
       if (
         word.wordType === 'VERB' &&

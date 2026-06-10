@@ -16,7 +16,7 @@ Ngày lập: 2026-06 · Trạng thái: Đang thực thi · Liên quan: PR #21 (`
 - Grammar D7 advisory: 6/6 grammar cells now have a uniform 3-exercise scaffold; C1/C2 remediation adds recognition + production practice while leaving final native signoff pending.
 - Speaking D7 advisory: 48/48 files and 2,304 sentences checked; 79 pseudo-IPA and 6 blank IPA entries remediated, while final native signoff remains pending.
 - Writing D7 advisory: 230/230 files checked and 216 model answers remediated for objective length/template/token blockers; final native and exam-authenticity signoff remains pending.
-- Vocabulary D7 advisory: 369/369 files and 10,461 entries checked; 239 files carry D7 remediation notes for objective schema, lexeme, semantic, and present-conjugation blockers. 2 rare conjugations (`silencen`, `entbergen`), plural morphology, and final native signoff remain pending.
+- Vocabulary D7 advisory: 369/369 files and 10,461 entries checked; 239 files carry D7 remediation notes for objective schema, lexeme, semantic, and present-conjugation blockers. No `auto_generated_needs_spot_check` conjugations remain; loanword policy, plural morphology, and final native signoff remain pending.
 - `docs/content-quality/audit-2026-06/cell-ownership-map.md`: đã gán owner/workstream cho đủ 36 cell.
 - `.github/workflows/ci.yml`: CI `check-quick` chạy `pnpm qa:german-lint --diff` với LanguageTool service + PBT.
 - `scripts/content-generation-guard.ts`: guard foundation chặn D1/D2/D3/D4/D5 trước khi generator ghi nội dung.

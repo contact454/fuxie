@@ -23,7 +23,8 @@ Audit va remediate 369 file vocabulary, 10.461 entry tren 6 level. Workstream na
   - Ghi `docs/content-quality/audit-2026-06/vocabulary-d7-advisory-review.md`.
 
 - [ ] 4. Native review va Academic_Signoff
-  - Duyet 2 bang chia hiem con `auto_generated_needs_spot_check`: `silencen`, `entbergen`.
+  - Spot-check 2 bang chia hiem da resolve khoi `auto_generated_needs_spot_check`: `silencen`, `entbergen`.
+  - Quyet dinh loanword policy cho `silencen` (giu loanword chuyen nganh hay thay bang `stilllegen`/`unterdruecken`).
   - Duyet plural morphology, genus, nghia, vi du, dich Viet va CEFR fit theo cell.
   - Chi cap nhat `signoff-manifest.json` sau khi reviewer co tham quyen ky tung cell.
 
@@ -31,10 +32,11 @@ Audit va remediate 369 file vocabulary, 10.461 entry tren 6 level. Workstream na
 
 - [x] 369/369 file va 10.461/10.461 entry da duoc scanner bao phu.
 - [x] 239 file co D7 remediation note cho blocker khach quan.
-- [x] 1.113 conjugation duoc lexicon-align va 3 conjugation duoc corpus-canonicalize.
-- [x] 137 conjugation con lai duoc can chinh bang regular-rule present tense va gan `regular_rule_needs_native_signoff`.
+- [x] 1.114 conjugation duoc lexicon-align/source-align va 3 conjugation duoc corpus-canonicalize.
+- [x] 138 conjugation con lai duoc can chinh bang regular-rule present tense va gan `regular_rule_needs_native_signoff`.
 - [x] Phase regular-rule cham 95 file, giam auto-review tu 139 xuong 2.
-- [ ] 2 conjugation hiem (`silencen`, `entbergen`) va final native review van pending.
+- [x] Phase rare-verb cleanup cham 2 file, giam auto-review tu 2 xuong 0.
+- [ ] Final native review, loanword policy, plural morphology, genus, nghia/vi du va CEFR fit van pending.
 
 ## Notes
 
