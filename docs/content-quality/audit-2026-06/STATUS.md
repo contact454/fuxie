@@ -43,8 +43,9 @@ Vai phoi hop: German Academic Lead, German Curriculum Designer, Vietnamese-Germa
 - `tsx scripts/content-d7-signoff-sweep.ts`: **36/36 cell** trong D7 register, **120 review inputs** (60 human spot-check + D2 24 + D3 24 + D4 12), **0 missing sample file**.
 - Grammar D7 advisory: 6/6 grammar cells reviewed for scaffold readiness; C1/C2 expanded from 1 to 3 exercises/topic and guarded by `grammar-d7-readiness.spec.ts`.
 - Speaking D7 advisory: 48/48 files, 384 lessons, and 2,304 sentences checked; 79 pseudo-IPA and 6 blank IPA entries remediated and guarded by `speaking-d7-readiness.spec.ts`.
+- Writing D7 advisory: 230/230 files checked; 216 model answers remediated for objective length/template/token blockers and guarded by `writing-d7-readiness.spec.ts`. Native review remains pending.
 - `tests/content-audit/content-generation-guard.spec.ts` + `program-quality.spec.ts`: **13/13 pass** cho guard generator + board/gate invariants.
-- `tests/content-audit/*.spec.ts`: **18/18 pass** (gate zero-boilerplate reading đã bật).
+- `tests/content-audit/*.spec.ts`: **308/308 pass** across 27 test files (including the Writing D7 readiness gate).
 - Answer integrity: 1,282 đáp án reading bất biến (regenerate script assert immutable `answer`/`options`/`stem` mỗi file).
 - Read-only invariant audit: nội dung chỉ đổi ở các remediation có chủ đích (genus 1 file, reading explanation 266 file); enum fix ở `packages/shared` (type layer).
 

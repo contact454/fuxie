@@ -50,6 +50,14 @@ Audit + remediate module writing 6 level (230 bài). Defect đã xác nhận: wr
   - Cập nhật cell writing trong Status_Board + signoff-manifest.
   - _Requirements: 1.1, 3.2, 3.3, 4.3, 4.4_
 
+## 2026-06-10 Advisory Progress
+
+- [x] Added `scripts/apply-writing-regen.ts` with dry-run/write modes, schema-preserving regeneration, word-range validation, known-template rejection, and exact/near-exact screening at 0.95.
+- [x] Scanned the complete 230-file writing inventory and remediated 216 objective model-answer defects across A1-C2.
+- [x] Added `tests/content-audit/writing-d7-readiness.spec.ts` for inventory, schema/rubric/CEFR metadata, word ranges, known templates, and exact/near-exact duplicates.
+- [x] Recorded the advisory evidence in `docs/content-quality/audit-2026-06/writing-d7-advisory-review.md`.
+- [ ] Final native classification and Academic_Signoff remain pending. The original pairwise overlap target `< 0.5` is not claimed by this advisory pass because shared exam frames below 0.95 require human classification.
+
 ## Notes
 
 - **Chỉ so `modelAnswer`** (không toàn item) — đề bài/khung dùng chung hợp lệ KHÔNG tính defect.

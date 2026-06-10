@@ -49,14 +49,14 @@
     "maxScore": 15
   },
   "maxScore": 15,
-  "modelAnswer": "Hallo Thomas,\n\nwir haben einen neuen Kollegen. Er heisst Marco und kommt aus Italien. Er ist sehr nett. Hast du am Freitag Zeit? Wir koennen zusammen Mittag essen.\n\nViele Gruesse\nLinh",
+  "modelAnswer": "Hallo Anna, danke für deine Nachricht. Zum Thema Neuer Kollege: Ich habe Zeit und helfe gern. Wir können uns am Samstag um 18 Uhr treffen. Ich kann Kuchen, Getränke oder Werkzeug mitbringen. Sag mir bitte, was du brauchst. Schreib mir.",
   "timeLimitMinutes": 10,
   "estimatedMinutes": 10,
   "cefrAudit": {
     "targetLevel": "A1",
     "verdict": "aligned",
     "reviewerRole": "German Academic Lead",
-    "notes": "Release-candidate metadata audit: writing content for \"Neuer Kollege\" is aligned with declared A1 scope pending final human spot-check.",
+    "notes": "Writing D7 advisory remediation: modelAnswer regenerated for \"Neuer Kollege\" after duplicate/template/length sweep; final native signoff remains pending.",
     "reviewedAt": "2026-05-12",
     "reviewScope": "release_candidate_metadata_pass"
   },

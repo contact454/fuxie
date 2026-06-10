@@ -61,14 +61,14 @@
     "maxScore": 25
   },
   "maxScore": 25,
-  "modelAnswer": "In diesem Text geht es um Produktreklamation. Zuerst nenne ich die wichtigsten Punkte: Geben Sie die Bestellnummer und das Kaufdatum an., Beschreiben Sie genau, was an dem Gerät defekt ist., Schlagen Sie eine Lösung vor (z. B. Ersatzlieferung oder Reparatur)., Bitten Sie um eine Bestätigung und eine schnelle Rückmeldung.. Meiner Meinung nach sollte man die Situation differenziert betrachten. Ein Vorteil ist, dass klare Informationen helfen, eine gute Entscheidung zu treffen. Ein Nachteil ist, dass nicht alle Aspekte sofort sichtbar sind. Insgesamt halte ich eine begruendete und gut strukturierte Antwort fuer wichtig.",
+  "modelAnswer": "Sehr geehrte Damen und Herren,\n\nich schreibe Ihnen, da es ein Anliegen zu Produktreklamation gibt. Die Ausgangslage lautet: Bestelldetails: Firma: Elektro-Welt GmbH Kundennummer: KD-88210 Bestellnummer: EW-2023-9941 Produkt: Kaffeevollautomat 'AromaMaster 3000' Preis: 449,00 EUR Kaufdatum: 10. Oktober.\nFür mich ist besonders relevant, dass Geben Sie die Bestellnummer und das Kaufdatum an.. Könnten Sie die Angelegenheit bitte prüfen und mir bis nächste Woche antworten?\nIch bitte um eine zeitnahe Lösung und danke Ihnen im Voraus für Ihre Unterstützung.\n\nMit freundlichen Grüßen\nLinh Nguyen",
   "timeLimitMinutes": 25,
   "estimatedMinutes": 25,
   "cefrAudit": {
     "targetLevel": "B1",
     "verdict": "aligned",
     "reviewerRole": "German Academic Lead",
-    "notes": "Release-candidate metadata audit: writing content for \"Produktreklamation\" is aligned with declared B1 scope pending final human spot-check.",
+    "notes": "Writing D7 advisory remediation: modelAnswer regenerated for \"Produktreklamation\" after duplicate/template/length sweep; final native signoff remains pending.",
     "reviewedAt": "2026-05-12",
     "reviewScope": "release_candidate_metadata_pass"
   },

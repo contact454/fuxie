@@ -44,14 +44,14 @@
     "maxScore": 15
   },
   "maxScore": 15,
-  "modelAnswer": "Hallo,\n\nich schreibe wegen sich vorstellen. ich schreibe wegen Interesse zeigen. ich schreibe wegen Besichtigungstermin fragen. Bitte geben Sie mir kurz Bescheid.\n\nViele Gruesse\nLinh",
+  "modelAnswer": "Hallo Anna,\n\ndanke für deine Nachricht. Zum Thema Wohnung: Ich habe Zeit und helfe gern. Wir können uns am Samstag um 18 Uhr treffen. Ich kann Kuchen, Getränke oder Werkzeug mitbringen. Sag mir bitte, was du brauchst. Schreib mir bald zurück.\n\nLiebe Grüße\nLinh",
   "timeLimitMinutes": 10,
   "estimatedMinutes": 10,
   "cefrAudit": {
     "targetLevel": "A1",
     "verdict": "aligned",
     "reviewerRole": "German Academic Lead",
-    "notes": "Release-candidate metadata audit: writing content for \"Wohnung\" is aligned with declared A1 scope pending final human spot-check.",
+    "notes": "Writing D7 advisory remediation: modelAnswer regenerated for \"Wohnung\" after duplicate/template/length sweep; final native signoff remains pending.",
     "reviewedAt": "2026-05-12",
     "reviewScope": "release_candidate_metadata_pass"
   },
