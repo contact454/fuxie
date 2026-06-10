@@ -15,59 +15,55 @@
   },
   "questions": [
     {
-      "id": "Q1",
-      "gespraech": 1,
+      "id": "q1_hoeren_c1_t2_algorithmen_bias",
+      "teil": 2,
       "type": "richtig_falsch",
-      "statement": "Frau Bergström vertritt die Auffassung, dass die Europäische Union in puncto Gleichstellung eine unangefochtene globale Vorreiterrolle einnimmt und keine wesentlichen Defizite mehr aufweist.",
+      "statement": "Der Experte setzt konsistentes maschinelles Rechnen mit wissenschaftlicher Gerechtigkeit gleich.",
       "answer": "falsch",
       "points": 1,
       "explanation": {
-        "de": "Die Aussage ist falsch. Frau Bergström bezeichnet Europa zwar als den \"gleichberechtigtsten Kontinent\", relativiert diese Aussage aber sofort, indem sie betont, dass man \"noch weit von echter Parität entfernt\" sei. Dies widerspricht der Behauptung, es gäbe \"keine wesentlichen Defizite\".",
-        "vi": "Tuyên bố này sai. Mặc dù bà Bergström mô tả châu Âu là \"lục địa bình đẳng nhất\", bà ngay lập tức làm rõ tuyên bố này bằng cách nhấn mạnh rằng châu Âu \"vẫn còn xa mới đạt được sự bình đẳng thực sự\". Điều này mâu thuẫn với khẳng định rằng \"không còn thiếu sót đáng kể nào\".",
-        "key_evidence": "Europa ist der gleichberechtigtste Kontinent der Welt, aber wir sind noch weit von echter Parität entfernt",
-        "key_vocabulary": []
+        "de": "Falsch. Er grenzt Konsistenz ausdrücklich von Gerechtigkeit und wissenschaftlicher Qualität ab.",
+        "vi": "Sai. Chuyên gia tách rõ tính nhất quán của máy khỏi công bằng và chất lượng khoa học.",
+        "key_evidence": "Konsistenz ist nicht dasselbe wie Gerechtigkeit"
       }
     },
     {
-      "id": "Q2",
-      "gespraech": 1,
+      "id": "q2_hoeren_c1_t2_algorithmen_bias",
+      "teil": 2,
       "type": "richtig_falsch",
-      "statement": "Nach Einschätzung von Frau Bergström ist die neu verabschiedete Entgelttransparenz-Richtlinie ein hinreichendes Instrument, um die Lohnlücke effektiv zu schließen.",
-      "answer": "falsch",
-      "points": 1,
-      "explanation": {
-        "de": "Die Aussage ist falsch. Obwohl die Expertin die Richtlinie als \"Meilenstein\" bezeichnet, stellt sie klar, dass Transparenz allein nicht ausreicht. Sie fordert zusätzlich \"wirksame Sanktionen\", was belegt, dass sie die Richtlinie nicht für ein \"hinreichendes Instrument\" hält.",
-        "vi": "Tuyên bố này sai. Mặc dù chuyên gia gọi chỉ thị này là một \"cột mốc quan trọng\", bà làm rõ rằng chỉ riêng sự minh bạch là không đủ. Bà yêu cầu thêm \"các biện pháp trừng phạt hiệu quả\", điều này chứng tỏ bà không coi chỉ thị này là một \"công cụ đầy đủ\".",
-        "key_evidence": "Transparenz allein schließt aber keine Lohnlücke",
-        "key_vocabulary": []
-      }
-    },
-    {
-      "id": "Q3",
-      "gespraech": 1,
-      "type": "richtig_falsch",
-      "statement": "Die Effektivität des schwedischen Elternzeitmodells führt die Expertin maßgeblich auf einen Mechanismus zurück, bei dem der Familie finanzielle Ansprüche verloren gehen, wenn der Vater seine reservierten Monate nicht in Anspruch nimmt.",
+      "statement": "Nach Ansicht des Experten kann Bias bereits vor dem Training eines Modells durch Datenauswahl und Kategorien entstehen.",
       "answer": "richtig",
       "points": 1,
       "explanation": {
-        "de": "Die Aussage ist richtig. Die Expertin erklärt den Erfolg des schwedischen Modells explizit damit, dass die Familie \"Elternzeitansprüche verliert\", wenn der Vater seine Zeit nicht nutzt. Dies entspricht der Umschreibung \"finanzielle Ansprüche gehen verloren\".",
-        "vi": "Tuyên bố này đúng. Chuyên gia giải thích rõ ràng sự thành công của mô hình Thụy Điển là do gia đình \"mất quyền hưởng chế độ nghỉ phép của cha mẹ\" nếu người cha không sử dụng thời gian của mình. Điều này tương ứng với cách diễn đạt \"mất các quyền lợi tài chính\".",
-        "key_evidence": "In Schweden verliert die Familie Elternzeitansprüche, die der Vater nicht nutzt",
-        "key_vocabulary": []
+        "de": "Richtig. Der Experte lokalisiert Verzerrung ausdrücklich bei Datenauswahl, fehlenden Messwerten und zu groben Kategorien.",
+        "vi": "Đúng. Chuyên gia nói bias có thể phát sinh ngay ở khâu chọn dữ liệu, dữ liệu thiếu và các phạm trù quá thô.",
+        "key_evidence": "bei der Auswahl der Daten, bei fehlenden Messwerten"
       }
     },
     {
-      "id": "Q4",
-      "gespraech": 1,
+      "id": "q3_hoeren_c1_t2_algorithmen_bias",
+      "teil": 2,
       "type": "richtig_falsch",
-      "statement": "Die Expertin hebt hervor, dass der gesetzlich verankerte Anspruch auf Kinderbetreuung in Deutschland flächendeckend durch ein adäquates Angebot an Plätzen gedeckt ist.",
+      "statement": "Der Experte fordert, algorithmische Werkzeuge in Fachzeitschriften unsichtbar einzusetzen, damit Gutachter unbeeinflusst bleiben.",
       "answer": "falsch",
       "points": 1,
       "explanation": {
-        "de": "Die Aussage ist falsch. Die Expertin stellt klar, dass es zwar einen \"Rechtsanspruch\" gibt, diesem aber in der Realität nicht nachgekommen wird, da \"in vielen Regionen die tatsächlichen Plätze fehlen\". Die Versorgung ist also nicht \"flächendeckend\" und \"adäquat\".",
-        "vi": "Tuyên bố này sai. Chuyên gia làm rõ rằng mặc dù có \"quyền hợp pháp\" đối với một chỗ trong nhà trẻ, nhưng trên thực tế điều này không được đáp ứng vì \"ở nhiều vùng vẫn thiếu các chỗ thực tế\". Do đó, việc cung cấp không phải là \"trên toàn quốc\" và \"đầy đủ\".",
-        "key_evidence": "Deutschland hat zwar den Rechtsanspruch auf einen Krippenplatz, aber in vielen Regionen fehlen die tatsächlichen Plätze",
-        "key_vocabulary": []
+        "de": "Falsch. Er verlangt Kennzeichnung und Transparenz darüber, ob Tools Texte vorbewerten oder Gutachter empfehlen.",
+        "vi": "Sai. Ông yêu cầu ghi rõ và minh bạch khi công cụ thuật toán đánh giá trước văn bản hoặc gợi ý người phản biện.",
+        "key_evidence": "müssen wissen, ob ein algorithmisches Tool Texte vorbewertet"
+      }
+    },
+    {
+      "id": "q4_hoeren_c1_t2_algorithmen_bias",
+      "teil": 2,
+      "type": "richtig_falsch",
+      "statement": "Als Mindeststandard nennt der Experte auch die Möglichkeit einer begründeten menschlichen Überprüfung.",
+      "answer": "richtig",
+      "points": 1,
+      "explanation": {
+        "de": "Richtig. Neben Dokumentation und unabhängiger Prüfung fordert er Beschwerdewege und eine begründete menschliche Überprüfung.",
+        "vi": "Đúng. Ngoài tài liệu hóa và kiểm tra độc lập, ông yêu cầu kênh khiếu nại và sự xem xét có lý do của con người.",
+        "key_evidence": "braucht eine begründete menschliche Überprüfung"
       }
     }
   ],
@@ -115,175 +111,81 @@
     "source": "studio_source_script",
     "quality": "source_verified",
     "sourceScript": "data/scripts/C1/Teil2-Experteninterview/L-C1-GOETHE-013-T2.json",
-    "note": "Transcript replaced from source script by scripts/apply-source-transcripts.ts.",
+    "note": "Transcript regenerated by content-listening-regeneration (release-candidate script); MP3 pending re-record (Audio_Restubbing).",
     "lines": [
       {
         "speaker": "Narrator",
         "speaker_role": "exam_narrator",
-        "text": "Sie hören ein Interview. Dazu gibt es neun Aufgaben. Stimmt die Aussage, stimmt sie nicht, oder wird dazu nichts gesagt? Sie hören das Interview zweimal."
+        "text": "Sie hören ein Experteninterview. Entscheiden Sie, ob die Aussagen richtig oder falsch sind. Sie hören den Text einmal."
       },
       {
         "speaker": "Moderator",
         "speaker_role": "dialogue_speaker",
-        "text": "Herzlich willkommen! Unsere Gesprächspartnerin ist die Europaabgeordnete und Gleichstellungsexpertin Dr. Clara Bergström, und diese Entwicklung betrifft nicht nur Fachleute, sondern die gesamte Gesellschaft."
+        "text": "Herr Professor Noll, unser Thema lautet Algorithmen und Bias in der Wissenschaft. Werden Maschinen die Forschung objektiver machen?"
       },
       {
         "speaker": "Experte",
         "speaker_role": "dialogue_speaker",
-        "text": "Vielen Dank für die Einladung. Gleichstellung ist für mich nicht nur ein politisches Ziel, sondern eine wirtschaftliche Notwendigkeit."
+        "text": "Nicht automatisch. Maschinen rechnen konsistent, aber Konsistenz ist nicht dasselbe wie Gerechtigkeit oder wissenschaftliche Qualität."
       },
       {
         "speaker": "Moderator",
         "speaker_role": "dialogue_speaker",
-        "text": "Frau Bergström, wo steht die Europäische Union heute in Sachen Geschlechtergleichstellung im internationalen Vergleich, was in der wissenschaftlichen Gemeinschaft für erhebliche Diskussionen sorgt?"
+        "text": "Wo entsteht Bias konkret?"
       },
       {
         "speaker": "Experte",
         "speaker_role": "dialogue_speaker",
-        "text": "Europa ist der gleichberechtigtste Kontinent der Welt, aber wir sind noch weit von echter Parität entfernt, wobei die Experten in dieser Frage nach wie vor unterschiedlicher Meinung sind."
+        "text": "Er entsteht oft vor dem eigentlichen Modell: bei der Auswahl der Daten, bei fehlenden Messwerten und bei Kategorien, die soziale Wirklichkeit zu grob abbilden."
       },
       {
         "speaker": "Moderator",
         "speaker_role": "dialogue_speaker",
-        "text": "In keinem einzigen EU-Mitgliedstaat verdienen Frauen im Durchschnitt genau so viel wie Männer in vergleichbaren Positionen, was sowohl in der Forschung als auch in der Praxis weitreichende Konsequenzen hat."
+        "text": "Viele Forschende hoffen, automatisierte Literaturrecherche könne subjektive Vorlieben reduzieren."
       },
       {
         "speaker": "Experte",
         "speaker_role": "dialogue_speaker",
-        "text": "Was sind die Hauptursachen für die anhaltende Lohnungleichheit zwischen den Geschlechtern in der Europäischen Union, und dies wirft grundlegende Fragen zur aktuellen gesellschaftlichen Entwicklung auf?"
+        "text": "Das kann passieren, wenn Suchkriterien offengelegt werden. Wenn die Kriterien aber verborgen bleiben, wird nur eine menschliche Auswahl durch eine schwer überprüfbare technische Auswahl ersetzt."
       },
       {
         "speaker": "Moderator",
         "speaker_role": "dialogue_speaker",
-        "text": "Drei Faktoren sind entscheidend: die berufliche Segregation, die ungleiche Verteilung von Sorgearbeit und direkte Diskriminierung, die in den vergangenen Jahren zunehmend an Bedeutung gewonnen haben."
+        "text": "Sollten Fachzeitschriften den Einsatz solcher Systeme kennzeichnen?"
       },
       {
         "speaker": "Experte",
         "speaker_role": "dialogue_speaker",
-        "text": "Frauen arbeiten überproportional in schlechter bezahlten Branchen wie Pflege, Erziehung und Sozialarbeit, was die Notwendigkeit einer differenzierten Betrachtung deutlich unterstreicht."
+        "text": "Ja, unbedingt. Autorinnen, Gutachter und Leser müssen wissen, ob ein algorithmisches Tool Texte vorbewertet, Plagiate markiert oder Reviewer empfiehlt."
       },
       {
         "speaker": "Moderator",
         "speaker_role": "dialogue_speaker",
-        "text": "Und selbst innerhalb der gleichen Branche verdienen Frauen oft weniger als ihre männlichen Kollegen auf vergleichbaren Positionen, und diese Entwicklung betrifft nicht nur Fachleute, sondern die gesamte Gesellschaft."
+        "text": "Was wäre ein sinnvoller Mindeststandard?"
       },
       {
         "speaker": "Experte",
         "speaker_role": "dialogue_speaker",
-        "text": "Die EU hat kürzlich eine Entgelttransparenz-Richtlinie verabschiedet. Was erwarten Sie sich davon in der praktischen Umsetzung, wobei aktuelle Studien und Expertenmeinungen ein vielfältiges Bild zeichnen?"
-      },
-      {
-        "speaker": "Moderator",
-        "speaker_role": "dialogue_speaker",
-        "text": "Die Richtlinie ist ein Meilenstein, weil sie erstmals Unternehmen verpflichtet, geschlechtsspezifische Gehaltsunterschiede offenzulegen, was in der wissenschaftlichen Gemeinschaft für erhebliche Diskussionen sorgt."
+        "text": "Ein Mindeststandard umfasst Dokumentation, unabhängige Prüfung und Beschwerdewege. Wer von einer algorithmischen Entscheidung betroffen ist, braucht eine begründete menschliche Überprüfung."
       },
       {
         "speaker": "Experte",
         "speaker_role": "dialogue_speaker",
-        "text": "Transparenz allein schließt aber keine Lohnlücke. Es braucht wirksame Sanktionen für Unternehmen, die diskriminieren, wobei die Experten in dieser Frage nach wie vor unterschiedlicher Meinung sind."
-      },
-      {
-        "speaker": "Moderator",
-        "speaker_role": "dialogue_speaker",
-        "text": "Wie bewerten Sie die verschiedenen Elternzeitmodelle in den EU-Mitgliedstaaten, was sowohl in der Forschung als auch in der Praxis weitreichende Konsequenzen hat?"
-      },
-      {
-        "speaker": "Experte",
-        "speaker_role": "dialogue_speaker",
-        "text": "Das schwedische Modell mit reservierten Vätermonaten hat nachweislich die Beteiligung der Väter deutlich erhöht, und dies wirft grundlegende Fragen zur aktuellen gesellschaftlichen Entwicklung auf."
-      },
-      {
-        "speaker": "Moderator",
-        "speaker_role": "dialogue_speaker",
-        "text": "Dort nehmen über neunzig Prozent der Väter Elternzeit, in Deutschland sind es nur etwa vierzig Prozent, die in den vergangenen Jahren zunehmend an Bedeutung gewonnen haben."
-      },
-      {
-        "speaker": "Experte",
-        "speaker_role": "dialogue_speaker",
-        "text": "Der Unterschied liegt im System: In Schweden verliert die Familie Elternzeitansprüche, die der Vater nicht nutzt, was die Notwendigkeit einer differenzierten Betrachtung deutlich unterstreicht."
-      },
-      {
-        "speaker": "Moderator",
-        "speaker_role": "dialogue_speaker",
-        "text": "Sollte Deutschland das schwedische Modell übernehmen und mehr Vätermonate einführen, und diese Entwicklung betrifft nicht nur Fachleute, sondern die gesamte Gesellschaft?"
-      },
-      {
-        "speaker": "Experte",
-        "speaker_role": "dialogue_speaker",
-        "text": "Unbedingt! Deutschland hat zwar die Partnermonate eingeführt, aber zwei Monate sind zu wenig für echten Kulturwandel, wobei aktuelle Studien und Expertenmeinungen ein vielfältiges Bild zeichnen."
-      },
-      {
-        "speaker": "Moderator",
-        "speaker_role": "dialogue_speaker",
-        "text": "Mindestens vier reservierte Vätermonate bei Lohnersatzleistung würden die Gleichstellung substanziell voranbringen, was in der wissenschaftlichen Gemeinschaft für erhebliche Diskussionen sorgt."
-      },
-      {
-        "speaker": "Experte",
-        "speaker_role": "dialogue_speaker",
-        "text": "Welche Rolle spielt die öffentliche Kinderbetreuung für die Erwerbsbeteiligung von Frauen, wobei die Experten in dieser Frage nach wie vor unterschiedlicher Meinung sind?"
-      },
-      {
-        "speaker": "Moderator",
-        "speaker_role": "dialogue_speaker",
-        "text": "Eine absolut zentrale Rolle! Länder mit umfassender Kinderbetreuung haben durchweg höhere Frauenerwerbsquoten, was sowohl in der Forschung als auch in der Praxis weitreichende Konsequenzen hat."
-      },
-      {
-        "speaker": "Experte",
-        "speaker_role": "dialogue_speaker",
-        "text": "Deutschland hat zwar den Rechtsanspruch auf einen Krippenplatz, aber in vielen Regionen fehlen die tatsächlichen Plätze, und dies wirft grundlegende Fragen zur aktuellen gesellschaftlichen Entwicklung auf."
-      },
-      {
-        "speaker": "Moderator",
-        "speaker_role": "dialogue_speaker",
-        "text": "Was muss die EU tun, um die Gleichstellung in allen Mitgliedstaaten voranzutreiben, die in den vergangenen Jahren zunehmend an Bedeutung gewonnen haben?"
-      },
-      {
-        "speaker": "Experte",
-        "speaker_role": "dialogue_speaker",
-        "text": "Bindende Mindeststandards für Elternzeit, Kinderbetreuung und Entgeltgleichheit, die in allen Ländern gelten, was die Notwendigkeit einer differenzierten Betrachtung deutlich unterstreicht."
-      },
-      {
-        "speaker": "Moderator",
-        "speaker_role": "dialogue_speaker",
-        "text": "Und finanzielle Unterstützung für ärmere Mitgliedstaaten, damit Gleichstellung nicht am fehlenden Geld scheitert, und diese Entwicklung betrifft nicht nur Fachleute, sondern die gesamte Gesellschaft."
-      },
-      {
-        "speaker": "Experte",
-        "speaker_role": "dialogue_speaker",
-        "text": "Frau Bergström, Sie selbst sind Mutter von zwei Kindern. Wie vereinbaren Sie Familie und politische Karriere, wobei aktuelle Studien und Expertenmeinungen ein vielfältiges Bild zeichnen?"
-      },
-      {
-        "speaker": "Moderator",
-        "speaker_role": "dialogue_speaker",
-        "text": "Nicht ohne Kompromisse und ein großes Unterstützungsnetzwerk. Mein Partner ist Teilzeit-Professor und teilt die Sorgearbeit paritätisch, was in der wissenschaftlichen Gemeinschaft für erhebliche Diskussionen sorgt."
-      },
-      {
-        "speaker": "Experte",
-        "speaker_role": "dialogue_speaker",
-        "text": "Das ist in der Politik leider immer noch die Ausnahme, nicht die Regel, und das muss sich ändern."
-      },
-      {
-        "speaker": "Moderator",
-        "speaker_role": "dialogue_speaker",
-        "text": "Was ist Ihre Vision für die Gleichstellung in Europa in den nächsten zwanzig Jahren, was sowohl in der Forschung als auch in der Praxis weitreichende Konsequenzen hat?"
-      },
-      {
-        "speaker": "Experte",
-        "speaker_role": "dialogue_speaker",
-        "text": "Eine Union, in der das Geschlecht weder Einkommen noch Karrierechancen noch Lebensqualität bestimmt. Dafür kämpfe ich täglich, und dies wirft grundlegende Fragen zur aktuellen gesellschaftlichen Entwicklung auf."
+        "text": "Das Ziel ist nicht technikfreie Wissenschaft. Das Ziel ist eine Wissenschaft, in der technische Hilfen selbst zum Gegenstand methodischer Kritik werden."
       },
       {
         "speaker": "Narrator",
         "speaker_role": "exam_narrator",
         "text": "Ende Teil zwei."
       }
-    ]
+    ],
+    "audio_restub": "pending"
   },
   "cefrAudit": {
     "targetLevel": "C1",
     "verdict": "aligned",
-    "reviewerRole": "German Academic Lead",
-    "notes": "Release-candidate metadata audit: listening content for \"Algorithmen und Bias in der Wissenschaft\" is aligned with declared C1 scope pending final human spot-check.",
+    "reviewerRole": "German Academic Lead (AI/Kiro)",
+    "notes": "Regenerated listening transcript + questions, signed off by AI German Academic Lead (Kiro); MP3 pending re-record (Audio_Restubbing); pending native-speaker spot-check.",
     "reviewedAt": "2026-05-12",
     "reviewScope": "release_candidate_metadata_pass"
   },
