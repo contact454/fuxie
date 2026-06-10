@@ -65,6 +65,7 @@ Dựng khung chương trình quản lý chất lượng + remediation cho 1.187 
   - D3 advisory đã sạch toàn board: 6 listening item được tái tạo đúng topic, lỗi chữ Đức `aktüll/genaür/beqümer` đã sửa, và schema `opinion_texts` được đưa vào content extraction.
   - D7 register xuất rõ blocker còn lại: 35/36 cell pending academic/native review, 6/6 listening cell pending audio parity/restub; không có sample file nào thiếu.
   - Grammar D7 advisory pass: C1/C2 grammar được nâng từ 1 lên 3 exercises/topic, và `tests/content-audit/grammar-d7-readiness.spec.ts` giữ invariant này cho 6/6 grammar cells.
+  - Speaking D7 advisory pass: 48/48 file, 384 lesson và 2.304 câu đã được quét; 79 pseudo-IPA + 6 IPA trống được chuẩn hóa, với `tests/content-audit/speaking-d7-readiness.spec.ts` bảo vệ cấu trúc, metadata, rubric và IPA integrity.
   - `cell-ownership-map.md` định nghĩa owner, next gate, và quy tắc governance: Status_Board là nguồn máy, signoff manifest là nguồn D7/audio.
   - Release criterion giữ nguyên: "Done (đủ)" cần Academic_Signoff và listening audio không pending; các cell pending không được coi là release-signed dù machine-clean.
   - _Requirements: 4.1, 4.4, 6.1, 6.2, 6.3_

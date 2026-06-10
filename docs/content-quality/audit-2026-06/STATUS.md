@@ -42,6 +42,7 @@ Vai phoi hop: German Academic Lead, German Curriculum Designer, Vietnamese-Germa
 - `tsx scripts/content-status-board.ts`: **36/36 cell qaMachine=pass**, `cells with machine defect: 0` trên 1.187 tracked content files.
 - `tsx scripts/content-d7-signoff-sweep.ts`: **36/36 cell** trong D7 register, **120 review inputs** (60 human spot-check + D2 24 + D3 24 + D4 12), **0 missing sample file**.
 - Grammar D7 advisory: 6/6 grammar cells reviewed for scaffold readiness; C1/C2 expanded from 1 to 3 exercises/topic and guarded by `grammar-d7-readiness.spec.ts`.
+- Speaking D7 advisory: 48/48 files, 384 lessons, and 2,304 sentences checked; 79 pseudo-IPA and 6 blank IPA entries remediated and guarded by `speaking-d7-readiness.spec.ts`.
 - `tests/content-audit/content-generation-guard.spec.ts` + `program-quality.spec.ts`: **13/13 pass** cho guard generator + board/gate invariants.
 - `tests/content-audit/*.spec.ts`: **18/18 pass** (gate zero-boilerplate reading đã bật).
 - Answer integrity: 1,282 đáp án reading bất biến (regenerate script assert immutable `answer`/`options`/`stem` mỗi file).
