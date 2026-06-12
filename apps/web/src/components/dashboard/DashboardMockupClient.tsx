@@ -81,7 +81,7 @@ export function DashboardMockupClient({ data, forceEmpty = false }: DashboardMoc
     const progressPercent = isEmpty ? 0 : Math.min(100, Math.round((xpEarned / xpGoal) * 100))
     const totalXp = data.profile.totalXp
 
-    const handleStartSession = () => router.push('/session')
+    const primaryAction = derivePrimaryAction(data, t)
 
     return (
         <div
@@ -360,29 +360,79 @@ export function DashboardMockupClient({ data, forceEmpty = false }: DashboardMoc
 
                                             {/* Right: next lesson card */}
                                             <div className="flex-1 flex flex-col gap-3 justify-center pt-1">
-                                                <div className="bg-[#F3FBFF] rounded-2xl p-4 border border-[#CCE4F0]/40 flex items-center gap-3">
-                                                    <div>
-                                                        <span className="inline-block bg-[#2E7EC4] text-white text-[9px] font-black px-2 py-0.5 rounded-full uppercase tracking-wider">NEXT</span>
-                                                        <h4 className="font-black text-sm text-[#173b56] mt-1 leading-tight">
-                                                            {data.todayPlan?.actions?.[0]?.title || 'Wörtersession A1'}
-                                                        </h4>
-                                                        <p className="text-[11px] text-[#3C78A8] font-semibold mt-0.5">
-                                                            {data.todayPlan?.actions?.[0]?.reason || 'Basics · 15 min'}
-                                                        </p>
-                                                    </div>
-                                                    <div className="w-12 h-12 relative flex-shrink-0 ml-auto">
-                                                        <Image src={FUXIE_WORLD_PROPS.marketStall} alt="lesson" fill className="object-contain" />
-                                                    </div>
-                                                </div>
+                                                {primaryAction.isCompleted ? (
+                                                    <>
+                                                        <div className="bg-gradient-to-br from-[#EAFBF8] to-white rounded-2xl p-4 border border-[#2EC4B6]/30 flex items-start gap-3">
+                                                            <div className="flex-1 min-w-0">
+                                                                <span className="inline-block bg-[#2EC4B6] text-white text-[9px] font-black px-2 py-0.5 rounded-full uppercase tracking-wider">
+                                                                    {primaryAction.eyebrow}
+                                                                </span>
+                                                                <h4 className="font-black text-sm text-[#173b56] mt-1.5 leading-tight">
+                                                                    {t('completedTitle')}
+                                                                </h4>
+                                                                <p className="text-[11px] text-[#3C78A8] font-semibold mt-1 leading-snug">
+                                                                    {t('completedDesc')}
+                                                                </p>
+                                                                {primaryAction.hasSecondary && (
+                                                                    <div className="mt-2 text-[10px] font-bold text-gray-500">
+                                                                        <span className="text-[#3C78A8]">{t('nextQuest')}:</span> {primaryAction.title} ({primaryAction.estimatedMinutes} {t('minutes').toLowerCase()})
+                                                                    </div>
+                                                                )}
+                                                            </div>
+                                                            <div className="w-12 h-12 relative flex-shrink-0 ml-auto animate-bounce" style={{ animationDuration: '3s' }}>
+                                                                <Image src={FUXIE_MASCOT_STATES.wave} alt="complete" fill className="object-contain" />
+                                                            </div>
+                                                        </div>
 
-                                                {/* START button */}
-                                                <PrimaryCta
-                                                    onClick={handleStartSession}
-                                                    className="group w-full rounded-2xl py-4 text-xl font-black"
-                                                >
-                                                    <span>START</span>
-                                                    <span className="group-hover:translate-x-1 transition-transform">→</span>
-                                                </PrimaryCta>
+                                                        {/* Quieter secondary CTA if available */}
+                                                        {primaryAction.hasSecondary && (
+                                                            <PrimaryCta asChild variant="secondary" className="group w-full rounded-2xl py-3.5 text-base font-black">
+                                                                <Link href={primaryAction.href}>
+                                                                    <span>{primaryAction.ctaLabel}</span>
+                                                                    <span className="group-hover:translate-x-1 transition-transform">→</span>
+                                                                </Link>
+                                                            </PrimaryCta>
+                                                        )}
+                                                    </>
+                                                ) : (
+                                                    <>
+                                                        <div className="bg-[#F3FBFF] rounded-2xl p-4 border border-[#CCE4F0]/40 flex items-start gap-3">
+                                                            <div className="flex-1 min-w-0">
+                                                                <span className="inline-block bg-[#2E7EC4] text-white text-[9px] font-black px-2 py-0.5 rounded-full uppercase tracking-wider">
+                                                                    {primaryAction.eyebrow}
+                                                                </span>
+                                                                <h4 className="font-black text-sm text-[#173b56] mt-1.5 leading-tight truncate">
+                                                                    {primaryAction.title}
+                                                                </h4>
+                                                                <p className="text-[11px] text-[#3C78A8] font-semibold mt-1 leading-snug">
+                                                                    {primaryAction.reason}
+                                                                </p>
+                                                                <div className="mt-2.5 flex flex-wrap items-center gap-1.5 text-[9px] font-black text-gray-500">
+                                                                    <span className="inline-flex items-center gap-1 bg-white px-2 py-0.5 rounded-md border border-[#CCE4F0]/30 shadow-sm">
+                                                                        ⏱️ {primaryAction.estimatedMinutes} {t('minutes').toLowerCase()}
+                                                                    </span>
+                                                                    <span className="inline-flex items-center gap-1 bg-white px-2 py-0.5 rounded-md border border-[#CCE4F0]/30 shadow-sm text-[#C67A00]">
+                                                                        🎁 {primaryAction.rewardCue}
+                                                                    </span>
+                                                                    <span className="inline-flex items-center gap-1 bg-white px-2 py-0.5 rounded-md border border-[#CCE4F0]/30 shadow-sm text-[#2EC4B6]">
+                                                                        🔥 {primaryAction.progressCue}
+                                                                    </span>
+                                                                </div>
+                                                            </div>
+                                                            <div className="w-12 h-12 relative flex-shrink-0 ml-auto">
+                                                                <Image src={FUXIE_WORLD_PROPS.marketStall} alt="lesson" fill className="object-contain" />
+                                                            </div>
+                                                        </div>
+
+                                                        {/* Primary CTA */}
+                                                        <PrimaryCta asChild className="group w-full rounded-2xl py-4 text-xl font-black">
+                                                            <Link href={primaryAction.href}>
+                                                                    <span>{primaryAction.ctaLabel}</span>
+                                                                    <span className="group-hover:translate-x-1 transition-transform">→</span>
+                                                            </Link>
+                                                        </PrimaryCta>
+                                                    </>
+                                                )}
                                             </div>
                                         </div>
                                     </div>
@@ -684,4 +734,70 @@ function ProgressRing({ progress, size = 64, strokeWidth = 6 }: { progress: numb
             </defs>
         </svg>
     )
+}
+
+function derivePrimaryAction(data: DashboardData, t: any) {
+    const todayPlan = data.todayPlan
+    const level = data.profile.currentLevel || 'A1'
+    const goalMinutes = data.profile.studyGoalMinutes || 15
+
+    const isCompleted = todayPlan ? todayPlan.remainingMinutes <= 0 : false
+
+    const action = isCompleted
+        ? todayPlan?.actions?.[1]
+        : (todayPlan?.actions?.[0])
+
+    if (action) {
+        let ctaLabel = t('ctaSafeFallback')
+        if (action.type === 'srs') {
+            ctaLabel = t('ctaReviewSrs')
+        } else if (action.type === 'exam') {
+            ctaLabel = t('ctaStartExam')
+        } else if (action.type === 'assignment') {
+            ctaLabel = t('ctaContinueLesson')
+        } else if (action.type === 'lesson') {
+            if (action.skill === 'WORTSCHATZ') {
+                ctaLabel = t('ctaLearnVocab')
+            } else if (action.skill === 'GRAMMATIK') {
+                ctaLabel = t('ctaPracticeGrammar')
+            } else if (action.skill === 'HOEREN') {
+                ctaLabel = t('ctaPracticeListening')
+            } else if (action.skill === 'LESEN') {
+                ctaLabel = t('ctaPracticeReading')
+            } else if (action.skill === 'SCHREIBEN') {
+                ctaLabel = t('ctaPracticeWriting')
+            } else if (action.skill === 'SPRECHEN') {
+                ctaLabel = t('ctaPracticeSpeaking')
+            } else {
+                ctaLabel = t('ctaContinueLesson')
+            }
+        }
+
+        return {
+            eyebrow: isCompleted ? t('eyebrowCompleted') : t('eyebrowNext'),
+            title: action.title,
+            reason: action.reason,
+            href: action.href,
+            ctaLabel,
+            estimatedMinutes: action.estimatedMinutes || 10,
+            rewardCue: t('rewardCue'),
+            progressCue: t('progressCue'),
+            isCompleted,
+            hasSecondary: true
+        }
+    }
+
+    // Fallback: vocabulary practice
+    return {
+        eyebrow: isCompleted ? t('eyebrowCompleted') : t('eyebrowNext'),
+        title: t('fallbackTitle', { level }),
+        reason: t('fallbackReason'),
+        href: '/vocabulary',
+        ctaLabel: isCompleted ? t('ctaCompletedToday') : t('ctaLearnVocab'),
+        estimatedMinutes: Math.max(5, goalMinutes),
+        rewardCue: t('rewardCue'),
+        progressCue: t('progressCue'),
+        isCompleted,
+        hasSecondary: true
+    }
 }
