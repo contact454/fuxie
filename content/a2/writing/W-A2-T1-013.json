@@ -46,14 +46,14 @@
     "maxScore": 15
   },
   "maxScore": 15,
-  "modelAnswer": "Hallo,\n\nich schreibe wegen Bedanken Sie sich für die Nachricht.. ich schreibe wegen Sagen Sie, wann Sie nächste Woche Zeit haben (Tag und Uhrzeit).. ich schreibe wegen Geben Sie einen Rat, welcher Fahrradtyp (z.B. Stadtrad oder Mountainbike) besser ist.. Bitte geben Sie mir kurz Bescheid.\n\nViele Gruesse\nLinh",
+  "modelAnswer": "Hallo Anna,\n\ndanke für deine Nachricht. Zum Thema Fahrrad kaufen: Ich habe Zeit und helfe gern. Wir können uns am Samstag um 18 Uhr treffen. Ich kann Kuchen, Getränke oder Werkzeug mitbringen. Sag mir bitte, was du brauchst. Schreib mir bald zurück.\n\nLiebe Grüße\nLinh",
   "timeLimitMinutes": 15,
   "estimatedMinutes": 15,
   "cefrAudit": {
     "targetLevel": "A2",
     "verdict": "aligned",
     "reviewerRole": "German Academic Lead",
-    "notes": "Release-candidate metadata audit: writing content for \"Fahrrad kaufen\" is aligned with declared A2 scope pending final human spot-check.",
+    "notes": "Writing D7 advisory remediation: modelAnswer regenerated for \"Fahrrad kaufen\" after duplicate/template/length sweep; final native signoff remains pending.",
     "reviewedAt": "2026-05-12",
     "reviewScope": "release_candidate_metadata_pass"
   },

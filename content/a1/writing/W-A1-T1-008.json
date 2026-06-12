@@ -10,11 +10,11 @@
   "instructionVi": "Điền form: Kindergarten.",
   "situation": "Ihr Kind soll in den Kindergarten. Fuellen Sie das Formular aus.",
   "contentPoints": [
-    "Name und Vorname",
-    "Geburtsdatum",
-    "Adresse",
+    "Name des Kindes",
+    "Geburtsdatum des Kindes",
+    "Name der Eltern",
     "Telefonnummer",
-    "E-Mail-Adresse"
+    "Betreuungszeit"
   ],
   "minWords": 15,
   "maxWords": 30,
@@ -48,19 +48,15 @@
   "maxScore": 15,
   "formFields": [
     {
-      "label": "Familienname",
+      "label": "Name des Kindes",
       "type": "text"
     },
     {
-      "label": "Vorname",
-      "type": "text"
-    },
-    {
-      "label": "Geburtsdatum",
+      "label": "Geburtsdatum des Kindes",
       "type": "date"
     },
     {
-      "label": "Adresse",
+      "label": "Name der Eltern",
       "type": "text"
     },
     {
@@ -68,11 +64,11 @@
       "type": "text"
     },
     {
-      "label": "E-Mail",
-      "type": "email"
+      "label": "Betreuungszeit",
+      "type": "text"
     }
   ],
-  "modelAnswer": "Familienname: Nguyen\nVorname: Linh\nGeburtsdatum: 01.01.1998\nAdresse: Hauptstrasse 12, 10115 Berlin\nTelefon: 030 123456\nE-Mail: linh.nguyen@example.com",
+  "modelAnswer": "Name des Kindes: Emma Hoang\nGeburtsdatum des Kindes: 06.02.2022\nName der Eltern: Lan Hoang\nTelefon: 040 334455\nBetreuungszeit: vormittags",
   "timeLimitMinutes": 5,
   "estimatedMinutes": 5,
   "cefrAudit": {

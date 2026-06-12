@@ -14,7 +14,8 @@
     "Geburtsdatum",
     "Adresse",
     "Telefonnummer",
-    "E-Mail-Adresse"
+    "E-Mail-Adresse",
+    "Bibliotheksausweis"
   ],
   "minWords": 15,
   "maxWords": 30,
@@ -70,9 +71,13 @@
     {
       "label": "E-Mail",
       "type": "email"
+    },
+    {
+      "label": "Bibliotheksausweis: ja/nein",
+      "type": "text"
     }
   ],
-  "modelAnswer": "Familienname: Nguyen\nVorname: Linh\nGeburtsdatum: 01.01.1998\nAdresse: Hauptstrasse 12, 10115 Berlin\nTelefon: 030 123456\nE-Mail: linh.nguyen@example.com",
+  "modelAnswer": "Familienname: Tran\nVorname: Minh\nGeburtsdatum: 14.03.2001\nAdresse: Gartenweg 8, 50667 Koeln\nTelefon: 0221 456789\nE-Mail: minh.tran@example.com\nBibliotheksausweis: nein",
   "timeLimitMinutes": 5,
   "estimatedMinutes": 5,
   "cefrAudit": {

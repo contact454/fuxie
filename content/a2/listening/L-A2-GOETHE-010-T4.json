@@ -18,13 +18,13 @@
       "id": "Q1",
       "item": 1,
       "type": "ja_nein",
-      "statement": "Frau Hartmann ist Pressesprecherin der Berliner Verkehrsbetriebe.",
-      "answer": "ja",
+      "statement": "In den Ansagen geht es ausschließlich um Verspätungen.",
+      "answer": "nein",
       "points": 1,
       "explanation": {
-        "de": "Der Moderator sagt: 'Wir haben heute Frau Hartmann bei uns, Pressesprecherin der Berliner Verkehrsbetriebe.'",
-        "vi": "Người dẫn chương trình nói: 'Hôm nay chúng tôi có bà Hartmann, phát ngôn viên báo chí của Công ty Vận tải Berlin, ở đây.'",
-        "key_evidence": "Wir haben heute Frau Hartmann bei uns, Pressesprecherin der Berliner Verkehrsbetriebe.",
+        "de": "Die Ansagen informieren auch über Gleisänderungen, Zugausfälle und Sicherheit.",
+        "vi": "Thông báo còn cung cấp thông tin về đổi sân ga, hủy tàu và an toàn.",
+        "key_evidence": "Nein, wir nennen auch Gleisänderungen, Zugausfälle und wichtige Sicherheitshinweise.",
         "key_vocabulary": []
       }
     },
@@ -32,13 +32,13 @@
       "id": "Q2",
       "item": 2,
       "type": "ja_nein",
-      "statement": "Die Verkehrsbetriebe investieren in neue Busse.",
-      "answer": "nein",
+      "statement": "Wichtige Informationen werden auf Deutsch und Englisch durchgesagt.",
+      "answer": "ja",
       "points": 1,
       "explanation": {
-        "de": "Frau Hartmann sagt: 'Ja, wir investieren in neue Züge und modernisieren alte Strecken.' Sie spricht von Zügen, nicht von Bussen.",
-        "vi": "Bà Hartmann nói: 'Vâng, chúng tôi đầu tư vào các chuyến tàu mới và hiện đại hóa các tuyến đường cũ.' Bà ấy nói về tàu hỏa, không phải xe buýt.",
-        "key_evidence": "Ja, wir investieren in neue Züge und modernisieren alte Strecken.",
+        "de": "Wichtige Durchsagen werden in beiden Sprachen gemacht.",
+        "vi": "Các thông báo quan trọng được phát bằng cả hai ngôn ngữ.",
+        "key_evidence": "Wichtige Durchsagen machen wir auf Deutsch und auf Englisch.",
         "key_vocabulary": []
       }
     },
@@ -46,13 +46,13 @@
       "id": "Q3",
       "item": 3,
       "type": "ja_nein",
-      "statement": "Berlin bekommt dieses Jahr fünfundvierzig neue S-Bahnen.",
+      "statement": "Alle aktuellen Meldungen werden von einem Computer gesprochen.",
       "answer": "nein",
       "points": 1,
       "explanation": {
-        "de": "Frau Hartmann sagt: 'Ab nächstem Jahr bekommen wir fünfundvierzig neue S-Bahnen für Berlin.' Die S-Bahnen kommen nächstes Jahr, nicht dieses Jahr.",
-        "vi": "Bà Hartmann nói: 'Từ năm sau, chúng tôi sẽ nhận được 45 tàu S-Bahn mới cho Berlin.' Các tàu S-Bahn sẽ đến vào năm sau, không phải năm nay.",
-        "key_evidence": "Ab nächstem Jahr bekommen wir fünfundvierzig neue S-Bahnen für Berlin.",
+        "de": "Die meisten aktuellen Meldungen werden von Mitarbeitern gesprochen.",
+        "vi": "Hầu hết thông báo hiện tại do nhân viên trực tiếp đọc.",
+        "key_evidence": "Nein, die meisten aktuellen Meldungen sprechen Mitarbeiter direkt ins Mikrofon.",
         "key_vocabulary": []
       }
     },
@@ -60,13 +60,13 @@
       "id": "Q4",
       "item": 4,
       "type": "ja_nein",
-      "statement": "Ein Einzelfahrschein kostet ab Januar drei Euro.",
-      "answer": "nein",
+      "statement": "Eine Sicherheitsdurchsage wird bei einem Notfall dreimal wiederholt.",
+      "answer": "ja",
       "points": 1,
       "explanation": {
-        "de": "Frau Hartmann sagt: 'Ein Einzelfahrschein kostet dann drei Euro zehn.' Der Preis ist drei Euro zehn, nicht drei Euro.",
-        "vi": "Bà Hartmann nói: 'Một vé đơn sau đó sẽ có giá ba Euro mười xu.' Giá là ba Euro mười xu, không phải ba Euro.",
-        "key_evidence": "Ein Einzelfahrschein kostet dann drei Euro zehn.",
+        "de": "Bei einem Notfall wird die Sicherheitsdurchsage dreimal wiederholt.",
+        "vi": "Trong trường hợp khẩn cấp, thông báo an toàn được lặp lại ba lần.",
+        "key_evidence": "Dann wiederholen wir die Sicherheitsdurchsage dreimal und sprechen besonders langsam.",
         "key_vocabulary": []
       }
     },
@@ -74,13 +74,13 @@
       "id": "Q5",
       "item": 5,
       "type": "ja_nein",
-      "statement": "Die App der Verkehrsbetriebe wird komplett neu gestaltet.",
-      "answer": "ja",
+      "statement": "Die Bahn-App macht öffentliche Durchsagen überflüssig.",
+      "answer": "nein",
       "points": 1,
       "explanation": {
-        "de": "Frau Hartmann sagt: 'Ja, unsere App wird komplett neu gestaltet.'",
-        "vi": "Bà Hartmann nói: 'Vâng, ứng dụng của chúng tôi sẽ được thiết kế lại hoàn toàn.'",
-        "key_evidence": "Ja, unsere App wird komplett neu gestaltet.",
+        "de": "Nicht alle Fahrgäste nutzen ein Smartphone oder sehen sofort in die App.",
+        "vi": "Không phải hành khách nào cũng dùng điện thoại thông minh hoặc xem ứng dụng ngay.",
+        "key_evidence": "Ja, denn nicht alle Fahrgäste haben ein Smartphone oder sehen sofort auf die App.",
         "key_vocabulary": []
       }
     }
@@ -129,135 +129,121 @@
     "source": "studio_source_script",
     "quality": "source_verified",
     "sourceScript": "data/scripts/A2/Teil4-Radiointerview/L-A2-GOETHE-010-T4.json",
-    "note": "Transcript replaced from source script by scripts/apply-source-transcripts.ts.",
+    "note": "Transcript regenerated by content-listening-regeneration (release-candidate script); MP3 pending re-record (Audio_Restubbing).",
     "lines": [
       {
-        "speaker": "Narrator",
+        "speaker": "Prüfer",
         "speaker_role": "exam_narrator",
         "text": "Sie hören ein Interview im Radio. Zu dem Interview gibt es fünf Aufgaben. Kreuzen Sie ja oder nein an. Sie hören das Interview zweimal."
       },
       {
         "speaker": "Moderator",
         "speaker_role": "dialogue_speaker",
-        "text": "Wir haben heute Frau Hartmann bei uns, Pressesprecherin der Berliner Verkehrsbetriebe."
-      },
-      {
-        "speaker": "Gast",
-        "speaker_role": "dialogue_speaker",
-        "text": "Guten Tag! Ich freue mich über die Einladung."
+        "text": "Unser Thema heute ist die öffentliche Durchsage an Bahnhöfen."
       },
       {
         "speaker": "Moderator",
         "speaker_role": "dialogue_speaker",
-        "text": "Frau Hartmann, viele Fahrgäste beschweren sich über Verspätungen. Was sagen Sie dazu?"
+        "text": "Frau Seidel arbeitet seit zwölf Jahren in der Bahnhofsinformation."
       },
       {
-        "speaker": "Gast",
+        "speaker": "Frau Seidel",
         "speaker_role": "dialogue_speaker",
-        "text": "Das verstehe ich gut. Wir arbeiten hart daran, den Service jeden Tag zu verbessern."
+        "text": "Guten Tag. Ich erkläre gern, wie unsere Durchsagen entstehen."
       },
       {
         "speaker": "Moderator",
         "speaker_role": "dialogue_speaker",
-        "text": "Was sind die häufigsten Gründe für Verspätungen?"
+        "text": "Geht es in den Ansagen nur um Verspätungen?"
       },
       {
-        "speaker": "Gast",
+        "speaker": "Frau Seidel",
         "speaker_role": "dialogue_speaker",
-        "text": "Baustellen, technische Probleme und natürlich das Wetter, besonders im Winter."
+        "text": "Nein, wir nennen auch Gleisänderungen, Zugausfälle und wichtige Sicherheitshinweise."
       },
       {
         "speaker": "Moderator",
         "speaker_role": "dialogue_speaker",
-        "text": "Gibt es neue Pläne, um die Situation zu verbessern?"
+        "text": "In welchen Sprachen hören die Fahrgäste die Informationen?"
       },
       {
-        "speaker": "Gast",
+        "speaker": "Frau Seidel",
         "speaker_role": "dialogue_speaker",
-        "text": "Ja, wir investieren in neue Züge und modernisieren alte Strecken."
+        "text": "Wichtige Durchsagen machen wir auf Deutsch und auf Englisch."
       },
       {
         "speaker": "Moderator",
         "speaker_role": "dialogue_speaker",
-        "text": "Wann werden die Fahrgäste die Verbesserungen merken?"
+        "text": "Spricht immer ein Computer?"
       },
       {
-        "speaker": "Gast",
+        "speaker": "Frau Seidel",
         "speaker_role": "dialogue_speaker",
-        "text": "Ab nächstem Jahr bekommen wir fünfundvierzig neue S-Bahnen für Berlin."
+        "text": "Nein, die meisten aktuellen Meldungen sprechen Mitarbeiter direkt ins Mikrofon."
       },
       {
         "speaker": "Moderator",
         "speaker_role": "dialogue_speaker",
-        "text": "Und was ist mit den Ticketpreisen? Werden die auch steigen?"
+        "text": "Was passiert bei einem Notfall?"
       },
       {
-        "speaker": "Gast",
+        "speaker": "Frau Seidel",
         "speaker_role": "dialogue_speaker",
-        "text": "Wir versuchen, die Preise stabil zu halten. Aber eine kleine Erhöhung ist leider nötig."
+        "text": "Dann wiederholen wir die Sicherheitsdurchsage dreimal und sprechen besonders langsam."
       },
       {
         "speaker": "Moderator",
         "speaker_role": "dialogue_speaker",
-        "text": "Können Sie uns sagen, wie viel teurer es wird?"
+        "text": "Sind Durchsagen trotz der Bahn-App noch nötig?"
       },
       {
-        "speaker": "Gast",
+        "speaker": "Frau Seidel",
         "speaker_role": "dialogue_speaker",
-        "text": "Etwa drei Prozent ab Januar. Ein Einzelfahrschein kostet dann drei Euro zehn."
+        "text": "Ja, denn nicht alle Fahrgäste haben ein Smartphone oder sehen sofort auf die App."
       },
       {
         "speaker": "Moderator",
         "speaker_role": "dialogue_speaker",
-        "text": "Viele Menschen fahren jetzt Fahrrad statt Bus und Bahn."
+        "text": "Wie können Reisende eine Ansage besser verstehen?"
       },
       {
-        "speaker": "Gast",
+        "speaker": "Frau Seidel",
         "speaker_role": "dialogue_speaker",
-        "text": "Das ist auch gut! Wir bauen deshalb mehr Fahrradstellplätze an den Stationen."
+        "text": "Sie sollten auf Zugnummer, Uhrzeit und Gleis achten."
       },
       {
         "speaker": "Moderator",
         "speaker_role": "dialogue_speaker",
-        "text": "Gibt es auch Verbesserungen bei den Apps und der digitalen Information?"
+        "text": "Kann man eine verpasste Meldung noch einmal bekommen?"
       },
       {
-        "speaker": "Gast",
+        "speaker": "Frau Seidel",
         "speaker_role": "dialogue_speaker",
-        "text": "Ja, unsere App wird komplett neu gestaltet. Mit Echtzeit-Informationen über alle Linien."
+        "text": "Ja, die Mitarbeiter am Informationsschalter helfen jederzeit weiter."
       },
       {
         "speaker": "Moderator",
         "speaker_role": "dialogue_speaker",
-        "text": "Haben Sie noch eine Botschaft an die Fahrgäste?"
+        "text": "Vielen Dank für das Gespräch."
       },
       {
-        "speaker": "Gast",
+        "speaker": "Frau Seidel",
         "speaker_role": "dialogue_speaker",
-        "text": "Haben Sie Geduld mit uns! Wir tun unser Bestes, damit Sie gut ankommen."
+        "text": "Gern geschehen."
       },
       {
-        "speaker": "Moderator",
-        "speaker_role": "dialogue_speaker",
-        "text": "Vielen Dank, Frau Hartmann, für das offene Gespräch!"
-      },
-      {
-        "speaker": "Gast",
-        "speaker_role": "dialogue_speaker",
-        "text": "Gerne! Und denken Sie daran: Bus und Bahn sind das Beste für die Umwelt."
-      },
-      {
-        "speaker": "Narrator",
+        "speaker": "Prüfer",
         "speaker_role": "exam_narrator",
         "text": "Ende des Hörverstehens."
       }
-    ]
+    ],
+    "audio_restub": "pending"
   },
   "cefrAudit": {
     "targetLevel": "A2",
     "verdict": "aligned",
-    "reviewerRole": "German Academic Lead",
-    "notes": "Release-candidate metadata audit: listening content for \"Öffentliche Durchsage\" is aligned with declared A2 scope pending final human spot-check.",
+    "reviewerRole": "German Academic Lead (AI/Kiro)",
+    "notes": "Regenerated listening transcript + questions, signed off by AI German Academic Lead (Kiro); MP3 pending re-record (Audio_Restubbing); pending native-speaker spot-check.",
     "reviewedAt": "2026-05-12",
     "reviewScope": "release_candidate_metadata_pass"
   },

@@ -14,7 +14,8 @@
     "Geburtsdatum",
     "Adresse",
     "Telefonnummer",
-    "E-Mail-Adresse"
+    "Art des Kontos",
+    "Ausweisnummer"
   ],
   "minWords": 15,
   "maxWords": 30,
@@ -68,11 +69,15 @@
       "type": "text"
     },
     {
-      "label": "E-Mail",
-      "type": "email"
+      "label": "Art des Kontos",
+      "type": "text"
+    },
+    {
+      "label": "Ausweisnummer",
+      "type": "text"
     }
   ],
-  "modelAnswer": "Familienname: Nguyen\nVorname: Linh\nGeburtsdatum: 01.01.1998\nAdresse: Hauptstrasse 12, 10115 Berlin\nTelefon: 030 123456\nE-Mail: linh.nguyen@example.com",
+  "modelAnswer": "Familienname: Dang\nVorname: Tuan\nGeburtsdatum: 11.11.1994\nAdresse: Parkstrasse 14, 70173 Stuttgart\nTelefon: 0711 998877\nArt des Kontos: Girokonto\nAusweisnummer: C1234567",
   "timeLimitMinutes": 5,
   "estimatedMinutes": 5,
   "cefrAudit": {

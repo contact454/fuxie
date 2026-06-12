@@ -11,9 +11,9 @@ import { buildFirstSessionPathProgress } from '@/lib/gamification/lesson-gamepla
 import { buildSkillMasterySnapshot } from '@/lib/gamification/skill-mastery'
 import { calculateFuxieXpLevel } from '@/lib/gamification/xp-level'
 import { getTodayPlan } from '@/lib/personalization/today-plan'
+import { FuxiePanel } from '@/components/ui/fuxie-ui'
 import { DashboardClientDynamic } from '@/components/dashboard/DashboardClientDynamic'
 import { DashboardBackboneHero } from '@/components/dashboard/dashboard-backbone-hero'
-import { StateShell } from '@/components/gamification/state-shell'
 import type { DashboardData } from '@/components/dashboard/dashboard-client'
 import type { AdaptiveQuestPacingSignals } from '@/lib/gamification/adaptive-quest-pacing'
 import { StatsSkeleton, ContentSkeleton } from '@/components/dashboard/dashboard-skeletons'
@@ -485,28 +485,52 @@ async function DashboardBackboneHeroSection({ userId }: { userId: string }) {
  *
  * When the hero is in `empty` state we suppress the rich content below
  * (Req 3.6 forbids streak/XP/quest progress hero in this state). We still
- * render a calm StateShell-style explanation for context — the hero
- * already carries the single Primary_CTA so the shell here is
+ * render a calm FuxiePanel-based guide panel for context — the hero
+ * already carries the single Primary_CTA so the guide panel here is
  * informational only and omits its own CTA.
  */
 async function DashboardEmptyDetail({ userId }: { userId: string }) {
-    const header = await getHeaderData(userId)
-    if (resolveHeroState(header) !== 'empty') {
-        return null
+    if (userId !== 'visual-qa') {
+        const header = await getHeaderData(userId)
+        if (resolveHeroState(header) !== 'empty') {
+            return null
+        }
     }
-    const t = await getTranslations('Dashboard')
+    const act = await getTranslations('Activation')
+
     return (
-        <div className="px-4 sm:px-6 lg:px-8 pt-4 pb-8">
-            <StateShell
-                surfaceId="dashboard"
-                state="empty"
-                title={t('emptyTitle')}
-                message={t('emptyMessage')}
-                primaryCta={{
-                    label: t('ctaCreatePath'),
-                    href: '/onboarding',
-                }}
-            />
+        <div className="px-4 sm:px-6 lg:px-8 pt-4 pb-8 max-w-3xl mx-auto">
+            <FuxiePanel variant="hero" className="p-6 sm:p-8">
+                <h2 className="text-2xl font-black text-gray-900 mb-2 flex items-center gap-2">
+                    {act('dashboardGuideTitle')}
+                </h2>
+                <p className="text-sm text-gray-500 font-medium mb-6">
+                    {act('dashboardGuideDesc')}
+                </p>
+
+                <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+                    {/* Step 1 */}
+                    <div className="flex flex-col gap-2 p-4 bg-white border border-slate-100 rounded-2xl shadow-sm hover:scale-[1.02] transition-transform">
+                        <div className="w-8 h-8 rounded-full bg-[#60A8E4] text-white flex items-center justify-center text-sm font-black shadow-sm">1</div>
+                        <h3 className="text-sm font-black text-gray-800 mt-1">{act('step1Title')}</h3>
+                        <p className="text-xs text-gray-500 font-medium leading-relaxed">{act('step1Desc')}</p>
+                    </div>
+
+                    {/* Step 2 */}
+                    <div className="flex flex-col gap-2 p-4 bg-white border border-slate-100 rounded-2xl shadow-sm hover:scale-[1.02] transition-transform">
+                        <div className="w-8 h-8 rounded-full bg-[#60A8E4] text-white flex items-center justify-center text-sm font-black shadow-sm">2</div>
+                        <h3 className="text-sm font-black text-gray-800 mt-1">{act('step2Title')}</h3>
+                        <p className="text-xs text-gray-500 font-medium leading-relaxed">{act('step2Desc')}</p>
+                    </div>
+
+                    {/* Step 3 */}
+                    <div className="flex flex-col gap-2 p-4 bg-white border border-slate-100 rounded-2xl shadow-sm hover:scale-[1.02] transition-transform">
+                        <div className="w-8 h-8 rounded-full bg-[#60A8E4] text-white flex items-center justify-center text-sm font-black shadow-sm">3</div>
+                        <h3 className="text-sm font-black text-gray-800 mt-1">{act('step3Title')}</h3>
+                        <p className="text-xs text-gray-500 font-medium leading-relaxed">{act('step3Desc')}</p>
+                    </div>
+                </div>
+            </FuxiePanel>
         </div>
     )
 }
@@ -531,6 +555,17 @@ async function DashboardDefaultBody({ userId, forceEmpty }: { userId: string; fo
         adaptivePacing,
         streakFreezeTimeline,
     } as unknown as DashboardData
+
+    const state = forceEmpty ? 'empty' : resolveHeroState(header)
+
+    if (state === 'empty') {
+        return (
+            <div className="space-y-6 pb-12">
+                <DashboardBackboneHeroSection userId={userId} />
+                <DashboardEmptyDetail userId={userId} />
+            </div>
+        )
+    }
 
     return (
         <DashboardClientDynamic
@@ -671,10 +706,14 @@ export default async function DashboardPage({ searchParams }: { searchParams: Pr
                             todayLabel={t('today')}
                         />
                     </div>
-                    <DashboardClientDynamic
-                        data={DASHBOARD_VISUAL_QA_DATA}
-                        forceEmpty={forceEmpty}
-                    />
+                    {forceEmpty ? (
+                        <DashboardEmptyDetail userId="visual-qa" />
+                    ) : (
+                        <DashboardClientDynamic
+                            data={DASHBOARD_VISUAL_QA_DATA}
+                            forceEmpty={forceEmpty}
+                        />
+                    )}
                 </div>
             </DashboardRouteShell>
         )

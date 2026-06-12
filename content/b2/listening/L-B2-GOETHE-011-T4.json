@@ -9,7 +9,7 @@
   "metadata": {
     "generated_at": "2026-03-19T10:04:11.237565",
     "version": 6,
-    "gespraech_count": 5,
+    "gespraech_count": 8,
     "source_script": "data/scripts/B2/Teil4-Vortrag/L-B2-GOETHE-011-T4.json",
     "regenerated_at": "2026-03-20T07:53:59.202Z"
   },
@@ -18,23 +18,22 @@
       "id": "Q1",
       "gespraech": 1,
       "type": "mc_abc",
-      "question": "Was beabsichtigt der Dozent mit seinem Vortrag hauptsächlich?",
+      "question": "Welches Hauptziel verfolgt die Dozentin mit ihrem Vortrag?",
       "options": {
-        "a": "Er möchte die Zuhörer über die wirtschaftlichen Chancen der Ernährung informieren.",
-        "b": "Er will drei wesentliche Entwicklungen in der zukünftigen Ernährung beleuchten.",
-        "c": "Er plant, die Probleme der aktuellen Lebensmittelproduktion zu analysieren."
+        "a": "Sie möchte verschiedene Methoden der Schlafforschung und ihre Grenzen erklären.",
+        "b": "Sie will ausschließlich praktische Tipps für besseren Schlaf geben.",
+        "c": "Sie möchte kommerzielle Schlafuhren empfehlen."
       },
-      "answer": "b",
+      "answer": "a",
       "points": 1,
       "explanation": {
-        "de": "Der Dozent kündigt zu Beginn an: 'Ich möchte heute drei zentrale Trends beleuchten, die unsere Ernährung grundlegend verändern werden.'",
-        "vi": "Giảng viên thông báo ngay từ đầu: 'Hôm nay tôi muốn làm rõ ba xu hướng trung tâm sẽ thay đổi cơ bản cách chúng ta ăn uống.'",
-        "key_evidence": "Ich möchte heute drei zentrale Trends beleuchten, die unsere Ernährung grundlegend verändern werden.",
+        "de": "Die Dozentin kündigt an, Messmethoden, Fehlerquellen und die Kombination mehrerer Verfahren zu erläutern.",
+        "vi": "Giảng viên cho biết sẽ giải thích phương pháp đo, nguồn sai số và việc kết hợp nhiều phương pháp.",
+        "key_evidence": "Ich möchte zeigen, wie Forscher Schlaf messen, welche Fehlerquellen auftreten und warum meist mehrere Methoden kombiniert werden.",
         "key_vocabulary": [
-          "beabsichtigen",
-          "wesentlich",
-          "beleuchten",
-          "grundlegend"
+          "Fehlerquelle",
+          "Methode",
+          "kombinieren"
         ]
       }
     },
@@ -42,24 +41,22 @@
       "id": "Q2",
       "gespraech": 1,
       "type": "mc_abc",
-      "question": "Was ist die grundlegende Annahme hinter dem Trend der Personalisierung in der Ernährung?",
+      "question": "Warum liefert eine Polysomnografie besonders genaue Informationen?",
       "options": {
-        "a": "Alle Menschen benötigen die gleichen Nährstoffe für optimale Gesundheit.",
-        "b": "Die gesundheitlichen Auswirkungen von Lebensmitteln sind individuell sehr unterschiedlich.",
-        "c": "Traditionelle Ernährungsweisen sind für die meisten Menschen am besten geeignet."
+        "a": "Weil sie ausschließlich die Schlafdauer misst.",
+        "b": "Weil sie mehrere körperliche Signale gleichzeitig erfasst.",
+        "c": "Weil die Versuchspersonen dabei zu Hause schlafen."
       },
       "answer": "b",
       "points": 1,
       "explanation": {
-        "de": "Der Dozent erklärt, dass 'Was für den einen gesund ist, kann für den anderen weniger vorteilhaft oder sogar nachteilig sein', was die individuelle Unterschiedlichkeit unterstreicht.",
-        "vi": "Giảng viên giải thích rằng 'Điều tốt cho người này có thể ít lợi hoặc thậm chí có hại cho người khác', điều này nhấn mạnh sự khác biệt cá nhân.",
-        "key_evidence": "Was für den einen gesund ist, kann für den anderen weniger vorteilhaft oder sogar nachteilig sein.",
+        "de": "Die Polysomnografie kombiniert unter anderem Hirnströme, Augenbewegungen, Muskelspannung und Atmung.",
+        "vi": "Đa ký giấc ngủ kết hợp nhiều tín hiệu như sóng não, chuyển động mắt, độ căng cơ và hô hấp.",
+        "key_evidence": "Sie erfasst gleichzeitig Hirnströme, Augenbewegungen, Muskelspannung, Atmung und weitere körperliche Signale.",
         "key_vocabulary": [
-          "grundlegend",
-          "Annahme",
-          "Personalisierung",
-          "individuell",
-          "nachteilig"
+          "Polysomnografie",
+          "Hirnströme",
+          "körperliches Signal"
         ]
       }
     },
@@ -67,25 +64,22 @@
       "id": "Q3",
       "gespraech": 1,
       "type": "mc_abc",
-      "question": "Welchen entscheidenden Vorteil des Indoor-Farming hebt der Dozent hervor?",
+      "question": "Was versteht man unter dem Erste-Nacht-Effekt?",
       "options": {
-        "a": "Es ermöglicht den Anbau exotischer Früchte in jeder Klimazone.",
-        "b": "Es reduziert den Wasserverbrauch erheblich und macht Pestizide überflüssig.",
-        "c": "Es schafft neue Arbeitsplätze in der Landwirtschaft in städtischen Gebieten."
+        "a": "Die erste Schlafphase ist grundsätzlich die längste.",
+        "b": "Menschen schlafen in einer ungewohnten Laborumgebung zunächst anders.",
+        "c": "Messgeräte funktionieren in der ersten Nacht weniger genau."
       },
       "answer": "b",
       "points": 1,
       "explanation": {
-        "de": "Der Dozent nennt konkret: 'Diese Farmen verbrauchen neunzig Prozent weniger Wasser und benötigen keine Pestizide.'",
-        "vi": "Giảng viên nêu rõ: 'Những trang trại này tiêu thụ ít hơn chín mươi phần trăm nước và không cần thuốc trừ sâu.'",
-        "key_evidence": "Diese Farmen verbrauchen neunzig Prozent weniger Wasser und benötigen keine Pestizide.",
+        "de": "Die ungewohnte Umgebung kann das Schlafverhalten in der ersten Labornacht verändern.",
+        "vi": "Môi trường lạ có thể làm thay đổi hành vi ngủ trong đêm đầu tiên tại phòng thí nghiệm.",
+        "key_evidence": "Viele Menschen schlafen in der ungewohnten Umgebung zunächst anders als zu Hause.",
         "key_vocabulary": [
-          "entscheidend",
-          "Vorteil",
-          "hervorheben",
-          "reduzieren",
-          "erheblich",
-          "überflüssig"
+          "Erste-Nacht-Effekt",
+          "ungewohnte Umgebung",
+          "Schlaflabor"
         ]
       }
     },
@@ -93,24 +87,22 @@
       "id": "Q4",
       "gespraech": 1,
       "type": "mc_abc",
-      "question": "Was impliziert der Dozent über die Beziehung zwischen modernen Technologien und traditioneller Fermentation?",
+      "question": "Welchen besonderen Beitrag leistet ein Schlaftagebuch?",
       "options": {
-        "a": "Moderne Technologien ersetzen traditionelle Fermentationsmethoden vollständig.",
-        "b": "Moderne Technologien nutzen altes Wissen und verbessern es gezielt.",
-        "c": "Traditionelle Fermentation ist ohne moderne Technologie nicht mehr relevant."
+        "a": "Es misst Hirnströme genauer als ein Labor.",
+        "b": "Es erfasst Gewohnheiten und persönliche Wahrnehmungen.",
+        "c": "Es verhindert subjektive Angaben vollständig."
       },
       "answer": "b",
       "points": 1,
       "explanation": {
-        "de": "Der Dozent erklärt, dass moderne Technologien 'auf uraltes Wissen zurückgreifen und optimieren es', was eine Verbesserung und nicht einen Ersatz bedeutet.",
-        "vi": "Giảng viên giải thích rằng công nghệ hiện đại 'dựa trên kiến thức cổ xưa và tối ưu hóa nó', điều này có nghĩa là cải tiến chứ không phải thay thế.",
-        "key_evidence": "Interessanterweise greifen moderne Technologien auf uraltes Wissen zurück und optimieren es.",
+        "de": "Ein Tagebuch ergänzt technische Messungen um den Alltag und die persönliche Einschätzung der Versuchspersonen.",
+        "vi": "Nhật ký bổ sung cho phép đo kỹ thuật bằng thông tin đời sống và đánh giá cá nhân của người tham gia.",
+        "key_evidence": "Solche Angaben sind subjektiv, liefern aber Informationen über Gewohnheiten und Wahrnehmungen",
         "key_vocabulary": [
-          "implizieren",
-          "Beziehung",
-          "traditionell",
-          "zurückgreifen",
-          "optimieren"
+          "Schlaftagebuch",
+          "subjektiv",
+          "Wahrnehmung"
         ]
       }
     },
@@ -118,24 +110,22 @@
       "id": "Q5",
       "gespraech": 1,
       "type": "mc_abc",
-      "question": "Welche Herausforderung sieht der Dozent für Deutschland im Kontext der neuen Ernährungstrends?",
+      "question": "Was ist ein Vorteil einer Längsschnittstudie?",
       "options": {
-        "a": "Die fehlende Bereitschaft der Verbraucher, neue Lebensmittel zu akzeptieren.",
-        "b": "Die langsame Anpassung der gesetzlichen Rahmenbedingungen an Innovationen.",
-        "c": "Der Mangel an Investitionen in alternative Proteine."
+        "a": "Sie begleitet dieselben Personen und macht Entwicklungen sichtbar.",
+        "b": "Sie liefert grundsätzlich innerhalb eines Tages Ergebnisse.",
+        "c": "Sie benötigt keine sorgfältige Auswahl der Teilnehmenden."
       },
-      "answer": "b",
+      "answer": "a",
       "points": 1,
       "explanation": {
-        "de": "Der Dozent kritisiert, dass 'die Politik die regulatorischen Rahmenbedingungen schneller an die neuen Technologien anpassen' muss, was auf eine langsame Anpassung hindeutet.",
-        "vi": "Giảng viên chỉ trích rằng 'chính sách phải điều chỉnh các khuôn khổ pháp lý nhanh hơn cho các công nghệ mới', điều này cho thấy sự chậm trễ trong việc thích ứng.",
-        "key_evidence": "Allerdings muss die Politik die regulatorischen Rahmenbedingungen schneller an die neuen Technologien anpassen.",
+        "de": "Längsschnittstudien beobachten dieselben Personen über einen längeren Zeitraum und können Veränderungen zeigen.",
+        "vi": "Nghiên cứu dọc theo dõi cùng một nhóm người trong thời gian dài và có thể cho thấy sự thay đổi.",
+        "key_evidence": "Eine Längsschnittstudie begleitet dagegen dieselben Personen über Monate oder Jahre und kann Veränderungen sichtbar machen.",
         "key_vocabulary": [
-          "Herausforderung",
-          "Kontext",
-          "Anpassung",
-          "regulatorisch",
-          "Rahmenbedingungen"
+          "Längsschnittstudie",
+          "begleiten",
+          "Veränderung"
         ]
       }
     },
@@ -143,25 +133,22 @@
       "id": "Q6",
       "gespraech": 1,
       "type": "mc_abc",
-      "question": "Wie bewertet der Dozent die Dauer der Zulassung neuer Lebensmittel in der EU?",
+      "question": "Wovor warnt die Dozentin bei gemeinsam auftretenden Merkmalen?",
       "options": {
-        "a": "Er hält sie für angemessen, um die Sicherheit zu gewährleisten.",
-        "b": "Er betrachtet sie als zu lang und innovationshemmend.",
-        "c": "Er findet sie im Vergleich zu anderen Regionen der Welt effizient."
+        "a": "Man darf nicht automatisch auf einen ursächlichen Zusammenhang schließen.",
+        "b": "Man sollte grundsätzlich nur eines der Merkmale messen.",
+        "c": "Man muss beide Merkmale als Messfehler behandeln."
       },
-      "answer": "b",
+      "answer": "a",
       "points": 1,
       "explanation": {
-        "de": "Der Dozent äußert klar seine Meinung: 'Die Zulassung neuer Lebensmittel in der EU dauert durchschnittlich achtzehn Monate, das ist zu lang.'",
-        "vi": "Giảng viên bày tỏ rõ ràng quan điểm của mình: 'Việc cấp phép thực phẩm mới ở EU mất trung bình mười tám tháng, điều đó là quá lâu.'",
-        "key_evidence": "Die Zulassung neuer Lebensmittel in der EU dauert durchschnittlich achtzehn Monate, das ist zu lang.",
+        "de": "Ein statistischer Zusammenhang allein beweist nach Aussage der Dozentin noch keine Ursache.",
+        "vi": "Theo giảng viên, chỉ riêng mối liên hệ thống kê chưa chứng minh được quan hệ nguyên nhân.",
+        "key_evidence": "Wenn zwei Merkmale gemeinsam auftreten, ist damit noch keine Ursache bewiesen.",
         "key_vocabulary": [
-          "bewerten",
-          "Dauer",
-          "Zulassung",
-          "angemessen",
-          "gewährleisten",
-          "innovationshemmend"
+          "Merkmal",
+          "Ursache",
+          "Zusammenhang"
         ]
       }
     },
@@ -169,25 +156,22 @@
       "id": "Q7",
       "gespraech": 1,
       "type": "mc_abc",
-      "question": "Was betont der Dozent als entscheidend, neben der technologischen Innovation?",
+      "question": "Warum kann die Auswahl freiwilliger Teilnehmender Ergebnisse verzerren?",
       "options": {
-        "a": "Eine stärkere Fokussierung auf die globale Vermarktung neuer Produkte.",
-        "b": "Die Notwendigkeit eines veränderten kulturellen Verständnisses von Essen.",
-        "c": "Die Bedeutung der Rückkehr zu rein traditionellen Essgewohnheiten."
+        "a": "Freiwillige schlafen grundsätzlich weniger als andere Menschen.",
+        "b": "Eine besondere Gruppe kann die Gesamtbevölkerung möglicherweise nicht repräsentieren.",
+        "c": "Freiwillige dürfen keine technischen Messgeräte benutzen."
       },
       "answer": "b",
       "points": 1,
       "explanation": {
-        "de": "Der Dozent stellt fest: 'Wir brauchen auch einen kulturellen Wandel in unserem Verhältnis zum Essen.'",
-        "vi": "Giảng viên nhận định: 'Chúng ta cũng cần một sự thay đổi văn hóa trong mối quan hệ của chúng ta với thực phẩm.'",
-        "key_evidence": "Wir brauchen auch einen kulturellen Wandel in unserem Verhältnis zum Essen.",
+        "de": "Wenn sich vor allem gesundheitsbewusste Personen melden, ist die Stichprobe möglicherweise nicht repräsentativ.",
+        "vi": "Nếu chủ yếu người quan tâm đến sức khỏe đăng ký, mẫu nghiên cứu có thể không đại diện.",
+        "key_evidence": "Melden sich nur besonders gesundheitsbewusste Freiwillige, lassen sich die Ergebnisse nicht ohne Weiteres auf die gesamte Bevölkerung übertragen.",
         "key_vocabulary": [
-          "betonen",
-          "entscheidend",
-          "technologisch",
-          "Innovation",
-          "kulturell",
-          "Verständnis"
+          "Freiwillige",
+          "übertragen",
+          "Bevölkerung"
         ]
       }
     },
@@ -195,25 +179,22 @@
       "id": "Q8",
       "gespraech": 1,
       "type": "mc_abc",
-      "question": "Was sieht der Dozent als die größte Herausforderung für die Zukunft der Ernährung?",
+      "question": "Was kennzeichnet laut Vortrag gute Schlafforschung?",
       "options": {
-        "a": "Die Sicherstellung der weltweiten Verfügbarkeit von personalisierten Speiseplänen.",
-        "b": "Das Gleichgewicht zwischen technologischem Fortschritt und kulturellen Werten zu finden.",
-        "c": "Die Überwindung des Widerstands gegen Indoor-Farming und alternative Proteine."
+        "a": "Sie stützt sich möglichst auf eine einzige moderne Messmethode.",
+        "b": "Sie vermeidet Alltagsdaten und persönliche Befragungen.",
+        "c": "Sie kombiniert passende Methoden mit einem sorgfältigen Studienaufbau."
       },
-      "answer": "b",
+      "answer": "c",
       "points": 1,
       "explanation": {
-        "de": "Am Ende seines Vortrags fasst der Dozent zusammen: 'Die Herausforderung besteht darin, Innovation und Tradition in Einklang zu bringen.'",
-        "vi": "Cuối bài giảng, giảng viên tổng kết: 'Thách thức là làm thế nào để dung hòa đổi mới và truyền thống.'",
-        "key_evidence": "Die Herausforderung besteht darin, Innovation und Tradition in Einklang zu bringen.",
+        "de": "Belastbare Aussagen entstehen durch die Verbindung verschiedener geeigneter Datenquellen und ein passendes Studiendesign.",
+        "vi": "Kết luận đáng tin cậy hình thành từ việc kết hợp các nguồn dữ liệu phù hợp và thiết kế nghiên cứu cẩn thận.",
+        "key_evidence": "Gute Schlafforschung verbindet deshalb Labordaten, Alltagsmessungen, Befragungen und einen sorgfältigen Studienaufbau.",
         "key_vocabulary": [
-          "Herausforderung",
-          "Gleichgewicht",
-          "Fortschritt",
-          "kulturell",
-          "Werte",
-          "in Einklang bringen"
+          "Alltagsmessung",
+          "Studienaufbau",
+          "belastbar"
         ]
       }
     }
@@ -262,7 +243,7 @@
     "source": "studio_source_script",
     "quality": "source_verified",
     "sourceScript": "data/scripts/B2/Teil4-Vortrag/L-B2-GOETHE-011-T4.json",
-    "note": "Transcript replaced from source script by scripts/apply-source-transcripts.ts.",
+    "note": "Transcript regenerated by content-listening-regeneration (release-candidate script); MP3 pending re-record (Audio_Restubbing).",
     "lines": [
       {
         "speaker": "Narrator",
@@ -270,142 +251,143 @@
         "text": "Sie hören einen Vortrag. Dazu gibt es acht Aufgaben. Kreuzen Sie die richtige Antwort an. Sie hören den Vortrag zweimal."
       },
       {
-        "speaker": "Dozent",
+        "speaker": "Dozentin",
         "speaker_role": "dialogue_speaker",
-        "text": "Guten Morgen, meine Damen und Herren, willkommen zu meinem Vortrag über die Zukunft der Ernährung."
+        "text": "Guten Morgen. Mein Vortrag über Schlafforschung und Gesundheit beschäftigt sich heute nicht mit einzelnen Schlaftipps, sondern mit der Frage, wie Forschung zu verlässlichen Ergebnissen kommt."
       },
       {
-        "speaker": "Dozent",
+        "speaker": "Dozentin",
         "speaker_role": "dialogue_speaker",
-        "text": "Ich möchte heute drei zentrale Trends beleuchten, die unsere Ernährung grundlegend verändern werden."
+        "text": "Ich möchte zeigen, wie Forscher Schlaf messen, welche Fehlerquellen auftreten und warum meist mehrere Methoden kombiniert werden."
       },
       {
-        "speaker": "Dozent",
+        "speaker": "Dozentin",
         "speaker_role": "dialogue_speaker",
-        "text": "Der erste Trend ist die Personalisierung. In Zukunft wird Ernährung auf individuelle Bedürfnisse zugeschnitten."
+        "text": "Beginnen wir mit dem Schlaflabor. Dort wird häufig eine sogenannte Polysomnografie durchgeführt."
       },
       {
-        "speaker": "Dozent",
+        "speaker": "Dozentin",
         "speaker_role": "dialogue_speaker",
-        "text": "DNA-Tests und Mikrobiom-Analysen werden es ermöglichen, für jeden Menschen den optimalen Speiseplan zu erstellen."
+        "text": "Sie erfasst gleichzeitig Hirnströme, Augenbewegungen, Muskelspannung, Atmung und weitere körperliche Signale."
       },
       {
-        "speaker": "Dozent",
+        "speaker": "Dozentin",
         "speaker_role": "dialogue_speaker",
-        "text": "Was für den einen gesund ist, kann für den anderen weniger vorteilhaft oder sogar nachteilig sein."
+        "text": "Aus dieser Kombination lassen sich Schlafphasen und auffällige nächtliche Ereignisse wesentlich genauer bestimmen als aus einer einzelnen Messgröße."
       },
       {
-        "speaker": "Dozent",
+        "speaker": "Dozentin",
         "speaker_role": "dialogue_speaker",
-        "text": "Der zweite Trend betrifft die Technologisierung der Lebensmittelproduktion."
+        "text": "Das Labor hat jedoch einen Nachteil: Viele Menschen schlafen in der ungewohnten Umgebung zunächst anders als zu Hause."
       },
       {
-        "speaker": "Dozent",
+        "speaker": "Dozentin",
         "speaker_role": "dialogue_speaker",
-        "text": "Indoor-Farming, also Landwirtschaft in geschlossenen Gebäuden, wird an Bedeutung gewinnen."
+        "text": "Dieses Phänomen nennt man Erste-Nacht-Effekt. Deshalb genügt eine einzige Labornacht nicht für jede Forschungsfrage."
       },
       {
-        "speaker": "Dozent",
+        "speaker": "Dozentin",
         "speaker_role": "dialogue_speaker",
-        "text": "In Japan und Singapur produzieren vertikale Farmen bereits Salate und Kräuter mitten in der Stadt."
+        "text": "Eine zweite Methode ist das Schlaftagebuch. Versuchspersonen notieren über längere Zeit Bettzeiten, Wachphasen und ihr Befinden am Tag."
       },
       {
-        "speaker": "Dozent",
+        "speaker": "Dozentin",
         "speaker_role": "dialogue_speaker",
-        "text": "Diese Farmen verbrauchen neunzig Prozent weniger Wasser und benötigen keine Pestizide."
+        "text": "Solche Angaben sind subjektiv, liefern aber Informationen über Gewohnheiten und Wahrnehmungen, die Sensoren allein nicht erfassen."
       },
       {
-        "speaker": "Dozent",
+        "speaker": "Dozentin",
         "speaker_role": "dialogue_speaker",
-        "text": "Gleichzeitig können sie ganzjährig produzieren, unabhängig von Wetter und Jahreszeiten."
+        "text": "Zwischen objektiven Messwerten und persönlicher Einschätzung kann es durchaus Unterschiede geben."
       },
       {
-        "speaker": "Dozent",
+        "speaker": "Dozentin",
         "speaker_role": "dialogue_speaker",
-        "text": "Der dritte Trend ist die Neuerfindung traditioneller Lebensmittel durch innovative Fermentation."
+        "text": "Manche Personen schätzen ihre Wachzeit länger ein, andere bemerken kurze Unterbrechungen ihres Schlafs kaum."
       },
       {
-        "speaker": "Dozent",
+        "speaker": "Dozentin",
         "speaker_role": "dialogue_speaker",
-        "text": "Fermentierte Lebensmittel wie Kimchi, Kombucha und Tempeh sind nicht nur trendig, sondern auch wissenschaftlich validiert."
+        "text": "Für Untersuchungen im Alltag wird oft ein Bewegungssensor am Handgelenk eingesetzt. Dieses Verfahren heißt Aktigrafie."
       },
       {
-        "speaker": "Dozent",
+        "speaker": "Dozentin",
         "speaker_role": "dialogue_speaker",
-        "text": "Sie unterstützen die Darmgesundheit und können chronische Entzündungen im Körper reduzieren."
+        "text": "Die Aktigrafie kann über viele Nächte Hinweise auf Ruhe- und Aktivitätszeiten geben, bestimmt Schlafphasen aber weniger genau als ein Schlaflabor."
       },
       {
-        "speaker": "Dozent",
+        "speaker": "Dozentin",
         "speaker_role": "dialogue_speaker",
-        "text": "Interessanterweise greifen moderne Technologien auf uraltes Wissen zurück und optimieren es."
+        "text": "Ebenso wichtig wie das Messinstrument ist der Aufbau einer Studie."
       },
       {
-        "speaker": "Dozent",
+        "speaker": "Dozentin",
         "speaker_role": "dialogue_speaker",
-        "text": "Lassen Sie mich nun auf die wirtschaftlichen Dimensionen dieser Transformation eingehen."
+        "text": "Eine Querschnittsstudie vergleicht verschiedene Gruppen zu einem bestimmten Zeitpunkt. Sie ist relativ schnell, zeigt aber keine Entwicklung."
       },
       {
-        "speaker": "Dozent",
+        "speaker": "Dozentin",
         "speaker_role": "dialogue_speaker",
-        "text": "Der globale Markt für alternative Proteine wird bis zweitausenddreißig auf über dreihundert Milliarden Euro geschätzt."
+        "text": "Eine Längsschnittstudie begleitet dagegen dieselben Personen über Monate oder Jahre und kann Veränderungen sichtbar machen."
       },
       {
-        "speaker": "Dozent",
+        "speaker": "Dozentin",
         "speaker_role": "dialogue_speaker",
-        "text": "Investoren und Start-ups drängen massiv in diesen Sektor und treiben die Innovation voran."
+        "text": "Auch dann ist Vorsicht bei der Interpretation nötig. Wenn zwei Merkmale gemeinsam auftreten, ist damit noch keine Ursache bewiesen."
       },
       {
-        "speaker": "Dozent",
+        "speaker": "Dozentin",
         "speaker_role": "dialogue_speaker",
-        "text": "Deutschland hat mit seiner starken Lebensmittelindustrie eine ausgezeichnete Ausgangsposition."
+        "text": "Wer beispielsweise schlecht schläft und viel Kaffee trinkt, kann wegen des Kaffees schlecht schlafen, wegen der Müdigkeit mehr Kaffee trinken oder von einem dritten Faktor beeinflusst werden."
       },
       {
-        "speaker": "Dozent",
+        "speaker": "Dozentin",
         "speaker_role": "dialogue_speaker",
-        "text": "Allerdings muss die Politik die regulatorischen Rahmenbedingungen schneller an die neuen Technologien anpassen."
+        "text": "Ein weiteres Problem ist die Auswahl der Teilnehmenden."
       },
       {
-        "speaker": "Dozent",
+        "speaker": "Dozentin",
         "speaker_role": "dialogue_speaker",
-        "text": "Die Zulassung neuer Lebensmittel in der EU dauert durchschnittlich achtzehn Monate, das ist zu lang."
+        "text": "Melden sich nur besonders gesundheitsbewusste Freiwillige, lassen sich die Ergebnisse nicht ohne Weiteres auf die gesamte Bevölkerung übertragen."
       },
       {
-        "speaker": "Dozent",
+        "speaker": "Dozentin",
         "speaker_role": "dialogue_speaker",
-        "text": "Abschließend möchte ich betonen, dass technologische Innovation allein nicht ausreicht."
+        "text": "Ähnliche Grenzen gelten für kommerzielle Schlafuhren. Sie können persönliche Trends zeigen, ersetzen aber keine wissenschaftliche oder medizinische Untersuchung."
       },
       {
-        "speaker": "Dozent",
+        "speaker": "Dozentin",
         "speaker_role": "dialogue_speaker",
-        "text": "Wir brauchen auch einen kulturellen Wandel in unserem Verhältnis zum Essen."
+        "text": "Gute Schlafforschung verbindet deshalb Labordaten, Alltagsmessungen, Befragungen und einen sorgfältigen Studienaufbau."
       },
       {
-        "speaker": "Dozent",
+        "speaker": "Dozentin",
         "speaker_role": "dialogue_speaker",
-        "text": "Essen ist mehr als Nahrungsaufnahme: Es ist Kultur, Identität und soziales Erlebnis."
+        "text": "Entscheidend ist nicht, welche Methode moderner wirkt, sondern ob sie zur konkreten Forschungsfrage passt."
       },
       {
-        "speaker": "Dozent",
+        "speaker": "Dozentin",
         "speaker_role": "dialogue_speaker",
-        "text": "Die Herausforderung besteht darin, Innovation und Tradition in Einklang zu bringen."
+        "text": "So entstehen belastbare Aussagen: nicht durch eine spektakuläre Einzelzahl, sondern durch mehrere passende Belege."
       },
       {
-        "speaker": "Dozent",
+        "speaker": "Dozentin",
         "speaker_role": "dialogue_speaker",
-        "text": "Vielen Dank für Ihre Aufmerksamkeit! Ich stehe für Fragen zur Verfügung."
+        "text": "Vielen Dank für Ihre Aufmerksamkeit."
       },
       {
         "speaker": "Narrator",
         "speaker_role": "exam_narrator",
         "text": "Ende des Hörverstehens."
       }
-    ]
+    ],
+    "audio_restub": "pending"
   },
   "cefrAudit": {
     "targetLevel": "B2",
     "verdict": "aligned",
-    "reviewerRole": "German Academic Lead",
-    "notes": "Release-candidate metadata audit: listening content for \"Schlafforschung und Gesundheit\" is aligned with declared B2 scope pending final human spot-check.",
+    "reviewerRole": "German Academic Lead (AI/Kiro)",
+    "notes": "Regenerated listening transcript + questions, signed off by AI German Academic Lead (Kiro); MP3 pending re-record (Audio_Restubbing); pending native-speaker spot-check.",
     "reviewedAt": "2026-05-12",
     "reviewScope": "release_candidate_metadata_pass"
   },
