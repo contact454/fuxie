@@ -8,6 +8,13 @@ const AUTO_REVIEW = 'auto_generated_needs_spot_check'
 const LEXICON_REVIEW = 'lexicon_aligned_needs_native_signoff'
 const CORPUS_REVIEW = 'corpus_canonicalized_needs_native_signoff'
 const REGULAR_RULE_REVIEW = 'regular_rule_needs_native_signoff'
+const DUDEN_ALIGNED_REVIEW = 'duden_aligned_needs_native_signoff'
+const DUDEN_PLURALWORD_REVIEW = 'duden_pluralword_needs_native_signoff'
+const DUDEN_COMPOUND_PLURALWORD_REVIEW = 'duden_compound_pluralword_needs_native_signoff'
+const DUDEN_COMPOUND_HEADWORD_REVIEW = 'duden_compound_headword_needs_native_signoff'
+const DUDEN_COMPOUND_HEADWORD_SINGULAR_ONLY_REVIEW = 'duden_compound_headword_singular_only_needs_native_signoff'
+const DUDEN_SINGULAR_ONLY_REVIEW = 'duden_singular_only_needs_native_signoff'
+const DUDEN_SENSE_SINGULAR_ONLY_REVIEW = 'duden_sense_singular_only_needs_native_signoff'
 const UNSAFE_REGULAR_BASES = new Set(['entbergen'])
 const SEPARABLE_PREFIXES = [
   'auseinander',
@@ -109,6 +116,2074 @@ const KNOWN_CONTENT_FIXES: Record<string, Partial<VocabularyWord>> = {
   },
   'content/b1/vocabulary/32-handwerk-reparatur.json::Säge': {
     meaningDe: 'Ein Werkzeug mit gezahntem Blatt zum Schneiden von Holz oder Metall.',
+  },
+  'content/c1/vocabulary/01-gesellschaftskritik-diskurs.json::Meinungsbildung': {
+    plural: 'die Meinungsbildungen',
+    pluralStatus: DUDEN_ALIGNED_REVIEW,
+  },
+  'content/c1/vocabulary/01-gesellschaftskritik-diskurs.json::Legitimität': {
+    plural: '-',
+    pluralStatus: DUDEN_SINGULAR_ONLY_REVIEW,
+  },
+  'content/c1/vocabulary/03-bioethik-gentechnik.json::Dignität': {
+    plural: '-',
+    pluralStatus: DUDEN_SENSE_SINGULAR_ONLY_REVIEW,
+  },
+  'content/c1/vocabulary/03-bioethik-gentechnik.json::Eugenik': {
+    plural: '-',
+    pluralStatus: DUDEN_SINGULAR_ONLY_REVIEW,
+  },
+  'content/c1/vocabulary/03-bioethik-gentechnik.json::Autonomie': {
+    plural: 'die Autonomien',
+    pluralStatus: DUDEN_ALIGNED_REVIEW,
+  },
+  'content/c1/vocabulary/03-bioethik-gentechnik.json::Reproduktionsmedizin': {
+    plural: 'die Reproduktionsmedizinen',
+    pluralStatus: DUDEN_ALIGNED_REVIEW,
+  },
+  'content/c1/vocabulary/03-bioethik-gentechnik.json::Vererbung': {
+    plural: 'die Vererbungen',
+    pluralStatus: DUDEN_ALIGNED_REVIEW,
+  },
+  'content/c1/vocabulary/03-bioethik-gentechnik.json::Ethos': {
+    plural: '-',
+    pluralStatus: DUDEN_SINGULAR_ONLY_REVIEW,
+  },
+  'content/c1/vocabulary/04-urbanisierung-raumplanung.json::Daseinsvorsorge': {
+    plural: '-',
+    pluralStatus: DUDEN_SINGULAR_ONLY_REVIEW,
+  },
+  'content/c1/vocabulary/04-urbanisierung-raumplanung.json::Ressourcenschonung': {
+    plural: '-',
+    pluralStatus: DUDEN_SINGULAR_ONLY_REVIEW,
+  },
+  'content/c1/vocabulary/04-urbanisierung-raumplanung.json::Landflucht': {
+    plural: 'die Landfluchten',
+    pluralStatus: DUDEN_ALIGNED_REVIEW,
+  },
+  'content/c1/vocabulary/04-urbanisierung-raumplanung.json::Partizipation': {
+    plural: 'die Partizipationen',
+    pluralStatus: DUDEN_ALIGNED_REVIEW,
+  },
+  'content/c1/vocabulary/04-urbanisierung-raumplanung.json::urbane Resilienz': {
+    plural: 'die urbanen Resilienzen',
+    pluralStatus: DUDEN_COMPOUND_HEADWORD_REVIEW,
+  },
+  'content/c1/vocabulary/04-urbanisierung-raumplanung.json::demografischer Wandel': {
+    plural: '-',
+    pluralStatus: DUDEN_COMPOUND_HEADWORD_SINGULAR_ONLY_REVIEW,
+  },
+  'content/c1/vocabulary/05-klimapolitik-nachhaltigkeit.json::Eindämmung': {
+    plural: 'die Eindämmungen',
+    pluralStatus: DUDEN_ALIGNED_REVIEW,
+  },
+  'content/c1/vocabulary/05-klimapolitik-nachhaltigkeit.json::Klimaneutralität': {
+    plural: '-',
+    pluralStatus: DUDEN_SINGULAR_ONLY_REVIEW,
+  },
+  'content/c1/vocabulary/05-klimapolitik-nachhaltigkeit.json::Biodiversität': {
+    plural: 'die Biodiversitäten',
+    pluralStatus: DUDEN_ALIGNED_REVIEW,
+  },
+  'content/c1/vocabulary/05-klimapolitik-nachhaltigkeit.json::Ressourcenknappheit': {
+    plural: '-',
+    pluralStatus: DUDEN_COMPOUND_HEADWORD_SINGULAR_ONLY_REVIEW,
+  },
+  'content/c1/vocabulary/06-sprachwissenschaft-linguistik.json::Sprachwandel': {
+    plural: '-',
+    pluralStatus: DUDEN_SINGULAR_ONLY_REVIEW,
+  },
+  'content/c1/vocabulary/06-sprachwissenschaft-linguistik.json::Sprachgebrauch': {
+    plural: '-',
+    pluralStatus: DUDEN_SINGULAR_ONLY_REVIEW,
+  },
+  'content/c1/vocabulary/06-sprachwissenschaft-linguistik.json::Mehrsprachigkeit': {
+    plural: '-',
+    pluralStatus: DUDEN_SINGULAR_ONLY_REVIEW,
+  },
+  'content/c1/vocabulary/10-arbeitsrecht-sozialpartnerschaft.json::Fürsorgepflicht': {
+    plural: 'die Fürsorgepflichten',
+    pluralStatus: DUDEN_ALIGNED_REVIEW,
+  },
+  'content/c1/vocabulary/10-arbeitsrecht-sozialpartnerschaft.json::Tarifautonomie': {
+    plural: 'die Tarifautonomien',
+    pluralStatus: DUDEN_ALIGNED_REVIEW,
+  },
+  'content/c1/vocabulary/10-arbeitsrecht-sozialpartnerschaft.json::Mitbestimmung': {
+    plural: 'die Mitbestimmungen',
+    pluralStatus: DUDEN_ALIGNED_REVIEW,
+  },
+  'content/c1/vocabulary/12-medientheorie-propaganda.json::Glaubwürdigkeit': {
+    plural: '-',
+    pluralStatus: DUDEN_SINGULAR_ONLY_REVIEW,
+  },
+  'content/c1/vocabulary/12-medientheorie-propaganda.json::Deutungshoheit': {
+    plural: '-',
+    pluralStatus: DUDEN_SINGULAR_ONLY_REVIEW,
+  },
+  'content/c1/vocabulary/18-finanzmaerkte-regulierung.json::Systemrelevanz': {
+    plural: '-',
+    pluralStatus: DUDEN_SINGULAR_ONLY_REVIEW,
+  },
+  'content/c1/vocabulary/18-finanzmaerkte-regulierung.json::Rechnungslegung': {
+    plural: 'die Rechnungslegungen',
+    pluralStatus: DUDEN_ALIGNED_REVIEW,
+  },
+  'content/c1/vocabulary/18-finanzmaerkte-regulierung.json::Kapitalflucht': {
+    plural: 'die Kapitalfluchten',
+    pluralStatus: DUDEN_ALIGNED_REVIEW,
+  },
+  'content/c1/vocabulary/18-finanzmaerkte-regulierung.json::Compliance': {
+    plural: '-',
+    pluralStatus: DUDEN_SINGULAR_ONLY_REVIEW,
+  },
+  'content/c1/vocabulary/19-verkehrswende-infrastruktur.json::Klimaneutralität': {
+    plural: '-',
+    pluralStatus: DUDEN_SINGULAR_ONLY_REVIEW,
+  },
+  'content/c1/vocabulary/19-verkehrswende-infrastruktur.json::Akzeptanz': {
+    plural: 'die Akzeptanzen',
+    pluralStatus: DUDEN_ALIGNED_REVIEW,
+  },
+  'content/c1/vocabulary/20-energiepolitik-ressourcen.json::Nachhaltigkeit': {
+    plural: '-',
+    pluralStatus: DUDEN_SINGULAR_ONLY_REVIEW,
+  },
+  'content/c1/vocabulary/20-energiepolitik-ressourcen.json::Emissionshandel': {
+    plural: '-',
+    pluralStatus: DUDEN_SINGULAR_ONLY_REVIEW,
+  },
+  'content/c1/vocabulary/20-energiepolitik-ressourcen.json::Klimaneutralität': {
+    plural: '-',
+    pluralStatus: DUDEN_SINGULAR_ONLY_REVIEW,
+  },
+  'content/c1/vocabulary/20-energiepolitik-ressourcen.json::Netzausbau': {
+    plural: '-',
+    pluralStatus: DUDEN_COMPOUND_HEADWORD_SINGULAR_ONLY_REVIEW,
+  },
+  'content/c1/vocabulary/20-energiepolitik-ressourcen.json::Infrastrukturausbau': {
+    plural: '-',
+    pluralStatus: DUDEN_COMPOUND_HEADWORD_SINGULAR_ONLY_REVIEW,
+  },
+  'content/c1/vocabulary/21-voelkerrecht-souveraenitaet.json::Völkerrecht': {
+    plural: '-',
+    pluralStatus: DUDEN_SINGULAR_ONLY_REVIEW,
+  },
+  'content/c1/vocabulary/21-voelkerrecht-souveraenitaet.json::Rechenschaftspflicht': {
+    plural: 'die Rechenschaftspflichten',
+    pluralStatus: DUDEN_ALIGNED_REVIEW,
+  },
+  'content/c1/vocabulary/21-voelkerrecht-souveraenitaet.json::Exterritorialität': {
+    plural: '-',
+    pluralStatus: DUDEN_SINGULAR_ONLY_REVIEW,
+  },
+  'content/c1/vocabulary/21-voelkerrecht-souveraenitaet.json::Selbstbestimmung': {
+    plural: '-',
+    pluralStatus: DUDEN_SENSE_SINGULAR_ONLY_REVIEW,
+  },
+  'content/c1/vocabulary/21-voelkerrecht-souveraenitaet.json::Präzedenzfallwirkung': {
+    plural: 'die Präzedenzfallwirkungen',
+    pluralStatus: DUDEN_COMPOUND_HEADWORD_REVIEW,
+  },
+  'content/c1/vocabulary/22-verwaltungsrecht-behörden.json::Subsidiarität': {
+    plural: 'die Subsidiaritäten',
+    pluralStatus: DUDEN_ALIGNED_REVIEW,
+  },
+  'content/c1/vocabulary/22-verwaltungsrecht-behörden.json::Amtshilfe': {
+    plural: 'die Amtshilfen',
+    pluralStatus: DUDEN_ALIGNED_REVIEW,
+  },
+  'content/c1/vocabulary/22-verwaltungsrecht-behörden.json::Verhältnismäßigkeit': {
+    plural: 'die Verhältnismäßigkeiten',
+    pluralStatus: DUDEN_ALIGNED_REVIEW,
+  },
+  'content/c1/vocabulary/22-verwaltungsrecht-behörden.json::Exekutive': {
+    plural: 'die Exekutiven',
+    pluralStatus: DUDEN_ALIGNED_REVIEW,
+  },
+  'content/c1/vocabulary/22-verwaltungsrecht-behörden.json::Sachverhaltsaufklärung': {
+    plural: 'die Sachverhaltsaufklärungen',
+    pluralStatus: DUDEN_COMPOUND_HEADWORD_REVIEW,
+  },
+  'content/c1/vocabulary/22-verwaltungsrecht-behörden.json::Aktenführung': {
+    plural: '-',
+    pluralStatus: DUDEN_COMPOUND_HEADWORD_SINGULAR_ONLY_REVIEW,
+  },
+  'content/c1/vocabulary/23-grundrechte-verfassung.json::Rechtsstaatlichkeit': {
+    plural: '-',
+    pluralStatus: DUDEN_SINGULAR_ONLY_REVIEW,
+  },
+  'content/c1/vocabulary/23-grundrechte-verfassung.json::Gewaltenteilung': {
+    plural: '-',
+    pluralStatus: DUDEN_SINGULAR_ONLY_REVIEW,
+  },
+  'content/c1/vocabulary/23-grundrechte-verfassung.json::Souveränität': {
+    plural: 'die Souveränitäten',
+    pluralStatus: DUDEN_ALIGNED_REVIEW,
+  },
+  'content/c1/vocabulary/23-grundrechte-verfassung.json::Inkrafttreten': {
+    plural: '-',
+    pluralStatus: DUDEN_SINGULAR_ONLY_REVIEW,
+  },
+  'content/c1/vocabulary/23-grundrechte-verfassung.json::Würde': {
+    plural: '-',
+    pluralStatus: DUDEN_SENSE_SINGULAR_ONLY_REVIEW,
+  },
+  'content/c1/vocabulary/24-justizwesen-strafvollzug.json::Strafverfolgung': {
+    plural: 'die Strafverfolgungen',
+    pluralStatus: DUDEN_ALIGNED_REVIEW,
+  },
+  'content/c1/vocabulary/24-justizwesen-strafvollzug.json::Jurisprudenz': {
+    plural: '-',
+    pluralStatus: DUDEN_SINGULAR_ONLY_REVIEW,
+  },
+  'content/c1/vocabulary/24-justizwesen-strafvollzug.json::Kriminalität': {
+    plural: '-',
+    pluralStatus: DUDEN_SINGULAR_ONLY_REVIEW,
+  },
+  'content/c1/vocabulary/24-justizwesen-strafvollzug.json::Resozialisierung': {
+    plural: 'die Resozialisierungen',
+    pluralStatus: DUDEN_ALIGNED_REVIEW,
+  },
+  'content/c1/vocabulary/24-justizwesen-strafvollzug.json::Strafvollzug': {
+    plural: '-',
+    pluralStatus: DUDEN_SINGULAR_ONLY_REVIEW,
+  },
+  'content/c1/vocabulary/24-justizwesen-strafvollzug.json::Strafmündigkeit': {
+    plural: '-',
+    pluralStatus: DUDEN_COMPOUND_HEADWORD_SINGULAR_ONLY_REVIEW,
+  },
+  'content/c1/vocabulary/25-geldpolitik-zentralbank.json::Fiskalpolitik': {
+    plural: 'die Fiskalpolitiken',
+    pluralStatus: DUDEN_ALIGNED_REVIEW,
+  },
+  'content/c1/vocabulary/25-geldpolitik-zentralbank.json::Kapitalflucht': {
+    plural: 'die Kapitalfluchten',
+    pluralStatus: DUDEN_ALIGNED_REVIEW,
+  },
+  'content/c1/vocabulary/25-geldpolitik-zentralbank.json::Kaufkraft': {
+    plural: 'die Kaufkräfte',
+    pluralStatus: DUDEN_ALIGNED_REVIEW,
+  },
+  'content/c1/vocabulary/26-handelsabkommen-zoll.json::Inkrafttreten': {
+    plural: '-',
+    pluralStatus: DUDEN_SINGULAR_ONLY_REVIEW,
+  },
+  'content/c1/vocabulary/26-handelsabkommen-zoll.json::Protektionismus': {
+    plural: '-',
+    pluralStatus: DUDEN_SINGULAR_ONLY_REVIEW,
+  },
+  'content/c1/vocabulary/27-konjunktur-wirtschaftskrise.json::Protektionismus': {
+    plural: '-',
+    pluralStatus: DUDEN_SINGULAR_ONLY_REVIEW,
+  },
+  'content/c1/vocabulary/28-steuerpolitik-haushalt.json::Fiskalpolitik': {
+    plural: 'die Fiskalpolitiken',
+    pluralStatus: DUDEN_ALIGNED_REVIEW,
+  },
+  'content/c1/vocabulary/28-steuerpolitik-haushalt.json::Fiskus': {
+    plural: 'die Fisken',
+    pluralStatus: DUDEN_ALIGNED_REVIEW,
+  },
+  'content/c1/vocabulary/28-steuerpolitik-haushalt.json::Steueraufkommen': {
+    plural: 'die Steueraufkommen',
+    pluralStatus: DUDEN_ALIGNED_REVIEW,
+  },
+  'content/c1/vocabulary/28-steuerpolitik-haushalt.json::Staatsverschuldung': {
+    plural: 'die Staatsverschuldungen',
+    pluralStatus: DUDEN_ALIGNED_REVIEW,
+  },
+  'content/c1/vocabulary/28-steuerpolitik-haushalt.json::Neuverschuldung': {
+    plural: 'die Neuverschuldungen',
+    pluralStatus: DUDEN_ALIGNED_REVIEW,
+  },
+  'content/c1/vocabulary/28-steuerpolitik-haushalt.json::Steuerhinterziehung': {
+    plural: 'die Steuerhinterziehungen',
+    pluralStatus: DUDEN_ALIGNED_REVIEW,
+  },
+  'content/c1/vocabulary/28-steuerpolitik-haushalt.json::Abgabenlast': {
+    plural: 'die Abgabenlasten',
+    pluralStatus: DUDEN_COMPOUND_HEADWORD_REVIEW,
+  },
+  'content/c1/vocabulary/29-quantenphysik-grundlagen.json::Kausalität': {
+    plural: 'die Kausalitäten',
+    pluralStatus: DUDEN_ALIGNED_REVIEW,
+  },
+  'content/c1/vocabulary/29-quantenphysik-grundlagen.json::Welle-Teilchen-Dualismus': {
+    plural: 'die Welle-Teilchen-Dualismen',
+    pluralStatus: DUDEN_COMPOUND_HEADWORD_REVIEW,
+  },
+  'content/c1/vocabulary/30-genetik-evolution.json::Epigenetik': {
+    plural: '-',
+    pluralStatus: DUDEN_SINGULAR_ONLY_REVIEW,
+  },
+  'content/c1/vocabulary/30-genetik-evolution.json::Phylogenese': {
+    plural: 'die Phylogenesen',
+    pluralStatus: DUDEN_ALIGNED_REVIEW,
+  },
+  'content/c1/vocabulary/32-klimaforschung-modellierung.json::Sensitivität': {
+    plural: 'die Sensitivitäten',
+    pluralStatus: DUDEN_ALIGNED_REVIEW,
+  },
+  'content/c1/vocabulary/32-klimaforschung-modellierung.json::Interdependenz': {
+    plural: 'die Interdependenzen',
+    pluralStatus: DUDEN_ALIGNED_REVIEW,
+  },
+  'content/c1/vocabulary/32-klimaforschung-modellierung.json::Resilienz': {
+    plural: 'die Resilienzen',
+    pluralStatus: DUDEN_ALIGNED_REVIEW,
+  },
+  'content/c1/vocabulary/32-klimaforschung-modellierung.json::Evidenz': {
+    plural: 'die Evidenzen',
+    pluralStatus: DUDEN_ALIGNED_REVIEW,
+  },
+  'content/c1/vocabulary/34-geschlechtergerechtigkeit.json::Vereinbarkeit': {
+    plural: 'die Vereinbarkeiten',
+    pluralStatus: DUDEN_ALIGNED_REVIEW,
+  },
+  'content/c1/vocabulary/34-geschlechtergerechtigkeit.json::Selbstbestimmung': {
+    plural: '-',
+    pluralStatus: DUDEN_SENSE_SINGULAR_ONLY_REVIEW,
+  },
+  'content/c1/vocabulary/34-geschlechtergerechtigkeit.json::Patriarchat': {
+    plural: 'die Patriarchate',
+    pluralStatus: DUDEN_ALIGNED_REVIEW,
+  },
+  'content/c1/vocabulary/34-geschlechtergerechtigkeit.json::Intersektionalität': {
+    plural: '-',
+    pluralStatus: DUDEN_SINGULAR_ONLY_REVIEW,
+  },
+  'content/c1/vocabulary/34-geschlechtergerechtigkeit.json::Chancengleichheit': {
+    plural: '-',
+    pluralStatus: DUDEN_SINGULAR_ONLY_REVIEW,
+  },
+  'content/c1/vocabulary/35-urbanisierung-smart-city.json::Nachhaltigkeit': {
+    plural: '-',
+    pluralStatus: DUDEN_SINGULAR_ONLY_REVIEW,
+  },
+  'content/c1/vocabulary/35-urbanisierung-smart-city.json::Resilienz': {
+    plural: 'die Resilienzen',
+    pluralStatus: DUDEN_ALIGNED_REVIEW,
+  },
+  'content/c1/vocabulary/35-urbanisierung-smart-city.json::Daseinsvorsorge': {
+    plural: '-',
+    pluralStatus: DUDEN_SINGULAR_ONLY_REVIEW,
+  },
+  'content/c1/vocabulary/35-urbanisierung-smart-city.json::Intermodalität': {
+    plural: '-',
+    pluralStatus: DUDEN_SINGULAR_ONLY_REVIEW,
+  },
+  'content/c1/vocabulary/35-urbanisierung-smart-city.json::Konnektivität': {
+    plural: 'die Konnektivitäten',
+    pluralStatus: DUDEN_ALIGNED_REVIEW,
+  },
+  'content/c1/vocabulary/36-generationenkonflikt.json::Resilienz': {
+    plural: 'die Resilienzen',
+    pluralStatus: DUDEN_ALIGNED_REVIEW,
+  },
+  'content/c1/vocabulary/36-generationenkonflikt.json::Agilität': {
+    plural: '-',
+    pluralStatus: DUDEN_SINGULAR_ONLY_REVIEW,
+  },
+  'content/c1/vocabulary/36-generationenkonflikt.json::Demografie': {
+    plural: 'die Demografien',
+    pluralStatus: DUDEN_ALIGNED_REVIEW,
+  },
+  'content/c1/vocabulary/38-pressefreiheit-zensur.json::Transparenz': {
+    plural: 'die Transparenzen',
+    pluralStatus: DUDEN_ALIGNED_REVIEW,
+  },
+  'content/c1/vocabulary/39-algorithmen-filterblasen.json::Transparenz': {
+    plural: 'die Transparenzen',
+    pluralStatus: DUDEN_ALIGNED_REVIEW,
+  },
+  'content/c1/vocabulary/39-algorithmen-filterblasen.json::Mündigkeit': {
+    plural: '-',
+    pluralStatus: DUDEN_SINGULAR_ONLY_REVIEW,
+  },
+  'content/c1/vocabulary/39-algorithmen-filterblasen.json::Nachvollziehbarkeit': {
+    plural: '-',
+    pluralStatus: DUDEN_SINGULAR_ONLY_REVIEW,
+  },
+  'content/c1/vocabulary/41-entwicklungspsychologie.json::Resilienz': {
+    plural: 'die Resilienzen',
+    pluralStatus: DUDEN_ALIGNED_REVIEW,
+  },
+  'content/c1/vocabulary/41-entwicklungspsychologie.json::Urvertrauen': {
+    plural: '-',
+    pluralStatus: DUDEN_SINGULAR_ONLY_REVIEW,
+  },
+  'content/c1/vocabulary/41-entwicklungspsychologie.json::Objektpermanenz': {
+    plural: '-',
+    pluralStatus: DUDEN_COMPOUND_HEADWORD_SINGULAR_ONLY_REVIEW,
+  },
+  'content/c1/vocabulary/11-literaturkritik-textanalyse.json::Hermeneutik': {
+    plural: '-',
+    pluralStatus: DUDEN_SINGULAR_ONLY_REVIEW,
+  },
+  'content/c1/vocabulary/44-biotechnologie-pharma.json::Bioethik': {
+    plural: 'die Bioethiken',
+    pluralStatus: DUDEN_ALIGNED_REVIEW,
+  },
+  'content/c1/vocabulary/44-biotechnologie-pharma.json::Biokompatibilität': {
+    plural: '-',
+    pluralStatus: DUDEN_SINGULAR_ONLY_REVIEW,
+  },
+  'content/c1/vocabulary/45-nanotechnologie.json::Haptik': {
+    plural: '-',
+    pluralStatus: DUDEN_SINGULAR_ONLY_REVIEW,
+  },
+  'content/c1/vocabulary/45-nanotechnologie.json::Adhäsion': {
+    plural: 'die Adhäsionen',
+    pluralStatus: DUDEN_ALIGNED_REVIEW,
+  },
+  'content/c1/vocabulary/46-wirtschaftsethik.json::Rechenschaftspflicht': {
+    plural: 'die Rechenschaftspflichten',
+    pluralStatus: DUDEN_ALIGNED_REVIEW,
+  },
+  'content/c1/vocabulary/46-wirtschaftsethik.json::Gemeinwohl': {
+    plural: '-',
+    pluralStatus: DUDEN_SINGULAR_ONLY_REVIEW,
+  },
+  'content/c1/vocabulary/46-wirtschaftsethik.json::Integrität': {
+    plural: '-',
+    pluralStatus: DUDEN_SINGULAR_ONLY_REVIEW,
+  },
+  'content/c1/vocabulary/46-wirtschaftsethik.json::Glaubwürdigkeit': {
+    plural: '-',
+    pluralStatus: DUDEN_SINGULAR_ONLY_REVIEW,
+  },
+  'content/c1/vocabulary/46-wirtschaftsethik.json::Verhältnismäßigkeit': {
+    plural: 'die Verhältnismäßigkeiten',
+    pluralStatus: DUDEN_ALIGNED_REVIEW,
+  },
+  'content/c1/vocabulary/47-medizinethik-patientenrecht.json::Fürsorgepflicht': {
+    plural: 'die Fürsorgepflichten',
+    pluralStatus: DUDEN_ALIGNED_REVIEW,
+  },
+  'content/c1/vocabulary/47-medizinethik-patientenrecht.json::Verhältnismäßigkeit': {
+    plural: 'die Verhältnismäßigkeiten',
+    pluralStatus: DUDEN_ALIGNED_REVIEW,
+  },
+  'content/c1/vocabulary/47-medizinethik-patientenrecht.json::Menschenwürde': {
+    plural: '-',
+    pluralStatus: DUDEN_SINGULAR_ONLY_REVIEW,
+  },
+  'content/c1/vocabulary/47-medizinethik-patientenrecht.json::Selbstbestimmung': {
+    plural: '-',
+    pluralStatus: DUDEN_SENSE_SINGULAR_ONLY_REVIEW,
+  },
+  'content/c1/vocabulary/47-medizinethik-patientenrecht.json::Transparenz': {
+    plural: 'die Transparenzen',
+    pluralStatus: DUDEN_ALIGNED_REVIEW,
+  },
+  'content/c1/vocabulary/47-medizinethik-patientenrecht.json::Interdisziplinarität': {
+    plural: '-',
+    pluralStatus: DUDEN_SINGULAR_ONLY_REVIEW,
+  },
+  'content/c1/vocabulary/47-medizinethik-patientenrecht.json::Ressourcenallokation': {
+    plural: 'die Ressourcenallokationen',
+    pluralStatus: DUDEN_COMPOUND_HEADWORD_REVIEW,
+  },
+  'content/c1/vocabulary/47-medizinethik-patientenrecht.json::Schutzbedarf': {
+    plural: 'die Schutzbedarfe',
+    pluralStatus: DUDEN_COMPOUND_HEADWORD_REVIEW,
+  },
+  'content/c1/vocabulary/47-medizinethik-patientenrecht.json::Patientenwohl': {
+    plural: '-',
+    pluralStatus: DUDEN_COMPOUND_HEADWORD_SINGULAR_ONLY_REVIEW,
+  },
+  'content/c1/vocabulary/49-theaterwissenschaft.json::Hermeneutik': {
+    plural: '-',
+    pluralStatus: DUDEN_SINGULAR_ONLY_REVIEW,
+  },
+  'content/c1/vocabulary/49-theaterwissenschaft.json::Semiotik': {
+    plural: '-',
+    pluralStatus: DUDEN_SINGULAR_ONLY_REVIEW,
+  },
+  'content/c1/vocabulary/49-theaterwissenschaft.json::Mimesis': {
+    plural: 'die Mimesen',
+    pluralStatus: DUDEN_ALIGNED_REVIEW,
+  },
+  'content/c1/vocabulary/50-kunstgeschichte-epochen.json::Hermeneutik': {
+    plural: '-',
+    pluralStatus: DUDEN_SINGULAR_ONLY_REVIEW,
+  },
+  'content/c1/vocabulary/50-kunstgeschichte-epochen.json::Semiotik': {
+    plural: '-',
+    pluralStatus: DUDEN_SINGULAR_ONLY_REVIEW,
+  },
+  'content/c1/vocabulary/51-filmtheorie-analyse.json::Hermeneutik': {
+    plural: '-',
+    pluralStatus: DUDEN_SINGULAR_ONLY_REVIEW,
+  },
+  'content/c1/vocabulary/51-filmtheorie-analyse.json::Semiotik': {
+    plural: '-',
+    pluralStatus: DUDEN_SINGULAR_ONLY_REVIEW,
+  },
+  'content/c1/vocabulary/51-filmtheorie-analyse.json::Mimesis': {
+    plural: 'die Mimesen',
+    pluralStatus: DUDEN_ALIGNED_REVIEW,
+  },
+  'content/c1/vocabulary/51-filmtheorie-analyse.json::Ästhetik': {
+    plural: 'die Ästhetiken',
+    pluralStatus: DUDEN_ALIGNED_REVIEW,
+  },
+  'content/c1/vocabulary/51-filmtheorie-analyse.json::Kausalität': {
+    plural: 'die Kausalitäten',
+    pluralStatus: DUDEN_ALIGNED_REVIEW,
+  },
+  'content/c1/vocabulary/52-sicherheitspolitik-nato.json::Koexistenz': {
+    plural: '-',
+    pluralStatus: DUDEN_SINGULAR_ONLY_REVIEW,
+  },
+  'content/c1/vocabulary/52-sicherheitspolitik-nato.json::Resilienz': {
+    plural: 'die Resilienzen',
+    pluralStatus: DUDEN_ALIGNED_REVIEW,
+  },
+  'content/c1/vocabulary/52-sicherheitspolitik-nato.json::Rüstungskontrolle': {
+    plural: 'die Rüstungskontrollen',
+    pluralStatus: DUDEN_ALIGNED_REVIEW,
+  },
+  'content/c1/vocabulary/52-sicherheitspolitik-nato.json::Entspannungspolitik': {
+    plural: 'die Entspannungspolitiken',
+    pluralStatus: DUDEN_ALIGNED_REVIEW,
+  },
+  'content/c1/vocabulary/53-entwicklungshilfe-ngos.json::Nachhaltigkeit': {
+    plural: '-',
+    pluralStatus: DUDEN_SINGULAR_ONLY_REVIEW,
+  },
+  'content/c1/vocabulary/53-entwicklungshilfe-ngos.json::Resilienz': {
+    plural: 'die Resilienzen',
+    pluralStatus: DUDEN_ALIGNED_REVIEW,
+  },
+  'content/c1/vocabulary/53-entwicklungshilfe-ngos.json::Rechenschaftspflicht': {
+    plural: 'die Rechenschaftspflichten',
+    pluralStatus: DUDEN_ALIGNED_REVIEW,
+  },
+  'content/c1/vocabulary/53-entwicklungshilfe-ngos.json::Partizipation': {
+    plural: 'die Partizipationen',
+    pluralStatus: DUDEN_ALIGNED_REVIEW,
+  },
+  'content/c1/vocabulary/53-entwicklungshilfe-ngos.json::Expertise': {
+    plural: 'die Expertisen',
+    pluralStatus: DUDEN_ALIGNED_REVIEW,
+  },
+  'content/c1/vocabulary/53-entwicklungshilfe-ngos.json::Dezentralisierung': {
+    plural: 'die Dezentralisierungen',
+    pluralStatus: DUDEN_ALIGNED_REVIEW,
+  },
+  'content/c1/vocabulary/53-entwicklungshilfe-ngos.json::Marginalisierung': {
+    plural: 'die Marginalisierungen',
+    pluralStatus: DUDEN_ALIGNED_REVIEW,
+  },
+  'content/c1/vocabulary/53-entwicklungshilfe-ngos.json::Ressourcenallokation': {
+    plural: 'die Ressourcenallokationen',
+    pluralStatus: DUDEN_COMPOUND_HEADWORD_REVIEW,
+  },
+  'content/c1/vocabulary/56-psychosomatik.json::Compliance': {
+    plural: '-',
+    pluralStatus: DUDEN_SINGULAR_ONLY_REVIEW,
+  },
+  'content/c1/vocabulary/56-psychosomatik.json::Wohlbefinden': {
+    plural: '-',
+    pluralStatus: DUDEN_SINGULAR_ONLY_REVIEW,
+  },
+  'content/c1/vocabulary/56-psychosomatik.json::Achtsamkeit': {
+    plural: '-',
+    pluralStatus: DUDEN_SINGULAR_ONLY_REVIEW,
+  },
+  'content/c1/vocabulary/58-cybersicherheit-cyberkrieg.json::Resilienz': {
+    plural: 'die Resilienzen',
+    pluralStatus: DUDEN_ALIGNED_REVIEW,
+  },
+  'content/c1/vocabulary/58-cybersicherheit-cyberkrieg.json::Integrität': {
+    plural: '-',
+    pluralStatus: DUDEN_SINGULAR_ONLY_REVIEW,
+  },
+  'content/c1/vocabulary/58-cybersicherheit-cyberkrieg.json::Vertraulichkeit': {
+    plural: '-',
+    pluralStatus: DUDEN_SENSE_SINGULAR_ONLY_REVIEW,
+  },
+  'content/c1/vocabulary/58-cybersicherheit-cyberkrieg.json::Verfügbarkeit': {
+    plural: 'die Verfügbarkeiten',
+    pluralStatus: DUDEN_ALIGNED_REVIEW,
+  },
+  'content/c1/vocabulary/58-cybersicherheit-cyberkrieg.json::Zuschreibung': {
+    plural: 'die Zuschreibungen',
+    pluralStatus: DUDEN_ALIGNED_REVIEW,
+  },
+  'content/c1/vocabulary/58-cybersicherheit-cyberkrieg.json::Entschlüsselung': {
+    plural: 'die Entschlüsselungen',
+    pluralStatus: DUDEN_ALIGNED_REVIEW,
+  },
+  'content/c1/vocabulary/58-cybersicherheit-cyberkrieg.json::Detektion': {
+    plural: 'die Detektionen',
+    pluralStatus: DUDEN_ALIGNED_REVIEW,
+  },
+  'content/c1/vocabulary/61-forensik-kriminalistik.json::Ballistik': {
+    plural: '-',
+    pluralStatus: DUDEN_SINGULAR_ONLY_REVIEW,
+  },
+  'content/c1/vocabulary/61-forensik-kriminalistik.json::Toxikologie': {
+    plural: '-',
+    pluralStatus: DUDEN_SINGULAR_ONLY_REVIEW,
+  },
+  'content/c1/vocabulary/61-forensik-kriminalistik.json::Forensik': {
+    plural: '-',
+    pluralStatus: DUDEN_SENSE_SINGULAR_ONLY_REVIEW,
+  },
+  'content/c1/vocabulary/61-forensik-kriminalistik.json::Modus Operandi': {
+    plural: 'die Modi Operandi',
+    pluralStatus: DUDEN_ALIGNED_REVIEW,
+  },
+  'content/c1/vocabulary/61-forensik-kriminalistik.json::Viktimologie': {
+    plural: '-',
+    pluralStatus: DUDEN_SINGULAR_ONLY_REVIEW,
+  },
+  'content/c1/vocabulary/61-forensik-kriminalistik.json::Kriminaltechnik': {
+    plural: '-',
+    pluralStatus: DUDEN_SINGULAR_ONLY_REVIEW,
+  },
+  'content/c1/vocabulary/62-logistik-lieferkette.json::Resilienz': {
+    plural: 'die Resilienzen',
+    pluralStatus: DUDEN_ALIGNED_REVIEW,
+  },
+  'content/c1/vocabulary/63-musiktherapie.json::Partizipation': {
+    plural: 'die Partizipationen',
+    pluralStatus: DUDEN_ALIGNED_REVIEW,
+  },
+  'content/c1/vocabulary/63-musiktherapie.json::Achtsamkeit': {
+    plural: '-',
+    pluralStatus: DUDEN_SINGULAR_ONLY_REVIEW,
+  },
+  'content/c1/vocabulary/63-musiktherapie.json::Inklusion': {
+    plural: 'die Inklusionen',
+    pluralStatus: DUDEN_ALIGNED_REVIEW,
+  },
+  'content/c1/vocabulary/63-musiktherapie.json::Empathie': {
+    plural: 'die Empathien',
+    pluralStatus: DUDEN_ALIGNED_REVIEW,
+  },
+  'content/c1/vocabulary/63-musiktherapie.json::Sensorik': {
+    plural: '-',
+    pluralStatus: DUDEN_SINGULAR_ONLY_REVIEW,
+  },
+  'content/c1/vocabulary/63-musiktherapie.json::Selbstwirksamkeit': {
+    plural: '-',
+    pluralStatus: DUDEN_SINGULAR_ONLY_REVIEW,
+  },
+  'content/c1/vocabulary/63-musiktherapie.json::Heilpädagogik': {
+    plural: 'die Heilpädagogiken',
+    pluralStatus: DUDEN_ALIGNED_REVIEW,
+  },
+  'content/c1/vocabulary/65-lebensmittelrecht.json::Beweislast': {
+    plural: 'die Beweislasten',
+    pluralStatus: DUDEN_ALIGNED_REVIEW,
+  },
+  'content/c1/vocabulary/68-krisenmanagement.json::Daseinsvorsorge': {
+    plural: '-',
+    pluralStatus: DUDEN_SINGULAR_ONLY_REVIEW,
+  },
+  'content/c1/vocabulary/70-energiespeicherung.json::Dekarbonisierung': {
+    plural: '-',
+    pluralStatus: DUDEN_SENSE_SINGULAR_ONLY_REVIEW,
+  },
+  'content/c1/vocabulary/70-energiespeicherung.json::Power-to-X': {
+    plural: '-',
+    pluralStatus: REGULAR_RULE_REVIEW,
+  },
+  'content/c1/vocabulary/70-energiespeicherung.json::Kreislaufwirtschaft': {
+    plural: '-',
+    pluralStatus: REGULAR_RULE_REVIEW,
+  },
+  'content/c1/vocabulary/70-energiespeicherung.json::Kohlenstoffabscheidung': {
+    plural: '-',
+    pluralStatus: REGULAR_RULE_REVIEW,
+  },
+  'content/c1/vocabulary/70-energiespeicherung.json::Energiewende': {
+    plural: '-',
+    pluralStatus: REGULAR_RULE_REVIEW,
+  },
+  'content/c1/vocabulary/70-energiespeicherung.json::Rohstoffeffizienz': {
+    plural: '-',
+    pluralStatus: REGULAR_RULE_REVIEW,
+  },
+  'content/c1/vocabulary/70-energiespeicherung.json::Wasserstoffwirtschaft': {
+    plural: '-',
+    pluralStatus: REGULAR_RULE_REVIEW,
+  },
+  'content/c1/vocabulary/70-energiespeicherung.json::Netzstabilität': {
+    plural: '-',
+    pluralStatus: REGULAR_RULE_REVIEW,
+  },
+  'content/c1/vocabulary/70-energiespeicherung.json::Flüssigwasserstoff': {
+    plural: '-',
+    pluralStatus: REGULAR_RULE_REVIEW,
+  },
+  'content/c1/vocabulary/71-neuroplastizitaet.json::Konnektivität': {
+    plural: 'die Konnektivitäten',
+    pluralStatus: DUDEN_ALIGNED_REVIEW,
+  },
+  'content/c1/vocabulary/71-neuroplastizitaet.json::Resilienz': {
+    plural: 'die Resilienzen',
+    pluralStatus: DUDEN_ALIGNED_REVIEW,
+  },
+  'content/c1/vocabulary/72-verhaltensforschung.json::Empathie': {
+    plural: 'die Empathien',
+    pluralStatus: DUDEN_ALIGNED_REVIEW,
+  },
+  'content/c1/vocabulary/72-verhaltensforschung.json::Domestikation': {
+    plural: 'die Domestikationen',
+    pluralStatus: DUDEN_ALIGNED_REVIEW,
+  },
+  'content/c1/vocabulary/72-verhaltensforschung.json::Altruismus': {
+    plural: '-',
+    pluralStatus: DUDEN_SINGULAR_ONLY_REVIEW,
+  },
+  'content/c1/vocabulary/75-steuerberatung.json::Compliance': {
+    plural: '-',
+    pluralStatus: DUDEN_SINGULAR_ONLY_REVIEW,
+  },
+  'content/c2/vocabulary/01-epistemologie-wissenschaftstheorie.json::Hermeneutik': {
+    plural: '-',
+    pluralStatus: DUDEN_SINGULAR_ONLY_REVIEW,
+  },
+  'content/c2/vocabulary/01-epistemologie-wissenschaftstheorie.json::Plausibilität': {
+    plural: 'die Plausibilitäten',
+    pluralStatus: DUDEN_ALIGNED_REVIEW,
+  },
+  'content/c2/vocabulary/01-epistemologie-wissenschaftstheorie.json::Rekursivität': {
+    plural: '-',
+    pluralStatus: DUDEN_SINGULAR_ONLY_REVIEW,
+  },
+  'content/c2/vocabulary/01-epistemologie-wissenschaftstheorie.json::Inhärenz': {
+    plural: '-',
+    pluralStatus: DUDEN_SINGULAR_ONLY_REVIEW,
+  },
+  'content/c2/vocabulary/01-epistemologie-wissenschaftstheorie.json::Falsifizierbarkeit': {
+    plural: '-',
+    pluralStatus: DUDEN_SINGULAR_ONLY_REVIEW,
+  },
+  'content/c2/vocabulary/01-epistemologie-wissenschaftstheorie.json::Kohärenz': {
+    plural: '-',
+    pluralStatus: DUDEN_SINGULAR_ONLY_REVIEW,
+  },
+  'content/c2/vocabulary/02-rechtsphilosophie-justiz.json::Jurisprudenz': {
+    plural: '-',
+    pluralStatus: DUDEN_SINGULAR_ONLY_REVIEW,
+  },
+  'content/c2/vocabulary/02-rechtsphilosophie-justiz.json::Rechtspositivismus': {
+    plural: '-',
+    pluralStatus: DUDEN_SINGULAR_ONLY_REVIEW,
+  },
+  'content/c2/vocabulary/02-rechtsphilosophie-justiz.json::Normativität': {
+    plural: '-',
+    pluralStatus: DUDEN_SENSE_SINGULAR_ONLY_REVIEW,
+  },
+  'content/c2/vocabulary/04-literaturwissenschaft-hermeneutik.json::Mimesis': {
+    plural: 'die Mimesen',
+    pluralStatus: DUDEN_ALIGNED_REVIEW,
+  },
+  'content/c2/vocabulary/04-literaturwissenschaft-hermeneutik.json::Semiotik': {
+    plural: '-',
+    pluralStatus: DUDEN_SINGULAR_ONLY_REVIEW,
+  },
+  'content/c2/vocabulary/04-literaturwissenschaft-hermeneutik.json::Epistemologie': {
+    plural: '-',
+    pluralStatus: DUDEN_SINGULAR_ONLY_REVIEW,
+  },
+  'content/c2/vocabulary/04-literaturwissenschaft-hermeneutik.json::Narratologie': {
+    plural: '-',
+    pluralStatus: DUDEN_SINGULAR_ONLY_REVIEW,
+  },
+  'content/c2/vocabulary/05-aesthetik-kunstkritik.json::Immanenz': {
+    plural: '-',
+    pluralStatus: DUDEN_SINGULAR_ONLY_REVIEW,
+  },
+  'content/c2/vocabulary/06-anthropologie-ethnografie.json::Deutungshoheit': {
+    plural: '-',
+    pluralStatus: DUDEN_SINGULAR_ONLY_REVIEW,
+  },
+  'content/c2/vocabulary/06-anthropologie-ethnografie.json::Interkulturalität': {
+    plural: '-',
+    pluralStatus: DUDEN_SINGULAR_ONLY_REVIEW,
+  },
+  'content/c2/vocabulary/06-anthropologie-ethnografie.json::Heterogenität': {
+    plural: '-',
+    pluralStatus: DUDEN_SINGULAR_ONLY_REVIEW,
+  },
+  'content/c2/vocabulary/06-anthropologie-ethnografie.json::Intersubjektivität': {
+    plural: '-',
+    pluralStatus: DUDEN_SINGULAR_ONLY_REVIEW,
+  },
+  'content/c2/vocabulary/06-anthropologie-ethnografie.json::Subalternität': {
+    plural: '-',
+    pluralStatus: DUDEN_SINGULAR_ONLY_REVIEW,
+  },
+  'content/c2/vocabulary/14-biopolitik-transhumanismus.json::Souveränität': {
+    plural: 'die Souveränitäten',
+    pluralStatus: DUDEN_ALIGNED_REVIEW,
+  },
+  'content/c2/vocabulary/28-rechtshermeneutik.json::Jurisprudenz': {
+    plural: '-',
+    pluralStatus: DUDEN_SINGULAR_ONLY_REVIEW,
+  },
+  'content/c2/vocabulary/29-staatsphilosophie-vertieft.json::Gemeinwohl': {
+    plural: '-',
+    pluralStatus: DUDEN_SINGULAR_ONLY_REVIEW,
+  },
+  'content/c2/vocabulary/70-europaeisches-recht.json::Rechtsstaatlichkeit': {
+    plural: '-',
+    pluralStatus: DUDEN_SINGULAR_ONLY_REVIEW,
+  },
+  'content/c2/vocabulary/70-europaeisches-recht.json::Subsidiarität': {
+    plural: 'die Subsidiaritäten',
+    pluralStatus: DUDEN_ALIGNED_REVIEW,
+  },
+  'content/c2/vocabulary/70-europaeisches-recht.json::Verhältnismäßigkeit': {
+    plural: 'die Verhältnismäßigkeiten',
+    pluralStatus: DUDEN_ALIGNED_REVIEW,
+  },
+  'content/c2/vocabulary/85-spieltheorie-nash.json::Glaubwürdigkeit': {
+    plural: '-',
+    pluralStatus: DUDEN_SINGULAR_ONLY_REVIEW,
+  },
+  'content/c2/vocabulary/89-positive-psychologie.json::Wohlbefinden': {
+    plural: '-',
+    pluralStatus: DUDEN_SINGULAR_ONLY_REVIEW,
+  },
+  'content/c2/vocabulary/101-aufklaerung-kant.json::Mündigkeit': {
+    plural: '-',
+    pluralStatus: DUDEN_SINGULAR_ONLY_REVIEW,
+  },
+  'content/c2/vocabulary/101-aufklaerung-kant.json::Rechtsstaatlichkeit': {
+    plural: '-',
+    pluralStatus: DUDEN_SINGULAR_ONLY_REVIEW,
+  },
+  'content/c2/vocabulary/101-aufklaerung-kant.json::Urteilsvermögen': {
+    plural: '-',
+    pluralStatus: DUDEN_SINGULAR_ONLY_REVIEW,
+  },
+  'content/c2/vocabulary/101-aufklaerung-kant.json::Erkenntnisvermögen': {
+    plural: '-',
+    pluralStatus: DUDEN_SINGULAR_ONLY_REVIEW,
+  },
+  'content/c2/vocabulary/102-kalter-krieg-bipolaritaet.json::Hochrüstung': {
+    plural: 'die Hochrüstungen',
+    pluralStatus: DUDEN_ALIGNED_REVIEW,
+  },
+  'content/c2/vocabulary/103-kolonialgeschichte.json::Neokolonialismus': {
+    plural: '-',
+    pluralStatus: DUDEN_SINGULAR_ONLY_REVIEW,
+  },
+  'content/c2/vocabulary/103-kolonialgeschichte.json::Subalternität': {
+    plural: '-',
+    pluralStatus: DUDEN_SINGULAR_ONLY_REVIEW,
+  },
+  'content/c2/vocabulary/103-kolonialgeschichte.json::Hybridität': {
+    plural: 'die Hybriditäten',
+    pluralStatus: DUDEN_ALIGNED_REVIEW,
+  },
+  'content/c2/vocabulary/103-kolonialgeschichte.json::Entwicklungshilfe': {
+    plural: 'die Entwicklungshilfen',
+    pluralStatus: DUDEN_ALIGNED_REVIEW,
+  },
+  'content/c2/vocabulary/103-kolonialgeschichte.json::Vergangenheitsbewältigung': {
+    plural: 'die Vergangenheitsbewältigungen',
+    pluralStatus: DUDEN_ALIGNED_REVIEW,
+  },
+  'content/c2/vocabulary/104-interreligioeser-dialog.json::Kohärenz': {
+    plural: '-',
+    pluralStatus: DUDEN_SINGULAR_ONLY_REVIEW,
+  },
+  'content/c2/vocabulary/111-neuroethik.json::Chancengleichheit': {
+    plural: '-',
+    pluralStatus: DUDEN_SINGULAR_ONLY_REVIEW,
+  },
+  'content/c2/vocabulary/112-palliativmedizin.json::Empathie': {
+    plural: 'die Empathien',
+    pluralStatus: DUDEN_ALIGNED_REVIEW,
+  },
+  'content/c2/vocabulary/117-tiefenökologie.json::Koexistenz': {
+    plural: '-',
+    pluralStatus: DUDEN_SINGULAR_ONLY_REVIEW,
+  },
+  'content/c2/vocabulary/125-bildungsbegriff-humboldt.json::Mündigkeit': {
+    plural: '-',
+    pluralStatus: DUDEN_SINGULAR_ONLY_REVIEW,
+  },
+  'content/c2/vocabulary/108-atonalitaet-schoenberg.json::Atonalität': {
+    plural: 'die Atonalitäten',
+    pluralStatus: DUDEN_ALIGNED_REVIEW,
+  },
+  'content/c2/vocabulary/108-atonalitaet-schoenberg.json::Entfremdung': {
+    plural: 'die Entfremdungen',
+    pluralStatus: DUDEN_ALIGNED_REVIEW,
+  },
+  'content/c2/vocabulary/105-religionskritik-feuerbach.json::Diesseitigkeit': {
+    plural: '-',
+    pluralStatus: DUDEN_SINGULAR_ONLY_REVIEW,
+  },
+  'content/c2/vocabulary/105-religionskritik-feuerbach.json::Jenseitigkeit': {
+    plural: '-',
+    pluralStatus: DUDEN_SINGULAR_ONLY_REVIEW,
+  },
+  'content/c2/vocabulary/110-strukturalismus-levi-strauss.json::Strukturalismus': {
+    plural: '-',
+    pluralStatus: DUDEN_SINGULAR_ONLY_REVIEW,
+  },
+  'content/c2/vocabulary/111-neuroethik.json::Willensfreiheit': {
+    plural: 'die Willensfreiheiten',
+    pluralStatus: DUDEN_ALIGNED_REVIEW,
+  },
+  'content/c2/vocabulary/112-palliativmedizin.json::Spiritualit\u00e4t': {
+    plural: 'die Spiritualit\u00e4ten',
+    pluralStatus: DUDEN_ALIGNED_REVIEW,
+  },
+  'content/c2/vocabulary/112-palliativmedizin.json::Lebensqualit\u00e4t': {
+    plural: 'die Lebensqualit\u00e4ten',
+    pluralStatus: DUDEN_ALIGNED_REVIEW,
+  },
+  'content/c2/vocabulary/114-technikphilosophie.json::Weltlichkeit': {
+    plural: '-',
+    pluralStatus: DUDEN_SINGULAR_ONLY_REVIEW,
+  },
+  'content/c2/vocabulary/117-tiefen\u00f6kologie.json::Anthropoz\u00e4n': {
+    plural: '-',
+    pluralStatus: DUDEN_SINGULAR_ONLY_REVIEW,
+  },
+  'content/c2/vocabulary/118-anthropozaen.json::Ressourcenverbrauch': {
+    plural: '-',
+    pluralStatus: DUDEN_SINGULAR_ONLY_REVIEW,
+  },
+  'content/c2/vocabulary/119-klimagerechtigkeit.json::Klimagerechtigkeit': {
+    plural: '-',
+    pluralStatus: DUDEN_SINGULAR_ONLY_REVIEW,
+  },
+  'content/c2/vocabulary/12-religionswissenschaft-saekularisierung.json::Synkretismus': {
+    plural: '-',
+    pluralStatus: DUDEN_SINGULAR_ONLY_REVIEW,
+  },
+  'content/c2/vocabulary/121-populismus-forschung.json::Apologetik': {
+    plural: 'die Apologetiken',
+    pluralStatus: DUDEN_ALIGNED_REVIEW,
+  },
+  'content/c2/vocabulary/136-utopieforschung.json::Transhumanismus': {
+    plural: '-',
+    pluralStatus: DUDEN_SINGULAR_ONLY_REVIEW,
+  },
+  'content/c2/vocabulary/125-bildungsbegriff-humboldt.json::Wissenschaftsfreiheit': {
+    plural: '-',
+    pluralStatus: DUDEN_SINGULAR_ONLY_REVIEW,
+  },
+  'content/c2/vocabulary/125-bildungsbegriff-humboldt.json::Pers\u00f6nlichkeitsentfaltung': {
+    plural: 'die Pers\u00f6nlichkeitsentfaltungen',
+    pluralStatus: DUDEN_ALIGNED_REVIEW,
+  },
+  'content/c2/vocabulary/120-republikanismus.json::Machtf\u00fclle': {
+    plural: '-',
+    pluralStatus: DUDEN_SINGULAR_ONLY_REVIEW,
+  },
+  'content/c2/vocabulary/125-bildungsbegriff-humboldt.json::Bildungsb\u00fcrgertum': {
+    plural: '-',
+    pluralStatus: DUDEN_SINGULAR_ONLY_REVIEW,
+  },
+  'content/c2/vocabulary/125-bildungsbegriff-humboldt.json::Verinnerlichung': {
+    plural: 'die Verinnerlichungen',
+    pluralStatus: DUDEN_ALIGNED_REVIEW,
+  },
+  'content/c2/vocabulary/134-ethnomethodologie.json::Hintergrundwissen': {
+    plural: '-',
+    pluralStatus: DUDEN_SINGULAR_ONLY_REVIEW,
+  },
+  'content/c2/vocabulary/135-geschichtsphilosophie.json::Geschichtlichkeit': {
+    plural: '-',
+    pluralStatus: DUDEN_SINGULAR_ONLY_REVIEW,
+  },
+  'content/c2/vocabulary/04-literaturwissenschaft-hermeneutik.json::Sinnkonstitution': {
+    plural: 'die Sinnkonstitutionen',
+    pluralStatus: CORPUS_REVIEW,
+  },
+  'content/c2/vocabulary/108-atonalitaet-schoenberg.json::Klangfarbenmelodie': {
+    plural: 'die Klangfarbenmelodien',
+    pluralStatus: CORPUS_REVIEW,
+  },
+  'content/c2/vocabulary/108-atonalitaet-schoenberg.json::Dodekaphonie': {
+    plural: 'die Dodekaphonien',
+    pluralStatus: CORPUS_REVIEW,
+  },
+  'content/c2/vocabulary/33-wissenschaftssoziologie.json::Wissenssoziologie': {
+    plural: 'die Wissenssoziologien',
+    pluralStatus: CORPUS_REVIEW,
+  },
+  'content/c2/vocabulary/48-deontologie-konsequentialismus.json::Verbindlichkeit': {
+    plural: 'die Verbindlichkeiten',
+    pluralStatus: CORPUS_REVIEW,
+  },
+  'content/c2/vocabulary/54-religionsphilosophie.json::Eschatologie': {
+    plural: 'die Eschatologien',
+    pluralStatus: CORPUS_REVIEW,
+  },
+  'content/c2/vocabulary/54-religionsphilosophie.json::Pantheismus': {
+    plural: '-',
+    pluralStatus: REGULAR_RULE_REVIEW,
+  },
+  'content/c2/vocabulary/54-religionsphilosophie.json::Deismus': {
+    plural: '-',
+    pluralStatus: REGULAR_RULE_REVIEW,
+  },
+  'content/c2/vocabulary/54-religionsphilosophie.json::Heilsgeschichte': {
+    plural: '-',
+    pluralStatus: REGULAR_RULE_REVIEW,
+  },
+  'content/c2/vocabulary/55-mystik-kontemplation.json::Gnosis': {
+    plural: '-',
+    pluralStatus: REGULAR_RULE_REVIEW,
+  },
+  'content/c2/vocabulary/55-mystik-kontemplation.json::Unio Mystica': {
+    plural: '-',
+    pluralStatus: REGULAR_RULE_REVIEW,
+  },
+  'content/c2/vocabulary/55-mystik-kontemplation.json::Esoterik': {
+    plural: '-',
+    pluralStatus: REGULAR_RULE_REVIEW,
+  },
+  'content/c2/vocabulary/79-literarische-gattungen.json::Narratologie': {
+    plural: '-',
+    pluralStatus: DUDEN_SINGULAR_ONLY_REVIEW,
+  },
+  'content/c2/vocabulary/84-netzwerkgesellschaft-castells.json::Mediatisierung': {
+    plural: 'die Mediatisierungen',
+    pluralStatus: CORPUS_REVIEW,
+  },
+  'content/c2/vocabulary/23-poststrukturalismus.json::Textualit\u00e4t': {
+    plural: 'die Textualit\u00e4ten',
+    pluralStatus: CORPUS_REVIEW,
+  },
+  'content/c2/vocabulary/41-verhaltens\u00f6konomie.json::Anreizkompatibilit\u00e4t': {
+    plural: 'die Anreizkompatibilit\u00e4ten',
+    pluralStatus: CORPUS_REVIEW,
+  },
+  'content/c2/vocabulary/42-oekologische-oekonomie.json::Kreislaufwirtschaft': {
+    plural: 'die Kreislaufwirtschaften',
+    pluralStatus: CORPUS_REVIEW,
+  },
+  'content/c2/vocabulary/116-digitaler-humanismus.json::Datenhoheit': {
+    plural: 'die Datenhoheiten',
+    pluralStatus: CORPUS_REVIEW,
+  },
+  'content/c2/vocabulary/27-uebersetzungswissenschaft.json::Pragmatik': {
+    plural: 'die Pragmatiken',
+    pluralStatus: CORPUS_REVIEW,
+  },
+  'content/c2/vocabulary/27-uebersetzungswissenschaft.json::Intertextualit\u00e4t': {
+    plural: 'die Intertextualit\u00e4ten',
+    pluralStatus: CORPUS_REVIEW,
+  },
+  'content/c2/vocabulary/61-phenomenologie.json::Intentionalit\u00e4t': {
+    plural: 'die Intentionalit\u00e4ten',
+    pluralStatus: CORPUS_REVIEW,
+  },
+  'content/c2/vocabulary/27-uebersetzungswissenschaft.json::Rezeptions\u00e4sthetik': {
+    plural: 'die Rezeptions\u00e4sthetiken',
+    pluralStatus: CORPUS_REVIEW,
+  },
+  'content/c2/vocabulary/96-ueberwachungsstaat.json::\u00dcberwachungskapitalismus': {
+    plural: 'die \u00dcberwachungskapitalismen',
+    pluralStatus: CORPUS_REVIEW,
+  },
+  'content/c2/vocabulary/41-verhaltens\u00f6konomie.json::Verhaltens\u00f6konomie': {
+    plural: 'die Verhaltens\u00f6konomien',
+    pluralStatus: CORPUS_REVIEW,
+  },
+  'content/c2/vocabulary/48-deontologie-konsequentialismus.json::Pr\u00e4ferenzutilitarismus': {
+    plural: 'die Pr\u00e4ferenzutilitarismen',
+    pluralStatus: CORPUS_REVIEW,
+  },
+  'content/c2/vocabulary/14-biopolitik-transhumanismus.json::Autopoiesis': {
+    plural: 'die Autopoiesen',
+    pluralStatus: CORPUS_REVIEW,
+  },
+  'content/c2/vocabulary/65-anarchismus-libertarismus.json::F\u00f6deralismus': {
+    plural: '-',
+    pluralStatus: CORPUS_REVIEW,
+  },
+  'content/c1/vocabulary/17-verfassungsrecht-staatstheorie.json::F\u00f6deralismus': {
+    plural: '-',
+    pluralStatus: CORPUS_REVIEW,
+  },
+  'content/c2/vocabulary/40-ordoliberalismus.json::Verteilungsgerechtigkeit': {
+    plural: '-',
+    pluralStatus: CORPUS_REVIEW,
+  },
+  'content/c2/vocabulary/63-utilitarismus.json::Verteilungsgerechtigkeit': {
+    plural: '-',
+    pluralStatus: CORPUS_REVIEW,
+  },
+  'content/c1/vocabulary/16-datenschutz-digitalethik.json::informationelle Selbstbestimmung': {
+    plural: '-',
+    pluralStatus: DUDEN_COMPOUND_HEADWORD_SINGULAR_ONLY_REVIEW,
+  },
+  'content/c2/vocabulary/116-digitaler-humanismus.json::informationelle Selbstbestimmung': {
+    plural: '-',
+    pluralStatus: DUDEN_COMPOUND_HEADWORD_SINGULAR_ONLY_REVIEW,
+  },
+  'content/c1/vocabulary/16-datenschutz-digitalethik.json::digitale M\u00fcndigkeit': {
+    plural: '-',
+    pluralStatus: DUDEN_COMPOUND_HEADWORD_SINGULAR_ONLY_REVIEW,
+  },
+  'content/c2/vocabulary/116-digitaler-humanismus.json::digitale M\u00fcndigkeit': {
+    plural: '-',
+    pluralStatus: DUDEN_COMPOUND_HEADWORD_SINGULAR_ONLY_REVIEW,
+  },
+  'content/c2/vocabulary/99-avantgarde-dadaismus.json::Intermediale': {
+    plural: '-',
+    pluralStatus: CORPUS_REVIEW,
+  },
+  'content/c1/vocabulary/49-theaterwissenschaft.json::Intermediale': {
+    plural: '-',
+    pluralStatus: CORPUS_REVIEW,
+  },
+  'content/c2/vocabulary/86-entwicklungsoekonomie.json::Humankapital': {
+    plural: '-',
+    pluralStatus: CORPUS_REVIEW,
+  },
+  'content/c1/vocabulary/60-arbeitssoziologie-prekaritaet.json::Humankapital': {
+    plural: '-',
+    pluralStatus: CORPUS_REVIEW,
+  },
+  'content/c2/vocabulary/143-lacan-lacanian.json::Unbewusste': {
+    plural: '-',
+    pluralStatus: CORPUS_REVIEW,
+  },
+  'content/c2/vocabulary/07-psychoanalyse-tiefenpsychologie.json::Unbewusste': {
+    plural: '-',
+    pluralStatus: CORPUS_REVIEW,
+  },
+  'content/c2/vocabulary/14-biopolitik-transhumanismus.json::Kybernetik': {
+    plural: '-',
+    pluralStatus: CORPUS_REVIEW,
+  },
+  'content/c2/vocabulary/94-kybernetik-informationstheorie.json::Kybernetik': {
+    plural: '-',
+    pluralStatus: CORPUS_REVIEW,
+  },
+  'content/c2/vocabulary/143-lacan-lacanian.json::Imagin\u00e4re': {
+    plural: '-',
+    pluralStatus: CORPUS_REVIEW,
+  },
+  'content/c2/vocabulary/92-orientalismus-said.json::Imagin\u00e4re': {
+    plural: '-',
+    pluralStatus: CORPUS_REVIEW,
+  },
+  'content/c2/vocabulary/40-ordoliberalismus.json::Sozialstaatlichkeit': {
+    plural: '-',
+    pluralStatus: CORPUS_REVIEW,
+  },
+  'content/c2/vocabulary/63-utilitarismus.json::Sozialstaatlichkeit': {
+    plural: '-',
+    pluralStatus: CORPUS_REVIEW,
+  },
+  'content/c2/vocabulary/116-digitaler-humanismus.json::Zivilgesellschaftliche Partizipation': {
+    word: 'zivilgesellschaftliche Partizipation',
+    plural: 'die zivilgesellschaftlichen Partizipationen',
+    pluralStatus: DUDEN_COMPOUND_HEADWORD_REVIEW,
+    exampleSentence1:
+      'Die zivilgesellschaftliche Partizipation ist entscheidend f\u00fcr eine demokratische und gerechte Gestaltung der Digitalisierung.',
+    exampleSentence2:
+      'Durch zivilgesellschaftliche Partizipation k\u00f6nnen B\u00fcrger ihre Interessen und Bedenken in den Technologieentwicklungsprozess einbringen.',
+  },
+  'content/c2/vocabulary/116-digitaler-humanismus.json::digitale Resilienz': {
+    plural: 'die digitalen Resilienzen',
+    pluralStatus: DUDEN_COMPOUND_HEADWORD_REVIEW,
+  },
+  'content/c2/vocabulary/116-digitaler-humanismus.json::digitale Inklusion': {
+    plural: 'die digitalen Inklusionen',
+    pluralStatus: DUDEN_COMPOUND_HEADWORD_REVIEW,
+  },
+  'content/c2/vocabulary/136-utopieforschung.json::Systemimmanenz': {
+    plural: '-',
+    pluralStatus: DUDEN_COMPOUND_HEADWORD_SINGULAR_ONLY_REVIEW,
+  },
+  'content/c2/vocabulary/28-rechtshermeneutik.json::Rechtshermeneutik': {
+    plural: '-',
+    pluralStatus: DUDEN_COMPOUND_HEADWORD_SINGULAR_ONLY_REVIEW,
+  },
+  'content/c2/vocabulary/74-wissenschaftliche-revolution.json::intersubjektive Nachvollziehbarkeit': {
+    plural: '-',
+    pluralStatus: DUDEN_COMPOUND_HEADWORD_SINGULAR_ONLY_REVIEW,
+  },
+  'content/c2/vocabulary/107-dekonstruktivismus-architektur.json::Ineinandergreifen': {
+    plural: '-',
+    pluralStatus: REGULAR_RULE_REVIEW,
+  },
+  'content/c2/vocabulary/108-atonalitaet-schoenberg.json::Schaffen': {
+    plural: '-',
+    pluralStatus: REGULAR_RULE_REVIEW,
+  },
+  'content/c2/vocabulary/109-elektronische-musik.json::Oszillieren': {
+    plural: '-',
+    pluralStatus: REGULAR_RULE_REVIEW,
+  },
+  'content/c2/vocabulary/112-palliativmedizin.json::Sterbefasten': {
+    plural: '-',
+    pluralStatus: REGULAR_RULE_REVIEW,
+  },
+  'content/c2/vocabulary/114-technikphilosophie.json::Entbergen': {
+    plural: '-',
+    pluralStatus: REGULAR_RULE_REVIEW,
+  },
+  'content/c2/vocabulary/135-geschichtsphilosophie.json::Verstehen': {
+    plural: '-',
+    pluralStatus: REGULAR_RULE_REVIEW,
+  },
+  'content/c2/vocabulary/137-musiksemiotik.json::Verorten': {
+    plural: '-',
+    pluralStatus: REGULAR_RULE_REVIEW,
+  },
+  'content/c2/vocabulary/41-verhaltens\u00f6konomie.json::Prokrastinieren': {
+    plural: '-',
+    pluralStatus: REGULAR_RULE_REVIEW,
+  },
+  'content/c2/vocabulary/49-tugendethik-aristoteles.json::Streben': {
+    plural: '-',
+    pluralStatus: REGULAR_RULE_REVIEW,
+  },
+  'content/c2/vocabulary/49-tugendethik-aristoteles.json::Sittlichkeit': {
+    plural: '-',
+    pluralStatus: REGULAR_RULE_REVIEW,
+  },
+  'content/c2/vocabulary/49-tugendethik-aristoteles.json::Tugendhaftigkeit': {
+    plural: '-',
+    pluralStatus: REGULAR_RULE_REVIEW,
+  },
+  'content/c2/vocabulary/49-tugendethik-aristoteles.json::Selbstverwirklichung': {
+    plural: '-',
+    pluralStatus: REGULAR_RULE_REVIEW,
+  },
+  'content/c2/vocabulary/93-gender-studies-butler.json::Begehren': {
+    plural: '-',
+    pluralStatus: REGULAR_RULE_REVIEW,
+  },
+  'content/c2/vocabulary/104-interreligioeser-dialog.json::Konvergenzstreben': {
+    plural: '-',
+    pluralStatus: REGULAR_RULE_REVIEW,
+  },
+  'content/c2/vocabulary/104-interreligioeser-dialog.json::Ringen': {
+    plural: '-',
+    pluralStatus: REGULAR_RULE_REVIEW,
+  },
+  'content/c2/vocabulary/114-technikphilosophie.json::Wahrheitsgeschehen': {
+    plural: '-',
+    pluralStatus: REGULAR_RULE_REVIEW,
+  },
+  'content/c2/vocabulary/117-tiefen\u00f6kologie.json::Artensterben': {
+    plural: '-',
+    pluralStatus: REGULAR_RULE_REVIEW,
+  },
+  'content/c2/vocabulary/125-bildungsbegriff-humboldt.json::Erkenntnisstreben': {
+    plural: '-',
+    pluralStatus: REGULAR_RULE_REVIEW,
+  },
+  'content/c2/vocabulary/134-ethnomethodologie.json::Alltagswissen': {
+    plural: '-',
+    pluralStatus: REGULAR_RULE_REVIEW,
+  },
+  'content/c2/vocabulary/25-diskursanalyse.json::Weltwissen': {
+    plural: '-',
+    pluralStatus: REGULAR_RULE_REVIEW,
+  },
+  'content/c2/vocabulary/32-empirismus-rationalismus.json::Erfahrungswissen': {
+    plural: '-',
+    pluralStatus: REGULAR_RULE_REVIEW,
+  },
+  'content/c2/vocabulary/88-bindungstheorie-bowlby.json::Internalisierungsgeschehen': {
+    plural: '-',
+    pluralStatus: REGULAR_RULE_REVIEW,
+  },
+  'content/c2/vocabulary/88-bindungstheorie-bowlby.json::Bindungsverhalten': {
+    plural: '-',
+    pluralStatus: REGULAR_RULE_REVIEW,
+  },
+  'content/c2/vocabulary/114-technikphilosophie.json::Dasein': {
+    plural: '-',
+    pluralStatus: REGULAR_RULE_REVIEW,
+  },
+  'content/c2/vocabulary/117-tiefen\u00f6kologie.json::In-der-Welt-Sein': {
+    plural: '-',
+    pluralStatus: REGULAR_RULE_REVIEW,
+  },
+  'content/c2/vocabulary/118-anthropozaen.json::Biodiversit\u00e4tssterben': {
+    plural: '-',
+    pluralStatus: REGULAR_RULE_REVIEW,
+  },
+  'content/c2/vocabulary/131-dialektik-der-aufklaerung.json::Identit\u00e4tsdenken': {
+    plural: '-',
+    pluralStatus: REGULAR_RULE_REVIEW,
+  },
+  'content/c2/vocabulary/135-geschichtsphilosophie.json::Geschichtsbewusstsein': {
+    plural: '-',
+    pluralStatus: REGULAR_RULE_REVIEW,
+  },
+  'content/c2/vocabulary/136-utopieforschung.json::Epochenbewusstsein': {
+    plural: '-',
+    pluralStatus: REGULAR_RULE_REVIEW,
+  },
+  'content/c2/vocabulary/38-klassentheorie-ungleichheit.json::Klassenbewusstsein': {
+    plural: '-',
+    pluralStatus: REGULAR_RULE_REVIEW,
+  },
+  'content/c2/vocabulary/52-historiographie-methodik.json::Geschichtsbewusstsein': {
+    plural: '-',
+    pluralStatus: REGULAR_RULE_REVIEW,
+  },
+  'content/c2/vocabulary/52-historiographie-methodik.json::Metahistorie': {
+    plural: '-',
+    pluralStatus: REGULAR_RULE_REVIEW,
+  },
+  'content/c2/vocabulary/62-dialektik-hegel.json::Werden': {
+    plural: '-',
+    pluralStatus: REGULAR_RULE_REVIEW,
+  },
+  'content/c2/vocabulary/66-generative-grammatik.json::angeborenes Wissen': {
+    plural: '-',
+    pluralStatus: REGULAR_RULE_REVIEW,
+  },
+  'content/c2/vocabulary/100-konzeptkunst-minimalismus.json::Immaterielle': {
+    plural: '-',
+    pluralStatus: REGULAR_RULE_REVIEW,
+  },
+  'content/c2/vocabulary/104-interreligioeser-dialog.json::Immanente': {
+    plural: '-',
+    pluralStatus: REGULAR_RULE_REVIEW,
+  },
+  'content/c2/vocabulary/107-dekonstruktivismus-architektur.json::Ersch\u00fcttern': {
+    plural: '-',
+    pluralStatus: REGULAR_RULE_REVIEW,
+  },
+  'content/c2/vocabulary/110-strukturalismus-levi-strauss.json::Entschl\u00fcsseln': {
+    plural: '-',
+    pluralStatus: REGULAR_RULE_REVIEW,
+  },
+  'content/c2/vocabulary/125-bildungsbegriff-humboldt.json::Epistemische': {
+    plural: '-',
+    pluralStatus: REGULAR_RULE_REVIEW,
+  },
+  'content/c2/vocabulary/125-bildungsbegriff-humboldt.json::Ganzheitliche': {
+    plural: '-',
+    pluralStatus: REGULAR_RULE_REVIEW,
+  },
+  'content/c2/vocabulary/130-erhabene-sublime.json::Erhabene': {
+    plural: '-',
+    pluralStatus: REGULAR_RULE_REVIEW,
+  },
+  'content/c2/vocabulary/130-erhabene-sublime.json::Scheitern': {
+    plural: '-',
+    pluralStatus: REGULAR_RULE_REVIEW,
+  },
+  'content/c2/vocabulary/130-erhabene-sublime.json::Unfassbare': {
+    plural: '-',
+    pluralStatus: REGULAR_RULE_REVIEW,
+  },
+  'content/c2/vocabulary/143-lacan-lacanian.json::Symbolische': {
+    plural: '-',
+    pluralStatus: REGULAR_RULE_REVIEW,
+  },
+  'content/c2/vocabulary/143-lacan-lacanian.json::Reale': {
+    plural: '-',
+    pluralStatus: REGULAR_RULE_REVIEW,
+  },
+  'content/c2/vocabulary/144-trauma-forschung.json::Verdr\u00e4ngen': {
+    plural: '-',
+    pluralStatus: REGULAR_RULE_REVIEW,
+  },
+  'content/c2/vocabulary/17-musikwissenschaft-kulturindustrie.json::Epigonentum': {
+    plural: '-',
+    pluralStatus: REGULAR_RULE_REVIEW,
+  },
+  'content/c2/vocabulary/22-existenzphilosophie.json::Nichts': {
+    plural: '-',
+    pluralStatus: REGULAR_RULE_REVIEW,
+  },
+  'content/c2/vocabulary/45-analytische-psychologie.json::Kollektive Unbewusste': {
+    plural: '-',
+    pluralStatus: REGULAR_RULE_REVIEW,
+  },
+  'content/c2/vocabulary/47-existenzielle-psychotherapie.json::Vergegenw\u00e4rtigen': {
+    plural: '-',
+    pluralStatus: REGULAR_RULE_REVIEW,
+  },
+  'content/c2/vocabulary/47-existenzielle-psychotherapie.json::Autotelische': {
+    plural: '-',
+    pluralStatus: REGULAR_RULE_REVIEW,
+  },
+  'content/c2/vocabulary/50-kulturkritik-postmoderne.json::Postfaktische': {
+    plural: '-',
+    pluralStatus: REGULAR_RULE_REVIEW,
+  },
+  'content/c2/vocabulary/77-postkoloniale-literatur.json::Postkoloniale': {
+    plural: '-',
+    pluralStatus: REGULAR_RULE_REVIEW,
+  },
+  'content/c2/vocabulary/99-avantgarde-dadaismus.json::Absurde': {
+    plural: '-',
+    pluralStatus: REGULAR_RULE_REVIEW,
+  },
+  'content/c2/vocabulary/02-rechtsphilosophie-justiz.json::Apodiktizit\u00e4t': {
+    plural: '-',
+    pluralStatus: REGULAR_RULE_REVIEW,
+  },
+  'content/c2/vocabulary/06-anthropologie-ethnografie.json::Transkulturalit\u00e4t': {
+    plural: '-',
+    pluralStatus: REGULAR_RULE_REVIEW,
+  },
+  'content/c2/vocabulary/103-kolonialgeschichte.json::Transkulturalit\u00e4t': {
+    plural: '-',
+    pluralStatus: REGULAR_RULE_REVIEW,
+  },
+  'content/c2/vocabulary/105-religionskritik-feuerbach.json::Heilsgewissheit': {
+    plural: '-',
+    pluralStatus: REGULAR_RULE_REVIEW,
+  },
+  'content/c2/vocabulary/106-bauhaus-modernismus.json::Materialgerechtigkeit': {
+    plural: '-',
+    pluralStatus: REGULAR_RULE_REVIEW,
+  },
+  'content/c2/vocabulary/106-bauhaus-modernismus.json::Raum\u00f6konomie': {
+    plural: '-',
+    pluralStatus: REGULAR_RULE_REVIEW,
+  },
+  'content/c2/vocabulary/108-atonalitaet-schoenberg.json::Klanglichkeit': {
+    plural: '-',
+    pluralStatus: REGULAR_RULE_REVIEW,
+  },
+  'content/c2/vocabulary/114-technikphilosophie.json::Seinsvergessenheit': {
+    plural: '-',
+    pluralStatus: REGULAR_RULE_REVIEW,
+  },
+  'content/c2/vocabulary/114-technikphilosophie.json::Zuhandenheit': {
+    plural: '-',
+    pluralStatus: REGULAR_RULE_REVIEW,
+  },
+  'content/c2/vocabulary/114-technikphilosophie.json::Vorhandenheit': {
+    plural: '-',
+    pluralStatus: REGULAR_RULE_REVIEW,
+  },
+  'content/c2/vocabulary/61-phenomenologie.json::Apodiktizit\u00e4t': {
+    plural: '-',
+    pluralStatus: REGULAR_RULE_REVIEW,
+  },
+  'content/c2/vocabulary/116-digitaler-humanismus.json::Digitale Humanismus': {
+    word: 'Digitaler Humanismus',
+    plural: '-',
+    pluralStatus: REGULAR_RULE_REVIEW,
+  },
+  'content/c2/vocabulary/06-anthropologie-ethnografie.json::Postkolonialismusforschung': {
+    plural: '-',
+    pluralStatus: REGULAR_RULE_REVIEW,
+  },
+  'content/c2/vocabulary/101-aufklaerung-kant.json::Metaphysik der Sitten': {
+    plural: '-',
+    pluralStatus: REGULAR_RULE_REVIEW,
+  },
+  'content/c2/vocabulary/106-bauhaus-modernismus.json::\u00c4sthetik der Sachlichkeit': {
+    plural: '-',
+    pluralStatus: REGULAR_RULE_REVIEW,
+  },
+  'content/c2/vocabulary/107-dekonstruktivismus-architektur.json::\u00c4sthetik des Unvollendeten': {
+    plural: '-',
+    pluralStatus: REGULAR_RULE_REVIEW,
+  },
+  'content/c2/vocabulary/107-dekonstruktivismus-architektur.json::Atektonik': {
+    plural: '-',
+    pluralStatus: REGULAR_RULE_REVIEW,
+  },
+  'content/c2/vocabulary/109-elektronische-musik.json::Akusmatik': {
+    plural: '-',
+    pluralStatus: REGULAR_RULE_REVIEW,
+  },
+  'content/c2/vocabulary/111-neuroethik.json::Neuroethik': {
+    plural: '-',
+    pluralStatus: REGULAR_RULE_REVIEW,
+  },
+  'content/c2/vocabulary/111-neuroethik.json::Konnektomik': {
+    plural: '-',
+    pluralStatus: REGULAR_RULE_REVIEW,
+  },
+  'content/c2/vocabulary/114-technikphilosophie.json::Technikphilosophie': {
+    plural: '-',
+    pluralStatus: REGULAR_RULE_REVIEW,
+  },
+  'content/c2/vocabulary/117-tiefen\u00f6kologie.json::Tiefen\u00f6kologie': {
+    plural: '-',
+    pluralStatus: REGULAR_RULE_REVIEW,
+  },
+  'content/c2/vocabulary/117-tiefen\u00f6kologie.json::intrinsische Werthaftigkeit': {
+    plural: '-',
+    pluralStatus: REGULAR_RULE_REVIEW,
+  },
+  'content/c2/vocabulary/119-klimagerechtigkeit.json::Zirkularit\u00e4t': {
+    plural: '-',
+    pluralStatus: REGULAR_RULE_REVIEW,
+  },
+  'content/c2/vocabulary/119-klimagerechtigkeit.json::Indigenit\u00e4t': {
+    plural: '-',
+    pluralStatus: REGULAR_RULE_REVIEW,
+  },
+  'content/c2/vocabulary/12-religionswissenschaft-saekularisierung.json::Entzauberung der Welt': {
+    plural: '-',
+    pluralStatus: REGULAR_RULE_REVIEW,
+  },
+  'content/c2/vocabulary/121-populismus-forschung.json::Postfaktizit\u00e4t': {
+    plural: '-',
+    pluralStatus: REGULAR_RULE_REVIEW,
+  },
+  'content/c2/vocabulary/121-populismus-forschung.json::Elitenverachtung': {
+    plural: '-',
+    pluralStatus: REGULAR_RULE_REVIEW,
+  },
+  'content/c2/vocabulary/123-eigentumstheorie.json::Gemeinwohlorientierung': {
+    plural: '-',
+    pluralStatus: REGULAR_RULE_REVIEW,
+  },
+  'content/c2/vocabulary/123-eigentumstheorie.json::Inklusivit\u00e4t': {
+    plural: '-',
+    pluralStatus: REGULAR_RULE_REVIEW,
+  },
+  'content/c2/vocabulary/123-eigentumstheorie.json::Ressourcengovernance': {
+    plural: '-',
+    pluralStatus: REGULAR_RULE_REVIEW,
+  },
+  'content/c2/vocabulary/125-bildungsbegriff-humboldt.json::Autodidaktik': {
+    plural: '-',
+    pluralStatus: REGULAR_RULE_REVIEW,
+  },
+  'content/c2/vocabulary/106-bauhaus-modernismus.json::Reduktion auf das Wesentliche': {
+    plural: '-',
+    pluralStatus: REGULAR_RULE_REVIEW,
+  },
+  'content/c2/vocabulary/108-atonalitaet-schoenberg.json::Formaufl\u00f6sung': {
+    plural: '-',
+    pluralStatus: REGULAR_RULE_REVIEW,
+  },
+  'content/c2/vocabulary/108-atonalitaet-schoenberg.json::Reihenkomposition': {
+    plural: '-',
+    pluralStatus: REGULAR_RULE_REVIEW,
+  },
+  'content/c2/vocabulary/108-atonalitaet-schoenberg.json::Emanzipation der Dissonanz': {
+    plural: '-',
+    pluralStatus: REGULAR_RULE_REVIEW,
+  },
+  'content/c2/vocabulary/112-palliativmedizin.json::Letztentscheidungskompetenz': {
+    plural: '-',
+    pluralStatus: REGULAR_RULE_REVIEW,
+  },
+  'content/c2/vocabulary/114-technikphilosophie.json::Widerst\u00e4ndigkeit': {
+    plural: '-',
+    pluralStatus: REGULAR_RULE_REVIEW,
+  },
+  'content/c2/vocabulary/121-populismus-forschung.json::Populismusforschung': {
+    plural: '-',
+    pluralStatus: REGULAR_RULE_REVIEW,
+  },
+  'content/c2/vocabulary/125-bildungsbegriff-humboldt.json::Humanismusrezeption': {
+    plural: '-',
+    pluralStatus: REGULAR_RULE_REVIEW,
+  },
+  'content/c2/vocabulary/125-bildungsbegriff-humboldt.json::Wissensgenerierung': {
+    plural: '-',
+    pluralStatus: REGULAR_RULE_REVIEW,
+  },
+  'content/c2/vocabulary/125-bildungsbegriff-humboldt.json::Geistesbildung': {
+    plural: '-',
+    pluralStatus: REGULAR_RULE_REVIEW,
+  },
+  'content/c2/vocabulary/02-rechtsphilosophie-justiz.json::Konsensualismus': {
+    plural: '-',
+    pluralStatus: REGULAR_RULE_REVIEW,
+  },
+  'content/c2/vocabulary/103-kolonialgeschichte.json::Kolonialrevisionismus': {
+    plural: '-',
+    pluralStatus: REGULAR_RULE_REVIEW,
+  },
+  'content/c2/vocabulary/111-neuroethik.json::Pr\u00e4diktive Genetik': {
+    plural: '-',
+    pluralStatus: REGULAR_RULE_REVIEW,
+  },
+  'content/c2/vocabulary/116-digitaler-humanismus.json::Datenkapitalismus': {
+    plural: '-',
+    pluralStatus: REGULAR_RULE_REVIEW,
+  },
+  'content/c2/vocabulary/116-digitaler-humanismus.json::Recht auf Vergessenwerden': {
+    plural: '-',
+    pluralStatus: REGULAR_RULE_REVIEW,
+  },
+  'content/c2/vocabulary/117-tiefen\u00f6kologie.json::Biozentrismus': {
+    plural: '-',
+    pluralStatus: REGULAR_RULE_REVIEW,
+  },
+  'content/c2/vocabulary/117-tiefen\u00f6kologie.json::Regenerationsf\u00e4higkeit': {
+    plural: '-',
+    pluralStatus: REGULAR_RULE_REVIEW,
+  },
+  'content/c2/vocabulary/117-tiefen\u00f6kologie.json::Biokapazit\u00e4t': {
+    plural: '-',
+    pluralStatus: REGULAR_RULE_REVIEW,
+  },
+  'content/c2/vocabulary/119-klimagerechtigkeit.json::Umweltrassismus': {
+    plural: '-',
+    pluralStatus: REGULAR_RULE_REVIEW,
+  },
+  'content/c2/vocabulary/12-religionswissenschaft-saekularisierung.json::Glaubenspluralismus': {
+    plural: '-',
+    pluralStatus: REGULAR_RULE_REVIEW,
+  },
+  'content/c2/vocabulary/08-politische-rhetorik-demagogie.json::Appellcharakter': {
+    plural: '-',
+    pluralStatus: REGULAR_RULE_REVIEW,
+  },
+  'content/c2/vocabulary/121-populismus-forschung.json::Demokratieverfall': {
+    plural: '-',
+    pluralStatus: REGULAR_RULE_REVIEW,
+  },
+  'content/c2/vocabulary/123-eigentumstheorie.json::Kollektiveigentum': {
+    plural: '-',
+    pluralStatus: REGULAR_RULE_REVIEW,
+  },
+  'content/c2/vocabulary/123-eigentumstheorie.json::Ressourcenbewirtschaftung': {
+    plural: '-',
+    pluralStatus: REGULAR_RULE_REVIEW,
+  },
+  'content/c2/vocabulary/123-eigentumstheorie.json::Tragik der Allmende': {
+    plural: '-',
+    pluralStatus: REGULAR_RULE_REVIEW,
+  },
+  'content/c2/vocabulary/131-dialektik-der-aufklaerung.json::Instrumentelle Vernunft': {
+    plural: '-',
+    pluralStatus: REGULAR_RULE_REVIEW,
+  },
+  'content/c2/vocabulary/131-dialektik-der-aufklaerung.json::Fetischcharakter': {
+    plural: '-',
+    pluralStatus: REGULAR_RULE_REVIEW,
+  },
+  'content/c2/vocabulary/131-dialektik-der-aufklaerung.json::Unvers\u00f6hntheit': {
+    plural: '-',
+    pluralStatus: REGULAR_RULE_REVIEW,
+  },
+  'content/c2/vocabulary/131-dialektik-der-aufklaerung.json::\u00c4sthetische Theorie': {
+    plural: '-',
+    pluralStatus: REGULAR_RULE_REVIEW,
+  },
+  'content/c2/vocabulary/131-dialektik-der-aufklaerung.json::Identit\u00e4tszwang': {
+    plural: '-',
+    pluralStatus: REGULAR_RULE_REVIEW,
+  },
+  'content/c2/vocabulary/131-dialektik-der-aufklaerung.json::Immanente Kritik': {
+    plural: '-',
+    pluralStatus: REGULAR_RULE_REVIEW,
+  },
+  'content/c2/vocabulary/134-ethnomethodologie.json::Ethnomethodologie': {
+    plural: '-',
+    pluralStatus: REGULAR_RULE_REVIEW,
+  },
+  'content/c2/vocabulary/134-ethnomethodologie.json::Unhintergehbarkeit': {
+    plural: '-',
+    pluralStatus: REGULAR_RULE_REVIEW,
+  },
+  'content/c2/vocabulary/134-ethnomethodologie.json::Indexikalit\u00e4t': {
+    plural: '-',
+    pluralStatus: REGULAR_RULE_REVIEW,
+  },
+  'content/c2/vocabulary/134-ethnomethodologie.json::Lebensweltbezug': {
+    plural: '-',
+    pluralStatus: REGULAR_RULE_REVIEW,
+  },
+  'content/c2/vocabulary/136-utopieforschung.json::Utopieforschung': {
+    plural: '-',
+    pluralStatus: REGULAR_RULE_REVIEW,
+  },
+  'content/c2/vocabulary/21-metaphysik-ontologie.json::Welthaftigkeit': {
+    plural: '-',
+    pluralStatus: REGULAR_RULE_REVIEW,
+  },
+  'content/c2/vocabulary/23-poststrukturalismus.json::Logozentrismus': {
+    plural: '-',
+    pluralStatus: REGULAR_RULE_REVIEW,
+  },
+  'content/c2/vocabulary/23-poststrukturalismus.json::Hyperrealit\u00e4t': {
+    plural: '-',
+    pluralStatus: REGULAR_RULE_REVIEW,
+  },
+  'content/c2/vocabulary/23-poststrukturalismus.json::Unentscheidbarkeit': {
+    plural: '-',
+    pluralStatus: REGULAR_RULE_REVIEW,
+  },
+  'content/c2/vocabulary/23-poststrukturalismus.json::Diff\u00e9rance': {
+    plural: '-',
+    pluralStatus: REGULAR_RULE_REVIEW,
+  },
+  'content/c2/vocabulary/24-kritische-theorie.json::Dialektik der Aufkl\u00e4rung': {
+    plural: '-',
+    pluralStatus: REGULAR_RULE_REVIEW,
+  },
+  'content/c2/vocabulary/24-kritische-theorie.json::Totalitarismusforschung': {
+    plural: '-',
+    pluralStatus: REGULAR_RULE_REVIEW,
+  },
+  'content/c2/vocabulary/24-kritische-theorie.json::mimetische Angleichung': {
+    plural: '-',
+    pluralStatus: REGULAR_RULE_REVIEW,
+  },
+  'content/c2/vocabulary/24-kritische-theorie.json::Kommunikationsrationalit\u00e4t': {
+    plural: '-',
+    pluralStatus: REGULAR_RULE_REVIEW,
+  },
+  'content/c2/vocabulary/24-kritische-theorie.json::normativ-kritische Ausrichtung': {
+    plural: '-',
+    pluralStatus: REGULAR_RULE_REVIEW,
+  },
+  'content/c2/vocabulary/27-uebersetzungswissenschaft.json::Idiomatizit\u00e4t': {
+    plural: '-',
+    pluralStatus: REGULAR_RULE_REVIEW,
+  },
+  'content/c2/vocabulary/27-uebersetzungswissenschaft.json::Interlingualit\u00e4t': {
+    plural: '-',
+    pluralStatus: REGULAR_RULE_REVIEW,
+  },
+  'content/c2/vocabulary/28-rechtshermeneutik.json::Verfassungskonformit\u00e4t': {
+    plural: '-',
+    pluralStatus: REGULAR_RULE_REVIEW,
+  },
+  'content/c2/vocabulary/29-staatsphilosophie-vertieft.json::Diskursethik': {
+    plural: '-',
+    pluralStatus: REGULAR_RULE_REVIEW,
+  },
+  'content/c2/vocabulary/27-uebersetzungswissenschaft.json::Deixis': {
+    plural: '-',
+    pluralStatus: REGULAR_RULE_REVIEW,
+  },
+  'content/c2/vocabulary/27-uebersetzungswissenschaft.json::Polysemie': {
+    plural: '-',
+    pluralStatus: REGULAR_RULE_REVIEW,
+  },
+  'content/c2/vocabulary/28-rechtshermeneutik.json::Systematik': {
+    plural: '-',
+    pluralStatus: REGULAR_RULE_REVIEW,
+  },
+  'content/c2/vocabulary/29-staatsphilosophie-vertieft.json::Konstitutionalismus': {
+    plural: '-',
+    pluralStatus: REGULAR_RULE_REVIEW,
+  },
+  'content/c2/vocabulary/29-staatsphilosophie-vertieft.json::Verfasstheit': {
+    plural: '-',
+    pluralStatus: REGULAR_RULE_REVIEW,
+  },
+  'content/c2/vocabulary/30-menschenrechte-voelkerrecht.json::Schutzverantwortung': {
+    plural: '-',
+    pluralStatus: REGULAR_RULE_REVIEW,
+  },
+  'content/c2/vocabulary/30-menschenrechte-voelkerrecht.json::V\u00f6lkerstrafrecht': {
+    plural: '-',
+    pluralStatus: REGULAR_RULE_REVIEW,
+  },
+  'content/c2/vocabulary/33-wissenschaftssoziologie.json::Wissensproduktion': {
+    plural: '-',
+    pluralStatus: REGULAR_RULE_REVIEW,
+  },
+  'content/c2/vocabulary/33-wissenschaftssoziologie.json::Akteur-Netzwerk-Theorie': {
+    plural: '-',
+    pluralStatus: REGULAR_RULE_REVIEW,
+  },
+  'content/c2/vocabulary/33-wissenschaftssoziologie.json::Positivismusstreit': {
+    plural: '-',
+    pluralStatus: REGULAR_RULE_REVIEW,
+  },
+  'content/c2/vocabulary/33-wissenschaftssoziologie.json::Wissenschaftlichkeit': {
+    plural: '-',
+    pluralStatus: REGULAR_RULE_REVIEW,
+  },
+  'content/c2/vocabulary/37-machttheorie-herrschaft.json::Strukturgewalt': {
+    plural: '-',
+    pluralStatus: REGULAR_RULE_REVIEW,
+  },
+  'content/c2/vocabulary/38-klassentheorie-ungleichheit.json::Sozialkapital': {
+    plural: '-',
+    pluralStatus: REGULAR_RULE_REVIEW,
+  },
+  'content/c2/vocabulary/39-zivilisationstheorie.json::Akzeleration': {
+    plural: '-',
+    pluralStatus: REGULAR_RULE_REVIEW,
+  },
+  'content/c2/vocabulary/39-zivilisationstheorie.json::Ambiguit\u00e4tstoleranz': {
+    plural: '-',
+    pluralStatus: REGULAR_RULE_REVIEW,
+  },
+  'content/c2/vocabulary/39-zivilisationstheorie.json::Beharrungsverm\u00f6gen': {
+    plural: '-',
+    pluralStatus: REGULAR_RULE_REVIEW,
+  },
+  'content/c2/vocabulary/40-ordoliberalismus.json::Pareto-Effizienz': {
+    plural: '-',
+    pluralStatus: REGULAR_RULE_REVIEW,
+  },
+  'content/c2/vocabulary/41-verhaltens\u00f6konomie.json::Nudging': {
+    plural: '-',
+    pluralStatus: REGULAR_RULE_REVIEW,
+  },
+  'content/c2/vocabulary/41-verhaltens\u00f6konomie.json::Selbstkontrolle': {
+    plural: '-',
+    pluralStatus: REGULAR_RULE_REVIEW,
+  },
+  'content/c2/vocabulary/41-verhaltens\u00f6konomie.json::Ambiguit\u00e4tsaversion': {
+    plural: '-',
+    pluralStatus: REGULAR_RULE_REVIEW,
+  },
+  'content/c2/vocabulary/41-verhaltens\u00f6konomie.json::Verlustaversion': {
+    plural: '-',
+    pluralStatus: REGULAR_RULE_REVIEW,
+  },
+  'content/c2/vocabulary/42-oekologische-oekonomie.json::Konvivialit\u00e4t': {
+    plural: '-',
+    pluralStatus: REGULAR_RULE_REVIEW,
+  },
+  'content/c2/vocabulary/42-oekologische-oekonomie.json::Postwachstums\u00f6konomie': {
+    plural: '-',
+    pluralStatus: REGULAR_RULE_REVIEW,
+  },
+  'content/c2/vocabulary/42-oekologische-oekonomie.json::Ressourcenproduktivit\u00e4t': {
+    plural: '-',
+    pluralStatus: REGULAR_RULE_REVIEW,
+  },
+  'content/c2/vocabulary/44-filmtheorie-auteur.json::Filmhistorizit\u00e4t': {
+    plural: '-',
+    pluralStatus: REGULAR_RULE_REVIEW,
+  },
+  'content/c2/vocabulary/46-gestaltpsychologie.json::Reizverarbeitung': {
+    plural: '-',
+    pluralStatus: REGULAR_RULE_REVIEW,
+  },
+  'content/c2/vocabulary/46-gestaltpsychologie.json::Ganzheitlichkeit': {
+    plural: '-',
+    pluralStatus: REGULAR_RULE_REVIEW,
+  },
+  'content/c2/vocabulary/48-deontologie-konsequentialismus.json::Wohlfahrtsmaximierung': {
+    plural: '-',
+    pluralStatus: REGULAR_RULE_REVIEW,
+  },
+  'content/c2/vocabulary/48-deontologie-konsequentialismus.json::Heteronomie': {
+    plural: '-',
+    pluralStatus: REGULAR_RULE_REVIEW,
+  },
+  'content/c2/vocabulary/48-deontologie-konsequentialismus.json::Zurechenbarkeit': {
+    plural: '-',
+    pluralStatus: REGULAR_RULE_REVIEW,
+  },
+  'content/a1/vocabulary/14-zeitangaben.json::Januar': {
+    article: 'MASKULIN',
+    plural: 'die Januare',
+    articleStatus: DUDEN_ALIGNED_REVIEW,
+    pluralStatus: DUDEN_ALIGNED_REVIEW,
+  },
+  'content/a1/vocabulary/14-zeitangaben.json::Februar': {
+    article: 'MASKULIN',
+    plural: 'die Februare',
+    articleStatus: 'duden_aligned_needs_native_signoff',
+    pluralStatus: 'duden_aligned_needs_native_signoff',
+  },
+  'content/a1/vocabulary/14-zeitangaben.json::März': {
+    article: 'MASKULIN',
+    plural: 'die Märze',
+    articleStatus: 'duden_aligned_needs_native_signoff',
+    pluralStatus: 'duden_aligned_needs_native_signoff',
+  },
+  'content/a1/vocabulary/14-zeitangaben.json::April': {
+    article: 'MASKULIN',
+    plural: 'die Aprile',
+    articleStatus: 'duden_aligned_needs_native_signoff',
+    pluralStatus: 'duden_aligned_needs_native_signoff',
+  },
+  'content/a1/vocabulary/14-zeitangaben.json::Mai': {
+    article: 'MASKULIN',
+    plural: 'die Maie',
+    articleStatus: 'duden_aligned_needs_native_signoff',
+    pluralStatus: 'duden_aligned_needs_native_signoff',
+  },
+  'content/a1/vocabulary/14-zeitangaben.json::Juni': {
+    article: 'MASKULIN',
+    plural: 'die Junis',
+    articleStatus: 'duden_aligned_needs_native_signoff',
+    pluralStatus: 'duden_aligned_needs_native_signoff',
+  },
+  'content/a1/vocabulary/14-zeitangaben.json::Juli': {
+    article: 'MASKULIN',
+    plural: 'die Julis',
+    articleStatus: 'duden_aligned_needs_native_signoff',
+    pluralStatus: 'duden_aligned_needs_native_signoff',
+  },
+  'content/a1/vocabulary/14-zeitangaben.json::August': {
+    article: 'MASKULIN',
+    plural: 'die Auguste',
+    articleStatus: 'duden_aligned_needs_native_signoff',
+    pluralStatus: 'duden_aligned_needs_native_signoff',
+  },
+  'content/a1/vocabulary/14-zeitangaben.json::September': {
+    article: 'MASKULIN',
+    plural: 'die September',
+    articleStatus: 'duden_aligned_needs_native_signoff',
+    pluralStatus: 'duden_aligned_needs_native_signoff',
+  },
+  'content/a1/vocabulary/14-zeitangaben.json::Oktober': {
+    article: 'MASKULIN',
+    plural: 'die Oktober',
+    articleStatus: 'duden_aligned_needs_native_signoff',
+    pluralStatus: 'duden_aligned_needs_native_signoff',
+  },
+  'content/a1/vocabulary/14-zeitangaben.json::November': {
+    article: 'MASKULIN',
+    plural: 'die November',
+    articleStatus: 'duden_aligned_needs_native_signoff',
+    pluralStatus: 'duden_aligned_needs_native_signoff',
+  },
+  'content/a1/vocabulary/14-zeitangaben.json::Dezember': {
+    article: 'MASKULIN',
+    plural: 'die Dezember',
+    articleStatus: DUDEN_ALIGNED_REVIEW,
+    pluralStatus: DUDEN_ALIGNED_REVIEW,
+  },
+  'content/a1/vocabulary/01-person.json::Leute': {
+    article: null,
+    plural: 'die Leute',
+    articleStatus: DUDEN_PLURALWORD_REVIEW,
+    pluralStatus: DUDEN_PLURALWORD_REVIEW,
+  },
+  'content/a1/vocabulary/02-familie-freunde.json::Geschwister': {
+    article: 'NEUTRUM',
+    plural: 'die Geschwister',
+    articleStatus: DUDEN_ALIGNED_REVIEW,
+    pluralStatus: DUDEN_ALIGNED_REVIEW,
+  },
+  'content/a1/vocabulary/02-familie-freunde.json::Leute': {
+    article: null,
+    plural: 'die Leute',
+    articleStatus: DUDEN_PLURALWORD_REVIEW,
+    pluralStatus: DUDEN_PLURALWORD_REVIEW,
+  },
+  'content/a1/vocabulary/02-familie-freunde.json::Eltern': {
+    article: null,
+    plural: 'die Eltern',
+    articleStatus: DUDEN_PLURALWORD_REVIEW,
+    pluralStatus: DUDEN_PLURALWORD_REVIEW,
+  },
+  'content/a1/vocabulary/03-koerper-gesundheit.json::Schmerzen': {
+    article: 'MASKULIN',
+    plural: 'die Schmerzen',
+    articleStatus: DUDEN_ALIGNED_REVIEW,
+    pluralStatus: DUDEN_ALIGNED_REVIEW,
+  },
+  'content/a1/vocabulary/04-wohnen.json::Möbel': {
+    article: 'NEUTRUM',
+    plural: 'die Möbel',
+    articleStatus: DUDEN_ALIGNED_REVIEW,
+    pluralStatus: DUDEN_ALIGNED_REVIEW,
+  },
+  'content/a1/vocabulary/11-freizeit.json::Ferien': {
+    article: null,
+    plural: 'die Ferien',
+    articleStatus: DUDEN_PLURALWORD_REVIEW,
+    pluralStatus: DUDEN_PLURALWORD_REVIEW,
+  },
+  'content/a1/vocabulary/17-laender-nationalitaeten.json::USA': {
+    article: null,
+    plural: 'die USA',
+    articleStatus: DUDEN_PLURALWORD_REVIEW,
+    pluralStatus: DUDEN_PLURALWORD_REVIEW,
+  },
+  'content/a2/vocabulary/04-wohnen-haushalt.json::Möbel': {
+    article: 'NEUTRUM',
+    plural: 'die Möbel',
+    articleStatus: DUDEN_ALIGNED_REVIEW,
+    pluralStatus: DUDEN_ALIGNED_REVIEW,
+  },
+  'content/a2/vocabulary/04-wohnen-haushalt.json::Nebenkosten': {
+    article: null,
+    plural: 'die Nebenkosten',
+    articleStatus: DUDEN_PLURALWORD_REVIEW,
+    pluralStatus: DUDEN_PLURALWORD_REVIEW,
+  },
+  'content/a2/vocabulary/08-dienstleistungen-amt.json::Steuern': {
+    article: 'FEMININ',
+    plural: 'die Steuern',
+    articleStatus: DUDEN_ALIGNED_REVIEW,
+    pluralStatus: DUDEN_ALIGNED_REVIEW,
+  },
+  'content/a2/vocabulary/09-bildung-berufsleben.json::Kenntnisse': {
+    article: 'FEMININ',
+    plural: 'die Kenntnisse',
+    articleStatus: DUDEN_ALIGNED_REVIEW,
+    pluralStatus: DUDEN_ALIGNED_REVIEW,
+  },
+  'content/a2/vocabulary/10-arbeit-wirtschaft.json::Überstunden': {
+    article: 'FEMININ',
+    plural: 'die Überstunden',
+    articleStatus: DUDEN_ALIGNED_REVIEW,
+    pluralStatus: DUDEN_ALIGNED_REVIEW,
+  },
+  'content/a2/vocabulary/12-kommunikation-medien.json::Daten': {
+    article: 'NEUTRUM',
+    plural: 'die Daten',
+    articleStatus: DUDEN_ALIGNED_REVIEW,
+    pluralStatus: DUDEN_ALIGNED_REVIEW,
+  },
+  'content/a2/vocabulary/18-geld-finanzen.json::Schulden': {
+    article: 'FEMININ',
+    plural: 'die Schulden',
+    articleStatus: DUDEN_ALIGNED_REVIEW,
+    pluralStatus: DUDEN_ALIGNED_REVIEW,
+  },
+  'content/c1/vocabulary/09-forschungsmethodik-akademie.json::Evidenz': {
+    plural: 'die Evidenzen',
+    pluralStatus: DUDEN_ALIGNED_REVIEW,
+  },
+  'content/c1/vocabulary/16-datenschutz-digitalethik.json::Nachvollziehbarkeit': {
+    plural: '-',
+    pluralStatus: DUDEN_SINGULAR_ONLY_REVIEW,
+  },
+  'content/c1/vocabulary/22-verwaltungsrecht-behörden.json::Entbürokratisierung': {
+    plural: 'die Entbürokratisierungen',
+    pluralStatus: DUDEN_ALIGNED_REVIEW,
+  },
+  'content/c1/vocabulary/25-geldpolitik-zentralbank.json::Überschuldung': {
+    plural: 'die Überschuldungen',
+    pluralStatus: DUDEN_ALIGNED_REVIEW,
+  },
+  'content/c1/vocabulary/25-geldpolitik-zentralbank.json::quantitative Lockerung': {
+    plural: 'die quantitativen Lockerungen',
+    pluralStatus: DUDEN_ALIGNED_REVIEW,
+  },
+  'content/c1/vocabulary/26-handelsabkommen-zoll.json::Reziprozität': {
+    plural: 'die Reziprozitäten',
+    pluralStatus: DUDEN_ALIGNED_REVIEW,
+  },
+  'content/c1/vocabulary/28-steuerpolitik-haushalt.json::Bruttoinlandsprodukt (BIP)': {
+    plural: 'die Bruttoinlandsprodukte',
+    pluralStatus: DUDEN_ALIGNED_REVIEW,
+  },
+  'content/c1/vocabulary/31-kuenstliche-intelligenz-ml.json::Künstliche Intelligenz': {
+    plural: '-',
+    pluralStatus: DUDEN_SENSE_SINGULAR_ONLY_REVIEW,
+  },
+  'content/c1/vocabulary/33-migrationsdebatte.json::Ressentiments': {
+    article: 'NEUTRUM',
+    plural: 'die Ressentiments',
+    articleStatus: DUDEN_ALIGNED_REVIEW,
+    pluralStatus: DUDEN_ALIGNED_REVIEW,
+  },
+  'content/c2/vocabulary/87-institutionelle-oekonomie.json::Informationskosten': {
+    article: null,
+    plural: 'die Informationskosten',
+    articleStatus: DUDEN_COMPOUND_PLURALWORD_REVIEW,
+    pluralStatus: DUDEN_COMPOUND_PLURALWORD_REVIEW,
   },
 }
 

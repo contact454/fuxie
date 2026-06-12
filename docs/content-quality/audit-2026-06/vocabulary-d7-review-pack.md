@@ -1,70 +1,70 @@
 # Vocabulary D7 Review Pack
 
-Generated: 2026-06-10T14:04:11.023Z
+Generated: 2026-06-12T15:12:14.301Z
 
 ## Scope
 
 - Vocabulary files: 369; entries: 10461; nouns: 6159.
-- Review queue rows: 1482.
-- Priority split: P1=626, P2=443, P3=413.
+- Review queue rows: 1011.
+- Priority split: P1=138, P2=443, P3=430.
 - Vocabulary cells covered: 6/6.
 
 ## Flag Counts
 
 | Flag | Rows |
 | --- | ---: |
-| plural_morphology_pending | 906 |
-| no_plural_marker_needs_policy | 140 |
-| article_missing_or_pluralia_policy | 29 |
+| plural_morphology_pending | 442 |
+| no_plural_marker_needs_policy | 138 |
+| article_missing_or_pluralia_policy | 0 |
 | loanword_policy | 1 |
-| semantic_definition_needs_review | 10 |
-| example_lexeme_presence_needs_review | 425 |
+| semantic_definition_needs_review | 0 |
+| example_lexeme_presence_needs_review | 439 |
 
 ## Level Counts
 
 | Level | Rows |
 | --- | ---: |
-| A1 | 134 |
-| A2 | 108 |
-| B1 | 131 |
-| B2 | 288 |
-| C1 | 381 |
-| C2 | 440 |
+| A1 | 113 |
+| A2 | 102 |
+| B1 | 132 |
+| B2 | 291 |
+| C1 | 202 |
+| C2 | 171 |
 
 ## First P1 Rows
 
-| Level | Word | Flags | File | Prompt |
-| --- | --- | --- | --- | --- |
-| A1 | Leute | article_missing_or_pluralia_policy | `content/a1/vocabulary/01-person.json` | Confirm article/genus policy, especially plural-only nouns. |
-| A1 | Geschwister | article_missing_or_pluralia_policy | `content/a1/vocabulary/02-familie-freunde.json` | Confirm article/genus policy, especially plural-only nouns. |
-| A1 | Leute | article_missing_or_pluralia_policy | `content/a1/vocabulary/02-familie-freunde.json` | Confirm article/genus policy, especially plural-only nouns. |
-| A1 | Eltern | article_missing_or_pluralia_policy | `content/a1/vocabulary/02-familie-freunde.json` | Confirm article/genus policy, especially plural-only nouns. |
-| A1 | Schmerzen | article_missing_or_pluralia_policy | `content/a1/vocabulary/03-koerper-gesundheit.json` | Confirm article/genus policy, especially plural-only nouns. |
-| A1 | Möbel | article_missing_or_pluralia_policy | `content/a1/vocabulary/04-wohnen.json` | Confirm article/genus policy, especially plural-only nouns. |
-| A1 | Ferien | article_missing_or_pluralia_policy | `content/a1/vocabulary/11-freizeit.json` | Confirm article/genus policy, especially plural-only nouns. |
-| A1 | Januar | article_missing_or_pluralia_policy, plural_morphology_pending | `content/a1/vocabulary/14-zeitangaben.json` | Confirm plural form or mark the noun as normally singular-only/uncountable. Confirm article/genus policy, especially plural-only nouns. |
-| A1 | Februar | article_missing_or_pluralia_policy, plural_morphology_pending | `content/a1/vocabulary/14-zeitangaben.json` | Confirm plural form or mark the noun as normally singular-only/uncountable. Confirm article/genus policy, especially plural-only nouns. |
-| A1 | März | article_missing_or_pluralia_policy, plural_morphology_pending | `content/a1/vocabulary/14-zeitangaben.json` | Confirm plural form or mark the noun as normally singular-only/uncountable. Confirm article/genus policy, especially plural-only nouns. |
-| A1 | April | article_missing_or_pluralia_policy, plural_morphology_pending | `content/a1/vocabulary/14-zeitangaben.json` | Confirm plural form or mark the noun as normally singular-only/uncountable. Confirm article/genus policy, especially plural-only nouns. |
-| A1 | Mai | article_missing_or_pluralia_policy, plural_morphology_pending | `content/a1/vocabulary/14-zeitangaben.json` | Confirm plural form or mark the noun as normally singular-only/uncountable. Confirm article/genus policy, especially plural-only nouns. |
-| A1 | Juni | article_missing_or_pluralia_policy, plural_morphology_pending | `content/a1/vocabulary/14-zeitangaben.json` | Confirm plural form or mark the noun as normally singular-only/uncountable. Confirm article/genus policy, especially plural-only nouns. |
-| A1 | Juli | article_missing_or_pluralia_policy, plural_morphology_pending | `content/a1/vocabulary/14-zeitangaben.json` | Confirm plural form or mark the noun as normally singular-only/uncountable. Confirm article/genus policy, especially plural-only nouns. |
-| A1 | August | article_missing_or_pluralia_policy, plural_morphology_pending | `content/a1/vocabulary/14-zeitangaben.json` | Confirm plural form or mark the noun as normally singular-only/uncountable. Confirm article/genus policy, especially plural-only nouns. |
-| A1 | September | article_missing_or_pluralia_policy, plural_morphology_pending | `content/a1/vocabulary/14-zeitangaben.json` | Confirm plural form or mark the noun as normally singular-only/uncountable. Confirm article/genus policy, especially plural-only nouns. |
-| A1 | Oktober | article_missing_or_pluralia_policy, plural_morphology_pending | `content/a1/vocabulary/14-zeitangaben.json` | Confirm plural form or mark the noun as normally singular-only/uncountable. Confirm article/genus policy, especially plural-only nouns. |
-| A1 | November | article_missing_or_pluralia_policy, plural_morphology_pending | `content/a1/vocabulary/14-zeitangaben.json` | Confirm plural form or mark the noun as normally singular-only/uncountable. Confirm article/genus policy, especially plural-only nouns. |
-| A1 | Dezember | article_missing_or_pluralia_policy, plural_morphology_pending | `content/a1/vocabulary/14-zeitangaben.json` | Confirm plural form or mark the noun as normally singular-only/uncountable. Confirm article/genus policy, especially plural-only nouns. |
-| A1 | zählen | semantic_definition_needs_review | `content/a1/vocabulary/15-zahlen.json` | Check that the German definition is not circular and matches the Vietnamese meaning. |
-| A1 | USA | article_missing_or_pluralia_policy, no_plural_marker_needs_policy | `content/a1/vocabulary/17-laender-nationalitaeten.json` | Verify whether "-" is pedagogically correct for this noun. Confirm article/genus policy, especially plural-only nouns. |
-| A2 | Möbel | article_missing_or_pluralia_policy | `content/a2/vocabulary/04-wohnen-haushalt.json` | Confirm article/genus policy, especially plural-only nouns. |
-| A2 | Nebenkosten | article_missing_or_pluralia_policy | `content/a2/vocabulary/04-wohnen-haushalt.json` | Confirm article/genus policy, especially plural-only nouns. |
-| A2 | Steuern | article_missing_or_pluralia_policy | `content/a2/vocabulary/08-dienstleistungen-amt.json` | Confirm article/genus policy, especially plural-only nouns. |
-| A2 | Kenntnisse | article_missing_or_pluralia_policy | `content/a2/vocabulary/09-bildung-berufsleben.json` | Confirm article/genus policy, especially plural-only nouns. |
-| A2 | Überstunden | article_missing_or_pluralia_policy | `content/a2/vocabulary/10-arbeit-wirtschaft.json` | Confirm article/genus policy, especially plural-only nouns. |
-| A2 | Daten | article_missing_or_pluralia_policy | `content/a2/vocabulary/12-kommunikation-medien.json` | Confirm article/genus policy, especially plural-only nouns. |
-| A2 | Schulden | article_missing_or_pluralia_policy | `content/a2/vocabulary/18-geld-finanzen.json` | Confirm article/genus policy, especially plural-only nouns. |
-| B2 | soziale Mobilität | plural_morphology_pending, semantic_definition_needs_review | `content/b2/vocabulary/24-soziale-ungleichheit.json` | Confirm plural form or mark the noun as normally singular-only/uncountable. Check that the German definition is not circular and matches the Vietnamese meaning. |
-| C1 | Meinungsbildung | plural_morphology_pending | `content/c1/vocabulary/01-gesellschaftskritik-diskurs.json` | Confirm plural form or mark the noun as normally singular-only/uncountable. |
+| Level | Word | Article status | Plural status | Flags | File | Prompt |
+| --- | --- | --- | --- | --- | --- | --- |
+| C1 | Genom-Editierung |  | not_applicable_or_needs_review | plural_morphology_pending | `content/c1/vocabulary/03-bioethik-gentechnik.json` | Confirm plural form or mark the noun as normally singular-only/uncountable. |
+| C1 | Nutzungsdruck |  | not_applicable_or_needs_review | plural_morphology_pending | `content/c1/vocabulary/04-urbanisierung-raumplanung.json` | Confirm plural form or mark the noun as normally singular-only/uncountable. |
+| C1 | Entgeltfortzahlung |  | not_applicable_or_needs_review | plural_morphology_pending | `content/c1/vocabulary/10-arbeitsrecht-sozialpartnerschaft.json` | Confirm plural form or mark the noun as normally singular-only/uncountable. |
+| C1 | Direktionsrecht |  | not_applicable_or_needs_review | plural_morphology_pending | `content/c1/vocabulary/10-arbeitsrecht-sozialpartnerschaft.json` | Confirm plural form or mark the noun as normally singular-only/uncountable. |
+| C1 | Primärenergieverbrauch |  | not_applicable_or_needs_review | plural_morphology_pending | `content/c1/vocabulary/20-energiepolitik-ressourcen.json` | Confirm plural form or mark the noun as normally singular-only/uncountable. |
+| C1 | Energieautarkie |  | not_applicable_or_needs_review | plural_morphology_pending | `content/c1/vocabulary/20-energiepolitik-ressourcen.json` | Confirm plural form or mark the noun as normally singular-only/uncountable. |
+| C1 | Nicht-Einmischung |  | not_applicable_or_needs_review | plural_morphology_pending | `content/c1/vocabulary/21-voelkerrecht-souveraenitaet.json` | Confirm plural form or mark the noun as normally singular-only/uncountable. |
+| C1 | Präventivhaft |  | not_applicable_or_needs_review | plural_morphology_pending | `content/c1/vocabulary/24-justizwesen-strafvollzug.json` | Confirm plural form or mark the noun as normally singular-only/uncountable. |
+| C1 | Koevolution |  | not_applicable_or_needs_review | plural_morphology_pending | `content/c1/vocabulary/30-genetik-evolution.json` | Confirm plural form or mark the noun as normally singular-only/uncountable. |
+| C1 | Klonen |  | not_applicable_or_needs_review | plural_morphology_pending | `content/c1/vocabulary/30-genetik-evolution.json` | Confirm plural form or mark the noun as normally singular-only/uncountable. |
+| C1 | maschinelles Lernen |  | not_applicable_or_needs_review | example_lexeme_presence_needs_review, plural_morphology_pending | `content/c1/vocabulary/31-kuenstliche-intelligenz-ml.json` | Confirm plural form or mark the noun as normally singular-only/uncountable. Check that examples clearly demonstrate the target lexeme or an acceptable inflected form. |
+| C1 | Datenmanagement |  | not_applicable_or_needs_review | plural_morphology_pending | `content/c1/vocabulary/35-urbanisierung-smart-city.json` | Confirm plural form or mark the noun as normally singular-only/uncountable. |
+| C1 | Postfaktische |  | not_applicable_or_needs_review | plural_morphology_pending | `content/c1/vocabulary/38-pressefreiheit-zensur.json` | Confirm plural form or mark the noun as normally singular-only/uncountable. |
+| C1 | Meinungsäußerungsfreiheit |  | not_applicable_or_needs_review | plural_morphology_pending | `content/c1/vocabulary/38-pressefreiheit-zensur.json` | Confirm plural form or mark the noun as normally singular-only/uncountable. |
+| C1 | soziale Kognition |  | not_applicable_or_needs_review | plural_morphology_pending | `content/c1/vocabulary/41-entwicklungspsychologie.json` | Confirm plural form or mark the noun as normally singular-only/uncountable. |
+| C1 | Identitätsdiffusion |  | not_applicable_or_needs_review | plural_morphology_pending | `content/c1/vocabulary/41-entwicklungspsychologie.json` | Confirm plural form or mark the noun as normally singular-only/uncountable. |
+| C1 | interindividuelle Variabilität |  | not_applicable_or_needs_review | plural_morphology_pending | `content/c1/vocabulary/41-entwicklungspsychologie.json` | Confirm plural form or mark the noun as normally singular-only/uncountable. |
+| C1 | psychosexuelle Entwicklung |  | not_applicable_or_needs_review | plural_morphology_pending | `content/c1/vocabulary/41-entwicklungspsychologie.json` | Confirm plural form or mark the noun as normally singular-only/uncountable. |
+| C1 | Metakognition |  | not_applicable_or_needs_review | plural_morphology_pending | `content/c1/vocabulary/41-entwicklungspsychologie.json` | Confirm plural form or mark the noun as normally singular-only/uncountable. |
+| C1 | Supraleitung |  | not_applicable_or_needs_review | plural_morphology_pending | `content/c1/vocabulary/45-nanotechnologie.json` | Confirm plural form or mark the noun as normally singular-only/uncountable. |
+| C1 | Amorphität |  | not_applicable_or_needs_review | plural_morphology_pending | `content/c1/vocabulary/45-nanotechnologie.json` | Confirm plural form or mark the noun as normally singular-only/uncountable. |
+| C1 | Bioverträglichkeit |  | not_applicable_or_needs_review | plural_morphology_pending | `content/c1/vocabulary/45-nanotechnologie.json` | Confirm plural form or mark the noun as normally singular-only/uncountable. |
+| C1 | Corporate Governance |  | not_applicable_or_needs_review | plural_morphology_pending | `content/c1/vocabulary/46-wirtschaftsethik.json` | Confirm plural form or mark the noun as normally singular-only/uncountable. |
+| C1 | Corporate Citizenship |  | not_applicable_or_needs_review | plural_morphology_pending | `content/c1/vocabulary/46-wirtschaftsethik.json` | Confirm plural form or mark the noun as normally singular-only/uncountable. |
+| C1 | Proliferation |  | not_applicable_or_needs_review | plural_morphology_pending | `content/c1/vocabulary/52-sicherheitspolitik-nato.json` | Confirm plural form or mark the noun as normally singular-only/uncountable. |
+| C1 | Selbstermächtigung |  | not_applicable_or_needs_review | plural_morphology_pending | `content/c1/vocabulary/53-entwicklungshilfe-ngos.json` | Confirm plural form or mark the noun as normally singular-only/uncountable. |
+| C1 | Good Governance |  | not_applicable_or_needs_review | plural_morphology_pending | `content/c1/vocabulary/53-entwicklungshilfe-ngos.json` | Confirm plural form or mark the noun as normally singular-only/uncountable. |
+| C1 | Kapazitätsstärkung |  | not_applicable_or_needs_review | plural_morphology_pending | `content/c1/vocabulary/53-entwicklungshilfe-ngos.json` | Confirm plural form or mark the noun as normally singular-only/uncountable. |
+| C1 | Schleuserkriminalität |  | not_applicable_or_needs_review | plural_morphology_pending | `content/c1/vocabulary/54-flucht-asylrecht.json` | Confirm plural form or mark the noun as normally singular-only/uncountable. |
+| C1 | Fluchtursachen |  | not_applicable_or_needs_review | plural_morphology_pending | `content/c1/vocabulary/54-flucht-asylrecht.json` | Confirm plural form or mark the noun as normally singular-only/uncountable. |
 
 ## Reviewer Workflow
 

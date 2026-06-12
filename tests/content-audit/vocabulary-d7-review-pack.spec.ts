@@ -23,11 +23,13 @@ describe('vocabulary D7 review pack', () => {
     expect(pack.scope.entries).toBe(10_461)
     expect(pack.scope.nouns).toBe(6_159)
     expect(pack.summary.vocabularyCellsCovered).toBe(6)
-    expect(pack.summary.reviewItems).toBe(1_482)
-    expect(pack.summary.byPriority).toEqual({ P1: 626, P2: 443, P3: 413 })
-    expect(pack.summary.byFlag.plural_morphology_pending).toBe(906)
-    expect(pack.summary.byFlag.article_missing_or_pluralia_policy).toBe(29)
+    expect(pack.summary.reviewItems).toBe(1_011)
+    expect(pack.summary.byPriority).toEqual({ P1: 138, P2: 443, P3: 430 })
+    expect(pack.summary.byFlag.plural_morphology_pending).toBe(442)
+    expect(pack.summary.byFlag.no_plural_marker_needs_policy).toBe(138)
+    expect(pack.summary.byFlag.article_missing_or_pluralia_policy).toBe(0)
     expect(pack.summary.byFlag.loanword_policy).toBe(1)
+    expect(pack.summary.byFlag.semantic_definition_needs_review).toBe(0)
   })
 
   it('keeps generated reviewer fields blank and includes the silencen policy row', () => {

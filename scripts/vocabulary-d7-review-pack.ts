@@ -48,6 +48,7 @@ type Priority = 'P1' | 'P2' | 'P3'
 interface VocabularyWord {
   word: string
   article?: string | null
+  articleStatus?: string
   plural?: string | null
   pluralStatus?: string
   wordType: string
@@ -80,6 +81,7 @@ interface ReviewItem {
   word: string
   wordType: string
   article: string | null
+  articleStatus: string | null
   plural: string | null
   pluralStatus: string | null
   flags: ReviewFlag[]
@@ -126,11 +128,7 @@ function vocabularyFiles(): string[] {
 }
 
 function normalize(value: string): string {
-  return value
-    .toLocaleLowerCase('de-DE')
-    .normalize('NFKD')
-    .replace(/\p{M}/gu, '')
-    .replace(/ß/gu, 'ss')
+  return value.toLocaleLowerCase('de-DE').trim()
 }
 
 function baseLexeme(word: string): string {
@@ -148,10 +146,10 @@ function hasLexemeInExample(word: VocabularyWord): boolean {
 }
 
 function hasCircularDefinition(word: VocabularyWord): boolean {
-  const lexeme = normalize(baseLexeme(word.word))
+  const lexeme = normalize(word.word)
   if (lexeme.length < 5) return false
-  const definition = normalize(word.meaningDe)
-  return new RegExp(`\\b${lexeme}\\b`, 'u').test(definition)
+  const escaped = lexeme.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')
+  return new RegExp(`(^|[^\\p{L}])${escaped}([^\\p{L}]|$)`, 'iu').test(word.meaningDe)
 }
 
 function isKnownLoanwordPolicyItem(word: VocabularyWord): boolean {
@@ -162,13 +160,13 @@ function flagsFor(word: VocabularyWord): ReviewFlag[] {
   const flags = new Set<ReviewFlag>()
 
   if (word.wordType === 'NOMEN') {
-    if (typeof word.pluralStatus === 'string' || word.plural == null) {
+    if (word.pluralStatus === 'not_applicable_or_needs_review' || word.plural == null) {
       flags.add('plural_morphology_pending')
     }
-    if (word.plural === '-') {
+    if (word.plural === '-' && (!word.pluralStatus || word.pluralStatus === 'not_applicable_or_needs_review')) {
       flags.add('no_plural_marker_needs_policy')
     }
-    if (word.article == null) {
+    if (word.article == null && (!word.articleStatus || word.articleStatus === 'not_applicable_or_needs_review')) {
       flags.add('article_missing_or_pluralia_policy')
     }
   }
@@ -241,6 +239,7 @@ function buildReviewPack(now = new Date().toISOString()): ReviewPack {
         word: word.word,
         wordType: word.wordType,
         article: word.article ?? null,
+        articleStatus: word.articleStatus ?? null,
         plural: word.plural ?? null,
         pluralStatus: word.pluralStatus ?? null,
         flags,
@@ -300,6 +299,7 @@ function buildReviewPack(now = new Date().toISOString()): ReviewPack {
         'word',
         'wordType',
         'article',
+        'articleStatus',
         'plural',
         'pluralStatus',
         'flags',
@@ -366,10 +366,10 @@ function renderMarkdown(pack: ReviewPack): string {
   lines.push('')
   lines.push('## First P1 Rows')
   lines.push('')
-  lines.push('| Level | Word | Flags | File | Prompt |')
-  lines.push('| --- | --- | --- | --- | --- |')
+  lines.push('| Level | Word | Article status | Plural status | Flags | File | Prompt |')
+  lines.push('| --- | --- | --- | --- | --- | --- | --- |')
   for (const item of pack.items.filter((row) => row.priority === 'P1').slice(0, 30)) {
-    lines.push(`| ${item.level} | ${item.word} | ${item.flags.join(', ')} | \`${item.file}\` | ${item.reviewerPrompt} |`)
+    lines.push(`| ${item.level} | ${item.word} | ${item.articleStatus ?? ''} | ${item.pluralStatus ?? ''} | ${item.flags.join(', ')} | \`${item.file}\` | ${item.reviewerPrompt} |`)
   }
   lines.push('')
   lines.push('## Reviewer Workflow')

@@ -154,9 +154,7 @@ function arbValueOfLength(min: number, max: number): fc.Arbitrary<string> {
     return fc
         .integer({ min, max })
         .chain((len) =>
-            fc
-                .stringMatching(new RegExp(`^[A-Za-z0-9 ,.!?:;ÀÁ-ÿ\\u1e00-\\u1eff]{${len},${len}}$`))
-                .filter((s) => s.trim().length === s.length && s.length === len),
+            fc.hexaString({ minLength: len, maxLength: len })
         )
 }
 

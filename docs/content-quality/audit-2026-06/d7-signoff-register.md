@@ -1,6 +1,6 @@
 # D7 Academic Signoff Register
 
-Generated: 2026-06-10T14:05:32.387Z
+Generated: 2026-06-12T15:12:57.389Z
 
 ## Summary
 
@@ -9,7 +9,7 @@ Generated: 2026-06-10T14:05:32.387Z
 - Academic signed: 1/36; pending: 35/36.
 - Listening audio pending: 6/6.
 - Review inputs: human=60, D2=24, D3=24, D4=12.
-- Vocabulary D7 review queue: 1482 rows, including 626 P1 rows.
+- Vocabulary D7 review queue: 1011 rows, including 138 P1 rows.
 - Missing sample files: 0.
 
 ## Rules

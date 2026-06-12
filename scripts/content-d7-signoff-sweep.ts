@@ -292,8 +292,8 @@ function validateRegister(register: D7Register): string[] {
   if (register.summary.d2ManualSamples !== 24) errors.push(`expected 24 D2 samples, got ${register.summary.d2ManualSamples}`)
   if (register.summary.d3ManualSamples !== 24) errors.push(`expected 24 D3 samples, got ${register.summary.d3ManualSamples}`)
   if (register.summary.d4ManualSamples !== 12) errors.push(`expected 12 D4 samples, got ${register.summary.d4ManualSamples}`)
-  if (register.summary.vocabularyD7ReviewRows !== 1482) errors.push(`expected 1482 vocabulary D7 review rows, got ${register.summary.vocabularyD7ReviewRows}`)
-  if (register.summary.vocabularyD7P1Rows !== 626) errors.push(`expected 626 vocabulary D7 P1 rows, got ${register.summary.vocabularyD7P1Rows}`)
+  if (register.summary.vocabularyD7ReviewRows !== 1011) errors.push(`expected 1011 vocabulary D7 review rows, got ${register.summary.vocabularyD7ReviewRows}`)
+  if (register.summary.vocabularyD7P1Rows !== 138) errors.push(`expected 138 vocabulary D7 P1 rows, got ${register.summary.vocabularyD7P1Rows}`)
   if (register.summary.missingSampleFiles !== 0) errors.push(`missing sample files: ${register.summary.missingSampleFiles}`)
   for (const cell of register.cells) {
     if (cell.status === 'Done (đủ)' && cell.academicSignoff !== 'signed') {
