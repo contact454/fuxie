@@ -12,6 +12,9 @@ importers:
         specifier: ^3.1014.0
         version: 3.1014.0
     devDependencies:
+      '@fuxie/ui':
+        specifier: workspace:*
+        version: link:packages/ui
       '@google-cloud/storage':
         specifier: ^7.19.0
         version: 7.19.0(encoding@0.1.13)

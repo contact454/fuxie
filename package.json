@@ -63,6 +63,7 @@
     "test:integration:install": "playwright install --with-deps chromium"
   },
   "devDependencies": {
+    "@fuxie/ui": "workspace:*",
     "@google-cloud/storage": "^7.19.0",
     "@google-cloud/text-to-speech": "^6.4.0",
     "@google/genai": "^1.43.0",
