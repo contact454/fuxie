@@ -104,3 +104,19 @@ export const radii = {
   xl: "16px",
   full: "9999px",
 } as const;
+
+// ===== 2.5D / mobile-first additions (redesign 2026-06) =====
+export const elevation = {
+  iso: "0 8px 16px -8px rgba(23,59,86,.28)",
+  card: "0 2px 8px -2px rgba(23,59,86,.16)",
+  press: "inset 0 1px 2px rgba(23,59,86,.24)",
+} as const;
+export const radius = { sm: 10, md: 16, lg: 24, pill: 999 } as const;
+export const space = { 1: 4, 2: 8, 3: 12, 4: 16, 5: 24, 6: 32, 7: 48 } as const;
+export const type = {
+  display: { size: 28, leading: 34 }, h1: { size: 22, leading: 28 },
+  h2: { size: 18, leading: 24 }, body: { size: 16, leading: 24 },
+  caption: { size: 13, leading: 18 }, font: '"Nunito", system-ui, sans-serif',
+} as const;
+export const motion = { easeTactile: "cubic-bezier(.2,.8,.2,1.2)", durTap: 120, durReward: 480 } as const;
+export const tapMin = 44 as const;
