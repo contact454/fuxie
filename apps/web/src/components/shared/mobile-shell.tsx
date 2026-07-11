@@ -122,7 +122,7 @@ export function MobileShell({ dailyGoal: initialDailyGoal, children }: MobileShe
             )}
 
             {/* Desktop: normal fixed sidebar */}
-            <div className="hidden md:block fixed left-0 top-0 z-30">
+            <div className="desktop-sidebar hidden md:block fixed left-0 top-0 z-30">
                 <Sidebar dailyGoal={dailyGoal} />
             </div>
 
@@ -160,8 +160,8 @@ export function MobileShell({ dailyGoal: initialDailyGoal, children }: MobileShe
                             flow="nav.mobile.bottom"
                             source={item.labelKey}
                             className={`bottom-nav-item focus-visible:outline-[var(--fuxie-blue-200)] ${
-                                isActive 
-                                    ? 'bottom-nav-item-active bg-[#2ec4b6] text-[var(--fuxie-blue-900)] rounded-xl' 
+                                isActive
+                                    ? 'bottom-nav-item-active bg-[#2ec4b6] text-[var(--fuxie-blue-900)] rounded-xl'
                                     : 'text-white/80 hover:bg-white/10 hover:text-white'
                             }`}
                         >

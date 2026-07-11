@@ -249,7 +249,7 @@ export function SkillMotivationLayer({
                 data-reward-state="preview"
                 data-reward-context="true"
                 data-reward-key={rewardKey}
-                className="relative flex h-full shrink-0 items-center gap-2 rounded-full bg-[#ffb703] px-3 py-1 shadow-md shadow-sky-950/20"
+                className="relative flex h-fit self-center shrink-0 items-center gap-1.5 rounded-full bg-[#ffb703] px-2.5 py-1 shadow-sm"
             >
                 <Image
                     src={rewardSrc}

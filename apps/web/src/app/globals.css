@@ -1,5 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap");
 @import "tailwindcss";
+@source "../../../../packages/ui/src/**/*.tsx";
 @import "../styles/animations.css";
 
 /* =====================================================================
@@ -59,9 +60,83 @@
   /* Reward amber — Reward_State subtree ONLY (Req 16.1, 16.5).
    * See containment rule in the comment block above. */
   --fuxie-reward: #ffb703;
+
+  /* 3D button lip (border-bottom) colors */
+  --fuxie-lip-action: #2c8dc9;
+  --fuxie-lip-success: #1fa396;
+  --fuxie-lip-danger: #ea2b2b;
+  --fuxie-lip-gray: #ccd9e0;
+
+  /* ===== 2.5D / mobile-first additions (redesign 2026-06) ===== */
+  /* Elevation — bóng mềm thống nhất cho thế giới phẳng */
+  --fuxie-shadow-iso:   0 8px 16px -8px rgba(23,59,86,.28);
+  --fuxie-shadow-card:  0 2px 8px -2px rgba(23,59,86,.16);
+  --fuxie-shadow-press: inset 0 1px 2px rgba(23,59,86,.24);
+
+  /* Bo góc — tactile, game-like */
+  --fuxie-radius-sm: 10px;
+  --fuxie-radius-md: 16px;
+  --fuxie-radius-lg: 24px;
+  --fuxie-radius-pill: 999px;
+
+  /* Spacing 4pt */
+  --fuxie-space-1: 4px;  --fuxie-space-2: 8px;  --fuxie-space-3: 12px;
+  --fuxie-space-4: 16px; --fuxie-space-5: 24px; --fuxie-space-6: 32px; --fuxie-space-7: 48px;
+
+  /* Typography — 1 typeface, scale mobile (font-size/line-height) */
+  --fuxie-font: var(--font-nunito), "Nunito", system-ui, sans-serif;
+  --fuxie-text-display: 28px; --fuxie-leading-display: 34px;
+  --fuxie-text-h1: 22px;      --fuxie-leading-h1: 28px;
+  --fuxie-text-h2: 18px;      --fuxie-leading-h2: 24px;
+  --fuxie-text-body: 16px;    --fuxie-leading-body: 24px;
+  --fuxie-text-caption: 13px; --fuxie-leading-caption: 18px;
+
+  /* Motion — chỉ ở state-change; asset lớn đứng yên */
+  --fuxie-ease-tactile: cubic-bezier(.2,.8,.2,1.2);
+  --fuxie-dur-tap: 120ms;
+  --fuxie-dur-reward: 480ms;
+
+  /* Touch target tối thiểu mobile */
+  --fuxie-tap-min: 44px;
 }
 
 @theme {
+  /* 2.5D Design Tokens */
+  --shadow-fuxie-iso: var(--fuxie-shadow-iso);
+  --shadow-fuxie-card: var(--fuxie-shadow-card);
+  --shadow-fuxie-press: var(--fuxie-shadow-press);
+
+  --radius-fuxie-sm: var(--fuxie-radius-sm);
+  --radius-fuxie-md: var(--fuxie-radius-md);
+  --radius-fuxie-lg: var(--fuxie-radius-lg);
+  --radius-fuxie-pill: var(--fuxie-radius-pill);
+
+  --spacing-fuxie-1: var(--fuxie-space-1);
+  --spacing-fuxie-2: var(--fuxie-space-2);
+  --spacing-fuxie-3: var(--fuxie-space-3);
+  --spacing-fuxie-4: var(--fuxie-space-4);
+  --spacing-fuxie-5: var(--fuxie-space-5);
+  --spacing-fuxie-6: var(--fuxie-space-6);
+  --spacing-fuxie-7: var(--fuxie-space-7);
+  --spacing-fuxie-tap-min: var(--fuxie-tap-min);
+
+  --font-fuxie: var(--fuxie-font);
+
+  --text-fuxie-display: var(--fuxie-text-display);
+  --text-fuxie-display--line-height: var(--fuxie-leading-display);
+  --text-fuxie-h1: var(--fuxie-text-h1);
+  --text-fuxie-h1--line-height: var(--fuxie-leading-h1);
+  --text-fuxie-h2: var(--fuxie-text-h2);
+  --text-fuxie-h2--line-height: var(--fuxie-leading-h2);
+  --text-fuxie-body: var(--fuxie-text-body);
+  --text-fuxie-body--line-height: var(--fuxie-leading-body);
+  --text-fuxie-caption: var(--fuxie-text-caption);
+  --text-fuxie-caption--line-height: var(--fuxie-leading-caption);
+
+  --transition-timing-function-fuxie-tactile: var(--fuxie-ease-tactile);
+  --transition-duration-fuxie-tap: var(--fuxie-dur-tap);
+  --transition-duration-fuxie-reward: var(--fuxie-dur-reward);
+
   /* Brand */
   --color-fuxie-primary: #60a8e4;
   --color-fuxie-secondary: #3c78a8;
@@ -1288,4 +1363,103 @@ body[data-exam-in-progress="true"] .mobile-main {
   .fuxie-live-3d-frame-4 {
     opacity: 0;
   }
+}
+
+/* ===== RESKIN 2026-07 UNIFIED UI SKIN ===== */
+.fuxie-learn-bg {
+  position: relative;
+  background-color: var(--fuxie-blue-50) !important;
+  z-index: 0;
+}
+.fuxie-learn-bg > * {
+  position: relative;
+  z-index: 10;
+}
+.fuxie-learn-bg::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: url('/fig/worldmap-styleframe-final.png');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  opacity: 0.55;
+  filter: blur(4px);
+  pointer-events: none;
+  z-index: 0;
+}
+
+.fuxie-gameplay-bg {
+  position: relative;
+  background-color: var(--fuxie-blue-50) !important;
+  z-index: 0;
+}
+.fuxie-gameplay-bg > * {
+  position: relative;
+  z-index: 10;
+}
+.fuxie-gameplay-bg::before {
+  display: none !important;
+}
+
+/* Make card stages solid, high-contrast white cards during gameplay */
+.fuxie-gameplay-bg .backdrop-blur-md,
+.fuxie-gameplay-bg div[class*="backdrop-blur"] {
+  background: #ffffff !important;
+  backdrop-filter: none !important;
+  -webkit-backdrop-filter: none !important;
+  border: 2px solid var(--fuxie-blue-200) !important;
+  box-shadow: var(--fuxie-shadow-card) !important;
+}
+
+/* Typography and weight upgrades to Duolingo standard (Nunito 800/900) */
+.fuxie-gameplay-bg p,
+.fuxie-gameplay-bg span,
+.fuxie-gameplay-bg h2 {
+  font-family: var(--fuxie-font);
+}
+
+.fuxie-gameplay-bg .font-bold {
+  font-weight: 800 !important;
+}
+
+.fuxie-gameplay-bg .font-semibold {
+  font-weight: 700 !important;
+}
+
+.fuxie-gameplay-bg .text-2xl,
+.fuxie-gameplay-bg .text-3xl,
+.fuxie-gameplay-bg .text-4xl {
+  font-weight: 900 !important;
+}
+
+.fuxie-header-base {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  height: calc(56px + env(safe-area-inset-top, 0px)) !important;
+  padding-top: env(safe-area-inset-top, 0px) !important;
+  background: rgba(255, 255, 255, 0.9) !important;
+  backdrop-filter: blur(12px) !important;
+  -webkit-backdrop-filter: blur(12px) !important;
+  border-bottom: 1px solid var(--fuxie-blue-200) !important;
+  padding-left: 16px !important;
+  padding-right: 16px !important;
+  box-shadow: 0 1px 2px rgba(23, 59, 86, 0.05) !important;
+  box-sizing: border-box !important;
+  z-index: 40 !important;
+}
+
+/* Immersive gameplay overrides */
+body[data-gameplay-in-progress="true"] .desktop-sidebar,
+body[data-gameplay-in-progress="true"] .mobile-header,
+body[data-gameplay-in-progress="true"] .bottom-nav,
+body[data-gameplay-in-progress="true"] .review-hero-wrapper {
+  display: none !important;
+}
+
+body[data-gameplay-in-progress="true"] .mobile-main {
+  padding-top: 0 !important;
+  padding-bottom: 0 !important;
+  margin-left: 0 !important;
 }
