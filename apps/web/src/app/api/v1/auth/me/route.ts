@@ -4,6 +4,7 @@ import { z } from 'zod'
 import { cookies } from 'next/headers'
 import { withAuth, NotFoundError } from '@/lib/auth/middleware'
 import { handleApiError } from '@/lib/api/error-handler'
+import { SUPPORTED_UI_LOCALES } from '@/i18n/locales'
 
 /**
  * GET /api/v1/auth/me
@@ -57,7 +58,7 @@ export async function GET(req: NextRequest) {
 }
 
 const updateProfileSchema = z.object({
-    uiLanguage: z.enum(['vi', 'en', 'de']).optional(),
+    uiLanguage: z.enum(SUPPORTED_UI_LOCALES).optional(),
 })
 
 /**
