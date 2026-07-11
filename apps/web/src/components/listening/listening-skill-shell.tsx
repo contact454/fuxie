@@ -21,10 +21,11 @@
  *    The probe lives next to the player; the inner `LessonPlayer` has its
  *    own `<audio ref={…}>` that drives playback. The two `<audio>` tags // locale-allow
  *    share the URL so the browser cache satisfies both with one request.
- *  - On retry, increments `retryNonce` so the dynamic chunk remounts AND
- *    the probe re-fires its load/error events. The shell stays mounted
- *    around it so progress that lives in the inner player (answers,
- *    question index) is preserved across the FSM transition (Req 6.10).
+ *  - On retry, the probe re-fires `load()` without remounting
+ *    `LessonPlayerDynamic`, so question index, selected answer, play count
+ *    and transcript state are preserved (Req 6.10).
+ *  - Sets `hideDefaultPrimaryCta` so Start/Check/Continue inside the
+ *    immersive player are the sole primary actions (no outer duplicate CTA).
  *
  * Validates: Requirements 6.1, 6.2, 6.3, 6.5, 6.10, 6.11, 11.5
  */
@@ -37,7 +38,7 @@ import {
     type SkillPlayerShellLabels,
 } from '@/components/gamification/skill-player-shell'
 
-type LessonPlayerProps = React.ComponentProps<typeof LessonPlayerDynamic>
+type LessonPlayerProps = React.ComponentProps<typeof LessonPlayerDynamic> & { isVisualQa?: boolean }
 
 export interface ListeningSkillShellProps {
     player: LessonPlayerProps
@@ -51,13 +52,22 @@ export function ListeningSkillShell({
     primaryCtaHref,
 }: ListeningSkillShellProps) {
     const probeRef = useRef<HTMLAudioElement | null>(null)
-    const [assetLoaded, setAssetLoaded] = useState(false)
+    const isVisualQa = !!player.isVisualQa
+    const [assetLoaded, setAssetLoaded] = useState(isVisualQa)
     const [assetError, setAssetError] = useState(false)
+    // Bumps only the probe load cycle — never used as a React key on the player.
     const [retryNonce, setRetryNonce] = useState(0)
 
     // Reset signals every time the learner taps "Thử lại" so the FSM
     // starts a fresh 10-second window around the new probe load attempt.
+    // Player identity is stable across retries (no remount).
     useEffect(() => {
+        if (isVisualQa) {
+            setAssetLoaded(true)
+            setAssetError(false)
+            return
+        }
+
         setAssetLoaded(false)
         setAssetError(false)
 
@@ -78,6 +88,7 @@ export function ListeningSkillShell({
 
         // Force a fresh load attempt on retry (browser may have cached the
         // previous error). Calling load() is safe even on initial mount.
+        // Probe never calls play() — metadata only.
         try {
             audio.load()
         } catch {
@@ -91,7 +102,7 @@ export function ListeningSkillShell({
             audio.removeEventListener('canplaythrough', onLoaded)
             audio.removeEventListener('error', onError)
         }
-    }, [retryNonce, player.audioUrl])
+    }, [retryNonce, player.audioUrl, isVisualQa])
 
     const handleRetry = useCallback(() => {
         setRetryNonce(n => n + 1)
@@ -110,11 +121,12 @@ export function ListeningSkillShell({
             onRetry={handleRetry}
             labels={labels}
             primaryCtaHref={primaryCtaHref}
+            hideDefaultPrimaryCta
         >
             {/*
               Hidden audio probe — drives the shell's assetLoaded / assetError
               FSM inputs from real network events without coupling the
-              inner LessonPlayer's playback `<audio>`.
+              inner LessonPlayer's playback `<audio>`. Never plays audio.
             */}
             <audio
                 ref={probeRef}
@@ -125,7 +137,8 @@ export function ListeningSkillShell({
                 style={{ display: 'none' }}
                 data-role="listening-asset-probe"
             />
-            <LessonPlayerDynamic key={retryNonce} {...player} />
+            {/* Stable identity — no key={retryNonce}; retry only reloads the probe. */}
+            <LessonPlayerDynamic {...player} />
         </SkillPlayerShell>
     )
 }
