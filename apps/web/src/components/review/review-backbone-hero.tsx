@@ -156,8 +156,8 @@ export function ReviewBackboneHero({
             data-surface-state={state}
             className={fx(
                 'relative flex w-full flex-col gap-4',
-                'rounded-3xl bg-[var(--fuxie-blue-50)] px-5 py-5',
-                'ring-1 ring-[var(--fuxie-blue-200)]/60',
+                'rounded-[24px] bg-white/90 backdrop-blur-md px-5 py-5',
+                'shadow-[var(--fuxie-shadow-iso)] border-2 border-[var(--fuxie-blue-200)]/60',
                 'sm:px-6 sm:py-6',
             )}
         >

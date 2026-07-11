@@ -59,13 +59,15 @@ function ReviewRouteShell({
 }) {
     return (
         <div
-            className="max-w-5xl mx-auto px-4 py-8"
+            className="w-full min-h-screen fuxie-learn-bg px-4 py-8"
             data-route="review"
             data-slice="slice-1"
             data-module="04-review"
             data-visual-state={visualState}
         >
-            {children}
+            <div className="max-w-5xl mx-auto">
+                {children}
+            </div>
         </div>
     )
 }
@@ -121,21 +123,37 @@ export default async function ReviewPage({
     const t = await getTranslations('Review')
     const params = await searchParams
 
-    if (isReviewVisualQaFixture(params) && params.state === 'empty') {
+    if (isReviewVisualQaFixture(params)) {
+        const isHeroEmpty = params.state === 'empty'
         return (
-            <ReviewRouteShell visualState="empty">
-                <div className="mb-6" data-role="review-empty-state">
-                    <ReviewBackboneHero
-                        state="empty"
-                        dueToday={0}
-                        overdue={0}
-                        dueLabel={t('qaEmpty.dueLabel')}
-                        overdueLabel={t('qaEmpty.overdueLabel')}
-                        title={t('qaEmpty.title')}
-                        message={t('qaEmpty.message')}
-                        ctaLabel={t('qaEmpty.ctaLabel')}
-                        ctaHref="/course"
-                    />
+            <ReviewRouteShell visualState={isHeroEmpty ? 'empty' : 'default'}>
+                <div className="mb-6 review-hero-wrapper" data-role={isHeroEmpty ? 'review-empty-state' : undefined}>
+                    {isHeroEmpty ? (
+                        <ReviewBackboneHero
+                            state="empty"
+                            dueToday={0}
+                            overdue={0}
+                            dueLabel={t('qaEmpty.dueLabel')}
+                            overdueLabel={t('qaEmpty.overdueLabel')}
+                            title={t('qaEmpty.title')}
+                            message={t('qaEmpty.message')}
+                            ctaLabel={t('qaEmpty.ctaLabel')}
+                            ctaHref="/course"
+                        />
+                    ) : (
+                        <ReviewBackboneHero
+                            state="default"
+                            dueToday={5}
+                            overdue={0}
+                            dueLabel={t('defaultState.dueLabel')}
+                            overdueLabel={t('defaultState.overdueLabel')}
+                            title={t('defaultState.title')}
+                            message={t('defaultState.message')}
+                            ctaLabel={t('defaultState.ctaLabel')}
+                            ctaHref="#review-session"
+                            rewardPreviewLabel={t('defaultState.rewardPreviewLabel')}
+                        />
+                    )}
                 </div>
 
                 <div id="review-session">
@@ -143,8 +161,8 @@ export default async function ReviewPage({
                         themes={REVIEW_VISUAL_QA_THEMES}
                         availableLevels={REVIEW_VISUAL_QA_LEVELS}
                         initialLevel="A1"
-                        dueCounts={{ A1: 0, A2: 0, B1: 0 }}
-                        totalDueAll={0}
+                        dueCounts={{ A1: 5, A2: 0, B1: 0 }}
+                        totalDueAll={5}
                     />
                 </div>
             </ReviewRouteShell>
@@ -177,11 +195,8 @@ export default async function ReviewPage({
 
     return (
         <ReviewRouteShell visualState={heroState}>
-            {/* Backbone hero — Task 14.1, Req 9.1–9.5.
-                Copy is rendered as plain Vietnamese strings to mirror the
-                existing ReviewClient copy below; a Review namespace can be
-                introduced when the surface is fully internationalized. */}
-            <div className="mb-6" data-role={heroState === 'empty' ? 'review-empty-state' : undefined}>
+            {/* Backbone hero — Task 14.1, Req 9.1–9.5. Copy from Review i18n namespace. */}
+            <div className="mb-6 review-hero-wrapper" data-role={heroState === 'empty' ? 'review-empty-state' : undefined}>
                 {heroState === 'default' ? (
                     <ReviewBackboneHero
                         state="default"
