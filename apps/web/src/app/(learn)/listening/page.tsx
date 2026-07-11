@@ -92,25 +92,110 @@ async function getListeningData(userId: string | null, cefrLevel: CefrLevel) {
     return { teile, totalLessons, totalCompleted }
 }
 
-export default async function ListeningPage() {
-    const serverUser = await getServerUser()
-    if (!serverUser) redirect('/login')
+export default async function ListeningPage({
+    searchParams,
+}: {
+    searchParams?: Promise<{ fixture?: string; state?: string }>
+}) {
+    const params = (await searchParams) || {}
+    const isVisualQa = params.fixture === 'visual-qa'
+    const isReady = params.state !== 'empty'
 
-    const availableLevels = await getListeningLevels()
-    const defaultLevel: CefrLevel = availableLevels[0] || 'A1'
+    const availableLevels = isVisualQa
+        ? ['A1', 'A2', 'B1', 'B2', 'C1']
+        : await getListeningLevels()
+    const defaultLevel: CefrLevel = (availableLevels[0] || 'A1') as CefrLevel
 
-    // Data loads with Redis cache — blazing fast on repeat visits
-    const data = await getListeningData(serverUser.userId, defaultLevel)
+    let data
+    if (isVisualQa) {
+        if (!isReady) {
+            data = {
+                teile: [],
+                totalLessons: 0,
+                totalCompleted: 0,
+            }
+        } else {
+            data = {
+                totalLessons: 6,
+                totalCompleted: 2,
+                teile: [
+                    {
+                        teil: 1,
+                        teilName: 'Hội thoại ngắn (Gespräche)',
+                        lessons: [
+                            {
+                                id: 'L1',
+                                lessonId: 'L-A1-GOETHE-001-T1',
+                                title: 'Teil 1 - Lesson 1',
+                                topic: 'Gặp gỡ ở văn phòng',
+                                taskType: 'Trắc nghiệm',
+                                audioDuration: 120,
+                                questionCount: 3,
+                                completion: { bestScore: 3, totalQuestions: 3, attempts: 1 },
+                            },
+                            {
+                                id: 'L2',
+                                lessonId: 'L-A1-GOETHE-001-T2',
+                                title: 'Teil 1 - Lesson 2',
+                                topic: 'Hẹn gặp đối tác',
+                                taskType: 'Trắc nghiệm',
+                                audioDuration: 90,
+                                questionCount: 3,
+                                completion: { bestScore: 2, totalQuestions: 3, attempts: 2 },
+                            },
+                            {
+                                id: 'L3',
+                                lessonId: 'L-A1-GOETHE-001-T3',
+                                title: 'Teil 1 - Lesson 3',
+                                topic: 'Tại nhà ga',
+                                taskType: 'Trắc nghiệm',
+                                audioDuration: 110,
+                                questionCount: 3,
+                                completion: null,
+                            },
+                        ],
+                    },
+                    {
+                        teil: 2,
+                        teilName: 'Thông báo loa phát thanh',
+                        lessons: [
+                            {
+                                id: 'L4',
+                                lessonId: 'L-A1-GOETHE-001-T4',
+                                title: 'Teil 2 - Lesson 1',
+                                topic: 'Thông báo tàu trễ chuyến',
+                                taskType: 'Trắc nghiệm',
+                                audioDuration: 80,
+                                questionCount: 1,
+                                completion: null,
+                            },
+                        ],
+                    },
+                ],
+            }
+        }
+    } else {
+        const serverUser = await getServerUser()
+        if (!serverUser) redirect('/login')
+
+        data = await getListeningData(serverUser.userId, defaultLevel)
+    }
 
     return (
-        <div className="max-w-5xl mx-auto px-4 py-8">
-            <ListeningClientDynamic
-                teile={data.teile}
-                totalLessons={data.totalLessons}
-                totalCompleted={data.totalCompleted}
-                availableLevels={availableLevels}
-                initialLevel={defaultLevel}
-            />
+        <div
+            className="w-full min-h-screen fuxie-learn-bg px-4 py-8"
+            data-route="listening"
+            data-visual-state={isVisualQa ? (!isReady ? 'empty' : 'default') : 'default'}
+        >
+            <div className="max-w-5xl mx-auto">
+                <ListeningClientDynamic
+                    teile={data.teile}
+                    totalLessons={data.totalLessons}
+                    totalCompleted={data.totalCompleted}
+                    availableLevels={availableLevels}
+                    initialLevel={defaultLevel}
+                />
+            </div>
         </div>
     )
 }
