@@ -1,7 +1,6 @@
 import 'dotenv/config'
 import fs from 'node:fs'
 import path from 'node:path'
-import { getGeminiApiKeys } from '@fuxie/shared/env'
 import { getModel } from '../apps/ai-service/src/lib/gemini.js'
 import { parseGeminiJson } from '../apps/ai-service/src/lib/parse-json.ts'
 import {
@@ -40,13 +39,13 @@ export async function runProviderBackedAiEval(options: ProviderEvalRunOptions): 
         return { status: 'blocked_no_provider_cases', artifactPath, providerCases: 0, suiteResult: null }
     }
 
-    const apiKey = options.apiKey ?? getGeminiApiKeys(process.env)[0]
+    const apiKey = options.apiKey ?? process.env.OPENROUTER_API_KEY?.trim()
     if (!apiKey) {
         const artifactPath = writeArtifact(options.artifactDir, runAt, {
             status: 'blocked_missing_provider_key',
             suiteVersion: options.fixture.suiteVersion,
             providerCases: providerCases.length,
-            requiredEnv: 'GEMINI_API_KEY or GOOGLE_AI_API_KEY',
+            requiredEnv: 'OPENROUTER_API_KEY',
             cases: providerCases.map((testCase) => ({
                 id: testCase.id,
                 surface: testCase.surface,
@@ -57,44 +56,52 @@ export async function runProviderBackedAiEval(options: ProviderEvalRunOptions): 
         return { status: 'blocked_missing_provider_key', artifactPath, providerCases: providerCases.length, suiteResult: null }
     }
 
-    const observedByCaseId = new Map<string, ProviderObservedCase>()
+    const previousKey = process.env.OPENROUTER_API_KEY
+    process.env.OPENROUTER_API_KEY = apiKey
+    try {
+        const observedByCaseId = new Map<string, ProviderObservedCase>()
 
-    for (const testCase of providerCases) {
-        observedByCaseId.set(testCase.id, await runProviderCase(testCase))
-    }
+        for (const testCase of providerCases) {
+            observedByCaseId.set(testCase.id, await runProviderCase(testCase))
+        }
 
-    const providerFixture: AiEvalFixture = {
-        suiteVersion: `${options.fixture.suiteVersion}:provider`,
-        cases: options.fixture.cases.map((testCase) => {
-            const providerObserved = observedByCaseId.get(testCase.id)
-            if (!providerObserved) return testCase
+        const providerFixture: AiEvalFixture = {
+            suiteVersion: `${options.fixture.suiteVersion}:provider`,
+            cases: options.fixture.cases.map((testCase) => {
+                const providerObserved = observedByCaseId.get(testCase.id)
+                if (!providerObserved) return testCase
 
-            return {
-                ...testCase,
-                observed: providerObserved.observed,
-            }
-        }),
-    }
-    const suiteResult = runAiEvalSuite(providerFixture)
-    const artifactPath = writeArtifact(options.artifactDir, runAt, {
-        status: 'completed',
-        suiteVersion: providerFixture.suiteVersion,
-        providerCases: providerCases.length,
-        summary: suiteResult.summary,
-        cases: suiteResult.cases.map((testCase) => {
-            const providerObserved = observedByCaseId.get(testCase.id)
-            return {
-                ...testCase,
-                provider: providerObserved?.provider ?? null,
-            }
-        }),
-    })
+                return {
+                    ...testCase,
+                    observed: providerObserved.observed,
+                }
+            }),
+        }
+        const suiteResult = runAiEvalSuite(providerFixture)
+        const artifactPath = writeArtifact(options.artifactDir, runAt, {
+            status: 'completed',
+            provider: 'openrouter',
+            suiteVersion: providerFixture.suiteVersion,
+            providerCases: providerCases.length,
+            summary: suiteResult.summary,
+            cases: suiteResult.cases.map((testCase) => {
+                const providerObserved = observedByCaseId.get(testCase.id)
+                return {
+                    ...testCase,
+                    provider: providerObserved?.provider ?? null,
+                }
+            }),
+        })
 
-    return {
-        status: 'completed',
-        artifactPath,
-        providerCases: providerCases.length,
-        suiteResult,
+        return {
+            status: 'completed',
+            artifactPath,
+            providerCases: providerCases.length,
+            suiteResult,
+        }
+    } finally {
+        if (previousKey === undefined) delete process.env.OPENROUTER_API_KEY
+        else process.env.OPENROUTER_API_KEY = previousKey
     }
 }
 
