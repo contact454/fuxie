@@ -24,6 +24,19 @@ describe('runtime environment audit', () => {
         expect(report.services.upstashCache).toBe('unconfigured')
     })
 
+    it('keeps Google Cloud TTS/GCS explicit env separate from implicit ADC', () => {
+        const implicit = buildRuntimeEnvReport({})
+        expect(implicit.services.googleCloudTtsBatch).toBe('unknown')
+        expect(implicit.services.gcsAudioStorage).toBe('unknown')
+
+        const explicit = buildRuntimeEnvReport({
+            GOOGLE_APPLICATION_CREDENTIALS: '/private/google-credentials.json',
+            GCS_BUCKET_AUDIO: 'private-audio-bucket',
+        })
+        expect(explicit.services.googleCloudTtsBatch).toBe('configured')
+        expect(explicit.services.gcsAudioStorage).toBe('configured')
+    })
+
     it('reports partial grouped configuration instead of treating presence as health', () => {
         const report = buildRuntimeEnvReport({
             R2_ACCOUNT_ID: 'account-id',
@@ -38,18 +51,23 @@ describe('runtime environment audit', () => {
         expect(report.database.restorePathEvidence).toBe('unresolved')
     })
 
-    it('never serializes raw credentials, DSNs, account ids, project ids, or private hosts', () => {
+    it('never serializes raw credentials, DSNs, account ids, project ids, bucket names, or private hosts', () => {
         const secrets = [
             'db-user-secret',
             'db-password-secret',
             'private-db.internal',
             'redis-password-secret',
+            'firebase-public-api-secret',
             'firebase-project-secret',
+            'firebase-app-secret',
             'firebase-client-secret@example.invalid',
             'firebase-private-key-secret',
             'openrouter-secret',
             'gemini-secret',
             'groq-secret',
+            '/private/google-credentials.json',
+            'google-project-secret',
+            'gcs-bucket-secret',
             'r2-account-secret',
             'r2-access-secret',
             'r2-private-secret',
@@ -74,6 +92,9 @@ describe('runtime environment audit', () => {
             GEMINI_API_KEY: 'gemini-secret',
             GROQ_API_KEY: 'groq-secret',
             AI_SERVICE_URL: 'https://ai.internal',
+            GOOGLE_APPLICATION_CREDENTIALS: '/private/google-credentials.json',
+            GOOGLE_CLOUD_PROJECT: 'google-project-secret',
+            GCS_BUCKET_AUDIO: 'gcs-bucket-secret',
             R2_ACCOUNT_ID: 'r2-account-secret',
             R2_ACCESS_KEY_ID: 'r2-access-secret',
             R2_SECRET_ACCESS_KEY: 'r2-private-secret',
@@ -88,6 +109,7 @@ describe('runtime environment audit', () => {
         expect(serialized).not.toContain('upstash.internal')
         expect(serialized).not.toContain('ai.internal')
         expect(serialized).not.toContain('redis.internal')
+        expect(serialized).not.toContain('r2-public.example.invalid')
     })
 
     it('redacts arbitrary secret material by construction', () => {
@@ -100,6 +122,8 @@ describe('runtime environment audit', () => {
                         OPENROUTER_API_KEY: secret,
                         GEMINI_API_KEY: secret,
                         GROQ_API_KEY: secret,
+                        GOOGLE_CLOUD_PROJECT: secret,
+                        GCS_BUCKET_AUDIO: secret,
                         R2_SECRET_ACCESS_KEY: secret,
                         UPSTASH_REDIS_REST_TOKEN: secret,
                     })
