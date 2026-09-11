@@ -24,7 +24,23 @@ describe('runtime environment audit', () => {
         expect(report.services.upstashCache).toBe('unconfigured')
     })
 
-    it('keeps Google Cloud TTS/GCS explicit env separate from implicit ADC', () => {
+    it('maps learner-facing Google Cloud TTS to the Firebase admin credential contract', () => {
+        const unconfigured = buildRuntimeEnvReport({})
+        expect(unconfigured.services.firebaseAdmin).toBe('unconfigured')
+        expect(unconfigured.services.googleCloudTtsRuntime).toBe('unconfigured')
+
+        const configured = buildRuntimeEnvReport({
+            FIREBASE_SERVICE_ACCOUNT_KEY: JSON.stringify({
+                project_id: 'project',
+                client_email: 'tts@example.invalid',
+                private_key: 'private-key',
+            }),
+        })
+        expect(configured.services.firebaseAdmin).toBe('configured')
+        expect(configured.services.googleCloudTtsRuntime).toBe('configured')
+    })
+
+    it('keeps Google Cloud batch TTS/GCS explicit env separate from implicit ADC', () => {
         const implicit = buildRuntimeEnvReport({})
         expect(implicit.services.googleCloudTtsBatch).toBe('unknown')
         expect(implicit.services.gcsAudioStorage).toBe('unknown')
@@ -58,7 +74,10 @@ describe('runtime environment audit', () => {
             'private-db.internal',
             'redis-password-secret',
             'firebase-public-api-secret',
+            'firebase-auth-domain-secret',
             'firebase-project-secret',
+            'firebase-storage-secret',
+            'firebase-sender-secret',
             'firebase-app-secret',
             'firebase-client-secret@example.invalid',
             'firebase-private-key-secret',
@@ -84,7 +103,10 @@ describe('runtime environment audit', () => {
                 private_key: 'firebase-private-key-secret',
             }),
             NEXT_PUBLIC_FIREBASE_API_KEY: 'firebase-public-api-secret',
+            NEXT_PUBLIC_FIREBASE_AUTH_DOMAIN: 'firebase-auth-domain-secret',
             NEXT_PUBLIC_FIREBASE_PROJECT_ID: 'firebase-project-secret',
+            NEXT_PUBLIC_FIREBASE_STORAGE_BUCKET: 'firebase-storage-secret',
+            NEXT_PUBLIC_FIREBASE_MESSAGING_SENDER_ID: 'firebase-sender-secret',
             NEXT_PUBLIC_FIREBASE_APP_ID: 'firebase-app-secret',
             UPSTASH_REDIS_REST_URL: 'https://upstash.internal',
             UPSTASH_REDIS_REST_TOKEN: 'upstash-token-secret',
