@@ -1,6 +1,6 @@
 export type EnvSource = Record<string, string | undefined>
 
-export type ConfigState = 'configured' | 'partial' | 'unconfigured' | 'invalid'
+export type ConfigState = 'configured' | 'partial' | 'unconfigured' | 'invalid' | 'unknown'
 export type DatabaseProvider = 'neon' | 'generic-postgres' | 'unknown' | 'unconfigured'
 
 export interface RuntimeEnvReport {
@@ -21,6 +21,8 @@ export interface RuntimeEnvReport {
         openrouter: ConfigState
         gemini: ConfigState
         groqStt: ConfigState
+        googleCloudTtsBatch: ConfigState
+        gcsAudioStorage: ConfigState
         r2Storage: ConfigState
     }
     notes: string[]
@@ -78,8 +80,20 @@ function firebaseAdminState(source: EnvSource): ConfigState {
     ])
 }
 
+function googleCloudCredentialState(source: EnvSource): ConfigState {
+    if (hasValue(source.GOOGLE_APPLICATION_CREDENTIALS) || hasValue(source.GOOGLE_CLOUD_PROJECT)) {
+        return 'configured'
+    }
+
+    // Google clients may authenticate through Application Default Credentials supplied
+    // by the runtime/host without any explicit environment variable. Absence of an env
+    // key therefore cannot be interpreted as "unconfigured".
+    return 'unknown'
+}
+
 export function buildRuntimeEnvReport(source: EnvSource = process.env): RuntimeEnvReport {
     const databaseConfiguration = validUrlState(source.DATABASE_URL, ['postgres:', 'postgresql:'])
+    const googleCloudCredential = googleCloudCredentialState(source)
 
     return {
         source: 'process.env',
@@ -109,6 +123,12 @@ export function buildRuntimeEnvReport(source: EnvSource = process.env): RuntimeE
                 ? 'configured'
                 : 'unconfigured',
             groqStt: groupedState(source, ['GROQ_API_KEY']),
+            googleCloudTtsBatch: googleCloudCredential,
+            gcsAudioStorage: hasValue(source.GCS_BUCKET_AUDIO)
+                ? googleCloudCredential
+                : googleCloudCredential === 'configured'
+                    ? 'configured'
+                    : 'unknown',
             r2Storage: groupedState(source, [
                 'R2_ACCOUNT_ID',
                 'R2_ACCESS_KEY_ID',
@@ -121,6 +141,7 @@ export function buildRuntimeEnvReport(source: EnvSource = process.env): RuntimeE
             'Configuration presence is not provider health evidence.',
             'Database provider identity and restore-path evidence stay unresolved until verified in the actual provider control plane.',
             'BullMQ Redis and Upstash web cache are independent service contracts.',
+            'Google Cloud TTS/GCS batch tooling can use Application Default Credentials supplied outside process.env; unknown therefore does not mean unavailable.',
         ],
     }
 }
