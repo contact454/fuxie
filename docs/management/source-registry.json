@@ -1,5 +1,5 @@
 {
-  "schema_version": "1.0",
+  "schema_version": "1.1",
   "status": "bootstrap_in_progress",
   "prepared_at": "2026-09-11",
   "timezone": "Asia/Ho_Chi_Minh",
@@ -10,6 +10,7 @@
     "old_green_run_does_not_cover_changed_tree": true,
     "machine_clean_does_not_equal_academic_signoff": true,
     "merged_does_not_equal_deployed": true,
+    "unmerged_spec_is_not_default_branch_authority": true,
     "secret_values_must_not_be_stored_here": true
   },
   "sources": [
@@ -18,7 +19,7 @@
       "domain": "governance",
       "location": "AGENTS.md",
       "authority": "startup_gate",
-      "verification": "read",
+      "verification": "read_and_modified_on_control_plane_branch",
       "refresh": "every task or blob change"
     },
     {
@@ -34,23 +35,22 @@
       "domain": "governance",
       "location": ".agents/workflows/task-startup-checklist.md",
       "authority": "startup_sop",
-      "verification": "read",
-      "observed_blob": "7f39a1fb943ab5e357dd2a392d85ea1a62a3d51d"
+      "verification": "read_and_modified_on_control_plane_branch"
     },
     {
       "id": "GOV-004",
       "domain": "governance",
       "location": ".agents/workflows/company-operating-model.md",
       "authority": "operating_model",
-      "verification": "read"
+      "verification": "read_and_modified_on_control_plane_branch"
     },
     {
       "id": "GOV-005",
       "domain": "governance",
       "location": ".agents/workflows/three-agent-delivery-model.md",
       "authority": "delivery_model",
-      "verification": "read",
-      "note": "being generalized to capability-based orchestration on the control-plane branch"
+      "verification": "read_and_modified_on_control_plane_branch",
+      "note": "generalized to capability-based orchestration"
     },
     {
       "id": "GOV-006",
@@ -78,23 +78,60 @@
       "id": "MGT-003",
       "domain": "management",
       "location": "docs/management/quality-gates.md",
-      "authority": "release_and_acceptance_rules",
-      "verification": "planned_on_control_plane_branch"
+      "authority": "acceptance_and_evidence_semantics",
+      "verification": "created_on_control_plane_branch"
+    },
+    {
+      "id": "MGT-004",
+      "domain": "management",
+      "location": "docs/management/spec-and-work-source-inventory-2026-09-11.md",
+      "authority": "dated_spec_overlay_and_work_source_inventory",
+      "verification": "created_on_control_plane_branch"
+    },
+    {
+      "id": "WORK-001",
+      "domain": "delivery",
+      "location": "GitHub Issues",
+      "authority": "live_cross_cutting_task_and_blocker_tracker",
+      "verification": "read_write_verified",
+      "observed_bootstrap_tracker": "Issue #23",
+      "rule": "use exact-ref Kiro specs for substantial requirements; do not duplicate their task state in management docs"
+    },
+    {
+      "id": "WORK-002",
+      "domain": "delivery",
+      "location": "GitHub Projects/board",
+      "authority": "none_selected_during_bootstrap",
+      "verification": "NOT_VERIFIED",
+      "note": "no project-board connector action was exposed; do not create a second board solely for takeover"
     },
     {
       "id": "SPEC-001",
       "domain": "product_delivery",
-      "location": ".kiro/specs/",
-      "authority": "requirements_design_tasks",
-      "verification": "directory_verified_partial_inventory"
+      "location": "master@c83760fadf57dae9319ebe8f4c64233602230ff0:.kiro/specs/",
+      "authority": "default_branch_requirements_design_tasks",
+      "verification": "top_level_tree_inventory_read",
+      "observed_top_level_spec_count": 9,
+      "observed_tree": "7987341da1f90983ea1bdb538b80f2b79b2117c8"
     },
     {
       "id": "SPEC-002",
       "domain": "release",
-      "location": ".kiro/specs/fuxie-public-launch-readiness/",
-      "authority": "existing_public_launch_program",
-      "verification": "read_partial",
-      "rule": "extend this program; do not create a competing launch plan"
+      "location": "PR#21@bdf7fd10780bd57397b8ac3944e8c9c35a68ed01:.kiro/specs/fuxie-public-launch-readiness/",
+      "authority": "candidate_public_launch_program_in_unmerged_overlay",
+      "verification": "read",
+      "warning": "path is not present on master at the takeover baseline",
+      "rule": "reuse/map this candidate program at its exact ref; do not create a competing launch plan; do not claim it is default-branch authority until integrated"
+    },
+    {
+      "id": "SPEC-003",
+      "domain": "product_delivery",
+      "location": "PR#21@bdf7fd10780bd57397b8ac3944e8c9c35a68ed01:.kiro/specs/",
+      "authority": "unmerged_spec_overlay",
+      "verification": "top_level_tree_inventory_read",
+      "observed_top_level_spec_count": 25,
+      "observed_added_vs_master": 16,
+      "observed_tree": "21f659432c779adf3f9839ad2260013063c17afd"
     },
     {
       "id": "PROD-001",
@@ -109,7 +146,8 @@
       "domain": "risk",
       "location": "docs/intake/risk-register.md",
       "authority": "risk_register",
-      "verification": "known_not_fully_rebaselined"
+      "verification": "read_partial_current_master",
+      "warning": "historical evidence must be revalidated against the selected current tree/environment"
     },
     {
       "id": "DEL-001",
@@ -135,10 +173,10 @@
     {
       "id": "CONTENT-002",
       "domain": "academic_content",
-      "location": "docs/content-quality/audit-2026-06/STATUS.md",
-      "authority": "reported_content_status",
-      "verification": "read_at_pr21_head_bdf7fd1",
-      "warning": "reported state is not independent rerun or human signoff"
+      "location": "PR#21@bdf7fd10780bd57397b8ac3944e8c9c35a68ed01:docs/content-quality/audit-2026-06/STATUS.md",
+      "authority": "reported_content_status_in_unmerged_overlay",
+      "verification": "read",
+      "warning": "reported machine state is not independent rerun or human/native signoff"
     },
     {
       "id": "DESIGN-001",
@@ -184,7 +222,7 @@
       "id": "GIT-002",
       "domain": "repository_state",
       "location": "PR #21 chore/content-audit-remediation-2026-06",
-      "authority": "active_large_change_set",
+      "authority": "active_large_unmerged_change_set",
       "verification": "read",
       "observed_head": "bdf7fd10780bd57397b8ac3944e8c9c35a68ed01",
       "observed_state": "open_not_merged",
@@ -193,19 +231,29 @@
     {
       "id": "GIT-003",
       "domain": "management",
-      "location": "chore/management-control-plane-2026-09-11",
-      "authority": "management_bootstrap_branch",
+      "location": "chore/management-control-plane-2026-09-11 / PR #22",
+      "authority": "management_bootstrap_change_set",
       "verification": "write_verified",
-      "base": "master@c83760fadf57dae9319ebe8f4c64233602230ff0"
+      "base": "master@c83760fadf57dae9319ebe8f4c64233602230ff0",
+      "observed_head_after_inventory": "d9e8a01789704587f5a77691011439534c31a693"
     },
     {
       "id": "CI-002",
       "domain": "qa_release",
       "location": "GitHub Actions run 34578063503",
-      "authority": "latest_observed_pr21_ci_run",
+      "authority": "observed_pr21_ci_run",
       "verification": "read",
       "observed_result": "FAIL at Install dependencies; downstream verify and smoke skipped",
       "observed_at": "2026-09-11"
+    },
+    {
+      "id": "CI-003",
+      "domain": "qa_release",
+      "location": "GitHub Actions run 34581517347",
+      "authority": "historical_pr22_ci_for_sha_84de569ff1237c83a3be2e554a5fe29a5715c63f",
+      "verification": "read",
+      "observed_result": "Quick checks PASS; full verify and production-hardening smoke were still running when observed",
+      "warning": "branch advanced after this SHA; do not reuse this run as full evidence for later head"
     },
     {
       "id": "DEPLOY-001",
@@ -244,9 +292,8 @@
     "provider_keys": "secret_manager_only"
   },
   "next_inventory_targets": [
-    "full risk-register rebaseline",
-    "full active-spec inventory and duplicate mapping",
-    "GitHub issues/projects board identity",
+    "rebaseline current P0/P1 risks against a selected current tree",
+    "classify high-impact active specs by done/open/obsolete instead of directory presence",
     "production and preview deployed commit mapping",
     "database project/branch identity and restore path",
     "Firebase project/environment map",
