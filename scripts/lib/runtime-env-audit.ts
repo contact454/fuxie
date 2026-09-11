@@ -21,6 +21,7 @@ export interface RuntimeEnvReport {
         openrouter: ConfigState
         gemini: ConfigState
         groqStt: ConfigState
+        googleCloudTtsRuntime: ConfigState
         googleCloudTtsBatch: ConfigState
         gcsAudioStorage: ConfigState
         r2Storage: ConfigState
@@ -85,14 +86,14 @@ function googleCloudCredentialState(source: EnvSource): ConfigState {
         return 'configured'
     }
 
-    // Google clients may authenticate through Application Default Credentials supplied
-    // by the runtime/host without any explicit environment variable. Absence of an env
-    // key therefore cannot be interpreted as "unconfigured".
+    // Google client libraries may authenticate through Application Default Credentials
+    // supplied by the runtime/host. No explicit env key therefore means unknown, not absent.
     return 'unknown'
 }
 
 export function buildRuntimeEnvReport(source: EnvSource = process.env): RuntimeEnvReport {
     const databaseConfiguration = validUrlState(source.DATABASE_URL, ['postgres:', 'postgresql:'])
+    const firebaseAdmin = firebaseAdminState(source)
     const googleCloudCredential = googleCloudCredentialState(source)
 
     return {
@@ -105,10 +106,13 @@ export function buildRuntimeEnvReport(source: EnvSource = process.env): RuntimeE
             restorePathEvidence: 'unresolved',
         },
         services: {
-            firebaseAdmin: firebaseAdminState(source),
+            firebaseAdmin,
             firebasePublic: groupedState(source, [
                 'NEXT_PUBLIC_FIREBASE_API_KEY',
+                'NEXT_PUBLIC_FIREBASE_AUTH_DOMAIN',
                 'NEXT_PUBLIC_FIREBASE_PROJECT_ID',
+                'NEXT_PUBLIC_FIREBASE_STORAGE_BUCKET',
+                'NEXT_PUBLIC_FIREBASE_MESSAGING_SENDER_ID',
                 'NEXT_PUBLIC_FIREBASE_APP_ID',
             ]),
             bullmqRedis: validUrlState(source.REDIS_URL, ['redis:', 'rediss:']),
@@ -123,6 +127,10 @@ export function buildRuntimeEnvReport(source: EnvSource = process.env): RuntimeE
                 ? 'configured'
                 : 'unconfigured',
             groqStt: groupedState(source, ['GROQ_API_KEY']),
+            // Learner-facing web/AI-service TTS exchanges the Firebase service account
+            // for a Google OAuth token, so its configuration contract is Firebase admin.
+            googleCloudTtsRuntime: firebaseAdmin,
+            // Batch TTS/GCS scripts use Google client libraries and may rely on ADC.
             googleCloudTtsBatch: googleCloudCredential,
             gcsAudioStorage: hasValue(source.GCS_BUCKET_AUDIO)
                 ? googleCloudCredential
@@ -141,7 +149,8 @@ export function buildRuntimeEnvReport(source: EnvSource = process.env): RuntimeE
             'Configuration presence is not provider health evidence.',
             'Database provider identity and restore-path evidence stay unresolved until verified in the actual provider control plane.',
             'BullMQ Redis and Upstash web cache are independent service contracts.',
-            'Google Cloud TTS/GCS batch tooling can use Application Default Credentials supplied outside process.env; unknown therefore does not mean unavailable.',
+            'Learner-facing Google Cloud TTS uses the Firebase service account; batch Google Cloud tooling may instead use Application Default Credentials.',
+            'Google Cloud batch TTS/GCS state unknown does not mean unavailable because ADC may be supplied outside process.env.',
         ],
     }
 }
