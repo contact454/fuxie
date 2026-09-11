@@ -19,27 +19,27 @@
     "version": 1
   },
   "opinion_texts": {
-    "question": "Der digitale Strukturwandel der Öffentlichkeit",
+    "question": "Digitale Werkzeuge in den Geisteswissenschaften",
     "texts": [
       {
-        "name": "Befürworter/in A",
+        "name": "Digital-Humanities-Forscher A",
         "label": "A",
-        "text": "Die Analyse des Themas 'Der digitale Strukturwandel der Öffentlichkeit' zeigt, dass ein paradigmatischer Wandel unausweichlich ist. Die bestehenden Strukturen und Denkmodelle reichen nicht mehr aus, um den Herausforderungen gerecht zu werden. Es bedarf eines grundlegenden Neuansatzes, der traditionelle Grenzen überwindet."
+        "text": "Computergestützte Verfahren eröffnen den Geisteswissenschaften völlig neue Horizonte. Mit der Analyse riesiger Textmengen lassen sich Muster erkennen, die der einzelnen Leserin für immer verborgen blieben."
       },
       {
-        "name": "Kritiker/in B",
+        "name": "Traditioneller Philologe B",
         "label": "B",
-        "text": "Die Forderung nach radikaler Erneuerung im Bereich 'Der digitale Strukturwandel der Öffentlichkeit' überschätzt die Notwendigkeit eines Bruchs. Bewährte Ansätze und Institutionen bieten nach wie vor tragfähige Grundlagen, die durch behutsame Reform an neue Gegebenheiten angepasst werden können."
+        "text": "Diese Begeisterung verkennt das Wesen unseres Faches. Das geisteswissenschaftliche Verstehen lebt von der genauen, deutenden Lektüre des Einzeltextes, die keine Statistik je ersetzen kann."
       },
       {
-        "name": "Vermittler/in C",
+        "name": "Wissenschaftstheoretikerin C",
         "label": "C",
-        "text": "Eine differenzierte Betrachtung des Themas ergibt, dass weder radikale Erneuerung noch bloße Bewahrung dem Gegenstand gerecht werden. Die produktivsten Entwicklungen ergeben sich aus der kritischen Aneignung und Weiterentwicklung bestehender Traditionen im Lichte neuer Erkenntnisse."
+        "text": "Die Frage ist falsch gestellt, wenn man beide Methoden gegeneinander ausspielt. Quantitative Verfahren und hermeneutische Deutung können einander ergänzen, sofern man ihre jeweiligen Grenzen kennt."
       },
       {
-        "name": "Praktiker/in D",
+        "name": "Bibliotheksleiter D",
         "label": "D",
-        "text": "Die akademische Debatte um 'Der digitale Strukturwandel der Öffentlichkeit' vernachlässigt häufig die praktischen Implikationen. Die Umsetzung theoretischer Konzepte in konkrete Handlungsstrategien erfordert einen pragmatischen Zugang, der die Kluft zwischen Theorie und Praxis überbrückt."
+        "text": "Praktisch entscheidend ist, dass digitale Werkzeuge nur so gut sind wie die Daten und die Ausbildung dahinter. Ohne sorgfältig erschlossene Quellen und geschultes Personal bleiben sie wirkungslos."
       }
     ]
   },
@@ -59,84 +59,84 @@
       "id": "Q1",
       "teil": 4,
       "type": "matching",
-      "stem": "Ein paradigmatischer Wandel ist unausweichlich.",
+      "stem": "Wer hebt die Entdeckung verborgener Muster durch Großdatenanalyse hervor?",
       "answer": "A",
       "points": 1,
       "explanation": {
-        "key_evidence": "Text/Beitrag A",
-        "reasoning": "Die Aussage 'Ein paradigmatischer Wandel ist unausweichlich....' entspricht der Position von A.",
-        "de": "Die richtige Antwort ist A. Die relevante Textstelle lautet: \"Text/Beitrag A\".",
-        "vi": "Đáp án đúng là A. Hãy đối chiếu với thông tin then chốt trong bài đọc."
+        "key_evidence": "lassen sich Muster erkennen, die der einzelnen Leserin für immer verborgen blieben",
+        "reasoning": "[Inferential] A betont neue Erkenntnismöglichkeiten.",
+        "de": "A hebt das Erkennen verborgener Muster hervor.",
+        "vi": "A nhấn mạnh phát hiện mẫu ẩn nhờ phân tích dữ liệu lớn."
       }
     },
     {
       "id": "Q2",
       "teil": 4,
       "type": "matching",
-      "stem": "Die methodologische Annahme, dass bewährte Ansätze bieten nach wie vor tragfähige Grundlagen, prägt die Analyse von:",
+      "stem": "Wer verteidigt die deutende Lektüre des Einzeltextes?",
       "answer": "B",
       "points": 1,
       "explanation": {
-        "key_evidence": "Text/Beitrag B",
-        "reasoning": "[Inferential] Die Aussage 'Bewährte Ansätze bieten nach wie vor tragfähige Gr...' entspricht der Position von B.",
-        "de": "Die richtige Antwort ist B. Die relevante Textstelle lautet: \"Text/Beitrag B\".",
-        "vi": "Đáp án đúng là B. Hãy đối chiếu với thông tin then chốt trong bài đọc."
+        "key_evidence": "deutenden Lektüre des Einzeltextes, die keine Statistik je ersetzen kann",
+        "reasoning": "[Inferential] B verteidigt die hermeneutische Methode.",
+        "de": "B betont die Lektüre des Einzeltextes.",
+        "vi": "B bảo vệ việc đọc diễn giải từng văn bản."
       }
     },
     {
       "id": "Q3",
       "teil": 4,
       "type": "matching",
-      "stem": "Die methodologische Annahme, dass weder radikale Erneuerung noch bloße Bewahrung genügen, prägt die Analyse von:",
+      "stem": "Wer hält die Gegenüberstellung beider Methoden für verfehlt?",
       "answer": "C",
       "points": 1,
       "explanation": {
-        "key_evidence": "Text/Beitrag C",
-        "reasoning": "[Inferential] Die Aussage 'Weder radikale Erneuerung noch bloße Bewahrung gen...' entspricht der Position von C.",
-        "de": "Die richtige Antwort ist C. Die relevante Textstelle lautet: \"Text/Beitrag C\".",
-        "vi": "Đáp án đúng là C. Hãy đối chiếu với thông tin then chốt trong bài đọc."
+        "key_evidence": "Die Frage ist falsch gestellt, wenn man beide Methoden gegeneinander ausspielt",
+        "reasoning": "[Inferential] C plädiert für Ergänzung.",
+        "de": "C hält das Gegeneinander für falsch.",
+        "vi": "C cho rằng đối lập hai phương pháp là sai."
       }
     },
     {
       "id": "Q4",
       "teil": 4,
       "type": "matching",
-      "stem": "Die epistemologische Überzeugung, dass Die akademische Debatte vernachlässigt die praktischen Implikationen, manifestiert sich in der Argumentation von:",
+      "stem": "Wer betont die Abhängigkeit der Werkzeuge von Datenqualität und Ausbildung?",
       "answer": "D",
       "points": 1,
       "explanation": {
-        "key_evidence": "Text/Beitrag D",
-        "reasoning": "[Inferential] Die Aussage 'Die akademische Debatte vernachlässigt die praktis...' entspricht der Position von D.",
-        "de": "Die richtige Antwort ist D. Die relevante Textstelle lautet: \"Text/Beitrag D\".",
-        "vi": "Đáp án đúng là D. Hãy đối chiếu với thông tin then chốt trong bài đọc."
+        "key_evidence": "nur so gut sind wie die Daten und die Ausbildung dahinter",
+        "reasoning": "[Detail] D nennt Voraussetzungen.",
+        "de": "D betont Daten und Ausbildung.",
+        "vi": "D nhấn mạnh phụ thuộc vào dữ liệu và đào tạo."
       }
     },
     {
       "id": "Q5",
       "teil": 4,
       "type": "matching",
-      "stem": "Die methodologische Annahme, dass bestehende Strukturen reichen nicht mehr aus, prägt die Analyse von:",
-      "answer": "A",
+      "stem": "Wer sieht die beiden Zugänge als potenziell komplementär?",
+      "answer": "C",
       "points": 1,
       "explanation": {
-        "key_evidence": "Text/Beitrag A",
-        "reasoning": "[Inferential] Die Aussage 'Bestehende Strukturen reichen nicht mehr aus....' entspricht der Position von A.",
-        "de": "Die richtige Antwort ist A. Die relevante Textstelle lautet: \"Text/Beitrag A\".",
-        "vi": "Đáp án đúng là A. Hãy đối chiếu với thông tin then chốt trong bài đọc."
+        "key_evidence": "können einander ergänzen, sofern man ihre jeweiligen Grenzen kennt",
+        "reasoning": "[Inferential] C betont Komplementarität.",
+        "de": "C sieht beide Methoden als ergänzend.",
+        "vi": "C xem hai cách tiếp cận bổ sung nhau."
       }
     },
     {
       "id": "Q6",
       "teil": 4,
       "type": "matching",
-      "stem": "Die methodologische Annahme, dass Die produktivsten Entwicklungen verbinden Tradition und neue Erkenntnisse, prägt die Analyse von:",
-      "answer": "C",
+      "stem": "Wer äußert die größte Skepsis gegenüber dem Ersatz des Lesens durch Statistik?",
+      "answer": "B",
       "points": 1,
       "explanation": {
-        "key_evidence": "Text/Beitrag C",
-        "reasoning": "[Inferential] Die Aussage 'Die produktivsten Entwicklungen verbinden Traditio...' entspricht der Position von C.",
-        "de": "Die richtige Antwort ist C. Die relevante Textstelle lautet: \"Text/Beitrag C\".",
-        "vi": "Đáp án đúng là C. Hãy đối chiếu với thông tin then chốt trong bài đọc."
+        "key_evidence": "Diese Begeisterung verkennt das Wesen unseres Faches",
+        "reasoning": "[Inferential] B ist am skeptischsten.",
+        "de": "B äußert die stärkste Skepsis.",
+        "vi": "B hoài nghi nhất việc thống kê thay cho đọc hiểu."
       }
     }
   ],
@@ -197,8 +197,8 @@
   "cefrAudit": {
     "targetLevel": "C2",
     "verdict": "aligned",
-    "reviewerRole": "German Academic Lead",
-    "notes": "Release-candidate metadata audit: reading content for \"Digitale Geisteswissenschaften\" is aligned with declared C2 scope pending final human spot-check.",
+    "reviewerRole": "German Academic Lead (AI/Kiro)",
+    "notes": "Regenerated Teil-4 opinions, signed off by AI German Academic Lead (Kiro); pending native-speaker spot-check.",
     "reviewedAt": "2026-05-12",
     "reviewScope": "release_candidate_metadata_pass"
   },

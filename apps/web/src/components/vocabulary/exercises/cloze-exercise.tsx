@@ -2,8 +2,11 @@
 
 import { useState, useCallback, useEffect, useRef } from 'react'
 import { useTranslations } from 'next-intl'
+import { useSuppressLearnerMainChrome } from '@/hooks/use-suppress-chrome'
+import { FrostedPanel, PrimaryCta } from '@fuxie/ui/components'
 import { ExerciseProgress } from './exercise-progress'
 import { ExerciseResults } from './exercise-results'
+import { BottomFeedback } from './bottom-feedback'
 import { useExerciseTimer } from '@/hooks/use-exercise-timer'
 import { useSubmitExercise, type ExerciseAnswer } from '@/hooks/use-submit-exercise'
 import { getFirstSessionNextStep } from '@/lib/gamification/lesson-gameplay-expansion'
@@ -25,6 +28,7 @@ interface ClozeQuestion {
     translation: string | null // Vietnamese translation
     wordType: string         // VERB, NOMEN, etc.
     wordId: string
+    word: string
 }
 
 interface ClozeExerciseProps {
@@ -80,6 +84,10 @@ export function ClozeExercise({ questions, cefrLevel, themeName: _themeName, the
         xpPerCorrect: 7,
     })
 
+    useSuppressLearnerMainChrome(phase !== 'results')
+
+    const [isCorrect, setIsCorrect] = useState<boolean | null>(null)
+
     const question = questions[currentIndex]!
 
     // Focus input on new question
@@ -98,30 +106,31 @@ export function ClozeExercise({ questions, cefrLevel, themeName: _themeName, the
     const checkAnswer = useCallback(() => {
         if (isRevealed || !userInput.trim()) return
 
+        const correct = userInput.trim().toLowerCase() === question.word.trim().toLowerCase()
+        setIsCorrect(correct)
         setIsRevealed(true)
 
         const newAnswers = [...answers, {
             questionId: question.id,
             answer: userInput.trim(),
-            correctAnswer: userInput.trim(),  // Server derives from wordId via deriveCorrectAnswer
+            correctAnswer: question.word,
             wordId: question.wordId,
             questionType: question.type,
         }]
         setAnswers(newAnswers)
+    }, [isRevealed, userInput, question, answers])
 
-        // Auto advance
-        if (advanceTimeoutRef.current) clearTimeout(advanceTimeoutRef.current)
-        advanceTimeoutRef.current = setTimeout(() => {
-            if (currentIndex < questions.length - 1) {
-                setCurrentIndex(i => i + 1)
-                setUserInput('')
-                setIsRevealed(false)
-            } else {
-                stopTimer()
-                submitAnswers(newAnswers, timer)
-            }
-        }, 2000)
-    }, [isRevealed, userInput, question, answers, currentIndex, questions.length, stopTimer, submitAnswers, timer])
+    const handleContinue = useCallback(() => {
+        if (currentIndex < questions.length - 1) {
+            setCurrentIndex(i => i + 1)
+            setUserInput('')
+            setIsRevealed(false)
+            setIsCorrect(null)
+        } else {
+            stopTimer()
+            submitAnswers(answers, timer)
+        }
+    }, [currentIndex, questions.length, stopTimer, submitAnswers, answers, timer])
 
     const insertChar = (ch: string) => {
         setUserInput(prev => prev + ch)
@@ -223,17 +232,16 @@ export function ClozeExercise({ questions, cefrLevel, themeName: _themeName, the
                         </span>
                     </div>
 
-                    {/* Sentence card */}
-                    <div className="mb-6 rounded-2xl border border-[#60A8E4]/15 bg-white p-6 shadow-lg shadow-sky-900/8">
+                    <FrostedPanel className="mb-6 p-6 shadow-[var(--fuxie-shadow-iso)] border-2 border-[var(--fuxie-blue-200)]/70">
                         {renderSentence()}
 
                         {/* Vietnamese translation hint */}
                         {question.translation && (
-                            <p className="mt-4 border-t border-[#CCE4F0]/70 pt-3 text-sm font-semibold italic text-slate-500">
+                            <p className="mt-4 border-t border-[var(--fuxie-blue-200)]/70 pt-3 text-sm font-semibold italic text-slate-500">
                                 🇻🇳 {question.translation}
                             </p>
                         )}
-                    </div>
+                    </FrostedPanel>
 
                     {/* Feedback */}
                     {isRevealed && (
@@ -277,15 +285,24 @@ export function ClozeExercise({ questions, cefrLevel, themeName: _themeName, the
                     </div>
 
                     {/* Submit */}
-                    <button
+                    <PrimaryCta
                         onClick={checkAnswer}
                         disabled={isRevealed || !userInput.trim()}
-                        className={exercisePrimaryActionClass(isRevealed || !userInput.trim(), 'w-full')}
+                        className="w-full"
                     >
-                        Prüfen
-                    </button>
+                        {t('checkBtn')}
+                    </PrimaryCta>
                 </div>
             </div>
+
+            {/* Bottom Feedback Bar */}
+            {isRevealed && isCorrect !== null && (
+                <BottomFeedback
+                    isCorrect={isCorrect}
+                    correctAnswer={question.word}
+                    onContinue={handleContinue}
+                />
+            )}
         </div>
     )
 }

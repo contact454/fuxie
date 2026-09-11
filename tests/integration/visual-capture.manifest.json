@@ -3,7 +3,7 @@
     "surface": "dashboard",
     "state": "default",
     "viewport": "mobile",
-    "route": "/dashboard",
+    "route": "/dashboard?fixture=visual-qa",
     "evidencePath": "screenshots/dashboard/dashboard-default-mobile.png",
     "requiresSeed": false
   },
@@ -11,8 +11,16 @@
     "surface": "dashboard",
     "state": "default",
     "viewport": "desktop",
-    "route": "/dashboard",
+    "route": "/dashboard?fixture=visual-qa",
     "evidencePath": "screenshots/dashboard/dashboard-default-desktop.png",
+    "requiresSeed": false
+  },
+  {
+    "surface": "dashboard",
+    "state": "mastered",
+    "viewport": "mobile",
+    "route": "/dashboard?fixture=visual-qa&mastered=1",
+    "evidencePath": "screenshots/dashboard/dashboard-mastered-mobile.png",
     "requiresSeed": false
   },
   {
@@ -205,43 +213,73 @@
     "surface": "listening",
     "state": "default",
     "viewport": "mobile",
-    "route": "/listening/L-A1-GOETHE-001-T1",
+    "route": "/listening?fixture=visual-qa",
     "evidencePath": "screenshots/listening/listening-default-mobile.png",
-    "requiresSeed": true
+    "requiresSeed": false
   },
   {
     "surface": "listening",
     "state": "default",
     "viewport": "desktop",
-    "route": "/listening/L-A1-GOETHE-001-T1",
+    "route": "/listening?fixture=visual-qa",
     "evidencePath": "screenshots/listening/listening-default-desktop.png",
-    "requiresSeed": true
+    "requiresSeed": false
   },
   {
     "surface": "listening",
     "state": "empty",
     "viewport": "mobile",
-    "route": "/listening/L-A1-GOETHE-001-T1",
+    "route": "/listening?fixture=visual-qa&state=empty",
     "evidencePath": "screenshots/listening/listening-empty-mobile.png",
-    "requiresSeed": true,
-    "stateDriver": {
-      "kind": "routeIntercept",
-      "pattern": "**/api/listening/*",
-      "fulfill": { "status": 200, "body": { "items": [] } }
-    }
+    "requiresSeed": false
   },
   {
     "surface": "listening",
     "state": "error",
     "viewport": "mobile",
-    "route": "/listening/L-A1-GOETHE-001-T1",
+    "route": "/listening?fixture=visual-qa&state=error",
     "evidencePath": "screenshots/listening/listening-error-mobile.png",
-    "requiresSeed": true,
-    "stateDriver": {
-      "kind": "routeIntercept",
-      "pattern": "**/api/listening/*",
-      "fulfill": { "status": 500 }
-    }
+    "requiresSeed": false
+  },
+  {
+    "surface": "listening-player",
+    "state": "default",
+    "viewport": "mobile",
+    "route": "/listening/L-A1-GOETHE-001-T1?fixture=visual-qa",
+    "evidencePath": "screenshots/listening-player/listening-player-default-mobile.png",
+    "requiresSeed": false
+  },
+  {
+    "surface": "listening-player",
+    "state": "selected",
+    "viewport": "mobile",
+    "route": "/listening/L-A1-GOETHE-001-T1?fixture=visual-qa&state=selected",
+    "evidencePath": "screenshots/listening-player/listening-player-selected-mobile.png",
+    "requiresSeed": false
+  },
+  {
+    "surface": "listening-player",
+    "state": "correct",
+    "viewport": "mobile",
+    "route": "/listening/L-A1-GOETHE-001-T1?fixture=visual-qa&state=correct",
+    "evidencePath": "screenshots/listening-player/listening-player-correct-mobile.png",
+    "requiresSeed": false
+  },
+  {
+    "surface": "listening-player",
+    "state": "wrong",
+    "viewport": "mobile",
+    "route": "/listening/L-A1-GOETHE-001-T1?fixture=visual-qa&state=wrong",
+    "evidencePath": "screenshots/listening-player/listening-player-wrong-mobile.png",
+    "requiresSeed": false
+  },
+  {
+    "surface": "listening-player",
+    "state": "result",
+    "viewport": "mobile",
+    "route": "/listening/L-A1-GOETHE-001-T1?fixture=visual-qa&state=results",
+    "evidencePath": "screenshots/listening-player/listening-player-result-mobile.png",
+    "requiresSeed": false
   },
   {
     "surface": "speaking",
@@ -391,6 +429,30 @@
     }
   },
   {
+    "surface": "review",
+    "state": "srs-front",
+    "viewport": "mobile",
+    "route": "/review?fixture=visual-qa&mockState=srs-front",
+    "evidencePath": "screenshots/review/review-srs-front-mobile.png",
+    "requiresSeed": false
+  },
+  {
+    "surface": "review",
+    "state": "srs-back",
+    "viewport": "mobile",
+    "route": "/review?fixture=visual-qa&mockState=srs-back",
+    "evidencePath": "screenshots/review/review-srs-back-mobile.png",
+    "requiresSeed": false
+  },
+  {
+    "surface": "review",
+    "state": "srs-complete",
+    "viewport": "mobile",
+    "route": "/review?fixture=visual-qa&mockState=srs-complete",
+    "evidencePath": "screenshots/review/review-srs-complete-mobile.png",
+    "requiresSeed": false
+  },
+  {
     "surface": "rewards-shop",
     "state": "default",
     "viewport": "mobile",
@@ -470,5 +532,413 @@
       "pattern": "**/api/exam/*/submit",
       "fulfill": { "status": 200, "body": { "status": "graded", "xp": 50, "fucoin": 25, "accuracy": 0.85, "time": 600 } }
     }
+  },
+  {
+    "surface": "vocabulary-lesson-intro",
+    "state": "default",
+    "viewport": "mobile",
+    "route": "/vocabulary/practice/mc?theme=06-essen-trinken&level=A1&fixture=visual-qa",
+    "evidencePath": "screenshots/vocabulary-lesson-intro/vocabulary-lesson-intro-default-mobile.png",
+    "requiresSeed": false,
+    "stateDriver": {
+      "kind": "routeIntercept",
+      "pattern": "**/api/v1/vocabulary/practice*",
+      "fulfill": {
+        "status": 200,
+        "body": {
+          "success": true,
+          "data": {
+            "exerciseType": "mc",
+            "theme": {
+              "slug": "06-essen-trinken",
+              "name": "Essen und Trinken",
+              "translations": { "vi": "Ăn uống", "en": "Eating and Drinking" },
+              "imageUrl": null,
+              "cefrLevel": "A1"
+            },
+            "cefrLevel": "A1",
+            "totalQuestions": 4,
+            "questions": [
+              {
+                "id": "q1",
+                "type": "de_to_native",
+                "prompt": "der Apfel",
+                "promptImage": null,
+                "promptAudio": "/audio/apfel.mp3",
+                "options": ["quả táo", "quả chuối", "quả cam", "quả lê"],
+                "wordId": "w1",
+                "word": "der Apfel",
+                "meaningNative": "quả táo"
+              },
+              {
+                "id": "q2",
+                "type": "native_to_de",
+                "prompt": "quả chuối",
+                "promptImage": null,
+                "promptAudio": null,
+                "options": ["die Banane", "der Apfel", "die Birne", "die Orange"],
+                "wordId": "w2",
+                "word": "die Banane",
+                "meaningNative": "quả chuối"
+              }
+            ]
+          }
+        }
+      }
+    }
+  },
+  {
+    "surface": "vocabulary-lesson-intro",
+    "state": "default",
+    "viewport": "desktop",
+    "route": "/vocabulary/practice/mc?theme=06-essen-trinken&level=A1&fixture=visual-qa",
+    "evidencePath": "screenshots/vocabulary-lesson-intro/vocabulary-lesson-intro-default-desktop.png",
+    "requiresSeed": false,
+    "stateDriver": {
+      "kind": "routeIntercept",
+      "pattern": "**/api/v1/vocabulary/practice*",
+      "fulfill": {
+        "status": 200,
+        "body": {
+          "success": true,
+          "data": {
+            "exerciseType": "mc",
+            "theme": {
+              "slug": "06-essen-trinken",
+              "name": "Essen und Trinken",
+              "translations": { "vi": "Ăn uống", "en": "Eating and Drinking" },
+              "imageUrl": null,
+              "cefrLevel": "A1"
+            },
+            "cefrLevel": "A1",
+            "totalQuestions": 4,
+            "questions": [
+              {
+                "id": "q1",
+                "type": "de_to_native",
+                "prompt": "der Apfel",
+                "promptImage": null,
+                "promptAudio": "/audio/apfel.mp3",
+                "options": ["quả táo", "quả chuối", "quả cam", "quả lê"],
+                "wordId": "w1",
+                "word": "der Apfel",
+                "meaningNative": "quả táo"
+              }
+            ]
+          }
+        }
+      }
+    }
+  },
+  {
+    "surface": "vocabulary-gameplay",
+    "state": "default",
+    "viewport": "mobile",
+    "route": "/vocabulary/practice/mc?theme=06-essen-trinken&level=A1&skipIntro=true&fixture=visual-qa",
+    "evidencePath": "screenshots/vocabulary-gameplay/vocabulary-gameplay-default-mobile.png",
+    "requiresSeed": false,
+    "stateDriver": {
+      "kind": "routeIntercept",
+      "pattern": "**/api/v1/vocabulary/practice*",
+      "fulfill": {
+        "status": 200,
+        "body": {
+          "success": true,
+          "data": {
+            "exerciseType": "mc",
+            "theme": {
+              "slug": "06-essen-trinken",
+              "name": "Essen und Trinken",
+              "translations": { "vi": "Ăn uống", "en": "Eating and Drinking" },
+              "imageUrl": null,
+              "cefrLevel": "A1"
+            },
+            "cefrLevel": "A1",
+            "totalQuestions": 4,
+            "questions": [
+              {
+                "id": "q1",
+                "type": "de_to_native",
+                "prompt": "der Apfel",
+                "promptImage": null,
+                "promptAudio": "/audio/apfel.mp3",
+                "options": ["quả táo", "quả chuối", "quả cam", "quả lê"],
+                "wordId": "w1",
+                "word": "der Apfel",
+                "meaningNative": "quả táo"
+              }
+            ]
+          }
+        }
+      }
+    }
+  },
+  {
+    "surface": "vocabulary-gameplay",
+    "state": "default",
+    "viewport": "desktop",
+    "route": "/vocabulary/practice/mc?theme=06-essen-trinken&level=A1&skipIntro=true&fixture=visual-qa",
+    "evidencePath": "screenshots/vocabulary-gameplay/vocabulary-gameplay-default-desktop.png",
+    "requiresSeed": false,
+    "stateDriver": {
+      "kind": "routeIntercept",
+      "pattern": "**/api/v1/vocabulary/practice*",
+      "fulfill": {
+        "status": 200,
+        "body": {
+          "success": true,
+          "data": {
+            "exerciseType": "mc",
+            "theme": {
+              "slug": "06-essen-trinken",
+              "name": "Essen und Trinken",
+              "translations": { "vi": "Ăn uống", "en": "Eating and Drinking" },
+              "imageUrl": null,
+              "cefrLevel": "A1"
+            },
+            "cefrLevel": "A1",
+            "totalQuestions": 4,
+            "questions": [
+              {
+                "id": "q1",
+                "type": "de_to_native",
+                "prompt": "der Apfel",
+                "promptImage": null,
+                "promptAudio": "/audio/apfel.mp3",
+                "options": ["quả táo", "quả chuối", "quả cam", "quả lê"],
+                "wordId": "w1",
+                "word": "der Apfel",
+                "meaningNative": "quả táo"
+              }
+            ]
+          }
+        }
+      }
+    }
+  },
+  {
+    "surface": "vocabulary-reward",
+    "state": "default",
+    "viewport": "mobile",
+    "route": "/vocabulary/practice/mc?theme=06-essen-trinken&level=A1&skipIntro=true&fixture=visual-qa&showResults=true",
+    "evidencePath": "screenshots/vocabulary-reward/vocabulary-reward-default-mobile.png",
+    "requiresSeed": false
+  },
+  {
+    "surface": "vocabulary-reward",
+    "state": "default",
+    "viewport": "desktop",
+    "route": "/vocabulary/practice/mc?theme=06-essen-trinken&level=A1&skipIntro=true&fixture=visual-qa&showResults=true",
+    "evidencePath": "screenshots/vocabulary-reward/vocabulary-reward-default-desktop.png",
+    "requiresSeed": false
+  },
+  {
+    "surface": "vocabulary-gameplay",
+    "state": "selected",
+    "viewport": "mobile",
+    "route": "/vocabulary/practice/mc?theme=06-essen-trinken&level=A1&skipIntro=true&fixture=visual-qa&mockState=selected",
+    "evidencePath": "screenshots/vocabulary-gameplay/vocabulary-gameplay-selected-mobile.png",
+    "requiresSeed": false,
+    "stateDriver": {
+      "kind": "routeIntercept",
+      "pattern": "**/api/v1/vocabulary/practice*",
+      "fulfill": {
+        "status": 200,
+        "body": {
+          "success": true,
+          "data": {
+            "exerciseType": "mc",
+            "theme": {
+              "slug": "06-essen-trinken",
+              "name": "Essen und Trinken",
+              "translations": { "vi": "Ăn uống", "en": "Eating and Drinking" },
+              "imageUrl": null,
+              "cefrLevel": "A1"
+            },
+            "cefrLevel": "A1",
+            "totalQuestions": 4,
+            "questions": [
+              {
+                "id": "q1",
+                "type": "de_to_native",
+                "prompt": "der Apfel",
+                "promptImage": null,
+                "promptAudio": "/audio/apfel.mp3",
+                "options": ["quả táo", "quả chuối", "quả cam", "quả lê"],
+                "wordId": "w1",
+                "word": "der Apfel",
+                "meaningNative": "quả táo"
+              }
+            ]
+          }
+        }
+      }
+    }
+  },
+  {
+    "surface": "vocabulary-gameplay",
+    "state": "correct",
+    "viewport": "mobile",
+    "route": "/vocabulary/practice/mc?theme=06-essen-trinken&level=A1&skipIntro=true&fixture=visual-qa&mockState=correct",
+    "evidencePath": "screenshots/vocabulary-gameplay/vocabulary-gameplay-correct-mobile.png",
+    "requiresSeed": false,
+    "stateDriver": {
+      "kind": "routeIntercept",
+      "pattern": "**/api/v1/vocabulary/practice*",
+      "fulfill": {
+        "status": 200,
+        "body": {
+          "success": true,
+          "data": {
+            "exerciseType": "mc",
+            "theme": {
+              "slug": "06-essen-trinken",
+              "name": "Essen und Trinken",
+              "translations": { "vi": "Ăn uống", "en": "Eating and Drinking" },
+              "imageUrl": null,
+              "cefrLevel": "A1"
+            },
+            "cefrLevel": "A1",
+            "totalQuestions": 4,
+            "questions": [
+              {
+                "id": "q1",
+                "type": "de_to_native",
+                "prompt": "der Apfel",
+                "promptImage": null,
+                "promptAudio": "/audio/apfel.mp3",
+                "options": ["quả táo", "quả chuối", "quả cam", "quả lê"],
+                "wordId": "w1",
+                "word": "der Apfel",
+                "meaningNative": "quả táo"
+              }
+            ]
+          }
+        }
+      }
+    }
+  },
+  {
+    "surface": "vocabulary-gameplay",
+    "state": "wrong",
+    "viewport": "mobile",
+    "route": "/vocabulary/practice/mc?theme=06-essen-trinken&level=A1&skipIntro=true&fixture=visual-qa&mockState=wrong",
+    "evidencePath": "screenshots/vocabulary-gameplay/vocabulary-gameplay-wrong-mobile.png",
+    "requiresSeed": false,
+    "stateDriver": {
+      "kind": "routeIntercept",
+      "pattern": "**/api/v1/vocabulary/practice*",
+      "fulfill": {
+        "status": 200,
+        "body": {
+          "success": true,
+          "data": {
+            "exerciseType": "mc",
+            "theme": {
+              "slug": "06-essen-trinken",
+              "name": "Essen und Trinken",
+              "translations": { "vi": "Ăn uống", "en": "Eating and Drinking" },
+              "imageUrl": null,
+              "cefrLevel": "A1"
+            },
+            "cefrLevel": "A1",
+            "totalQuestions": 4,
+            "questions": [
+              {
+                "id": "q1",
+                "type": "de_to_native",
+                "prompt": "der Apfel",
+                "promptImage": null,
+                "promptAudio": "/audio/apfel.mp3",
+                "options": ["quả táo", "quả chuối", "quả cam", "quả lê"],
+                "wordId": "w1",
+                "word": "der Apfel",
+                "meaningNative": "quả táo"
+              }
+            ]
+          }
+        }
+      }
+    }
+  },
+  {
+    "surface": "vocabulary-reward",
+    "state": "scrolled",
+    "viewport": "mobile",
+    "route": "/vocabulary/practice/mc?theme=06-essen-trinken&level=A1&skipIntro=true&fixture=visual-qa&showResults=true&mockState=scrolled",
+    "evidencePath": "screenshots/vocabulary-reward/vocabulary-reward-scrolled-mobile.png",
+    "requiresSeed": false
+  },
+  {
+    "surface": "fuxie-primitives-qa",
+    "state": "default",
+    "viewport": "mobile",
+    "route": "/fuxie-primitives-qa",
+    "evidencePath": "screenshots/fuxie-primitives-qa/fuxie-primitives-qa-default-mobile.png",
+    "requiresSeed": false
+  },
+  {
+    "surface": "reading-player",
+    "state": "passage",
+    "viewport": "mobile",
+    "route": "/reading/R-A1-GOETHE-001-T1?fixture=visual-qa",
+    "evidencePath": "screenshots/reading-player/reading-player-passage-mobile.png",
+    "requiresSeed": false
+  },
+  {
+    "surface": "reading-player",
+    "state": "selected",
+    "viewport": "mobile",
+    "route": "/reading/R-A1-GOETHE-001-T1?fixture=visual-qa&state=selected",
+    "evidencePath": "screenshots/reading-player/reading-player-selected-mobile.png",
+    "requiresSeed": false
+  },
+  {
+    "surface": "reading-player",
+    "state": "correct",
+    "viewport": "mobile",
+    "route": "/reading/R-A1-GOETHE-001-T1?fixture=visual-qa&state=correct",
+    "evidencePath": "screenshots/reading-player/reading-player-correct-mobile.png",
+    "requiresSeed": false
+  },
+  {
+    "surface": "reading-player",
+    "state": "wrong",
+    "viewport": "mobile",
+    "route": "/reading/R-A1-GOETHE-001-T1?fixture=visual-qa&state=wrong",
+    "evidencePath": "screenshots/reading-player/reading-player-wrong-mobile.png",
+    "requiresSeed": false
+  },
+  {
+    "surface": "reading-player",
+    "state": "result",
+    "viewport": "mobile",
+    "route": "/reading/R-A1-GOETHE-001-T1?fixture=visual-qa&state=results",
+    "evidencePath": "screenshots/reading-player/reading-player-result-mobile.png",
+    "requiresSeed": false
+  },
+  {
+    "surface": "writing-player",
+    "state": "editor-textarea",
+    "viewport": "mobile",
+    "route": "/writing/W-A1-GOETHE-001-T1?fixture=visual-qa",
+    "evidencePath": "screenshots/writing-player/writing-player-editor-textarea-mobile.png",
+    "requiresSeed": false
+  },
+  {
+    "surface": "writing-player",
+    "state": "submitting",
+    "viewport": "mobile",
+    "route": "/writing/W-A1-GOETHE-001-T1?fixture=visual-qa&state=submitting",
+    "evidencePath": "screenshots/writing-player/writing-player-submitting-mobile.png",
+    "requiresSeed": false
+  },
+  {
+    "surface": "writing-player",
+    "state": "feedback",
+    "viewport": "mobile",
+    "route": "/writing/W-A1-GOETHE-001-T1?fixture=visual-qa&state=feedback",
+    "evidencePath": "screenshots/writing-player/writing-player-feedback-mobile.png",
+    "requiresSeed": false
   }
 ]

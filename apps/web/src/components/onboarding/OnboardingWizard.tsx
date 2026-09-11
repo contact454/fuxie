@@ -267,6 +267,7 @@ function DailyTimeStep({
 
 function WelcomeStep({ onNext }: { onNext: () => void }) {
     const t = useTranslations('Onboarding')
+    const act = useTranslations('Activation')
     return (
         <div className="text-center max-w-md animate-fade-in-up">
             <div className="mb-6 relative">
@@ -288,11 +289,42 @@ function WelcomeStep({ onNext }: { onNext: () => void }) {
             <p className="text-gray-500 mb-2 text-lg">
                 {t('welcomeTitle')}
             </p>
-            <p className="text-gray-400 text-sm mb-8 leading-relaxed">
+            <p className="text-gray-400 text-sm mb-6 leading-relaxed">
                 {t('welcomeDesc1')}
                 <br />
                 {t('welcomeDesc2')}
             </p>
+
+            {/* 3-Step Guide */}
+            <div className="mb-8 text-left bg-gradient-to-br from-[#F3FBFF] via-white to-blue-50/30 rounded-2xl p-5 border border-[#60A8E4]/20 shadow-sm">
+                <h3 className="text-xs font-black text-gray-800 mb-4 uppercase tracking-wider">
+                    {act('guideTitle')}
+                </h3>
+                <div className="space-y-4">
+                    <div className="flex items-start gap-3">
+                        <div className="size-[22px] rounded-full bg-[#60A8E4] text-white flex items-center justify-center text-xs font-black shrink-0 mt-0.5 shadow-sm">1</div>
+                        <div>
+                            <p className="text-xs font-black text-gray-800">{act('step1Title')}</p>
+                            <p className="text-[11px] text-gray-500 font-medium leading-relaxed mt-0.5">{act('step1Desc')}</p>
+                        </div>
+                    </div>
+                    <div className="flex items-start gap-3">
+                        <div className="size-[22px] rounded-full bg-[#60A8E4] text-white flex items-center justify-center text-xs font-black shrink-0 mt-0.5 shadow-sm">2</div>
+                        <div>
+                            <p className="text-xs font-black text-gray-800">{act('step2Title')}</p>
+                            <p className="text-[11px] text-gray-500 font-medium leading-relaxed mt-0.5">{act('step2Desc')}</p>
+                        </div>
+                    </div>
+                    <div className="flex items-start gap-3">
+                        <div className="size-[22px] rounded-full bg-[#60A8E4] text-white flex items-center justify-center text-xs font-black shrink-0 mt-0.5 shadow-sm">3</div>
+                        <div>
+                            <p className="text-xs font-black text-gray-800">{act('step3Title')}</p>
+                            <p className="text-[11px] text-gray-500 font-medium leading-relaxed mt-0.5">{act('step3Desc')}</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
             <PrimaryCta
                 onClick={onNext}
                 className="w-full max-w-xs mx-auto"
@@ -516,7 +548,9 @@ function ResultStep({
     onComplete: () => void
 }) {
     const t = useTranslations('Onboarding')
+    const act = useTranslations('Activation')
     const levelInfo = LEVEL_INFO[result.estimatedLevel]
+    const targetLevelInfo = LEVEL_INFO[targetLevel]
     const firstAction = targetExam
         ? t('firstActionWithExam', { exam: targetExam, level: targetLevel, estimatedLevel: result.estimatedLevel })
         : t('firstActionNoExam', { estimatedLevel: result.estimatedLevel })
@@ -539,17 +573,31 @@ function ResultStep({
                 {t('resultDesc')}
             </p>
 
-            {/* Level Badge - Large */}
-            <div
-                className="inline-flex items-center gap-3 px-8 py-4 rounded-2xl mb-6"
-                style={{ background: levelInfo.color + '15', border: `2px solid ${levelInfo.color}40` }}
-            >
-                <span className="text-5xl font-black" style={{ color: levelInfo.color }}>
-                    {result.estimatedLevel}
-                </span>
-                <div className="text-left">
-                    <div className="font-bold text-gray-800 text-sm">{levelInfo.label}</div>
-                    <div className="text-xs text-gray-500">{t(levelInfo.descKey)}</div>
+            {/* Level Comparison Badges */}
+            <div className="flex items-center justify-center gap-4 mb-6">
+                <div className="flex items-center gap-3 px-4 py-2.5 rounded-xl bg-white border border-slate-100 shadow-sm">
+                    <span className="text-3xl font-black shrink-0" style={{ color: levelInfo.color }}>
+                        {result.estimatedLevel}
+                    </span>
+                    <div className="text-left min-w-0">
+                        <div className="text-[9px] font-black text-gray-400 uppercase tracking-wider truncate">{t('currentLevelLabel')}</div>
+                        <div className="text-[10px] font-bold text-gray-800 leading-none mt-0.5 truncate">{levelInfo.label.split(' — ')[1] || levelInfo.label}</div>
+                    </div>
+                </div>
+
+                <div className="text-gray-300 font-black text-xl select-none">➔</div>
+
+                <div className="flex items-center gap-3 px-4 py-2.5 rounded-xl bg-white border border-slate-100 shadow-sm">
+                    <span className="text-3xl font-black shrink-0" style={{ color: targetLevelInfo.color }}>
+                        {targetLevel}
+                    </span>
+                    <div className="text-left min-w-0">
+                        <div className="text-[9px] font-black text-gray-400 uppercase tracking-wider truncate">{t('targetLevelLabel')}</div>
+                        <div className="text-[10px] font-bold text-gray-800 leading-none mt-0.5 truncate">
+                            {targetExam ? `${targetExam} ` : ''}
+                            {targetLevelInfo.label.split(' — ')[1] || targetLevelInfo.label}
+                        </div>
+                    </div>
                 </div>
             </div>
 
@@ -585,6 +633,36 @@ function ResultStep({
                             </div>
                         )
                     })}
+                </div>
+            </div>
+
+            {/* 3-Step Guide */}
+            <div className="mb-4 text-left bg-gradient-to-br from-[#F3FBFF] via-white to-blue-50/30 rounded-2xl p-4 border border-[#60A8E4]/20 shadow-sm">
+                <h3 className="text-[10px] font-black text-gray-800 mb-3 uppercase tracking-wider">
+                    {act('guideTitle')}
+                </h3>
+                <div className="grid grid-cols-1 gap-2.5">
+                    <div className="flex items-start gap-2.5">
+                        <div className="w-5 h-5 rounded-full bg-[#60A8E4] text-white flex items-center justify-center text-[10px] font-black shrink-0 mt-0.5 shadow-sm">1</div>
+                        <div>
+                            <p className="text-[11px] font-black text-gray-800">{act('step1Title')}</p>
+                            <p className="text-[10px] text-gray-500 font-medium leading-relaxed">{act('step1Desc')}</p>
+                        </div>
+                    </div>
+                    <div className="flex items-start gap-2.5">
+                        <div className="w-5 h-5 rounded-full bg-[#60A8E4] text-white flex items-center justify-center text-[10px] font-black shrink-0 mt-0.5 shadow-sm">2</div>
+                        <div>
+                            <p className="text-[11px] font-black text-gray-800">{act('step2Title')}</p>
+                            <p className="text-[10px] text-gray-500 font-medium leading-relaxed">{act('step2Desc')}</p>
+                        </div>
+                    </div>
+                    <div className="flex items-start gap-2.5">
+                        <div className="w-5 h-5 rounded-full bg-[#60A8E4] text-white flex items-center justify-center text-[10px] font-black shrink-0 mt-0.5 shadow-sm">3</div>
+                        <div>
+                            <p className="text-[11px] font-black text-gray-800">{act('step3Title')}</p>
+                            <p className="text-[10px] text-gray-500 font-medium leading-relaxed">{act('step3Desc')}</p>
+                        </div>
+                    </div>
                 </div>
             </div>
 

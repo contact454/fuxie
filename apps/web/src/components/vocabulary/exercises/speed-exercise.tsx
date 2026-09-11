@@ -1,6 +1,8 @@
 'use client'
 
 import { useState, useCallback, useEffect, useRef } from 'react'
+import { useSuppressLearnerMainChrome } from '@/hooks/use-suppress-chrome'
+import { FrostedPanel } from '@fuxie/ui/components'
 import { ExerciseResults } from './exercise-results'
 import { useExerciseTimer } from '@/hooks/use-exercise-timer'
 import { useSubmitExercise, type ExerciseAnswer } from '@/hooks/use-submit-exercise'
@@ -53,6 +55,8 @@ export function SpeedExercise({ questions, cefrLevel, themeName: _themeName, the
         cefrLevel,
         xpPerCorrect: 10,
     })
+
+    useSuppressLearnerMainChrome(phase !== 'results')
 
     const question = questions[currentIndex]
 
@@ -206,7 +210,7 @@ export function SpeedExercise({ questions, cefrLevel, themeName: _themeName, the
     return (
         <div className={exerciseScreenClass}>
             {/* Top bar */}
-            <div className="flex items-center gap-3 border-b border-[#60A8E4]/15 bg-white/95 px-4 py-3 shadow-sm shadow-sky-900/5">
+            <div className="fuxie-header-base flex items-center gap-3">
                 <button
                     onClick={onExit}
                     aria-label="Close exercise"
@@ -242,17 +246,17 @@ export function SpeedExercise({ questions, cefrLevel, themeName: _themeName, the
                 </span>
             </div>
 
-            {/* Question prompt */}
+            {/* Question prompt wrapped in FrostedPanel */}
             <div className="mx-auto w-full max-w-2xl px-5 py-6 sm:px-6">
-                <div className="text-center mb-8">
-                    <div className="mx-auto mb-4 inline-flex rounded-full bg-[#EAFBF8] px-3 py-1 text-xs font-black uppercase text-text-success ring-1 ring-[#2EC4B6]/30">
+                <FrostedPanel className="text-center mb-8 flex flex-col items-center justify-center p-6 w-full gap-4 shadow-[var(--fuxie-shadow-iso)] border-2 border-[var(--fuxie-blue-200)]/70">
+                    <div className="mx-auto inline-flex rounded-full bg-[#EAFBF8] px-3 py-1 text-xs font-black uppercase text-text-success ring-1 ring-[#2EC4B6]/30">
                         Speed Challenge
                     </div>
                     <p className="mb-2 text-3xl font-black text-slate-950">{question.prompt || question.word}</p>
                     <p className="text-sm font-semibold text-slate-500">
                         {question.type === 'de_to_native' ? 'Was bedeutet das?' : 'Auf Deutsch?'}
                     </p>
-                </div>
+                </FrostedPanel>
 
                 {/* 2x2 grid options */}
                 <div className="grid grid-cols-1 gap-3 sm:grid-cols-2">

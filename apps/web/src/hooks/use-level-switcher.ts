@@ -7,7 +7,11 @@ interface UseLevelSwitcherOptions<T> {
     initialLevel: string
     /** API endpoint template — use `{level}` placeholder. E.g. `/api/v1/reading?level={level}` */
     apiEndpoint: string
-    /** Transform raw API response data into your component's data shape */
+    /**
+     * Transform raw API response data into your component's data shape.
+     * Typed as `any` for backward compatibility with existing skill hubs.
+     */
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
     transformData: (data: any) => T
     /** Called when API response is successful after transformation */
     onSuccess?: (data: T, level: string) => void
@@ -17,6 +21,11 @@ interface UseLevelSwitcherReturn<T> {
     currentLevel: string
     isLevelLoading: boolean
     switchLevel: (level: string) => Promise<void>
+    /** Level that failed to load (for retry UI); null when healthy */
+    failedLevel: string | null
+    /** Human-readable load error; null when healthy */
+    error: string | null
+    clearError: () => void
 }
 
 /**
@@ -26,14 +35,9 @@ interface UseLevelSwitcherReturn<T> {
  * - AbortController to cancel in-flight requests when user switches quickly
  * - Loading state management
  * - Race condition prevention (response from stale request is ignored)
- *
- * Usage:
- *   const { currentLevel, isLevelLoading, switchLevel } = useLevelSwitcher({
- *     initialLevel: 'A1',
- *     apiEndpoint: '/api/v1/reading?level={level}',
- *     transformData: (data) => data.teile,
- *     onSuccess: (teile, level) => { setTeile(teile); ... },
- *   })
+ * - Failure rollback to the previous successful level
+ * - Retry after HTTP / payload failures
+ * - Safe unmount (abort + no post-unmount state updates / onSuccess)
  */
 export function useLevelSwitcher<T>({
     initialLevel,
@@ -43,54 +47,144 @@ export function useLevelSwitcher<T>({
 }: UseLevelSwitcherOptions<T>): UseLevelSwitcherReturn<T> {
     const [currentLevel, setCurrentLevel] = useState(initialLevel)
     const [isLevelLoading, setIsLevelLoading] = useState(false)
-    const abortControllerRef = useRef<AbortController | null>(null)
-    const activeLevelRef = useRef(initialLevel)
+    const [failedLevel, setFailedLevel] = useState<string | null>(null)
+    const [error, setError] = useState<string | null>(null)
 
-    // Cleanup abort controller on unmount
+    const abortControllerRef = useRef<AbortController | null>(null)
+    /** Last level successfully shown / being requested */
+    const activeLevelRef = useRef(initialLevel)
+    /** Last level that successfully loaded data (rollback target) */
+    const committedLevelRef = useRef(initialLevel)
+    const requestSeqRef = useRef(0)
+    const mountedRef = useRef(true)
+
     useEffect(() => {
+        mountedRef.current = true
         return () => {
+            mountedRef.current = false
             abortControllerRef.current?.abort()
         }
     }, [])
 
+    const clearError = useCallback(() => {
+        if (!mountedRef.current) return
+        setFailedLevel(null)
+        setError(null)
+    }, [])
+
     const switchLevel = useCallback(
         async (level: string) => {
-            if (level === activeLevelRef.current || isLevelLoading) return
+            // Allow switching while a request is in-flight (abort previous).
+            if (level === activeLevelRef.current) return
 
-            // Abort any in-flight request
+            const previousLevel = committedLevelRef.current
+            const requestId = ++requestSeqRef.current
+
             abortControllerRef.current?.abort()
             const controller = new AbortController()
             abortControllerRef.current = controller
 
-            // Update immediately for UI responsiveness
             activeLevelRef.current = level
-            setCurrentLevel(level)
-            setIsLevelLoading(true)
+            if (mountedRef.current) {
+                setCurrentLevel(level)
+                setIsLevelLoading(true)
+                setFailedLevel(null)
+                setError(null)
+            }
 
             try {
                 const url = apiEndpoint.replace('{level}', encodeURIComponent(level))
                 const res = await fetch(url, { signal: controller.signal })
-                const data = await res.json()
 
-                // Guard: user already switched to a different level
-                if (activeLevelRef.current !== level) return
-
-                if (data.success !== false) {
-                    const transformed = transformData(data)
-                    onSuccess?.(transformed, level)
+                if (
+                    !mountedRef.current ||
+                    requestSeqRef.current !== requestId ||
+                    activeLevelRef.current !== level
+                ) {
+                    return
                 }
+
+                let payload: unknown = null
+                try {
+                    payload = await res.json()
+                } catch {
+                    payload = null
+                }
+
+                if (
+                    !mountedRef.current ||
+                    requestSeqRef.current !== requestId ||
+                    activeLevelRef.current !== level
+                ) {
+                    return
+                }
+
+                const successFlag =
+                    payload &&
+                    typeof payload === 'object' &&
+                    'success' in payload &&
+                    (payload as { success?: unknown }).success === true
+
+                if (!res.ok || !successFlag) {
+                    activeLevelRef.current = previousLevel
+                    if (mountedRef.current) {
+                        setCurrentLevel(previousLevel)
+                        setFailedLevel(level)
+                        setError(
+                            !res.ok
+                                ? `Failed to load level ${level} (${res.status})`
+                                : `Failed to load level ${level}`,
+                        )
+                    }
+                    return
+                }
+
+                const transformed = transformData(payload)
+                if (
+                    !mountedRef.current ||
+                    requestSeqRef.current !== requestId ||
+                    activeLevelRef.current !== level
+                ) {
+                    return
+                }
+
+                committedLevelRef.current = level
+                setFailedLevel(null)
+                setError(null)
+                onSuccess?.(transformed, level)
             } catch (err) {
-                // Ignore aborted requests
-                if (err instanceof DOMException && err.name === 'AbortError') return
+                // Abort must not surface as an error (switch/unmount)
+                if (err instanceof DOMException && err.name === 'AbortError') {
+                    return
+                }
+                if (
+                    !mountedRef.current ||
+                    requestSeqRef.current !== requestId ||
+                    activeLevelRef.current !== level
+                ) {
+                    return
+                }
                 console.error('[useLevelSwitcher] fetch error:', err)
+                activeLevelRef.current = previousLevel
+                setCurrentLevel(previousLevel)
+                setFailedLevel(level)
+                setError(`Failed to load level ${level}`)
             } finally {
-                if (activeLevelRef.current === level) {
+                if (!mountedRef.current) return
+                if (requestSeqRef.current === requestId) {
                     setIsLevelLoading(false)
                 }
             }
         },
-        [apiEndpoint, transformData, onSuccess, isLevelLoading]
+        [apiEndpoint, transformData, onSuccess],
     )
 
-    return { currentLevel, isLevelLoading, switchLevel }
+    return {
+        currentLevel,
+        isLevelLoading,
+        switchLevel,
+        failedLevel,
+        error,
+        clearError,
+    }
 }

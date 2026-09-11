@@ -14,7 +14,8 @@
     "Geburtsdatum",
     "Adresse",
     "Telefonnummer",
-    "E-Mail-Adresse"
+    "Krankenkasse",
+    "Grund des Besuchs"
   ],
   "minWords": 15,
   "maxWords": 30,
@@ -68,11 +69,15 @@
       "type": "text"
     },
     {
-      "label": "E-Mail",
-      "type": "email"
+      "label": "Krankenkasse",
+      "type": "text"
+    },
+    {
+      "label": "Grund des Besuchs",
+      "type": "text"
     }
   ],
-  "modelAnswer": "Familienname: Nguyen\nVorname: Linh\nGeburtsdatum: 01.01.1998\nAdresse: Hauptstrasse 12, 10115 Berlin\nTelefon: 030 123456\nE-Mail: linh.nguyen@example.com",
+  "modelAnswer": "Familienname: Pham\nVorname: Mai\nGeburtsdatum: 22.07.1995\nAdresse: Marktstrasse 3, 60311 Frankfurt\nTelefon: 069 987654\nKrankenkasse: TK\nGrund des Besuchs: Husten",
   "timeLimitMinutes": 5,
   "estimatedMinutes": 5,
   "cefrAudit": {

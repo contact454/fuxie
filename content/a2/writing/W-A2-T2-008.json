@@ -48,14 +48,14 @@
   "sourceTextType": "Situationsbeschreibung für eine E-Mail",
   "stimulusSender": "Frau Dr. Schneider",
   "grafikData": [],
-  "modelAnswer": "Hallo,\n\nich schreibe wegen informieren dass krank. ich schreibe wegen Dauer nennen. ich schreibe wegen Vertretung vorschlagen. Bitte geben Sie mir kurz Bescheid.\n\nViele Gruesse\nLinh",
+  "modelAnswer": "Hallo Anna,\n\ndanke für deine Nachricht. Zum Thema Krankmeldung: Ich habe Zeit und helfe gern. Wir können uns am Samstag um 18 Uhr treffen. Ich kann Kuchen, Getränke oder Werkzeug mitbringen. Sag mir bitte, was du brauchst. Schreib mir bald zurück.\n\nViele Grüße\nLinh",
   "timeLimitMinutes": 15,
   "estimatedMinutes": 15,
   "cefrAudit": {
     "targetLevel": "A2",
     "verdict": "aligned",
     "reviewerRole": "German Academic Lead",
-    "notes": "Release-candidate metadata audit: writing content for \"Krankmeldung\" is aligned with declared A2 scope pending final human spot-check.",
+    "notes": "Writing D7 advisory remediation: modelAnswer regenerated for \"Krankmeldung\" after duplicate/template/length sweep; final native signoff remains pending.",
     "reviewedAt": "2026-05-12",
     "reviewScope": "release_candidate_metadata_pass"
   },

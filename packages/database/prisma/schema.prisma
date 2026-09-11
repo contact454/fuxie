@@ -176,6 +176,7 @@ model User {
   readingAttempts       ReadingAttempt[]
   writingAttempts       WritingAttempt[]
   vocabExerciseAttempts VocabExerciseAttempt[]
+  sessionAttempts       SessionAttempt[]
   grammarProgress       GrammarProgress[]
   speakingProgress      SpeakingProgress[]
   pushSubscriptions     PushSubscription[]
@@ -194,6 +195,41 @@ model User {
   deletedAt DateTime?
 
   @@map("users")
+}
+
+enum SessionAttemptStatus {
+  IN_PROGRESS
+  COMPLETED
+  EXHAUSTED
+  ABANDONED
+  EXPIRED
+}
+
+model SessionAttempt {
+  id                  String               @id @default(uuid())
+  userId              String
+  user                User                 @relation(fields: [userId], references: [id], onDelete: Cascade)
+  level               CefrLevel
+  clientStartKey      String
+  status              SessionAttemptStatus @default(IN_PROGRESS)
+  contractVersion     Int                  @default(2)
+  gradingVersion      String
+  rewardPolicyVersion String
+  catalogRevision     String
+  publicRevision      String
+  snapshotJson        Json
+  answersJson         Json
+  receiptJson         Json?
+  startedAt           DateTime             @default(now())
+  expiresAt           DateTime
+  completedAt         DateTime?
+  updatedAt           DateTime             @updatedAt
+
+  @@unique([userId, clientStartKey])
+  @@index([userId, status, startedAt])
+  @@index([startedAt])
+  // One IN_PROGRESS/user is enforced by a partial unique index in the SQL migration.
+  @@map("session_attempts")
 }
 
 model PushSubscription {

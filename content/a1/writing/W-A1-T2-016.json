@@ -46,14 +46,14 @@
     "maxScore": 15
   },
   "maxScore": 15,
-  "modelAnswer": "Hallo,\n\nich schreibe wegen Sagen Sie, dass Sie Zeit haben.. ich schreibe wegen Fragen Sie nach der Uhrzeit.. ich schreibe wegen Fragen Sie: Was machen wir? (z.B. Fußball oder Jogging). Bitte geben Sie mir kurz Bescheid.\n\nViele Gruesse\nLinh",
+  "modelAnswer": "Hallo Anna, danke für deine Nachricht. Zum Thema Sport im Park: Ich habe Zeit und helfe gern. Wir können uns am Samstag um 18 Uhr treffen. Ich kann Kuchen, Getränke oder Werkzeug mitbringen. Sag mir bitte, was du brauchst. Schreib.",
   "timeLimitMinutes": 10,
   "estimatedMinutes": 10,
   "cefrAudit": {
     "targetLevel": "A1",
     "verdict": "aligned",
     "reviewerRole": "German Academic Lead",
-    "notes": "Release-candidate metadata audit: writing content for \"Sport im Park\" is aligned with declared A1 scope pending final human spot-check.",
+    "notes": "Writing D7 advisory remediation: modelAnswer regenerated for \"Sport im Park\" after duplicate/template/length sweep; final native signoff remains pending.",
     "reviewedAt": "2026-05-12",
     "reviewScope": "release_candidate_metadata_pass"
   },

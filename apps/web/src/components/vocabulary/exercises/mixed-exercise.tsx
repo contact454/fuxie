@@ -25,6 +25,8 @@ import {
 import { getFirstSessionNextStep } from '@/lib/gamification/lesson-gameplay-expansion'
 import { Mascot } from '@/components/ui/mascot'
 import { FuxieBadge, fuxieButtonClass } from '@/components/ui/fuxie-ui'
+import { useSuppressLearnerMainChrome } from '@/hooks/use-suppress-chrome'
+import { FrostedPanel, OptionTile, PrimaryCta } from '@fuxie/ui/components'
 import {
     exerciseAudioButtonClass,
     exerciseCenterStageClass,
@@ -105,6 +107,8 @@ export function MixedExercise({ questions, cefrLevel, themeName: _themeName, the
         questEpisode,
     })
 
+    useSuppressLearnerMainChrome(phase !== 'results' && !gameOver)
+
     const question = activeQuestions[currentIndex]
 
     // Audio auto play for MC audio variant
@@ -181,18 +185,22 @@ export function MixedExercise({ questions, cefrLevel, themeName: _themeName, the
     const handleSelect = useCallback((option: string) => {
         if (isRevealed || !question) return
         setSelectedAnswer(option)
+    }, [isRevealed, question])
+
+    const checkAnswer = useCallback(() => {
+        if (isRevealed || !question || !selectedAnswer) return
         setIsRevealed(true)
 
         const correctAnswer = question.type === 'de_to_native'
             ? question.meaningNative
             : question.word  // native_to_de, image_to_word, audio_to_word
 
-        const correct = option === correctAnswer
+        const correct = selectedAnswer === correctAnswer
         setIsCorrect(correct)
 
         const newAnswers: ExerciseAnswer[] = [...answers, {
             questionId: question.id,
-            answer: option,
+            answer: selectedAnswer,
             correctAnswer,
             wordId: question.wordId,
             questionType: question.type,
@@ -210,7 +218,7 @@ export function MixedExercise({ questions, cefrLevel, themeName: _themeName, the
                 setActiveQuestions(prev => [...prev, { ...question, id: question.id + '_retry' }])
             }
         }
-    }, [isRevealed, answers, question, hearts])
+    }, [isRevealed, selectedAnswer, answers, question, hearts])
 
     const handleContinue = useCallback(() => {
         if (hearts <= 0) {
@@ -419,11 +427,11 @@ export function MixedExercise({ questions, cefrLevel, themeName: _themeName, the
     // Render MC SLIDE (Multiple Choice)
     const getQuestionLabel = () => {
         switch (question.type) {
-            case 'de_to_native': return `Was bedeutet "${question.prompt}"?`
-            case 'native_to_de': return `"${question.prompt}" auf Deutsch?`
-            case 'image_to_word': return 'Welches Wort passt zum Bild?'
-            case 'audio_to_word': return 'Welches Wort hörst du?'
-            default: return question.prompt
+            case 'de_to_native': return t('questionDeToNative', { word: question.prompt || '' })
+            case 'native_to_de': return t('questionNativeToDe', { word: question.prompt || '' })
+            case 'image_to_word': return t('questionImageToWord')
+            case 'audio_to_word': return t('questionAudioToWord')
+            default: return question.prompt || ''
         }
     }
 
@@ -432,10 +440,10 @@ export function MixedExercise({ questions, cefrLevel, themeName: _themeName, the
             {renderHeader()}
             <div className={exerciseCenterStageClass}>
                 <div className={exerciseStageInnerClass}>
-                    {/* Y hệt như MC-Exercise */}
-                    <div className="text-center mb-8">
+                    {/* Prompt area wrapped in FrostedPanel */}
+                    <FrostedPanel className="text-center mb-8 flex flex-col items-center justify-center p-6 w-full gap-4 shadow-[var(--fuxie-shadow-iso)] border-2 border-[var(--fuxie-blue-200)]/70">
                         {question.type === 'image_to_word' && question.promptImage && (
-                            <div className="mb-4 flex justify-center">
+                            <div className="mb-2 flex justify-center">
                                 <Image src={question.promptImage} alt="Prompt" width={160} height={160} className={exercisePromptImageClass()} />
                             </div>
                         )}
@@ -447,7 +455,7 @@ export function MixedExercise({ questions, cefrLevel, themeName: _themeName, the
                             </button>
                         )}
                         {(question.type === 'de_to_native' || question.type === 'native_to_de') && (
-                            <div className="mb-4">
+                            <div className="mb-2">
                                 <p className="text-4xl font-black leading-tight text-slate-950">{question.prompt}</p>
                                 {question.type === 'de_to_native' && question.promptAudio && (
                                     <button onClick={() => playSound(question.promptAudio)} className={exerciseInlineAudioClass()}>🔊 {t('listen')}</button>
@@ -455,19 +463,47 @@ export function MixedExercise({ questions, cefrLevel, themeName: _themeName, the
                             </div>
                         )}
                         <p className="text-xs font-bold uppercase text-slate-500">{getQuestionLabel()}</p>
-                    </div>
+                    </FrostedPanel>
 
                     <div className="grid grid-cols-1 gap-3 sm:grid-cols-2">
                         {question.options?.map((option, i) => {
                             const isSelected = selectedAnswer === option
+                            const correctAnswer = question.type === 'de_to_native' ? question.meaningNative : question.word
+                            let status: 'idle' | 'selected' | 'correct' | 'incorrect' = 'idle'
+                            if (isRevealed) {
+                                if (option === correctAnswer) {
+                                    status = 'correct'
+                                } else if (isSelected) {
+                                    status = 'incorrect'
+                                }
+                            } else if (isSelected) {
+                                status = 'selected'
+                            }
 
                             return (
-                                <button key={i} onClick={() => handleSelect(option)} disabled={isRevealed} className={exerciseOptionClass({ selected: isSelected, revealed: isRevealed, className: 'py-5 text-lg' })}>
-                                    {option}
-                                </button>
+                                <OptionTile
+                                    key={i}
+                                    text={option}
+                                    status={status}
+                                    onClick={() => handleSelect(option)}
+                                    disabled={isRevealed}
+                                />
                             )
                         })}
                     </div>
+
+                    {/* Check Button */}
+                    {!isRevealed && (
+                        <div className="mt-8 w-full">
+                            <PrimaryCta
+                                onClick={checkAnswer}
+                                disabled={!selectedAnswer}
+                                className="w-full"
+                            >
+                                {t('checkBtn')}
+                            </PrimaryCta>
+                        </div>
+                    )}
                 </div>
             </div>
 

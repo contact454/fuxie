@@ -1,141 +1,103 @@
 import { beforeEach, describe, expect, it, vi } from 'vitest'
 
-const {
-    withAuthMock,
-    getDbUserByFirebaseUidMock,
-    transactionMock,
-    srsCardUpdateMock,
-    srsCardFindFirstMock,
-    srsCardCreateMock,
-    grammarProgressUpdateManyMock,
-    recordLearningActivityMock,
-    invalidateLearnerProgressCachesMock,
-    invalidateLearnerSrsCachesMock,
-} = vi.hoisted(() => ({
-    withAuthMock: vi.fn(),
-    getDbUserByFirebaseUidMock: vi.fn(),
-    transactionMock: vi.fn(),
-    srsCardUpdateMock: vi.fn(),
-    srsCardFindFirstMock: vi.fn(),
-    srsCardCreateMock: vi.fn(),
-    grammarProgressUpdateManyMock: vi.fn(),
-    recordLearningActivityMock: vi.fn(),
-    invalidateLearnerProgressCachesMock: vi.fn(),
-    invalidateLearnerSrsCachesMock: vi.fn(),
+const { withDbAuthMock, completeSessionMock } = vi.hoisted(() => ({
+    withDbAuthMock: vi.fn(),
+    completeSessionMock: vi.fn(),
 }))
 
 vi.mock('@/lib/auth/middleware', () => ({
-    withAuth: withAuthMock,
+    withDbAuth: withDbAuthMock,
+    AuthError: class AuthError extends Error {},
+    NotFoundError: class NotFoundError extends Error {},
 }))
 
-vi.mock('@/lib/auth/db-user', () => ({
-    getDbUserByFirebaseUid: getDbUserByFirebaseUidMock,
+vi.mock('@/lib/session/attempt-service', () => ({
+    completeSession: completeSessionMock,
 }))
 
-vi.mock('@/lib/progress/learning-activity', () => ({
-    recordLearningActivity: recordLearningActivityMock,
-}))
-
-vi.mock('@/lib/progress/cache-invalidation', () => ({
-    invalidateLearnerProgressCaches: invalidateLearnerProgressCachesMock,
-    invalidateLearnerSrsCaches: invalidateLearnerSrsCachesMock,
-}))
-
-vi.mock('@fuxie/database', () => ({
-    prisma: {
-        $transaction: transactionMock,
-    },
-}))
-
+import { SessionError } from '@/lib/session/errors'
 import { POST } from './route'
 
-describe('POST /api/v1/session/complete', () => {
+const attemptId = '11111111-1111-4111-8111-111111111111'
+const publicRevision = '22222222-2222-4222-8222-222222222222'
+const receipt = {
+    attemptId,
+    status: 'COMPLETED',
+    reason: 'all_answered',
+    level: 'A1',
+    gradedCount: 1,
+    correctCount: 1,
+    acknowledgedCount: 0,
+    baseXpEarned: 10,
+    streakBonusXp: 0,
+    xpEarned: 10,
+    heartsRemaining: 5,
+    completionEligible: true,
+    wordsLearned: 0,
+    srsReviewed: 1,
+    savedAt: '2026-09-11T10:00:00.000Z',
+    contractVersion: 2,
+    gradingVersion: 'session-v2',
+}
+
+const request = (body: unknown) => ({ json: async () => body }) as any
+
+describe('POST /api/v1/session/complete — v2 contract', () => {
     beforeEach(() => {
-        vi.clearAllMocks()
-        withAuthMock.mockResolvedValue({ userId: 'firebase-user-1' })
-        getDbUserByFirebaseUidMock.mockResolvedValue({ id: 'db-user-1' })
-        srsCardUpdateMock.mockResolvedValue({})
-        srsCardFindFirstMock.mockResolvedValue(null)
-        srsCardCreateMock.mockResolvedValue({})
-        grammarProgressUpdateManyMock.mockResolvedValue({ count: 1 })
-        recordLearningActivityMock.mockResolvedValue({
-            xpEarned: 40,
-            baseXpEarned: 40,
-            streakBonusXp: 0,
-            streak: {
-                currentStreak: 2,
-                isNewDay: false,
-            },
-        })
-        invalidateLearnerProgressCachesMock.mockResolvedValue(undefined)
-        invalidateLearnerSrsCachesMock.mockResolvedValue(undefined)
-        transactionMock.mockImplementation(async (callback: (tx: any) => Promise<any>) =>
-            callback({
-                srsCard: {
-                    update: srsCardUpdateMock,
-                    findFirst: srsCardFindFirstMock,
-                    create: srsCardCreateMock,
-                },
-                grammarProgress: {
-                    updateMany: grammarProgressUpdateManyMock,
-                },
-            })
-        )
+        vi.resetAllMocks()
+        withDbAuthMock.mockResolvedValue({ userId: 'db-user-1', firebaseUid: 'firebase-1', email: 'learner@example.test', role: 'LEARNER' })
+        completeSessionMock.mockResolvedValue(receipt)
     })
 
-    it('maps mixed session results into the shared activity model', async () => {
-        const response = await POST({
-            json: async () => ({
-                totalXp: 40,
-                heartsRemaining: 4,
-                level: 'A1',
-                results: [
-                    { type: 'VOCAB_REVIEW', correct: true, data: { cardId: 'card-1' } },
-                    { type: 'VOCAB_NEW', correct: true, data: { itemId: 'word-1' } },
-                    { type: 'GRAMMAR', correct: true, data: { lessonId: 'grammar-1' } },
-                ],
-            }),
-        } as any)
+    it('delegates completion to the server-authoritative attempt service for the authenticated DB user', async () => {
+        const response = await POST(request({ contractVersion: 2, attemptId, publicRevision }))
 
         expect(response.status).toBe(200)
-        await expect(response.json()).resolves.toEqual({
-            success: true,
-            data: {
-                heartsRemaining: 4,
-                level: 'A1',
-            },
+        await expect(response.json()).resolves.toEqual({ success: true, data: { receipt } })
+        expect(completeSessionMock).toHaveBeenCalledExactlyOnceWith('db-user-1', {
+            contractVersion: 2,
+            attemptId,
+            publicRevision,
         })
+    })
 
-        expect(srsCardFindFirstMock).toHaveBeenCalledWith({
-            where: { userId: 'db-user-1', vocabularyItemId: 'word-1' },
+    it.each([
+        { contractVersion: 1, attemptId, publicRevision },
+        { contractVersion: 2, attemptId: 'not-a-uuid', publicRevision },
+        { contractVersion: 2, attemptId, publicRevision: 'not-a-uuid' },
+        { contractVersion: 2, attemptId },
+    ])('rejects an invalid v2 completion payload before calling the service', async (body) => {
+        const response = await POST(request(body))
+
+        expect(response.status).toBe(400)
+        await expect(response.json()).resolves.toMatchObject({
+            success: false,
+            error: { code: 'VALIDATION_ERROR' },
         })
-        expect(grammarProgressUpdateManyMock).toHaveBeenCalledWith({
-            where: { userId: 'db-user-1', lessonId: 'grammar-1' },
-            data: { completed: true, stars: 3 },
+        expect(completeSessionMock).not.toHaveBeenCalled()
+    })
+
+    it('preserves a session-domain conflict code from the service', async () => {
+        completeSessionMock.mockRejectedValue(new SessionError(409, 'SESSION_INCOMPLETE', 'Session is not ready to complete'))
+
+        const response = await POST(request({ contractVersion: 2, attemptId, publicRevision }))
+
+        expect(response.status).toBe(409)
+        await expect(response.json()).resolves.toEqual({
+            success: false,
+            error: { code: 'SESSION_INCOMPLETE', message: 'Session is not ready to complete' },
         })
-        expect(recordLearningActivityMock).toHaveBeenCalledWith(
-            expect.anything(),
-            expect.objectContaining({
-                userId: 'db-user-1',
-                exerciseId: 'session:A1',
-                xpEarned: 40,
-                lessonsCompleted: 1,
-                srsReviewed: 1,
-                wordsLearned: 1,
-                analytics: {
-                    actionId: 'session:A1',
-                    actionType: 'lesson_session',
-                    level: 'A1',
-                    source: 'session.complete',
-                    metadata: {
-                        review_count: 1,
-                        new_vocab_count: 1,
-                        grammar_count: 1,
-                    },
-                },
-            })
-        )
-        expect(invalidateLearnerSrsCachesMock).toHaveBeenCalledWith('db-user-1')
-        expect(invalidateLearnerProgressCachesMock).not.toHaveBeenCalled()
+    })
+
+    it('never accepts legacy client-supplied XP/results as a completion contract', async () => {
+        const response = await POST(request({
+            results: [],
+            totalXp: 999999,
+            heartsRemaining: 5,
+            level: 'A1',
+        }))
+
+        expect(response.status).toBe(400)
+        expect(completeSessionMock).not.toHaveBeenCalled()
     })
 })

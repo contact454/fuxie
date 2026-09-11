@@ -20,7 +20,7 @@ export function ExerciseProgress({ current, total, onClose, timer, cefrLevel }: 
     }
 
     return (
-        <div className="flex items-center gap-3 border-b border-[#60A8E4]/10 bg-white/95 px-4 py-3 shadow-sm backdrop-blur">
+        <div className="fuxie-header-base flex items-center gap-3">
             {/* Close button */}
             <button
                 onClick={onClose}
@@ -34,7 +34,11 @@ export function ExerciseProgress({ current, total, onClose, timer, cefrLevel }: 
 
             {/* Progress bar */}
             <div className="flex-1">
-                <FuxieProgressBar value={progress} className="h-3" />
+                <FuxieProgressBar
+                    value={progress}
+                    className="h-1.5 bg-[var(--fuxie-blue-100)] rounded-full overflow-hidden"
+                    barClassName="bg-[var(--fuxie-success)] bg-none rounded-full"
+                />
             </div>
 
             {/* Question counter */}

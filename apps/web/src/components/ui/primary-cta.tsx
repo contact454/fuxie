@@ -80,24 +80,25 @@ const variantClasses: Record<PrimaryCtaVariant, string> = {
         // Bright Sky action — Req 16.4.
         'min-h-[44px] min-w-[44px]',
         'bg-[var(--fuxie-action)] text-white',
-        'shadow-md shadow-sky-900/15',
-        'hover:bg-[var(--fuxie-action-hover)] hover:-translate-y-0.5',
-        'active:translate-y-0',
+        'border-t-2 border-l-2 border-r-2 border-b-[4px] border-[var(--fuxie-action)] border-b-[var(--fuxie-lip-action)]',
+        'hover:bg-[var(--fuxie-action-hover)] hover:border-[var(--fuxie-action-hover)] hover:border-b-[var(--fuxie-lip-action)]',
+        'active:translate-y-[2px] active:border-b-[2px]',
     ),
     review: fx(
         // Same fill as primary, but ≥48×48 dp tap target — Req 9.1 / Req 14.1.
-        'min-h-[48px] min-w-[48px] px-6 py-3.5',
+        'min-h-[48px] min-w-[48px] px-6 py-3',
         'bg-[var(--fuxie-action)] text-white',
-        'shadow-md shadow-sky-900/15',
-        'hover:bg-[var(--fuxie-action-hover)] hover:-translate-y-0.5',
-        'active:translate-y-0',
+        'border-t-2 border-l-2 border-r-2 border-b-[4px] border-[var(--fuxie-action)] border-b-[var(--fuxie-lip-action)]',
+        'hover:bg-[var(--fuxie-action-hover)] hover:border-[var(--fuxie-action-hover)] hover:border-b-[var(--fuxie-lip-action)]',
+        'active:translate-y-[2px] active:border-b-[2px]',
     ),
     secondary: fx(
         // Outline style — Bright Sky border, NO data-role="primary-cta".
         'min-h-[44px] min-w-[44px]',
         'bg-white text-[color:var(--color-text-brand)]',
-        'border-2 border-[var(--fuxie-action)]',
+        'border-t-2 border-l-2 border-r-2 border-b-[4px] border-[var(--fuxie-action)] border-b-[var(--fuxie-lip-action)]',
         'hover:bg-[var(--fuxie-blue-50)]',
+        'active:translate-y-[2px] active:border-b-[2px]',
     ),
 }
 

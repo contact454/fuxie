@@ -12,9 +12,10 @@
   "contentPoints": [
     "Name und Vorname",
     "Geburtsdatum",
-    "Adresse",
     "Telefonnummer",
-    "E-Mail-Adresse"
+    "E-Mail-Adresse",
+    "Pruefungstermin",
+    "Gebuehr bezahlt"
   ],
   "minWords": 15,
   "maxWords": 30,
@@ -60,19 +61,23 @@
       "type": "date"
     },
     {
-      "label": "Adresse",
-      "type": "text"
-    },
-    {
       "label": "Telefon",
       "type": "text"
     },
     {
       "label": "E-Mail",
       "type": "email"
+    },
+    {
+      "label": "Pruefungstermin",
+      "type": "date"
+    },
+    {
+      "label": "Gebuehr bezahlt: ja/nein",
+      "type": "text"
     }
   ],
-  "modelAnswer": "Familienname: Nguyen\nVorname: Linh\nGeburtsdatum: 01.01.1998\nAdresse: Hauptstrasse 12, 10115 Berlin\nTelefon: 030 123456\nE-Mail: linh.nguyen@example.com",
+  "modelAnswer": "Familienname: Vo\nVorname: An\nGeburtsdatum: 09.12.2000\nTelefon: 089 123987\nE-Mail: an.vo@example.com\nPruefungstermin: 15.10.2026\nGebuehr bezahlt: ja",
   "timeLimitMinutes": 5,
   "estimatedMinutes": 5,
   "cefrAudit": {

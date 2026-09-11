@@ -167,6 +167,14 @@ export interface SkillPlayerShellProps {
      * through three real retries. Clamped to `[0, SKILL_PLAYER_MAX_RETRIES]`.
      */
     initialFailureCount?: number
+    /**
+     * When `true`, the shell omits the bottom default Primary_CTA while
+     * not in an error/blocked state. Error Retry / blocked secondary CTA
+     * still render. Used by Listening so Start/Check/Continue inside the
+     * player is the sole primary action (no outer duplicate CTA in DOM).
+     * Default `false` keeps Reading/Writing/Speaking consumers unchanged.
+     */
+    hideDefaultPrimaryCta?: boolean
 }
 
 // -----------------------------------------------------------------------------
@@ -293,6 +301,7 @@ export function SkillPlayerShell({
     className,
     initialPhase,
     initialFailureCount,
+    hideDefaultPrimaryCta = false,
 }: SkillPlayerShellProps) {
     const [state, setState] = useState<SkillPlayerFsmState>(() => ({
         phase: initialPhase ?? (assetLoaded === true ? 'ready' : 'loading'),
@@ -348,8 +357,13 @@ export function SkillPlayerShell({
     const fallbackMessage = labels.fallbackMessage ?? DEFAULT_FALLBACK_MESSAGE
 
     // Bottom action bar — exactly one Primary_CTA per state (Property 8).
+    // When hideDefaultPrimaryCta is set, omit the ready-state CTA entirely
+    // (not CSS-hidden) so immersive players own Start/Check/Continue.
     const bottomCta = useMemo(() => {
         if (!isErrorState) {
+            if (hideDefaultPrimaryCta) {
+                return null
+            }
             // Default state: surface’s next-action CTA.
             if (primaryCtaHref) {
                 return (
@@ -385,6 +399,7 @@ export function SkillPlayerShell({
 
         // Error / blocked state: "Thử lại" — primary while attempts ≤ 2,
         // downgraded to secondary on the third failure (Req 6.11).
+        // Always rendered even when hideDefaultPrimaryCta is true.
         const variant = isBlocked ? 'secondary' : 'primary'
         return (
             <PrimaryCta
@@ -400,6 +415,7 @@ export function SkillPlayerShell({
     }, [
         isErrorState,
         isBlocked,
+        hideDefaultPrimaryCta,
         primaryCtaHref,
         onPrimaryCta,
         labels.primaryCtaLabel,
@@ -455,12 +471,15 @@ export function SkillPlayerShell({
                 </p>
             ) : null}
 
-            <div
-                className="mt-2 flex justify-end"
-                data-cta-context={isErrorState ? 'error' : 'default'}
-            >
-                {bottomCta}
-            </div>
+            {bottomCta ? (
+                <div
+                    className="mt-2 flex justify-end"
+                    data-cta-context={isErrorState ? 'error' : 'default'}
+                    data-role="skill-player-bottom-cta"
+                >
+                    {bottomCta}
+                </div>
+            ) : null}
         </div>
     )
 }

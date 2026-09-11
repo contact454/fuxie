@@ -167,7 +167,9 @@ export function paint(ctx: WorldCanvasContext, inputs: RenderInputs): void {
     // 3. Sky/ground gradient. We approximate a vertical gradient with a
     //    fixed number of horizontal strips; 32 strips is enough to look
     //    smooth at typical viewport heights without burning fill calls.
-    paintSkyGroundGradient(ctx, cssWidth, cssHeight)
+    if (!scene.isTransparent) {
+        paintSkyGroundGradient(ctx, cssWidth, cssHeight)
+    }
 
     // 4. Compose camera transform on top of the DPR transform. After
     //    these calls, drawing at world (wx, wy) maps to CSS pixel
@@ -179,7 +181,9 @@ export function paint(ctx: WorldCanvasContext, inputs: RenderInputs): void {
 
     // 5. Iso-tile field. Bounded by the grid's cell extent so we don't
     //    paint an unbounded plane.
-    paintIsoTileField(ctx, grid)
+    if (!scene.isTransparent) {
+        paintIsoTileField(ctx, grid)
+    }
 
     // 6. Terrain pass. V0 ships zero terrain entries; the loop is
     //    written for future slices and is a no-op when scene.terrain

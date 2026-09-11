@@ -47,14 +47,14 @@
   "sourceText": "Hallo! Wie geht es dir? Ich möchte dich nächste Woche gerne zum Essen einladen. Welches Restaurant in der Stadt gefällt dir am besten? Hast du vielleicht besondere Wünsche oder gibt es etwas, das du gar nicht magst? Sag mir bitte Bescheid, damit ich reservieren kann. Ich freue mich!\n\nLiebe Grüße,\nSarah",
   "sourceTextType": "E-Mail",
   "stimulusSender": "Sarah",
-  "modelAnswer": "Hallo,\n\nich schreibe wegen sich bedanken. ich schreibe wegen Restaurant vorschlagen. ich schreibe wegen besondere Wuensche nennen. Bitte geben Sie mir kurz Bescheid.\n\nViele Gruesse\nLinh",
+  "modelAnswer": "Hallo Anna,\n\ndanke für deine Nachricht. Zum Thema Restaurant: Ich habe Zeit und helfe gern. Wir können uns am Samstag um 18 Uhr treffen. Ich kann Kuchen, Getränke oder Werkzeug mitbringen. Sag mir bitte, was du brauchst. Schreib mir bald zurück.\n\nLiebe Grüße\nLinh",
   "timeLimitMinutes": 15,
   "estimatedMinutes": 15,
   "cefrAudit": {
     "targetLevel": "A2",
     "verdict": "aligned",
     "reviewerRole": "German Academic Lead",
-    "notes": "Release-candidate metadata audit: writing content for \"Restaurant\" is aligned with declared A2 scope pending final human spot-check.",
+    "notes": "Writing D7 advisory remediation: modelAnswer regenerated for \"Restaurant\" after duplicate/template/length sweep; final native signoff remains pending.",
     "reviewedAt": "2026-05-12",
     "reviewScope": "release_candidate_metadata_pass"
   },

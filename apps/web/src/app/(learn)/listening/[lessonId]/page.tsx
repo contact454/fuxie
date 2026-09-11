@@ -19,9 +19,8 @@
  *    single Primary_CTA `Thử lại`; three consecutive failures downgrade
  *    the CTA to secondary and surface a localized fallback message
  *    (Req 6.10, 6.11).
- *  - Renders a bottom Primary_CTA `Tiếp tục` pointing to `/listening` so
- *    the learner has the canonical next-action even when the inner
- *    player is mid-session (Property 8 / Req 11.5).
+ *  - Outer shell uses `hideDefaultPrimaryCta` so Start/Check/Continue
+ *    inside the immersive player remain the sole primary actions.
  *
  * Validates: Requirements 6.1, 6.2, 6.3, 6.5, 6.10, 6.11, 11.5
  */
@@ -51,6 +50,7 @@ const getListeningLesson = cache(async (lessonId: string) => {
                     questionText: true,
                     translations: true,
                     options: true,
+                    correctAnswer: true,
                     sortOrder: true,
                 },
             },
@@ -66,10 +66,12 @@ export async function generateMetadata({
     searchParams?: Promise<Slice2VisualQaParams>
 }) {
     const visualParams = await searchParams
-    if (isSlice2VisualQaFixture(visualParams, 'loading')) {
+    const isVisualQa = visualParams?.fixture === 'visual-qa'
+
+    if (isVisualQa) {
         return {
-            title: 'Fuxie - Listening Visual QA',
-            description: 'Slice 2 listening loading visual fixture',
+            title: 'Fuxie - Luyện nghe Visual QA',
+            description: 'Mock bài nghe tiếng Đức',
         }
     }
 
@@ -86,6 +88,48 @@ const MAX_PLAYS: Record<string, number> = {
     A1: 2, A2: 2, B1: 2, B2: 2, C1: 2, C2: 1,
 }
 
+interface VisualQaQuestion {
+    id: string
+    questionNumber: number
+    questionType: string
+    questionText: string
+    questionTextNative: string | null
+    options: string[]
+    correctAnswer: string
+    sortOrder: number
+    translations: Record<string, string>
+}
+
+interface VisualQaLesson {
+    lessonId: string
+    title: string
+    topic: string
+    cefrLevel: string
+    teil: number
+    teilName: string
+    taskType: string
+    audioUrl: string
+    audioDuration: number
+    backgroundScene: string
+    questions: VisualQaQuestion[]
+    transcript: {
+        lines: Array<{ speaker: string; text: string }>
+    }
+    maxPlays: number
+}
+
+type LessonQuestion = {
+    id: string
+    questionNumber: number
+    questionType: string
+    questionText: string
+    options: unknown
+    correctAnswer: string
+    sortOrder: number
+    translations: unknown
+    questionTextNative?: string | null
+}
+
 export default async function ListeningLessonPage({
     params,
     searchParams,
@@ -99,16 +143,93 @@ export default async function ListeningLessonPage({
         return <Slice2ListeningLoadingFixture />
     }
 
-    const serverUser = await getServerUser()
-    if (!serverUser) redirect('/login')
-
     const { lessonId } = await params
+    const isVisualQa = visualParams?.fixture === 'visual-qa'
+    const mockState = visualParams?.state || ''
 
-    const lesson = await getListeningLesson(lessonId)
+    let lesson: VisualQaLesson | Awaited<ReturnType<typeof getListeningLesson>>
+    let uiLanguage = 'vi'
 
-    if (!lesson) notFound()
+    if (isVisualQa) {
+        lesson = {
+            lessonId: 'L-A1-GOETHE-001-T1',
+            title: 'Bài nghe số 1', // locale-allow — visual fixture
+            topic: 'Gặp gỡ ở văn phòng', // locale-allow — visual fixture
+            cefrLevel: 'A1',
+            teil: 1,
+            teilName: 'Hội thoại ngắn', // locale-allow — visual fixture
+            taskType: 'Trắc nghiệm', // locale-allow — visual fixture
+            audioUrl: '/audio/listening/A1-Teil1.mp3',
+            audioDuration: 120,
+            backgroundScene: 'cafe',
+            questions: [
+                {
+                    id: 'q1',
+                    questionNumber: 1,
+                    questionType: 'multiple_choice',
+                    questionText: 'Wer ist Herr Land?', // locale-allow — German content
+                    questionTextNative: 'Ai là ông Land?', // locale-allow — visual fixture
+                    options: [
+                        'Der neue Kollege aus Berlin', // locale-allow — German content
+                        'Der Chef der Marketingabteilung', // locale-allow — German content
+                        'Ein Kunde aus Hamburg', // locale-allow — German content
+                    ],
+                    correctAnswer: 'a',
+                    sortOrder: 1,
+                    translations: {},
+                },
+            ],
+            transcript: {
+                lines: [
+                    { speaker: 'Frau Schmidt', text: 'Guten Tag, Herr Land. Willkommen in Berlin.' }, // locale-allow — German content
+                    { speaker: 'Herr Land', text: 'Guten Tag, Frau Schmidt. Freut mich, Sie kennenzulernen.' }, // locale-allow — German content
+                ],
+            },
+            maxPlays: 2,
+        } satisfies VisualQaLesson
+    } else {
+        const serverUser = await getServerUser()
+        if (!serverUser) redirect('/login')
+        uiLanguage = serverUser.uiLanguage || 'vi'
+
+        const dbLesson = await getListeningLesson(lessonId)
+        if (!dbLesson) notFound()
+        lesson = dbLesson
+    }
 
     const tSkill = await getTranslations('SkillPlayer')
+
+    const questions = (lesson.questions as LessonQuestion[]).map((q) => {
+        const translations =
+            q.translations && typeof q.translations === 'object'
+                ? (q.translations as Record<string, string>)
+                : {}
+        const nativeFromFixture =
+            typeof q.questionTextNative === 'string' ? q.questionTextNative : null
+        const options = Array.isArray(q.options)
+            ? (q.options as string[])
+            : []
+
+        return {
+            id: q.id,
+            questionNumber: q.questionNumber,
+            questionType: q.questionType,
+            questionText: q.questionText,
+            options,
+            correctAnswer: q.correctAnswer,
+            sortOrder: q.sortOrder,
+            questionTextNative: isVisualQa
+                ? nativeFromFixture
+                : translations[uiLanguage] || null,
+        }
+    })
+
+    const transcript =
+        lesson.transcript &&
+        typeof lesson.transcript === 'object' &&
+        lesson.transcript !== null
+            ? (lesson.transcript as { lines?: Array<{ speaker?: string; text: string }> })
+            : null
 
     return (
         <div className="max-w-5xl mx-auto px-4 py-6">
@@ -124,16 +245,11 @@ export default async function ListeningLessonPage({
                     audioUrl: lesson.audioUrl,
                     audioDuration: lesson.audioDuration,
                     backgroundScene: lesson.backgroundScene,
-                    questions: lesson.questions.map(q => ({
-                        ...q,
-                        options: q.options as string[],
-                        questionTextNative:
-                            ((q.translations as Record<string, string>)?.[
-                                serverUser.uiLanguage || 'vi'
-                            ]) || null,
-                    })),
-                    transcript: lesson.transcript as any,
+                    questions,
+                    transcript,
                     maxPlays: MAX_PLAYS[lesson.cefrLevel] || 2,
+                    mockState: isVisualQa ? mockState : undefined,
+                    isVisualQa: isVisualQa,
                 }}
                 primaryCtaHref="/listening"
                 labels={{

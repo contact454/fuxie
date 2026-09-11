@@ -1,7 +1,9 @@
 'use client'
 
 import { useEffect } from 'react'
-import { fuxieButtonClass, fx } from '@/components/ui/fuxie-ui'
+import { useTranslations } from 'next-intl'
+import { fx } from '@/components/ui/fuxie-ui'
+import { PrimaryCta } from '@fuxie/ui/components'
 
 interface BottomFeedbackProps {
     isCorrect: boolean
@@ -10,6 +12,8 @@ interface BottomFeedbackProps {
 }
 
 export function BottomFeedback({ isCorrect, correctAnswer, onContinue }: BottomFeedbackProps) {
+    const t = useTranslations('Vocabulary')
+
     // Play SFX on mount
     useEffect(() => {
         if (isCorrect) {
@@ -30,21 +34,34 @@ export function BottomFeedback({ isCorrect, correctAnswer, onContinue }: BottomF
     }, [isCorrect, onContinue])
 
     const surfaceClass = isCorrect
-        ? 'border-[#2EC4B6]/30 bg-[#EAFBF8]'
-        : 'border-red-200 bg-red-50'
+        ? 'border-[#a5e27a] bg-[#d7ffb8]'
+        : 'border-[#ffb5b5] bg-[#ffdfe0]'
     const iconClass = isCorrect
-        ? 'text-text-success ring-[#2EC4B6]/25'
-        : 'text-red-600 ring-red-200'
-    const textColor = isCorrect ? 'text-text-success' : 'text-red-600'
-    const btnClass = isCorrect
-        ? fuxieButtonClass('primary', 'lg', 'min-w-[150px]')
-        : 'inline-flex min-w-[150px] items-center justify-center gap-2 rounded-xl bg-red-500 px-6 py-3 text-sm font-bold text-white shadow-lg shadow-red-900/10 transition-all hover:-translate-y-0.5 hover:bg-red-600 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-red-300'
+        ? 'text-[#58a700] ring-[#58cc02]/25 bg-white'
+        : 'text-[#ea2b2b] ring-[#ff4b4b]/25 bg-white'
+    const textColor = isCorrect ? 'text-[#58a700]' : 'text-[#ea2b2b]'
     
+    const btnCta = isCorrect ? (
+        <PrimaryCta
+            onClick={onContinue}
+            className="bg-[#58cc02] border-[#58cc02] border-b-[#58a700] hover:bg-[#61e002] text-white min-w-[160px] active:translate-y-[2px] active:border-b-[2px]"
+        >
+            {t('continueBtn')}
+        </PrimaryCta>
+    ) : (
+        <PrimaryCta
+            onClick={onContinue}
+            className="bg-[#ff4b4b] border-[#ff4b4b] border-b-[#ea2b2b] hover:bg-[#ff6666] text-white min-w-[160px] active:translate-y-[2px] active:border-b-[2px]"
+        >
+            {t('continueBtn')}
+        </PrimaryCta>
+    )
+
     return (
-        <div className={fx('fixed bottom-0 left-0 right-0 z-[100] border-t p-4 shadow-[0_-18px_45px_rgba(60,120,168,0.12)] transition-transform animate-in slide-in-from-bottom-full', surfaceClass)}>
-            <div className="mx-auto flex max-w-4xl flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
+        <div className={fx('fixed bottom-0 left-0 right-0 z-[100] border-t p-6 shadow-[0_-10px_25px_rgba(23,59,86,0.08)] transition-transform animate-in slide-in-from-bottom-full duration-150', surfaceClass)}>
+            <div className="mx-auto flex max-w-4xl flex-col gap-4 sm:flex-row sm:items-center sm:justify-between px-4">
                 <div className="flex items-center gap-4">
-                    <div className={fx('flex h-14 w-14 shrink-0 items-center justify-center rounded-2xl bg-white shadow-sm ring-1', iconClass)}>
+                    <div className={fx('flex h-14 w-14 shrink-0 items-center justify-center rounded-2xl shadow-sm ring-1', iconClass)}>
                         {isCorrect ? (
                             <svg className="w-8 h-8" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={3}>
                                 <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
@@ -57,22 +74,19 @@ export function BottomFeedback({ isCorrect, correctAnswer, onContinue }: BottomF
                     </div>
                     <div>
                         <h3 className={`text-2xl font-black ${textColor}`}>
-                            {isCorrect ? 'Đúng!' : 'Chưa đúng!'}
+                            {isCorrect ? t('feedbackCorrect') : t('feedbackIncorrect')}
                         </h3>
                         {!isCorrect && correctAnswer && (
-                            <p className={`text-base font-medium ${textColor} mt-1`}>
-                                Đáp án đúng: <span className="font-bold">{correctAnswer}</span>
+                            <p className="text-base font-semibold text-slate-700 mt-1">
+                                {t('correctAnswerLabel')} <span className="font-extrabold text-[#ea2b2b] underline decoration-wavy decoration-1">{correctAnswer}</span>
                             </p>
                         )}
                     </div>
                 </div>
                 
-                <button
-                    onClick={onContinue}
-                    className={btnClass}
-                >
-                    Tiếp Bước
-                </button>
+                <div className="sm:self-center">
+                    {btnCta}
+                </div>
             </div>
         </div>
     )

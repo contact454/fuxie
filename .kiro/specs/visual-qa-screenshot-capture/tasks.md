@@ -166,7 +166,7 @@ Convert the design's 8-phase rollout plan into a series of incremental, code-lev
 
   > **⚠️ This phase requires a developer or CI machine with a live dev server and a seeded DB. It cannot complete inside a sandbox.** Task 6.2 must be deferred to a human-run if those prerequisites are absent. Tasks 7 and parts of 8 depend on the PNG outputs from this phase and defer with it.
 
-  - [~] 6.1 Verify capture prerequisites
+  - [ ] 6.1 Verify capture prerequisites
     - Confirm `pnpm dev:web` is running with `FUXIE_DEV_AUTH_ENABLED=true`.
     - Confirm `pnpm db:seed:dev` has been run after Task 3.1 lands (so the alias upserts are in the DB).
     - Spot-check one seeded P0 route (e.g. `/learn/reading/R-A1-DEV-001`) returns HTTP 200 with a non-empty `<title>`.
@@ -179,14 +179,14 @@ Convert the design's 8-phase rollout plan into a series of incremental, code-lev
     - _Reference: Req 3, Req 4_
 
 - [ ] 7. Phase 6 — Marker flip (post-capture)
-  - [~] 7.1 Flip PENDING markers to PASS in 13 checklist files
+  - [ ] 7.1 Flip PENDING markers to PASS in 13 checklist files
     - Run the marker-flip routine over `docs/design/visual-audit/qa-runs/2026-05-16/*.md` (excluding `README.md`).
     - For every line containing both an `evidencePath` and `(PENDING capture)`, replace `(PENDING capture)` with `(PASS — captured 2026-05-16)` only when a PNG exists at the resolved path.
     - Lines containing the `n/a (...)` marker are left byte-identical.
     - The `evidencePath` substring on each modified line is preserved byte-for-byte.
     - _Reference: Req 7.1, Req 7.2, Req 7.3, Decision 5_
 
-  - [~] 7.2 Update `qa-runs/2026-05-16/README.md` sign-off row
+  - [ ] 7.2 Update `qa-runs/2026-05-16/README.md` sign-off row
     - Edit the "Owner sign-off" table: change the `FE — capture pass` row from `_pending_` to `2026-05-16` and add a short note (≤ 80 chars) referencing spec `visual-qa-screenshot-capture`.
     - _Reference: Req 7.4_
 
@@ -219,17 +219,17 @@ Convert the design's 8-phase rollout plan into a series of incremental, code-lev
     - _Reference: Req 9.1_
 
 - [ ] 9. Phase 8 — DoD pack update
-  - [~] 9.1 Flip R3 entry from MEDIUM to RESOLVED
+  - [ ] 9.1 Flip R3 entry from MEDIUM to RESOLVED
     - Edit `docs/design/release/gamified-ui-asset-rollout-dod.md`: change the R3 risk entry from 🟠 MEDIUM to 🟢 RESOLVED.
     - Add a cross-link to the `qa-runs/2026-05-16/screenshots/` folder and to this spec folder.
     - Add a note (≤ 200 chars) recording the count of PNG files captured and the capture date `2026-05-16`.
     - _Reference: Req 8.1, Req 8.2, Req 8.3_
 
-  - [~] 9.2 Update DoD pack sign-off table
+  - [ ] 9.2 Update DoD pack sign-off table
     - Edit the same DoD pack: change the `FE` sign-off row from `⏳ Awaiting capture pass` to `✅ Approved` with the date `2026-05-16`.
     - _Reference: Req 8.4_
 
-  - [~] 9.3 Remove R3 from "Out of scope for this Done tag"
+  - [ ] 9.3 Remove R3 from "Out of scope for this Done tag"
     - Edit the "Final decision" section of the DoD pack: drop the R3 bullet from the "Out of scope" list (3 bullets → 2 bullets, R1 + R2 remain).
     - _Reference: Req 8.5_
 

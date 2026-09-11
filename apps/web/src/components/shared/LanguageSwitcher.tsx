@@ -1,23 +1,21 @@
 'use client';
 
 import { useState, useRef, useEffect } from 'react';
-import { useTranslations, useLocale } from 'next-intl';
+import { useLocale } from 'next-intl';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Globe, ChevronDown, Check } from 'lucide-react';
-
-const LANGUAGES = [
-  { code: 'vi', label: 'Tiếng Việt', short: 'VI' },
-  { code: 'en', label: 'English', short: 'EN' },
-  { code: 'de', label: 'Deutsch', short: 'DE' }
-];
+import {
+  UI_LANGUAGE_OPTIONS,
+  type SupportedUiLocale,
+} from '@/i18n/locales';
 
 export function LanguageSwitcher() {
-  const t = useTranslations('Navigation');
   const locale = useLocale();
   const [isOpen, setIsOpen] = useState(false);
   const dropdownRef = useRef<HTMLDivElement>(null);
 
-  const activeLang = LANGUAGES.find((l) => l.code === locale) || LANGUAGES[0];
+  const activeLang =
+    UI_LANGUAGE_OPTIONS.find((l) => l.code === locale) || UI_LANGUAGE_OPTIONS[0];
 
   // Close dropdown when clicking outside
   useEffect(() => {
@@ -34,7 +32,7 @@ export function LanguageSwitcher() {
     };
   }, [isOpen]);
 
-  const handleLanguageChange = async (newLocale: string) => {
+  const handleLanguageChange = async (newLocale: SupportedUiLocale) => {
     if (newLocale === locale) {
       setIsOpen(false);
       return;
@@ -81,7 +79,7 @@ export function LanguageSwitcher() {
             transition={{ duration: 0.15, ease: 'easeOut' }}
             className="absolute left-1/2 -translate-x-1/2 mt-2 w-40 rounded-xl bg-white border border-gray-100 shadow-xl overflow-hidden z-50 p-1.5"
           >
-            {LANGUAGES.map((lang) => {
+            {UI_LANGUAGE_OPTIONS.map((lang) => {
               const isActive = lang.code === locale;
               return (
                 <button

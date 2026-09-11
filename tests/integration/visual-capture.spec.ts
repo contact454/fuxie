@@ -84,6 +84,10 @@ type StateKind =
     | 'error'
     | 'success'
     | 'result'
+    | 'selected'
+    | 'correct'
+    | 'wrong'
+    | 'scrolled'
 
 type StateDriver =
     | { kind: 'none' }
@@ -339,6 +343,15 @@ test.describe('Visual QA capture', () => {
                 test.info().annotations.push({
                     type: 'evidencePath',
                     description: entry.evidencePath,
+                })
+
+                page.on('console', msg => {
+                    if (msg.type() === 'error' || msg.type() === 'warning') {
+                        console.log(`[BROWSER CONSOLE ${msg.type()}] ${msg.text()}`)
+                    }
+                })
+                page.on('pageerror', err => {
+                    console.error(`[BROWSER UNCAUGHT EXCEPTION] ${err.message}`)
                 })
 
                 if (skippedByFilter) {

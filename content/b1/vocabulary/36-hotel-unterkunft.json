@@ -229,7 +229,7 @@
         },
         "isIrregular": false,
         "isSeparable": false,
-        "reviewStatus": "auto_generated_needs_spot_check"
+        "reviewStatus": "lexicon_aligned_needs_native_signoff"
       }
     },
     {
@@ -256,7 +256,7 @@
         },
         "isIrregular": false,
         "isSeparable": false,
-        "reviewStatus": "auto_generated_needs_spot_check"
+        "reviewStatus": "lexicon_aligned_needs_native_signoff"
       }
     },
     {
@@ -274,16 +274,16 @@
       "meaningDe": "Im Hotel ankommen und den Schlüssel bekommen.",
       "conjugation": {
         "praesens": {
-          "ich": "einchecke",
-          "du": "eincheckst",
-          "er_sie_es": "eincheckt",
-          "wir": "einchecken",
-          "ihr": "eincheckt",
-          "sie_Sie": "einchecken"
+          "ich": "checke ein",
+          "du": "checkst ein",
+          "er_sie_es": "checkt ein",
+          "wir": "checken ein",
+          "ihr": "checkt ein",
+          "sie_Sie": "checken ein"
         },
         "isIrregular": false,
         "isSeparable": true,
-        "reviewStatus": "auto_generated_needs_spot_check"
+        "reviewStatus": "regular_rule_needs_native_signoff"
       }
     },
     {
@@ -301,16 +301,16 @@
       "meaningDe": "Das Hotel verlassen und die Rechnung bezahlen.",
       "conjugation": {
         "praesens": {
-          "ich": "auschecke",
-          "du": "auscheckst",
-          "er_sie_es": "auscheckt",
-          "wir": "auschecken",
-          "ihr": "auscheckt",
-          "sie_Sie": "auschecken"
+          "ich": "checke aus",
+          "du": "checkst aus",
+          "er_sie_es": "checkt aus",
+          "wir": "checken aus",
+          "ihr": "checkt aus",
+          "sie_Sie": "checken aus"
         },
         "isIrregular": false,
         "isSeparable": true,
-        "reviewStatus": "auto_generated_needs_spot_check"
+        "reviewStatus": "regular_rule_needs_native_signoff"
       }
     },
     {
@@ -328,16 +328,16 @@
       "meaningDe": "Jemandem einen Platz zum Schlafen oder Wohnen geben.",
       "conjugation": {
         "praesens": {
-          "ich": "unterbringe",
-          "du": "unterbringst",
-          "er_sie_es": "unterbringt",
+          "ich": "bringe unter",
+          "du": "bringst unter",
+          "er_sie_es": "bringt unter",
           "wir": "unterbringen",
-          "ihr": "unterbringt",
+          "ihr": "bringt unter",
           "sie_Sie": "unterbringen"
         },
         "isIrregular": false,
-        "isSeparable": false,
-        "reviewStatus": "auto_generated_needs_spot_check"
+        "isSeparable": true,
+        "reviewStatus": "lexicon_aligned_needs_native_signoff"
       }
     },
     {
@@ -355,16 +355,16 @@
       "meaningDe": "Sagen, dass man mit etwas nicht zufrieden ist.",
       "conjugation": {
         "praesens": {
-          "ich": "beschwere",
-          "du": "beschwerst",
-          "er_sie_es": "beschwert",
-          "wir": "beschweren",
-          "ihr": "beschwert",
-          "sie_Sie": "beschweren"
+          "ich": "beschwere mich",
+          "du": "beschwerst dich",
+          "er_sie_es": "beschwert sich",
+          "wir": "beschweren uns",
+          "ihr": "beschwert euch",
+          "sie_Sie": "beschweren sich"
         },
         "isIrregular": false,
         "isSeparable": false,
-        "reviewStatus": "auto_generated_needs_spot_check"
+        "reviewStatus": "lexicon_aligned_needs_native_signoff"
       }
     },
     {
@@ -383,7 +383,7 @@
       "conjugation": {
         "praesens": {
           "ich": "übernachte",
-          "du": "übernachtst",
+          "du": "übernachtest",
           "er_sie_es": "übernachtet",
           "wir": "übernachten",
           "ihr": "übernachtet",
@@ -391,7 +391,7 @@
         },
         "isIrregular": false,
         "isSeparable": false,
-        "reviewStatus": "auto_generated_needs_spot_check"
+        "reviewStatus": "lexicon_aligned_needs_native_signoff"
       }
     },
     {
@@ -469,7 +469,7 @@
     "targetLevel": "B1",
     "verdict": "aligned",
     "reviewerRole": "German Academic Lead",
-    "notes": "Release-candidate metadata audit: vocabulary content for \"Hotel & Unterkunft\" is aligned with declared B1 scope pending final human spot-check.",
+    "notes": "Release-candidate metadata audit: vocabulary content for \"Hotel & Unterkunft\" is aligned with declared B1 scope pending final human spot-check. Vocabulary D7 advisory remediation: objective schema, lexeme, semantic, or conjugation blockers were corrected; final native signoff remains pending.",
     "reviewedAt": "2026-05-12",
     "reviewScope": "release_candidate_metadata_pass"
   },

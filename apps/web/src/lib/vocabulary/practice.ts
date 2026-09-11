@@ -95,6 +95,7 @@ export async function generateVocabularyPractice(params: {
             promptAudio: word.audioUrl,
             article: word.article,
             wordId: word.id,
+            word: word.word,
             hint: word.word.substring(0, 2),
             answerLength: word.word.length,
         }))
@@ -109,6 +110,7 @@ export async function generateVocabularyPractice(params: {
                 translation: word.exampleTranslation1,
                 wordType: word.wordType,
                 wordId: word.id,
+                word: word.word,
             }
         })
     } else if (type === 'scramble') {

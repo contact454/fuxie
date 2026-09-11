@@ -39,7 +39,22 @@ empty/error short-circuit to the parent vocabulary surface per Req 5.5.
 | Reward amber containment | Req 19.4 | PASS — Property 9 (no reward subtree on this route by default) |
 | Reduced-motion discipline | Req 19.5 | PASS — Property 10 |
 
+## Lesson Intro (M2), Gameplay (M3) and Reward Receipt (M4) Screens
+
+These screens are part of the vocabulary practice flow:
+- M2 Lesson Intro Mobile: `screenshots/vocabulary-lesson-intro/vocabulary-lesson-intro-default-mobile.png`
+- M2 Lesson Intro Desktop: `screenshots/vocabulary-lesson-intro/vocabulary-lesson-intro-default-desktop.png`
+- M3 Gameplay Mobile: `screenshots/vocabulary-gameplay/vocabulary-gameplay-default-mobile.png`
+- M3 Gameplay Selected Mobile: `screenshots/vocabulary-gameplay/vocabulary-gameplay-selected-mobile.png`
+- M3 Gameplay Correct Mobile: `screenshots/vocabulary-gameplay/vocabulary-gameplay-correct-mobile.png`
+- M3 Gameplay Wrong Mobile: `screenshots/vocabulary-gameplay/vocabulary-gameplay-wrong-mobile.png`
+- M3 Gameplay Desktop: `screenshots/vocabulary-gameplay/vocabulary-gameplay-default-desktop.png`
+- M4 Reward Mobile: `screenshots/vocabulary-reward/vocabulary-reward-default-mobile.png`
+- M4 Reward Scrolled Mobile: `screenshots/vocabulary-reward/vocabulary-reward-scrolled-mobile.png`
+- M4 Reward Desktop: `screenshots/vocabulary-reward/vocabulary-reward-default-desktop.png`
+
 ## Result
 
 - **Failing items**: 0
 - **Pending items**: screenshot capture (mobile + desktop, default).
+

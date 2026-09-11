@@ -1,8 +1,8 @@
 'use client'
 
 import { useState, useEffect, useCallback } from 'react'
-import { useTranslations } from 'next-intl'
-import { useRouter } from 'next/navigation'
+import { useTranslations, useLocale } from 'next-intl'
+import { useRouter, useSearchParams } from 'next/navigation'
 import { Mascot } from '@/components/ui/mascot'
 import { FuxiePanel, fuxieButtonClass } from '@/components/ui/fuxie-ui'
 import { ClozeExercise } from './cloze-exercise'
@@ -12,6 +12,7 @@ import { MixedExercise } from './mixed-exercise'
 import { ScrambleExercise } from './scramble-exercise'
 import { SpeedExercise } from './speed-exercise'
 import { SpellingExercise } from './spelling-exercise'
+import { LessonIntro } from './lesson-intro'
 
 interface ExercisePlayerWrapperProps {
     type: string
@@ -19,11 +20,17 @@ interface ExercisePlayerWrapperProps {
     level: string
     initialExerciseData?: any
     initialError?: string | null
+    showResults?: boolean
 }
 
-export function ExercisePlayerWrapper({ type, theme, level, initialExerciseData, initialError = null }: ExercisePlayerWrapperProps) {
+export function ExercisePlayerWrapper({ type, theme, level, initialExerciseData, initialError = null, showResults = false }: ExercisePlayerWrapperProps) {
     const t = useTranslations('Vocabulary')
     const router = useRouter()
+    const locale = useLocale()
+    const searchParams = useSearchParams()
+    const skipIntro = searchParams.get('skipIntro') === 'true'
+    const [showIntroScreen, setShowIntroScreen] = useState(!skipIntro)
+
     const [questions, setQuestions] = useState<any[] | null>(initialExerciseData?.questions ?? null)
     const [exerciseData, setExerciseData] = useState<any>(initialExerciseData ?? null)
     const [isLoading, setIsLoading] = useState(!initialExerciseData && !initialError)
@@ -107,6 +114,19 @@ export function ExercisePlayerWrapper({ type, theme, level, initialExerciseData,
 
     const themeName = exerciseData.theme?.name || theme
 
+    // Show M2 Lesson Intro screen
+    if (showIntroScreen) {
+        const localizedThemeName = (exerciseData.theme?.translations as Record<string, string>)?.[locale] || themeName
+        return (
+            <LessonIntro
+                themeName={localizedThemeName}
+                wordCount={questions.length}
+                onStart={() => setShowIntroScreen(false)}
+                onExit={handleExit}
+            />
+        )
+    }
+
     // Render exercise based on type
     switch (type) {
         case 'mixed':
@@ -131,6 +151,7 @@ export function ExercisePlayerWrapper({ type, theme, level, initialExerciseData,
                     themeSlug={theme}
                     onExit={handleExit}
                     onComplete={() => {}}
+                    showResults={showResults}
                 />
             )
 

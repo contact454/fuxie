@@ -31,17 +31,17 @@ const CHECKPOINT_DEFINITIONS: Array<Pick<WritingQuestCheckpoint, 'id' | 'title' 
     {
         id: 'plan',
         title: 'Plan',
-        objective: 'Dựng dàn giáo — một kịch bản thép sẽ ngăn ngòi bút đi lạc lõng.',
+        objective: 'Lập dàn ý chi tiết cho bài viết.',
     },
     {
         id: 'draft',
         title: 'Draft',
-        objective: 'Mở van ý tưởng — cứ để từ ngữ tuôn trào, đừng để sự hoàn hảo cản bước.',
+        objective: 'Viết bản nháp đầu tiên, tập trung vào ý tưởng chính.',
     },
     {
         id: 'revise',
         title: 'Revise',
-        objective: 'Đánh bóng ngôn từ — mài giũa những câu thô ráp trước khi gửi AI định phẩm.',
+        objective: 'Rà soát lỗi chính tả và diễn đạt trước khi nộp bài.',
     },
 ]
 
@@ -61,7 +61,7 @@ export function buildWritingQuestEpisode(input: {
         textType: input.textType,
         topic: input.topic,
         cefrLevel: input.cefrLevel,
-        objective: `Kiến tạo ${input.textType} ${input.cefrLevel} — đúc kết ý tưởng và rèn giũa ngôn từ thành vũ khí.`,
+        objective: `Viết bài ${input.textType} trình độ ${input.cefrLevel} theo chủ đề yêu cầu.`,
         checkpoints: buildWritingQuestCheckpoints(input.minWords),
         rewardPreview: [
             { type: 'xp', label: '+XP', detail: 'Chiến lợi phẩm rót ngay vào túi khi AI định phẩm xong' },
@@ -124,8 +124,8 @@ export function writingQuestEpisodeId(cefrLevel: string, exerciseId: string) {
 }
 
 function masteryContributionCopy(band: WritingQuestAccuracyBand) {
-    if (band === 'mastered') return 'Múa bút thành văn! Tác phẩm này vừa được đúc nguyên khối vào Writing Mastery của em.'
-    if (band === 'clear') return 'Gọn gàng mạch lạc! Writing Mastery đã ghi nhận — ngòi bút đang dần sắc bén hơn.'
-    if (band === 'practice_again') return 'Dàn giáo tốt nhưng vật liệu còn thô. Nắn nót lại một lần theo feedback để bài viết bừng sáng.'
-    return 'Bình tĩnh — đối diện với trang giấy trắng là phần đáng sợ nhất. Dựng lại cái Plan đơn giản thôi, ngòi bút sẽ tự tìm đường đi.'
+    if (band === 'mastered') return 'Bài viết rất tốt! Trình độ viết của bạn đã được ghi nhận.'
+    if (band === 'clear') return 'Bài viết mạch lạc, rõ ràng. Kỹ năng viết của bạn đang tiến bộ.'
+    if (band === 'practice_again') return 'Bài viết cần cải thiện thêm. Hãy xem nhận xét để chỉnh sửa nhé.'
+    return 'Đừng lo lắng, hãy bắt đầu bằng việc viết những câu đơn giản trước.'
 }

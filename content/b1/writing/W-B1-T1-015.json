@@ -60,14 +60,14 @@
     "maxScore": 25
   },
   "maxScore": 25,
-  "modelAnswer": "In diesem Text geht es um Restaurantreservierung. Zuerst nenne ich die wichtigsten Punkte: Bedanken Sie sich für die Einladung und sagen Sie zu., Fragen Sie nach der genauen Uhrzeit und dem Treffpunkt., Machen Sie einen Vorschlag, was Sie nach dem Essen noch machen könnten.. Meiner Meinung nach sollte man die Situation differenziert betrachten. Ein Vorteil ist, dass klare Informationen helfen, eine gute Entscheidung zu treffen. Ein Nachteil ist, dass nicht alle Aspekte sofort sichtbar sind. Insgesamt halte ich eine begruendete und gut strukturierte Antwort fuer wichtig.",
+  "modelAnswer": "Liebe Frau Schneider,\n\nich schreibe Ihnen, weil es um Restaurantreservierung geht. Aus der Situation wird deutlich: Hallo! Wie geht es dir? Ich habe gehört, dass in der Innenstadt ein neues italienisches Restaurant eröffnet hat. Zunächst möchte ich Bedanken Sie sich für die Einladung und sagen Sie zu.. Außerdem ist mir wichtig, Fragen Sie nach der genauen Uhrzeit und dem Treffpunkt..\nKönnten Sie mir bitte mitteilen, wie wir weiter vorgehen können? Machen Sie einen Vorschlag, was Sie nach dem Essen noch machen könnten.. Über eine kurze Antwort würde ich mich sehr freuen.\nFür mich wäre eine schnelle Rückmeldung hilfreich, damit ich die nächsten Schritte planen kann.\n\nLiebe Grüße\nLinh",
   "timeLimitMinutes": 20,
   "estimatedMinutes": 20,
   "cefrAudit": {
     "targetLevel": "B1",
     "verdict": "aligned",
     "reviewerRole": "German Academic Lead",
-    "notes": "Release-candidate metadata audit: writing content for \"Restaurantreservierung\" is aligned with declared B1 scope pending final human spot-check.",
+    "notes": "Writing D7 advisory remediation: modelAnswer regenerated for \"Restaurantreservierung\" after duplicate/template/length sweep; final native signoff remains pending.",
     "reviewedAt": "2026-05-12",
     "reviewScope": "release_candidate_metadata_pass"
   },

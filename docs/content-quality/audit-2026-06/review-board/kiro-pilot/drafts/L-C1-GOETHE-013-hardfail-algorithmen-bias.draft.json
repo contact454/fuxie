@@ -1,0 +1,340 @@
+{
+  "content/c1/listening/L-C1-GOETHE-013-T1.json": {
+    "gespraech_count": 5,
+    "transcript_lines": [
+      {
+        "speaker": "Narrator",
+        "speaker_role": "exam_narrator",
+        "text": "Sie hören einen Podcast. Kreuzen Sie bei jeder Aufgabe die richtige Antwort an. Sie hören den Text einmal."
+      },
+      {
+        "speaker": "Podcasterin",
+        "speaker_role": "dialogue_speaker",
+        "text": "Heute sprechen wir über Algorithmen und Bias in der Wissenschaft, ein Thema, das weit über technische Details hinausgeht."
+      },
+      {
+        "speaker": "Podcasterin",
+        "speaker_role": "dialogue_speaker",
+        "text": "Algorithmische Systeme sortieren Literatur, schlagen Gutachter vor, markieren auffällige Messwerte und berechnen Prognosen für Forschungserfolge."
+      },
+      {
+        "speaker": "Podcasterin",
+        "speaker_role": "dialogue_speaker",
+        "text": "Damit können sie wissenschaftliche Arbeit entlasten. Sie können aber auch alte Verzerrungen verstärken, wenn historische Daten bereits ungleiche Sichtbarkeit enthalten."
+      },
+      {
+        "speaker": "Podcasterin",
+        "speaker_role": "dialogue_speaker",
+        "text": "Ein Beispiel: Wenn ein Modell lernt, welche Publikationen früher besonders häufig zitiert wurden, bevorzugt es möglicherweise etablierte Institute und englischsprachige Journale."
+      },
+      {
+        "speaker": "Podcasterin",
+        "speaker_role": "dialogue_speaker",
+        "text": "Der Bias liegt dann nicht im Code als böser Absicht, sondern in der scheinbar neutralen Annahme, Vergangenheit sei ein zuverlässiger Maßstab für Qualität."
+      },
+      {
+        "speaker": "Podcasterin",
+        "speaker_role": "dialogue_speaker",
+        "text": "Besonders heikel ist das bei Förderentscheidungen. Wer nur Projekte finanziert, die einem bisherigen Erfolgsmuster ähneln, macht ungewöhnliche Fragestellungen systematisch unwahrscheinlicher."
+      },
+      {
+        "speaker": "Podcasterin",
+        "speaker_role": "dialogue_speaker",
+        "text": "Gleichzeitig wäre es falsch, Algorithmen pauschal aus der Wissenschaft zu verbannen. Transparente Modelle können zeigen, wo menschliche Entscheidungen ebenfalls unausgewogen sind."
+      },
+      {
+        "speaker": "Podcasterin",
+        "speaker_role": "dialogue_speaker",
+        "text": "Entscheidend ist daher ein prüfbarer Einsatz: dokumentierte Trainingsdaten, regelmäßige Bias-Audits und die Möglichkeit, algorithmische Empfehlungen zu begründen oder zu überstimmen."
+      },
+      {
+        "speaker": "Podcasterin",
+        "speaker_role": "dialogue_speaker",
+        "text": "Wissenschaftliche Objektivität entsteht nicht dadurch, dass Maschinen entscheiden, sondern dadurch, dass auch maschinelle Entscheidungen kritisierbar bleiben."
+      },
+      {
+        "speaker": "Narrator",
+        "speaker_role": "exam_narrator",
+        "text": "Ende Teil eins."
+      }
+    ],
+    "questions": [
+      {
+        "id": "q1_hoeren_c1_t1_algorithmen_bias",
+        "teil": 1,
+        "type": "mc_abc",
+        "question": "Worin sieht die Sprecherin eine zentrale Ursache algorithmischer Verzerrung in der Wissenschaft?",
+        "options": {
+          "a": "In der Übernahme historischer Ungleichheiten aus scheinbar neutralen Daten.",
+          "b": "In der bewussten Manipulation jedes wissenschaftlichen Codes.",
+          "c": "In der Tatsache, dass Algorithmen Literatur grundsätzlich nicht sortieren können."
+        },
+        "answer": "a",
+        "points": 1,
+        "explanation": {
+          "de": "Richtig ist a. Die Sprecherin erklärt, dass historische Daten ungleiche Sichtbarkeit enthalten können. b unterstellt Absicht, c widerspricht der genannten Entlastungsfunktion.",
+          "vi": "Đáp án đúng là a. Người nói giải thích rằng dữ liệu lịch sử có thể chứa sẵn bất bình đẳng về mức độ được nhìn thấy. b gán ý định xấu, c trái với chức năng hỗ trợ được nêu.",
+          "key_evidence": "historische Daten bereits ungleiche Sichtbarkeit enthalten"
+        }
+      },
+      {
+        "id": "q2_hoeren_c1_t1_algorithmen_bias",
+        "teil": 1,
+        "type": "mc_abc",
+        "question": "Warum nennt die Sprecherin Förderentscheidungen als besonders heikel?",
+        "options": {
+          "a": "Weil algorithmische Erfolgsmuster ungewöhnliche Fragestellungen benachteiligen können.",
+          "b": "Weil Förderentscheidungen nie auf Publikationen oder Gutachten Bezug nehmen.",
+          "c": "Weil maschinelle Systeme Fördergelder automatisch gerechter verteilen."
+        },
+        "answer": "a",
+        "points": 1,
+        "explanation": {
+          "de": "Richtig ist a. Die Sprecherin warnt, dass Projekte außerhalb bisheriger Erfolgsmuster systematisch unwahrscheinlicher werden. b und c sind nicht aus dem Text ableitbar.",
+          "vi": "Đáp án đúng là a. Người nói cảnh báo rằng các dự án khác với khuôn mẫu thành công cũ có thể bị bất lợi một cách hệ thống. b và c không được suy ra từ bài nghe.",
+          "key_evidence": "ungewöhnliche Fragestellungen systematisch unwahrscheinlicher"
+        }
+      },
+      {
+        "id": "q3_hoeren_c1_t1_algorithmen_bias",
+        "teil": 1,
+        "type": "mc_abc",
+        "question": "Welche Schlussfolgerung zieht die Sprecherin zum Einsatz von Algorithmen?",
+        "options": {
+          "a": "Sie fordert prüfbare Verfahren statt pauschaler Ablehnung oder blinden Vertrauens.",
+          "b": "Sie empfiehlt, algorithmische Empfehlungen grundsätzlich als objektiver zu behandeln.",
+          "c": "Sie hält Bias-Audits für überflüssig, sobald Trainingsdaten dokumentiert sind."
+        },
+        "answer": "a",
+        "points": 1,
+        "explanation": {
+          "de": "Richtig ist a. Die Sprecherin plädiert für Transparenz, Audits und menschliche Überstimmungsmöglichkeiten. b und c widersprechen dieser Kontrolllogik.",
+          "vi": "Đáp án đúng là a. Người nói ủng hộ minh bạch, kiểm toán bias và khả năng con người phản biện hoặc bác bỏ khuyến nghị thuật toán. b và c trái với lập luận đó.",
+          "key_evidence": "Entscheidend ist daher ein prüfbarer Einsatz"
+        }
+      }
+    ]
+  },
+  "content/c1/listening/L-C1-GOETHE-013-T2.json": {
+    "gespraech_count": 5,
+    "transcript_lines": [
+      {
+        "speaker": "Narrator",
+        "speaker_role": "exam_narrator",
+        "text": "Sie hören ein Experteninterview. Entscheiden Sie, ob die Aussagen richtig oder falsch sind. Sie hören den Text einmal."
+      },
+      {
+        "speaker": "Moderator",
+        "speaker_role": "dialogue_speaker",
+        "text": "Herr Professor Noll, unser Thema lautet Algorithmen und Bias in der Wissenschaft. Werden Maschinen die Forschung objektiver machen?"
+      },
+      {
+        "speaker": "Experte",
+        "speaker_role": "dialogue_speaker",
+        "text": "Nicht automatisch. Maschinen rechnen konsistent, aber Konsistenz ist nicht dasselbe wie Gerechtigkeit oder wissenschaftliche Qualität."
+      },
+      {
+        "speaker": "Moderator",
+        "speaker_role": "dialogue_speaker",
+        "text": "Wo entsteht Bias konkret?"
+      },
+      {
+        "speaker": "Experte",
+        "speaker_role": "dialogue_speaker",
+        "text": "Er entsteht oft vor dem eigentlichen Modell: bei der Auswahl der Daten, bei fehlenden Messwerten und bei Kategorien, die soziale Wirklichkeit zu grob abbilden."
+      },
+      {
+        "speaker": "Moderator",
+        "speaker_role": "dialogue_speaker",
+        "text": "Viele Forschende hoffen, automatisierte Literaturrecherche könne subjektive Vorlieben reduzieren."
+      },
+      {
+        "speaker": "Experte",
+        "speaker_role": "dialogue_speaker",
+        "text": "Das kann passieren, wenn Suchkriterien offengelegt werden. Wenn die Kriterien aber verborgen bleiben, wird nur eine menschliche Auswahl durch eine schwer überprüfbare technische Auswahl ersetzt."
+      },
+      {
+        "speaker": "Moderator",
+        "speaker_role": "dialogue_speaker",
+        "text": "Sollten Fachzeitschriften den Einsatz solcher Systeme kennzeichnen?"
+      },
+      {
+        "speaker": "Experte",
+        "speaker_role": "dialogue_speaker",
+        "text": "Ja, unbedingt. Autorinnen, Gutachter und Leser müssen wissen, ob ein algorithmisches Tool Texte vorbewertet, Plagiate markiert oder Reviewer empfiehlt."
+      },
+      {
+        "speaker": "Moderator",
+        "speaker_role": "dialogue_speaker",
+        "text": "Was wäre ein sinnvoller Mindeststandard?"
+      },
+      {
+        "speaker": "Experte",
+        "speaker_role": "dialogue_speaker",
+        "text": "Ein Mindeststandard umfasst Dokumentation, unabhängige Prüfung und Beschwerdewege. Wer von einer algorithmischen Entscheidung betroffen ist, braucht eine begründete menschliche Überprüfung."
+      },
+      {
+        "speaker": "Experte",
+        "speaker_role": "dialogue_speaker",
+        "text": "Das Ziel ist nicht technikfreie Wissenschaft. Das Ziel ist eine Wissenschaft, in der technische Hilfen selbst zum Gegenstand methodischer Kritik werden."
+      },
+      {
+        "speaker": "Narrator",
+        "speaker_role": "exam_narrator",
+        "text": "Ende Teil zwei."
+      }
+    ],
+    "questions": [
+      {
+        "id": "q1_hoeren_c1_t2_algorithmen_bias",
+        "teil": 2,
+        "type": "richtig_falsch",
+        "statement": "Der Experte setzt konsistentes maschinelles Rechnen mit wissenschaftlicher Gerechtigkeit gleich.",
+        "answer": "falsch",
+        "points": 1,
+        "explanation": {
+          "de": "Falsch. Er grenzt Konsistenz ausdrücklich von Gerechtigkeit und wissenschaftlicher Qualität ab.",
+          "vi": "Sai. Chuyên gia tách rõ tính nhất quán của máy khỏi công bằng và chất lượng khoa học.",
+          "key_evidence": "Konsistenz ist nicht dasselbe wie Gerechtigkeit"
+        }
+      },
+      {
+        "id": "q2_hoeren_c1_t2_algorithmen_bias",
+        "teil": 2,
+        "type": "richtig_falsch",
+        "statement": "Nach Ansicht des Experten kann Bias bereits vor dem Training eines Modells durch Datenauswahl und Kategorien entstehen.",
+        "answer": "richtig",
+        "points": 1,
+        "explanation": {
+          "de": "Richtig. Der Experte lokalisiert Verzerrung ausdrücklich bei Datenauswahl, fehlenden Messwerten und zu groben Kategorien.",
+          "vi": "Đúng. Chuyên gia nói bias có thể phát sinh ngay ở khâu chọn dữ liệu, dữ liệu thiếu và các phạm trù quá thô.",
+          "key_evidence": "bei der Auswahl der Daten, bei fehlenden Messwerten"
+        }
+      },
+      {
+        "id": "q3_hoeren_c1_t2_algorithmen_bias",
+        "teil": 2,
+        "type": "richtig_falsch",
+        "statement": "Der Experte fordert, algorithmische Werkzeuge in Fachzeitschriften unsichtbar einzusetzen, damit Gutachter unbeeinflusst bleiben.",
+        "answer": "falsch",
+        "points": 1,
+        "explanation": {
+          "de": "Falsch. Er verlangt Kennzeichnung und Transparenz darüber, ob Tools Texte vorbewerten oder Gutachter empfehlen.",
+          "vi": "Sai. Ông yêu cầu ghi rõ và minh bạch khi công cụ thuật toán đánh giá trước văn bản hoặc gợi ý người phản biện.",
+          "key_evidence": "müssen wissen, ob ein algorithmisches Tool Texte vorbewertet"
+        }
+      },
+      {
+        "id": "q4_hoeren_c1_t2_algorithmen_bias",
+        "teil": 2,
+        "type": "richtig_falsch",
+        "statement": "Als Mindeststandard nennt der Experte auch die Möglichkeit einer begründeten menschlichen Überprüfung.",
+        "answer": "richtig",
+        "points": 1,
+        "explanation": {
+          "de": "Richtig. Neben Dokumentation und unabhängiger Prüfung fordert er Beschwerdewege und eine begründete menschliche Überprüfung.",
+          "vi": "Đúng. Ngoài tài liệu hóa và kiểm tra độc lập, ông yêu cầu kênh khiếu nại và sự xem xét có lý do của con người.",
+          "key_evidence": "braucht eine begründete menschliche Überprüfung"
+        }
+      }
+    ]
+  },
+  "content/c1/listening/L-C1-GOETHE-013-T4.json": {
+    "gespraech_count": 6,
+    "transcript_lines": [
+      {
+        "speaker": "Narrator",
+        "speaker_role": "exam_narrator",
+        "text": "Sie hören einen Vortrag. Kreuzen Sie bei jeder Aufgabe die richtige Antwort an. Sie hören den Vortrag einmal."
+      },
+      {
+        "speaker": "Dozent",
+        "speaker_role": "dialogue_speaker",
+        "text": "In meinem Vortrag geht es um Algorithmen und Bias in der Wissenschaft, insbesondere um die Frage, wie automatisierte Entscheidungen Forschungskarrieren prägen."
+      },
+      {
+        "speaker": "Dozent",
+        "speaker_role": "dialogue_speaker",
+        "text": "Wir begegnen Algorithmen heute nicht nur in Laborinstrumenten, sondern auch in Rankings, Zitationsanalysen, Bewerbungsverfahren und der Verteilung knapper Fördermittel."
+      },
+      {
+        "speaker": "Dozent",
+        "speaker_role": "dialogue_speaker",
+        "text": "Ein häufiges Missverständnis lautet: Wenn ein Verfahren mathematisch ist, sei es automatisch neutral. Tatsächlich übersetzt ein Algorithmus immer Entscheidungen darüber, welche Merkmale zählen."
+      },
+      {
+        "speaker": "Dozent",
+        "speaker_role": "dialogue_speaker",
+        "text": "Nimmt man zum Beispiel bisherige Drittmittel als Indikator für zukünftige Exzellenz, profitieren Forschende, die bereits Zugang zu starken Netzwerken hatten."
+      },
+      {
+        "speaker": "Dozent",
+        "speaker_role": "dialogue_speaker",
+        "text": "Dadurch kann ein System den Anschein objektiver Auswahl erzeugen und zugleich soziale Ungleichheiten stabilisieren."
+      },
+      {
+        "speaker": "Dozent",
+        "speaker_role": "dialogue_speaker",
+        "text": "Das bedeutet nicht, dass menschliche Gremien frei von Vorurteilen wären. Im Gegenteil: Gut dokumentierte Algorithmen können blinde Flecken sichtbar machen."
+      },
+      {
+        "speaker": "Dozent",
+        "speaker_role": "dialogue_speaker",
+        "text": "Aber dafür müssen Modelle erklärbar, Datenquellen überprüfbar und Zielkonflikte offen benannt sein. Effizienz darf nicht als Ersatz für Begründung dienen."
+      },
+      {
+        "speaker": "Dozent",
+        "speaker_role": "dialogue_speaker",
+        "text": "Meine These lautet daher: Algorithmische Unterstützung ist wissenschaftlich legitim, wenn sie als Hypothese behandelt wird, nicht als Urteil letzter Instanz."
+      },
+      {
+        "speaker": "Dozent",
+        "speaker_role": "dialogue_speaker",
+        "text": "Eine reife Forschungskultur fragt also nicht nur, ob ein Modell genau ist, sondern auch, für wen ein Fehler folgenreich wird und wer Einspruch erheben kann."
+      },
+      {
+        "speaker": "Narrator",
+        "speaker_role": "exam_narrator",
+        "text": "Ende Teil vier."
+      }
+    ],
+    "questions": [
+      {
+        "id": "q1_hoeren_c1_t4_algorithmen_bias",
+        "teil": 4,
+        "type": "mc_abc",
+        "question": "Welches Missverständnis kritisiert der Dozent im Vortrag besonders?",
+        "options": {
+          "a": "Dass mathematische Verfahren automatisch als neutral gelten.",
+          "b": "Dass menschliche Gremien grundsätzlich fehlerfrei entscheiden.",
+          "c": "Dass Zitationsanalysen in der Forschung gar keine Rolle spielen."
+        },
+        "answer": "a",
+        "points": 1,
+        "explanation": {
+          "de": "Richtig ist a. Der Dozent nennt dies ausdrücklich ein Missverständnis und erklärt, dass Algorithmen Wertentscheidungen über relevante Merkmale enthalten. b und c werden nicht vertreten.",
+          "vi": "Đáp án đúng là a. Giảng viên gọi trực tiếp đây là hiểu lầm và giải thích thuật toán luôn chứa quyết định về đặc điểm được tính. b và c không phải lập trường của bài.",
+          "key_evidence": "Wenn ein Verfahren mathematisch ist, sei es automatisch neutral"
+        }
+      },
+      {
+        "id": "q2_hoeren_c1_t4_algorithmen_bias",
+        "teil": 4,
+        "type": "mc_abc",
+        "question": "Unter welcher Bedingung hält der Dozent algorithmische Unterstützung für legitim?",
+        "options": {
+          "a": "Wenn sie Förderentscheidungen vollständig automatisiert und damit beschleunigt.",
+          "b": "Wenn sie erklärbar bleibt und als überprüfbare Hypothese statt als endgültiges Urteil dient.",
+          "c": "Wenn sie ausschließlich bisherige Drittmittel als Exzellenzindikator verwendet."
+        },
+        "answer": "b",
+        "points": 1,
+        "explanation": {
+          "de": "Richtig ist b. Der Dozent verlangt Erklärbarkeit, überprüfbare Datenquellen und die Behandlung algorithmischer Ergebnisse als Hypothesen. a und c widersprechen der Warnung vor Effizienz und alten Privilegien.",
+          "vi": "Đáp án đúng là b. Giảng viên yêu cầu mô hình có thể giải thích, nguồn dữ liệu kiểm tra được và kết quả thuật toán chỉ là giả thuyết. a và c trái với cảnh báo trong bài.",
+          "key_evidence": "als Hypothese behandelt wird, nicht als Urteil letzter Instanz"
+        }
+      }
+    ]
+  }
+}

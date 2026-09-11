@@ -1,0 +1,3522 @@
+{
+  "schemaVersion": "1.0.0",
+  "releaseCandidateId": "a1-pilot-r1",
+  "manifestKind": "H0-source-selection-only",
+  "createdAt": "2026-09-11T07:26:12.659Z",
+  "roles": {
+    "primary": "German Curriculum Designer",
+    "support": [
+      "German Academic Lead",
+      "Content QA / Linguistic Reviewer",
+      "Backend Engineer"
+    ]
+  },
+  "repository": {
+    "head": "3217ea052aec5606602cb7f9ec62f159ae9a750e",
+    "sourceRevisionAuthority": "SHA256 of actual working-tree file bytes; HEAD alone does not describe uncommitted files",
+    "productionDbInspected": false,
+    "providersCalled": false,
+    "sourceContentEdited": false
+  },
+  "status": {
+    "selection": "complete-12-candidates",
+    "release": "not-ready",
+    "humanApprovedActivities": 0,
+    "audioAssetsListened": 0,
+    "liveParityVerifiedActivities": 0
+  },
+  "hashContract": {
+    "algorithm": "sha256",
+    "rawFile": "original file bytes",
+    "jsonValue": "UTF-8 JSON.stringify after recursively sorting object keys; array order and strings preserved; no Unicode normalization",
+    "warning": "Source-value hashes are not a deployed semantic parity digest; adapters must define their own versioned projection. Numeric pointers are bound to file hash; reselect by identity and invalidate review when array order changes."
+  },
+  "scope": {
+    "activities": 12,
+    "sequences": 2,
+    "skillsPerSequence": 6,
+    "selectedVocabularyWords": 24,
+    "grammarTopics": 2,
+    "readingExercises": 2,
+    "listeningExercises": 2,
+    "speakingLessons": 2,
+    "writingExercises": 2,
+    "requiredReferenceAudio": {
+      "existingAggregateListeningMp3": 2,
+      "conversationsInThoseMp3": 12,
+      "missingSpeakingReferences": 12,
+      "listened": 0
+    },
+    "openSpeakingPromptsInSelectedSource": 0,
+    "plannedOpenPromptsStillToAuthor": 4
+  },
+  "sequences": [
+    {
+      "id": "S1",
+      "titleVi": "Làm quen và hẹn gặp",
+      "rationale": "Personal vocabulary and sein/haben support listening/speaking introductions. Reading invitation/reply adds social meeting context; writing introduces Marco and invites Thomas to Friday lunch."
+    },
+    {
+      "id": "S2",
+      "titleVi": "Di chuyển và ghi thông tin chuyến đi",
+      "rationale": "Travel words and questions recur across train messages, ticket dialogues and bus directions. The form reuses personal-data vocabulary from S1 while transferring explicit trip facts."
+    }
+  ],
+  "prerequisiteRegistry": {
+    "P0": {
+      "description": "Alphabet and spelling, greetings, numbers 0–100, days/time basics; adult early-A1 learner screening and support, not an absolute-beginner first lesson.",
+      "status": "to-check-with-learner"
+    },
+    "P1-SOCIAL": {
+      "description": "Recognize birthday/party/family and invitation chunks: am Samstag, um 15 Uhr, kommen, mitbringen, Bruder/Schwester, Geschenk, Kuchen.",
+      "status": "bridge-glossary-not-authored"
+    },
+    "P1-LISTENING": {
+      "description": "Support seit + Wochen/Monaten, country names, occupations and im Büro nebenan; no claim these were taught by only 12 vocabulary items.",
+      "status": "bridge-glossary-not-authored"
+    },
+    "P2-TRAVEL": {
+      "description": "Recognize 24-hour times, prices, Gleis, möchten/müssen chunks, hin und zurück, links/geradeaus, selected separable-verb phrases and a supported falls clause.",
+      "status": "bridge-glossary-not-authored"
+    },
+    "P2-FORM": {
+      "description": "Personal-data labels, total persons, months including August, number of days, invented traveller facts rather than real learner PII.",
+      "status": "to-scaffold"
+    }
+  },
+  "reviewSchedule": {
+    "withinSequence": "Split vocabulary/grammar into small chunks; move to reading/listening, supported speaking, then writing. Do not force six skills into one session.",
+    "retention": "Short recall after session plus a delayed task around day seven; learner study not started.",
+    "humanReviewRequirement": "Read every selected unit and shared context, listen to every required audio, resolve gaps and review the exact revised hashes. No automatic promotion from source cefrAudit.aligned."
+  },
+  "crossCuttingGaps": [
+    {
+      "id": "X-HUMAN",
+      "kind": "unverified",
+      "status": "open",
+      "description": "No qualified human reviewer or named content owner has been assigned; final CEFR fit, naturalness and Vietnamese explanation review remain pending.",
+      "pointers": [],
+      "ownerRole": "German Academic Lead",
+      "closure": "Human review at the revised hash and relevant HG gate evidence"
+    },
+    {
+      "id": "X-DELIVERY",
+      "kind": "unverified",
+      "status": "open",
+      "description": "Source→DB→UI/audio parity has not been observed in any environment. Static mapping only.",
+      "pointers": [],
+      "ownerRole": "Backend Engineer",
+      "closure": "Human review at the revised hash and relevant HG gate evidence"
+    },
+    {
+      "id": "X-LISTENING-TRANSLATION",
+      "kind": "conditional-code-risk",
+      "status": "open",
+      "description": "Inspected question seed copies explanation.vi to translations.vi, which the player displays as questionTextNative before submission. If DB reflects this path, answer text can be exposed. Verify actual DB values in authorized staging, then separate question translation from feedback.",
+      "pointers": [
+        "packages/database/prisma/seed-listening-questions.ts:119",
+        "apps/web/src/app/(learn)/listening/[lessonId]/page.tsx:223",
+        "apps/web/src/components/listening/lesson-player.tsx:765"
+      ],
+      "ownerRole": "Backend Engineer",
+      "closure": "Human review at the revised hash and relevant HG gate evidence"
+    },
+    {
+      "id": "X-RIGHTS",
+      "kind": "unverified",
+      "status": "open",
+      "description": "No license/provenance approval for audio or images is claimed. Resolve asset registry for the pilot.",
+      "pointers": [],
+      "ownerRole": "Content QA / Linguistic Reviewer",
+      "closure": "Human review at the revised hash and relevant HG gate evidence"
+    }
+  ],
+  "activities": [
+    {
+      "activityId": "a1-pilot-r1:S1-V",
+      "shortId": "S1-V",
+      "sourceId": "a1-person",
+      "sequenceId": "S1",
+      "skill": "vocabulary",
+      "level": "A1",
+      "titleVi": "Thông tin cá nhân dùng để làm quen",
+      "status": "selected-candidate",
+      "source": {
+        "path": "content/a1/vocabulary/01-person.json",
+        "jsonPointer": "",
+        "selector": {
+          "themeSlug": "a1-person",
+          "wordSelectors": [
+            {
+              "jsonPointer": "/words/0",
+              "word": "Name",
+              "wordType": "NOMEN"
+            },
+            {
+              "jsonPointer": "/words/1",
+              "word": "Vorname",
+              "wordType": "NOMEN"
+            },
+            {
+              "jsonPointer": "/words/2",
+              "word": "Nachname",
+              "wordType": "NOMEN"
+            },
+            {
+              "jsonPointer": "/words/3",
+              "word": "Adresse",
+              "wordType": "NOMEN"
+            },
+            {
+              "jsonPointer": "/words/5",
+              "word": "Telefonnummer",
+              "wordType": "NOMEN"
+            },
+            {
+              "jsonPointer": "/words/8",
+              "word": "Beruf",
+              "wordType": "NOMEN"
+            },
+            {
+              "jsonPointer": "/words/9",
+              "word": "Land",
+              "wordType": "NOMEN"
+            },
+            {
+              "jsonPointer": "/words/15",
+              "word": "heißen",
+              "wordType": "VERB"
+            },
+            {
+              "jsonPointer": "/words/16",
+              "word": "wohnen",
+              "wordType": "VERB"
+            },
+            {
+              "jsonPointer": "/words/17",
+              "word": "kommen",
+              "wordType": "VERB"
+            },
+            {
+              "jsonPointer": "/words/22",
+              "word": "E-Mail",
+              "wordType": "NOMEN"
+            },
+            {
+              "jsonPointer": "/words/48",
+              "word": "nett",
+              "wordType": "ADJEKTIV"
+            }
+          ]
+        },
+        "fileSha256": "67e11b267371ec5a5843964faf6c1fd8c49104beca733a2662d458a4b2a9457c",
+        "selectedValueSha256": "8972161f5214f4e77f2760292e7434d75b9f1efc81fbdeb140eba4ed64bec69b",
+        "fieldSha256": {
+          "/words/0": "be9b78aff37d7064c2f2b5f0d36e477d86f91da72ae0323affb4318c1c39c303",
+          "/words/1": "9485850b46bd5221e3288635bb98bf138a39ef84a4efc69f523d94a66b9632c4",
+          "/words/2": "7536761ee0f67e329eb1d2e6767fea6b82d383d7cacdf212c5049bdb4a391688",
+          "/words/3": "bc398aa7909d55278dc43e9ac17535537d8f0c27b11d2e184447df3ebdc7605e",
+          "/words/5": "83c2ce430b8bbf0241f7dbe2af5a56fc2f07d1631bed21d6923c0e14be4948d4",
+          "/words/8": "fec8029278f5ad2af7d3bc9706cc1b52914c58eedd2be29ff99ae95915eb0c12",
+          "/words/9": "9f40e22b3e8d26475cd3eca7112327f2064718ed5c2c596c8fec3eb94b4c8726",
+          "/words/15": "c4c548808ca3ebad3e0e21a8fa2b1b1b274f3369219b096e70496a3cad5eb383",
+          "/words/16": "c0e85abfc50e1d9e3c8513e516e80eff604a7ac729b1cea35c94b04de91a21b5",
+          "/words/17": "1d964b09a778b47ba72a51a3e4d6055de8cb1f8f1e5ff7a66cf4e60316bc6aae",
+          "/words/22": "56777f0d57636c5ae113785e5b931e9eba47623fcb398ca7b325b9478fa32c61",
+          "/words/48": "7fd8121a20b10469de2f7b5f46254b51d13b4f83d990f2f6702a1f1b79c1c9cf"
+        },
+        "sourceMetadataStatusUnendorsed": "aligned"
+      },
+      "objective": {
+        "canDoVi": "Với mẫu câu đã học, nhận biết và nhớ lại 12 từ để giới thiệu tên, xuất xứ, nghề nghiệp và thông tin liên hệ.",
+        "canDoDe": "Ich kann mit bekannten Satzmustern Angaben zu Name, Herkunft, Beruf und Kontakt machen.",
+        "status": "proposed-by-AI-curriculum-review",
+        "cefrDescriptorMapping": "pending-qualified-human-review"
+      },
+      "prerequisites": [
+        "P0"
+      ],
+      "reinforces": [
+        "S1-G",
+        "S1-L",
+        "S1-S",
+        "S1-W",
+        "S2-W"
+      ],
+      "deliveryOrderWithinSequence": 1,
+      "contentOwnerRole": "German Content Writer",
+      "assignedHumanOwner": null,
+      "review": {
+        "reviewerType": "AI-advisory",
+        "reviewer": "Codex / academic_criteria",
+        "reviewedAt": "2026-09-11",
+        "scope": "All fields of selected vocabulary entries or complete selected topic/lesson/exercise, including instructions, stimulus, answers, bilingual feedback and source metadata; no image/audio inspection.",
+        "decision": "candidate-with-open-gaps",
+        "textHumanReview": "not-started",
+        "audioHumanReview": "not-applicable-to-required-reference-audio",
+        "deliveryParity": "not-verified",
+        "releaseDecision": "not-ready",
+        "humanSignoff": null
+      },
+      "reviewUnits": [
+        {
+          "unitId": "a1-person::NOMEN::Name",
+          "jsonPointer": "/words/0",
+          "valueSha256": "be9b78aff37d7064c2f2b5f0d36e477d86f91da72ae0323affb4318c1c39c303",
+          "sourceNativeId": null,
+          "reviewedBy": "AI-advisory",
+          "humanReview": "not-started"
+        },
+        {
+          "unitId": "a1-person::NOMEN::Vorname",
+          "jsonPointer": "/words/1",
+          "valueSha256": "9485850b46bd5221e3288635bb98bf138a39ef84a4efc69f523d94a66b9632c4",
+          "sourceNativeId": null,
+          "reviewedBy": "AI-advisory",
+          "humanReview": "not-started"
+        },
+        {
+          "unitId": "a1-person::NOMEN::Nachname",
+          "jsonPointer": "/words/2",
+          "valueSha256": "7536761ee0f67e329eb1d2e6767fea6b82d383d7cacdf212c5049bdb4a391688",
+          "sourceNativeId": null,
+          "reviewedBy": "AI-advisory",
+          "humanReview": "not-started"
+        },
+        {
+          "unitId": "a1-person::NOMEN::Adresse",
+          "jsonPointer": "/words/3",
+          "valueSha256": "bc398aa7909d55278dc43e9ac17535537d8f0c27b11d2e184447df3ebdc7605e",
+          "sourceNativeId": null,
+          "reviewedBy": "AI-advisory",
+          "humanReview": "not-started"
+        },
+        {
+          "unitId": "a1-person::NOMEN::Telefonnummer",
+          "jsonPointer": "/words/5",
+          "valueSha256": "83c2ce430b8bbf0241f7dbe2af5a56fc2f07d1631bed21d6923c0e14be4948d4",
+          "sourceNativeId": null,
+          "reviewedBy": "AI-advisory",
+          "humanReview": "not-started"
+        },
+        {
+          "unitId": "a1-person::NOMEN::Beruf",
+          "jsonPointer": "/words/8",
+          "valueSha256": "fec8029278f5ad2af7d3bc9706cc1b52914c58eedd2be29ff99ae95915eb0c12",
+          "sourceNativeId": null,
+          "reviewedBy": "AI-advisory",
+          "humanReview": "not-started"
+        },
+        {
+          "unitId": "a1-person::NOMEN::Land",
+          "jsonPointer": "/words/9",
+          "valueSha256": "9f40e22b3e8d26475cd3eca7112327f2064718ed5c2c596c8fec3eb94b4c8726",
+          "sourceNativeId": null,
+          "reviewedBy": "AI-advisory",
+          "humanReview": "not-started"
+        },
+        {
+          "unitId": "a1-person::VERB::heißen",
+          "jsonPointer": "/words/15",
+          "valueSha256": "c4c548808ca3ebad3e0e21a8fa2b1b1b274f3369219b096e70496a3cad5eb383",
+          "sourceNativeId": null,
+          "reviewedBy": "AI-advisory",
+          "humanReview": "not-started"
+        },
+        {
+          "unitId": "a1-person::VERB::wohnen",
+          "jsonPointer": "/words/16",
+          "valueSha256": "c0e85abfc50e1d9e3c8513e516e80eff604a7ac729b1cea35c94b04de91a21b5",
+          "sourceNativeId": null,
+          "reviewedBy": "AI-advisory",
+          "humanReview": "not-started"
+        },
+        {
+          "unitId": "a1-person::VERB::kommen",
+          "jsonPointer": "/words/17",
+          "valueSha256": "1d964b09a778b47ba72a51a3e4d6055de8cb1f8f1e5ff7a66cf4e60316bc6aae",
+          "sourceNativeId": null,
+          "reviewedBy": "AI-advisory",
+          "humanReview": "not-started"
+        },
+        {
+          "unitId": "a1-person::NOMEN::E-Mail",
+          "jsonPointer": "/words/22",
+          "valueSha256": "56777f0d57636c5ae113785e5b931e9eba47623fcb398ca7b325b9478fa32c61",
+          "sourceNativeId": null,
+          "reviewedBy": "AI-advisory",
+          "humanReview": "not-started"
+        },
+        {
+          "unitId": "a1-person::ADJEKTIV::nett",
+          "jsonPointer": "/words/48",
+          "valueSha256": "7fd8121a20b10469de2f7b5f46254b51d13b4f83d990f2f6702a1f1b79c1c9cf",
+          "sourceNativeId": null,
+          "reviewedBy": "AI-advisory",
+          "humanReview": "not-started"
+        }
+      ],
+      "audioAssets": [],
+      "optionalVocabularyAudio": {
+        "sourceUrlsAbsent": true,
+        "selectedWordCount": 12,
+        "dbAudioValues": "not-queried",
+        "voiceQuality": "not-reviewed"
+      },
+      "codeMapping": {
+        "databaseModels": [
+          "VocabularyTheme",
+          "VocabularyItem"
+        ],
+        "identity": "theme.slug; item unique(word,cefrLevel), not theme+word",
+        "known": "seed/seed-vocabulary.ts reads all content/{level}/vocabulary/*.json; maps meanings to translations and examples directly. All theme words are seeded. Current 12-item subset has no verified delivery adapter.",
+        "evidence": [
+          "packages/database/prisma/seed/seed-vocabulary.ts:67",
+          "packages/database/prisma/seed/seed-vocabulary.ts:70",
+          "packages/database/prisma/seed/seed-vocabulary.ts:110",
+          "apps/web/src/lib/content/vocabulary.ts:7",
+          "apps/web/src/lib/content/vocabulary.ts:85"
+        ],
+        "route": "/vocabulary; /api/v1/vocabulary?level=A1&theme={themeSlug}",
+        "unknown": [
+          "Actual deployed seed order and duplicate-word theme ownership",
+          "Live DB row IDs/values and cache version",
+          "Pilot subset selection in UI",
+          "Audio voice/asset and image correctness"
+        ]
+      },
+      "strengths": [
+        "Articles/plurals and two bilingual examples are present for the selected nouns; verb paradigms are available."
+      ],
+      "contentGaps": [
+        {
+          "id": "V1-LOAD",
+          "kind": "design-gap",
+          "status": "open",
+          "description": "The 12-word subset is a manifest selection; the current theme has 49 words. Delivery must restrict this subset or explicitly stage the remaining words.",
+          "pointers": [
+            "/words"
+          ],
+          "ownerRole": "Backend Engineer",
+          "closure": "Selected 12 word identities are verified in staging; no unreviewed theme items are included."
+        },
+        {
+          "id": "V1-RECALL",
+          "kind": "design-gap",
+          "status": "open",
+          "description": "Define a recall activity and valid variants; a selected word list alone is not a completed learning episode.",
+          "pointers": [
+            "/words"
+          ],
+          "ownerRole": "German Academic Lead",
+          "closure": "Human review at the revised hash and relevant HG gate evidence"
+        }
+      ]
+    },
+    {
+      "activityId": "a1-pilot-r1:S1-G",
+      "shortId": "S1-G",
+      "sourceId": "a1-g02-personalpronomen-sein-haben",
+      "sequenceId": "S1",
+      "skill": "grammar",
+      "level": "A1",
+      "titleVi": "Đại từ, sein và haben trong giới thiệu",
+      "status": "selected-candidate",
+      "source": {
+        "path": "content/a1/grammar/grammar-topics.json",
+        "jsonPointer": "/topics/1",
+        "selector": {
+          "identityKey": "slug",
+          "identityValue": "a1-g02-personalpronomen-sein-haben"
+        },
+        "fileSha256": "9c013e67aa88ebe76374815ac7d8127a103db5c35f67be71fcff486b098fc795",
+        "selectedValueSha256": "34d261570dc18966435c6aa6e21974cdb89e33abdd362ca66c6fde55651c7dcc",
+        "fieldSha256": {
+          "/topics/1/slug": "db85f9b874c819d6c3534e2dc351b93298f3d38a6b9b3a06d6c5873b4a286ec3",
+          "/topics/1/title": "23587557fbca4df8424b6a8fb3c3c750fc3c742ee82214766703d2cc8b6dcb33",
+          "/topics/1/titleDe": "65884b0419660e7f90639606fb96811903e420d6c95c2274272b102991f5ead0",
+          "/topics/1/description": "99439c86d74c4cd4a4b7897ba12c9208571727276371c7e1f88aa1a5ab8a45df",
+          "/topics/1/cefrLevel": "961ea6171fe18f8c510fc30a17ba90b2dc0cca62fd36a1b8749aad14fe357483",
+          "/topics/1/sortOrder": "d4735e3a265e16eee03f59718b9b5d03019c07d8b6c51f90da3a666eec13ab35",
+          "/topics/1/rules": "acd987f9b0c70cd278f81c77d78b7bfe93063e7bdbc3c62c5a99756fb165eed1",
+          "/topics/1/formula": "95c43dbe3d68094858beac90917a5dab8b537d8ec6d4bcb78a5e9bb482d7d9da",
+          "/topics/1/mnemonicTip": "e4b09abd554ebc3603d22bdda661925f45f16f9317ea03bcf89b4af966469a0a",
+          "/topics/1/exercises": "b22c1fc7c9373c5cae6ff7f2e39612c5910314b9a3b69925e90d4e41f6104407"
+        },
+        "sourceMetadataStatusUnendorsed": "aligned"
+      },
+      "objective": {
+        "canDoVi": "Chọn và dùng dạng sein/haben phù hợp cho ich, er/sie và Sie để nói một thông tin thật hoặc giả định về một người.",
+        "canDoDe": "Ich kann mit ich, er/sie und Sie einfache Sätze mit sein oder haben bilden.",
+        "status": "proposed-by-AI-curriculum-review",
+        "cefrDescriptorMapping": "pending-qualified-human-review"
+      },
+      "prerequisites": [
+        "P0",
+        "S1-V"
+      ],
+      "reinforces": [
+        "S1-L",
+        "S1-S",
+        "S1-W"
+      ],
+      "deliveryOrderWithinSequence": 2,
+      "contentOwnerRole": "German Curriculum Designer",
+      "assignedHumanOwner": null,
+      "review": {
+        "reviewerType": "AI-advisory",
+        "reviewer": "Codex / academic_criteria",
+        "reviewedAt": "2026-09-11",
+        "scope": "All fields of selected vocabulary entries or complete selected topic/lesson/exercise, including instructions, stimulus, answers, bilingual feedback and source metadata; no image/audio inspection.",
+        "decision": "candidate-with-open-gaps",
+        "textHumanReview": "not-started",
+        "audioHumanReview": "not-applicable-to-required-reference-audio",
+        "deliveryParity": "not-verified",
+        "releaseDecision": "not-ready",
+        "humanSignoff": null
+      },
+      "reviewUnits": [
+        {
+          "unitId": "a1-g02-personalpronomen-sein-haben::rule-1",
+          "jsonPointer": "/topics/1/rules/0",
+          "valueSha256": "f892d21f2e719d04d029037b32efa08975bd51a56efa02cb1b44c35023d249cd",
+          "sourceNativeId": null,
+          "reviewedBy": "AI-advisory",
+          "humanReview": "not-started"
+        },
+        {
+          "unitId": "a1-g02-personalpronomen-sein-haben::rule-2",
+          "jsonPointer": "/topics/1/rules/1",
+          "valueSha256": "49245b3a06356cae43e6ac213fd22ec710dfc415b24cfb7b896c1c9a54aca287",
+          "sourceNativeId": null,
+          "reviewedBy": "AI-advisory",
+          "humanReview": "not-started"
+        },
+        {
+          "unitId": "a1-g02-personalpronomen-sein-haben::rule-3",
+          "jsonPointer": "/topics/1/rules/2",
+          "valueSha256": "9e8f1a5e914f457c0ab6c65c088cd8c0c75e01d1262c2ae8eb76904e6f93c8d8",
+          "sourceNativeId": null,
+          "reviewedBy": "AI-advisory",
+          "humanReview": "not-started"
+        },
+        {
+          "unitId": "a1-g02-personalpronomen-sein-haben::exercise-1",
+          "jsonPointer": "/topics/1/exercises/0",
+          "valueSha256": "0be606581e6670050da733b4ac732cefe47173ee9314add2c1fd4fffa6421650",
+          "sourceNativeId": null,
+          "reviewedBy": "AI-advisory",
+          "humanReview": "not-started"
+        },
+        {
+          "unitId": "a1-g02-personalpronomen-sein-haben::exercise-2",
+          "jsonPointer": "/topics/1/exercises/1",
+          "valueSha256": "f0adc7d84aaf6cf7ea56b0e928ec4503876b2c7e88ba000b887386a1370a8e45",
+          "sourceNativeId": null,
+          "reviewedBy": "AI-advisory",
+          "humanReview": "not-started"
+        },
+        {
+          "unitId": "a1-g02-personalpronomen-sein-haben::exercise-3",
+          "jsonPointer": "/topics/1/exercises/2",
+          "valueSha256": "a5c4f75ae347aff893470ec32e165fb905125d6f7398d3f8799afc29d0c98b48",
+          "sourceNativeId": null,
+          "reviewedBy": "AI-advisory",
+          "humanReview": "not-started"
+        },
+        {
+          "unitId": "a1-g02-personalpronomen-sein-haben::formula",
+          "jsonPointer": "/topics/1/formula",
+          "valueSha256": "95c43dbe3d68094858beac90917a5dab8b537d8ec6d4bcb78a5e9bb482d7d9da",
+          "sourceNativeId": null,
+          "reviewedBy": "AI-advisory",
+          "humanReview": "not-started"
+        },
+        {
+          "unitId": "a1-g02-personalpronomen-sein-haben::mnemonic",
+          "jsonPointer": "/topics/1/mnemonicTip",
+          "valueSha256": "e4b09abd554ebc3603d22bdda661925f45f16f9317ea03bcf89b4af966469a0a",
+          "sourceNativeId": null,
+          "reviewedBy": "AI-advisory",
+          "humanReview": "not-started"
+        }
+      ],
+      "audioAssets": [],
+      "optionalVocabularyAudio": null,
+      "codeMapping": {
+        "databaseModels": [
+          "GrammarTopic",
+          "GrammarRule",
+          "GrammarLesson"
+        ],
+        "identity": "GrammarTopic.slug is source slug; interactive GrammarLesson.id is a separate unresolved mapping",
+        "known": "seed/seed-grammar.ts imports a1/grammar topics and rules; does not import topic.exercises as interactive GrammarLesson. Separate seed-grammar.ts reads Grammatik-Factory/production. The active topic page lists GrammarLesson and the player loads that model.",
+        "evidence": [
+          "packages/database/prisma/seed/seed-grammar.ts:34",
+          "packages/database/prisma/seed/seed-grammar.ts:70",
+          "packages/database/prisma/seed/seed-grammar.ts:104",
+          "packages/database/prisma/seed-grammar.ts:23",
+          "apps/web/src/app/(learn)/grammar/[topicSlug]/page.tsx:9",
+          "apps/web/src/app/(learn)/grammar/[topicSlug]/page.tsx:15",
+          "apps/web/src/app/(learn)/grammar/[topicSlug]/[lessonId]/page.tsx:14"
+        ],
+        "route": "/grammar/{topicSlug}; /grammar/{topicSlug}/{interactiveLessonId-unresolved}",
+        "unknown": [
+          "Interactive lesson ID and factory/source parity",
+          "Current DB content, publish state and runtime behavior",
+          "Whether selected source exercises appear anywhere in active UI"
+        ]
+      },
+      "strengths": [
+        "The selected topic contains explicit pronoun and sein/haben tables with concrete example sentences."
+      ],
+      "contentGaps": [
+        {
+          "id": "G1-EXERCISES",
+          "kind": "confirmed-content-gap",
+          "status": "open",
+          "description": "Recognition repeats the complete example as its answer; production has only a generic individual-answer placeholder. No usable grading anchors or valid variants.",
+          "pointers": [
+            "/topics/1/exercises"
+          ],
+          "ownerRole": "German Academic Lead",
+          "closure": "Human review at the revised hash and relevant HG gate evidence"
+        },
+        {
+          "id": "G1-LOAD",
+          "kind": "design-gap",
+          "status": "open",
+          "description": "The source teaches all pronouns and both conjugation tables. Stage recognition and limit first production targets; do not treat the whole table as one short mastery check.",
+          "pointers": [
+            "/topics/1/rules"
+          ],
+          "ownerRole": "German Academic Lead",
+          "closure": "Human review at the revised hash and relevant HG gate evidence"
+        }
+      ]
+    },
+    {
+      "activityId": "a1-pilot-r1:S1-R",
+      "shortId": "S1-R",
+      "sourceId": "A1-T1-002",
+      "sequenceId": "S1",
+      "skill": "reading",
+      "level": "A1",
+      "titleVi": "Đọc lời mời và trả lời một cuộc gặp",
+      "status": "selected-candidate",
+      "source": {
+        "path": "content/a1/reading/A1-T1-002.json",
+        "jsonPointer": "",
+        "selector": {
+          "identityKey": "id",
+          "identityValue": "A1-T1-002"
+        },
+        "fileSha256": "ffc509dc1b6548dd5afcc811d9c425ff176ca318abe6fe091e0418fbd2af5787",
+        "selectedValueSha256": "88c6e6cce022bc66b3c708f71c5a13dc4a7c14da6ef1c40738af208ec5dc7afb",
+        "fieldSha256": {
+          "/id": "85592c0b20088e67874897f878387709c6b67ce2210038b3f09d8ae1801689cc",
+          "/level": "961ea6171fe18f8c510fc30a17ba90b2dc0cca62fd36a1b8749aad14fe357483",
+          "/teil": "6b86b273ff34fce19d6b804eff5a3f5747ada4eaa22f1d49c01e52ddb7875b4b",
+          "/teil_name": "b325af1a97eaf73bbedfc8d5fb64511c9df4fb19a44f1500e0220247c9869a83",
+          "/topic": "8265f07925853b6ebe8b7aafbd8c33e3aa000868d486b3e9e14e7876a69bb294",
+          "/topic_id": "f3f2837c2b6669057a26306e8098ee05a18044658898e07528da159fd9a0f57f",
+          "/texts": "8830c10444029471f313fd80ceafcc8bc54f4000835fc318b5534efd4568e866",
+          "/questions": "1579ae7267caa68955e61cc82fab7b92c76074c7f528de3dba24f8b3b358801a",
+          "/scoring": "3349f05fe0e2dde242f48093de9432da182a2c9d27ba06d6554eeb1562d6e9c1"
+        },
+        "sourceMetadataStatusUnendorsed": "aligned"
+      },
+      "objective": {
+        "canDoVi": "Đọc hai tin nhắn và xác định người tham dự, thứ, giờ cùng đồ được yêu cầu mang đến; giải thích đáp án bằng chi tiết trong văn bản.",
+        "canDoDe": "Ich kann in einer Einladung und Antwort Angaben zu Personen, Tag, Uhrzeit und mitgebrachten Dingen finden.",
+        "status": "proposed-by-AI-curriculum-review",
+        "cefrDescriptorMapping": "pending-qualified-human-review"
+      },
+      "prerequisites": [
+        "P0",
+        "S1-V",
+        "S1-G",
+        "P1-SOCIAL"
+      ],
+      "reinforces": [
+        "S1-W"
+      ],
+      "deliveryOrderWithinSequence": 3,
+      "contentOwnerRole": "German Content Writer",
+      "assignedHumanOwner": null,
+      "review": {
+        "reviewerType": "AI-advisory",
+        "reviewer": "Codex / academic_criteria",
+        "reviewedAt": "2026-09-11",
+        "scope": "All fields of selected vocabulary entries or complete selected topic/lesson/exercise, including instructions, stimulus, answers, bilingual feedback and source metadata; no image/audio inspection.",
+        "decision": "candidate-with-open-gaps",
+        "textHumanReview": "not-started",
+        "audioHumanReview": "not-applicable-to-required-reference-audio",
+        "deliveryParity": "not-verified",
+        "releaseDecision": "not-ready",
+        "humanSignoff": null
+      },
+      "reviewUnits": [
+        {
+          "unitId": "A1-T1-002::TextA",
+          "jsonPointer": "/texts/0",
+          "valueSha256": "5bb72ff34058912f297db2ebfcddb371ff563c60d29be2e99cc928386c5657e8",
+          "sourceNativeId": "TextA",
+          "reviewedBy": "AI-advisory",
+          "humanReview": "not-started"
+        },
+        {
+          "unitId": "A1-T1-002::TextB",
+          "jsonPointer": "/texts/1",
+          "valueSha256": "a2c41352efccf2188285e574820074ae5e458f15e53ee0a529af10301b5fc2ee",
+          "sourceNativeId": "TextB",
+          "reviewedBy": "AI-advisory",
+          "humanReview": "not-started"
+        },
+        {
+          "unitId": "A1-T1-002::Q1",
+          "jsonPointer": "/questions/0",
+          "valueSha256": "10aeb59250b8a48281eaa4e990855fe8a7e57828f39c12a2e5ed28354e123d0f",
+          "sourceNativeId": "Q1",
+          "reviewedBy": "AI-advisory",
+          "humanReview": "not-started"
+        },
+        {
+          "unitId": "A1-T1-002::Q2",
+          "jsonPointer": "/questions/1",
+          "valueSha256": "cdb48b9dd089de11b33353ec81b305498968e336aa6f5713c6ea037dda22ad73",
+          "sourceNativeId": "Q2",
+          "reviewedBy": "AI-advisory",
+          "humanReview": "not-started"
+        },
+        {
+          "unitId": "A1-T1-002::Q3",
+          "jsonPointer": "/questions/2",
+          "valueSha256": "ba30bfcaa097ff9a1cedf5b599874348cc5e70cb61162c5fe7895a522a123204",
+          "sourceNativeId": "Q3",
+          "reviewedBy": "AI-advisory",
+          "humanReview": "not-started"
+        },
+        {
+          "unitId": "A1-T1-002::Q4",
+          "jsonPointer": "/questions/3",
+          "valueSha256": "ae16498467b2c3ffa32b7c50fde3e9532fd552068c4a2934ca68d2b91009a962",
+          "sourceNativeId": "Q4",
+          "reviewedBy": "AI-advisory",
+          "humanReview": "not-started"
+        },
+        {
+          "unitId": "A1-T1-002::Q5",
+          "jsonPointer": "/questions/4",
+          "valueSha256": "8ddf299175cf115ff278fc5674797eb0918da0dfe5e88a1eb8dd6509b6445a0d",
+          "sourceNativeId": "Q5",
+          "reviewedBy": "AI-advisory",
+          "humanReview": "not-started"
+        },
+        {
+          "unitId": "A1-T1-002::scoring",
+          "jsonPointer": "/scoring",
+          "valueSha256": "3349f05fe0e2dde242f48093de9432da182a2c9d27ba06d6554eeb1562d6e9c1",
+          "sourceNativeId": null,
+          "reviewedBy": "AI-advisory",
+          "humanReview": "not-started"
+        }
+      ],
+      "audioAssets": [],
+      "optionalVocabularyAudio": null,
+      "codeMapping": {
+        "databaseModels": [
+          "ReadingExercise",
+          "ReadingQuestion"
+        ],
+        "identity": "exerciseId = source.id; questionNumber = array index+1, not Q id",
+        "known": "Seed maps texts/images/scoring/metadata, questions with key/points/explanation; active page loads exercise and questions by exerciseId.",
+        "evidence": [
+          "packages/database/prisma/seed-reading-writing.ts:94",
+          "packages/database/prisma/seed-reading-writing.ts:101",
+          "packages/database/prisma/seed-reading-writing.ts:126",
+          "apps/web/src/app/(learn)/reading/[exerciseId]/page.tsx:155"
+        ],
+        "route": "/reading/{sourceId}",
+        "unknown": [
+          "Actual seeded/live values and sort order",
+          "Images rendered and aligned",
+          "Successful live completion/feedback/retry/progress"
+        ]
+      },
+      "strengths": [
+        "Q1/Q2/Q4/Q5 can be checked against explicit textual evidence; score bands cover 0–5 without overlap."
+      ],
+      "contentGaps": [
+        {
+          "id": "R1-Q3",
+          "kind": "confirmed-content-gap",
+          "status": "open",
+          "description": "Q3 says Anna wants to bring food; its explanation proves that Anna asks Maria to bring music. The explanation does not establish the current statement about Anna’s intention. Repair the agent/statement and feedback together.",
+          "pointers": [
+            "/questions/2/statement",
+            "/questions/2/explanation",
+            "/texts/0/content"
+          ],
+          "ownerRole": "German Academic Lead",
+          "closure": "Human review at the revised hash and relevant HG gate evidence"
+        },
+        {
+          "id": "R1-FEEDBACK",
+          "kind": "review-needed",
+          "status": "open",
+          "description": "Vietnamese feedback mostly repeats statement and evidence; explain the concrete contrast, especially who asks whom in Q3.",
+          "pointers": [
+            "/questions"
+          ],
+          "ownerRole": "German Academic Lead",
+          "closure": "Human review at the revised hash and relevant HG gate evidence"
+        }
+      ]
+    },
+    {
+      "activityId": "a1-pilot-r1:S1-L",
+      "shortId": "S1-L",
+      "sourceId": "L-A1-GOETHE-001-T1",
+      "sequenceId": "S1",
+      "skill": "listening",
+      "level": "A1",
+      "titleVi": "Nghe làm quen: nơi ở, xuất xứ, nghề và thời gian",
+      "status": "selected-candidate",
+      "source": {
+        "path": "content/a1/listening/L-A1-GOETHE-001-T1.json",
+        "jsonPointer": "",
+        "selector": {
+          "identityKey": "id",
+          "identityValue": "L-A1-GOETHE-001-T1"
+        },
+        "fileSha256": "1f2639eee0d095d41dbc7a2f13a77a05ce4bbacefe99af4f25d7d565a5c75db8",
+        "selectedValueSha256": "0416b1fd4bd1c8d80d4f3ffe236bf392dea63d9712614ea7a2b031933e161293",
+        "fieldSha256": {
+          "/id": "78682bd8f558f1a7a89ddd8061a6d6d22ad146bf83a17729add0496e99471ccd",
+          "/level": "961ea6171fe18f8c510fc30a17ba90b2dc0cca62fd36a1b8749aad14fe357483",
+          "/teil": "6b86b273ff34fce19d6b804eff5a3f5747ada4eaa22f1d49c01e52ddb7875b4b",
+          "/teil_name": "58a652cc3779bb41fa31505d2b09d73b5a11ab2451aa7a35fb47306f6cffcc5a",
+          "/task_type": "96a4d6357c723f8d94bd33134e29a362af7e7fbc6a0e5c009a45953c2bcad5a6",
+          "/topic": "7a41dfa38b62aa6a00ecfb74272b17a98d77fa272818edda3edb945966a157e2",
+          "/audio_file": "8f5307ef451c119ba51879d3760862abb94e156e60e4067c3d9ad92a97273d13",
+          "/questions": "41d23ad6975ae62d59cba46b448bad9121303e12ac7033fe394fab6919bd996c",
+          "/scoring": "cbf3a5468a2203fccba7a4f4caef34352fc9daad8af2ab328e394be4d5f7ecac",
+          "/transcript": "58e5c82ed877f20c9c1ffe770df76c3328651ff04deed04ceff658e5d490e757"
+        },
+        "sourceMetadataStatusUnendorsed": "aligned"
+      },
+      "objective": {
+        "canDoVi": "Sau tối đa hai lượt nghe đã được duyệt, chọn đúng thông tin được hỏi trong sáu hội thoại giới thiệu ngắn và đối chiếu với transcript sau trả lời.",
+        "canDoDe": "Ich kann nach höchstens zweimaligem Hören gezielte Angaben in sechs kurzen Vorstellungsgesprächen finden.",
+        "status": "proposed-by-AI-curriculum-review",
+        "cefrDescriptorMapping": "pending-qualified-human-review"
+      },
+      "prerequisites": [
+        "P0",
+        "S1-V",
+        "S1-G",
+        "P1-LISTENING"
+      ],
+      "reinforces": [
+        "S1-S",
+        "S1-W"
+      ],
+      "deliveryOrderWithinSequence": 4,
+      "contentOwnerRole": "Audio Script & Voice Producer",
+      "assignedHumanOwner": null,
+      "review": {
+        "reviewerType": "AI-advisory",
+        "reviewer": "Codex / academic_criteria",
+        "reviewedAt": "2026-09-11",
+        "scope": "All fields of selected vocabulary entries or complete selected topic/lesson/exercise, including instructions, stimulus, answers, bilingual feedback and source metadata; no image/audio inspection.",
+        "decision": "candidate-with-open-gaps",
+        "textHumanReview": "not-started",
+        "audioHumanReview": "not-started",
+        "deliveryParity": "not-verified",
+        "releaseDecision": "not-ready",
+        "humanSignoff": null
+      },
+      "reviewUnits": [
+        {
+          "unitId": "L-A1-GOETHE-001-T1::Q1",
+          "jsonPointer": "/questions/0",
+          "valueSha256": "bf5f967284e3e37dc092ef828d4b4f1480b738d4d30dd8bf78257a008ec76c5c",
+          "sourceNativeId": "Q1",
+          "reviewedBy": "AI-advisory",
+          "humanReview": "not-started"
+        },
+        {
+          "unitId": "L-A1-GOETHE-001-T1::Q2",
+          "jsonPointer": "/questions/1",
+          "valueSha256": "768dacf0a8591a556ec40b9c264b5cad1199a0223a24ff1ff412e22c80224e2d",
+          "sourceNativeId": "Q2",
+          "reviewedBy": "AI-advisory",
+          "humanReview": "not-started"
+        },
+        {
+          "unitId": "L-A1-GOETHE-001-T1::Q3",
+          "jsonPointer": "/questions/2",
+          "valueSha256": "bedac97d9fcbb9f951869228c11cf3d81e88814d380eac402e2d2c5f25f7d9c1",
+          "sourceNativeId": "Q3",
+          "reviewedBy": "AI-advisory",
+          "humanReview": "not-started"
+        },
+        {
+          "unitId": "L-A1-GOETHE-001-T1::Q4",
+          "jsonPointer": "/questions/3",
+          "valueSha256": "14bf4573815bd0b70dd9f5a5b6b92aa5506eb6eb2b68ef249ec3ed67c6858576",
+          "sourceNativeId": "Q4",
+          "reviewedBy": "AI-advisory",
+          "humanReview": "not-started"
+        },
+        {
+          "unitId": "L-A1-GOETHE-001-T1::Q5",
+          "jsonPointer": "/questions/4",
+          "valueSha256": "7778bb3943d7cab79054173882804aa7db69560b8cdbd0e2c6334d5c62df0cd2",
+          "sourceNativeId": "Q5",
+          "reviewedBy": "AI-advisory",
+          "humanReview": "not-started"
+        },
+        {
+          "unitId": "L-A1-GOETHE-001-T1::Q6",
+          "jsonPointer": "/questions/5",
+          "valueSha256": "0a9d661220d157ecf2ae15eea57c2ff1af82592d9d7234f04c3d8f32b1edd24f",
+          "sourceNativeId": "Q6",
+          "reviewedBy": "AI-advisory",
+          "humanReview": "not-started"
+        },
+        {
+          "unitId": "L-A1-GOETHE-001-T1::line-1",
+          "jsonPointer": "/transcript/lines/0",
+          "valueSha256": "9729615b3b28c0cdc1d04827e21480b055d041912ac5170f568af78b35b0b83d",
+          "sourceNativeId": null,
+          "reviewedBy": "AI-advisory",
+          "humanReview": "not-started"
+        },
+        {
+          "unitId": "L-A1-GOETHE-001-T1::line-2",
+          "jsonPointer": "/transcript/lines/1",
+          "valueSha256": "c1f19a3eeca91e415f12f48217d19f2c658a1523e10aaef5835f7a799c3386e5",
+          "sourceNativeId": null,
+          "reviewedBy": "AI-advisory",
+          "humanReview": "not-started"
+        },
+        {
+          "unitId": "L-A1-GOETHE-001-T1::line-3",
+          "jsonPointer": "/transcript/lines/2",
+          "valueSha256": "6e4446c153e7f4bd16dbc0404a24c6f5057bb8f28035381801821fbafb98f735",
+          "sourceNativeId": null,
+          "reviewedBy": "AI-advisory",
+          "humanReview": "not-started"
+        },
+        {
+          "unitId": "L-A1-GOETHE-001-T1::line-4",
+          "jsonPointer": "/transcript/lines/3",
+          "valueSha256": "c392f622e0b40f25724091613c00c666d79da4bb3c9418f14a680376fa762c00",
+          "sourceNativeId": null,
+          "reviewedBy": "AI-advisory",
+          "humanReview": "not-started"
+        },
+        {
+          "unitId": "L-A1-GOETHE-001-T1::line-5",
+          "jsonPointer": "/transcript/lines/4",
+          "valueSha256": "48a8815105b4b7dec7dafd39b2ac1110b4d930bbcaab9ea8e179e53473ca64d1",
+          "sourceNativeId": null,
+          "reviewedBy": "AI-advisory",
+          "humanReview": "not-started"
+        },
+        {
+          "unitId": "L-A1-GOETHE-001-T1::line-6",
+          "jsonPointer": "/transcript/lines/5",
+          "valueSha256": "701f58be7c75ed76727fc33c21f9800011bbc0cda22f340b24b11ae5c5333dd2",
+          "sourceNativeId": null,
+          "reviewedBy": "AI-advisory",
+          "humanReview": "not-started"
+        },
+        {
+          "unitId": "L-A1-GOETHE-001-T1::line-7",
+          "jsonPointer": "/transcript/lines/6",
+          "valueSha256": "38bcae1ef8881459868d761b1a55eeb62aaa1bf5229ee54b4fd13cb0c2f73aa0",
+          "sourceNativeId": null,
+          "reviewedBy": "AI-advisory",
+          "humanReview": "not-started"
+        },
+        {
+          "unitId": "L-A1-GOETHE-001-T1::line-8",
+          "jsonPointer": "/transcript/lines/7",
+          "valueSha256": "f8f492ae0093e6b52dbcfcb7d4cc39c2a8edc99ef166ea3275bb1725e6596c85",
+          "sourceNativeId": null,
+          "reviewedBy": "AI-advisory",
+          "humanReview": "not-started"
+        },
+        {
+          "unitId": "L-A1-GOETHE-001-T1::line-9",
+          "jsonPointer": "/transcript/lines/8",
+          "valueSha256": "b2637684b6f3379b9fe5e95519fad068692ff34ec0ece103056115304f6a1369",
+          "sourceNativeId": null,
+          "reviewedBy": "AI-advisory",
+          "humanReview": "not-started"
+        },
+        {
+          "unitId": "L-A1-GOETHE-001-T1::line-10",
+          "jsonPointer": "/transcript/lines/9",
+          "valueSha256": "adaf9a71c44dfbc693e500e9ca4a36805aa86689e7e28378cc1a5564b6fac2a6",
+          "sourceNativeId": null,
+          "reviewedBy": "AI-advisory",
+          "humanReview": "not-started"
+        },
+        {
+          "unitId": "L-A1-GOETHE-001-T1::line-11",
+          "jsonPointer": "/transcript/lines/10",
+          "valueSha256": "ad738f222540d06aca8aacaf574d6903bb6a470b2f8b23fb5005921f609139fc",
+          "sourceNativeId": null,
+          "reviewedBy": "AI-advisory",
+          "humanReview": "not-started"
+        },
+        {
+          "unitId": "L-A1-GOETHE-001-T1::line-12",
+          "jsonPointer": "/transcript/lines/11",
+          "valueSha256": "6443388c4605a4913452f7cd545d008aba52b3f7dbd81f091120c97da7a761e5",
+          "sourceNativeId": null,
+          "reviewedBy": "AI-advisory",
+          "humanReview": "not-started"
+        },
+        {
+          "unitId": "L-A1-GOETHE-001-T1::line-13",
+          "jsonPointer": "/transcript/lines/12",
+          "valueSha256": "6cccbe1e0f80eb6b63adbc7ec3891b2596ab19e241d1a335638a24ee428d8e32",
+          "sourceNativeId": null,
+          "reviewedBy": "AI-advisory",
+          "humanReview": "not-started"
+        },
+        {
+          "unitId": "L-A1-GOETHE-001-T1::line-14",
+          "jsonPointer": "/transcript/lines/13",
+          "valueSha256": "f5e09aa539c75db5613943a6dba3a1667667cb6064d6a11ab6410d560c3a432b",
+          "sourceNativeId": null,
+          "reviewedBy": "AI-advisory",
+          "humanReview": "not-started"
+        },
+        {
+          "unitId": "L-A1-GOETHE-001-T1::line-15",
+          "jsonPointer": "/transcript/lines/14",
+          "valueSha256": "cda8042d7c6b173575b7db1308a900c5f3891b79c543b479c0058a69fc276d46",
+          "sourceNativeId": null,
+          "reviewedBy": "AI-advisory",
+          "humanReview": "not-started"
+        },
+        {
+          "unitId": "L-A1-GOETHE-001-T1::line-16",
+          "jsonPointer": "/transcript/lines/15",
+          "valueSha256": "584bff750189c48f410bb457af9ec06473f411717220f44eb578497ce391acda",
+          "sourceNativeId": null,
+          "reviewedBy": "AI-advisory",
+          "humanReview": "not-started"
+        },
+        {
+          "unitId": "L-A1-GOETHE-001-T1::line-17",
+          "jsonPointer": "/transcript/lines/16",
+          "valueSha256": "f2d8de1aee38c98d8b08544eaded0c1c512ae52b35c764aa9f52382ceac09734",
+          "sourceNativeId": null,
+          "reviewedBy": "AI-advisory",
+          "humanReview": "not-started"
+        },
+        {
+          "unitId": "L-A1-GOETHE-001-T1::line-18",
+          "jsonPointer": "/transcript/lines/17",
+          "valueSha256": "468cc4c33d7a2442cc91e23f706da2e7e0d6bbf6367a412b13a2900a0f420e90",
+          "sourceNativeId": null,
+          "reviewedBy": "AI-advisory",
+          "humanReview": "not-started"
+        },
+        {
+          "unitId": "L-A1-GOETHE-001-T1::line-19",
+          "jsonPointer": "/transcript/lines/18",
+          "valueSha256": "bbb1e3037e7fb32596b3d39ffb56b9cc0ae641543e2de9e979d4df2724f11ad1",
+          "sourceNativeId": null,
+          "reviewedBy": "AI-advisory",
+          "humanReview": "not-started"
+        },
+        {
+          "unitId": "L-A1-GOETHE-001-T1::line-20",
+          "jsonPointer": "/transcript/lines/19",
+          "valueSha256": "d92e8914a7421c6b5c59b8b0b1d8b680d7e35007d829fd94bf62c63c13967408",
+          "sourceNativeId": null,
+          "reviewedBy": "AI-advisory",
+          "humanReview": "not-started"
+        },
+        {
+          "unitId": "L-A1-GOETHE-001-T1::line-21",
+          "jsonPointer": "/transcript/lines/20",
+          "valueSha256": "8297c1e33ff5745d22f60144b10ca0a5c74f3190f8602d8f01906094b69355c0",
+          "sourceNativeId": null,
+          "reviewedBy": "AI-advisory",
+          "humanReview": "not-started"
+        },
+        {
+          "unitId": "L-A1-GOETHE-001-T1::line-22",
+          "jsonPointer": "/transcript/lines/21",
+          "valueSha256": "865c0b8d3d2174d852b43084e3eb1484b74bc16f3bfe12271292c0adbcfa26ad",
+          "sourceNativeId": null,
+          "reviewedBy": "AI-advisory",
+          "humanReview": "not-started"
+        },
+        {
+          "unitId": "L-A1-GOETHE-001-T1::line-23",
+          "jsonPointer": "/transcript/lines/22",
+          "valueSha256": "4537ca085cf079ff0282ac1fcdd3463cacfe00af9b6ed5186eb79a7b5138d359",
+          "sourceNativeId": null,
+          "reviewedBy": "AI-advisory",
+          "humanReview": "not-started"
+        },
+        {
+          "unitId": "L-A1-GOETHE-001-T1::line-24",
+          "jsonPointer": "/transcript/lines/23",
+          "valueSha256": "75169b85462ad9d4e78327cd48cda89ccb13417f386ccb201d879c3d4f90f6ba",
+          "sourceNativeId": null,
+          "reviewedBy": "AI-advisory",
+          "humanReview": "not-started"
+        },
+        {
+          "unitId": "L-A1-GOETHE-001-T1::line-25",
+          "jsonPointer": "/transcript/lines/24",
+          "valueSha256": "b6119a72d6d5cd53309d27cde6ce7f8c3451ebde78a4c3174f32793ef2346ab3",
+          "sourceNativeId": null,
+          "reviewedBy": "AI-advisory",
+          "humanReview": "not-started"
+        },
+        {
+          "unitId": "L-A1-GOETHE-001-T1::line-26",
+          "jsonPointer": "/transcript/lines/25",
+          "valueSha256": "dcafb78608890570326e3e48ab6c1ca07e8f56224b60615e0d48218b04c247d0",
+          "sourceNativeId": null,
+          "reviewedBy": "AI-advisory",
+          "humanReview": "not-started"
+        },
+        {
+          "unitId": "L-A1-GOETHE-001-T1::line-27",
+          "jsonPointer": "/transcript/lines/26",
+          "valueSha256": "e27d77f341174407323266ec05d278c89b0e1cf90f3f13a5130430de5af46a83",
+          "sourceNativeId": null,
+          "reviewedBy": "AI-advisory",
+          "humanReview": "not-started"
+        },
+        {
+          "unitId": "L-A1-GOETHE-001-T1::line-28",
+          "jsonPointer": "/transcript/lines/27",
+          "valueSha256": "2e5dd7405a53931f0851ad24c84c424c7ae7b86d0a0b91c7919d7185dbb71147",
+          "sourceNativeId": null,
+          "reviewedBy": "AI-advisory",
+          "humanReview": "not-started"
+        },
+        {
+          "unitId": "L-A1-GOETHE-001-T1::line-29",
+          "jsonPointer": "/transcript/lines/28",
+          "valueSha256": "a36d1f331cf056badb9c87e8d48ccd4e4d61a241c409c29ee47e44b6cb056368",
+          "sourceNativeId": null,
+          "reviewedBy": "AI-advisory",
+          "humanReview": "not-started"
+        },
+        {
+          "unitId": "L-A1-GOETHE-001-T1::line-30",
+          "jsonPointer": "/transcript/lines/29",
+          "valueSha256": "6dc7d9182b7e59b6a0b1f1b422ebb93a1d4ee8a07ad594322e8f9ca4fb5d0700",
+          "sourceNativeId": null,
+          "reviewedBy": "AI-advisory",
+          "humanReview": "not-started"
+        },
+        {
+          "unitId": "L-A1-GOETHE-001-T1::line-31",
+          "jsonPointer": "/transcript/lines/30",
+          "valueSha256": "6b910794485b41aabef9864f14ab600d3e590d9fb9a0e01723520f281020b1f3",
+          "sourceNativeId": null,
+          "reviewedBy": "AI-advisory",
+          "humanReview": "not-started"
+        },
+        {
+          "unitId": "L-A1-GOETHE-001-T1::line-32",
+          "jsonPointer": "/transcript/lines/31",
+          "valueSha256": "2dfa0c1e5937cae0a8eee1e5da271b404617471acf0af642c29e653ca4a3eb37",
+          "sourceNativeId": null,
+          "reviewedBy": "AI-advisory",
+          "humanReview": "not-started"
+        },
+        {
+          "unitId": "L-A1-GOETHE-001-T1::line-33",
+          "jsonPointer": "/transcript/lines/32",
+          "valueSha256": "0b89135a5854e21015a0b22aa0851c12fa6ab0e533e58544d0c9a1e8ddbf360d",
+          "sourceNativeId": null,
+          "reviewedBy": "AI-advisory",
+          "humanReview": "not-started"
+        },
+        {
+          "unitId": "L-A1-GOETHE-001-T1::line-34",
+          "jsonPointer": "/transcript/lines/33",
+          "valueSha256": "f692d13f8fdcc0a9abc64fbfbd26ae44ef89be591abbf9f05622dbae2d0658dd",
+          "sourceNativeId": null,
+          "reviewedBy": "AI-advisory",
+          "humanReview": "not-started"
+        },
+        {
+          "unitId": "L-A1-GOETHE-001-T1::line-35",
+          "jsonPointer": "/transcript/lines/34",
+          "valueSha256": "5f4fc3ab1e3eb05e4682c59bba88da827ff1f3bc50e160fdb7438d5ca82a7091",
+          "sourceNativeId": null,
+          "reviewedBy": "AI-advisory",
+          "humanReview": "not-started"
+        },
+        {
+          "unitId": "L-A1-GOETHE-001-T1::line-36",
+          "jsonPointer": "/transcript/lines/35",
+          "valueSha256": "9fd9474bd8b4248b8c17e417622259e6b41dddd57b4c9a65e9a2807e364eeb89",
+          "sourceNativeId": null,
+          "reviewedBy": "AI-advisory",
+          "humanReview": "not-started"
+        },
+        {
+          "unitId": "L-A1-GOETHE-001-T1::line-37",
+          "jsonPointer": "/transcript/lines/36",
+          "valueSha256": "2e7c2b3ea916baa77668cb562841b4ae5886ea20653181a57e4721c624c175ec",
+          "sourceNativeId": null,
+          "reviewedBy": "AI-advisory",
+          "humanReview": "not-started"
+        },
+        {
+          "unitId": "L-A1-GOETHE-001-T1::line-38",
+          "jsonPointer": "/transcript/lines/37",
+          "valueSha256": "66146c48ee70c83b8ef0902d4434c071d27c53dd263282420b91d5fde996059a",
+          "sourceNativeId": null,
+          "reviewedBy": "AI-advisory",
+          "humanReview": "not-started"
+        },
+        {
+          "unitId": "L-A1-GOETHE-001-T1::scoring",
+          "jsonPointer": "/scoring",
+          "valueSha256": "cbf3a5468a2203fccba7a4f4caef34352fc9daad8af2ab328e394be4d5f7ecac",
+          "sourceNativeId": null,
+          "reviewedBy": "AI-advisory",
+          "humanReview": "not-started"
+        }
+      ],
+      "audioAssets": [
+        {
+          "assetId": "L-A1-GOETHE-001-T1::mp3",
+          "required": true,
+          "sourceUrl": "/audio/listening/A1/Teil1-Kurze-Alltagsgespraeche/L-A1-GOETHE-001-T1.mp3",
+          "localPath": "apps/web/public/audio/listening/A1/Teil1-Kurze-Alltagsgespraeche/L-A1-GOETHE-001-T1.mp3",
+          "existsLocally": true,
+          "byteSha256": "412a46a6d4eb5f5f4bd0e1c1f101ef4f9729b162afefb90c5c0473940f20b61e",
+          "listened": false,
+          "humanAudioReview": "not-started",
+          "liveDeliveryParity": "not-verified",
+          "voiceVersion": null,
+          "rightsStatus": "not-verified"
+        }
+      ],
+      "optionalVocabularyAudio": null,
+      "codeMapping": {
+        "databaseModels": [
+          "ListeningLesson",
+          "ListeningQuestion"
+        ],
+        "identity": "lessonId = source.id; questionNumber = array index+1; questions link to DB lesson.id",
+        "known": "Lesson/audio/transcript seed reads sibling 8-Audio-Factory manifest/scripts. Separate question seed reads repo content. The latter does not copy source audio_file/transcript/scoring, and sets translations.vi from explanation.vi. Player presents translations as questionTextNative; submit route reads explanation for feedback.",
+        "evidence": [
+          "packages/database/prisma/seed-listening.ts:19",
+          "packages/database/prisma/seed-listening.ts:112",
+          "packages/database/prisma/seed-listening-questions.ts:88",
+          "packages/database/prisma/seed-listening-questions.ts:119",
+          "apps/web/src/app/(learn)/listening/[lessonId]/page.tsx:41",
+          "apps/web/src/app/(learn)/listening/[lessonId]/page.tsx:223",
+          "apps/web/src/components/listening/lesson-player.tsx:765",
+          "apps/web/src/app/api/v1/listening/[lessonId]/submit/route.ts:67"
+        ],
+        "route": "/listening/{sourceId}",
+        "unknown": [
+          "Actual seed lineage and DB audioUrl/transcript structure",
+          "Whether current DB translations expose answer explanations before answering",
+          "Binary MP3 agreement with transcript and expected repeats",
+          "Scoring and question order after every adapter"
+        ]
+      },
+      "strengths": [
+        "All six keys and evidence match the reviewed transcript; speaker identities and stated question count are coherent in the text."
+      ],
+      "contentGaps": [
+        {
+          "id": "L1-AUDIO",
+          "kind": "unverified",
+          "status": "open",
+          "description": "The referenced MP3 exists locally; it has not been listened to. Duration, repetitions, voice and transcript parity remain unverified.",
+          "pointers": [
+            "/audio_file",
+            "/transcript"
+          ],
+          "ownerRole": "Audio Script & Voice Producer",
+          "closure": "Human review at the revised hash and relevant HG gate evidence"
+        },
+        {
+          "id": "L1-LOAD",
+          "kind": "design-gap",
+          "status": "open",
+          "description": "Six conversations in one MP3, not two short clips. Measure time and support seit + duration and unfamiliar professions; do not silently cut audio without versioned instructions/questions.",
+          "pointers": [
+            "/metadata/gespraech_count",
+            "/transcript/lines"
+          ],
+          "ownerRole": "German Academic Lead",
+          "closure": "Human review at the revised hash and relevant HG gate evidence"
+        }
+      ]
+    },
+    {
+      "activityId": "a1-pilot-r1:S1-S",
+      "shortId": "S1-S",
+      "sourceId": "a1-begruessung-03-nachsprechen",
+      "sequenceId": "S1",
+      "skill": "speaking",
+      "level": "A1",
+      "titleVi": "Chào hỏi và giới thiệu một người",
+      "status": "selected-candidate",
+      "source": {
+        "path": "content/a1/speaking/a1-begruessung.json",
+        "jsonPointer": "/lessons/2",
+        "selector": {
+          "identityKey": "lessonId",
+          "identityValue": "a1-begruessung-03-nachsprechen"
+        },
+        "fileSha256": "e299960d145b0bddb3c41c98bfd58a3e64879b28eaee627fe87b0d236ccd1f2d",
+        "selectedValueSha256": "135c007edeb131d51fb4dd87a918e629e31c025154eb4aa42258b6ba35a81004",
+        "fieldSha256": {
+          "/lessons/2/lessonId": "db6ef28d138350e0f317fbdf4ab3c58fdc77c15876580251ed0ef273a18a2126",
+          "/lessons/2/topicSlug": "91666c6bde37151958fc5a50e37fc1601d6403d61a6877b074328f8f3fb64c90",
+          "/lessons/2/lessonNumber": "4e07408562bedb8b60ce05c1decfe3ad16b72230967de01f640b7e4729b49fce",
+          "/lessons/2/titleDe": "4eb7583298106095fc9019306fcf0b11a166adb5b59bc920ba640970c1f1cfde",
+          "/lessons/2/titleVi": "f94afc8600f68702bd88911b57962488bcdc656cb0da8c67bc14c1464b3c8075",
+          "/lessons/2/originalSentence": "4eb7583298106095fc9019306fcf0b11a166adb5b59bc920ba640970c1f1cfde",
+          "/lessons/2/sentences": "21d50f1b12ee97d25f18e3b823792f8f8b0abfaa291448f1cb55d9ae605da3de"
+        },
+        "sourceMetadataStatusUnendorsed": "aligned"
+      },
+      "objective": {
+        "canDoVi": "Luyện sáu câu mẫu sau sửa phát âm, rồi giới thiệu tên mình/một người và đáp lời chào bằng thông tin thay đổi; phần nói mở còn phải bổ sung.",
+        "canDoDe": "Ich kann Begrüßungen üben und anschließend meinen Namen oder eine andere Person mit eigenen Angaben vorstellen.",
+        "status": "proposed-by-AI-curriculum-review",
+        "cefrDescriptorMapping": "pending-qualified-human-review"
+      },
+      "prerequisites": [
+        "P0",
+        "S1-V",
+        "S1-G",
+        "S1-L"
+      ],
+      "reinforces": [
+        "S1-W"
+      ],
+      "deliveryOrderWithinSequence": 5,
+      "contentOwnerRole": "Audio Script & Voice Producer",
+      "assignedHumanOwner": null,
+      "review": {
+        "reviewerType": "AI-advisory",
+        "reviewer": "Codex / academic_criteria",
+        "reviewedAt": "2026-09-11",
+        "scope": "All fields of selected vocabulary entries or complete selected topic/lesson/exercise, including instructions, stimulus, answers, bilingual feedback and source metadata; no image/audio inspection.",
+        "decision": "candidate-with-open-gaps",
+        "textHumanReview": "not-started",
+        "audioHumanReview": "not-started",
+        "deliveryParity": "not-verified",
+        "releaseDecision": "not-ready",
+        "humanSignoff": null
+      },
+      "reviewUnits": [
+        {
+          "unitId": "a1-begruessung-03-nachsprechen::s1",
+          "jsonPointer": "/lessons/2/sentences/0",
+          "valueSha256": "2b5f48819f064143ef2ab39e85eafb843a3eddd2d11dd301d14a1c8ddb9ff98f",
+          "sourceNativeId": "s1",
+          "reviewedBy": "AI-advisory",
+          "humanReview": "not-started"
+        },
+        {
+          "unitId": "a1-begruessung-03-nachsprechen::s2",
+          "jsonPointer": "/lessons/2/sentences/1",
+          "valueSha256": "c61d05f077f7dff3e628e062a97c24b0ba4d1fc6bb971f5e5e6c6f274f9c5e69",
+          "sourceNativeId": "s2",
+          "reviewedBy": "AI-advisory",
+          "humanReview": "not-started"
+        },
+        {
+          "unitId": "a1-begruessung-03-nachsprechen::s3",
+          "jsonPointer": "/lessons/2/sentences/2",
+          "valueSha256": "35db604c874bff57c9c63a92ad957222535b1288e20c5b91ce5f3ee16de7d2ce",
+          "sourceNativeId": "s3",
+          "reviewedBy": "AI-advisory",
+          "humanReview": "not-started"
+        },
+        {
+          "unitId": "a1-begruessung-03-nachsprechen::s4",
+          "jsonPointer": "/lessons/2/sentences/3",
+          "valueSha256": "1d7d081deefde30744b6d763fb9f36edf8ed58f9c0ac83e5cbfab831cefce3ac",
+          "sourceNativeId": "s4",
+          "reviewedBy": "AI-advisory",
+          "humanReview": "not-started"
+        },
+        {
+          "unitId": "a1-begruessung-03-nachsprechen::s5",
+          "jsonPointer": "/lessons/2/sentences/4",
+          "valueSha256": "4a2e013acdc9ba24d3d1616e0d2ad18f35f40fd9d54b9204dfc8635260813c29",
+          "sourceNativeId": "s5",
+          "reviewedBy": "AI-advisory",
+          "humanReview": "not-started"
+        },
+        {
+          "unitId": "a1-begruessung-03-nachsprechen::s6",
+          "jsonPointer": "/lessons/2/sentences/5",
+          "valueSha256": "14396a91079c9a3b423e1a32238ca8e6f2d80bb568a29abbea08ea1fc08e5593",
+          "sourceNativeId": "s6",
+          "reviewedBy": "AI-advisory",
+          "humanReview": "not-started"
+        }
+      ],
+      "audioAssets": [
+        {
+          "assetId": "a1-begruessung-03-nachsprechen::s1::reference-audio",
+          "required": true,
+          "sourceUrl": null,
+          "localPath": null,
+          "existsLocally": false,
+          "byteSha256": null,
+          "listened": false,
+          "humanAudioReview": "not-started",
+          "liveDeliveryParity": "not-verified",
+          "voiceVersion": null,
+          "rightsStatus": "not-verified"
+        },
+        {
+          "assetId": "a1-begruessung-03-nachsprechen::s2::reference-audio",
+          "required": true,
+          "sourceUrl": null,
+          "localPath": null,
+          "existsLocally": false,
+          "byteSha256": null,
+          "listened": false,
+          "humanAudioReview": "not-started",
+          "liveDeliveryParity": "not-verified",
+          "voiceVersion": null,
+          "rightsStatus": "not-verified"
+        },
+        {
+          "assetId": "a1-begruessung-03-nachsprechen::s3::reference-audio",
+          "required": true,
+          "sourceUrl": null,
+          "localPath": null,
+          "existsLocally": false,
+          "byteSha256": null,
+          "listened": false,
+          "humanAudioReview": "not-started",
+          "liveDeliveryParity": "not-verified",
+          "voiceVersion": null,
+          "rightsStatus": "not-verified"
+        },
+        {
+          "assetId": "a1-begruessung-03-nachsprechen::s4::reference-audio",
+          "required": true,
+          "sourceUrl": null,
+          "localPath": null,
+          "existsLocally": false,
+          "byteSha256": null,
+          "listened": false,
+          "humanAudioReview": "not-started",
+          "liveDeliveryParity": "not-verified",
+          "voiceVersion": null,
+          "rightsStatus": "not-verified"
+        },
+        {
+          "assetId": "a1-begruessung-03-nachsprechen::s5::reference-audio",
+          "required": true,
+          "sourceUrl": null,
+          "localPath": null,
+          "existsLocally": false,
+          "byteSha256": null,
+          "listened": false,
+          "humanAudioReview": "not-started",
+          "liveDeliveryParity": "not-verified",
+          "voiceVersion": null,
+          "rightsStatus": "not-verified"
+        },
+        {
+          "assetId": "a1-begruessung-03-nachsprechen::s6::reference-audio",
+          "required": true,
+          "sourceUrl": null,
+          "localPath": null,
+          "existsLocally": false,
+          "byteSha256": null,
+          "listened": false,
+          "humanAudioReview": "not-started",
+          "liveDeliveryParity": "not-verified",
+          "voiceVersion": null,
+          "rightsStatus": "not-verified"
+        }
+      ],
+      "optionalVocabularyAudio": null,
+      "codeMapping": {
+        "databaseModels": [
+          "SpeakingTopic",
+          "SpeakingLesson"
+        ],
+        "identity": "topicSlug; SpeakingLesson.id = source lessonId with -nachsprechen suffix normalization",
+        "known": "seed-speaking.ts normalizes sentence keys and writes exercisesJson.sentences, configJson, exerciseType=nachsprechen. Active page passes DB data to player. Empty/failed audioUrl falls back to browser TTS.",
+        "evidence": [
+          "packages/database/prisma/seed-speaking.ts:114",
+          "packages/database/prisma/seed-speaking.ts:132",
+          "packages/database/prisma/seed-speaking.ts:238",
+          "apps/web/src/app/(learn)/speaking/[lessonId]/page.tsx:65",
+          "apps/web/src/components/speaking/NachsprechenPlayer.tsx:169"
+        ],
+        "route": "/speaking/{sourceId}",
+        "unknown": [
+          "Current DB content and selected voice/browser availability",
+          "Calibrated speech evaluation and handling of valid variants",
+          "Open-response activity support in this selected lesson path"
+        ]
+      },
+      "strengths": [
+        "Six concrete sentence pairs and IPA fields allow targeted review."
+      ],
+      "contentGaps": [
+        {
+          "id": "S1-PHONETICS",
+          "kind": "confirmed-content-gap",
+          "status": "open",
+          "description": "s5 calls the initial letters in sind/Sie “z” and suggests Vietnamese x or ts, contradicting the source IPA [z]. Rewrite sound guidance and verify audio.",
+          "pointers": [
+            "/lessons/2/sentences/4/pronunciationNotes",
+            "/lessons/2/sentences/4/ipa"
+          ],
+          "ownerRole": "German Academic Lead",
+          "closure": "Human review at the revised hash and relevant HG gate evidence"
+        },
+        {
+          "id": "S1-LOCALIZATION",
+          "kind": "review-needed",
+          "status": "open",
+          "description": "Guten Tag is translated only as a noon greeting in s2; the IPA of heute in s3 and the mir explanation in s4 need specialist review.",
+          "pointers": [
+            "/lessons/2/sentences/1/textVi",
+            "/lessons/2/sentences/2/ipa",
+            "/lessons/2/sentences/3/pronunciationNotes"
+          ],
+          "ownerRole": "German Academic Lead",
+          "closure": "Human review at the revised hash and relevant HG gate evidence"
+        },
+        {
+          "id": "S1-OPEN",
+          "kind": "design-gap",
+          "status": "open",
+          "description": "Source has six repetition sentences and no open prompt or anchored production rubric. Add/review two prompted personal responses in H2; source is not yet an interaction activity.",
+          "pointers": [
+            "/lessons/2/sentences"
+          ],
+          "ownerRole": "German Academic Lead",
+          "closure": "Human review at the revised hash and relevant HG gate evidence"
+        },
+        {
+          "id": "S1-AUDIO",
+          "kind": "unverified",
+          "status": "open",
+          "description": "All six audioUrl values are empty. The player has browser TTS fallback, but voice/version/quality are not verified.",
+          "pointers": [
+            "/lessons/2/sentences"
+          ],
+          "ownerRole": "Audio Script & Voice Producer",
+          "closure": "Human review at the revised hash and relevant HG gate evidence"
+        }
+      ]
+    },
+    {
+      "activityId": "a1-pilot-r1:S1-W",
+      "shortId": "S1-W",
+      "sourceId": "W-A1-T2-019",
+      "sequenceId": "S1",
+      "skill": "writing",
+      "level": "A1",
+      "titleVi": "Giới thiệu đồng nghiệp và mời bạn gặp mặt",
+      "status": "selected-candidate",
+      "source": {
+        "path": "content/a1/writing/W-A1-T2-019.json",
+        "jsonPointer": "",
+        "selector": {
+          "identityKey": "id",
+          "identityValue": "W-A1-T2-019"
+        },
+        "fileSha256": "c024d8cac0a129c44ce443b02467ac2ad02f6c8683d470fd7c7984728c946383",
+        "selectedValueSha256": "ebdbb1bd2ab414d0ff9ca175edcc781b10325b9e0328266d946e08ac06662f4c",
+        "fieldSha256": {
+          "/id": "3dd583b3de88168f2d616d68b2f03562d1f4a57fb493868aba716a44586c94ca",
+          "/cefrLevel": "961ea6171fe18f8c510fc30a17ba90b2dc0cca62fd36a1b8749aad14fe357483",
+          "/teil": "d4735e3a265e16eee03f59718b9b5d03019c07d8b6c51f90da3a666eec13ab35",
+          "/teilName": "50fd956d9524c6ddc991674e3eb93a78f19096e212ea9baa4772ebe617c11118",
+          "/textType": "8917d047604ab8fa70018dd4b40fa9d9a624bb2b84f9f4d6cce853216373ec7f",
+          "/register": "202d21cd05d450fd3e39259f05d7371bc3cfa5b0e3557332522cf6eeb5fd840a",
+          "/topic": "77d004056d39191593f0a65ad552b0d03ac83d783c7b42417af764f0986d6575",
+          "/instruction": "3ad8dda6207d82f3b524d91c4f298516e1ae0125dd5cff3f3bd34b2acb0c9b16",
+          "/instructionVi": "b2b3d300df3df1691611ed204f88084996edbddd704a1fe42670bce329455901",
+          "/situation": "b228ccb913576c384d7580f8f7b889c28283f8e65fefbb72ff2a3e2e2b2bc000",
+          "/contentPoints": "ce69f22e2a0e84b9bf4f643df607cf70dd37c900c4410e70dd12ff8abe0f9ae3",
+          "/sourceText": "f32daa38aa25ddac8584b8dae051c83aa0bbc84bf18a7d4d609bb088a3c0e673",
+          "/sourceTextType": "8917d047604ab8fa70018dd4b40fa9d9a624bb2b84f9f4d6cce853216373ec7f",
+          "/grafikDesc": "74234e98afe7498fb5daf1f36ac2d78acc339464f950703b8c019892f982b90b",
+          "/grafikData": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+          "/formFields": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+          "/minWords": "f5ca38f748a1d6eaf726b8a42fb575c3c71f1864a8143301782de13da2d9202b",
+          "/maxWords": "d59eced1ded07f84c145592f65bdf854358e009c5cd705f5215bf18697fed103",
+          "/timeMinutes": "4a44dc15364204a80fe80e9039455cc1608281820fe2b24f1e5233ade6af1dd5",
+          "/rubric": "452896bc39a15354a21a930a4b07bd55a7ff66c2278cfa0da801a2ae426563eb",
+          "/maxScore": "e629fa6598d732768f7c726b4b621285f9c3b85303900aa912017db7617d8bdb",
+          "/modelAnswer": "6fa22d917eafd917d9e27d78811f79d49d95e1af3364ccb9c90c6a26cca5c668",
+          "/timeLimitMinutes": "4a44dc15364204a80fe80e9039455cc1608281820fe2b24f1e5233ade6af1dd5",
+          "/estimatedMinutes": "4a44dc15364204a80fe80e9039455cc1608281820fe2b24f1e5233ade6af1dd5"
+        },
+        "sourceMetadataStatusUnendorsed": "aligned"
+      },
+      "objective": {
+        "canDoVi": "Viết email 20–40 từ cho Thomas: nêu Marco đến từ Ý, nhận xét về Marco và mời ăn trưa thứ Sáu.",
+        "canDoDe": "Ich kann Thomas in einer kurzen E-Mail Marco vorstellen und zum Mittagessen am Freitag einladen.",
+        "status": "proposed-by-AI-curriculum-review",
+        "cefrDescriptorMapping": "pending-qualified-human-review"
+      },
+      "prerequisites": [
+        "P0",
+        "S1-V",
+        "S1-G",
+        "S1-R",
+        "S1-S"
+      ],
+      "reinforces": [
+        "S1-R",
+        "S1-L",
+        "S1-S"
+      ],
+      "deliveryOrderWithinSequence": 6,
+      "contentOwnerRole": "German Content Writer",
+      "assignedHumanOwner": null,
+      "review": {
+        "reviewerType": "AI-advisory",
+        "reviewer": "Codex / academic_criteria",
+        "reviewedAt": "2026-09-11",
+        "scope": "All fields of selected vocabulary entries or complete selected topic/lesson/exercise, including instructions, stimulus, answers, bilingual feedback and source metadata; no image/audio inspection.",
+        "decision": "candidate-with-open-gaps",
+        "textHumanReview": "not-started",
+        "audioHumanReview": "not-applicable-to-required-reference-audio",
+        "deliveryParity": "not-verified",
+        "releaseDecision": "not-ready",
+        "humanSignoff": null
+      },
+      "reviewUnits": [
+        {
+          "unitId": "W-A1-T2-019::instruction",
+          "jsonPointer": "/instruction",
+          "valueSha256": "3ad8dda6207d82f3b524d91c4f298516e1ae0125dd5cff3f3bd34b2acb0c9b16",
+          "sourceNativeId": null,
+          "reviewedBy": "AI-advisory",
+          "humanReview": "not-started"
+        },
+        {
+          "unitId": "W-A1-T2-019::instructionVi",
+          "jsonPointer": "/instructionVi",
+          "valueSha256": "b2b3d300df3df1691611ed204f88084996edbddd704a1fe42670bce329455901",
+          "sourceNativeId": null,
+          "reviewedBy": "AI-advisory",
+          "humanReview": "not-started"
+        },
+        {
+          "unitId": "W-A1-T2-019::situation",
+          "jsonPointer": "/situation",
+          "valueSha256": "b228ccb913576c384d7580f8f7b889c28283f8e65fefbb72ff2a3e2e2b2bc000",
+          "sourceNativeId": null,
+          "reviewedBy": "AI-advisory",
+          "humanReview": "not-started"
+        },
+        {
+          "unitId": "W-A1-T2-019::sourceText",
+          "jsonPointer": "/sourceText",
+          "valueSha256": "f32daa38aa25ddac8584b8dae051c83aa0bbc84bf18a7d4d609bb088a3c0e673",
+          "sourceNativeId": null,
+          "reviewedBy": "AI-advisory",
+          "humanReview": "not-started"
+        },
+        {
+          "unitId": "W-A1-T2-019::modelAnswer",
+          "jsonPointer": "/modelAnswer",
+          "valueSha256": "6fa22d917eafd917d9e27d78811f79d49d95e1af3364ccb9c90c6a26cca5c668",
+          "sourceNativeId": null,
+          "reviewedBy": "AI-advisory",
+          "humanReview": "not-started"
+        },
+        {
+          "unitId": "W-A1-T2-019::minWords",
+          "jsonPointer": "/minWords",
+          "valueSha256": "f5ca38f748a1d6eaf726b8a42fb575c3c71f1864a8143301782de13da2d9202b",
+          "sourceNativeId": null,
+          "reviewedBy": "AI-advisory",
+          "humanReview": "not-started"
+        },
+        {
+          "unitId": "W-A1-T2-019::maxWords",
+          "jsonPointer": "/maxWords",
+          "valueSha256": "d59eced1ded07f84c145592f65bdf854358e009c5cd705f5215bf18697fed103",
+          "sourceNativeId": null,
+          "reviewedBy": "AI-advisory",
+          "humanReview": "not-started"
+        },
+        {
+          "unitId": "W-A1-T2-019::content-point-1",
+          "jsonPointer": "/contentPoints/0",
+          "valueSha256": "30835dbbd9d92291d70603987aae56ed90337705841d3a233e4ff80009cfaa4d",
+          "sourceNativeId": null,
+          "reviewedBy": "AI-advisory",
+          "humanReview": "not-started"
+        },
+        {
+          "unitId": "W-A1-T2-019::content-point-2",
+          "jsonPointer": "/contentPoints/1",
+          "valueSha256": "449e63e0a733bc74a9b905a374fa5d06bfcffe2d2b704cec7eff7df219c416de",
+          "sourceNativeId": null,
+          "reviewedBy": "AI-advisory",
+          "humanReview": "not-started"
+        },
+        {
+          "unitId": "W-A1-T2-019::content-point-3",
+          "jsonPointer": "/contentPoints/2",
+          "valueSha256": "3c01085dbda00e1b6f76008ea15b8c06bd0984ff39aa5d0b809d9428f379362c",
+          "sourceNativeId": null,
+          "reviewedBy": "AI-advisory",
+          "humanReview": "not-started"
+        },
+        {
+          "unitId": "W-A1-T2-019::rubric-inhalt",
+          "jsonPointer": "/rubric/criteria/0",
+          "valueSha256": "13a0593be16d15f10b2f98d9ee239bd9f9ac12c0b64023667ab635389a8e18ff",
+          "sourceNativeId": "inhalt",
+          "reviewedBy": "AI-advisory",
+          "humanReview": "not-started"
+        },
+        {
+          "unitId": "W-A1-T2-019::rubric-korrektheit",
+          "jsonPointer": "/rubric/criteria/1",
+          "valueSha256": "53c738e261441d516e3e81e704735942ae7d462e4de709111b1bac2d78fa24e2",
+          "sourceNativeId": "korrektheit",
+          "reviewedBy": "AI-advisory",
+          "humanReview": "not-started"
+        },
+        {
+          "unitId": "W-A1-T2-019::rubric-angemessenheit",
+          "jsonPointer": "/rubric/criteria/2",
+          "valueSha256": "ab34f726ee1e909e6eb19b3ec18ed827c3bf687978b9747aa371607d42027a4e",
+          "sourceNativeId": "angemessenheit",
+          "reviewedBy": "AI-advisory",
+          "humanReview": "not-started"
+        },
+        {
+          "unitId": "W-A1-T2-019::rubric-maxScore",
+          "jsonPointer": "/rubric/maxScore",
+          "valueSha256": "e629fa6598d732768f7c726b4b621285f9c3b85303900aa912017db7617d8bdb",
+          "sourceNativeId": null,
+          "reviewedBy": "AI-advisory",
+          "humanReview": "not-started"
+        }
+      ],
+      "audioAssets": [],
+      "optionalVocabularyAudio": null,
+      "codeMapping": {
+        "databaseModels": [
+          "WritingExercise"
+        ],
+        "identity": "exerciseId = source.id",
+        "known": "Seed imports instructions/situation/contentPoints/formFields/sourceText/rubric but reads sampleResponse, not source modelAnswer. Active player is composed from DB fields and does not receive modelAnswer in the inspected page.",
+        "evidence": [
+          "packages/database/prisma/seed-reading-writing.ts:188",
+          "packages/database/prisma/seed-reading-writing.ts:200",
+          "packages/database/prisma/seed-reading-writing.ts:224",
+          "apps/web/src/app/(learn)/writing/[exerciseId]/page.tsx:153",
+          "apps/web/src/app/(learn)/writing/[exerciseId]/page.tsx:177"
+        ],
+        "route": "/writing/{sourceId}",
+        "unknown": [
+          "Actual DB sampleResponse and alternate import history",
+          "How model/accepted variants reach grading and learner feedback",
+          "Field-level form scoring vs prose-word-count behavior"
+        ]
+      },
+      "strengths": [
+        "The situation provides name, country, impression and meeting purpose, so task fulfillment can be checked explicitly."
+      ],
+      "contentGaps": [
+        {
+          "id": "W1-MODEL",
+          "kind": "confirmed-content-gap",
+          "status": "open",
+          "description": "Model addresses Anna, proposes Saturday at 18:00, omits Marco/Italy and Friday lunch, and ends “Schreib mir.” It does not perform the three content points.",
+          "pointers": [
+            "/modelAnswer",
+            "/situation",
+            "/contentPoints"
+          ],
+          "ownerRole": "German Academic Lead",
+          "closure": "Human review at the revised hash and relevant HG gate evidence"
+        },
+        {
+          "id": "W1-RUBRIC",
+          "kind": "confirmed-content-gap",
+          "status": "open",
+          "description": "Rubric has names, weights and maximum scores but no performance bands or task-specific anchors/accepted variants.",
+          "pointers": [
+            "/rubric"
+          ],
+          "ownerRole": "German Academic Lead",
+          "closure": "Human review at the revised hash and relevant HG gate evidence"
+        },
+        {
+          "id": "W1-SCAFFOLD",
+          "kind": "design-gap",
+          "status": "open",
+          "description": "Add a bounded planning aid from already taught chunks; do not require unsupported free writing from an absolute beginner.",
+          "pointers": [
+            "/instruction",
+            "/contentPoints"
+          ],
+          "ownerRole": "German Academic Lead",
+          "closure": "Human review at the revised hash and relevant HG gate evidence"
+        }
+      ]
+    },
+    {
+      "activityId": "a1-pilot-r1:S2-V",
+      "shortId": "S2-V",
+      "sourceId": "a1-reisen-verkehr",
+      "sequenceId": "S2",
+      "skill": "vocabulary",
+      "level": "A1",
+      "titleVi": "Từ vựng di chuyển và đến nơi",
+      "status": "selected-candidate",
+      "source": {
+        "path": "content/a1/vocabulary/13-reisen-verkehr.json",
+        "jsonPointer": "",
+        "selector": {
+          "themeSlug": "a1-reisen-verkehr",
+          "wordSelectors": [
+            {
+              "jsonPointer": "/words/0",
+              "word": "Zug",
+              "wordType": "NOMEN"
+            },
+            {
+              "jsonPointer": "/words/1",
+              "word": "Bus",
+              "wordType": "NOMEN"
+            },
+            {
+              "jsonPointer": "/words/5",
+              "word": "Bahnhof",
+              "wordType": "NOMEN"
+            },
+            {
+              "jsonPointer": "/words/6",
+              "word": "Haltestelle",
+              "wordType": "NOMEN"
+            },
+            {
+              "jsonPointer": "/words/7",
+              "word": "Fahrkarte",
+              "wordType": "NOMEN"
+            },
+            {
+              "jsonPointer": "/words/12",
+              "word": "Hotel",
+              "wordType": "NOMEN"
+            },
+            {
+              "jsonPointer": "/words/13",
+              "word": "Gleis",
+              "wordType": "NOMEN"
+            },
+            {
+              "jsonPointer": "/words/14",
+              "word": "Abfahrt",
+              "wordType": "NOMEN"
+            },
+            {
+              "jsonPointer": "/words/15",
+              "word": "Ankunft",
+              "wordType": "NOMEN"
+            },
+            {
+              "jsonPointer": "/words/18",
+              "word": "fahren",
+              "wordType": "VERB"
+            },
+            {
+              "jsonPointer": "/words/21",
+              "word": "umsteigen",
+              "wordType": "VERB"
+            },
+            {
+              "jsonPointer": "/words/34",
+              "word": "Ausgang",
+              "wordType": "NOMEN"
+            }
+          ]
+        },
+        "fileSha256": "81cccebf97893d352cf98d8a9a8fd8171d9598148392392c7c679330490b89f4",
+        "selectedValueSha256": "3b12f77c6902a8d09288e8b8a85ee3bbde91d4052272cff80e817d993cbeba69",
+        "fieldSha256": {
+          "/words/0": "29e9c943bd68f0ca8fcc8be3a24d4f1f703b27c903d27da0b0a53756f56004f6",
+          "/words/1": "2c40689a3e087e96bb1b8447cb16468920f7ff76b06a8b8d06981ea3c6a3fe99",
+          "/words/5": "97dd51f00c1811fd1986fa47b1bfc3dd73da58e2f5f125d61f2f68955b3f1e4e",
+          "/words/6": "53ede1e2699f5b508103ff57c8a2f52339f0971e293c95c4b1a253f37c36c545",
+          "/words/7": "b7d5b3ac3c5add630bfe24dc6f4636f02f6d42966dcae0b119d151836a826025",
+          "/words/12": "1e9744c40b1e7617bfc4155e78c3e704fd66e47769d8654e8b0e358d82c1531d",
+          "/words/13": "ea009620b10fd3f12c4f6b9cbc8d72f3489f9254af40b43ea8f304efceb6e810",
+          "/words/14": "82fb58262cffe00151b88dfc7387bc4bbc3806e71255862fab87f1b7472d810c",
+          "/words/15": "40e0a33bba21e936d770f737886a06d2ca40c35015e9e306ccea57cafe66210e",
+          "/words/18": "ca7140e3bd4d91906904ceb8349fdcb3c9d2755b0c4feb9181972e1f69ea6664",
+          "/words/21": "bdac2e24f7c4486118066ac9e82ee6d55cba403d52eef523df631a70cb70477b",
+          "/words/34": "85aaa839a668ac78d3dba4488795a045958f7e24e78c9f3bb2d99ebb7a621d99"
+        },
+        "sourceMetadataStatusUnendorsed": "aligned"
+      },
+      "objective": {
+        "canDoVi": "Nhận biết và nhớ lại 12 từ để đọc thông tin tàu/xe, hỏi đường và hiểu điểm đến/lối ra.",
+        "canDoDe": "Ich kann zwölf Wörter zu Verkehr, Fahrkarten, Abfahrt, Ankunft und Orientierung verstehen und abrufen.",
+        "status": "proposed-by-AI-curriculum-review",
+        "cefrDescriptorMapping": "pending-qualified-human-review"
+      },
+      "prerequisites": [
+        "P0",
+        "S1-V"
+      ],
+      "reinforces": [
+        "S2-R",
+        "S2-L",
+        "S2-S",
+        "S2-W"
+      ],
+      "deliveryOrderWithinSequence": 1,
+      "contentOwnerRole": "German Content Writer",
+      "assignedHumanOwner": null,
+      "review": {
+        "reviewerType": "AI-advisory",
+        "reviewer": "Codex / academic_criteria",
+        "reviewedAt": "2026-09-11",
+        "scope": "All fields of selected vocabulary entries or complete selected topic/lesson/exercise, including instructions, stimulus, answers, bilingual feedback and source metadata; no image/audio inspection.",
+        "decision": "candidate-with-open-gaps",
+        "textHumanReview": "not-started",
+        "audioHumanReview": "not-applicable-to-required-reference-audio",
+        "deliveryParity": "not-verified",
+        "releaseDecision": "not-ready",
+        "humanSignoff": null
+      },
+      "reviewUnits": [
+        {
+          "unitId": "a1-reisen-verkehr::NOMEN::Zug",
+          "jsonPointer": "/words/0",
+          "valueSha256": "29e9c943bd68f0ca8fcc8be3a24d4f1f703b27c903d27da0b0a53756f56004f6",
+          "sourceNativeId": null,
+          "reviewedBy": "AI-advisory",
+          "humanReview": "not-started"
+        },
+        {
+          "unitId": "a1-reisen-verkehr::NOMEN::Bus",
+          "jsonPointer": "/words/1",
+          "valueSha256": "2c40689a3e087e96bb1b8447cb16468920f7ff76b06a8b8d06981ea3c6a3fe99",
+          "sourceNativeId": null,
+          "reviewedBy": "AI-advisory",
+          "humanReview": "not-started"
+        },
+        {
+          "unitId": "a1-reisen-verkehr::NOMEN::Bahnhof",
+          "jsonPointer": "/words/5",
+          "valueSha256": "97dd51f00c1811fd1986fa47b1bfc3dd73da58e2f5f125d61f2f68955b3f1e4e",
+          "sourceNativeId": null,
+          "reviewedBy": "AI-advisory",
+          "humanReview": "not-started"
+        },
+        {
+          "unitId": "a1-reisen-verkehr::NOMEN::Haltestelle",
+          "jsonPointer": "/words/6",
+          "valueSha256": "53ede1e2699f5b508103ff57c8a2f52339f0971e293c95c4b1a253f37c36c545",
+          "sourceNativeId": null,
+          "reviewedBy": "AI-advisory",
+          "humanReview": "not-started"
+        },
+        {
+          "unitId": "a1-reisen-verkehr::NOMEN::Fahrkarte",
+          "jsonPointer": "/words/7",
+          "valueSha256": "b7d5b3ac3c5add630bfe24dc6f4636f02f6d42966dcae0b119d151836a826025",
+          "sourceNativeId": null,
+          "reviewedBy": "AI-advisory",
+          "humanReview": "not-started"
+        },
+        {
+          "unitId": "a1-reisen-verkehr::NOMEN::Hotel",
+          "jsonPointer": "/words/12",
+          "valueSha256": "1e9744c40b1e7617bfc4155e78c3e704fd66e47769d8654e8b0e358d82c1531d",
+          "sourceNativeId": null,
+          "reviewedBy": "AI-advisory",
+          "humanReview": "not-started"
+        },
+        {
+          "unitId": "a1-reisen-verkehr::NOMEN::Gleis",
+          "jsonPointer": "/words/13",
+          "valueSha256": "ea009620b10fd3f12c4f6b9cbc8d72f3489f9254af40b43ea8f304efceb6e810",
+          "sourceNativeId": null,
+          "reviewedBy": "AI-advisory",
+          "humanReview": "not-started"
+        },
+        {
+          "unitId": "a1-reisen-verkehr::NOMEN::Abfahrt",
+          "jsonPointer": "/words/14",
+          "valueSha256": "82fb58262cffe00151b88dfc7387bc4bbc3806e71255862fab87f1b7472d810c",
+          "sourceNativeId": null,
+          "reviewedBy": "AI-advisory",
+          "humanReview": "not-started"
+        },
+        {
+          "unitId": "a1-reisen-verkehr::NOMEN::Ankunft",
+          "jsonPointer": "/words/15",
+          "valueSha256": "40e0a33bba21e936d770f737886a06d2ca40c35015e9e306ccea57cafe66210e",
+          "sourceNativeId": null,
+          "reviewedBy": "AI-advisory",
+          "humanReview": "not-started"
+        },
+        {
+          "unitId": "a1-reisen-verkehr::VERB::fahren",
+          "jsonPointer": "/words/18",
+          "valueSha256": "ca7140e3bd4d91906904ceb8349fdcb3c9d2755b0c4feb9181972e1f69ea6664",
+          "sourceNativeId": null,
+          "reviewedBy": "AI-advisory",
+          "humanReview": "not-started"
+        },
+        {
+          "unitId": "a1-reisen-verkehr::VERB::umsteigen",
+          "jsonPointer": "/words/21",
+          "valueSha256": "bdac2e24f7c4486118066ac9e82ee6d55cba403d52eef523df631a70cb70477b",
+          "sourceNativeId": null,
+          "reviewedBy": "AI-advisory",
+          "humanReview": "not-started"
+        },
+        {
+          "unitId": "a1-reisen-verkehr::NOMEN::Ausgang",
+          "jsonPointer": "/words/34",
+          "valueSha256": "85aaa839a668ac78d3dba4488795a045958f7e24e78c9f3bb2d99ebb7a621d99",
+          "sourceNativeId": null,
+          "reviewedBy": "AI-advisory",
+          "humanReview": "not-started"
+        }
+      ],
+      "audioAssets": [],
+      "optionalVocabularyAudio": {
+        "sourceUrlsAbsent": true,
+        "selectedWordCount": 12,
+        "dbAudioValues": "not-queried",
+        "voiceQuality": "not-reviewed"
+      },
+      "codeMapping": {
+        "databaseModels": [
+          "VocabularyTheme",
+          "VocabularyItem"
+        ],
+        "identity": "theme.slug; item unique(word,cefrLevel), not theme+word",
+        "known": "seed/seed-vocabulary.ts reads all content/{level}/vocabulary/*.json; maps meanings to translations and examples directly. All theme words are seeded. Current 12-item subset has no verified delivery adapter.",
+        "evidence": [
+          "packages/database/prisma/seed/seed-vocabulary.ts:67",
+          "packages/database/prisma/seed/seed-vocabulary.ts:70",
+          "packages/database/prisma/seed/seed-vocabulary.ts:110",
+          "apps/web/src/lib/content/vocabulary.ts:7",
+          "apps/web/src/lib/content/vocabulary.ts:85"
+        ],
+        "route": "/vocabulary; /api/v1/vocabulary?level=A1&theme={themeSlug}",
+        "unknown": [
+          "Actual deployed seed order and duplicate-word theme ownership",
+          "Live DB row IDs/values and cache version",
+          "Pilot subset selection in UI",
+          "Audio voice/asset and image correctness"
+        ]
+      },
+      "strengths": [
+        "The subset reuses station, platform, change, departure and exit terms appearing in reading/listening/speaking."
+      ],
+      "contentGaps": [
+        {
+          "id": "V2-TRANSLATION",
+          "kind": "review-needed",
+          "status": "open",
+          "description": "Gleis example “Der Zug fährt auf Gleis 3” is translated as the train being at platform 3; align the intended movement/location meaning and review track/platform terminology.",
+          "pointers": [
+            "/words/13/exampleSentence1",
+            "/words/13/exampleTranslation1"
+          ],
+          "ownerRole": "German Academic Lead",
+          "closure": "Human review at the revised hash and relevant HG gate evidence"
+        },
+        {
+          "id": "V2-LOAD",
+          "kind": "design-gap",
+          "status": "open",
+          "description": "The selected subset is 12 of 41 theme words; runtime subset selection and recall are not yet verified.",
+          "pointers": [
+            "/words"
+          ],
+          "ownerRole": "Backend Engineer",
+          "closure": "Human review at the revised hash and relevant HG gate evidence"
+        }
+      ]
+    },
+    {
+      "activityId": "a1-pilot-r1:S2-G",
+      "shortId": "S2-G",
+      "sourceId": "a1-g04-satzbau-fragen",
+      "sequenceId": "S2",
+      "skill": "grammar",
+      "level": "A1",
+      "titleVi": "Hỏi nơi, giờ và câu hỏi có/không",
+      "status": "selected-candidate",
+      "source": {
+        "path": "content/a1/grammar/grammar-topics.json",
+        "jsonPointer": "/topics/3",
+        "selector": {
+          "identityKey": "slug",
+          "identityValue": "a1-g04-satzbau-fragen"
+        },
+        "fileSha256": "9c013e67aa88ebe76374815ac7d8127a103db5c35f67be71fcff486b098fc795",
+        "selectedValueSha256": "24d314d33d27b9a4c04612b4c78202b0ad11f4bac46461a2f8fde6ce00dfbbb8",
+        "fieldSha256": {
+          "/topics/3/slug": "9f572833cd1314ea3704a0a08495fea04b9de3707c5022f4d71bb3653db3fd79",
+          "/topics/3/title": "673c47566fec8055c2bd38a01ceab163ad74273886e63c6e2437cc0d8f201535",
+          "/topics/3/titleDe": "ee8fb41291efca07891252b1786c48940b87a9cfd0dfad7e49caf1364218f9c9",
+          "/topics/3/description": "7ba2afdb9fbd5b88a487df8ac136955724dc67220ffb1f518f1b3b5bccf13c98",
+          "/topics/3/cefrLevel": "961ea6171fe18f8c510fc30a17ba90b2dc0cca62fd36a1b8749aad14fe357483",
+          "/topics/3/sortOrder": "4b227777d4dd1fc61c6f884f48641d02b4d121d3fd328cb08b5531fcacdabf8a",
+          "/topics/3/rules": "2f904f0e8cc8a773e142786f4c02c5682601a3a67caa91accf8fa550e4f9424a",
+          "/topics/3/formula": "e749e52672712e795ab96e62d09b2c3ffe0b23b930d74cad12e1fb24d42e2662",
+          "/topics/3/mnemonicTip": "4b8c5503e0c981888e4afe6ec8bfe96d6075d34b9a1423d85e3c86b5b7e60248",
+          "/topics/3/exercises": "44341ea242b09f51ee52d17ddeef7a100760fe674b7d4892067c8339dce52fe3"
+        },
+        "sourceMetadataStatusUnendorsed": "aligned"
+      },
+      "objective": {
+        "canDoVi": "Phân biệt câu trần thuật, W-Frage và Ja/Nein-Frage; tạo câu hỏi nơi/giờ và câu hỏi có/không bằng cụm từ đã học.",
+        "canDoDe": "Ich kann einfache W-Fragen und Ja/Nein-Fragen zur Orientierung und zu Uhrzeiten bilden.",
+        "status": "proposed-by-AI-curriculum-review",
+        "cefrDescriptorMapping": "pending-qualified-human-review"
+      },
+      "prerequisites": [
+        "P0",
+        "S1-G",
+        "S2-V",
+        "P2-TRAVEL"
+      ],
+      "reinforces": [
+        "S2-L",
+        "S2-S",
+        "S2-W"
+      ],
+      "deliveryOrderWithinSequence": 2,
+      "contentOwnerRole": "German Curriculum Designer",
+      "assignedHumanOwner": null,
+      "review": {
+        "reviewerType": "AI-advisory",
+        "reviewer": "Codex / academic_criteria",
+        "reviewedAt": "2026-09-11",
+        "scope": "All fields of selected vocabulary entries or complete selected topic/lesson/exercise, including instructions, stimulus, answers, bilingual feedback and source metadata; no image/audio inspection.",
+        "decision": "candidate-with-open-gaps",
+        "textHumanReview": "not-started",
+        "audioHumanReview": "not-applicable-to-required-reference-audio",
+        "deliveryParity": "not-verified",
+        "releaseDecision": "not-ready",
+        "humanSignoff": null
+      },
+      "reviewUnits": [
+        {
+          "unitId": "a1-g04-satzbau-fragen::rule-1",
+          "jsonPointer": "/topics/3/rules/0",
+          "valueSha256": "388853899feb50c3b5d5445468b726af4e9faac93ac9dfd4ead5ac48e68d5881",
+          "sourceNativeId": null,
+          "reviewedBy": "AI-advisory",
+          "humanReview": "not-started"
+        },
+        {
+          "unitId": "a1-g04-satzbau-fragen::rule-2",
+          "jsonPointer": "/topics/3/rules/1",
+          "valueSha256": "03644e87115d47b698f831bc0ef7717332ea147af24ece5ad9c1d6dc55d3c56a",
+          "sourceNativeId": null,
+          "reviewedBy": "AI-advisory",
+          "humanReview": "not-started"
+        },
+        {
+          "unitId": "a1-g04-satzbau-fragen::rule-3",
+          "jsonPointer": "/topics/3/rules/2",
+          "valueSha256": "6c30bda2337e960e942a2a1c50de243757280410a8d17c6c0c8aa11500bdd3a8",
+          "sourceNativeId": null,
+          "reviewedBy": "AI-advisory",
+          "humanReview": "not-started"
+        },
+        {
+          "unitId": "a1-g04-satzbau-fragen::exercise-1",
+          "jsonPointer": "/topics/3/exercises/0",
+          "valueSha256": "c6d5e98cae0be305701e48befe45db2f1b1d2e0736d8bf7f90ecc7a31e0861f0",
+          "sourceNativeId": null,
+          "reviewedBy": "AI-advisory",
+          "humanReview": "not-started"
+        },
+        {
+          "unitId": "a1-g04-satzbau-fragen::exercise-2",
+          "jsonPointer": "/topics/3/exercises/1",
+          "valueSha256": "f8260f349c887fbd3823d08cb17a689bd65d2ef08e41626c85939a50a1e6eb08",
+          "sourceNativeId": null,
+          "reviewedBy": "AI-advisory",
+          "humanReview": "not-started"
+        },
+        {
+          "unitId": "a1-g04-satzbau-fragen::exercise-3",
+          "jsonPointer": "/topics/3/exercises/2",
+          "valueSha256": "3bf5981caac67dbcff9512f97b0059aec6858f3e406f039f616ab188842fe315",
+          "sourceNativeId": null,
+          "reviewedBy": "AI-advisory",
+          "humanReview": "not-started"
+        },
+        {
+          "unitId": "a1-g04-satzbau-fragen::formula",
+          "jsonPointer": "/topics/3/formula",
+          "valueSha256": "e749e52672712e795ab96e62d09b2c3ffe0b23b930d74cad12e1fb24d42e2662",
+          "sourceNativeId": null,
+          "reviewedBy": "AI-advisory",
+          "humanReview": "not-started"
+        },
+        {
+          "unitId": "a1-g04-satzbau-fragen::mnemonic",
+          "jsonPointer": "/topics/3/mnemonicTip",
+          "valueSha256": "4b8c5503e0c981888e4afe6ec8bfe96d6075d34b9a1423d85e3c86b5b7e60248",
+          "sourceNativeId": null,
+          "reviewedBy": "AI-advisory",
+          "humanReview": "not-started"
+        }
+      ],
+      "audioAssets": [],
+      "optionalVocabularyAudio": null,
+      "codeMapping": {
+        "databaseModels": [
+          "GrammarTopic",
+          "GrammarRule",
+          "GrammarLesson"
+        ],
+        "identity": "GrammarTopic.slug is source slug; interactive GrammarLesson.id is a separate unresolved mapping",
+        "known": "seed/seed-grammar.ts imports a1/grammar topics and rules; does not import topic.exercises as interactive GrammarLesson. Separate seed-grammar.ts reads Grammatik-Factory/production. The active topic page lists GrammarLesson and the player loads that model.",
+        "evidence": [
+          "packages/database/prisma/seed/seed-grammar.ts:34",
+          "packages/database/prisma/seed/seed-grammar.ts:70",
+          "packages/database/prisma/seed/seed-grammar.ts:104",
+          "packages/database/prisma/seed-grammar.ts:23",
+          "apps/web/src/app/(learn)/grammar/[topicSlug]/page.tsx:9",
+          "apps/web/src/app/(learn)/grammar/[topicSlug]/page.tsx:15",
+          "apps/web/src/app/(learn)/grammar/[topicSlug]/[lessonId]/page.tsx:14"
+        ],
+        "route": "/grammar/{topicSlug}; /grammar/{topicSlug}/{interactiveLessonId-unresolved}",
+        "unknown": [
+          "Interactive lesson ID and factory/source parity",
+          "Current DB content, publish state and runtime behavior",
+          "Whether selected source exercises appear anywhere in active UI"
+        ]
+      },
+      "strengths": [
+        "Rule bodies distinguish declarative V2, W-questions and yes/no V1 with examples."
+      ],
+      "contentGaps": [
+        {
+          "id": "G2-MNEMONIC",
+          "kind": "confirmed-content-gap",
+          "status": "open",
+          "description": "Mnemonic says the verb is always position 2, contradicting the same topic’s yes/no questions. Scope the mnemonic explicitly.",
+          "pointers": [
+            "/topics/3/mnemonicTip",
+            "/topics/3/rules/2"
+          ],
+          "ownerRole": "German Academic Lead",
+          "closure": "Human review at the revised hash and relevant HG gate evidence"
+        },
+        {
+          "id": "G2-EXERCISES",
+          "kind": "confirmed-content-gap",
+          "status": "open",
+          "description": "Generic recognition/production placeholders do not check either question type or offer valid-variant grading.",
+          "pointers": [
+            "/topics/3/exercises"
+          ],
+          "ownerRole": "German Academic Lead",
+          "closure": "Human review at the revised hash and relevant HG gate evidence"
+        }
+      ]
+    },
+    {
+      "activityId": "a1-pilot-r1:S2-R",
+      "shortId": "S2-R",
+      "sourceId": "A1-T1-007",
+      "sequenceId": "S2",
+      "skill": "reading",
+      "level": "A1",
+      "titleVi": "Đọc lịch đi tàu và điểm đón",
+      "status": "selected-candidate",
+      "source": {
+        "path": "content/a1/reading/A1-T1-007.json",
+        "jsonPointer": "",
+        "selector": {
+          "identityKey": "id",
+          "identityValue": "A1-T1-007"
+        },
+        "fileSha256": "af8d730b82856ba671b018a182c04b97b880e269956545d80ee91e0cdef8083c",
+        "selectedValueSha256": "29d3da2bc46a0092be9ba9b5e65c4aed6472e29baf65ed5f8c7316c5096dd531",
+        "fieldSha256": {
+          "/id": "6ae1497fef248843cf4edcd3742e2c663e9c2c57233eabdb1db91f94cfad905c",
+          "/level": "961ea6171fe18f8c510fc30a17ba90b2dc0cca62fd36a1b8749aad14fe357483",
+          "/teil": "6b86b273ff34fce19d6b804eff5a3f5747ada4eaa22f1d49c01e52ddb7875b4b",
+          "/teil_name": "b325af1a97eaf73bbedfc8d5fb64511c9df4fb19a44f1500e0220247c9869a83",
+          "/topic": "fafbe061bc7131ba2f216dc06e187d710f10a3f84363add11344112b29249e83",
+          "/topic_id": "82c4f652a2eaf8aaa4bcb2f37f7342e0aa00d12d2836eaf2c443e928662d0a37",
+          "/texts": "a420d604c5a4e11974028a89c151cc21de96389551da6a3824a0fd416b8fc99f",
+          "/questions": "a2bde5977e9b2caf70867367a6edfff9f8684e86aa386adb3ac1cf85b6e8047c",
+          "/scoring": "3349f05fe0e2dde242f48093de9432da182a2c9d27ba06d6554eeb1562d6e9c1"
+        },
+        "sourceMetadataStatusUnendorsed": "aligned"
+      },
+      "objective": {
+        "canDoVi": "Đọc hai tin nhắn và xác định sân ga, nơi đổi tàu, thời lượng, điểm đón và vị trí trạm xe buýt.",
+        "canDoDe": "Ich kann in zwei Nachrichten Angaben zu Gleis, Umsteigen, Fahrtdauer, Abholung und Haltestelle finden.",
+        "status": "proposed-by-AI-curriculum-review",
+        "cefrDescriptorMapping": "pending-qualified-human-review"
+      },
+      "prerequisites": [
+        "P0",
+        "S2-V",
+        "S2-G",
+        "P2-TRAVEL"
+      ],
+      "reinforces": [
+        "S2-L",
+        "S2-S",
+        "S2-W"
+      ],
+      "deliveryOrderWithinSequence": 3,
+      "contentOwnerRole": "German Content Writer",
+      "assignedHumanOwner": null,
+      "review": {
+        "reviewerType": "AI-advisory",
+        "reviewer": "Codex / academic_criteria",
+        "reviewedAt": "2026-09-11",
+        "scope": "All fields of selected vocabulary entries or complete selected topic/lesson/exercise, including instructions, stimulus, answers, bilingual feedback and source metadata; no image/audio inspection.",
+        "decision": "candidate-with-open-gaps",
+        "textHumanReview": "not-started",
+        "audioHumanReview": "not-applicable-to-required-reference-audio",
+        "deliveryParity": "not-verified",
+        "releaseDecision": "not-ready",
+        "humanSignoff": null
+      },
+      "reviewUnits": [
+        {
+          "unitId": "A1-T1-007::TextA",
+          "jsonPointer": "/texts/0",
+          "valueSha256": "471fc4502ea308526e6736d7ea28eb2005b8f1d5ce674e757331a8df4f90607b",
+          "sourceNativeId": "TextA",
+          "reviewedBy": "AI-advisory",
+          "humanReview": "not-started"
+        },
+        {
+          "unitId": "A1-T1-007::TextB",
+          "jsonPointer": "/texts/1",
+          "valueSha256": "205c42f1e1a2e17b4d8506a01f0bde68529e50179d016704d03133088694e0bf",
+          "sourceNativeId": "TextB",
+          "reviewedBy": "AI-advisory",
+          "humanReview": "not-started"
+        },
+        {
+          "unitId": "A1-T1-007::Q1",
+          "jsonPointer": "/questions/0",
+          "valueSha256": "fa16138d26e4c81d67b90a33cc195e7994b142715526cbfd2bdb238eb515adb3",
+          "sourceNativeId": "Q1",
+          "reviewedBy": "AI-advisory",
+          "humanReview": "not-started"
+        },
+        {
+          "unitId": "A1-T1-007::Q2",
+          "jsonPointer": "/questions/1",
+          "valueSha256": "94f4f81cd3bff0dfc0fc74433bf5b77ed3c4b6e9c0b1560c3863b7d44c788799",
+          "sourceNativeId": "Q2",
+          "reviewedBy": "AI-advisory",
+          "humanReview": "not-started"
+        },
+        {
+          "unitId": "A1-T1-007::Q3",
+          "jsonPointer": "/questions/2",
+          "valueSha256": "0ef28e5b5e923f50127ab0473accdeb1e4a194a80fd349f37e90371982663ad3",
+          "sourceNativeId": "Q3",
+          "reviewedBy": "AI-advisory",
+          "humanReview": "not-started"
+        },
+        {
+          "unitId": "A1-T1-007::Q4",
+          "jsonPointer": "/questions/3",
+          "valueSha256": "144ac86cf2ddfdce783157a409633ce95e780d2abbb5eea5b4093e014cf8490c",
+          "sourceNativeId": "Q4",
+          "reviewedBy": "AI-advisory",
+          "humanReview": "not-started"
+        },
+        {
+          "unitId": "A1-T1-007::Q5",
+          "jsonPointer": "/questions/4",
+          "valueSha256": "3150f47080e93acd91b8de2581de7d91a813c009d5c30f2b08339671ea901bcd",
+          "sourceNativeId": "Q5",
+          "reviewedBy": "AI-advisory",
+          "humanReview": "not-started"
+        },
+        {
+          "unitId": "A1-T1-007::scoring",
+          "jsonPointer": "/scoring",
+          "valueSha256": "3349f05fe0e2dde242f48093de9432da182a2c9d27ba06d6554eeb1562d6e9c1",
+          "sourceNativeId": null,
+          "reviewedBy": "AI-advisory",
+          "humanReview": "not-started"
+        }
+      ],
+      "audioAssets": [],
+      "optionalVocabularyAudio": null,
+      "codeMapping": {
+        "databaseModels": [
+          "ReadingExercise",
+          "ReadingQuestion"
+        ],
+        "identity": "exerciseId = source.id; questionNumber = array index+1, not Q id",
+        "known": "Seed maps texts/images/scoring/metadata, questions with key/points/explanation; active page loads exercise and questions by exerciseId.",
+        "evidence": [
+          "packages/database/prisma/seed-reading-writing.ts:94",
+          "packages/database/prisma/seed-reading-writing.ts:101",
+          "packages/database/prisma/seed-reading-writing.ts:126",
+          "apps/web/src/app/(learn)/reading/[exerciseId]/page.tsx:155"
+        ],
+        "route": "/reading/{sourceId}",
+        "unknown": [
+          "Actual seeded/live values and sort order",
+          "Images rendered and aligned",
+          "Successful live completion/feedback/retry/progress"
+        ]
+      },
+      "strengths": [
+        "All five answer keys have relevant textual support; total and grade intervals are consistent."
+      ],
+      "contentGaps": [
+        {
+          "id": "R2-CONTEXT",
+          "kind": "review-needed",
+          "status": "open",
+          "description": "Clarify travel today versus “morgen ... treffen” and the pickup contingency; support the falls-clause and separable-verb chunks for the intended early-A1 cohort.",
+          "pointers": [
+            "/texts/0/content",
+            "/texts/1/content"
+          ],
+          "ownerRole": "German Academic Lead",
+          "closure": "Human review at the revised hash and relevant HG gate evidence"
+        },
+        {
+          "id": "R2-FEEDBACK",
+          "kind": "review-needed",
+          "status": "open",
+          "description": "Vietnamese explanations should make the specific contrast clear, not merely repeat the evidence.",
+          "pointers": [
+            "/questions"
+          ],
+          "ownerRole": "German Academic Lead",
+          "closure": "Human review at the revised hash and relevant HG gate evidence"
+        }
+      ]
+    },
+    {
+      "activityId": "a1-pilot-r1:S2-L",
+      "shortId": "S2-L",
+      "sourceId": "L-A1-GOETHE-006-T1",
+      "sequenceId": "S2",
+      "skill": "listening",
+      "level": "A1",
+      "titleVi": "Nghe mua vé và tìm tàu",
+      "status": "selected-candidate",
+      "source": {
+        "path": "content/a1/listening/L-A1-GOETHE-006-T1.json",
+        "jsonPointer": "",
+        "selector": {
+          "identityKey": "id",
+          "identityValue": "L-A1-GOETHE-006-T1"
+        },
+        "fileSha256": "f4598bdcbefe29f5022f2ad9646b16a22b46d7b1f0afe60b4e533b4f6ab6cff5",
+        "selectedValueSha256": "220164a2353bc2b658585587525ea132edee5b6c86eeb6b74b18b6ccb0c59b14",
+        "fieldSha256": {
+          "/id": "9799aed26dfc68d4f134c1ef1e61b9e630af68fde816c619c3897dd2ea18472c",
+          "/level": "961ea6171fe18f8c510fc30a17ba90b2dc0cca62fd36a1b8749aad14fe357483",
+          "/teil": "6b86b273ff34fce19d6b804eff5a3f5747ada4eaa22f1d49c01e52ddb7875b4b",
+          "/teil_name": "58a652cc3779bb41fa31505d2b09d73b5a11ab2451aa7a35fb47306f6cffcc5a",
+          "/task_type": "96a4d6357c723f8d94bd33134e29a362af7e7fbc6a0e5c009a45953c2bcad5a6",
+          "/topic": "e039eb6ff1434493c3d062e44484a8e3578be16fe65f7cd44de448156a1550e3",
+          "/audio_file": "9fc5bbb1de8a3619237c061d9498d14c1dd218136c2aee812389a64d64502e2e",
+          "/questions": "8e9c0977fa21baac512f8d22e3c40c7d8cb3fb2ec46afcd9c732159aa7cc37c5",
+          "/scoring": "cbf3a5468a2203fccba7a4f4caef34352fc9daad8af2ab328e394be4d5f7ecac",
+          "/transcript": "e497c960b6d4773d90e450ebc0fc5bcd1280d4c49c11176a48620740d03a1011"
+        },
+        "sourceMetadataStatusUnendorsed": "aligned"
+      },
+      "objective": {
+        "canDoVi": "Chọn thông tin giờ khởi hành, sân ga, giá vé và phòng chờ từ sáu hội thoại đã được duyệt.",
+        "canDoDe": "Ich kann in kurzen Gesprächen am Bahnhof Angaben zu Abfahrtszeit, Gleis, Preis und Wartesaal finden.",
+        "status": "proposed-by-AI-curriculum-review",
+        "cefrDescriptorMapping": "pending-qualified-human-review"
+      },
+      "prerequisites": [
+        "P0",
+        "S2-V",
+        "S2-G",
+        "P2-TRAVEL"
+      ],
+      "reinforces": [
+        "S2-R",
+        "S2-S",
+        "S2-W"
+      ],
+      "deliveryOrderWithinSequence": 4,
+      "contentOwnerRole": "Audio Script & Voice Producer",
+      "assignedHumanOwner": null,
+      "review": {
+        "reviewerType": "AI-advisory",
+        "reviewer": "Codex / academic_criteria",
+        "reviewedAt": "2026-09-11",
+        "scope": "All fields of selected vocabulary entries or complete selected topic/lesson/exercise, including instructions, stimulus, answers, bilingual feedback and source metadata; no image/audio inspection.",
+        "decision": "candidate-with-open-gaps",
+        "textHumanReview": "not-started",
+        "audioHumanReview": "not-started",
+        "deliveryParity": "not-verified",
+        "releaseDecision": "not-ready",
+        "humanSignoff": null
+      },
+      "reviewUnits": [
+        {
+          "unitId": "L-A1-GOETHE-006-T1::Q1",
+          "jsonPointer": "/questions/0",
+          "valueSha256": "08851e2e7d36974fec0ae0e2039d2716e273c310b6968b2302a195c369892432",
+          "sourceNativeId": "Q1",
+          "reviewedBy": "AI-advisory",
+          "humanReview": "not-started"
+        },
+        {
+          "unitId": "L-A1-GOETHE-006-T1::Q2",
+          "jsonPointer": "/questions/1",
+          "valueSha256": "a888e13d0537069214a667698f3ebe25ff305ba8b4ec689a0b3524ed61dfa84c",
+          "sourceNativeId": "Q2",
+          "reviewedBy": "AI-advisory",
+          "humanReview": "not-started"
+        },
+        {
+          "unitId": "L-A1-GOETHE-006-T1::Q3",
+          "jsonPointer": "/questions/2",
+          "valueSha256": "19b5e7cd8707b83bb5ba07d75815d46b16a57c653ff5baeabc04dd693deb9be9",
+          "sourceNativeId": "Q3",
+          "reviewedBy": "AI-advisory",
+          "humanReview": "not-started"
+        },
+        {
+          "unitId": "L-A1-GOETHE-006-T1::Q4",
+          "jsonPointer": "/questions/3",
+          "valueSha256": "737f215ce9c887b4cb71d812b7aa1b022543d16b632900df52bdf4312bbd193a",
+          "sourceNativeId": "Q4",
+          "reviewedBy": "AI-advisory",
+          "humanReview": "not-started"
+        },
+        {
+          "unitId": "L-A1-GOETHE-006-T1::Q5",
+          "jsonPointer": "/questions/4",
+          "valueSha256": "b7370d3a7340f049f170c1d8fb8814931c49699d13b14715067e3dd628d58a8a",
+          "sourceNativeId": "Q5",
+          "reviewedBy": "AI-advisory",
+          "humanReview": "not-started"
+        },
+        {
+          "unitId": "L-A1-GOETHE-006-T1::Q6",
+          "jsonPointer": "/questions/5",
+          "valueSha256": "bf44b2200eadd7898195fbca3eba3813d96035d31313e33c379f7f6b892dd1b3",
+          "sourceNativeId": "Q6",
+          "reviewedBy": "AI-advisory",
+          "humanReview": "not-started"
+        },
+        {
+          "unitId": "L-A1-GOETHE-006-T1::line-1",
+          "jsonPointer": "/transcript/lines/0",
+          "valueSha256": "9729615b3b28c0cdc1d04827e21480b055d041912ac5170f568af78b35b0b83d",
+          "sourceNativeId": null,
+          "reviewedBy": "AI-advisory",
+          "humanReview": "not-started"
+        },
+        {
+          "unitId": "L-A1-GOETHE-006-T1::line-2",
+          "jsonPointer": "/transcript/lines/1",
+          "valueSha256": "c1f19a3eeca91e415f12f48217d19f2c658a1523e10aaef5835f7a799c3386e5",
+          "sourceNativeId": null,
+          "reviewedBy": "AI-advisory",
+          "humanReview": "not-started"
+        },
+        {
+          "unitId": "L-A1-GOETHE-006-T1::line-3",
+          "jsonPointer": "/transcript/lines/2",
+          "valueSha256": "c6ccdb9ea2ec3e412deafb212f93d82e5dbbccd85c105125b7ba55f9ccd588f0",
+          "sourceNativeId": null,
+          "reviewedBy": "AI-advisory",
+          "humanReview": "not-started"
+        },
+        {
+          "unitId": "L-A1-GOETHE-006-T1::line-4",
+          "jsonPointer": "/transcript/lines/3",
+          "valueSha256": "ad362015859acaccd45b3495f594b6153f66fd20db276738c5507e0b4364dc0a",
+          "sourceNativeId": null,
+          "reviewedBy": "AI-advisory",
+          "humanReview": "not-started"
+        },
+        {
+          "unitId": "L-A1-GOETHE-006-T1::line-5",
+          "jsonPointer": "/transcript/lines/4",
+          "valueSha256": "b3725513bbc45ce70117d5656665bde0a397d443ff5c50a82f5e50dfe562bee8",
+          "sourceNativeId": null,
+          "reviewedBy": "AI-advisory",
+          "humanReview": "not-started"
+        },
+        {
+          "unitId": "L-A1-GOETHE-006-T1::line-6",
+          "jsonPointer": "/transcript/lines/5",
+          "valueSha256": "02b4987e03822fcd3fe40bc2f42b1184beb82d850eec19a4d133b55a20206430",
+          "sourceNativeId": null,
+          "reviewedBy": "AI-advisory",
+          "humanReview": "not-started"
+        },
+        {
+          "unitId": "L-A1-GOETHE-006-T1::line-7",
+          "jsonPointer": "/transcript/lines/6",
+          "valueSha256": "ad4e11eac9d4464f3f3da55fb2499cdfe2bb2595c12a3f871ce4d73f05313d6e",
+          "sourceNativeId": null,
+          "reviewedBy": "AI-advisory",
+          "humanReview": "not-started"
+        },
+        {
+          "unitId": "L-A1-GOETHE-006-T1::line-8",
+          "jsonPointer": "/transcript/lines/7",
+          "valueSha256": "f8f492ae0093e6b52dbcfcb7d4cc39c2a8edc99ef166ea3275bb1725e6596c85",
+          "sourceNativeId": null,
+          "reviewedBy": "AI-advisory",
+          "humanReview": "not-started"
+        },
+        {
+          "unitId": "L-A1-GOETHE-006-T1::line-9",
+          "jsonPointer": "/transcript/lines/8",
+          "valueSha256": "6fc957a3f8636418637e1ad071e7fcdcf1ed32de56ad6e4843273334488bf24c",
+          "sourceNativeId": null,
+          "reviewedBy": "AI-advisory",
+          "humanReview": "not-started"
+        },
+        {
+          "unitId": "L-A1-GOETHE-006-T1::line-10",
+          "jsonPointer": "/transcript/lines/9",
+          "valueSha256": "30ee208f91413dee23a19a914237039c92657f373e2a6a147d0aa366b1ad54f9",
+          "sourceNativeId": null,
+          "reviewedBy": "AI-advisory",
+          "humanReview": "not-started"
+        },
+        {
+          "unitId": "L-A1-GOETHE-006-T1::line-11",
+          "jsonPointer": "/transcript/lines/10",
+          "valueSha256": "40bea0db778bf8ea63d821f9b110c8fc428f26394f958c0ad554b2d2ecb7d494",
+          "sourceNativeId": null,
+          "reviewedBy": "AI-advisory",
+          "humanReview": "not-started"
+        },
+        {
+          "unitId": "L-A1-GOETHE-006-T1::line-12",
+          "jsonPointer": "/transcript/lines/11",
+          "valueSha256": "ed046d90767e4eb0a31fc85b0fbc07389265c17dfa5cd005a8b63ec828e332ce",
+          "sourceNativeId": null,
+          "reviewedBy": "AI-advisory",
+          "humanReview": "not-started"
+        },
+        {
+          "unitId": "L-A1-GOETHE-006-T1::line-13",
+          "jsonPointer": "/transcript/lines/12",
+          "valueSha256": "0c2e6239e625bdfb03b7d4ef53aaf1c3368f7a39f4046749d7e2b0104a201c00",
+          "sourceNativeId": null,
+          "reviewedBy": "AI-advisory",
+          "humanReview": "not-started"
+        },
+        {
+          "unitId": "L-A1-GOETHE-006-T1::line-14",
+          "jsonPointer": "/transcript/lines/13",
+          "valueSha256": "f5e09aa539c75db5613943a6dba3a1667667cb6064d6a11ab6410d560c3a432b",
+          "sourceNativeId": null,
+          "reviewedBy": "AI-advisory",
+          "humanReview": "not-started"
+        },
+        {
+          "unitId": "L-A1-GOETHE-006-T1::line-15",
+          "jsonPointer": "/transcript/lines/14",
+          "valueSha256": "f1e9abebb2f607461e3c31e1504a796cb278c8bb913386fd70c1588db7898031",
+          "sourceNativeId": null,
+          "reviewedBy": "AI-advisory",
+          "humanReview": "not-started"
+        },
+        {
+          "unitId": "L-A1-GOETHE-006-T1::line-16",
+          "jsonPointer": "/transcript/lines/15",
+          "valueSha256": "3d1da06f2c109e7102e2b85cfd80f4ef3cce060a430b98822630d698f85eb4fa",
+          "sourceNativeId": null,
+          "reviewedBy": "AI-advisory",
+          "humanReview": "not-started"
+        },
+        {
+          "unitId": "L-A1-GOETHE-006-T1::line-17",
+          "jsonPointer": "/transcript/lines/16",
+          "valueSha256": "e3e39e3791fda0dbcdf8de4a1abb043c6e092c5bd38df30d4c1690ebc898f200",
+          "sourceNativeId": null,
+          "reviewedBy": "AI-advisory",
+          "humanReview": "not-started"
+        },
+        {
+          "unitId": "L-A1-GOETHE-006-T1::line-18",
+          "jsonPointer": "/transcript/lines/17",
+          "valueSha256": "baef5465ca25afa9b0774fe2eeb4c55bf4b02ac13c2ffe1364542aa7632070a4",
+          "sourceNativeId": null,
+          "reviewedBy": "AI-advisory",
+          "humanReview": "not-started"
+        },
+        {
+          "unitId": "L-A1-GOETHE-006-T1::line-19",
+          "jsonPointer": "/transcript/lines/18",
+          "valueSha256": "0a2d776858c076e07b3502ebeaa1b860aed71d3eaf5fac8d61b37df749438bed",
+          "sourceNativeId": null,
+          "reviewedBy": "AI-advisory",
+          "humanReview": "not-started"
+        },
+        {
+          "unitId": "L-A1-GOETHE-006-T1::line-20",
+          "jsonPointer": "/transcript/lines/19",
+          "valueSha256": "d92e8914a7421c6b5c59b8b0b1d8b680d7e35007d829fd94bf62c63c13967408",
+          "sourceNativeId": null,
+          "reviewedBy": "AI-advisory",
+          "humanReview": "not-started"
+        },
+        {
+          "unitId": "L-A1-GOETHE-006-T1::line-21",
+          "jsonPointer": "/transcript/lines/20",
+          "valueSha256": "268d8b1cac23214e1d4848dbeb07b2193b2bff29b4c1d6ba2795ed675031d4c2",
+          "sourceNativeId": null,
+          "reviewedBy": "AI-advisory",
+          "humanReview": "not-started"
+        },
+        {
+          "unitId": "L-A1-GOETHE-006-T1::line-22",
+          "jsonPointer": "/transcript/lines/21",
+          "valueSha256": "90f942234fed159207385dc5bddf782ed998942b763ab86a2f9469810d8bdc88",
+          "sourceNativeId": null,
+          "reviewedBy": "AI-advisory",
+          "humanReview": "not-started"
+        },
+        {
+          "unitId": "L-A1-GOETHE-006-T1::line-23",
+          "jsonPointer": "/transcript/lines/22",
+          "valueSha256": "b9ed3c894163b0150fea68476980f8b0dbbcd6fd1d25a480f27a19d279d313ba",
+          "sourceNativeId": null,
+          "reviewedBy": "AI-advisory",
+          "humanReview": "not-started"
+        },
+        {
+          "unitId": "L-A1-GOETHE-006-T1::line-24",
+          "jsonPointer": "/transcript/lines/23",
+          "valueSha256": "54fdcd7f5c8308940b1f1fd14ac0c4dc026d9fdf869fda2b5376bdc11fbd0288",
+          "sourceNativeId": null,
+          "reviewedBy": "AI-advisory",
+          "humanReview": "not-started"
+        },
+        {
+          "unitId": "L-A1-GOETHE-006-T1::line-25",
+          "jsonPointer": "/transcript/lines/24",
+          "valueSha256": "8e15157ba0041c03020f0b70037e8b7684f9f41e74c794938dcc64e71064808a",
+          "sourceNativeId": null,
+          "reviewedBy": "AI-advisory",
+          "humanReview": "not-started"
+        },
+        {
+          "unitId": "L-A1-GOETHE-006-T1::line-26",
+          "jsonPointer": "/transcript/lines/25",
+          "valueSha256": "dcafb78608890570326e3e48ab6c1ca07e8f56224b60615e0d48218b04c247d0",
+          "sourceNativeId": null,
+          "reviewedBy": "AI-advisory",
+          "humanReview": "not-started"
+        },
+        {
+          "unitId": "L-A1-GOETHE-006-T1::line-27",
+          "jsonPointer": "/transcript/lines/26",
+          "valueSha256": "f50f58f9565dae086ca853c6e7b4d728de2861506a22ffdc356d958f4bd22d1c",
+          "sourceNativeId": null,
+          "reviewedBy": "AI-advisory",
+          "humanReview": "not-started"
+        },
+        {
+          "unitId": "L-A1-GOETHE-006-T1::line-28",
+          "jsonPointer": "/transcript/lines/27",
+          "valueSha256": "f6cc01305c70418ec86838e24e5b15e0af1ec544cf60b574dd4f2d5a8279c5f7",
+          "sourceNativeId": null,
+          "reviewedBy": "AI-advisory",
+          "humanReview": "not-started"
+        },
+        {
+          "unitId": "L-A1-GOETHE-006-T1::line-29",
+          "jsonPointer": "/transcript/lines/28",
+          "valueSha256": "162460c19fd99663011affa311268d179180a01eb6a48335934a27ca1634d76e",
+          "sourceNativeId": null,
+          "reviewedBy": "AI-advisory",
+          "humanReview": "not-started"
+        },
+        {
+          "unitId": "L-A1-GOETHE-006-T1::line-30",
+          "jsonPointer": "/transcript/lines/29",
+          "valueSha256": "543c82985d79e4ae3fd473ecc4e5a6472ad271644dc10a1817f9d5b97b59ff63",
+          "sourceNativeId": null,
+          "reviewedBy": "AI-advisory",
+          "humanReview": "not-started"
+        },
+        {
+          "unitId": "L-A1-GOETHE-006-T1::line-31",
+          "jsonPointer": "/transcript/lines/30",
+          "valueSha256": "ea36073bc67ab29ba17814196dc248b253f3a9911dafbece1c9f6f3664116f4e",
+          "sourceNativeId": null,
+          "reviewedBy": "AI-advisory",
+          "humanReview": "not-started"
+        },
+        {
+          "unitId": "L-A1-GOETHE-006-T1::line-32",
+          "jsonPointer": "/transcript/lines/31",
+          "valueSha256": "2dfa0c1e5937cae0a8eee1e5da271b404617471acf0af642c29e653ca4a3eb37",
+          "sourceNativeId": null,
+          "reviewedBy": "AI-advisory",
+          "humanReview": "not-started"
+        },
+        {
+          "unitId": "L-A1-GOETHE-006-T1::line-33",
+          "jsonPointer": "/transcript/lines/32",
+          "valueSha256": "b070f5ca3a3ca8c8c713e71e8176b60435878eeef24200b43edfe6991fa843ef",
+          "sourceNativeId": null,
+          "reviewedBy": "AI-advisory",
+          "humanReview": "not-started"
+        },
+        {
+          "unitId": "L-A1-GOETHE-006-T1::line-34",
+          "jsonPointer": "/transcript/lines/33",
+          "valueSha256": "4ac2b16774afc077ab12ab55e14d427669de9c884f306d3b875699b79365995b",
+          "sourceNativeId": null,
+          "reviewedBy": "AI-advisory",
+          "humanReview": "not-started"
+        },
+        {
+          "unitId": "L-A1-GOETHE-006-T1::line-35",
+          "jsonPointer": "/transcript/lines/34",
+          "valueSha256": "449787de1cc62471b9e26804e750d8f851d453ceeea28108ee8a63bd7e33b0e7",
+          "sourceNativeId": null,
+          "reviewedBy": "AI-advisory",
+          "humanReview": "not-started"
+        },
+        {
+          "unitId": "L-A1-GOETHE-006-T1::line-36",
+          "jsonPointer": "/transcript/lines/35",
+          "valueSha256": "ba0282e402b4b19d3857705c614b8444d9e92f58fe06ab298b5d5fdd34582b21",
+          "sourceNativeId": null,
+          "reviewedBy": "AI-advisory",
+          "humanReview": "not-started"
+        },
+        {
+          "unitId": "L-A1-GOETHE-006-T1::line-37",
+          "jsonPointer": "/transcript/lines/36",
+          "valueSha256": "217f4885548896eae98815e3340eec8d48570649ad303607ecee9c9d2b7baa3c",
+          "sourceNativeId": null,
+          "reviewedBy": "AI-advisory",
+          "humanReview": "not-started"
+        },
+        {
+          "unitId": "L-A1-GOETHE-006-T1::line-38",
+          "jsonPointer": "/transcript/lines/37",
+          "valueSha256": "66146c48ee70c83b8ef0902d4434c071d27c53dd263282420b91d5fde996059a",
+          "sourceNativeId": null,
+          "reviewedBy": "AI-advisory",
+          "humanReview": "not-started"
+        },
+        {
+          "unitId": "L-A1-GOETHE-006-T1::scoring",
+          "jsonPointer": "/scoring",
+          "valueSha256": "cbf3a5468a2203fccba7a4f4caef34352fc9daad8af2ab328e394be4d5f7ecac",
+          "sourceNativeId": null,
+          "reviewedBy": "AI-advisory",
+          "humanReview": "not-started"
+        }
+      ],
+      "audioAssets": [
+        {
+          "assetId": "L-A1-GOETHE-006-T1::mp3",
+          "required": true,
+          "sourceUrl": "/audio/listening/A1/Teil1-Kurze-Alltagsgespraeche/L-A1-GOETHE-006-T1.mp3",
+          "localPath": "apps/web/public/audio/listening/A1/Teil1-Kurze-Alltagsgespraeche/L-A1-GOETHE-006-T1.mp3",
+          "existsLocally": true,
+          "byteSha256": "9ecf87e20d6fe1bf7a259af6bbf12c7b5f2680de1b4d7f0a5fd6a4cd1532e18e",
+          "listened": false,
+          "humanAudioReview": "not-started",
+          "liveDeliveryParity": "not-verified",
+          "voiceVersion": null,
+          "rightsStatus": "not-verified"
+        }
+      ],
+      "optionalVocabularyAudio": null,
+      "codeMapping": {
+        "databaseModels": [
+          "ListeningLesson",
+          "ListeningQuestion"
+        ],
+        "identity": "lessonId = source.id; questionNumber = array index+1; questions link to DB lesson.id",
+        "known": "Lesson/audio/transcript seed reads sibling 8-Audio-Factory manifest/scripts. Separate question seed reads repo content. The latter does not copy source audio_file/transcript/scoring, and sets translations.vi from explanation.vi. Player presents translations as questionTextNative; submit route reads explanation for feedback.",
+        "evidence": [
+          "packages/database/prisma/seed-listening.ts:19",
+          "packages/database/prisma/seed-listening.ts:112",
+          "packages/database/prisma/seed-listening-questions.ts:88",
+          "packages/database/prisma/seed-listening-questions.ts:119",
+          "apps/web/src/app/(learn)/listening/[lessonId]/page.tsx:41",
+          "apps/web/src/app/(learn)/listening/[lessonId]/page.tsx:223",
+          "apps/web/src/components/listening/lesson-player.tsx:765",
+          "apps/web/src/app/api/v1/listening/[lessonId]/submit/route.ts:67"
+        ],
+        "route": "/listening/{sourceId}",
+        "unknown": [
+          "Actual seed lineage and DB audioUrl/transcript structure",
+          "Whether current DB translations expose answer explanations before answering",
+          "Binary MP3 agreement with transcript and expected repeats",
+          "Scoring and question order after every adapter"
+        ]
+      },
+      "strengths": [
+        "All six numerical/location keys match the text; total six matches question points and narrator count."
+      ],
+      "contentGaps": [
+        {
+          "id": "L2-ROLES",
+          "kind": "confirmed-content-gap",
+          "status": "open",
+          "description": "Dialogue 4 swaps the apparent traveller/clerk roles: Sprecher1 asks where to buy tickets, then explains the machine and waiting-room location; Sprecher2 asks about their own train after acting as clerk. Resolve roles with transcript and audio together.",
+          "pointers": [
+            "/transcript/lines/20",
+            "/transcript/lines/21",
+            "/transcript/lines/22",
+            "/transcript/lines/23",
+            "/transcript/lines/24"
+          ],
+          "ownerRole": "German Academic Lead",
+          "closure": "Human review at the revised hash and relevant HG gate evidence"
+        },
+        {
+          "id": "L2-AUDIO",
+          "kind": "unverified",
+          "status": "open",
+          "description": "The MP3 exists locally but no listening review, timing/repeat check or source/DB/audio parity has been performed.",
+          "pointers": [
+            "/audio_file",
+            "/transcript"
+          ],
+          "ownerRole": "Audio Script & Voice Producer",
+          "closure": "Human review at the revised hash and relevant HG gate evidence"
+        },
+        {
+          "id": "L2-SUPPORT",
+          "kind": "design-gap",
+          "status": "open",
+          "description": "Six conversations include discount, monthly ticket and waiting-room vocabulary; key_vocabulary arrays are empty. Add a bounded glossary and determine timing before release.",
+          "pointers": [
+            "/questions",
+            "/transcript"
+          ],
+          "ownerRole": "German Academic Lead",
+          "closure": "Human review at the revised hash and relevant HG gate evidence"
+        }
+      ]
+    },
+    {
+      "activityId": "a1-pilot-r1:S2-S",
+      "shortId": "S2-S",
+      "sourceId": "a1-wegbeschreibung-03-nachsprechen",
+      "sequenceId": "S2",
+      "skill": "speaking",
+      "level": "A1",
+      "titleVi": "Hỏi xe buýt và đường đến ga",
+      "status": "selected-candidate",
+      "source": {
+        "path": "content/a1/speaking/a1-wegbeschreibung.json",
+        "jsonPointer": "/lessons/2",
+        "selector": {
+          "identityKey": "lessonId",
+          "identityValue": "a1-wegbeschreibung-03-nachsprechen"
+        },
+        "fileSha256": "6e52f2b739459850c98daf9c4769634be93a4c1a08dd9c61e39d5d3ddeab130a",
+        "selectedValueSha256": "b27c2bbc745830a9addde510758e0afcea1ea52b2a7ffdfb317f072a9d634a9d",
+        "fieldSha256": {
+          "/lessons/2/lessonId": "777a4af1d582c927a1d446541fb11f523fd7bfcf516409eff078c10e1d988a81",
+          "/lessons/2/topicSlug": "d632fe116aa5a79925a4fd374a62a7f593d2ad2d2df105833a430839a9c43d79",
+          "/lessons/2/lessonNumber": "4e07408562bedb8b60ce05c1decfe3ad16b72230967de01f640b7e4729b49fce",
+          "/lessons/2/titleDe": "4dc0430e442b2c6f08662e546c0176d9d25141ab6d17232414c4ef01f4e23e01",
+          "/lessons/2/titleVi": "505811bbdf2e2a37daebe5c9f7fcc6d5e650987b300410f7c45818cbbc879b7d",
+          "/lessons/2/originalSentence": "4dc0430e442b2c6f08662e546c0176d9d25141ab6d17232414c4ef01f4e23e01",
+          "/lessons/2/sentences": "7789477cd5bc5a684ff20a252b307bbb93134668f8783972bbc8f4fcfe35cbed"
+        },
+        "sourceMetadataStatusUnendorsed": "aligned"
+      },
+      "objective": {
+        "canDoVi": "Luyện sáu câu tham chiếu sau sửa, rồi hỏi vị trí/đường đến một địa điểm thay đổi và đáp một chỉ dẫn đơn giản; hai lượt nói mở còn thiếu.",
+        "canDoDe": "Ich kann nach einem Bus oder einem Weg fragen und auf eine einfache Wegangabe reagieren.",
+        "status": "proposed-by-AI-curriculum-review",
+        "cefrDescriptorMapping": "pending-qualified-human-review"
+      },
+      "prerequisites": [
+        "P0",
+        "S2-V",
+        "S2-G",
+        "S2-L",
+        "P2-TRAVEL"
+      ],
+      "reinforces": [
+        "S2-R",
+        "S2-W"
+      ],
+      "deliveryOrderWithinSequence": 5,
+      "contentOwnerRole": "Audio Script & Voice Producer",
+      "assignedHumanOwner": null,
+      "review": {
+        "reviewerType": "AI-advisory",
+        "reviewer": "Codex / academic_criteria",
+        "reviewedAt": "2026-09-11",
+        "scope": "All fields of selected vocabulary entries or complete selected topic/lesson/exercise, including instructions, stimulus, answers, bilingual feedback and source metadata; no image/audio inspection.",
+        "decision": "candidate-with-open-gaps",
+        "textHumanReview": "not-started",
+        "audioHumanReview": "not-started",
+        "deliveryParity": "not-verified",
+        "releaseDecision": "not-ready",
+        "humanSignoff": null
+      },
+      "reviewUnits": [
+        {
+          "unitId": "a1-wegbeschreibung-03-nachsprechen::s1",
+          "jsonPointer": "/lessons/2/sentences/0",
+          "valueSha256": "6d89328aee0f11099d1e334130dc5629ee04d02041b6f9c2988b94d702fd5648",
+          "sourceNativeId": "s1",
+          "reviewedBy": "AI-advisory",
+          "humanReview": "not-started"
+        },
+        {
+          "unitId": "a1-wegbeschreibung-03-nachsprechen::s2",
+          "jsonPointer": "/lessons/2/sentences/1",
+          "valueSha256": "935670a9f734fdbd289cb10a8c558074af5c40cd2f6135dfbeef9e7694edfae2",
+          "sourceNativeId": "s2",
+          "reviewedBy": "AI-advisory",
+          "humanReview": "not-started"
+        },
+        {
+          "unitId": "a1-wegbeschreibung-03-nachsprechen::s3",
+          "jsonPointer": "/lessons/2/sentences/2",
+          "valueSha256": "ce44cb813a067d94773a9795e76082741b4d0ab0ad34d661b67cbf0d7f159562",
+          "sourceNativeId": "s3",
+          "reviewedBy": "AI-advisory",
+          "humanReview": "not-started"
+        },
+        {
+          "unitId": "a1-wegbeschreibung-03-nachsprechen::s4",
+          "jsonPointer": "/lessons/2/sentences/3",
+          "valueSha256": "d0fdf8bfb54c69f6ba1bde3d6ba6140e3c83bdb1308583526acc56c79524eaf3",
+          "sourceNativeId": "s4",
+          "reviewedBy": "AI-advisory",
+          "humanReview": "not-started"
+        },
+        {
+          "unitId": "a1-wegbeschreibung-03-nachsprechen::s5",
+          "jsonPointer": "/lessons/2/sentences/4",
+          "valueSha256": "4c84d4ab3d296fde64cfd682680660491824d14f3c5e59afeb2bc05e642ea3da",
+          "sourceNativeId": "s5",
+          "reviewedBy": "AI-advisory",
+          "humanReview": "not-started"
+        },
+        {
+          "unitId": "a1-wegbeschreibung-03-nachsprechen::s6",
+          "jsonPointer": "/lessons/2/sentences/5",
+          "valueSha256": "30d2c3be1131a5b51d52c1716f8747feaa53a6e3a92b71b885be9bfdd783a31e",
+          "sourceNativeId": "s6",
+          "reviewedBy": "AI-advisory",
+          "humanReview": "not-started"
+        }
+      ],
+      "audioAssets": [
+        {
+          "assetId": "a1-wegbeschreibung-03-nachsprechen::s1::reference-audio",
+          "required": true,
+          "sourceUrl": null,
+          "localPath": null,
+          "existsLocally": false,
+          "byteSha256": null,
+          "listened": false,
+          "humanAudioReview": "not-started",
+          "liveDeliveryParity": "not-verified",
+          "voiceVersion": null,
+          "rightsStatus": "not-verified"
+        },
+        {
+          "assetId": "a1-wegbeschreibung-03-nachsprechen::s2::reference-audio",
+          "required": true,
+          "sourceUrl": null,
+          "localPath": null,
+          "existsLocally": false,
+          "byteSha256": null,
+          "listened": false,
+          "humanAudioReview": "not-started",
+          "liveDeliveryParity": "not-verified",
+          "voiceVersion": null,
+          "rightsStatus": "not-verified"
+        },
+        {
+          "assetId": "a1-wegbeschreibung-03-nachsprechen::s3::reference-audio",
+          "required": true,
+          "sourceUrl": null,
+          "localPath": null,
+          "existsLocally": false,
+          "byteSha256": null,
+          "listened": false,
+          "humanAudioReview": "not-started",
+          "liveDeliveryParity": "not-verified",
+          "voiceVersion": null,
+          "rightsStatus": "not-verified"
+        },
+        {
+          "assetId": "a1-wegbeschreibung-03-nachsprechen::s4::reference-audio",
+          "required": true,
+          "sourceUrl": null,
+          "localPath": null,
+          "existsLocally": false,
+          "byteSha256": null,
+          "listened": false,
+          "humanAudioReview": "not-started",
+          "liveDeliveryParity": "not-verified",
+          "voiceVersion": null,
+          "rightsStatus": "not-verified"
+        },
+        {
+          "assetId": "a1-wegbeschreibung-03-nachsprechen::s5::reference-audio",
+          "required": true,
+          "sourceUrl": null,
+          "localPath": null,
+          "existsLocally": false,
+          "byteSha256": null,
+          "listened": false,
+          "humanAudioReview": "not-started",
+          "liveDeliveryParity": "not-verified",
+          "voiceVersion": null,
+          "rightsStatus": "not-verified"
+        },
+        {
+          "assetId": "a1-wegbeschreibung-03-nachsprechen::s6::reference-audio",
+          "required": true,
+          "sourceUrl": null,
+          "localPath": null,
+          "existsLocally": false,
+          "byteSha256": null,
+          "listened": false,
+          "humanAudioReview": "not-started",
+          "liveDeliveryParity": "not-verified",
+          "voiceVersion": null,
+          "rightsStatus": "not-verified"
+        }
+      ],
+      "optionalVocabularyAudio": null,
+      "codeMapping": {
+        "databaseModels": [
+          "SpeakingTopic",
+          "SpeakingLesson"
+        ],
+        "identity": "topicSlug; SpeakingLesson.id = source lessonId with -nachsprechen suffix normalization",
+        "known": "seed-speaking.ts normalizes sentence keys and writes exercisesJson.sentences, configJson, exerciseType=nachsprechen. Active page passes DB data to player. Empty/failed audioUrl falls back to browser TTS.",
+        "evidence": [
+          "packages/database/prisma/seed-speaking.ts:114",
+          "packages/database/prisma/seed-speaking.ts:132",
+          "packages/database/prisma/seed-speaking.ts:238",
+          "apps/web/src/app/(learn)/speaking/[lessonId]/page.tsx:65",
+          "apps/web/src/components/speaking/NachsprechenPlayer.tsx:169"
+        ],
+        "route": "/speaking/{sourceId}",
+        "unknown": [
+          "Current DB content and selected voice/browser availability",
+          "Calibrated speech evaluation and handling of valid variants",
+          "Open-response activity support in this selected lesson path"
+        ]
+      },
+      "strengths": [
+        "Sentence set contains W-questions, a yes/no question and concrete directions, reinforcing the selected grammar."
+      ],
+      "contentGaps": [
+        {
+          "id": "S2-PHONETICS",
+          "kind": "confirmed-content-gap",
+          "status": "open",
+          "description": "s2 describes “sch” in suche as English sh, although the word contains ch and the supplied IPA uses [x]. Review all spelling-to-sound notes as a set.",
+          "pointers": [
+            "/lessons/2/sentences/1/pronunciationNotes",
+            "/lessons/2/sentences/1/ipa"
+          ],
+          "ownerRole": "German Academic Lead",
+          "closure": "Human review at the revised hash and relevant HG gate evidence"
+        },
+        {
+          "id": "S2-OPEN",
+          "kind": "design-gap",
+          "status": "open",
+          "description": "Six repetition sentences only; two prompted responses, accepted variants and an anchored interaction rubric are not present.",
+          "pointers": [
+            "/lessons/2/sentences"
+          ],
+          "ownerRole": "German Academic Lead",
+          "closure": "Human review at the revised hash and relevant HG gate evidence"
+        },
+        {
+          "id": "S2-AUDIO",
+          "kind": "unverified",
+          "status": "open",
+          "description": "Six empty audioUrl fields; browser TTS fallback is code-known but audio quality/version is unreviewed.",
+          "pointers": [
+            "/lessons/2/sentences"
+          ],
+          "ownerRole": "Audio Script & Voice Producer",
+          "closure": "Human review at the revised hash and relevant HG gate evidence"
+        }
+      ]
+    },
+    {
+      "activityId": "a1-pilot-r1:S2-W",
+      "shortId": "S2-W",
+      "sourceId": "W-A1-T1-012",
+      "sequenceId": "S2",
+      "skill": "writing",
+      "level": "A1",
+      "titleVi": "Điền thông tin đặt chuyến đi",
+      "status": "selected-candidate",
+      "source": {
+        "path": "content/a1/writing/W-A1-T1-012.json",
+        "jsonPointer": "",
+        "selector": {
+          "identityKey": "id",
+          "identityValue": "W-A1-T1-012"
+        },
+        "fileSha256": "99b53e1a7e95446f6509a0e55c5ce0cf5ed20a484e6f37fb4abdaab215e95b03",
+        "selectedValueSha256": "937d0b3871ff04712a6365b038dd81c9284c67d1ed5dad4acf4e8d4aaad9c014",
+        "fieldSha256": {
+          "/id": "6f4afb3eeca92766af8c5bfdcc67e6af3657afed35877d8397126be667ec6e2d",
+          "/cefrLevel": "961ea6171fe18f8c510fc30a17ba90b2dc0cca62fd36a1b8749aad14fe357483",
+          "/teil": "6b86b273ff34fce19d6b804eff5a3f5747ada4eaa22f1d49c01e52ddb7875b4b",
+          "/teilName": "d2f7bce8bd890b6ad58ec56a29121971b518c6de14c6248dac266871aa11e811",
+          "/textType": "ac0ae3a9c52cb3a2a217848f6c071d218e66721c4f49753485bef8f541ab8c5a",
+          "/register": "9d3b02424c514de974e91bd2d20d4c0babe51d2de11b5f5cd92bd3c5f8cb67cf",
+          "/topic": "353099cac309b188e44927f3d9b57f358e8f7c8f4f51912ce19dedabba685e44",
+          "/instruction": "745248f770e7936039a9077edad1197266ec2dafcda918e274bf12dae8e0d38d",
+          "/instructionVi": "65a7ffe38f97c22b29591520b9934f1c952d973f42e51eb8ab9d8c8b8af82c15",
+          "/situation": "5a0722418773b4684d0993419a5a3c3d29d0eba063f447316a19918d8b1ce5aa",
+          "/contentPoints": "02675f10fba5e21ba6c8ca8671a1f3ce7ce00bebb4c4e1554e597895ca5f3572",
+          "/sourceText": "680159da9029b84ba4e24c97a47b9d9fb1b1a09f3eef99a648653a13d8055874",
+          "/sourceTextType": "199c2846a23196362973e9c9e3de3c28fd6d60a9349b9efef1935ef41b121d0a",
+          "/formFields": "d5330f79fbd8450785667b083feb4c7ac0070f9d2aab3114f9d06558b5d832da",
+          "/minWords": "e629fa6598d732768f7c726b4b621285f9c3b85303900aa912017db7617d8bdb",
+          "/maxWords": "624b60c58c9d8bfb6ff1886c2fd605d2adeb6ea4da576068201b6c6958ce93f4",
+          "/timeMinutes": "ef2d127de37b942baad06145e54b0c619a1f22327b2ebbcfbec78f5564afe39d",
+          "/rubric": "452896bc39a15354a21a930a4b07bd55a7ff66c2278cfa0da801a2ae426563eb",
+          "/maxScore": "e629fa6598d732768f7c726b4b621285f9c3b85303900aa912017db7617d8bdb",
+          "/modelAnswer": "841052dc4c2dedcbbeddf7601ad23284fbdbe323c535cb6a8729f04f82bfd018",
+          "/timeLimitMinutes": "ef2d127de37b942baad06145e54b0c619a1f22327b2ebbcfbec78f5564afe39d",
+          "/estimatedMinutes": "ef2d127de37b942baad06145e54b0c619a1f22327b2ebbcfbec78f5564afe39d"
+        },
+        "sourceMetadataStatusUnendorsed": "aligned"
+      },
+      "objective": {
+        "canDoVi": "Từ ghi chú cho trước, điền sáu trường về Mario Rossi, quốc gia, bốn người, Konstanz, bảy ngày và tháng Tám.",
+        "canDoDe": "Ich kann die vorgegebenen Angaben zu Mario Rossi und seiner Reise korrekt in sechs Formularfelder übertragen.",
+        "status": "proposed-by-AI-curriculum-review",
+        "cefrDescriptorMapping": "pending-qualified-human-review"
+      },
+      "prerequisites": [
+        "P0",
+        "S1-V",
+        "S1-G",
+        "S2-V",
+        "P2-FORM"
+      ],
+      "reinforces": [
+        "S1-V",
+        "S2-R",
+        "S2-L"
+      ],
+      "deliveryOrderWithinSequence": 6,
+      "contentOwnerRole": "German Content Writer",
+      "assignedHumanOwner": null,
+      "review": {
+        "reviewerType": "AI-advisory",
+        "reviewer": "Codex / academic_criteria",
+        "reviewedAt": "2026-09-11",
+        "scope": "All fields of selected vocabulary entries or complete selected topic/lesson/exercise, including instructions, stimulus, answers, bilingual feedback and source metadata; no image/audio inspection.",
+        "decision": "candidate-with-open-gaps",
+        "textHumanReview": "not-started",
+        "audioHumanReview": "not-applicable-to-required-reference-audio",
+        "deliveryParity": "not-verified",
+        "releaseDecision": "not-ready",
+        "humanSignoff": null
+      },
+      "reviewUnits": [
+        {
+          "unitId": "W-A1-T1-012::instruction",
+          "jsonPointer": "/instruction",
+          "valueSha256": "745248f770e7936039a9077edad1197266ec2dafcda918e274bf12dae8e0d38d",
+          "sourceNativeId": null,
+          "reviewedBy": "AI-advisory",
+          "humanReview": "not-started"
+        },
+        {
+          "unitId": "W-A1-T1-012::instructionVi",
+          "jsonPointer": "/instructionVi",
+          "valueSha256": "65a7ffe38f97c22b29591520b9934f1c952d973f42e51eb8ab9d8c8b8af82c15",
+          "sourceNativeId": null,
+          "reviewedBy": "AI-advisory",
+          "humanReview": "not-started"
+        },
+        {
+          "unitId": "W-A1-T1-012::situation",
+          "jsonPointer": "/situation",
+          "valueSha256": "5a0722418773b4684d0993419a5a3c3d29d0eba063f447316a19918d8b1ce5aa",
+          "sourceNativeId": null,
+          "reviewedBy": "AI-advisory",
+          "humanReview": "not-started"
+        },
+        {
+          "unitId": "W-A1-T1-012::sourceText",
+          "jsonPointer": "/sourceText",
+          "valueSha256": "680159da9029b84ba4e24c97a47b9d9fb1b1a09f3eef99a648653a13d8055874",
+          "sourceNativeId": null,
+          "reviewedBy": "AI-advisory",
+          "humanReview": "not-started"
+        },
+        {
+          "unitId": "W-A1-T1-012::modelAnswer",
+          "jsonPointer": "/modelAnswer",
+          "valueSha256": "841052dc4c2dedcbbeddf7601ad23284fbdbe323c535cb6a8729f04f82bfd018",
+          "sourceNativeId": null,
+          "reviewedBy": "AI-advisory",
+          "humanReview": "not-started"
+        },
+        {
+          "unitId": "W-A1-T1-012::minWords",
+          "jsonPointer": "/minWords",
+          "valueSha256": "e629fa6598d732768f7c726b4b621285f9c3b85303900aa912017db7617d8bdb",
+          "sourceNativeId": null,
+          "reviewedBy": "AI-advisory",
+          "humanReview": "not-started"
+        },
+        {
+          "unitId": "W-A1-T1-012::maxWords",
+          "jsonPointer": "/maxWords",
+          "valueSha256": "624b60c58c9d8bfb6ff1886c2fd605d2adeb6ea4da576068201b6c6958ce93f4",
+          "sourceNativeId": null,
+          "reviewedBy": "AI-advisory",
+          "humanReview": "not-started"
+        },
+        {
+          "unitId": "W-A1-T1-012::content-point-1",
+          "jsonPointer": "/contentPoints/0",
+          "valueSha256": "9aee496787e96d9bc8d2a6c2c7ab6083da71d02afd40ddfb330f8ba57d7ca005",
+          "sourceNativeId": null,
+          "reviewedBy": "AI-advisory",
+          "humanReview": "not-started"
+        },
+        {
+          "unitId": "W-A1-T1-012::content-point-2",
+          "jsonPointer": "/contentPoints/1",
+          "valueSha256": "90edad33fc986afd7d73fd2487e0bc977c43888cfcfb0e2217b68fea284b1dfd",
+          "sourceNativeId": null,
+          "reviewedBy": "AI-advisory",
+          "humanReview": "not-started"
+        },
+        {
+          "unitId": "W-A1-T1-012::content-point-3",
+          "jsonPointer": "/contentPoints/2",
+          "valueSha256": "c2e11bb72529f928f1b827da8c42beeaeb1b6f9a82e9ad92f685b1847a2b2a04",
+          "sourceNativeId": null,
+          "reviewedBy": "AI-advisory",
+          "humanReview": "not-started"
+        },
+        {
+          "unitId": "W-A1-T1-012::content-point-4",
+          "jsonPointer": "/contentPoints/3",
+          "valueSha256": "de8b60bdaa26b1517d0a93c012af3425fb12f71f208d5e6e15c64e2cbc450977",
+          "sourceNativeId": null,
+          "reviewedBy": "AI-advisory",
+          "humanReview": "not-started"
+        },
+        {
+          "unitId": "W-A1-T1-012::content-point-5",
+          "jsonPointer": "/contentPoints/4",
+          "valueSha256": "749507167517aee1779f1775d1349ecd44a65bbc47cb62280673eaa8b4ee861b",
+          "sourceNativeId": null,
+          "reviewedBy": "AI-advisory",
+          "humanReview": "not-started"
+        },
+        {
+          "unitId": "W-A1-T1-012::form-field-1",
+          "jsonPointer": "/formFields/0",
+          "valueSha256": "065492b01154b19f16886eddfe4f431d3d7c83841b9395630b0c5be983cdee36",
+          "sourceNativeId": null,
+          "reviewedBy": "AI-advisory",
+          "humanReview": "not-started"
+        },
+        {
+          "unitId": "W-A1-T1-012::form-field-2",
+          "jsonPointer": "/formFields/1",
+          "valueSha256": "b896dc49169a3ca5a355a85e524604353c7b049c1bbee9bd545ebbf9acc0f268",
+          "sourceNativeId": null,
+          "reviewedBy": "AI-advisory",
+          "humanReview": "not-started"
+        },
+        {
+          "unitId": "W-A1-T1-012::form-field-3",
+          "jsonPointer": "/formFields/2",
+          "valueSha256": "f3bf60d12216ed88f46b42d19d703573b0b662444490e5f2461bea6b79614359",
+          "sourceNativeId": null,
+          "reviewedBy": "AI-advisory",
+          "humanReview": "not-started"
+        },
+        {
+          "unitId": "W-A1-T1-012::form-field-4",
+          "jsonPointer": "/formFields/3",
+          "valueSha256": "1f6c2409f2505e3e234ce46a78bc7b450b67ed8803fce71ed59693a71c4e86b2",
+          "sourceNativeId": null,
+          "reviewedBy": "AI-advisory",
+          "humanReview": "not-started"
+        },
+        {
+          "unitId": "W-A1-T1-012::form-field-5",
+          "jsonPointer": "/formFields/4",
+          "valueSha256": "de40af7eaa6dc48975be54818b4256e10b78131d54cbb793ba79bc565915b818",
+          "sourceNativeId": null,
+          "reviewedBy": "AI-advisory",
+          "humanReview": "not-started"
+        },
+        {
+          "unitId": "W-A1-T1-012::form-field-6",
+          "jsonPointer": "/formFields/5",
+          "valueSha256": "eb4b492c719d20885044351c25c10b5587f0cba03f1d391285890bcceae44e40",
+          "sourceNativeId": null,
+          "reviewedBy": "AI-advisory",
+          "humanReview": "not-started"
+        },
+        {
+          "unitId": "W-A1-T1-012::rubric-inhalt",
+          "jsonPointer": "/rubric/criteria/0",
+          "valueSha256": "13a0593be16d15f10b2f98d9ee239bd9f9ac12c0b64023667ab635389a8e18ff",
+          "sourceNativeId": "inhalt",
+          "reviewedBy": "AI-advisory",
+          "humanReview": "not-started"
+        },
+        {
+          "unitId": "W-A1-T1-012::rubric-korrektheit",
+          "jsonPointer": "/rubric/criteria/1",
+          "valueSha256": "53c738e261441d516e3e81e704735942ae7d462e4de709111b1bac2d78fa24e2",
+          "sourceNativeId": "korrektheit",
+          "reviewedBy": "AI-advisory",
+          "humanReview": "not-started"
+        },
+        {
+          "unitId": "W-A1-T1-012::rubric-angemessenheit",
+          "jsonPointer": "/rubric/criteria/2",
+          "valueSha256": "ab34f726ee1e909e6eb19b3ec18ed827c3bf687978b9747aa371607d42027a4e",
+          "sourceNativeId": "angemessenheit",
+          "reviewedBy": "AI-advisory",
+          "humanReview": "not-started"
+        },
+        {
+          "unitId": "W-A1-T1-012::rubric-maxScore",
+          "jsonPointer": "/rubric/maxScore",
+          "valueSha256": "e629fa6598d732768f7c726b4b621285f9c3b85303900aa912017db7617d8bdb",
+          "sourceNativeId": null,
+          "reviewedBy": "AI-advisory",
+          "humanReview": "not-started"
+        }
+      ],
+      "audioAssets": [],
+      "optionalVocabularyAudio": null,
+      "codeMapping": {
+        "databaseModels": [
+          "WritingExercise"
+        ],
+        "identity": "exerciseId = source.id",
+        "known": "Seed imports instructions/situation/contentPoints/formFields/sourceText/rubric but reads sampleResponse, not source modelAnswer. Active player is composed from DB fields and does not receive modelAnswer in the inspected page.",
+        "evidence": [
+          "packages/database/prisma/seed-reading-writing.ts:188",
+          "packages/database/prisma/seed-reading-writing.ts:200",
+          "packages/database/prisma/seed-reading-writing.ts:224",
+          "apps/web/src/app/(learn)/writing/[exerciseId]/page.tsx:153",
+          "apps/web/src/app/(learn)/writing/[exerciseId]/page.tsx:177"
+        ],
+        "route": "/writing/{sourceId}",
+        "unknown": [
+          "Actual DB sampleResponse and alternate import history",
+          "How model/accepted variants reach grading and learner feedback",
+          "Field-level form scoring vs prose-word-count behavior"
+        ]
+      },
+      "strengths": [
+        "Model matches source: Mario Rossi, Italy, four people, Konstanz, seven days, August. Reviewed independently in the preceding audit as a positive case."
+      ],
+      "contentGaps": [
+        {
+          "id": "W2-RUBRIC",
+          "kind": "confirmed-content-gap",
+          "status": "open",
+          "description": "Form rubric has generic writing weights and no field-specific accepted variants/bands. Define field correctness and avoid grading copied form data solely by prose word count.",
+          "pointers": [
+            "/rubric",
+            "/minWords",
+            "/maxWords",
+            "/formFields"
+          ],
+          "ownerRole": "German Academic Lead",
+          "closure": "Human review at the revised hash and relevant HG gate evidence"
+        },
+        {
+          "id": "W2-PARITY",
+          "kind": "unverified",
+          "status": "open",
+          "description": "The current JSON modelAnswer is not read by the inspected writing seed, which reads sampleResponse. Model correctness in source does not prove the model is served.",
+          "pointers": [
+            "/modelAnswer"
+          ],
+          "ownerRole": "Backend Engineer",
+          "closure": "Human review at the revised hash and relevant HG gate evidence"
+        }
+      ]
+    }
+  ],
+  "summary": {
+    "reviewedActivities": 12,
+    "reviewedLeafReferences": 194,
+    "openActivityGaps": 29,
+    "sourceFileCount": 11,
+    "selectionScript": "tmp/comprehensive-assessment-2026-09-11/content/build-a1-candidates.mjs"
+  }
+}

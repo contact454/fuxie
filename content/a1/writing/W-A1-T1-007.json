@@ -8,13 +8,14 @@
   "topic": "Wohnung",
   "instruction": "Fuellen Sie das Formular aus.",
   "instructionVi": "Điền form: Wohnung.",
-  "situation": "Sie haben eine Wohnung gefunden. Fuellen Sie den Mietvertrag-Antrag aus.",
+  "situation": "Sie haben eine Wohnung gefunden. Fuellen Sie den Mietantrag aus.",
   "contentPoints": [
     "Name und Vorname",
     "Geburtsdatum",
-    "Adresse",
+    "Aktuelle Adresse",
     "Telefonnummer",
-    "E-Mail-Adresse"
+    "Wohnung",
+    "Einzugstermin"
   ],
   "minWords": 15,
   "maxWords": 30,
@@ -60,7 +61,7 @@
       "type": "date"
     },
     {
-      "label": "Adresse",
+      "label": "Aktuelle Adresse",
       "type": "text"
     },
     {
@@ -68,11 +69,15 @@
       "type": "text"
     },
     {
-      "label": "E-Mail",
-      "type": "email"
+      "label": "Wohnung",
+      "type": "text"
+    },
+    {
+      "label": "Einzugstermin",
+      "type": "date"
     }
   ],
-  "modelAnswer": "Familienname: Nguyen\nVorname: Linh\nGeburtsdatum: 01.01.1998\nAdresse: Hauptstrasse 12, 10115 Berlin\nTelefon: 030 123456\nE-Mail: linh.nguyen@example.com",
+  "modelAnswer": "Familienname: Bui\nVorname: Hoa\nGeburtsdatum: 18.04.1997\nAktuelle Adresse: Rosenweg 6, 40210 Duesseldorf\nTelefon: 0211 555666\nWohnung: 2 Zimmer\nEinzugstermin: 01.12.2026",
   "timeLimitMinutes": 5,
   "estimatedMinutes": 5,
   "cefrAudit": {

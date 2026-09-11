@@ -1,7 +1,16 @@
 import type { Metadata, Viewport } from 'next'
+import { Nunito } from 'next/font/google'
 import './globals.css'
 import { PwaRegistration } from '@/components/shared/PwaRegistration'
 import { cookies } from 'next/headers'
+import { normalizeUiLocale } from '@/i18n/locales'
+
+const nunito = Nunito({
+    subsets: ['latin', 'vietnamese'],
+    weight: 'variable',
+    variable: '--font-nunito',
+    display: 'swap',
+})
 
 export const metadata: Metadata = {
     title: 'Fuxie 🦊 — Học tiếng Đức thông minh',
@@ -36,11 +45,11 @@ export default async function RootLayout({
     children: React.ReactNode
 }>) {
     const cookieStore = await cookies()
-    const locale = cookieStore.get('NEXT_LOCALE')?.value || 'vi'
+    const locale = normalizeUiLocale(cookieStore.get('NEXT_LOCALE')?.value)
 
     return (
         <html lang={locale}>
-            <body>
+            <body className={nunito.variable}>
                 {children}
                 <PwaRegistration />
             </body>

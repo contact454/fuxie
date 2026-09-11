@@ -47,14 +47,14 @@
     "maxScore": 15
   },
   "maxScore": 15,
-  "modelAnswer": "Hallo,\n\nich schreibe wegen Bedanken Sie sich für seine E-Mail.. ich schreibe wegen Berichten Sie über Ihre eigenen Nachbarn.. ich schreibe wegen Schreiben Sie, ob es bei Ihnen auch Lärmprobleme gibt.. ich schreibe wegen Schlagen Sie ein Treffen vor.. Bitte geben Sie mir kurz Bescheid.\n\nViele Gruesse\nLinh",
+  "modelAnswer": "Hallo Anna,\n\ndanke für deine Nachricht. Zum Thema Nachbar: Ich habe Zeit und helfe gern. Wir können uns am Samstag um 18 Uhr treffen. Ich kann Kuchen, Getränke oder Werkzeug mitbringen. Sag mir bitte, was du brauchst. Schreib mir bald zurück.\n\nLiebe Grüße\nLinh",
   "timeLimitMinutes": 15,
   "estimatedMinutes": 15,
   "cefrAudit": {
     "targetLevel": "A2",
     "verdict": "aligned",
     "reviewerRole": "German Academic Lead",
-    "notes": "Release-candidate metadata audit: writing content for \"Nachbar\" is aligned with declared A2 scope pending final human spot-check.",
+    "notes": "Writing D7 advisory remediation: modelAnswer regenerated for \"Nachbar\" after duplicate/template/length sweep; final native signoff remains pending.",
     "reviewedAt": "2026-05-12",
     "reviewScope": "release_candidate_metadata_pass"
   },

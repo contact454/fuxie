@@ -15,41 +15,39 @@
   },
   "questions": [
     {
-      "id": "Q1",
+      "id": "q1_hoeren_c1_t4_algorithmen_bias",
       "teil": 4,
       "type": "mc_abc",
-      "question": "Was ist laut dem Dozenten eine paradoxe Konsequenz einer fortschrittlichen Familienpolitik?",
+      "question": "Welches Missverständnis kritisiert der Dozent im Vortrag besonders?",
       "options": {
-        "a": "Die Entlastung der Familien durch staatliche Sorgearbeit führt zu einer Stabilisierung familiärer Strukturen.",
-        "b": "Die Übernahme von Sorgearbeit durch den Staat führt zwangsläufig zu einer Schwächung der familiären Netzwerke.",
-        "c": "Eine hohe Frauenerwerbsquote korreliert negativ mit der Stabilität von Familien."
+        "a": "Dass mathematische Verfahren automatisch als neutral gelten.",
+        "b": "Dass menschliche Gremien grundsätzlich fehlerfrei entscheiden.",
+        "c": "Dass Zitationsanalysen in der Forschung gar keine Rolle spielen."
       },
       "answer": "a",
       "points": 1,
       "explanation": {
-        "de": "Die korrekte Antwort ist 'a', da der Dozent explizit das Paradoxon beschreibt, dass Staaten, die Familien durch die Übernahme von Sorgearbeit entlasten, die stärksten Familienstrukturen aufweisen. Antwort 'b' ist eine lexikalische Falle; sie verwendet den Begriff 'familiäre Netzwerke', der im Kontext des erfolglosen mediterranen Modells erwähnt wird, und kehrt die Aussage des Dozenten ins Gegenteil um. Antwort 'c' ist eine plausible, aber durch den Text nicht gestützte Annahme.",
-        "vi": "Đáp án đúng là 'a', vì giảng viên mô tả rõ ràng nghịch lý rằng các quốc gia giảm gánh nặng cho gia đình bằng cách đảm nhận công việc chăm sóc lại có cấu trúc gia đình vững mạnh nhất. Đáp án 'b' là một cái bẫy từ vựng; nó sử dụng thuật ngữ 'mạng lưới gia đình', được đề cập trong bối cảnh mô hình Địa Trung Hải không thành công, và đảo ngược hoàn toàn nhận định của giảng viên. Đáp án 'c' là một giả định có vẻ hợp lý nhưng không được văn bản hỗ trợ.",
-        "key_evidence": "Das klingt paradox: Gerade die Staaten, die die Familie am meisten entlasten, haben die stärksten Familien, die in den vergangenen Jahren zunehmend an Bedeutung gewonnen haben.",
-        "key_vocabulary": []
+        "de": "Richtig ist a. Der Dozent nennt dies ausdrücklich ein Missverständnis und erklärt, dass Algorithmen Wertentscheidungen über relevante Merkmale enthalten. b und c werden nicht vertreten.",
+        "vi": "Đáp án đúng là a. Giảng viên gọi trực tiếp đây là hiểu lầm và giải thích thuật toán luôn chứa quyết định về đặc điểm được tính. b và c không phải lập trường của bài.",
+        "key_evidence": "Wenn ein Verfahren mathematisch ist, sei es automatisch neutral"
       }
     },
     {
-      "id": "Q2",
+      "id": "q2_hoeren_c1_t4_algorithmen_bias",
       "teil": 4,
       "type": "mc_abc",
-      "question": "Worin sieht der Dozent die primäre Rechtfertigung für die Forcierung der Gleichstellung in der EU?",
+      "question": "Unter welcher Bedingung hält der Dozent algorithmische Unterstützung für legitim?",
       "options": {
-        "a": "In der ethischen Verpflichtung, soziale Gerechtigkeit für alle Bürger zu gewährleisten.",
-        "b": "In dem erheblichen Potenzial für gesamtwirtschaftliches Wachstum und Wohlstand.",
-        "c": "In der Notwendigkeit, die Entgelttransparenz-Richtlinie mit wirksamen Sanktionen durchzusetzen."
+        "a": "Wenn sie Förderentscheidungen vollständig automatisiert und damit beschleunigt.",
+        "b": "Wenn sie erklärbar bleibt und als überprüfbare Hypothese statt als endgültiges Urteil dient.",
+        "c": "Wenn sie ausschließlich bisherige Drittmittel als Exzellenzindikator verwendet."
       },
       "answer": "b",
       "points": 1,
       "explanation": {
-        "de": "Die korrekte Antwort ist 'b'. Der Dozent betont, dass Gleichstellung nicht nur eine Frage der Gerechtigkeit, sondern eine 'rein ökonomische Notwendigkeit' ist, und untermauert dies mit dem potenziellen Anstieg des BIP. Antwort 'a' ist zwar ein valider Aspekt, wird vom Dozenten aber als sekundär gegenüber dem ökonomischen Argument dargestellt. Antwort 'c' ist eine klassische lexikalische Falle, da sie eine der vier vorgeschlagenen Maßnahmen ('Entgelttransparenz-Richtlinie') als primäre Begründung darstellt, obwohl es sich nur um ein Instrument zur Erreichung des Ziels handelt.",
-        "vi": "Đáp án đúng là 'b'. Giảng viên nhấn mạnh rằng bình đẳng không chỉ là vấn đề công bằng mà còn là một 'sự cần thiết hoàn toàn về mặt kinh tế', và củng cố điều này bằng sự gia tăng tiềm năng của GDP. Đáp án 'a' tuy là một khía cạnh hợp lệ, nhưng được giảng viên trình bày là thứ yếu so với lập luận kinh tế. Đáp án 'c' là một cái bẫy từ vựng kinh điển, vì nó trình bày một trong bốn biện pháp được đề xuất ('Chỉ thị về minh bạch tiền lương') như là lý do chính, trong khi đó chỉ là một công cụ để đạt được mục tiêu.",
-        "key_evidence": "Gleichstellung ist also nicht nur eine Frage der Gerechtigkeit, sondern eine rein ökonomische Notwendigkeit, was in der wissenschaftlichen Gemeinschaft für erhebliche Diskussionen sorgt.",
-        "key_vocabulary": []
+        "de": "Richtig ist b. Der Dozent verlangt Erklärbarkeit, überprüfbare Datenquellen und die Behandlung algorithmischer Ergebnisse als Hypothesen. a und c widersprechen der Warnung vor Effizienz und alten Privilegien.",
+        "vi": "Đáp án đúng là b. Giảng viên yêu cầu mô hình có thể giải thích, nguồn dữ liệu kiểm tra được và kết quả thuật toán chỉ là giả thuyết. a và c trái với cảnh báo trong bài.",
+        "key_evidence": "als Hypothese behandelt wird, nicht als Urteil letzter Instanz"
       }
     }
   ],
@@ -97,165 +95,71 @@
     "source": "studio_source_script",
     "quality": "source_verified",
     "sourceScript": "data/scripts/C1/Teil4-Vortrag/L-C1-GOETHE-013-T4.json",
-    "note": "Transcript replaced from source script by scripts/apply-source-transcripts.ts.",
+    "note": "Transcript regenerated by content-listening-regeneration (release-candidate script); MP3 pending re-record (Audio_Restubbing).",
     "lines": [
       {
         "speaker": "Narrator",
         "speaker_role": "exam_narrator",
-        "text": "Sie hören einen Vortrag. Dazu gibt es sieben Aufgaben. Kreuzen Sie die richtige Antwort an. Sie hören den Vortrag einmal."
+        "text": "Sie hören einen Vortrag. Kreuzen Sie bei jeder Aufgabe die richtige Antwort an. Sie hören den Vortrag einmal."
       },
       {
         "speaker": "Dozent",
         "speaker_role": "dialogue_speaker",
-        "text": "Meine Damen und Herren, willkommen zu meinem Vortrag über Familienpolitik und Gleichstellung in der Europäischen Union, und diese Entwicklung betrifft nicht nur Fachleute, sondern die gesamte Gesellschaft."
+        "text": "In meinem Vortrag geht es um Algorithmen und Bias in der Wissenschaft, insbesondere um die Frage, wie automatisierte Entscheidungen Forschungskarrieren prägen."
       },
       {
         "speaker": "Dozent",
         "speaker_role": "dialogue_speaker",
-        "text": "Ich vertrete die These, dass die Familienpolitik der zentrale Hebel für Geschlechtergleichstellung und wirtschaftlichen Wohlstand ist, wobei aktuelle Studien und Expertenmeinungen ein vielfältiges Bild zeichnen."
+        "text": "Wir begegnen Algorithmen heute nicht nur in Laborinstrumenten, sondern auch in Rankings, Zitationsanalysen, Bewerbungsverfahren und der Verteilung knapper Fördermittel."
       },
       {
         "speaker": "Dozent",
         "speaker_role": "dialogue_speaker",
-        "text": "Die empirische Evidenz ist überwältigend: Länder mit progressiver Familienpolitik schneiden in fast allen Wohlstandsindikatoren besser ab, was in der wissenschaftlichen Gemeinschaft für erhebliche Diskussionen sorgt."
+        "text": "Ein häufiges Missverständnis lautet: Wenn ein Verfahren mathematisch ist, sei es automatisch neutral. Tatsächlich übersetzt ein Algorithmus immer Entscheidungen darüber, welche Merkmale zählen."
       },
       {
         "speaker": "Dozent",
         "speaker_role": "dialogue_speaker",
-        "text": "Lassen Sie mich zunächst die verschiedenen Familienmodelle in Europa systematisch vergleichen und kategorisieren, wobei die Experten in dieser Frage nach wie vor unterschiedlicher Meinung sind."
+        "text": "Nimmt man zum Beispiel bisherige Drittmittel als Indikator für zukünftige Exzellenz, profitieren Forschende, die bereits Zugang zu starken Netzwerken hatten."
       },
       {
         "speaker": "Dozent",
         "speaker_role": "dialogue_speaker",
-        "text": "Das nordische Modell, vertreten durch Schweden und Finnland, basiert auf universeller öffentlicher Kinderbetreuung und Individualbesteuerung, was sowohl in der Forschung als auch in der Praxis weitreichende Konsequenzen hat."
+        "text": "Dadurch kann ein System den Anschein objektiver Auswahl erzeugen und zugleich soziale Ungleichheiten stabilisieren."
       },
       {
         "speaker": "Dozent",
         "speaker_role": "dialogue_speaker",
-        "text": "Das kontinentale Modell, typisch für Deutschland und Frankreich, kombiniert steuerliche Familienbegünstigung mit partieller Kinderbetreuung, und dies wirft grundlegende Fragen zur aktuellen gesellschaftlichen Entwicklung auf."
+        "text": "Das bedeutet nicht, dass menschliche Gremien frei von Vorurteilen wären. Im Gegenteil: Gut dokumentierte Algorithmen können blinde Flecken sichtbar machen."
       },
       {
         "speaker": "Dozent",
         "speaker_role": "dialogue_speaker",
-        "text": "Das mediterrane Modell, etwa in Italien und Griechenland, verlässt sich stark auf familiäre Netzwerke statt auf staatliche Leistungen."
+        "text": "Aber dafür müssen Modelle erklärbar, Datenquellen überprüfbar und Zielkonflikte offen benannt sein. Effizienz darf nicht als Ersatz für Begründung dienen."
       },
       {
         "speaker": "Dozent",
         "speaker_role": "dialogue_speaker",
-        "text": "Das angelsächsische Modell, wie in Großbritannien, setzt auf Marktlösungen und minimale staatliche Eingriffe, was die Notwendigkeit einer differenzierten Betrachtung deutlich unterstreicht."
+        "text": "Meine These lautet daher: Algorithmische Unterstützung ist wissenschaftlich legitim, wenn sie als Hypothese behandelt wird, nicht als Urteil letzter Instanz."
       },
       {
         "speaker": "Dozent",
         "speaker_role": "dialogue_speaker",
-        "text": "Jedes dieser Modelle hat unterschiedliche Auswirkungen auf die Erwerbsbeteiligung von Frauen und die Geburtenrate, und diese Entwicklung betrifft nicht nur Fachleute, sondern die gesamte Gesellschaft."
-      },
-      {
-        "speaker": "Dozent",
-        "speaker_role": "dialogue_speaker",
-        "text": "Am erfolgreichsten ist das nordische Modell: hohe Geburtenraten, hohe Frauenerwerbsquote und geringe Kinderarmut, wobei aktuelle Studien und Expertenmeinungen ein vielfältiges Bild zeichnen."
-      },
-      {
-        "speaker": "Dozent",
-        "speaker_role": "dialogue_speaker",
-        "text": "Am wenigsten erfolgreich ist das mediterrane Modell: niedrige Geburtenraten, niedrige Frauenerwerbsquote und hohe Kinderarmut, was in der wissenschaftlichen Gemeinschaft für erhebliche Diskussionen sorgt."
-      },
-      {
-        "speaker": "Dozent",
-        "speaker_role": "dialogue_speaker",
-        "text": "Diese Ergebnisse sind kein Zufall, sondern das direkte Resultat politischer Entscheidungen und institutioneller Rahmenbedingungen, wobei die Experten in dieser Frage nach wie vor unterschiedlicher Meinung sind."
-      },
-      {
-        "speaker": "Dozent",
-        "speaker_role": "dialogue_speaker",
-        "text": "Der Schlüsselfaktor ist die Defamilialisierung: der Grad, in dem der Staat Sorgearbeit von der Familie übernimmt, was sowohl in der Forschung als auch in der Praxis weitreichende Konsequenzen hat."
-      },
-      {
-        "speaker": "Dozent",
-        "speaker_role": "dialogue_speaker",
-        "text": "Je mehr der Staat Kinderbetreuung und Pflege als öffentliche Aufgabe versteht, desto gleichberechtigter sind die Geschlechter, und dies wirft grundlegende Fragen zur aktuellen gesellschaftlichen Entwicklung auf."
-      },
-      {
-        "speaker": "Dozent",
-        "speaker_role": "dialogue_speaker",
-        "text": "Das klingt paradox: Gerade die Staaten, die die Familie am meisten entlasten, haben die stärksten Familien, die in den vergangenen Jahren zunehmend an Bedeutung gewonnen haben."
-      },
-      {
-        "speaker": "Dozent",
-        "speaker_role": "dialogue_speaker",
-        "text": "Lassen Sie mich nun die ökonomischen Kosten der Gleichstellungsdefizite in Europa beziffern, was die Notwendigkeit einer differenzierten Betrachtung deutlich unterstreicht."
-      },
-      {
-        "speaker": "Dozent",
-        "speaker_role": "dialogue_speaker",
-        "text": "Die EU-Kommission schätzt, dass die Schließung des Gender Employment Gap das europäische BIP um sieben Prozent steigern würde."
-      },
-      {
-        "speaker": "Dozent",
-        "speaker_role": "dialogue_speaker",
-        "text": "Das entspricht einem zusätzlichen Wohlstandsgewinn von über einer Billion Euro pro Jahr für die Europäische Union, wobei aktuelle Studien und Expertenmeinungen ein vielfältiges Bild zeichnen."
-      },
-      {
-        "speaker": "Dozent",
-        "speaker_role": "dialogue_speaker",
-        "text": "Gleichstellung ist also nicht nur eine Frage der Gerechtigkeit, sondern eine rein ökonomische Notwendigkeit, was in der wissenschaftlichen Gemeinschaft für erhebliche Diskussionen sorgt."
-      },
-      {
-        "speaker": "Dozent",
-        "speaker_role": "dialogue_speaker",
-        "text": "Was muss die EU konkret tun, um die Gleichstellung in allen Mitgliedstaaten voranzubringen, wobei die Experten in dieser Frage nach wie vor unterschiedlicher Meinung sind?"
-      },
-      {
-        "speaker": "Dozent",
-        "speaker_role": "dialogue_speaker",
-        "text": "Erstens: verbindliche Mindeststandards für Elternzeit mit nicht-übertragbaren Vätermonaten in allen Mitgliedstaaten, was sowohl in der Forschung als auch in der Praxis weitreichende Konsequenzen hat."
-      },
-      {
-        "speaker": "Dozent",
-        "speaker_role": "dialogue_speaker",
-        "text": "Zweitens: ein europaweites Investitionsprogramm für den Ausbau qualitativ hochwertiger frühkindlicher Bildung und Betreuung, und dies wirft grundlegende Fragen zur aktuellen gesellschaftlichen Entwicklung auf."
-      },
-      {
-        "speaker": "Dozent",
-        "speaker_role": "dialogue_speaker",
-        "text": "Drittens: die konsequente Umsetzung der Entgelttransparenz-Richtlinie mit wirksamen Sanktionen für Unternehmen, die in den vergangenen Jahren zunehmend an Bedeutung gewonnen haben."
-      },
-      {
-        "speaker": "Dozent",
-        "speaker_role": "dialogue_speaker",
-        "text": "Viertens: die Reform der nationalen Steuersysteme, die derzeit häufig negative Erwerbsanreize für Zweitverdienende setzen, was die Notwendigkeit einer differenzierten Betrachtung deutlich unterstreicht."
-      },
-      {
-        "speaker": "Dozent",
-        "speaker_role": "dialogue_speaker",
-        "text": "Diese vier Maßnahmen würden die Gleichstellung in Europa innerhalb einer Generation fundamental verändern und verbessern, und diese Entwicklung betrifft nicht nur Fachleute, sondern die gesamte Gesellschaft."
-      },
-      {
-        "speaker": "Dozent",
-        "speaker_role": "dialogue_speaker",
-        "text": "Die Investitionen sind erheblich, aber die Rendite in Form von Wirtschaftswachstum und sozialer Stabilität noch viel höher, wobei aktuelle Studien und Expertenmeinungen ein vielfältiges Bild zeichnen."
-      },
-      {
-        "speaker": "Dozent",
-        "speaker_role": "dialogue_speaker",
-        "text": "Abschließend: Gleichstellung ist kein Frauenthema, sondern ein Gesellschaftsprojekt, das allen zugute kommt und alle betrifft, was in der wissenschaftlichen Gemeinschaft für erhebliche Diskussionen sorgt."
-      },
-      {
-        "speaker": "Dozent",
-        "speaker_role": "dialogue_speaker",
-        "text": "Vielen Dank für Ihre Aufmerksamkeit!, wobei die Experten in dieser Frage nach wie vor unterschiedlicher Meinung sind."
+        "text": "Eine reife Forschungskultur fragt also nicht nur, ob ein Modell genau ist, sondern auch, für wen ein Fehler folgenreich wird und wer Einspruch erheben kann."
       },
       {
         "speaker": "Narrator",
         "speaker_role": "exam_narrator",
-        "text": "Ende des Hörverstehens."
+        "text": "Ende Teil vier."
       }
-    ]
+    ],
+    "audio_restub": "pending"
   },
   "cefrAudit": {
     "targetLevel": "C1",
     "verdict": "aligned",
-    "reviewerRole": "German Academic Lead",
-    "notes": "Release-candidate metadata audit: listening content for \"Algorithmen und Bias in der Wissenschaft\" is aligned with declared C1 scope pending final human spot-check.",
+    "reviewerRole": "German Academic Lead (AI/Kiro)",
+    "notes": "Regenerated listening transcript + questions, signed off by AI German Academic Lead (Kiro); MP3 pending re-record (Audio_Restubbing); pending native-speaker spot-check.",
     "reviewedAt": "2026-05-12",
     "reviewScope": "release_candidate_metadata_pass"
   },

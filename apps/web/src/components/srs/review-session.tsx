@@ -6,11 +6,12 @@ import { useTranslations } from 'next-intl'
 import { Flashcard } from './flashcard'
 import { RatingButtons } from './rating-buttons'
 import { Mascot } from '@/components/ui/mascot'
+import { PrimaryCta } from '@/components/ui/primary-cta'
+import { useSuppressLearnerMainChrome } from '@/hooks/use-suppress-chrome'
 import {
     FuxiePanel,
     FuxieProgressBar,
     FuxieRewardList,
-    fuxieButtonClass,
 } from '@/components/ui/fuxie-ui'
 
 interface CardData {
@@ -67,6 +68,10 @@ export function ReviewSession({ initialCards, totalDue: _totalDue }: ReviewSessi
 
     const currentCard = cards[currentIndex]
     const progress = cards.length > 0 ? ((currentIndex) / cards.length) * 100 : 0
+
+    // Suppress chrome for the full session (loading / empty / active cards).
+    // Restore only on complete or unmount.
+    useSuppressLearnerMainChrome(!sessionComplete)
 
     useEffect(() => {
         return () => {
@@ -152,77 +157,60 @@ export function ReviewSession({ initialCards, totalDue: _totalDue }: ReviewSessi
                 : t('speechBubbleTryAgain')
 
         return (
-            <div className="flex flex-col items-center justify-center min-h-[500px] animate-fade-in-up">
-                {/* Progress bar — complete */}
-                <div className="w-full max-w-lg mb-8">
-                    <div className="flex items-center justify-between mb-2">
-                        <span className="text-sm font-medium text-emerald-600">
-                            {stats.totalReviewed} / {stats.totalReviewed} ✓
-                        </span>
-                        <span className="text-sm font-bold text-fuxie-primary">
-                            +{stats.xpEarned} XP
-                        </span>
-                    </div>
-                    <FuxieProgressBar value={100} tone="success" />
-                </div>
-
-                {/* Mascot celebration */}
-                <Mascot
-                    variant={mascotVariant}
-                    size={140}
-                    speechBubble={celebrationMessage}
-                />
-
-                <div className="mt-8 w-full max-w-md">
-                    {/* Stats grid */}
-                    <div className="grid grid-cols-3 gap-3 mb-6">
-                        <FuxiePanel variant="soft" className="p-4 text-center">
-                            <p className="text-xs text-gray-500 mb-1">{t('correct')}</p>
-                            <p className="text-2xl font-bold text-emerald-600">{stats.correct}</p>
-                        </FuxiePanel>
-                        <FuxiePanel variant="default" className="p-4 text-center ring-1 ring-red-100">
-                            <p className="text-xs text-gray-500 mb-1">{t('notCorrect')}</p>
-                            <p className="text-2xl font-bold text-red-500">{stats.again}</p>
-                        </FuxiePanel>
-                        <FuxiePanel variant="soft" className="p-4 text-center">
-                            <p className="text-xs text-gray-500 mb-1">{t('accuracy')}</p>
-                            <p className="text-2xl font-bold text-fuxie-primary">{accuracy}%</p>
-                        </FuxiePanel>
-                    </div>
-
-                    {/* XP badge */}
-                    <FuxieRewardList
-                        className="mb-6"
-                        items={[
-                            {
-                                icon: '★',
-                                label: `+${stats.xpEarned} XP`,
-                                detail: 'XP nhận được',
-                                tone: 'reward',
-                            },
-                        ]}
+            <div className="min-h-screen w-full fuxie-learn-bg relative flex flex-col items-center justify-between pb-8 pt-4 overflow-x-hidden overflow-y-auto animate-fade-in-up">
+                <div className="relative z-10 w-full max-w-md px-4 flex flex-col items-center flex-1 justify-center my-auto animate-fade-in-up">
+                    {/* Mascot celebration */}
+                    <Mascot
+                        variant={mascotVariant}
+                        size={120}
+                        speechBubble={celebrationMessage}
                     />
 
-                    {/* Actions */}
-                    <div className="flex gap-3 justify-center">
-                        <a
-                            href="/vocabulary"
-                            className={fuxieButtonClass('ghost', 'lg')}
-                        >
-                            {t('backToVocabulary')}
-                        </a>
-                        <a
-                            href="/review"
-                            className={fuxieButtonClass('primary', 'lg')}
-                        >
-                            {t('nextBtn')} →
-                        </a>
-                    </div>
+                    <div className="mt-6 w-full bg-white/95 backdrop-blur-md border-2 border-[var(--fuxie-blue-200)] p-5 rounded-[24px] shadow-[var(--fuxie-shadow-card)]">
+                        {/* Stats grid */}
+                        <div className="grid grid-cols-3 gap-3 mb-4">
+                            <FuxiePanel variant="soft" className="p-3 text-center">
+                                <p className="text-[10px] text-gray-500 mb-1">{t('correct')}</p>
+                                <p className="text-xl font-black text-emerald-600">{stats.correct}</p>
+                            </FuxiePanel>
+                            <FuxiePanel variant="default" className="p-3 text-center ring-1 ring-red-100 bg-white">
+                                <p className="text-[10px] text-gray-500 mb-1">{t('notCorrect')}</p>
+                                <p className="text-xl font-black text-red-500">{stats.again}</p>
+                            </FuxiePanel>
+                            <FuxiePanel variant="soft" className="p-3 text-center">
+                                <p className="text-[10px] text-gray-500 mb-1">{t('accuracy')}</p>
+                                <p className="text-xl font-black text-fuxie-primary">{accuracy}%</p>
+                            </FuxiePanel>
+                        </div>
 
-                    {/* Next review hint */}
-                    <p className="text-xs text-gray-400 text-center mt-4">
-                        {t('nextReviewAutoScheduled')}
-                    </p>
+                        {/* XP badge */}
+                        <FuxieRewardList
+                            className="mb-4"
+                            items={[
+                                {
+                                    icon: '★',
+                                    label: `+${stats.xpEarned} XP`,
+                                    detail: t('xpReceivedDetail'),
+                                    tone: 'reward',
+                                },
+                            ]}
+                        />
+
+                        {/* Actions */}
+                        <div className="flex gap-3 justify-center">
+                            <PrimaryCta asChild variant="secondary" className="flex-1">
+                                <a href="/vocabulary">{t('backToVocabulary')}</a>
+                            </PrimaryCta>
+                            <PrimaryCta asChild variant="primary" className="flex-1">
+                                <a href="/review">{t('nextBtn')} →</a>
+                            </PrimaryCta>
+                        </div>
+
+                        {/* Next review hint */}
+                        <p className="text-[10px] text-gray-400 text-center mt-3">
+                            {t('nextReviewAutoScheduled')}
+                        </p>
+                    </div>
                 </div>
             </div>
         )
@@ -231,21 +219,23 @@ export function ReviewSession({ initialCards, totalDue: _totalDue }: ReviewSessi
     // ===== EMPTY STATE =====
     if (!currentCard) {
         return (
-            <FuxiePanel variant="soft" className="flex min-h-[400px] flex-col items-center justify-center p-8 text-center animate-fade-in">
-                <Mascot
-                    variant="empty"
-                    size={120}
-                    speechBubble={t('speechBubbleAddWords')}
-                />
-                <h2 className="text-xl font-bold text-gray-900 mt-6 mb-2">{t('noCardsToReview')}</h2>
-                <p className="text-gray-500 mb-6">{t('exploreAndAddWords')}</p>
-                <a
-                    href="/vocabulary"
-                    className={fuxieButtonClass('primary', 'lg')}
-                >
-                    {t('exploreVocabulary')}
-                </a>
-            </FuxiePanel>
+            <div className="fixed inset-0 z-50 flex flex-col fuxie-gameplay-bg text-slate-950 overflow-y-auto">
+                <div className="flex-1 flex flex-col items-center justify-center p-8 text-center max-w-lg mx-auto">
+                    <Mascot
+                        variant="empty"
+                        size={120}
+                        speechBubble={t('speechBubbleAddWords')}
+                    />
+                    <h2 className="text-xl font-black text-slate-900 mt-6 mb-2">{t('noCardsToReview')}</h2>
+                    <p className="text-sm font-medium text-slate-500 mb-6 leading-relaxed">{t('exploreAndAddWords')}</p>
+
+                    <PrimaryCta asChild variant="primary" className="w-full">
+                        <a href="/vocabulary">
+                            {t('exploreVocabulary')}
+                        </a>
+                    </PrimaryCta>
+                </div>
+            </div>
         )
     }
 
@@ -253,58 +243,73 @@ export function ReviewSession({ initialCards, totalDue: _totalDue }: ReviewSessi
     const mascotReaction = getMascotReaction()
 
     return (
-        <div className="flex flex-col items-center gap-6 py-4">
-            {/* Progress bar */}
-            <div className="w-full max-w-lg">
-                <div className="flex items-center justify-between mb-2">
-                    <span className="text-sm font-medium text-gray-500">
-                        {currentIndex + 1} / {cards.length}
-                    </span>
-                    <span className="text-sm font-medium text-fuxie-primary">
-                        +{stats.xpEarned} XP
-                    </span>
+        <div className="fixed inset-0 z-50 flex flex-col fuxie-gameplay-bg text-slate-950 overflow-y-auto">
+            {/* Header progress bar */}
+            <div className="w-full max-w-2xl mx-auto px-5 py-4 sm:px-6 flex items-center gap-3">
+                <a
+                    href="/review"
+                    aria-label={t('closeReviewSession')}
+                    className="flex h-11 w-11 min-h-[44px] min-w-[44px] items-center justify-center rounded-xl text-slate-400 transition-colors hover:bg-slate-100 hover:text-slate-700 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[var(--fuxie-blue-700)]"
+                >
+                    <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+                        <path strokeLinecap="round" strokeLinejoin="round" d="M6 18L18 6M6 6l12 12" />
+                    </svg>
+                </a>
+                <div className="flex-1">
+                    <FuxieProgressBar
+                        value={progress}
+                        className="h-1.5 bg-[var(--fuxie-blue-100)] rounded-full overflow-hidden"
+                        barClassName="bg-[var(--fuxie-success)] bg-none rounded-full"
+                    />
                 </div>
-                <FuxieProgressBar value={progress} />
+                <span className="whitespace-nowrap text-sm font-black text-slate-500">
+                    {t('cardProgress', { current: currentIndex + 1, total: cards.length })}
+                </span>
+                <span className="whitespace-nowrap text-sm font-black text-text-brand shrink-0">
+                    {t('xpEarnedLabel', { xp: stats.xpEarned })}
+                </span>
             </div>
 
-            {/* Flashcard + Mascot area */}
-            <div className="relative w-full">
-                <Flashcard
-                    vocabulary={currentCard.vocabularyItem}
-                    isFlipped={isFlipped}
-                    onFlip={handleFlip}
-                />
+            <div className="flex-1 flex flex-col items-center justify-center p-4">
+                {/* Flashcard + Mascot area */}
+                <div className="relative w-full max-w-lg">
+                    <Flashcard
+                        vocabulary={currentCard.vocabularyItem}
+                        isFlipped={isFlipped}
+                        onFlip={handleFlip}
+                    />
 
-                {/* Mascot reaction — bottom right */}
-                {mascotReaction && (
-                    <div className="absolute -bottom-2 -right-4 animate-fade-in z-10">
-                        <Mascot
-                            variant={mascotReaction.variant}
-                            size={64}
-                            speechBubble={mascotReaction.message}
+                    {/* Mascot reaction — bottom right */}
+                    {mascotReaction && (
+                        <div className="absolute -bottom-2 -right-4 animate-fade-in z-10">
+                            <Mascot
+                                variant={mascotReaction.variant}
+                                size={64}
+                                speechBubble={mascotReaction.message}
+                            />
+                        </div>
+                    )}
+                </div>
+
+                {/* Rating buttons — only show when flipped */}
+                {isFlipped && (
+                    <div className="w-full mt-6 animate-fade-in-up">
+                        <RatingButtons
+                            onRate={handleRate}
+                            disabled={isSubmitting}
+                            currentInterval={currentCard.interval}
+                            easeFactor={currentCard.easeFactor}
                         />
                     </div>
                 )}
+
+                {/* Flip hint when not flipped */}
+                {!isFlipped && !lastRating && (
+                    <p className="text-sm text-gray-400 animate-pulse mt-6 font-bold">
+                        {t('tapToSeeAnswer')}
+                    </p>
+                )}
             </div>
-
-            {/* Rating buttons — only show when flipped */}
-            {isFlipped && (
-                <div className="w-full animate-fade-in-up">
-                    <RatingButtons
-                        onRate={handleRate}
-                        disabled={isSubmitting}
-                        currentInterval={currentCard.interval}
-                        easeFactor={currentCard.easeFactor}
-                    />
-                </div>
-            )}
-
-            {/* Flip hint when not flipped */}
-            {!isFlipped && !lastRating && (
-                <p className="text-sm text-gray-400 animate-pulse">
-                    {t('tapToSeeAnswer')}
-                </p>
-            )}
         </div>
     )
 }

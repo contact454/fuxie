@@ -15,14 +15,14 @@ import {
     LogOut,
     Heart,
 } from 'lucide-react'
-import type { SessionItem } from '@/lib/session/builder'
-import type { ExerciseResult, ExerciseData } from '@/lib/session/types'
+import type { SessionAttemptView } from '@/lib/session/contracts'
 import { FUXIE_WORLD_PROPS, FUXIE_MASCOT_STATES } from '@/lib/mascot/fuxie-assets'
 import { ConfirmExitDialog } from '@/components/ui/confirm-exit-dialog'
 import { IntroCard } from './exercises/IntroCard'
 import { MultipleChoice } from './exercises/MultipleChoice'
 import { TypingExercise } from './exercises/TypingExercise'
 import { SessionResultScreen } from './SessionResultScreen'
+import { useSessionAttempt } from './use-session-attempt'
 
 function getSessionMascotPose(format: string): string {
     switch (format) {
@@ -34,41 +34,39 @@ function getSessionMascotPose(format: string): string {
 }
 
 export function SessionPlayer({
-    level,
-    initialItems,
-    initialFinished = false,
-    initialResults = [],
-    initialScore = 0,
-    initialHearts = 5,
+    level: profileLevel,
+    userId,
+    preview,
 }: {
     level: string
-    initialItems?: SessionItem[]
-    initialFinished?: boolean
-    initialResults?: ExerciseResult[]
-    initialScore?: number
-    initialHearts?: number
+    userId: string
+    preview?: SessionAttemptView
 }) {
     const router = useRouter()
     const t = useTranslations('UI')
-
-    const [loading, setLoading] = useState(!initialItems)
-    const [saving, setSaving] = useState(false)
-    const [items, setItems] = useState<SessionItem[]>(initialItems ?? [])
-    const [currentIndex, setCurrentIndex] = useState(0)
-    const [hearts, setHearts] = useState(initialHearts)
-    const [score, setScore] = useState(initialScore)
-    const [results, setResults] = useState<ExerciseResult[]>(initialResults)
-    const [isFinished, setIsFinished] = useState(initialFinished)
+    const ts = useTranslations('Session.integrity')
+    const session = useSessionAttempt(userId, preview)
+    const { view, phase, currentId, pending, error } = session
     const [elapsed, setElapsed] = useState(0)
     const [showExitDialog, setShowExitDialog] = useState(false)
+    const [showRestartDialog, setShowRestartDialog] = useState(false)
+    const items = view?.items ?? []
+    const currentIndex = items.findIndex(item => item.id === currentId)
+    const currentItem = items[currentIndex]
+    const feedback = view?.checkedAnswers.find(entry => entry.questionId === currentId)
+    const level = view?.level ?? profileLevel
+    const hearts = view?.heartsRemaining ?? 5
+    const score = view?.checkedAnswers.reduce((sum, entry) => sum + entry.points, 0) ?? 0
+    const loading = phase === 'loading'
+    const isFinished = !!view?.receipt
 
     useEffect(() => {
-        if (isFinished || loading) return
+        if (isFinished || loading || !currentItem) return
         const interval = setInterval(() => {
             setElapsed(e => e + 1)
         }, 1000)
         return () => clearInterval(interval)
-    }, [isFinished, loading])
+    }, [isFinished, loading, currentItem])
 
     const formatElapsed = (seconds: number) => {
         const m = Math.floor(seconds / 60)
@@ -76,97 +74,62 @@ export function SessionPlayer({
         return `${String(m).padStart(2, '0')}:${String(s).padStart(2, '0')}`
     }
 
-    useEffect(() => {
-        if (initialItems) {
-            setItems(initialItems)
-            setLoading(false)
-            return
-        }
-
-        fetch(`/api/v1/session/start?level=${level}`)
-            .then(res => res.json())
-            .then(data => {
-                if (data.success && data.data.items) {
-                    setItems(data.data.items)
-                }
-            })
-            .catch(err => console.error(err))
-            .finally(() => setLoading(false))
-    }, [level, initialItems])
-
-    const handleNext = useCallback((isCorrect?: boolean, itemData?: ExerciseData) => {
-        const item = items[currentIndex]
-        if (!item) return
-
-        let newHearts = hearts
-        let newScore = score
-
-        if (isCorrect !== undefined) {
-            if (isCorrect) {
-                newScore += item.points
-            } else {
-                newHearts = Math.max(0, hearts - 1)
-            }
-            setResults(prev => [...prev, { id: item.id, type: item.type, data: itemData || item.data, correct: isCorrect }])
-        } else {
-            setResults(prev => [...prev, { id: item.id, type: item.type, data: itemData || item.data, correct: true }])
-        }
-
-        setHearts(newHearts)
-        setScore(newScore)
-
-        if (newHearts === 0) { setIsFinished(true); return }
-        if (currentIndex < items.length - 1) {
-            setCurrentIndex(prev => prev + 1)
-        } else {
-            setIsFinished(true)
-        }
-    }, [currentIndex, items, hearts, score])
-
-    const handleComplete = useCallback(async () => {
-        setSaving(true)
-        try {
-            await fetch('/api/v1/session/complete', {
-                method: 'POST',
-                headers: { 'Content-Type': 'application/json' },
-                body: JSON.stringify({ results, totalXp: score, heartsRemaining: hearts, level })
-            })
-            router.push('/dashboard')
-        } catch (err) {
-            console.error('[Session] Save error:', err)
-            router.push('/dashboard')
-        }
-    }, [results, score, hearts, level, router])
-
     const exitToDashboard = useCallback(() => {
+        if (pending) return
         router.push('/dashboard')
-    }, [router])
+    }, [pending, router])
 
     const handleExitRequest = useCallback(() => {
-        if (!isFinished && !loading && elapsed > 0) {
+        if (pending) return
+        if (!isFinished && view) {
             setShowExitDialog(true)
             return
         }
 
         exitToDashboard()
-    }, [elapsed, exitToDashboard, isFinished, loading])
+    }, [pending, view, exitToDashboard, isFinished])
+
+    const errorMessage = error?.code === 'UNAUTHORIZED' || error?.code === 'HTTP_401'
+        ? ts('authError')
+        : error?.code === 'SESSION_UPGRADE_REQUIRED' || error?.code === 'HTTP_426'
+        ? ts('upgradeError')
+        : error?.code.includes('EXPIRED') || error?.code.includes('ABANDONED') || error?.code === 'HTTP_410'
+        ? ts('expiredError')
+        : error?.code.includes('STALE') || error?.code.includes('WITHDRAWN') || error?.code.includes('CONFLICT') || error?.code.includes('ORDER') || error?.code === 'HTTP_409'
+        ? ts('conflictError')
+        : error?.code.includes('NOT_FOUND') || error?.code === 'HTTP_404'
+        ? ts('missingError')
+        : ts('requestError')
+    const errorPanel = error && <div role="alert" className="rounded-2xl border border-amber-300 bg-amber-50 p-4 text-sm text-[#173b56]">
+        <p>{errorMessage}</p>
+        <p className="mt-1">{ts('answersKept')}</p>
+        <div className="mt-3 flex flex-wrap gap-2">
+            {view && <button type="button" disabled={!!pending} onClick={() => void session.resume()} className="min-h-[44px] rounded-xl border border-[#3C78A8] px-3 font-bold">{ts('resume')}</button>}
+            {!preview && <button type="button" disabled={!!pending} onClick={() => setShowRestartDialog(true)} className="min-h-[44px] rounded-xl border border-[#3C78A8] px-3 font-bold">{ts('restart')}</button>}
+            {(error.code === 'SESSION_UPGRADE_REQUIRED' || error.code === 'HTTP_426') && <button type="button" disabled={!!pending} onClick={() => window.location.reload()} className="min-h-[44px] rounded-xl border border-[#3C78A8] px-3 font-bold">{ts('reload')}</button>}
+        </div>
+    </div>
+    const dialogs = <>
+        <ConfirmExitDialog open={showExitDialog} title={t('quitSessionTitle')} description={ts('leaveDescription')} stayLabel={t('stayInLesson')} exitLabel={t('exitLesson')} ariaLabel={t('confirmExitAria')} onStay={() => setShowExitDialog(false)} onExit={exitToDashboard} />
+        <ConfirmExitDialog open={showRestartDialog} title={ts('restart')} description={ts('restartDescription')} stayLabel={t('stayInLesson')} exitLabel={ts('restart')} ariaLabel={ts('restart')} onStay={() => setShowRestartDialog(false)} onExit={() => { setShowRestartDialog(false); void session.load(true) }} />
+    </>
 
     if (loading) {
         return (
-            <div className="flex-1 min-h-screen bg-[#5BB8F5] flex flex-col items-center justify-center">
-                <div className="w-12 h-12 border-4 border-white border-t-transparent rounded-full animate-spin" />
+            <div role="status" aria-busy="true" className="flex-1 min-h-screen bg-[#5BB8F5] flex flex-col items-center justify-center gap-4">
+                <div aria-hidden="true" className="w-12 h-12 border-4 border-white border-t-transparent rounded-full animate-spin motion-reduce:animate-none" />
+                <p className="font-bold text-[#173b56]">{ts('loading')}</p>
             </div>
         )
     }
 
-    if (!items.length) {
+    if (phase === 'empty' || phase === 'error') {
         return (
             <div className="flex-1 min-h-screen bg-[#F3FBFF] flex flex-col items-center justify-center p-8 text-center">
-                <div className="w-24 h-24 relative mb-4">
-                    <Image src={FUXIE_MASCOT_STATES.wave} alt="Success" fill className="object-contain" />
-                </div>
-                <h3 className="text-2xl font-black text-[#173b56] mb-2">{t('sessionCompleteSuccess')}</h3>
-                <p className="text-sm text-[#3C78A8] font-bold">{t('lessonsCompleted')}</p>
+                {dialogs}
+                <h1 className="text-2xl font-black text-[#173b56] mb-2">{phase === 'empty' ? ts('noContentTitle') : ts('startErrorTitle')}</h1>
+                {phase === 'empty' ? <p className="text-sm text-[#3C78A8] font-bold">{ts('noContentDescription')}</p> : errorPanel}
+                <button type="button" disabled={!!pending} onClick={() => void session.load()} className="mt-5 min-h-[44px] px-6 py-3 rounded-xl bg-[#2EC4B6] text-white font-bold disabled:opacity-50">{ts('retry')}</button>
                 <button
                     onClick={() => router.push('/dashboard')}
                     className="mt-6 px-8 py-3 bg-[#2E7EC4] hover:bg-[#1e6bb0] text-white font-black rounded-2xl shadow-md transition-all active:scale-[0.97]"
@@ -177,37 +140,43 @@ export function SessionPlayer({
         )
     }
 
-    if (isFinished) {
+    if (view?.receipt) {
         return (
+            <>{dialogs}
             <SessionResultScreen
-                score={score}
-                hearts={hearts}
+                receipt={view.receipt}
                 total={items.length}
-                saving={saving}
-                onFinish={handleComplete}
-                results={results}
-                level={level}
+                onFinish={exitToDashboard}
+                onRestart={() => setShowRestartDialog(true)}
+                pending={!!pending}
+                preview={!!preview}
             />
+            {errorPanel}
+            </>
         )
     }
 
-    const currentItem = items[currentIndex]!
-    const progressPct = (currentIndex / items.length) * 100
+    if (!currentItem || view?.status !== 'IN_PROGRESS') {
+        return <div className="min-h-screen bg-[#F3FBFF] flex items-center justify-center p-5" data-session-state={pending === 'complete' ? 'saving' : 'unsaved'}>
+            {dialogs}
+            <div className="w-full max-w-lg rounded-3xl bg-white border border-[#CCE4F0] p-6 shadow-sm space-y-5">
+                <h1 className="text-2xl font-black text-[#173b56]">{view?.completionAvailable ? ts('readyToSave') : ts('expiredTitle')}</h1>
+                <p className="text-[#3C78A8]">{view?.completionAvailable ? ts('readyToSaveDescription') : ts('expiredError')}</p>
+                {errorPanel}
+                {view?.completionAvailable && <button type="button" data-session-save disabled={!!pending || !!preview} onClick={() => void session.complete()} className="w-full min-h-[48px] py-3 bg-[#2EC4B6] text-white font-black rounded-2xl disabled:opacity-50">{pending === 'complete' ? ts('saving') : ts('save')}</button>}
+                {!view?.completionAvailable && <button type="button" disabled={!!pending || !!preview} onClick={() => setShowRestartDialog(true)} className="w-full min-h-[48px] py-3 bg-[#2EC4B6] text-white font-black rounded-2xl disabled:opacity-50">{ts('restart')}</button>}
+                <button type="button" disabled={!!pending} onClick={handleExitRequest} className="w-full min-h-[44px] font-bold text-[#3C78A8] disabled:opacity-50">{t('backToDashboard')}</button>
+            </div>
+        </div>
+    }
+    const progressPct = (view.checkedAnswers.length / items.length) * 100
     const mascotPoseKey = getSessionMascotPose(currentItem.format)
     const mascotPoseSrc = FUXIE_MASCOT_STATES[mascotPoseKey as keyof typeof FUXIE_MASCOT_STATES] || FUXIE_MASCOT_STATES.neutral
 
     return (
-        <div className="min-h-screen bg-[#5BB8F5] font-sans text-[#173b56] flex flex-col">
-            <ConfirmExitDialog
-                open={showExitDialog}
-                title={t('quitSessionTitle')}
-                description={t('quitSessionDescription')}
-                stayLabel={t('stayInLesson')}
-                exitLabel={t('exitLesson')}
-                ariaLabel={t('confirmExitAria')}
-                onStay={() => setShowExitDialog(false)}
-                onExit={exitToDashboard}
-            />
+        <div className="min-h-screen bg-[#5BB8F5] font-sans text-[#173b56] flex flex-col" data-session-state="active" data-session-preview={preview ? 'true' : undefined}>
+            {dialogs}
+            {preview && <p role="status" className="bg-amber-50 p-3 text-center text-sm font-bold">{ts('preview')}</p>}
 
             {/* ═══════════════════════════════════════════════
                 TOP HEADER BAR — matches mock: FUXIE ⭐ 03·SESSION subtitle
@@ -252,7 +221,7 @@ export function SessionPlayer({
                         <div className="flex flex-col w-28">
                             <div className="flex justify-between text-[8px] font-bold text-[#3C78A8]">
                                 <span>Session aktiv</span>
-                                <span>+{score} XP</span>
+                                <span>{ts('xpPreview', { count: score })}</span>
                             </div>
                             <div className="h-1.5 bg-[#CCE4F0]/40 rounded-full overflow-hidden mt-0.5">
                                 <div className="h-full bg-[#60A8E4] rounded-full w-full" />
@@ -271,6 +240,7 @@ export function SessionPlayer({
 
                     <button
                         onClick={handleExitRequest}
+                        disabled={!!pending}
                         className="w-[44px] h-[44px] flex items-center justify-center bg-white hover:bg-gray-50 rounded-full shadow-sm border border-[#CCE4F0]/60 text-gray-500 hover:text-gray-800 transition"
                         title={t('quitSessionTitle')}
                     >
@@ -388,21 +358,27 @@ export function SessionPlayer({
                 {/* ── CENTER: EXERCISE WORKSPACE ── */}
                 <div className="flex-1 flex flex-col items-stretch overflow-y-auto">
                     <div className="flex-1 flex flex-col p-4 md:p-6 xl:p-8 max-w-2xl mx-auto w-full">
+                        {errorPanel && <div className="mb-4">{errorPanel}</div>}
                         <div className="flex-1 flex flex-col">
                             {currentItem.format === 'INTRO' && (
-                                <IntroCard key={currentItem.id} item={currentItem} onNext={() => handleNext(true)} />
+                                <IntroCard key={currentItem.id} item={currentItem} feedback={feedback} pending={!!pending} locked={session.answerLocked} onAnswer={session.answer} onNext={session.next} preview={!!preview} />
                             )}
                             {currentItem.format === 'MULTIPLE_CHOICE' && (
                                 <MultipleChoice
                                     key={currentItem.id}
                                     item={currentItem}
-                                    onNext={(correct) => handleNext(correct)}
+                                    feedback={feedback}
+                                    pending={!!pending}
+                                    locked={session.answerLocked}
+                                    onAnswer={session.answer}
+                                    onNext={session.next}
+                                    preview={!!preview}
                                     stepIndex={currentIndex}
                                     totalSteps={items.length}
                                 />
                             )}
                             {currentItem.format === 'TYPING' && (
-                                <TypingExercise key={currentItem.id} item={currentItem} onNext={(correct) => handleNext(correct)} />
+                                <TypingExercise key={currentItem.id} item={currentItem} feedback={feedback} pending={!!pending} locked={session.answerLocked} onAnswer={session.answer} onNext={session.next} preview={!!preview} />
                             )}
                         </div>
 
@@ -514,7 +490,7 @@ export function SessionPlayer({
                                 </li>
                                 <li className="flex items-center gap-1.5 text-[9px] font-bold text-[#173b56]">
                                     <span className="w-3.5 h-3.5 bg-green-100 rounded-full text-green-600 flex items-center justify-center text-[7px] shrink-0">✓</span>
-                                    <span>XP: +{score}</span>
+                                    <span>{ts('xpPreview', { count: score })}</span>
                                 </li>
                             </ul>
                         </div>

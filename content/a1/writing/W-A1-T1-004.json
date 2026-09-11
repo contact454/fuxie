@@ -11,10 +11,11 @@
   "situation": "Sie moechten Mitglied in einem Fitnessstudio werden. Fuellen Sie das Formular aus.",
   "contentPoints": [
     "Name und Vorname",
-    "Geburtsdatum",
     "Adresse",
     "Telefonnummer",
-    "E-Mail-Adresse"
+    "E-Mail-Adresse",
+    "Kurs",
+    "Startdatum"
   ],
   "minWords": 15,
   "maxWords": 30,
@@ -56,10 +57,6 @@
       "type": "text"
     },
     {
-      "label": "Geburtsdatum",
-      "type": "date"
-    },
-    {
       "label": "Adresse",
       "type": "text"
     },
@@ -70,9 +67,17 @@
     {
       "label": "E-Mail",
       "type": "email"
+    },
+    {
+      "label": "Kurs",
+      "type": "text"
+    },
+    {
+      "label": "Startdatum",
+      "type": "date"
     }
   ],
-  "modelAnswer": "Familienname: Nguyen\nVorname: Linh\nGeburtsdatum: 01.01.1998\nAdresse: Hauptstrasse 12, 10115 Berlin\nTelefon: 030 123456\nE-Mail: linh.nguyen@example.com",
+  "modelAnswer": "Familienname: Le\nVorname: Bao\nAdresse: Lindenallee 20, 04109 Leipzig\nTelefon: 0341 222333\nE-Mail: bao.le@example.com\nKurs: Yoga\nStartdatum: 01.09.2026",
   "timeLimitMinutes": 5,
   "estimatedMinutes": 5,
   "cefrAudit": {

@@ -63,6 +63,7 @@ export const WORD_TYPES = [
     'ARTIKEL',
     'PARTIKEL',
     'NUMERALE',
+    'PHRASE',
 ] as const
 export type WordType = (typeof WORD_TYPES)[number]
 
