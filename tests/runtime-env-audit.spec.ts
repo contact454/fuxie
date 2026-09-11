@@ -24,10 +24,18 @@ describe('runtime environment audit', () => {
         expect(report.services.upstashCache).toBe('unconfigured')
     })
 
-    it('maps learner-facing Google Cloud TTS to the Firebase admin credential contract', () => {
+    it('requires the JSON service account for learner-facing Google Cloud TTS', () => {
         const unconfigured = buildRuntimeEnvReport({})
         expect(unconfigured.services.firebaseAdmin).toBe('unconfigured')
         expect(unconfigured.services.googleCloudTtsRuntime).toBe('unconfigured')
+
+        const firebaseFallbackOnly = buildRuntimeEnvReport({
+            NEXT_PUBLIC_FIREBASE_PROJECT_ID: 'project',
+            FIREBASE_CLIENT_EMAIL: 'auth@example.invalid',
+            FIREBASE_PRIVATE_KEY: 'private-key',
+        })
+        expect(firebaseFallbackOnly.services.firebaseAdmin).toBe('configured')
+        expect(firebaseFallbackOnly.services.googleCloudTtsRuntime).toBe('unconfigured')
 
         const configured = buildRuntimeEnvReport({
             FIREBASE_SERVICE_ACCOUNT_KEY: JSON.stringify({
