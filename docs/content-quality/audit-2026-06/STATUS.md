@@ -52,12 +52,11 @@ Vai phoi hop: German Academic Lead, German Curriculum Designer, Vietnamese-Germa
 
 ## 5. Còn lại — cần phán đoán con người (không auto được)
 
-- **Academic_Signoff toàn chương trình:** hiện `signoff-manifest.json` có 1/36 cell signed (`reading/C2`), 35/36 pending. Machine-clean không đồng nghĩa release-signed. D7 tracking hiện tập trung ở `docs/content-quality/audit-2026-06/d7-signoff-register.md`.
+- **Academic_Signoff toàn chương trình:** hiện **0/36 cell có human/native signoff hợp lệ**. `reading/C2` từng được ghi `signed` bởi `German Academic Lead (AI/Kiro)`, nhưng đây chỉ là advisory review từ AI role và note gốc vẫn ghi chờ native-speaker spot-check. Theo governance hiện hành, AI role không được tính là human/native signoff. 36/36 cell vì vậy vẫn cần accountable human/native review trước release học thuật. D7 tracking tập trung ở `docs/content-quality/audit-2026-06/d7-signoff-register.md`.
 - **Audio_Restubbing listening:** 6/6 listening cell còn `audio=pending`; mọi transcript đã đổi cần audio parity/re-record trước khi gọi là Done đủ.
-
 - **Review thủ công Layer 2 sâu:** D1 proofreading, D2 level-fit, D3 ngữ nghĩa đáp án, D4 naturalness, D7 transcript-khớp-script, D8 blueprint fidelity. Mẫu phân tầng đã lập sẵn (`tmp/d2-/d3-/d4-manual-sample.json`).
 - **RB-P2-01 schema migration:** nếu công ty quyết chuẩn hoá, mở spec migration riêng (CTO/Tech Lead + Backend + Frontend).
 
 ## 6. Đề xuất bước kế tiếp
 
-Phần tự động hoá của cả audit + 3 remediation P0/P1/P2 đã hoàn tất và verify. Việc còn lại là review chuyên môn con người (các vai phối hợp) trên các mẫu đã chuẩn bị, và quyết định chiến lược cho RB-P2-01. Không còn hạng mục auto nào tồn đọng.
+Phần tự động hoá của audit + remediation đã hoàn tất và verify. Việc còn lại là review chuyên môn con người trên các mẫu đã chuẩn bị, bắt đầu từ một release slice hẹp thay vì ký toàn bộ chương trình cùng lúc. Không được tự động nâng AI advisory thành human/native signoff.
