@@ -2,10 +2,10 @@ import OpenAI from 'openai'
 
 let openai: OpenAI | null = null
 
-export function getGeminiApiKey(): string {
-    const apiKey = process.env.OPENROUTER_API_KEY || process.env.GEMINI_API_KEY || ''
+export function getOpenRouterApiKey(): string {
+    const apiKey = process.env.OPENROUTER_API_KEY?.trim() || ''
     if (!apiKey) {
-        throw new Error('OPENROUTER_API_KEY or GEMINI_API_KEY environment variable is not set')
+        throw new Error('OPENROUTER_API_KEY environment variable is not set')
     }
     return apiKey
 }
@@ -14,7 +14,7 @@ function getOpenAI(): OpenAI {
     if (!openai) {
         openai = new OpenAI({
             baseURL: 'https://openrouter.ai/api/v1',
-            apiKey: getGeminiApiKey(),
+            apiKey: getOpenRouterApiKey(),
         })
     }
     return openai
