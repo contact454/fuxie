@@ -1,90 +1,145 @@
 ---
-description: Execution model for Fuxie — Claude plans/manages/QCs and writes specs; Antigravity writes code; Codex renders assets. Reuse-first.
+description: Capability-based delivery model for Fuxie. Product names are mappings, not governance roles.
 ---
 
-# Fuxie Three-Agent Delivery Model
+# Fuxie Capability-Based Delivery Model
 
-Effective 2026-06-03. This is a binding working rule, layered on top of the
-role gate in `AGENTS.md` and `company-operating-model.md`. It defines WHO does
-WHAT across the three agents that build Fuxie.
+Effective bootstrap revision: 2026-09-11.
 
-## Agents and responsibilities
+This file keeps its historical path for compatibility, but Fuxie no longer hard-codes project authority to the names Claude, Antigravity or Codex. Governance uses capabilities so the workflow remains valid when tools, models, IDEs or connectors change.
 
-| Agent | Tooling (as configured by owner) | Owns | Must NOT do |
-| --- | --- | --- | --- |
-| **Claude** (this agent) | Claude Code | Planning, project management, QC, and authoring Requirements / Tech Design / Task List / handoff prompts. Reviews returned work against acceptance criteria. | Does **not** write or edit production/runtime code or assets. Plans and inspects only. |
-| **Antigravity** | Gemini ("3.5 Flash") | Primary code execution: implements the Tech Design + Task List exactly, runs gates (`pnpm check:quick`, `pnpm test:core`, `pnpm build`), reports results. | Does **not** invent product, UX, or content decisions; if a spec is ambiguous, it asks Claude rather than guessing. |
-| **Codex** | GPT Image 2.0 (image/asset skill) | Renders images and assets **only when an asset is missing** from the registry, per a Claude-written asset brief. Optimizes + exports to `public/`. | Does **not** render assets that already exist; does **not** change runtime logic. |
+## 1. Capabilities
 
-> Tooling names recorded as stated by the owner. Note: the existing in-repo
-> image pipeline (`scripts/gen-all-vocab-images.ts`, `apps/web/lib/ai/image-models.ts`,
-> `.agents/workflows/generate-images.md`) uses Gemini image models — keep it as
-> the reference pipeline if Codex needs to integrate with repo scripts.
+| Capability | Owns | Must not do |
+| --- | --- | --- |
+| **Project Orchestrator** | Source discovery, prioritization proposals, planning, requirements/design/task packages, routing, evidence collection, QC coordination, status synthesis | Must not bypass domain-role authority, fabricate evidence/sign-off, or treat a tool as connected without verification |
+| **Implementation Executor** | Bounded code/content/config implementation according to an approved work package; runs required checks available in its workspace | Must not invent product/UX/academic decisions outside the work package; must report ambiguity/blockers instead of guessing |
+| **Reviewer / QA** | Verification against acceptance criteria, negative cases, regression, scope/diff review, evidence status | Must not convert skipped/blocked checks into PASS or self-certify independence when the same context/agent cannot provide it |
+| **Asset Renderer** | New visual asset production only after an approved asset-gap brief | Must not render duplicates of existing registry assets or modify runtime logic unless separately assigned as executor |
 
-## The delivery loop
+Domain roles from `.agents/personnel/` are orthogonal to these capabilities. Example: a Backend Engineer can be the primary professional role while an Implementation Executor performs the actual edit.
 
+## 2. Current mapping rules
+
+Mappings are operational observations, not permanent authority:
+
+- The current connected Fuxie project manager may act as **Project Orchestrator** when the owner has assigned that function and the management/source gate has been completed.
+- Antigravity may act as an **Implementation Executor** only when a verified task interface/workspace is available and returns ref/log/evidence. Historical documentation that names Antigravity does not prove a current connection.
+- Claude Code, Codex, or another coding environment may act as an **Implementation Executor** when it has the required repository/workspace access and the task is explicitly routed there.
+- Image-generation tooling may act as **Asset Renderer** only after the asset plan confirms no suitable existing asset/registry key.
+- A model switching personas is not by itself an independent human/native reviewer. Human/native sign-off remains a separate evidence type when required by the academic release policy.
+
+## 3. Delivery loop
+
+```text
+Owner intent / canonical backlog
+          |
+          v
+Project Orchestrator
+  - role gate
+  - source/ref verification
+  - scope + acceptance
+  - work package
+          |
+          +--------------------+
+          |                    |
+          v                    v
+Implementation Executor    Asset Renderer (only if gap)
+          |                    |
+          +----------+---------+
+                     v
+              Reviewer / QA
+             acceptance + gates
+                     |
+          fail/block | pass
+              +------+- - - - - -> integrate / release gate
+              |      
+              v
+       fix/spec clarification
+              |
+              +----> Orchestrator
 ```
-Claude: Plan ──► Claude: Spec package ──► Handoff prompt(s)
-                                            │
-                         ┌──────────────────┴───────────────────┐
-                         ▼                                       ▼
-              Antigravity: implement code            Codex: render assets (only if missing)
-                         │                                       │
-                         └──────────────────┬────────────────────┘
-                                            ▼
-                                   Claude: QC vs acceptance
-                                            │
-                              pass ─────────┴───────── fail → back to spec/handoff
-                                            ▼
-                                      Integrate / next slice
-```
 
-Claude stays in the loop between every step: nothing ships without a Claude QC
-pass against the written acceptance criteria.
+No implementation is considered released until the relevant deployment/runtime evidence confirms the intended ref is active.
 
-## Spec package contract (what Claude writes per slice)
+## 4. Work package contract
 
-Every implementation slice gets ONE handoff doc under `docs/delivery/` with these
-sections, in this order:
+Every implementation slice reuses the existing `.kiro/specs` / `docs/delivery` source when possible. When a new bounded package is needed, it contains:
 
-1. **Context & Goal** — one paragraph: the user-visible problem and the win.
-2. **Requirements** — numbered, testable `R-n` statements (functional + non-functional). Use "SHALL".
-3. **Tech Design** — exact files (`path:line`), data shapes already available, the change per file, and reuse targets (existing components/registry keys). Call out what NOT to touch.
-4. **Asset plan** — list registry keys/paths to reuse. If an asset is missing, write a Codex brief; otherwise state "no new assets".
-5. **Task List** — ordered `T-n` checklist Antigravity executes, each ≤ ~1 file or 1 concern, each mapped to the `R-n` it satisfies.
-6. **Acceptance criteria / QC checklist** — how Claude will verify (gates to run, states to check, screenshots/URLs). Binary pass/fail.
-7. **Antigravity prompt** — a ready-to-paste work order (see contract below).
-8. **Codex prompt** — only if Asset plan found a gap; else "none".
+1. **Context & Goal** — user/system problem and expected win.
+2. **Requirements** — numbered, testable functional/non-functional statements.
+3. **Tech/Content Design** — exact files/surfaces/data shapes, reuse targets, constraints and what must not be touched.
+4. **Risk constraints** — security/privacy/data/academic/production conditions applicable to the slice.
+5. **Asset plan** — registry keys/paths to reuse; new render brief only when no suitable asset exists.
+6. **Task List** — ordered, bounded steps mapped to requirements.
+7. **Acceptance / QC** — binary criteria, negative cases and required gates.
+8. **Rollback / Recovery** — when runtime/data/config changes can cause operational impact.
+9. **Executor work order** — self-contained instructions.
+10. **Expected evidence report** — changed files, commit/ref, commands/checks, results, artifacts, blockers and remaining risk.
 
-## Handoff prompt contract
+## 5. Handoff contract
 
-Per `company-operating-model.md`, every prompt handed to Antigravity or Codex must state:
-**role · objective · repo context · exact files/commands to inspect · acceptance criteria · expected report format.** Keep prompts copy-paste runnable, with absolute repo context and no hidden assumptions.
+Every executor/render handoff must state:
 
-## Asset reuse-first rule
+- capability and primary professional role;
+- objective;
+- repository + base/head ref or workspace;
+- exact files/surfaces/commands to inspect;
+- canonical source/spec references;
+- in-scope and out-of-scope work;
+- acceptance criteria;
+- tests/gates to run;
+- data/security/academic constraints;
+- expected evidence/report format.
 
-Before any new render, check the registry — most needs are already covered:
+An executor is never told simply "fix it" when the task can affect product behavior, learner data, academic correctness or release safety.
 
-- Mascot poses / world props / UI frames: `apps/web/src/lib/mascot/fuxie-assets.ts` (+ `fuxie-global-assets`). Files under `apps/web/public/mascot-3d/`.
-- Reward items (Fucoin, XP star, CEFR badges, streak-freeze, hint-ticket, unlock-key, postcard, inventory prop): `apps/web/src/components/gamification/reward-assets.ts`. Files under `apps/web/public/reward-assets/optimized/`.
-- Surface→asset maps & contact sheets: `docs/design/asset-generation/`, `docs/design/asset-reuse-map.md`.
+## 6. Asset reuse-first rule
 
-Codex renders a new asset ONLY when Claude's Asset plan confirms no registry key
-fits. New assets follow the style guide in `docs/design/fuxie-german-village-concept.md`
-and the chroma-key → transparent-WebP export rule, then get a registry key.
+Before rendering any new visual:
 
-## QC checklist Claude runs on returned work
+- inspect `apps/web/src/lib/mascot/fuxie-assets.ts` and related typed registries;
+- inspect `apps/web/src/components/gamification/reward-assets.ts` where relevant;
+- inspect `docs/design/asset-reuse-map.md` and approved visual source docs;
+- reuse existing approved assets/components when they fit.
 
-- Acceptance criteria met, item by item (binary).
-- Gates green: `pnpm check:quick`, `pnpm test:core`, and `pnpm build` where relevant.
-- No fake/placeholder UI shipped (no dead buttons, no simulated data presented as real).
-- Errors are learner-facing where the spec requires it (no silent `console.error`).
-- Only the files named in the Tech Design changed (no scope creep); diff reviewed.
-- Reused existing assets/components; new renders only where the Asset plan allowed.
+New assets require a documented gap, an approved brief and a registry/update plan. Asset generation does not authorize runtime-code changes by itself.
 
-## File locations
+## 7. QC contract
 
-- Handoff packages (work orders for Antigravity/Codex): `docs/delivery/`.
-- Planning / audits / PRDs / UX specs: `docs/intake/` (phase-numbered).
-- Asset inventory & reuse map: `docs/design/asset-reuse-map.md`.
-- These working rules: this file, referenced from `company-operating-model.md`.
+Reviewer/QA checks applicable items from `docs/management/quality-gates.md` plus the work package acceptance criteria.
+
+Minimum review questions:
+
+- Did only approved scope change, or is expansion documented?
+- Are positive and required negative paths covered?
+- Are state-changing APIs owner/role-safe and input-validated?
+- Are tests/gates tied to the current tree?
+- Are learner-facing error/recovery states real rather than placeholder?
+- Were existing assets/components reused?
+- Are content/CEFR/audio/AI sign-offs represented accurately?
+- Is rollback/recovery known for runtime/data changes?
+- Is the claimed status code-fixed, tested, merged, deployed or released — and is evidence appropriate to that exact state?
+
+## 8. Tool readiness states
+
+Use these capability states for tools/agents/services:
+
+- `UNKNOWN` — not assessed.
+- `DISCOVERED` — exists in docs/catalog, access not tested.
+- `READ_VERIFIED` — target resource can be read.
+- `WRITE_VERIFIED` — safe bounded write/read-back completed.
+- `EXECUTION_VERIFIED` — can execute bounded work and return logs/ref/evidence.
+- `BLOCKED` — required access/config missing.
+- `REVOKED/UNAVAILABLE` — intentionally disabled or unavailable.
+
+Do not infer write/deploy/database/provider capability from an installed plugin alone.
+
+## 9. Current management sources
+
+- `docs/management/README.md`
+- `docs/management/source-registry.json`
+- `docs/management/quality-gates.md`
+- `docs/management/baselines/`
+
+These govern orchestration semantics. Existing product, launch, academic, design and technical specs retain authority over their own domains.
