@@ -1,23 +1,15 @@
 import { NextRequest, NextResponse } from 'next/server'
 import { withDbAuth } from '@/lib/auth/middleware'
 import { handleApiError } from '@/lib/api/error-handler'
-import { buildDailySession } from '@/lib/session/builder'
-import type { CefrLevel } from '@fuxie/database'
+import { startSession } from '@/lib/session/attempt-service'
+import { startSchema } from '@/lib/session/schemas'
 
-export async function GET(req: NextRequest) {
+export async function POST(req: NextRequest) {
     try {
         const auth = await withDbAuth(req)
-        
-        // Extract level parameter
-        const { searchParams } = new URL(req.url)
-        const levelStr = searchParams.get('level')
-        
-        // Use requested level or default to B1 (should query UserProfile ideally if not provided)
-        const level = (levelStr ?? 'B1') as CefrLevel
-
-        const items = await buildDailySession(auth.userId, level)
-
-        return NextResponse.json({ success: true, data: { items, level } })
+        const input = startSchema.parse(await req.json())
+        const data = await startSession(auth.userId, input)
+        return NextResponse.json({ success: true, data })
     } catch (err) {
         return handleApiError(err)
     }

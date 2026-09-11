@@ -2,8 +2,7 @@ import { redirect } from 'next/navigation'
 import { getServerUser } from '@/lib/auth/server-auth'
 import { prisma } from '@fuxie/database'
 import { SessionPlayerDynamic } from '@/components/session/SessionPlayerDynamic'
-import { buildDailySession, type SessionItem } from '@/lib/session/builder'
-import type { ExerciseResult } from '@/lib/session/types'
+import type { SessionAttemptView } from '@/lib/session/contracts'
 import type { CefrLevel } from '@fuxie/database'
 import type { ReactNode } from 'react'
 
@@ -12,68 +11,99 @@ export const metadata = {
     description: 'Học thông minh với lộ trình Fuxie được thiết kế riêng cho bạn.',
 }
 
-const SESSION_VISUAL_QA_ITEMS: SessionItem[] = [
-    {
-        id: 'visual-session-1',
-        type: 'VOCAB_NEW',
-        format: 'INTRO',
-        points: 10,
-        data: {
-            term: 'der Termin',
-            meaning: 'cuộc hẹn',
-            article: 'der',
-            partOfSpeech: 'noun',
-            exampleSentence: 'Ich habe morgen einen Termin.',
-        },
-    },
-    {
-        id: 'visual-session-2',
-        type: 'VOCAB_REVIEW',
-        format: 'MULTIPLE_CHOICE',
-        points: 10,
-        data: {
-            term: 'pünktlich',
-            meaning: 'đúng giờ',
-            partOfSpeech: 'adjective',
-            options: ['đúng giờ', 'muộn', 'đắt', 'mệt'],
-            correctIndex: 0,
-        },
-    },
-    {
-        id: 'visual-session-3',
-        type: 'GRAMMAR',
-        format: 'MULTIPLE_CHOICE',
-        points: 15,
-        data: {
-            lessonId: 'visual-grammar-a1',
-            topicTitle: 'Perfekt',
-            questionDe: 'Ich ___ gestern gelernt.',
-            questionNative: 'Chọn trợ động từ đúng.',
-            options: ['bin', 'habe', 'war', 'werde'],
-            correctIndex: 1,
-            explanation: 'Mit lernen nutzt du im Perfekt meistens haben.',
-        },
-    },
-    {
-        id: 'visual-session-4',
-        type: 'VOCAB_REVIEW',
-        format: 'TYPING',
-        points: 10,
-        data: {
-            term: 'wiederholen',
-            meaning: 'ôn lại',
-            partOfSpeech: 'verb',
-            exampleSentence: 'Wir wiederholen die Wörter.',
-        },
-    },
-]
+const QA_ATTEMPT_ID = '00000000-0000-4000-8000-000000000001'
+const QA_REVISION = '00000000-0000-4000-8000-000000000002'
+const QA_INTRO_ID = '00000000-0000-4000-8000-000000000003'
+const QA_REVIEW_ID = '00000000-0000-4000-8000-000000000004'
+const QA_OPTION_OK = '00000000-0000-4000-8000-000000000005'
+const QA_OPTION_BAD = '00000000-0000-4000-8000-000000000006'
 
-const SESSION_VISUAL_QA_RESULTS: ExerciseResult[] = SESSION_VISUAL_QA_ITEMS.map((item) => ({
-    id: item.id,
-    type: item.type,
-    data: item.data,
-    correct: true,
-}))
+function buildVisualQaPreview(level: CefrLevel, finished: boolean): SessionAttemptView {
+    const savedAt = new Date(0).toISOString()
+    const checkedAnswers = finished
+        ? [
+            {
+                questionId: QA_INTRO_ID,
+                answer: { kind: 'ack' as const, acknowledged: true as const },
+                correct: null,
+                points: 0,
+                checkedAt: savedAt,
+                feedback: { answerLabel: null, correctOptionId: null },
+            },
+            {
+                questionId: QA_REVIEW_ID,
+                answer: { kind: 'option' as const, optionId: QA_OPTION_OK },
+                correct: true,
+                points: 10,
+                checkedAt: savedAt,
+                feedback: { answerLabel: 'đúng giờ', correctOptionId: QA_OPTION_OK },
+            },
+        ]
+        : []
+
+    return {
+        state: 'ready',
+        attemptId: QA_ATTEMPT_ID,
+        contractVersion: 2,
+        publicRevision: QA_REVISION,
+        level,
+        status: finished ? 'COMPLETED' : 'IN_PROGRESS',
+        expiresAt: new Date(Date.now() + 60 * 60 * 1000).toISOString(),
+        items: [
+            {
+                id: QA_INTRO_ID,
+                type: 'VOCAB_NEW',
+                format: 'INTRO',
+                points: 0,
+                data: {
+                    term: 'der Termin',
+                    meaning: 'cuộc hẹn',
+                    article: 'MASCULINE',
+                    exampleSentence: 'Ich habe morgen einen Termin.',
+                    audioUrl: null,
+                },
+            },
+            {
+                id: QA_REVIEW_ID,
+                type: 'VOCAB_REVIEW',
+                format: 'MULTIPLE_CHOICE',
+                points: 10,
+                data: {
+                    term: 'pünktlich',
+                    options: [
+                        { id: QA_OPTION_OK, label: 'đúng giờ' },
+                        { id: QA_OPTION_BAD, label: 'muộn' },
+                    ],
+                },
+            },
+        ],
+        checkedAnswers,
+        nextQuestionId: finished ? null : QA_INTRO_ID,
+        heartsRemaining: 5,
+        completionAvailable: finished,
+        receipt: finished
+            ? {
+                attemptId: QA_ATTEMPT_ID,
+                status: 'COMPLETED',
+                reason: 'all_answered',
+                level,
+                gradedCount: 1,
+                correctCount: 1,
+                acknowledgedCount: 1,
+                baseXpEarned: 10,
+                streakBonusXp: 0,
+                xpEarned: 10,
+                heartsRemaining: 5,
+                completionEligible: true,
+                wordsLearned: 1,
+                srsReviewed: 1,
+                savedAt,
+                contractVersion: 2,
+                gradingVersion: 'visual-qa',
+            }
+            : null,
+    }
+}
 
 function isSessionVisualQaFixture(params: { fixture?: string } | undefined) {
     return process.env.NODE_ENV !== 'production' && params?.fixture === 'visual-qa'
@@ -113,11 +143,8 @@ export default async function SessionPage({
             <SessionRouteShell visualState={isSuccess ? 'success' : 'default'}>
                 <SessionPlayerDynamic
                     level={fixtureLevel}
-                    initialItems={SESSION_VISUAL_QA_ITEMS}
-                    initialFinished={isSuccess}
-                    initialResults={isSuccess ? SESSION_VISUAL_QA_RESULTS : []}
-                    initialScore={isSuccess ? 45 : 0}
-                    initialHearts={5}
+                    userId="visual-qa-user"
+                    preview={buildVisualQaPreview(fixtureLevel, isSuccess)}
                 />
             </SessionRouteShell>
         )
@@ -132,11 +159,10 @@ export default async function SessionPage({
     })
 
     const level = (profile?.currentLevel || 'A1') as CefrLevel
-    const initialItems = await buildDailySession(serverUser.userId, level)
 
     return (
         <SessionRouteShell visualState="default">
-            <SessionPlayerDynamic level={level} initialItems={initialItems} />
+            <SessionPlayerDynamic level={level} userId={serverUser.userId} />
         </SessionRouteShell>
     )
 }
