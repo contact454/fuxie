@@ -1,9 +1,9 @@
 import { NextResponse } from 'next/server'
 import { ZodError } from 'zod'
 import { AuthError, NotFoundError } from '@/lib/auth/middleware'
+import { SessionError } from '@/lib/session/errors'
 
 export function handleApiError(error: unknown): NextResponse {
-    // Zod validation
     if (error instanceof ZodError) {
         return NextResponse.json(
             {
@@ -21,7 +21,6 @@ export function handleApiError(error: unknown): NextResponse {
         )
     }
 
-    // Auth error
     if (error instanceof AuthError) {
         return NextResponse.json(
             { success: false, error: { code: 'UNAUTHORIZED', message: error.message } },
@@ -29,11 +28,17 @@ export function handleApiError(error: unknown): NextResponse {
         )
     }
 
-    // Not found
     if (error instanceof NotFoundError) {
         return NextResponse.json(
             { success: false, error: { code: 'NOT_FOUND', message: error.message } },
             { status: 404 }
+        )
+    }
+
+    if (error instanceof SessionError) {
+        return NextResponse.json(
+            { success: false, error: { code: error.code, message: error.message } },
+            { status: error.status }
         )
     }
 
@@ -52,7 +57,6 @@ export function handleApiError(error: unknown): NextResponse {
         )
     }
 
-    // Prisma unique constraint
     if (
         error &&
         typeof error === 'object' &&
@@ -65,7 +69,6 @@ export function handleApiError(error: unknown): NextResponse {
         )
     }
 
-    // Unknown
     console.error('[API Error]', error)
     return NextResponse.json(
         { success: false, error: { code: 'INTERNAL_ERROR', message: 'An unexpected error occurred' } },

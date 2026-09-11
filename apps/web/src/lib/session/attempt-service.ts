@@ -1,5 +1,6 @@
 import { randomUUID } from 'node:crypto'
 import { prisma, Prisma } from '@fuxie/database'
+import { calculateReview, createNewCard, type SrsRating } from '@fuxie/srs-engine'
 import type { z } from 'zod'
 import { NotFoundError } from '@/lib/auth/middleware'
 import { recordLearningActivity } from '@/lib/progress/learning-activity'
@@ -82,6 +83,133 @@ async function lockAndValidateSources(tx: Tx, snapshot: SessionSnapshot, catalog
         if (verifyVersion && source.updatedAt.toISOString() !== question.vocabularyVersion) {
             throw new SessionError(409, 'SESSION_CONTENT_CHANGED', 'Content changed while starting the session')
         }
+    }
+}
+
+function ratingForSessionAnswer(correct: boolean | null): SrsRating {
+    if (correct === null) throw new Error('Graded session answer is missing correctness')
+    // Session v2 is binary. Map its checked result onto the canonical SRS engine
+    // rather than maintaining a second scheduling algorithm.
+    return correct ? 'GOOD' : 'AGAIN'
+}
+
+function isUniqueConstraintError(error: unknown) {
+    return Boolean(error && typeof error === 'object' && 'code' in error && (error as { code?: unknown }).code === 'P2002')
+}
+
+async function applyReviewTransition(
+    tx: Tx,
+    userId: string,
+    question: SessionSnapshot['questions'][number],
+    correct: boolean | null,
+    now: Date,
+) {
+    const card = await tx.srsCard.findFirst({
+        where: {
+            id: question.cardId!,
+            userId,
+            vocabularyItemId: question.vocabularyItemId,
+            updatedAt: new Date(question.cardUpdatedAt!),
+        },
+        select: {
+            id: true,
+            interval: true,
+            repetitions: true,
+            easeFactor: true,
+            state: true,
+            lapseCount: true,
+        },
+    })
+    if (!card) throw new SessionError(409, 'SESSION_SRS_CHANGED', 'Review state changed; restart the session')
+
+    const rating = ratingForSessionAnswer(correct)
+    const next = calculateReview(card, rating)
+    const updated = await tx.srsCard.updateMany({
+        where: {
+            id: card.id,
+            userId,
+            vocabularyItemId: question.vocabularyItemId,
+            updatedAt: new Date(question.cardUpdatedAt!),
+        },
+        data: {
+            interval: next.interval,
+            repetitions: next.repetitions,
+            easeFactor: next.easeFactor,
+            state: next.state,
+            lapseCount: next.lapseCount,
+            nextReviewAt: next.nextReviewAt,
+            lastReviewedAt: now,
+            totalReviews: { increment: 1 },
+            totalCorrect: correct ? { increment: 1 } : undefined,
+            totalIncorrect: correct ? undefined : { increment: 1 },
+        },
+    })
+    if (updated.count !== 1) throw new SessionError(409, 'SESSION_SRS_CHANGED', 'Review state changed; restart the session')
+
+    await tx.srsReviewLog.create({
+        data: {
+            userId,
+            cardId: card.id,
+            rating,
+            prevInterval: card.interval,
+            prevEaseFactor: card.easeFactor,
+            prevState: card.state,
+            newInterval: next.interval,
+            newEaseFactor: next.easeFactor,
+            newState: next.state,
+        },
+    })
+}
+
+async function createCardFromNewWord(
+    tx: Tx,
+    userId: string,
+    vocabularyItemId: string,
+    correct: boolean | null,
+    now: Date,
+) {
+    const rating = ratingForSessionAnswer(correct)
+    const initial = createNewCard()
+    const next = calculateReview(initial, rating)
+
+    try {
+        const card = await tx.srsCard.create({
+            data: {
+                userId,
+                vocabularyItemId,
+                interval: next.interval,
+                repetitions: next.repetitions,
+                easeFactor: next.easeFactor,
+                state: next.state,
+                lapseCount: next.lapseCount,
+                nextReviewAt: next.nextReviewAt,
+                lastReviewedAt: now,
+                totalReviews: 1,
+                totalCorrect: correct ? 1 : 0,
+                totalIncorrect: correct ? 0 : 1,
+            },
+            select: { id: true },
+        })
+
+        await tx.srsReviewLog.create({
+            data: {
+                userId,
+                cardId: card.id,
+                rating,
+                prevInterval: initial.interval,
+                prevEaseFactor: initial.easeFactor,
+                prevState: initial.state,
+                newInterval: next.interval,
+                newEaseFactor: next.easeFactor,
+                newState: next.state,
+            },
+        })
+        return true
+    } catch (error) {
+        if (isUniqueConstraintError(error)) {
+            throw new SessionError(409, 'SESSION_SRS_CHANGED', 'Review state changed; restart the session')
+        }
+        throw error
     }
 }
 
@@ -176,18 +304,12 @@ export async function completeSession(userId: string, input: z.infer<typeof comp
         for (const answer of answers) {
             const question = snapshot.questions.find(q => q.item.id === answer.questionId)!
             if (question.item.format === 'INTRO') continue
-            const nextReviewAt = new Date(now.getTime() + (answer.correct ? SESSION_POLICY.lifetimeMs : 0))
             if (question.item.type === 'VOCAB_REVIEW') {
-                // W01 invariant retained at the mutation sink; version check also prevents stale overwrite.
-                const updated = await tx.srsCard.updateMany({
-                    where: { id: question.cardId!, userId, vocabularyItemId: question.vocabularyItemId, updatedAt: new Date(question.cardUpdatedAt!) },
-                    data: { nextReviewAt },
-                })
-                if (updated.count !== 1) throw new SessionError(409, 'SESSION_SRS_CHANGED', 'Review state changed; restart the session')
+                await applyReviewTransition(tx, userId, question, answer.correct, now)
                 srsReviewed++
             } else {
-                const created = await tx.srsCard.createMany({ data: [{ userId, vocabularyItemId: question.vocabularyItemId, nextReviewAt, easeFactor: 2.5 }], skipDuplicates: true })
-                if (answer.correct) wordsLearned += created.count
+                const created = await createCardFromNewWord(tx, userId, question.vocabularyItemId, answer.correct, now)
+                if (created && answer.correct) wordsLearned++
             }
         }
         const completionEligible = !progress.exhausted
