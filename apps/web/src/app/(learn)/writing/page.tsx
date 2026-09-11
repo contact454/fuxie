@@ -119,7 +119,55 @@ async function getAvailableLevels(): Promise<CefrLevel[]> {
     })
 }
 
-export default async function WritingPage() {
+export default async function WritingPage({
+    searchParams,
+}: {
+    searchParams?: Promise<{ fixture?: string; state?: string }>
+}) {
+    const queryParams = await searchParams
+    const isVisualQa = queryParams?.fixture === 'visual-qa'
+
+    if (isVisualQa) {
+        const isEmpty = queryParams?.state === 'empty'
+        const availableLevels: CefrLevel[] = ['A1']
+        const initialLevel: CefrLevel = 'A1'
+        const teile = isEmpty
+            ? []
+            : [
+                {
+                    teil: 1,
+                    teilName: 'Viết thư cá nhân',
+                    exercises: [
+                        {
+                            id: 'W-A1-GOETHE-001',
+                            exerciseId: 'W-A1-GOETHE-001',
+                            topic: 'Einladung zur Party',
+                            textType: 'E-Mail',
+                            register: 'informal',
+                            minWords: 30,
+                            maxWords: 40,
+                            timeMinutes: 15,
+                            completion: null,
+                        },
+                    ],
+                },
+            ]
+        const totalExercises = isEmpty ? 0 : 1
+        const totalCompleted = 0
+
+        return (
+            <div className="max-w-5xl mx-auto px-4 py-8">
+                <WritingClientDynamic
+                    teile={teile}
+                    totalExercises={totalExercises}
+                    totalCompleted={totalCompleted}
+                    availableLevels={availableLevels}
+                    initialLevel={initialLevel}
+                />
+            </div>
+        )
+    }
+
     const serverUser = await getServerUser()
     if (!serverUser) redirect('/login')
 

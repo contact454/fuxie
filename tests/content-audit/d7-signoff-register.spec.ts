@@ -21,8 +21,8 @@ describe('D7 academic signoff register', () => {
     expect(register.summary.d2ManualSamples).toBe(24)
     expect(register.summary.d3ManualSamples).toBe(24)
     expect(register.summary.d4ManualSamples).toBe(12)
-    expect(register.summary.vocabularyD7ReviewRows).toBe(1_011)
-    expect(register.summary.vocabularyD7P1Rows).toBe(138)
+    expect(register.summary.vocabularyD7ReviewRows).toBe(914)
+    expect(register.summary.vocabularyD7P1Rows).toBe(40)
     expect(register.summary.missingSampleFiles).toBe(0)
   })
 

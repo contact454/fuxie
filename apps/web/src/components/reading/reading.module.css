@@ -3,8 +3,8 @@
 /* Typography — Reading-optimized */
 .readingText {
   font-family: 'Georgia', 'Times New Roman', serif;
-  font-size: var(--text-base-size);
-  line-height: 1.85;
+  font-size: 16px;
+  line-height: 1.6;
   color: var(--color-text-primary);
   letter-spacing: 0.01em;
 }
@@ -736,14 +736,11 @@
   color: inherit;
 }
 
-/* ── Responsive — Mobile ── */
 @media (max-width: 1024px) {
-  .readingText { font-size: var(--text-sm-size); line-height: 1.75; }
   .textBody { padding: 16px; }
   .questionPanel { padding: 16px; }
 }
 @media (max-width: 640px) {
-  .readingText { font-size: var(--text-sm-size); }
   .introCard { padding: 20px 16px; }
   .introImage img { max-height: 150px; }
 }

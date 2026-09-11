@@ -17,6 +17,7 @@
 | `default` | `coach` | yes |
 | `empty` | `guard` | yes (Req 11.1) |
 | `error` | `guard` | yes (Req 11.1) |
+| `mastered` | `coach` | yes |
 | `locked` | — | n/a (no gating) |
 
 Verified by `pnpm check:state-shell-coverage` (Req 11.1, 11.2).
@@ -62,7 +63,11 @@ Verified by `pnpm check:state-shell-coverage` (Req 11.1, 11.2).
 | Animations only `transform`/`opacity`, 120–2000ms | Req 13.1, Req 13.5 | PASS — Property 10 |
 | Reduced-motion strips `animate-*` classes | Req 13.2 | PASS — Property 10; `useReducedMotion` |
 
+## Mastered state (M5)
+
+- M5 Mastered Mobile: `screenshots/dashboard/dashboard-mastered-mobile.png`
+
 ## Result
 
 - **Failing items**: 0
-- **Pending items**: screenshot capture (mobile + desktop, default/empty/error). All implementation invariants verified by spec compliance + automated checks.
+- **Pending items**: screenshot capture (mobile + desktop, default/empty/error/mastered). All implementation invariants verified by spec compliance + automated checks.

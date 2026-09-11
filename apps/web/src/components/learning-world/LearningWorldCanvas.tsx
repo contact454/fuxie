@@ -60,6 +60,7 @@ import {
 import { useDevicePixelRatio } from './useDevicePixelRatio'
 import { useReducedMotion } from './useReducedMotion'
 import { useResizeObserver } from './useResizeObserver'
+import { IsoPlate, WorldNode } from '@fuxie/ui/components'
 
 /**
  * Props for the `LearningWorldCanvas` component.
@@ -742,20 +743,26 @@ export function LearningWorldCanvas(
     // of 16:10 to win back ~60 vertical px on desktop while keeping
     // mobile portrait fit (358×201 cf. Pythagorean math in the smoke
     // results).
+    const isTrans = scene.isTransparent === true
+
     const outerStyle: CSSProperties = {
         width: '100%',
         maxWidth: 1080,
         margin: '0 auto',
-        padding: 12,
-        background:
-            'radial-gradient(ellipse at top, #2a3a55 0%, #16202f 70%, #0c1320 100%)',
-        borderRadius: 12,
-        boxShadow:
-            'inset 0 0 0 1px rgba(255, 255, 255, 0.06), 0 8px 32px rgba(0, 0, 0, 0.3)',
+        padding: isTrans ? 0 : 12,
+        paddingTop: isTrans ? 'calc(56px + env(safe-area-inset-top, 0px))' : undefined,
+        paddingBottom: isTrans ? 'calc(140px + env(safe-area-inset-bottom, 0px))' : undefined,
+        background: isTrans
+            ? 'transparent'
+            : 'radial-gradient(ellipse at top, #2a3a55 0%, #16202f 70%, #0c1320 100%)',
+        borderRadius: isTrans ? 0 : 12,
+        boxShadow: isTrans
+            ? 'none'
+            : 'inset 0 0 0 1px rgba(255, 255, 255, 0.06), 0 8px 32px rgba(0, 0, 0, 0.3)',
         display: 'grid',
         gridTemplateColumns: 'minmax(0, 1fr)',
         gridTemplateRows: 'auto auto',
-        gap: 10,
+        gap: isTrans ? 0 : 10,
         position: 'relative',
     }
 
@@ -764,13 +771,14 @@ export function LearningWorldCanvas(
     // wrapper to stay visible.
     const wrapperStyle: CSSProperties = {
         width: '100%',
-        aspectRatio: '16 / 9',
+        aspectRatio: isTrans ? '2 / 3' : '16 / 9',
         position: 'relative',
-        background: '#1a1f2e',
-        borderRadius: 8,
+        background: isTrans ? 'transparent' : '#1a1f2e',
+        borderRadius: isTrans ? 0 : 8,
         overflow: 'hidden',
-        boxShadow:
-            'inset 0 0 0 1px rgba(255, 255, 255, 0.05), 0 2px 12px rgba(0, 0, 0, 0.4)',
+        boxShadow: isTrans
+            ? 'none'
+            : 'inset 0 0 0 1px rgba(255, 255, 255, 0.05), 0 2px 12px rgba(0, 0, 0, 0.4)',
     }
 
     const canvasStyle: CSSProperties = {
@@ -779,6 +787,11 @@ export function LearningWorldCanvas(
         height: '100%',
         maxWidth: '100%',
         maxHeight: '100%',
+        position: isTrans ? 'absolute' : 'relative',
+        top: 0,
+        left: 0,
+        zIndex: 1,
+        pointerEvents: isTrans ? 'none' : 'auto',
     }
 
     // Visible hotspot panel (companion to the semantic <HotspotList>).
@@ -813,6 +826,21 @@ export function LearningWorldCanvas(
                 className="learning-world-canvas__stage"
                 style={wrapperStyle}
             >
+                {isTrans && scene.backgroundImage && (
+                    <IsoPlate
+                        src={scene.backgroundImage}
+                        alt={"World Map Base" /* // locale-allow */}
+                        bleed={true}
+                        style={{
+                            position: 'absolute',
+                            top: 0,
+                            left: 0,
+                            width: '100%',
+                            height: '100%',
+                            zIndex: 0,
+                        }}
+                    />
+                )}
                 <canvas
                     ref={canvasRef}
                     aria-label={scene.canvasAriaLabel}
@@ -836,6 +864,7 @@ export function LearningWorldCanvas(
                             fontSize: 12,
                             padding: '6px 10px',
                             borderRadius: 6,
+                            zIndex: 2,
                         }}
                     >
                         {`Some assets failed to load: ${failedAssetKeys.join(
@@ -843,6 +872,37 @@ export function LearningWorldCanvas(
                         )}`}
                     </div>
                 ) : null}
+
+                {/* Overlay React WorldNode elements */}
+                {isTrans && ready && scene.objects.map((obj) => {
+                    const coords = obj.meta as { x?: number; y?: number; state?: 'locked' | 'open' | 'mastered'; nodeNumber?: number; title?: string; isPrimaryCta?: boolean; href?: string } | undefined
+                    if (!coords || typeof coords.x !== 'number' || typeof coords.y !== 'number') return null
+
+                    return (
+                        <div
+                            key={obj.id}
+                            style={{
+                                position: 'absolute',
+                                left: `${coords.x}%`,
+                                top: `${coords.y}%`,
+                                transform: 'translate(-50%, -50%)',
+                                zIndex: 2,
+                            }}
+                        >
+                            <WorldNode
+                                state={coords.state ?? 'locked'}
+                                title={coords.title ?? obj.ariaLabel ?? ''}
+                                nodeNumber={coords.nodeNumber ?? 1}
+                                isPrimaryCta={coords.isPrimaryCta}
+                                onClick={() => {
+                                    if (coords.href) {
+                                        window.location.href = coords.href
+                                    }
+                                }}
+                            />
+                        </div>
+                    )
+                })}
             </div>
 
             {/*
@@ -853,16 +913,18 @@ export function LearningWorldCanvas(
               interactive WorldObject still produces exactly one
               focusable, keyboard-activatable item (Requirement 4.1).
             */}
-            <div
-                className="learning-world-canvas__panel"
-                style={panelStyle}
-            >
-                <h2 style={panelHeadingStyle}>Scene destinations</h2>
-                <HotspotList
-                    scene={scene}
-                    canvasUnavailable={canvasUnavailable}
-                />
-            </div>
+            {!isTrans && (
+                <div
+                    className="learning-world-canvas__panel"
+                    style={panelStyle}
+                >
+                    <h2 style={panelHeadingStyle}>{"Scene destinations" /* // locale-allow */}</h2>
+                    <HotspotList
+                        scene={scene}
+                        canvasUnavailable={canvasUnavailable}
+                    />
+                </div>
+            )}
         </div>
     )
 }

@@ -5,46 +5,48 @@ import { useTranslations } from 'next-intl'
 import { Home, BookOpen, Target, Headphones, Pencil, MessageSquare, Trophy, LogOut } from 'lucide-react'
 import { FUXIE_WORLD_PROPS, FUXIE_MASCOT_STATES } from '@/lib/mascot/fuxie-assets'
 import { PrimaryCta } from '@/components/ui/primary-cta'
-import type { ExerciseResult } from '@/lib/session/types'
+import type { SessionReceipt } from '@/lib/session/contracts'
 
 export function SessionResultScreen({
-    score,
-    hearts: _hearts,
+    receipt,
     total,
-    saving,
     onFinish,
-    results = [],
-    level = 'A1',
+    onRestart,
+    pending = false,
+    preview = false,
 }: {
-    score: number
-    hearts: number
+    receipt: SessionReceipt
     total: number
-    saving: boolean
     onFinish: () => void
-    results?: ExerciseResult[]
-    level?: string
+    onRestart: () => void
+    pending?: boolean
+    preview?: boolean
 }) {
     const t = useTranslations('Session.resultScreen')
-    const tG = useTranslations('Gamification')
-    const evaluatedResults = results.filter(r => r.correct !== undefined)
-    const correctCount = evaluatedResults.filter(r => r.correct).length
-    const totalEvaluated = evaluatedResults.length
-    const accuracy = totalEvaluated > 0 ? Math.round((correctCount / totalEvaluated) * 100) : 100
+    const ts = useTranslations('Session.integrity')
+    const score = receipt.xpEarned
+    const level = receipt.level
+    const correctCount = receipt.correctCount
+    const totalEvaluated = receipt.gradedCount
+    const accuracy = totalEvaluated > 0 ? Math.round((correctCount / totalEvaluated) * 100) : null
+    const completed = receipt.acknowledgedCount + receipt.gradedCount
+    const exhausted = receipt.status === 'EXHAUSTED'
 
-    const isPerfect = accuracy >= 80
+    const isPerfect = !exhausted && accuracy !== null && accuracy >= 80
     const mascotImg = isPerfect ? FUXIE_MASCOT_STATES.resultCelebration : FUXIE_MASCOT_STATES.gentleCorrection
 
-    const vocabResults = results.filter(r => r.type === 'VOCAB_NEW' || r.type === 'VOCAB_REVIEW')
-    const words = vocabResults.length > 0 ? vocabResults.length : total
+    const words = receipt.wordsLearned
 
     return (
         <div
-            data-role="session-success-state"
+            data-role={exhausted ? 'session-exhausted-state' : 'session-success-state'}
             data-slice="slice-1"
             data-module="03-session"
-            data-visual-state="success"
+            data-visual-state={exhausted ? 'exhausted' : 'success'}
+            data-session-preview={preview ? 'true' : undefined}
             className="min-h-screen bg-[#5BB8F5] font-sans text-[#173b56] flex flex-col"
         >
+            {preview && <p role="status" className="bg-amber-50 p-3 text-center text-sm font-bold">{ts('preview')}</p>}
 
             {/* ═══════════════════════════════════════════════
                 TOP HEADER — matches mock-state: FUXIE DASHBOARD with full XP stats
@@ -70,7 +72,7 @@ export function SessionResultScreen({
                     <span className="bg-[#2EC4B6] text-white text-[10px] font-black px-2.5 py-1 rounded-full">{level}</span>
                     <div className="flex flex-col w-36">
                         <div className="flex justify-between text-[8px] font-bold text-[#3C78A8]">
-                            <span>{t('sessionCompleted')}</span>
+                            <span>{ts('saved')}</span>
                             <span>+{score} XP</span>
                         </div>
                         <div className="h-1.5 bg-[#CCE4F0]/40 rounded-full overflow-hidden mt-0.5">
@@ -84,6 +86,7 @@ export function SessionResultScreen({
 
                 <button
                     onClick={onFinish}
+                    disabled={pending}
                     className="p-2 bg-white hover:bg-gray-50 rounded-full shadow-sm border border-[#CCE4F0]/60 text-gray-500 hover:text-gray-800 transition"
                     title={t('backToDashboardTooltip')}
                 >
@@ -135,10 +138,10 @@ export function SessionResultScreen({
                         <div>
                             <p className="text-[10px] font-black text-[#3C78A8] uppercase tracking-widest">{t('sessionTitle', { level })}</p>
                             <h2 className="text-3xl lg:text-4xl font-black text-[#173b56] mt-1 leading-tight">
-                                {t('lessonDoneTitle')}
+                                {exhausted ? ts('exhaustedSavedTitle') : ts('savedTitle')}
                             </h2>
                             <p className="text-sm font-semibold text-[#3C78A8] mt-1 leading-snug">
-                                {t('lessonDoneDesc')}
+                                {exhausted ? ts('exhaustedSavedDescription') : ts('savedDescription')}
                             </p>
                         </div>
 
@@ -147,16 +150,13 @@ export function SessionResultScreen({
                             {/* Circular checkmark badge */}
                             <div className="relative flex-shrink-0">
                                 {/* Confetti emojis */}
-                                <span className="absolute -top-3 -left-4 text-2xl animate-bounce" style={{ animationDelay: '0.1s' }}>🎉</span>
-                                <span className="absolute -top-3 right-0 text-xl animate-bounce" style={{ animationDelay: '0.4s' }}>✨</span>
-                                <span className="absolute bottom-0 -left-3 text-xl animate-bounce" style={{ animationDelay: '0.7s' }}>⭐</span>
-                                <span className="absolute -bottom-2 right-0 text-xl animate-bounce" style={{ animationDelay: '1.0s' }}>🎈</span>
+                                {isPerfect && <span aria-hidden="true" className="absolute -top-3 -left-4 text-2xl">🎉</span>}
 
                                 {/* Circle badge */}
                                 <div className="w-28 h-28 bg-[#2EC4B6] rounded-full flex flex-col items-center justify-center shadow-2xl shadow-[#2EC4B6]/40 border-4 border-white relative">
-                                    <span className="text-5xl">✓</span>
+                                    <span aria-hidden="true" className="text-5xl">{exhausted ? '♥' : '✓'}</span>
                                     <div className="absolute -bottom-3 bg-[#2EC4B6] text-white text-[9px] font-black px-3 py-1 rounded-full border-2 border-white shadow-lg whitespace-nowrap">
-                                        {t('stepsCompleted', { completed: total, total })}
+                                        {t('stepsCompleted', { completed, total })}
                                     </div>
                                 </div>
                             </div>
@@ -181,7 +181,7 @@ export function SessionResultScreen({
                                 <div className="h-1.5 bg-[#CCE4F0]/40 rounded-full overflow-hidden mt-1">
                                     <div className="h-full bg-[#FFB703] rounded-full w-full" />
                                 </div>
-                                <span className="text-[9px] font-bold text-[#3C78A8]">{t('sessionCompleted')}</span>
+                                <span className="text-[9px] font-bold text-[#3C78A8]">{ts('saved')}</span>
                             </div>
 
                             {/* Words */}
@@ -189,14 +189,14 @@ export function SessionResultScreen({
                                 <div className="flex items-center gap-2">
                                     <span className="text-2xl">📖</span>
                                     <div>
-                                        <span className="text-[10px] font-black text-[#3C78A8] uppercase tracking-wide block">{t('wordsGeuebtHeader')}</span>
+                                        <span className="text-[10px] font-black text-[#3C78A8] uppercase tracking-wide block">{ts('newWords')}</span>
                                         <span className="text-2xl font-black text-[#173b56]">{words}</span>
                                     </div>
                                 </div>
                                 <div className="h-1.5 bg-[#CCE4F0]/40 rounded-full overflow-hidden mt-1">
                                     <div className="h-full bg-[#2EC4B6] rounded-full w-full" />
                                 </div>
-                                <span className="text-[9px] font-bold text-[#2EC4B6]">{t('greatWork')}</span>
+                                <span className="text-[9px] font-bold text-[#3C78A8]">{ts('reviewedCards', { count: receipt.srsReviewed })}</span>
                             </div>
 
                             {/* Accuracy */}
@@ -205,30 +205,29 @@ export function SessionResultScreen({
                                     <span className="text-2xl">🎯</span>
                                     <div>
                                         <span className="text-[10px] font-black text-[#3C78A8] uppercase tracking-wide block">{t('accuracyHeader')}</span>
-                                        <span className="text-2xl font-black text-[#173b56]">{accuracy}%</span>
+                                        <span className="text-2xl font-black text-[#173b56]">{accuracy === null ? ts('notGraded') : `${accuracy}%`}</span>
                                     </div>
                                 </div>
                                 <div className="h-1.5 bg-[#CCE4F0]/40 rounded-full overflow-hidden mt-1">
-                                    <div className="h-full bg-[#2EC4B6] rounded-full" style={{ width: `${accuracy}%` }} />
+                                    <div className="h-full bg-[#2EC4B6] rounded-full" style={{ width: `${accuracy ?? 0}%` }} />
                                 </div>
-                                <span className="text-[9px] font-bold text-[#2EC4B6]">{t('veryGood')}</span>
+                                <span className="text-[9px] font-bold text-[#3C78A8]">{ts('gradedOnly')}</span>
                             </div>
 
                             {/* Streak */}
                             <div className="bg-white rounded-2xl p-4 border border-[#CCE4F0]/40 shadow-md flex flex-col gap-1">
                                 <div className="flex items-center gap-2">
-                                    <span className="text-2xl">🔥</span>
+                                    <span aria-hidden="true" className="text-2xl">♥</span>
                                     <div>
-                                        <span className="text-[10px] font-black text-[#3C78A8] uppercase tracking-wide block">{t('streakStatusHeader')}</span>
-                                        <span className="text-base font-black text-[#173b56]">{t('streakReadyToday')}</span>
+                                        <span className="text-[10px] font-black text-[#3C78A8] uppercase tracking-wide block">{ts('heartsRemaining')}</span>
+                                        <span className="text-2xl font-black text-[#173b56]">{receipt.heartsRemaining}</span>
                                     </div>
                                 </div>
                                 <div className="h-1.5 bg-[#CCE4F0]/40 rounded-full overflow-hidden mt-1">
                                     <div className="h-full bg-[#FF6B35] rounded-full w-full" />
                                 </div>
                                 <div className="flex items-center gap-1">
-                                    <span className="text-[9px] font-bold text-[#FF6B35]">{t('streakActive')}</span>
-                                    <span className="text-[9px]">✓</span>
+                                    <span className="text-[9px] font-bold text-[#3C78A8]">{ts('acknowledgedCount', { count: receipt.acknowledgedCount })}</span>
                                 </div>
                             </div>
                         </div>
@@ -236,19 +235,20 @@ export function SessionResultScreen({
                         {/* Primary CTA */}
                         <PrimaryCta
                             onClick={onFinish}
-                            disabled={saving}
+                            disabled={pending}
                             className="w-full rounded-2xl bg-[#2EC4B6] py-4 text-xl font-black shadow-lg shadow-[#2EC4B6]/30 hover:bg-[#25b5a7]"
                         >
-                            <span>{saving ? tG('saving') : t('viewResultsCta')}</span>
+                            <span>{t('backToDashboardTooltip')}</span>
                             <span>→</span>
                         </PrimaryCta>
 
                         {/* Back link */}
                         <button
-                            onClick={onFinish}
+                            onClick={onRestart}
+                            disabled={pending || preview}
                             className="text-center text-sm font-bold text-[#3C78A8] hover:text-[#2E7EC4] transition-colors"
                         >
-                            {t('backToDashboardCta')}
+                            {ts('newSession')}
                         </button>
                     </div>
 
@@ -317,11 +317,11 @@ export function SessionResultScreen({
                             <ul className="flex flex-col gap-1">
                                 <li className="flex items-center gap-1.5 text-[9px] font-bold text-[#173b56]">
                                     <span className="w-3.5 h-3.5 bg-green-100 rounded-full text-green-600 flex items-center justify-center text-[7px] shrink-0">✓</span>
-                                    <span>{t('sessionFinished')}</span> <span className="ml-auto">1/1</span>
+                                    <span>{ts('saved')}</span> <span className="ml-auto">{completed}/{total}</span>
                                 </li>
                                 <li className="flex items-center gap-1.5 text-[9px] font-bold text-[#173b56]">
                                     <span className="w-3.5 h-3.5 bg-green-100 rounded-full text-green-600 flex items-center justify-center text-[7px] shrink-0">✓</span>
-                                    <span>{t('wordsGeuebtList')}</span> <span className="ml-auto">{words}/{words}</span>
+                                    <span>{ts('newWords')}</span> <span className="ml-auto">{words}</span>
                                 </li>
                                 <li className="flex items-center gap-1.5 text-[9px] font-bold text-[#173b56]">
                                     <span className="w-3.5 h-3.5 bg-green-100 rounded-full text-green-600 flex items-center justify-center text-[7px] shrink-0">✓</span>

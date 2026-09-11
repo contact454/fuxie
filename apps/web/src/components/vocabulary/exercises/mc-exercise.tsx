@@ -3,21 +3,22 @@
 import { useState, useCallback, useEffect } from 'react'
 import Image from 'next/image'
 import { useTranslations } from 'next-intl'
-import { playSound } from '@/hooks/use-audio-player'
+import { useSearchParams } from 'next/navigation'
+import { useSuppressLearnerMainChrome } from '@/hooks/use-suppress-chrome'
+import { useAudioPlayer } from '@/hooks/use-audio-player'
 import { ExerciseProgress } from './exercise-progress'
 import { ExerciseResults } from './exercise-results'
 import { BottomFeedback } from './bottom-feedback'
 import { useExerciseTimer } from '@/hooks/use-exercise-timer'
 import { useSubmitExercise } from '@/hooks/use-submit-exercise'
 import type { ExerciseAnswer } from '@/hooks/use-submit-exercise'
+import { OptionTile, AudioButton, FrostedPanel, PrimaryCta } from '@fuxie/ui/components'
+import { FuxiePose } from './fuxie-pose'
 import {
-    exerciseAudioButtonClass,
     exerciseCenterStageClass,
-    exerciseInlineAudioClass,
-    exerciseOptionClass,
-    exercisePromptImageClass,
     exerciseScreenClass,
     exerciseStageInnerClass,
+    exercisePromptImageClass,
 } from './exercise-ui'
 
 // ─── Types ──────────────────────────────────────────
@@ -40,6 +41,7 @@ interface McExerciseProps {
     themeSlug: string
     onExit: () => void
     onComplete: (results: SubmitResult) => void
+    showResults?: boolean
 }
 
 interface SubmitResult {
@@ -55,11 +57,10 @@ interface SubmitResult {
     }>
 }
 
-
-
 // ─── Component ──────────────────────────────────────
-export function McExercise({ questions, cefrLevel, themeName: _themeName, themeSlug, onExit, onComplete: _onComplete }: McExerciseProps) {
+export function McExercise({ questions, cefrLevel, themeName, themeSlug, onExit, onComplete: _onComplete, showResults = false }: McExerciseProps) {
     const t = useTranslations('UI')
+    const tVocab = useTranslations('Vocabulary')
     const [activeQuestions, setActiveQuestions] = useState([...questions])
     const [currentIndex, setCurrentIndex] = useState(0)
     const [selectedAnswer, setSelectedAnswer] = useState<string | null>(null)
@@ -75,43 +76,146 @@ export function McExercise({ questions, cefrLevel, themeName: _themeName, themeS
         xpPerCorrect: 5,
     })
 
+    useSuppressLearnerMainChrome(!showResults && phase !== 'results')
+
+    const searchParams = useSearchParams()
+    const mockState = searchParams?.get('mockState')
+
     const question = activeQuestions[currentIndex]!
+
+    useEffect(() => {
+        if (mockState === 'selected' && question && !selectedAnswer && !isRevealed) {
+            setSelectedAnswer(question.options[0]!)
+        }
+    }, [mockState, question, selectedAnswer, isRevealed])
+
+    useEffect(() => {
+        if (mockState === 'correct' && question && !isRevealed) {
+            const correctAnswer = question.type === 'de_to_native'
+                ? question.meaningNative
+                : question.word
+            setSelectedAnswer(correctAnswer)
+            setIsCorrect(true)
+            setIsRevealed(true)
+            setAnswers([{
+                questionId: question.id,
+                answer: correctAnswer,
+                correctAnswer,
+                wordId: question.wordId,
+                questionType: question.type,
+            }])
+        }
+    }, [mockState, question, isRevealed])
+
+    useEffect(() => {
+        if (mockState === 'wrong' && question && !isRevealed) {
+            const correctAnswer = question.type === 'de_to_native'
+                ? question.meaningNative
+                : question.word
+            const wrongAnswer = question.options.find(o => o !== correctAnswer) || question.options[0]!
+            setSelectedAnswer(wrongAnswer)
+            setIsCorrect(false)
+            setIsRevealed(true)
+            setAnswers([{
+                questionId: question.id,
+                answer: wrongAnswer,
+                correctAnswer,
+                wordId: question.wordId,
+                questionType: question.type,
+            }])
+        }
+    }, [mockState, question, isRevealed])
+
+    const effectivePhase = showResults ? 'results' : phase
+    const effectiveSubmitResult = showResults ? {
+        totalQuestions: questions.length,
+        correctCount: questions.length,
+        accuracy: 100,
+        xpEarned: questions.length * 5,
+        fucoinEarned: 15,
+        walletBalance: 120,
+        fucoinDuplicate: false,
+        fucoinIntended: 15,
+        fucoinDailyCap: 100,
+        fucoinDailyEarned: 35,
+        fucoinDailyRemaining: 65,
+        fucoinCapReached: false,
+        streak: {
+            currentStreak: 7,
+            isNewDay: true,
+            freezeUsed: false,
+            freezesAvailable: 2,
+            freezesUsed: 0,
+        },
+        results: questions.map((q) => {
+            const correctAnswer = q.type === 'de_to_native'
+                ? q.meaningNative
+                : q.word
+            return {
+                questionId: q.id,
+                isCorrect: true,
+                userAnswer: correctAnswer,
+                correctAnswer: correctAnswer,
+            }
+        })
+    } : submitResult
+
+    // Full audio lifecycle hooks for the question prompt
+    const { isPlaying, play, stop } = useAudioPlayer(question.promptAudio)
 
     // Auto play audio for audio_to_word variant
     useEffect(() => {
         if (question.type === 'audio_to_word' && question.promptAudio) {
-            playSound(question.promptAudio)
+            play()
         }
-    }, [currentIndex, question.type, question.promptAudio])
+        return () => {
+            stop()
+        }
+    }, [currentIndex, question.type, question.promptAudio, play, stop])
 
     const handleSelect = useCallback((option: string) => {
         if (isRevealed) return
         setSelectedAnswer(option)
+    }, [isRevealed])
+
+    const checkAnswer = useCallback(() => {
+        if (isRevealed || !selectedAnswer) return
         setIsRevealed(true)
 
         const correctAnswer = question.type === 'de_to_native'
             ? question.meaningNative
             : question.word  // native_to_de, image_to_word, audio_to_word
 
-        const correct = option === correctAnswer
+        const correct = selectedAnswer === correctAnswer
         setIsCorrect(correct)
 
         const newAnswers: ExerciseAnswer[] = [...answers, {
             questionId: question.id,
-            answer: option,
+            answer: selectedAnswer,
             correctAnswer,
             wordId: question.wordId,
             questionType: question.type,
         }]
         setAnswers(newAnswers)
 
+        // Soft vibration on incorrect, respecting prefers-reduced-motion
+        if (!correct) {
+            if (typeof window !== 'undefined' && window.navigator && window.navigator.vibrate) {
+                const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches
+                if (!prefersReducedMotion) {
+                    window.navigator.vibrate(100)
+                }
+            }
+        }
+
         // If wrong, push to the end
         if (!correct) {
             setActiveQuestions(prev => [...prev, { ...question, id: question.id + '_retry' }])
         }
-    }, [isRevealed, answers, question])
+    }, [isRevealed, selectedAnswer, answers, question])
 
     const handleContinue = useCallback(() => {
+        stop()
         if (currentIndex < activeQuestions.length - 1) {
             setCurrentIndex(i => i + 1)
             setSelectedAnswer(null)
@@ -122,38 +226,40 @@ export function McExercise({ questions, cefrLevel, themeName: _themeName, themeS
             stopTimer()
             submitAnswers(answers, timer)
         }
-    }, [currentIndex, activeQuestions.length, stopTimer, submitAnswers, answers, timer])
+    }, [currentIndex, activeQuestions.length, stopTimer, submitAnswers, answers, timer, stop])
 
     // ─── Variant Labels ─────────────────────────────
     const getQuestionLabel = () => {
         switch (question.type) {
-            case 'de_to_native': return `Was bedeutet "${question.prompt}"?`
-            case 'native_to_de': return `"${question.prompt}" auf Deutsch?`
-            case 'image_to_word': return 'Welches Wort passt zum Bild?'
-            case 'audio_to_word': return 'Welches Wort hörst du?'
+            case 'de_to_native': return tVocab('questionDeToNative', { word: question.prompt })
+            case 'native_to_de': return tVocab('questionNativeToDe', { word: question.prompt })
+            case 'image_to_word': return tVocab('questionImageToWord')
+            case 'audio_to_word': return tVocab('questionAudioToWord')
             default: return question.prompt
         }
     }
 
     // ─── Results Phase ──────────────────────────────
-    if (phase === 'results' && submitResult) {
+    if (effectivePhase === 'results' && effectiveSubmitResult) {
         return (
             <ExerciseResults
-                totalQuestions={submitResult.totalQuestions}
-                correctCount={submitResult.correctCount}
-                accuracy={submitResult.accuracy}
-                xpEarned={submitResult.xpEarned}
-                fucoinEarned={submitResult.fucoinEarned}
-                walletBalance={submitResult.walletBalance}
-                fucoinDuplicate={submitResult.fucoinDuplicate}
-                fucoinIntended={submitResult.fucoinIntended}
-                fucoinDailyCap={submitResult.fucoinDailyCap}
-                fucoinDailyEarned={submitResult.fucoinDailyEarned}
-                fucoinDailyRemaining={submitResult.fucoinDailyRemaining}
-                fucoinCapReached={submitResult.fucoinCapReached}
-                streak={submitResult.streak}
+                totalQuestions={effectiveSubmitResult.totalQuestions}
+                correctCount={effectiveSubmitResult.correctCount}
+                accuracy={effectiveSubmitResult.accuracy}
+                xpEarned={effectiveSubmitResult.xpEarned}
+                fucoinEarned={effectiveSubmitResult.fucoinEarned}
+                walletBalance={effectiveSubmitResult.walletBalance}
+                fucoinDuplicate={effectiveSubmitResult.fucoinDuplicate}
+                fucoinIntended={effectiveSubmitResult.fucoinIntended}
+                fucoinDailyCap={effectiveSubmitResult.fucoinDailyCap}
+                fucoinDailyEarned={effectiveSubmitResult.fucoinDailyEarned}
+                fucoinDailyRemaining={effectiveSubmitResult.fucoinDailyRemaining}
+                fucoinCapReached={effectiveSubmitResult.fucoinCapReached}
+                streak={effectiveSubmitResult.streak}
                 timeTaken={timer}
-                results={submitResult.results}
+                results={effectiveSubmitResult.results}
+                themeName={themeName}
+                themeSlug={themeSlug}
                 onRetry={() => {
                     setActiveQuestions([...questions])
                     setCurrentIndex(0)
@@ -168,6 +274,18 @@ export function McExercise({ questions, cefrLevel, themeName: _themeName, themeS
             />
         )
     }
+
+    // Determine correct answer for OptionTile display status
+    const correctAnswer = question.type === 'de_to_native'
+        ? question.meaningNative
+        : question.word
+
+    // Determine current mascot pose
+    const currentPose = isRevealed
+        ? isCorrect
+            ? 'correct-cheer'
+            : 'wrong-oops'
+        : 'idle-wave'
 
     // ─── Playing Phase ──────────────────────────────
     return (
@@ -184,11 +302,10 @@ export function McExercise({ questions, cefrLevel, themeName: _themeName, themeS
             {/* Exercise content — vertically centered */}
             <div className={exerciseCenterStageClass}>
                 <div className={exerciseStageInnerClass}>
-                    {/* Prompt area */}
-                    <div className="text-center mb-8">
+                    <FrostedPanel className="text-center mb-8 flex flex-col items-center justify-center p-6 w-full gap-4 shadow-[var(--fuxie-shadow-iso)] border-2 border-[var(--fuxie-blue-200)]/70">
                         {/* Image prompt (image_to_word only) */}
                         {question.type === 'image_to_word' && question.promptImage && (
-                            <div className="mb-4 flex justify-center">
+                            <div className="mb-2 flex justify-center">
                                 <Image
                                     src={question.promptImage}
                                     alt="Vocabulary image"
@@ -201,57 +318,83 @@ export function McExercise({ questions, cefrLevel, themeName: _themeName, themeS
 
                         {/* Audio prompt (audio_to_word only) */}
                         {question.type === 'audio_to_word' && (
-                            <button
-                                onClick={() => playSound(question.promptAudio)}
-                                className={exerciseAudioButtonClass()}
-                            >
-                                <svg className="w-12 h-12" fill="currentColor" viewBox="0 0 24 24">
-                                    <path d="M3 9v6h4l5 5V4L7 9H3zm13.5 3c0-1.77-1.02-3.29-2.5-4.03v8.05c1.48-.73 2.5-2.25 2.5-4.02zM14 3.23v2.06c2.89.86 5 3.54 5 6.71s-2.11 5.85-5 6.71v2.06c4.01-.91 7-4.49 7-8.77s-2.99-7.86-7-8.77z" />
-                                </svg>
-                            </button>
+                            <div className="mb-2 flex justify-center">
+                                <AudioButton
+                                    state={isPlaying ? 'playing' : 'idle'}
+                                    ariaLabel={t('listenAudio')}
+                                    onClick={play}
+                                    className="w-16 h-16"
+                                />
+                            </div>
                         )}
 
                         {/* Text prompt (de_to_native, native_to_de) */}
                         {(question.type === 'de_to_native' || question.type === 'native_to_de') && (
-                            <div className="mb-4">
+                            <div className="mb-2 flex flex-col items-center">
                                 <p className="text-3xl font-black text-slate-950">{question.prompt}</p>
                                 {/* Audio button for de_to_native */}
                                 {question.type === 'de_to_native' && question.promptAudio && (
-                                    <button
-                                        onClick={() => playSound(question.promptAudio)}
-                                        className={exerciseInlineAudioClass()}
-                                    >
-                                        <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
-                                            <path d="M3 9v6h4l5 5V4L7 9H3zm13.5 3c0-1.77-1.02-3.29-2.5-4.03v8.05c1.48-.73 2.5-2.25 2.5-4.02z" />
-                                        </svg>
-                                        <span className="text-sm font-medium">{t('listenAudio')}</span>
-                                    </button>
+                                    <div className="mt-3 flex justify-center">
+                                        <AudioButton
+                                            state={isPlaying ? 'playing' : 'idle'}
+                                            ariaLabel={t('listenAudio')}
+                                            onClick={play}
+                                        />
+                                    </div>
                                 )}
                             </div>
                         )}
 
                         {/* Question label */}
-                        <p className="text-sm font-semibold text-slate-500">{getQuestionLabel()}</p>
-                    </div>
+                        <p className="text-sm font-semibold text-slate-500 mt-1">{getQuestionLabel()}</p>
+                    </FrostedPanel>
 
                     {/* Options — 2×2 grid */}
-                    <div className="grid grid-cols-1 gap-3 sm:grid-cols-2">
+                    <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
                         {question.options.map((option, i) => {
                             const isSelected = selectedAnswer === option
+                            let status: 'idle' | 'selected' | 'correct' | 'incorrect' = 'idle'
+                            if (isRevealed) {
+                                if (option === correctAnswer) {
+                                    status = 'correct'
+                                } else if (isSelected) {
+                                    status = 'incorrect'
+                                }
+                            } else if (isSelected) {
+                                status = 'selected'
+                            }
                             return (
-                                <button
+                                <OptionTile
                                     key={i}
+                                    text={option}
+                                    status={status}
                                     onClick={() => handleSelect(option)}
                                     disabled={isRevealed}
-                                    className={exerciseOptionClass({ selected: isSelected, revealed: isRevealed })}
-                                >
-                                    {isRevealed && isSelected && (
-                                        <span className="text-text-brand mr-1">•</span>
-                                    )}
-                                    <span>{option}</span>
-                                </button>
+                                />
                             )
                         })}
+                    </div>
+
+                    {/* Check Button */}
+                    {!isRevealed && (
+                        <div className="mt-8 w-full">
+                            <PrimaryCta
+                                onClick={checkAnswer}
+                                disabled={!selectedAnswer}
+                                className="w-full"
+                            >
+                                {tVocab('checkBtn')}
+                            </PrimaryCta>
+                        </div>
+                    )}
+
+                    {/* Fuxie Mascot reacting inside center stage */}
+                    <div className="mt-8 flex justify-center">
+                        <FuxiePose
+                            pose={currentPose}
+                            size={110}
+                            className="transform hover:scale-105 transition-transform duration-300"
+                        />
                     </div>
 
                     {/* Loading indicator */}

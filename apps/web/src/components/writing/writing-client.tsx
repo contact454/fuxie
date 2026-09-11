@@ -10,6 +10,7 @@ import { Mascot } from '@/components/ui/mascot'
 import { useLevelSwitcher } from '@/hooks/use-level-switcher'
 import { getCefrTheme } from '@/lib/constants/cefr'
 import { FUXIE_WORLD_PROPS } from '@/lib/mascot/fuxie-assets'
+import { FrostedPanel, PrimaryCta } from '@fuxie/ui/components'
 
 // ─── Types ──────────────────────────────────────────
 interface WritingExerciseItem {
@@ -141,107 +142,101 @@ export function WritingClient({ teile, totalExercises, totalCompleted, available
     }, [prefetchHrefs, router])
 
     return (
-        <div className="max-w-5xl mx-auto">
+        <div className="fuxie-learn-bg min-h-screen py-8">
+            <div className="max-w-5xl mx-auto px-4">
+                <FrostedPanel className="mb-6 overflow-hidden !p-0">
+                    <div className="h-1" style={{ background: cefrColors.cssGradient }} />
 
-            {/* ═══ HERO BANNER ═══ */}
-            <div className="rounded-2xl border border-gray-100 shadow-sm mb-6 overflow-hidden" style={{ background: `linear-gradient(180deg, ${cefrColors.bg}22 0%, #FFFFFF 100%)` }}>
-                {/* Level color stripe */}
-                <div className="h-1" style={{ background: cefrColors.cssGradient }} />
-
-                <div className="p-6">
-                    {/* CEFR Level Tabs */}
-                    {availableLevels.length > 0 && (
-                        <div className="flex gap-2 mb-5">
-                            {availableLevels.map(level => {
-                                const colors = getCefrTheme(level)
-                                const isActive = level === currentLevel
-                                return (
-                                    <button
-                                        key={level}
-                                        onClick={() => switchLevel(level)}
-                                        disabled={isLevelLoading}
-                                        className={`px-4 py-2 rounded-xl text-sm font-bold transition-all ${isActive
-                                            ? 'text-white shadow-md scale-105'
-                                            : 'bg-gray-100 text-gray-500 hover:bg-gray-200'
-                                            } ${isLevelLoading ? 'opacity-50 cursor-wait' : ''}`}
-                                        style={isActive ? { background: colors.cssGradient, boxShadow: `0 4px 12px ${colors.shadow}` } : undefined}
-                                    >
-                                        {level}
-                                    </button>
-                                )
-                            })}
-                        </div>
-                    )}
-                    <div className="flex items-center gap-4">
-                        <FuxieRoleMascot src={FUXIE_3D_ASSETS.postOffice} alt={t('altWritingCoach')} size={64} motion="coach" />
-                        <div className="flex-1">
-                            <h1 className="text-2xl font-bold text-gray-900">{t('practiceSkill', { skill: 'viết', level: currentLevel })}</h1>
-                            <p className="text-sm text-gray-500 mt-0.5">
-                                <span className="font-semibold" style={{ color: cefrColors.text }}>{currentCompleted}</span> / {currentTotal} hoàn thành
-                            </p>
-                        </div>
-                        <Image
-                            src={FUXIE_WORLD_PROPS.postOfficeCounter}
-                            alt=""
-                            width={96}
-                            height={96}
-                            className="ml-auto hidden h-20 w-20 shrink-0 object-contain drop-shadow-sm lg:block"
-                        />
-                        {nextExerciseHref && (
-                            <MeasuredLink
-                                href={nextExerciseHref}
-                                flow="writing.list.next"
-                                source={nextExercise?.exerciseId}
-                                className="flex items-center gap-2 px-6 py-3 rounded-xl text-white font-bold text-sm hover:opacity-90 transition-all shadow-lg whitespace-nowrap"
-                                style={{ background: cefrColors.cssGradient, boxShadow: `0 4px 16px ${cefrColors.shadow}` }}
-                            >
-                                <span>✏️</span>
-                                {t('continueLearningAction')}
-                            </MeasuredLink>
+                    <div className="p-6">
+                        {availableLevels.length > 0 && (
+                            <div className="flex gap-2 mb-5">
+                                {availableLevels.map(level => {
+                                    const colors = getCefrTheme(level)
+                                    const isActive = level === currentLevel
+                                    return (
+                                        <button
+                                            key={level}
+                                            onClick={() => switchLevel(level)}
+                                            disabled={isLevelLoading}
+                                            className={`px-4 py-2 rounded-xl text-sm font-bold transition-all duration-150 border-b-4 ${isActive
+                                                ? 'bg-[var(--fuxie-action)] border-[var(--fuxie-lip-action)] text-white translate-y-[2px]'
+                                                : 'bg-white border-gray-200 text-gray-700 hover:bg-gray-50 active:translate-y-[2px]'
+                                                } ${isLevelLoading ? 'opacity-50 cursor-wait' : ''}`}
+                                        >
+                                            {level}
+                                        </button>
+                                    )
+                                })}
+                            </div>
                         )}
-                    </div>
-                    {/* Overall progress bar */}
-                    <div className="mt-4">
-                        <div className="w-full h-2.5 bg-gray-100 rounded-full overflow-hidden">
-                            <div
-                                className="h-full rounded-full transition-all duration-700 ease-out"
-                                style={{ width: `${Math.max(overallProgress, 1)}%`, background: cefrColors.cssGradient }}
+                        <div className="flex items-center gap-4">
+                            <FuxieRoleMascot src={FUXIE_3D_ASSETS.postOffice} alt={t('altWritingCoach')} size={64} motion="coach" />
+                            <div className="flex-1">
+                                <h1 className="text-2xl font-bold text-gray-900">{t('practiceSkill', { skill: 'viết', level: currentLevel })}</h1>
+                                <p className="text-sm text-gray-500 mt-0.5">
+                                    <span className="font-semibold" style={{ color: cefrColors.text }}>{currentCompleted}</span> / {currentTotal} hoàn thành
+                                </p>
+                            </div>
+                            <Image
+                                src={FUXIE_WORLD_PROPS.postOfficeCounter}
+                                alt=""
+                                width={96}
+                                height={96}
+                                className="ml-auto hidden h-20 w-20 shrink-0 object-contain drop-shadow-sm lg:block"
                             />
+                            {nextExerciseHref && (
+                                <PrimaryCta asChild className="shrink-0">
+                                    <MeasuredLink
+                                        href={nextExerciseHref}
+                                        flow="writing.list.next"
+                                        source={nextExercise?.exerciseId}
+                                        className="flex items-center justify-center gap-2 whitespace-nowrap !h-[48px]"
+                                    >
+                                        <span>✏️</span>
+                                        {t('continueLearningAction')}
+                                    </MeasuredLink>
+                                </PrimaryCta>
+                            )}
                         </div>
-                        <p className="text-xs text-gray-400 mt-1.5 text-right">{t('percentCompleted', { percent: overallProgress })}</p>
+                        <div className="mt-4">
+                            <div className="w-full h-2.5 bg-gray-100 rounded-full overflow-hidden">
+                                <div
+                                    className="h-full rounded-full transition-all duration-700 ease-out"
+                                    style={{ width: `${Math.max(overallProgress, 1)}%`, background: cefrColors.cssGradient }}
+                                />
+                            </div>
+                            <p className="text-xs text-gray-400 mt-1.5 text-right">{t('percentCompleted', { percent: overallProgress })}</p>
+                        </div>
                     </div>
-                </div>
-            </div>
+                </FrostedPanel>
 
-            {/* ═══ TEIL CARDS ═══ */}
-            {isLevelLoading ? (
-                <div className="flex items-center justify-center py-16">
-                    <Mascot variant="loading" size={64} />
-                </div>
-            ) : currentTeile.length === 0 ? (
-                <div className="bg-white rounded-2xl p-12 border border-gray-100 shadow-sm text-center">
-                    <Mascot variant="thinking" size={80} />
-                    <h2 className="text-lg font-bold text-gray-700 mt-4">{t('noLessonsYet')}</h2>
-                    <p className="text-sm text-gray-500 mt-2">
-                        {t('noLessonsYetDesc')}
-                    </p>
-                </div>
-            ) : (
-                <div className="space-y-4">
-                    {currentTeile.map((teil) => {
-                        const completedInTeil = teil.exercises.filter(e => e.completion !== null).length
-                        const teilProgress = teil.exercises.length > 0
-                            ? Math.round((completedInTeil / teil.exercises.length) * 100)
-                            : 0
-                        const isExpanded = expandedTeil === teil.teil
-                        const firstExTextType = teil.exercises[0]?.textType || 'default'
+                {isLevelLoading ? (
+                    <div className="flex items-center justify-center py-16">
+                        <Mascot variant="loading" size={64} />
+                    </div>
+                ) : currentTeile.length === 0 ? (
+                    <FrostedPanel className="p-12 text-center">
+                        <Mascot variant="thinking" size={80} />
+                        <h2 className="text-lg font-bold text-gray-700 mt-4">{t('noLessonsYet')}</h2>
+                        <p className="text-sm text-gray-500 mt-2">
+                            {t('noLessonsYetDesc')}
+                        </p>
+                    </FrostedPanel>
+                ) : (
+                    <div className="space-y-4">
+                        {currentTeile.map((teil) => {
+                            const completedInTeil = teil.exercises.filter(e => e.completion !== null).length
+                            const teilProgress = teil.exercises.length > 0
+                                ? Math.round((completedInTeil / teil.exercises.length) * 100)
+                                : 0
+                            const isExpanded = expandedTeil === teil.teil
+                            const firstExTextType = teil.exercises[0]?.textType || 'default'
 
-                        return (
-                            <div key={teil.teil} className="bg-white rounded-2xl border border-gray-100 shadow-sm overflow-hidden transition-all hover:shadow-md">
-                                {/* Teil Header */}
-                                <button
-                                    onClick={() => toggleTeil(teil.teil)}
-                                    className="w-full flex items-center gap-4 p-5 hover:bg-gray-50/50 transition-colors text-left"
+                            return (
+                                <FrostedPanel key={teil.teil} className="!p-0 overflow-hidden transition-all mb-4">
+                                    <button
+                                        onClick={() => toggleTeil(teil.teil)}
+                                        className="w-full flex items-center gap-4 p-5 hover:bg-gray-50/50 transition-colors text-left"
                                 >
                                     <div className="w-12 h-12 rounded-xl flex items-center justify-center text-2xl"
                                         style={{ backgroundColor: `${cefrColors.bg}` }}
@@ -340,11 +335,12 @@ export function WritingClient({ teile, totalExercises, totalCompleted, available
                                         </div>
                                     </div>
                                 )}
-                            </div>
+                            </FrostedPanel>
                         )
                     })}
                 </div>
             )}
+            </div>
         </div>
     )
 }

@@ -13,6 +13,7 @@ export interface Question {
     statement: string
     options: string[] | null
     sortOrder: number
+    correctAnswer: string
 }
 
 export interface ExplanationData {

@@ -100,7 +100,52 @@ async function getReadingData(userId: string | null, cefrLevel: CefrLevel) {
     return { teile, totalExercises, totalCompleted }
 }
 
-export default async function ReadingPage() {
+export default async function ReadingPage({
+    searchParams,
+}: {
+    searchParams?: Promise<{ fixture?: string; state?: string }>
+}) {
+    const queryParams = await searchParams
+    const isVisualQa = queryParams?.fixture === 'visual-qa'
+
+    if (isVisualQa) {
+        const isEmpty = queryParams?.state === 'empty'
+        const availableLevels: CefrLevel[] = ['A1']
+        const initialLevel: CefrLevel = 'A1'
+        const teile = isEmpty
+            ? []
+            : [
+                {
+                    teil: 1,
+                    teilName: 'Đọc hiểu hội thoại ngắn',
+                    exercises: [
+                        {
+                            id: 'R-A1-GOETHE-001',
+                            exerciseId: 'R-A1-GOETHE-001',
+                            topic: 'Eine E-Mail von Maria',
+                            questionCount: 1,
+                            wordCount: 75,
+                            completion: null,
+                        },
+                    ],
+                },
+            ]
+        const totalExercises = isEmpty ? 0 : 1
+        const totalCompleted = 0
+
+        return (
+            <div className="max-w-5xl mx-auto px-4 py-8">
+                <ReadingClientDynamic
+                    teile={teile}
+                    totalExercises={totalExercises}
+                    totalCompleted={totalCompleted}
+                    availableLevels={availableLevels}
+                    initialLevel={initialLevel}
+                />
+            </div>
+        )
+    }
+
     const serverUser = await getServerUser()
     if (!serverUser) redirect('/login')
 

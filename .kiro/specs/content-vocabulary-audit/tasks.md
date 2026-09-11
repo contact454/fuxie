@@ -37,7 +37,7 @@ Audit va remediate 369 file vocabulary, 10.461 entry tren 6 level. Workstream na
 - [x] 138 conjugation con lai duoc can chinh bang regular-rule present tense va gan `regular_rule_needs_native_signoff`.
 - [x] Phase regular-rule cham 95 file, giam auto-review tu 139 xuong 2.
 - [x] Phase rare-verb cleanup cham 2 file, giam auto-review tu 2 xuong 0.
-- [x] Vocabulary D7 review pack da tao 1.482 dong queue (626 P1) bao phu plural/genus/loanword/semantic/example flags tren 6 vocabulary cell.
+- [x] Vocabulary D7 review pack da tao 914 dong queue (40 P1) bao phu plural/loanword/example flags tren 6 vocabulary cell; 12 danh tu thang A1 da doi chieu article/plural theo Duden, 17 article/pluralia P1 da duoc phan loai co nguon, 185 C1 + 74 C2 plural morphology da duoc doi chieu Duden/compound headword, 6 C1 + 32 C2 row da canonicalize tu lexeme/sense/morphology trung khop trong corpus noi bo, 56 C1 energy/tourism/psychology/asylum-law/social-network/development-aid/food-law/neuroplasticity/nanotechnology/library-science/logistics/arbeitsrecht/genetics/press-freedom/business-ethics/crisis-management row va 219 C2 nominalized-infinitive/abstract-compound/concept/binding-theory/cultural-memory/positive-psychology/Schoenberg/Rawls/Dadaismus row da dua ve regular-rule singular-only.
 - [ ] Final native review, loanword policy, plural morphology, genus, nghia/vi du va CEFR fit van pending.
 
 ## Notes

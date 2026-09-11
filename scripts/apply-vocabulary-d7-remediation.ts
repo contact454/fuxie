@@ -213,6 +213,14 @@ const KNOWN_CONTENT_FIXES: Record<string, Partial<VocabularyWord>> = {
     plural: 'die Mitbestimmungen',
     pluralStatus: DUDEN_ALIGNED_REVIEW,
   },
+  'content/c1/vocabulary/10-arbeitsrecht-sozialpartnerschaft.json::Entgeltfortzahlung': {
+    plural: '-',
+    pluralStatus: REGULAR_RULE_REVIEW,
+  },
+  'content/c1/vocabulary/10-arbeitsrecht-sozialpartnerschaft.json::Direktionsrecht': {
+    plural: '-',
+    pluralStatus: REGULAR_RULE_REVIEW,
+  },
   'content/c1/vocabulary/12-medientheorie-propaganda.json::Glaubwürdigkeit': {
     plural: '-',
     pluralStatus: DUDEN_SINGULAR_ONLY_REVIEW,
@@ -264,6 +272,14 @@ const KNOWN_CONTENT_FIXES: Record<string, Partial<VocabularyWord>> = {
   'content/c1/vocabulary/20-energiepolitik-ressourcen.json::Infrastrukturausbau': {
     plural: '-',
     pluralStatus: DUDEN_COMPOUND_HEADWORD_SINGULAR_ONLY_REVIEW,
+  },
+  'content/c1/vocabulary/20-energiepolitik-ressourcen.json::Prim\u00e4renergieverbrauch': {
+    plural: '-',
+    pluralStatus: REGULAR_RULE_REVIEW,
+  },
+  'content/c1/vocabulary/20-energiepolitik-ressourcen.json::Energieautarkie': {
+    plural: '-',
+    pluralStatus: REGULAR_RULE_REVIEW,
   },
   'content/c1/vocabulary/21-voelkerrecht-souveraenitaet.json::Völkerrecht': {
     plural: '-',
@@ -421,6 +437,14 @@ const KNOWN_CONTENT_FIXES: Record<string, Partial<VocabularyWord>> = {
     plural: 'die Phylogenesen',
     pluralStatus: DUDEN_ALIGNED_REVIEW,
   },
+  'content/c1/vocabulary/30-genetik-evolution.json::Koevolution': {
+    plural: '-',
+    pluralStatus: REGULAR_RULE_REVIEW,
+  },
+  'content/c1/vocabulary/30-genetik-evolution.json::Klonen': {
+    plural: '-',
+    pluralStatus: REGULAR_RULE_REVIEW,
+  },
   'content/c1/vocabulary/32-klimaforschung-modellierung.json::Sensitivität': {
     plural: 'die Sensitivitäten',
     pluralStatus: DUDEN_ALIGNED_REVIEW,
@@ -493,6 +517,14 @@ const KNOWN_CONTENT_FIXES: Record<string, Partial<VocabularyWord>> = {
     plural: 'die Transparenzen',
     pluralStatus: DUDEN_ALIGNED_REVIEW,
   },
+  'content/c1/vocabulary/38-pressefreiheit-zensur.json::Postfaktische': {
+    plural: '-',
+    pluralStatus: REGULAR_RULE_REVIEW,
+  },
+  'content/c1/vocabulary/38-pressefreiheit-zensur.json::Meinungs\u00e4u\u00dferungsfreiheit': {
+    plural: '-',
+    pluralStatus: REGULAR_RULE_REVIEW,
+  },
   'content/c1/vocabulary/39-algorithmen-filterblasen.json::Transparenz': {
     plural: 'die Transparenzen',
     pluralStatus: DUDEN_ALIGNED_REVIEW,
@@ -517,6 +549,26 @@ const KNOWN_CONTENT_FIXES: Record<string, Partial<VocabularyWord>> = {
     plural: '-',
     pluralStatus: DUDEN_COMPOUND_HEADWORD_SINGULAR_ONLY_REVIEW,
   },
+  'content/c1/vocabulary/41-entwicklungspsychologie.json::Metakognition': {
+    plural: '-',
+    pluralStatus: REGULAR_RULE_REVIEW,
+  },
+  'content/c1/vocabulary/41-entwicklungspsychologie.json::soziale Kognition': {
+    plural: '-',
+    pluralStatus: REGULAR_RULE_REVIEW,
+  },
+  'content/c1/vocabulary/41-entwicklungspsychologie.json::Identitätsdiffusion': {
+    plural: '-',
+    pluralStatus: REGULAR_RULE_REVIEW,
+  },
+  'content/c1/vocabulary/41-entwicklungspsychologie.json::interindividuelle Variabilität': {
+    plural: '-',
+    pluralStatus: REGULAR_RULE_REVIEW,
+  },
+  'content/c1/vocabulary/41-entwicklungspsychologie.json::psychosexuelle Entwicklung': {
+    plural: '-',
+    pluralStatus: REGULAR_RULE_REVIEW,
+  },
   'content/c1/vocabulary/11-literaturkritik-textanalyse.json::Hermeneutik': {
     plural: '-',
     pluralStatus: DUDEN_SINGULAR_ONLY_REVIEW,
@@ -537,6 +589,18 @@ const KNOWN_CONTENT_FIXES: Record<string, Partial<VocabularyWord>> = {
     plural: 'die Adhäsionen',
     pluralStatus: DUDEN_ALIGNED_REVIEW,
   },
+  'content/c1/vocabulary/45-nanotechnologie.json::Amorphität': {
+    plural: '-',
+    pluralStatus: REGULAR_RULE_REVIEW,
+  },
+  'content/c1/vocabulary/45-nanotechnologie.json::Bioverträglichkeit': {
+    plural: '-',
+    pluralStatus: REGULAR_RULE_REVIEW,
+  },
+  'content/c1/vocabulary/45-nanotechnologie.json::Supraleitung': {
+    plural: '-',
+    pluralStatus: REGULAR_RULE_REVIEW,
+  },
   'content/c1/vocabulary/46-wirtschaftsethik.json::Rechenschaftspflicht': {
     plural: 'die Rechenschaftspflichten',
     pluralStatus: DUDEN_ALIGNED_REVIEW,
@@ -544,6 +608,14 @@ const KNOWN_CONTENT_FIXES: Record<string, Partial<VocabularyWord>> = {
   'content/c1/vocabulary/46-wirtschaftsethik.json::Gemeinwohl': {
     plural: '-',
     pluralStatus: DUDEN_SINGULAR_ONLY_REVIEW,
+  },
+  'content/c1/vocabulary/46-wirtschaftsethik.json::Corporate Governance': {
+    plural: '-',
+    pluralStatus: REGULAR_RULE_REVIEW,
+  },
+  'content/c1/vocabulary/46-wirtschaftsethik.json::Corporate Citizenship': {
+    plural: '-',
+    pluralStatus: REGULAR_RULE_REVIEW,
   },
   'content/c1/vocabulary/46-wirtschaftsethik.json::Integrität': {
     plural: '-',
@@ -681,6 +753,30 @@ const KNOWN_CONTENT_FIXES: Record<string, Partial<VocabularyWord>> = {
     plural: 'die Ressourcenallokationen',
     pluralStatus: DUDEN_COMPOUND_HEADWORD_REVIEW,
   },
+  'content/c1/vocabulary/53-entwicklungshilfe-ngos.json::Kapazitätsstärkung': {
+    plural: '-',
+    pluralStatus: REGULAR_RULE_REVIEW,
+  },
+  'content/c1/vocabulary/53-entwicklungshilfe-ngos.json::Selbstermächtigung': {
+    plural: '-',
+    pluralStatus: REGULAR_RULE_REVIEW,
+  },
+  'content/c1/vocabulary/53-entwicklungshilfe-ngos.json::Good Governance': {
+    plural: '-',
+    pluralStatus: REGULAR_RULE_REVIEW,
+  },
+  'content/c1/vocabulary/54-flucht-asylrecht.json::Schleuserkriminalität': {
+    plural: '-',
+    pluralStatus: REGULAR_RULE_REVIEW,
+  },
+  'content/c1/vocabulary/54-flucht-asylrecht.json::Schutzbedürftigkeit': {
+    plural: '-',
+    pluralStatus: REGULAR_RULE_REVIEW,
+  },
+  'content/c1/vocabulary/54-flucht-asylrecht.json::subsidiärer Schutz': {
+    plural: '-',
+    pluralStatus: REGULAR_RULE_REVIEW,
+  },
   'content/c1/vocabulary/56-psychosomatik.json::Compliance': {
     plural: '-',
     pluralStatus: DUDEN_SINGULAR_ONLY_REVIEW,
@@ -721,6 +817,22 @@ const KNOWN_CONTENT_FIXES: Record<string, Partial<VocabularyWord>> = {
     plural: 'die Detektionen',
     pluralStatus: DUDEN_ALIGNED_REVIEW,
   },
+  'content/c1/vocabulary/59-soziale-netzwerke-analyse.json::Nutzerverhalten': {
+    plural: '-',
+    pluralStatus: REGULAR_RULE_REVIEW,
+  },
+  'content/c1/vocabulary/59-soziale-netzwerke-analyse.json::Datenhoheit': {
+    plural: 'die Datenhoheiten',
+    pluralStatus: CORPUS_REVIEW,
+  },
+  'content/c1/vocabulary/59-soziale-netzwerke-analyse.json::Meinungspluralismus': {
+    plural: 'die Meinungspluralismen',
+    pluralStatus: CORPUS_REVIEW,
+  },
+  'content/c1/vocabulary/59-soziale-netzwerke-analyse.json::Medienkompetenz': {
+    plural: 'die Medienkompetenzen',
+    pluralStatus: CORPUS_REVIEW,
+  },
   'content/c1/vocabulary/61-forensik-kriminalistik.json::Ballistik': {
     plural: '-',
     pluralStatus: DUDEN_SINGULAR_ONLY_REVIEW,
@@ -748,6 +860,18 @@ const KNOWN_CONTENT_FIXES: Record<string, Partial<VocabularyWord>> = {
   'content/c1/vocabulary/62-logistik-lieferkette.json::Resilienz': {
     plural: 'die Resilienzen',
     pluralStatus: DUDEN_ALIGNED_REVIEW,
+  },
+  'content/c1/vocabulary/62-logistik-lieferkette.json::Intralogistik': {
+    plural: '-',
+    pluralStatus: REGULAR_RULE_REVIEW,
+  },
+  'content/c1/vocabulary/62-logistik-lieferkette.json::Rückverfolgbarkeit': {
+    plural: '-',
+    pluralStatus: REGULAR_RULE_REVIEW,
+  },
+  'content/c1/vocabulary/62-logistik-lieferkette.json::Transportlogistik': {
+    plural: '-',
+    pluralStatus: REGULAR_RULE_REVIEW,
   },
   'content/c1/vocabulary/63-musiktherapie.json::Partizipation': {
     plural: 'die Partizipationen',
@@ -781,9 +905,33 @@ const KNOWN_CONTENT_FIXES: Record<string, Partial<VocabularyWord>> = {
     plural: 'die Beweislasten',
     pluralStatus: DUDEN_ALIGNED_REVIEW,
   },
+  'content/c1/vocabulary/65-lebensmittelrecht.json::Verbraucherschutz': {
+    plural: '-',
+    pluralStatus: REGULAR_RULE_REVIEW,
+  },
+  'content/c1/vocabulary/65-lebensmittelrecht.json::Rückverfolgbarkeit': {
+    plural: '-',
+    pluralStatus: REGULAR_RULE_REVIEW,
+  },
+  'content/c1/vocabulary/65-lebensmittelrecht.json::Produkthaftung': {
+    plural: '-',
+    pluralStatus: REGULAR_RULE_REVIEW,
+  },
+  'content/c1/vocabulary/65-lebensmittelrecht.json::Lebensmittelüberwachung': {
+    plural: '-',
+    pluralStatus: REGULAR_RULE_REVIEW,
+  },
   'content/c1/vocabulary/68-krisenmanagement.json::Daseinsvorsorge': {
     plural: '-',
     pluralStatus: DUDEN_SINGULAR_ONLY_REVIEW,
+  },
+  'content/c1/vocabulary/68-krisenmanagement.json::Wiederaufbau': {
+    plural: '-',
+    pluralStatus: REGULAR_RULE_REVIEW,
+  },
+  'content/c1/vocabulary/68-krisenmanagement.json::Katastrophenschutz': {
+    plural: '-',
+    pluralStatus: REGULAR_RULE_REVIEW,
   },
   'content/c1/vocabulary/70-energiespeicherung.json::Dekarbonisierung': {
     plural: '-',
@@ -824,6 +972,62 @@ const KNOWN_CONTENT_FIXES: Record<string, Partial<VocabularyWord>> = {
   'content/c1/vocabulary/71-neuroplastizitaet.json::Konnektivität': {
     plural: 'die Konnektivitäten',
     pluralStatus: DUDEN_ALIGNED_REVIEW,
+  },
+  'content/c1/vocabulary/71-neuroplastizitaet.json::graue Substanz': {
+    plural: '-',
+    pluralStatus: REGULAR_RULE_REVIEW,
+  },
+  'content/c1/vocabulary/71-neuroplastizitaet.json::weiße Substanz': {
+    plural: '-',
+    pluralStatus: REGULAR_RULE_REVIEW,
+  },
+  'content/c1/vocabulary/71-neuroplastizitaet.json::Neurogenese': {
+    plural: '-',
+    pluralStatus: REGULAR_RULE_REVIEW,
+  },
+  'content/c1/vocabulary/71-neuroplastizitaet.json::Kognitive Reserve': {
+    plural: '-',
+    pluralStatus: REGULAR_RULE_REVIEW,
+  },
+  'content/c1/vocabulary/73-bibliothekswesen.json::Bestandserhaltung': {
+    plural: '-',
+    pluralStatus: REGULAR_RULE_REVIEW,
+  },
+  'content/c1/vocabulary/73-bibliothekswesen.json::Provenienzforschung': {
+    plural: '-',
+    pluralStatus: REGULAR_RULE_REVIEW,
+  },
+  'content/c1/vocabulary/73-bibliothekswesen.json::Informationskompetenz': {
+    plural: '-',
+    pluralStatus: REGULAR_RULE_REVIEW,
+  },
+  'content/c1/vocabulary/66-stadtmarketing-tourismus.json::Imagepflege': {
+    plural: '-',
+    pluralStatus: REGULAR_RULE_REVIEW,
+  },
+  'content/c1/vocabulary/66-stadtmarketing-tourismus.json::Bürgerbeteiligung': {
+    plural: '-',
+    pluralStatus: REGULAR_RULE_REVIEW,
+  },
+  'content/c1/vocabulary/66-stadtmarketing-tourismus.json::Destinationsmanagement': {
+    plural: '-',
+    pluralStatus: REGULAR_RULE_REVIEW,
+  },
+  'content/c1/vocabulary/66-stadtmarketing-tourismus.json::Wettbewerbsfähigkeit': {
+    plural: '-',
+    pluralStatus: REGULAR_RULE_REVIEW,
+  },
+  'content/c1/vocabulary/66-stadtmarketing-tourismus.json::Erlebnisökonomie': {
+    plural: '-',
+    pluralStatus: REGULAR_RULE_REVIEW,
+  },
+  'content/c1/vocabulary/66-stadtmarketing-tourismus.json::Standortattraktivität': {
+    plural: '-',
+    pluralStatus: REGULAR_RULE_REVIEW,
+  },
+  'content/c1/vocabulary/66-stadtmarketing-tourismus.json::Nachhaltigkeitstourismus': {
+    plural: '-',
+    pluralStatus: REGULAR_RULE_REVIEW,
   },
   'content/c1/vocabulary/71-neuroplastizitaet.json::Resilienz': {
     plural: 'die Resilienzen',
@@ -949,9 +1153,129 @@ const KNOWN_CONTENT_FIXES: Record<string, Partial<VocabularyWord>> = {
     plural: '-',
     pluralStatus: DUDEN_SINGULAR_ONLY_REVIEW,
   },
+  'content/c2/vocabulary/70-europaeisches-recht.json::Gerichtshof der Europäischen Union': {
+    plural: '-',
+    pluralStatus: REGULAR_RULE_REVIEW,
+  },
+  'content/c2/vocabulary/70-europaeisches-recht.json::Charta der Grundrechte der Europäischen Union': {
+    plural: '-',
+    pluralStatus: REGULAR_RULE_REVIEW,
+  },
+  'content/c2/vocabulary/70-europaeisches-recht.json::Kohäsionspolitik': {
+    plural: '-',
+    pluralStatus: REGULAR_RULE_REVIEW,
+  },
+  'content/c2/vocabulary/70-europaeisches-recht.json::acquis communautaire': {
+    plural: '-',
+    pluralStatus: REGULAR_RULE_REVIEW,
+  },
+  'content/c2/vocabulary/70-europaeisches-recht.json::intergouvernementale Zusammenarbeit': {
+    plural: '-',
+    pluralStatus: REGULAR_RULE_REVIEW,
+  },
+  'content/c2/vocabulary/70-europaeisches-recht.json::supranationale Integration': {
+    plural: '-',
+    pluralStatus: REGULAR_RULE_REVIEW,
+  },
+  'content/c2/vocabulary/57-denkmalschutz-kulturerbe.json::Denkmalwürdigkeit': {
+    plural: '-',
+    pluralStatus: REGULAR_RULE_REVIEW,
+  },
+  'content/c2/vocabulary/57-denkmalschutz-kulturerbe.json::Materialität': {
+    plural: '-',
+    pluralStatus: REGULAR_RULE_REVIEW,
+  },
+  'content/c2/vocabulary/57-denkmalschutz-kulturerbe.json::Wissenstransfer': {
+    plural: '-',
+    pluralStatus: REGULAR_RULE_REVIEW,
+  },
+  'content/c2/vocabulary/57-denkmalschutz-kulturerbe.json::Tradierung': {
+    plural: '-',
+    pluralStatus: REGULAR_RULE_REVIEW,
+  },
+  'content/c2/vocabulary/57-denkmalschutz-kulturerbe.json::Objekthaftigkeit': {
+    plural: '-',
+    pluralStatus: REGULAR_RULE_REVIEW,
+  },
+  'content/c2/vocabulary/57-denkmalschutz-kulturerbe.json::Perennität': {
+    plural: '-',
+    pluralStatus: REGULAR_RULE_REVIEW,
+  },
+  'content/c2/vocabulary/65-anarchismus-libertarismus.json::Herrschaftsfreiheit': {
+    plural: '-',
+    pluralStatus: REGULAR_RULE_REVIEW,
+  },
+  'content/c2/vocabulary/65-anarchismus-libertarismus.json::Staatsferne': {
+    plural: '-',
+    pluralStatus: REGULAR_RULE_REVIEW,
+  },
+  'content/c2/vocabulary/65-anarchismus-libertarismus.json::Konkurrenzdruck': {
+    plural: '-',
+    pluralStatus: REGULAR_RULE_REVIEW,
+  },
+  'content/c2/vocabulary/65-anarchismus-libertarismus.json::Präfigurationspolitik': {
+    plural: '-',
+    pluralStatus: REGULAR_RULE_REVIEW,
+  },
+  'content/c2/vocabulary/65-anarchismus-libertarismus.json::Entstaatlichung': {
+    plural: '-',
+    pluralStatus: REGULAR_RULE_REVIEW,
+  },
+  'content/c2/vocabulary/73-falsifikationismus-popper.json::Induktionsproblematik': {
+    plural: '-',
+    pluralStatus: REGULAR_RULE_REVIEW,
+  },
+  'content/c2/vocabulary/73-falsifikationismus-popper.json::Erkenntnisfortschritt': {
+    plural: '-',
+    pluralStatus: REGULAR_RULE_REVIEW,
+  },
+  'content/c2/vocabulary/73-falsifikationismus-popper.json::Widerlegbarkeit': {
+    plural: '-',
+    pluralStatus: REGULAR_RULE_REVIEW,
+  },
+  'content/c2/vocabulary/73-falsifikationismus-popper.json::Theoriebeladenheit': {
+    plural: '-',
+    pluralStatus: REGULAR_RULE_REVIEW,
+  },
+  'content/c2/vocabulary/73-falsifikationismus-popper.json::kritischer Rationalismus': {
+    plural: '-',
+    pluralStatus: REGULAR_RULE_REVIEW,
+  },
+  'content/c2/vocabulary/98-diskursethik-habermas.json::Konsensfähigkeit': {
+    plural: '-',
+    pluralStatus: REGULAR_RULE_REVIEW,
+  },
+  'content/c2/vocabulary/98-diskursethik-habermas.json::Verständigungsorientierung': {
+    plural: '-',
+    pluralStatus: REGULAR_RULE_REVIEW,
+  },
+  'content/c2/vocabulary/98-diskursethik-habermas.json::Herrschaftsfreiheit': {
+    plural: '-',
+    pluralStatus: REGULAR_RULE_REVIEW,
+  },
+  'content/c2/vocabulary/98-diskursethik-habermas.json::Handlungsrationalität': {
+    plural: '-',
+    pluralStatus: REGULAR_RULE_REVIEW,
+  },
+  'content/c2/vocabulary/98-diskursethik-habermas.json::Universalisierbarkeit': {
+    plural: '-',
+    pluralStatus: REGULAR_RULE_REVIEW,
+  },
   'content/c2/vocabulary/89-positive-psychologie.json::Wohlbefinden': {
     plural: '-',
     pluralStatus: DUDEN_SINGULAR_ONLY_REVIEW,
+  },
+  'content/c2/vocabulary/89-positive-psychologie.json::Positivität': {
+    plural: '-',
+    pluralStatus: REGULAR_RULE_REVIEW,
+  },
+  'content/c2/vocabulary/89-positive-psychologie.json::Optimismus': {
+    plural: '-',
+    pluralStatus: REGULAR_RULE_REVIEW,
+  },
+  'content/c2/vocabulary/89-positive-psychologie.json::Flourishing': {
+    plural: '-',
+    pluralStatus: REGULAR_RULE_REVIEW,
   },
   'content/c2/vocabulary/101-aufklaerung-kant.json::Mündigkeit': {
     plural: '-',
@@ -1406,6 +1730,38 @@ const KNOWN_CONTENT_FIXES: Record<string, Partial<VocabularyWord>> = {
     plural: '-',
     pluralStatus: REGULAR_RULE_REVIEW,
   },
+  'content/c2/vocabulary/88-bindungstheorie-bowlby.json::Feinfühligkeit': {
+    plural: '-',
+    pluralStatus: REGULAR_RULE_REVIEW,
+  },
+  'content/c2/vocabulary/88-bindungstheorie-bowlby.json::Explorationsbereitschaft': {
+    plural: '-',
+    pluralStatus: REGULAR_RULE_REVIEW,
+  },
+  'content/c2/vocabulary/88-bindungstheorie-bowlby.json::psychische Widerstandsfähigkeit': {
+    plural: '-',
+    pluralStatus: REGULAR_RULE_REVIEW,
+  },
+  'content/c2/vocabulary/88-bindungstheorie-bowlby.json::Bindungsunsicherheit': {
+    plural: '-',
+    pluralStatus: REGULAR_RULE_REVIEW,
+  },
+  'content/c2/vocabulary/91-kulturgedaechtnis.json::Transgenerationalität': {
+    plural: '-',
+    pluralStatus: REGULAR_RULE_REVIEW,
+  },
+  'content/c2/vocabulary/91-kulturgedaechtnis.json::Gedächtnissemantik': {
+    plural: '-',
+    pluralStatus: REGULAR_RULE_REVIEW,
+  },
+  'content/c2/vocabulary/91-kulturgedaechtnis.json::Archivgut': {
+    plural: '-',
+    pluralStatus: REGULAR_RULE_REVIEW,
+  },
+  'content/c2/vocabulary/91-kulturgedaechtnis.json::Zeugenschaft': {
+    plural: '-',
+    pluralStatus: REGULAR_RULE_REVIEW,
+  },
   'content/c2/vocabulary/114-technikphilosophie.json::Dasein': {
     plural: '-',
     pluralStatus: REGULAR_RULE_REVIEW,
@@ -1672,6 +2028,42 @@ const KNOWN_CONTENT_FIXES: Record<string, Partial<VocabularyWord>> = {
     pluralStatus: REGULAR_RULE_REVIEW,
   },
   'content/c2/vocabulary/108-atonalitaet-schoenberg.json::Emanzipation der Dissonanz': {
+    plural: '-',
+    pluralStatus: REGULAR_RULE_REVIEW,
+  },
+  'content/c2/vocabulary/108-atonalitaet-schoenberg.json::Zw\u00f6lftontechnik': {
+    plural: '-',
+    pluralStatus: REGULAR_RULE_REVIEW,
+  },
+  'content/c2/vocabulary/108-atonalitaet-schoenberg.json::musikalische Avantgarde': {
+    plural: '-',
+    pluralStatus: REGULAR_RULE_REVIEW,
+  },
+  'content/c2/vocabulary/108-atonalitaet-schoenberg.json::musikalische Syntax': {
+    plural: '-',
+    pluralStatus: REGULAR_RULE_REVIEW,
+  },
+  'content/c2/vocabulary/97-gerechtigkeitstheorie-rawls.json::Verfahrensgerechtigkeit': {
+    plural: '-',
+    pluralStatus: REGULAR_RULE_REVIEW,
+  },
+  'content/c2/vocabulary/97-gerechtigkeitstheorie-rawls.json::\u00f6ffentliche Vernunft': {
+    plural: '-',
+    pluralStatus: REGULAR_RULE_REVIEW,
+  },
+  'content/c2/vocabulary/97-gerechtigkeitstheorie-rawls.json::Kontraktualismus': {
+    plural: '-',
+    pluralStatus: REGULAR_RULE_REVIEW,
+  },
+  'content/c2/vocabulary/99-avantgarde-dadaismus.json::\u00c4sthetik des H\u00e4sslichen': {
+    plural: '-',
+    pluralStatus: REGULAR_RULE_REVIEW,
+  },
+  'content/c2/vocabulary/99-avantgarde-dadaismus.json::Zerrissenheit': {
+    plural: '-',
+    pluralStatus: REGULAR_RULE_REVIEW,
+  },
+  'content/c2/vocabulary/99-avantgarde-dadaismus.json::Dadaismus': {
     plural: '-',
     pluralStatus: REGULAR_RULE_REVIEW,
   },

@@ -1,6 +1,6 @@
 import { fuxieButtonClass, fx } from '@/components/ui/fuxie-ui'
 
-export const exerciseScreenClass = 'fixed inset-0 z-50 flex flex-col bg-[#F7FBFD] text-slate-950'
+export const exerciseScreenClass = 'fixed inset-0 z-50 flex flex-col fuxie-gameplay-bg text-slate-950'
 export const exerciseCenterStageClass = 'flex flex-1 items-center justify-center overflow-y-auto'
 export const exerciseStageInnerClass = 'w-full max-w-2xl px-5 py-8 sm:px-6'
 

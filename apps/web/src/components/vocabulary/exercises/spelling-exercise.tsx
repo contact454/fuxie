@@ -3,9 +3,12 @@
 import { useState, useCallback, useEffect, useRef } from 'react'
 import { useTranslations } from 'next-intl'
 import Image from 'next/image'
+import { useSuppressLearnerMainChrome } from '@/hooks/use-suppress-chrome'
+import { FrostedPanel, PrimaryCta } from '@fuxie/ui/components'
 import { playSound } from '@/hooks/use-audio-player'
 import { ExerciseProgress } from './exercise-progress'
 import { ExerciseResults } from './exercise-results'
+import { BottomFeedback } from './bottom-feedback'
 import { useExerciseTimer } from '@/hooks/use-exercise-timer'
 import { useSubmitExercise, type ExerciseAnswer } from '@/hooks/use-submit-exercise'
 import {
@@ -30,6 +33,7 @@ interface SpellingQuestion {
     promptAudio: string | null
     article: string | null   // MASKULIN / FEMININ / NEUTRUM
     wordId: string
+    word: string
     hint: string             // first 2 chars
     answerLength: number
 }
@@ -68,6 +72,10 @@ export function SpellingExercise({ questions, cefrLevel, themeName: _themeName, 
         xpPerCorrect: 7,
     })
 
+    useSuppressLearnerMainChrome(phase !== 'results')
+
+    const [isCorrect, setIsCorrect] = useState<boolean | null>(null)
+
     const question = questions[currentIndex]!
 
     // Focus input on new question
@@ -96,31 +104,32 @@ export function SpellingExercise({ questions, cefrLevel, themeName: _themeName, 
     const checkAnswer = useCallback(() => {
         if (isRevealed || !userInput.trim()) return
 
+        const correct = userInput.trim().toLowerCase() === question.word.trim().toLowerCase()
+        setIsCorrect(correct)
         setIsRevealed(true)
 
         const newAnswers: ExerciseAnswer[] = [...answers, {
             questionId: question.id,
             answer: userInput.trim(),
-            correctAnswer: userInput.trim(),  // Server derives from wordId via deriveCorrectAnswer
+            correctAnswer: question.word,
             wordId: question.wordId,
             questionType: question.type,
         }]
         setAnswers(newAnswers)
+    }, [isRevealed, userInput, question, answers])
 
-        // Auto advance after 2s
-        if (advanceTimeoutRef.current) clearTimeout(advanceTimeoutRef.current)
-        advanceTimeoutRef.current = setTimeout(() => {
-            if (currentIndex < questions.length - 1) {
-                setCurrentIndex(i => i + 1)
-                setUserInput('')
-                setIsRevealed(false)
-                setShowHint(false)
-            } else {
-                stopTimer()
-                submitAnswers(newAnswers, timer)
-            }
-        }, 2000)
-    }, [isRevealed, userInput, question, answers, currentIndex, questions.length, stopTimer, submitAnswers, timer])
+    const handleContinue = useCallback(() => {
+        if (currentIndex < questions.length - 1) {
+            setCurrentIndex(i => i + 1)
+            setUserInput('')
+            setIsRevealed(false)
+            setIsCorrect(null)
+            setShowHint(false)
+        } else {
+            stopTimer()
+            submitAnswers(answers, timer)
+        }
+    }, [currentIndex, questions.length, stopTimer, submitAnswers, answers, timer])
 
     const insertChar = (ch: string) => {
         setUserInput(prev => prev + ch)
@@ -179,11 +188,10 @@ export function SpellingExercise({ questions, cefrLevel, themeName: _themeName, 
 
             <div className={exerciseCenterStageClass}>
                 <div className={exerciseStageInnerClass}>
-                    {/* Prompt area */}
-                    <div className="text-center mb-8">
+                    <FrostedPanel className="text-center mb-8 flex flex-col items-center justify-center p-6 w-full gap-4 shadow-[var(--fuxie-shadow-iso)] border-2 border-[var(--fuxie-blue-200)]/70">
                         {/* Image */}
                         {question.promptImage && (
-                            <div className="mb-4 flex justify-center">
+                            <div className="mb-2 flex justify-center">
                                 <Image
                                     src={question.promptImage}
                                     alt="Vocabulary hint"
@@ -198,7 +206,7 @@ export function SpellingExercise({ questions, cefrLevel, themeName: _themeName, 
                         {question.promptAudio && (
                             <button
                                 onClick={() => playSound(question.promptAudio)}
-                                className={exerciseInlineAudioClass('mb-3 mt-0')}
+                                className={exerciseInlineAudioClass('mb-2 mt-0')}
                             >
                                 <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
                                     <path d="M3 9v6h4l5 5V4L7 9H3zm13.5 3c0-1.77-1.02-3.29-2.5-4.03v8.05c1.48-.73 2.5-2.25 2.5-4.02z" />
@@ -213,11 +221,11 @@ export function SpellingExercise({ questions, cefrLevel, themeName: _themeName, 
 
                         {/* Article badge if noun */}
                         {articleText && (
-                            <span className="mt-2 inline-block rounded-full bg-[#EEF7FF] px-3 py-1 text-sm font-black text-text-brand ring-1 ring-[#60A8E4]/20">
+                            <span className="mt-1 inline-block rounded-full bg-[#EEF7FF] px-3 py-1 text-sm font-black text-text-brand ring-1 ring-[#60A8E4]/20">
                                 {articleText} ...
                             </span>
                         )}
-                    </div>
+                    </FrostedPanel>
 
                     {/* Input */}
                     <div className="mb-4">
@@ -259,33 +267,43 @@ export function SpellingExercise({ questions, cefrLevel, themeName: _themeName, 
 
                     {/* Hint + Submit row */}
                     <div className="flex gap-3">
-                        <button
+                        <PrimaryCta
                             onClick={() => setShowHint(true)}
                             disabled={isRevealed || showHint}
-                            className={exerciseSecondaryActionClass(isRevealed || showHint, 'px-4')}
+                            variant="secondary"
+                            className="px-4"
                         >
-                            💡 Tipp
-                        </button>
-                        <button
+                            💡 {t('hintBtn')}
+                        </PrimaryCta>
+                        <PrimaryCta
                             onClick={checkAnswer}
                             disabled={isRevealed || !userInput.trim()}
-                            className={exercisePrimaryActionClass(isRevealed || !userInput.trim(), 'flex-1')}
+                            className="flex-1"
                         >
-                            Prüfen
-                        </button>
+                            {t('checkBtn')}
+                        </PrimaryCta>
                     </div>
 
                     {/* Hint display */}
                     {showHint && !isRevealed && (
                         <div className={exerciseHintPanelClass('mt-4')}>
                             <span className="text-sm text-amber-700">
-                                💡 Anfang: <strong>{question.hint}...</strong>
-                                <span className="text-amber-400 ml-2">({question.answerLength} Buchstaben)</span>
+                                💡 {t('hintBeginning')} <strong>{question.hint}...</strong>
+                                <span className="text-amber-400 ml-2">{t('lettersCount', { count: question.answerLength })}</span>
                             </span>
                         </div>
                     )}
                 </div>
             </div>
+
+            {/* Bottom Feedback Bar */}
+            {isRevealed && isCorrect !== null && (
+                <BottomFeedback
+                    isCorrect={isCorrect}
+                    correctAnswer={question.word}
+                    onContinue={handleContinue}
+                />
+            )}
         </div>
     )
 }

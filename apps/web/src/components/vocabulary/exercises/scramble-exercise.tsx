@@ -2,8 +2,11 @@
 
 import { useState, useCallback, useEffect, useRef } from 'react'
 import { useTranslations } from 'next-intl'
+import { useSuppressLearnerMainChrome } from '@/hooks/use-suppress-chrome'
+import { FrostedPanel, PrimaryCta } from '@fuxie/ui/components'
 import { ExerciseProgress } from './exercise-progress'
 import { ExerciseResults } from './exercise-results'
+import { BottomFeedback } from './bottom-feedback'
 import { useExerciseTimer } from '@/hooks/use-exercise-timer'
 import { useSubmitExercise, type ExerciseAnswer } from '@/hooks/use-submit-exercise'
 import {
@@ -23,6 +26,7 @@ interface ScrambleQuestion {
     type: string
     scrambledWords: string[]
     translation: string | null
+    original: string
     wordId: string
 }
 
@@ -56,6 +60,10 @@ export function ScrambleExercise({ questions, cefrLevel, themeName: _themeName, 
             return normalize(a) === normalize(b)
         },
     })
+
+    useSuppressLearnerMainChrome(phase !== 'results')
+
+    const [isCorrect, setIsCorrect] = useState<boolean | null>(null)
 
     const question = questions[currentIndex]!
 
@@ -96,28 +104,33 @@ export function ScrambleExercise({ questions, cefrLevel, themeName: _themeName, 
         if (isRevealed || selectedWords.length === 0) return
 
         const userSentence = selectedWords.join(' ')
+        const normalize = (s: string) => s.replace(/[.!?;,]+$/g, '').trim().toLowerCase()
+        const correct = normalize(userSentence) === normalize(question.original)
+        setIsCorrect(correct)
         setIsRevealed(true)
 
         const newAnswers: ExerciseAnswer[] = [...answers, {
             questionId: question.id,
             answer: userSentence,
-            correctAnswer: userSentence,  // Server derives from wordId via deriveCorrectAnswer
+            correctAnswer: question.original,
             wordId: question.wordId,
             questionType: question.type,
         }]
         setAnswers(newAnswers)
+    }, [isRevealed, selectedWords, question, answers])
 
-        if (advanceTimeoutRef.current) clearTimeout(advanceTimeoutRef.current)
-        advanceTimeoutRef.current = setTimeout(() => {
-            if (currentIndex < questions.length - 1) {
-                setCurrentIndex(i => i + 1)
-                setIsRevealed(false)
-            } else {
-                stopTimer()
-                submitAnswers(newAnswers, timer)
-            }
-        }, 2500)
-    }, [isRevealed, selectedWords, question, answers, currentIndex, questions.length, stopTimer, submitAnswers, timer])
+    const handleContinue = useCallback(() => {
+        if (currentIndex < questions.length - 1) {
+            setCurrentIndex(i => i + 1)
+            setIsRevealed(false)
+            setIsCorrect(null)
+            setAvailableWords([...questions[currentIndex + 1]!.scrambledWords])
+            setSelectedWords([])
+        } else {
+            stopTimer()
+            submitAnswers(answers, timer)
+        }
+    }, [currentIndex, questions, stopTimer, submitAnswers, answers, timer])
 
     // ─── Results ────────────────────────────────────
     if (phase === 'results' && submitResult) {
@@ -162,18 +175,18 @@ export function ScrambleExercise({ questions, cefrLevel, themeName: _themeName, 
 
             <div className={exerciseCenterStageClass}>
                 <div className={exerciseStageInnerClass}>
-                    {/* Instruction */}
-                    <div className="text-center mb-6">
-                        <h2 className="text-lg font-black text-slate-950">{t('scrambleTitle')}</h2>
-                        <p className="mt-1 text-sm font-semibold text-slate-500">{t('scrambleInstruction')}</p>
-                    </div>
-
-                    {/* Vietnamese translation hint */}
-                    {question.translation && (
-                        <div className={exerciseHintPanelClass('mb-6')}>
-                            <span>🇻🇳 {question.translation}</span>
+                    {/* Briefing Card wrapped in FrostedPanel */}
+                    <FrostedPanel className="mb-6 p-5 text-center flex flex-col gap-3 shadow-[var(--fuxie-shadow-iso)] border-2 border-[var(--fuxie-blue-200)]/70">
+                        <div>
+                            <h2 className="text-lg font-black text-slate-950">{t('scrambleTitle')}</h2>
+                            <p className="mt-1 text-sm font-semibold text-slate-500">{t('scrambleInstruction')}</p>
                         </div>
-                    )}
+                        {question.translation && (
+                            <div className="border-t border-[var(--fuxie-blue-200)]/70 pt-3 font-semibold text-text-brand">
+                                <span>🇻🇳 {question.translation}</span>
+                            </div>
+                        )}
+                    </FrostedPanel>
 
                     {/* Construction zone — selected words */}
                     <div className={exerciseConstructionZoneClass({ active: selectedWords.length > 0, revealed: isRevealed, className: 'mb-6' })}>
@@ -218,26 +231,36 @@ export function ScrambleExercise({ questions, cefrLevel, themeName: _themeName, 
 
                     {/* Actions */}
                     <div className="flex gap-3">
-                        <button
+                        <PrimaryCta
                             onClick={() => {
                                 setAvailableWords([...question.scrambledWords])
                                 setSelectedWords([])
                             }}
                             disabled={isRevealed || selectedWords.length === 0}
-                            className={exerciseSecondaryActionClass(isRevealed || selectedWords.length === 0, 'px-4')}
+                            variant="secondary"
+                            className="px-4"
                         >
-                            🔄 Reset
-                        </button>
-                        <button
+                            🔄 {t('resetBtn')}
+                        </PrimaryCta>
+                        <PrimaryCta
                             onClick={checkAnswer}
                             disabled={isRevealed || selectedWords.length === 0}
-                            className={exercisePrimaryActionClass(isRevealed || selectedWords.length === 0, 'flex-1')}
+                            className="flex-1"
                         >
-                            Prüfen
-                        </button>
+                            {t('checkBtn')}
+                        </PrimaryCta>
                     </div>
                 </div>
             </div>
+
+            {/* Bottom Feedback Bar */}
+            {isRevealed && isCorrect !== null && (
+                <BottomFeedback
+                    isCorrect={isCorrect}
+                    correctAnswer={question.original}
+                    onContinue={handleContinue}
+                />
+            )}
         </div>
     )
 }

@@ -116,4 +116,8 @@ export interface WorldScene {
      * the DOM at mount time (Requirement 4.2).
      */
     readonly canvasAriaLabelledBy?: string
+
+    /** Custom fields for World Map redesign (TICKET-A2) */
+    readonly isTransparent?: boolean
+    readonly backgroundImage?: string
 }

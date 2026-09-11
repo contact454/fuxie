@@ -1,6 +1,6 @@
 import { NextRequest, NextResponse } from 'next/server'
 import { prisma } from '@fuxie/database'
-import { withAuth } from '@/lib/auth/middleware'
+import { NotFoundError, withAuth } from '@/lib/auth/middleware'
 import { getDbUserByFirebaseUid } from '@/lib/auth/db-user'
 import { handleApiError } from '@/lib/api/error-handler'
 import { recordLearningActivity } from '@/lib/progress/learning-activity'
@@ -23,13 +23,19 @@ export async function POST(req: NextRequest) {
         await prisma.$transaction(async (tx) => {
             const reviewResults = results.filter((r: any) => r.type === 'VOCAB_REVIEW')
             for (const r of reviewResults) {
-                const cardId = r.data.cardId
-                await tx.srsCard.update({
-                    where: { id: cardId },
+                const cardId = r.data?.cardId
+                if (typeof cardId !== 'string' || cardId.trim().length === 0) {
+                    throw new NotFoundError('Card not found')
+                }
+                const updated = await tx.srsCard.updateMany({
+                    where: { id: cardId, userId: user.id },
                     data: {
                         nextReviewAt: new Date(Date.now() + (r.correct ? 86400000 : 0)),
                     },
                 })
+                if (updated.count !== 1) {
+                    throw new NotFoundError('Card not found')
+                }
             }
 
             const newVocabs = results.filter((r: any) => r.type === 'VOCAB_NEW' && r.correct !== false)

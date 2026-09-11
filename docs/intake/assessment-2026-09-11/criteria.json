@@ -1,0 +1,414 @@
+{
+  "date": "2026-09-11",
+  "head": "3217ea052aec5606602cb7f9ec62f159ae9a750e",
+  "workingTree": true,
+  "summary": {
+    "applicable": 40,
+    "assessedWithNumericScore": 36,
+    "unknown": 4,
+    "notApplicable": 0,
+    "aggregateScore": null
+  },
+  "criteria": [
+    {
+      "id": "D01.1",
+      "title": "Người dùng, vấn đề và phạm vi",
+      "score": 2,
+      "evidence": "product-ux-analytics.md",
+      "confidence": "Vừa",
+      "scope": "PRD/roadmap/source",
+      "observed": "Có định vị B2C người Việt và module scope",
+      "gap": "Nghiên cứu nhu cầu người học thật chưa có"
+    },
+    {
+      "id": "D01.2",
+      "title": "Onboarding đến hành động đầu tiên",
+      "score": 2,
+      "evidence": "product-ux-analytics.md",
+      "confidence": "Vừa",
+      "scope": "Source + fixture UI",
+      "observed": "Goal/level/time/save/retry và activation contract có",
+      "gap": "Signup Firebase và người mới đến bài hoàn chỉnh chưa đo"
+    },
+    {
+      "id": "D01.3",
+      "title": "Dashboard đề xuất bước học",
+      "score": 1,
+      "evidence": "product-ux-analytics.md",
+      "confidence": "Cao",
+      "scope": "Source + 2 viewport audit learner",
+      "observed": "1mastered+5locked,0primary; course vẫn truy cập được",
+      "gap": "Chưa nối goal/due SRS/next node"
+    },
+    {
+      "id": "D01.4",
+      "title": "Roadmap, dependency, acceptance",
+      "score": 2,
+      "evidence": "product-ux-analytics.md",
+      "confidence": "Vừa",
+      "scope": "Tài liệu đối chiếu route active",
+      "observed": "Có owner/acceptance; runtime lệch một số cam kết",
+      "gap": "Cần bảng trạng thái current revision"
+    },
+    {
+      "id": "D02.1",
+      "title": "Can-do và CEFR",
+      "score": 1,
+      "evidence": "content-academic.md",
+      "confidence": "Vừa",
+      "scope": "Inventory + 180 mẫu text",
+      "observed": "Có metadata/LO nhưng nhiều can-do chung chung",
+      "gap": "Chưa có human alignment/signoff và outcome validation"
+    },
+    {
+      "id": "D02.2",
+      "title": "Ngôn ngữ Đức và hỗ trợ Việt",
+      "score": 1,
+      "evidence": "content-academic.md",
+      "confidence": "Cao với ví dụ; vừa toàn kho",
+      "scope": "180 mẫu,36 review chéo và6case rủi ro",
+      "observed": "Lỗi template, cú pháp, encoding và hướng dẫn phát âm đã thấy",
+      "gap": "LanguageTool full run bị chặn hạ tầng; không suy rộng tỷ lệ lỗi"
+    },
+    {
+      "id": "D02.3",
+      "title": "Đáp án, distractor và rubric",
+      "score": 1,
+      "evidence": "content-academic.md",
+      "confidence": "Cao với ví dụ",
+      "scope": "Semantic review + structural scan",
+      "observed": "Có distractor cùng đúng, evidence sai, rubric thiếu band",
+      "gap": "Phải rà toàn nhóm template và hiệu chuẩn người duyệt"
+    },
+    {
+      "id": "D02.4",
+      "title": "Audio, bài mở và format thi",
+      "score": 1,
+      "evidence": "content-academic.md",
+      "confidence": "Vừa",
+      "scope": "Source/script,0audio nghe thật",
+      "observed": "Writing29/30 mẫu có vấn đề; transcript/intro lệch, audio pending",
+      "gap": "Acoustic và đối chiếu format thi chính thức theo phiên bản U"
+    },
+    {
+      "id": "D03.1",
+      "title": "Nhiệm vụ mobile và desktop",
+      "score": 2,
+      "evidence": "product-ux-analytics.md",
+      "confidence": "Vừa",
+      "scope": "13fixture states; actual dashboard 2viewport",
+      "observed": "Navigation2/2 đạt; avatar không phản hồi",
+      "gap": "Chưa có usability completion time người học"
+    },
+    {
+      "id": "D03.2",
+      "title": "Loading, empty, error, retry, locked",
+      "score": 1,
+      "evidence": "product-ux-analytics.md",
+      "confidence": "Cao với canvas",
+      "scope": "Fixture + fault injection",
+      "observed": "Shared shells có; canvasnull bỏ toàn bộ node/lesson link",
+      "gap": "Chưa replay mọi route/error dependency"
+    },
+    {
+      "id": "D03.3",
+      "title": "Accessibility và reflow",
+      "score": 1,
+      "evidence": "product-ux-analytics.md",
+      "confidence": "Cao với lỗi được đo",
+      "scope": "axe + keyboard/reduced motion/320px",
+      "observed": "11/13fixture cases có serious contrast; onboarding tràn390px",
+      "gap": "Screen reader,zoom toàn diện,multibrowser U"
+    },
+    {
+      "id": "D03.4",
+      "title": "Design và gamification hỗ trợ học",
+      "score": 2,
+      "evidence": "product-ux-analytics.md",
+      "confidence": "Vừa",
+      "scope": "Source components/FSM/readout",
+      "observed": "Shared receipt/tokens/reduced motion hiện hữu",
+      "gap": "Hiệu quả duy trì học và reward-only behavior thật U"
+    },
+    {
+      "id": "D04.1",
+      "title": "Luồng learner,teacher,admin trọng yếu",
+      "score": 2,
+      "evidence": "technical-quality.md",
+      "confidence": "Vừa",
+      "scope": "Core970,hardening5,API seed,UI probes",
+      "observed": "Luồng mẫu và role negatives có bằng chứng thực",
+      "gap": "Chưa full Firebase/provider/classroom/thi end-to-end"
+    },
+    {
+      "id": "D04.2",
+      "title": "Submit,retry,reload,expire nhất quán",
+      "score": 1,
+      "evidence": "technical-quality.md",
+      "confidence": "Cao với probe",
+      "scope": "Audit DB thực",
+      "observed": "Submit/reload đạt nhưng clientXP/replay nhân tiến độ",
+      "gap": "Concurrency/timezone/session expiry toàn matrix chưa chạy"
+    },
+    {
+      "id": "D04.3",
+      "title": "Empty,invalid input,wrong role,dependency error",
+      "score": 2,
+      "evidence": "technical-quality.md",
+      "confidence": "Vừa",
+      "scope": "Unit/smoke/negative API",
+      "observed": "Negative time400,anonymous401; nhiều negative guards có",
+      "gap": "Provider outage/micdenial và toàn ownership matrix chưa đủ"
+    },
+    {
+      "id": "D04.4",
+      "title": "Test fidelity và coverage",
+      "score": 2,
+      "evidence": "technical-quality.md",
+      "confidence": "Cao",
+      "scope": "Kết quả chạy mới",
+      "observed": "970core; property1timeout;4interaction stale,6notrun",
+      "gap": "Chưa toàn suite xanh hiện revision,active-route coverage cần sửa"
+    },
+    {
+      "id": "D05.1",
+      "title": "Tutor/chấm đúng rubric,không false correction",
+      "score": 1,
+      "evidence": "content-academic.md",
+      "confidence": "Vừa",
+      "scope": "Prompt + fixture eval",
+      "observed": "Có triển khai,fixture5/5; speaking chưa gắn rubric4chiều",
+      "gap": "Provider corpus/gold adjudication chưa có"
+    },
+    {
+      "id": "D05.2",
+      "title": "Feedback cụ thể,đúng cấp độ và tiếng Việt",
+      "score": 1,
+      "evidence": "content-academic.md",
+      "confidence": "Vừa",
+      "scope": "Prompt/fixture/source",
+      "observed": "Signal tự khai không chứng minh VI; mẫu writing yếu",
+      "gap": "Chưa pair feedback/revision được người duyệt đối chiếu"
+    },
+    {
+      "id": "D05.3",
+      "title": "Timeout,fallback,latency,cost AI",
+      "score": 1,
+      "evidence": "technical-quality.md",
+      "confidence": "Vừa",
+      "scope": "Unit/source/cache/queue/usage reader",
+      "observed": "Có timeout/fallback/queue; usage writer thiếu",
+      "gap": "Latency,cost,error rate provider thực U"
+    },
+    {
+      "id": "D05.4",
+      "title": "Mic,STT,TTS,transcript và lỗi provider",
+      "score": "U",
+      "evidence": "technical-quality.md",
+      "confidence": "Thiếu bằng chứng",
+      "scope": "0audio nghe thật; service/provider không chạy",
+      "observed": "Đã kiểm kê source và audio status",
+      "gap": "Cần golden audio,nghe thật,mic/network/provider tests"
+    },
+    {
+      "id": "D06.1",
+      "title": "Ranh giới kiến trúc và owner",
+      "score": 2,
+      "evidence": "technical-quality.md",
+      "confidence": "Vừa",
+      "scope": "Manifests/imports/system map",
+      "observed": "Web/AI/STT/shared/SRS/DB tách package",
+      "gap": "Owner triển khai và đường active STT cần xác nhận"
+    },
+    {
+      "id": "D06.2",
+      "title": "Type/build/contracts/runtime",
+      "score": 2,
+      "evidence": "technical-quality.md",
+      "confidence": "Cao với local",
+      "scope": "Node22 type/buildPASS",
+      "observed": "Runtime audit khớp majorCI; lint chưa đạt",
+      "gap": "Neon adapter và deployed artifact chưa kiểm"
+    },
+    {
+      "id": "D06.3",
+      "title": "Schema,migration,relations,transaction",
+      "score": 2,
+      "evidence": "technical-quality.md",
+      "confidence": "Vừa",
+      "scope": "Schema push + seed + actual submit",
+      "observed": "DB mới tạo được; attempt/reward trong transaction",
+      "gap": "Migration nâng cấp dữ liệu,drift,restore U"
+    },
+    {
+      "id": "D06.4",
+      "title": "SRS/progress/XP/Fucoin invariants",
+      "score": 1,
+      "evidence": "technical-quality.md",
+      "confidence": "Cao",
+      "scope": "Audit DB + security/source tests",
+      "observed": "ClientXP+12345,replay2attempt và SRSownership gap",
+      "gap": "Cần server-scored session/idempotency,timezone/concurrency retest"
+    },
+    {
+      "id": "D07.1",
+      "title": "Auth,role và ownership",
+      "score": 1,
+      "evidence": "security-privacy.md",
+      "confidence": "Cao với cases; vừa toàn phạm vi",
+      "scope": "Source + 7synthetic checks + smoke",
+      "observed": "Guard hữu ích nhưng AI/sync/session chưa đồng đều",
+      "gap": "Ingress và Firebase lifecycle deployment U"
+    },
+    {
+      "id": "D07.2",
+      "title": "Secrets,dependency,input/upload",
+      "score": 1,
+      "evidence": "security-privacy.md",
+      "confidence": "Vừa",
+      "scope": "Current secret/env scans + registry audit",
+      "observed": "Secrets/envPASS;158advisory entries;missing-secret fallback",
+      "gap": "History/ignored files/upload quotas/exploitability chưa đầy đủ"
+    },
+    {
+      "id": "D07.3",
+      "title": "Data flow,retention,xóa",
+      "score": 1,
+      "evidence": "security-privacy.md",
+      "confidence": "Vừa",
+      "scope": "Source/provider map/cache policy",
+      "observed": "Chatowner/softdelete,TTS7days;private PWA cache gap",
+      "gap": "Deletion end-to-end/provider/backup retention U"
+    },
+    {
+      "id": "D07.4",
+      "title": "Nguồn,quyền tài sản,claim,chính sách",
+      "score": "U",
+      "evidence": "security-privacy.md",
+      "confidence": "Thiếu bằng chứng",
+      "scope": "Guidance/doc review",
+      "observed": "Có yêu cầu guardrail/license,thiếu hồ sơ xác nhận",
+      "gap": "Không suy ra vi phạm; cần chứng từ và owner chuyên môn"
+    },
+    {
+      "id": "D08.1",
+      "title": "Tải trang,tương tác,CLS,bundle",
+      "score": 1,
+      "evidence": "technical-quality.md",
+      "confidence": "Cao bundle; vừa local",
+      "scope": "Production bundle + dev HTTP",
+      "observed": "17routes vượt115KB;dev5/21 vượtbudget",
+      "gap": "Production browser/field CWV chưa đo"
+    },
+    {
+      "id": "D08.2",
+      "title": "API/DB/AI latency và error rate",
+      "score": "U",
+      "evidence": "technical-quality.md",
+      "confidence": "Thiếu bằng chứng tổng thể",
+      "scope": "Dev HTTP sample chỉ tham khảo",
+      "observed": "21HTTP targets200,provider không chạy",
+      "gap": "Thiếu telemetry production,p95/error rate và cache đúng"
+    },
+    {
+      "id": "D08.3",
+      "title": "Mạng chậm,timeout,retry,queue",
+      "score": 1,
+      "evidence": "technical-quality.md",
+      "confidence": "Vừa",
+      "scope": "Source/unit/offline synthetic",
+      "observed": "Có fallback/queue nhưng pending bị clear khi401/500",
+      "gap": "Latent helper chưa có UIcaller; Slow4G/provider matrix chưa chạy"
+    },
+    {
+      "id": "D08.4",
+      "title": "PWA,resume và dữ liệu đúng account",
+      "score": 1,
+      "evidence": "security-privacy.md",
+      "confidence": "Cao policy; vừa impact",
+      "scope": "Installed cache policy test",
+      "observed": "GETauthme/chathistory matchcachechung",
+      "gap": "Chưa browser replayA→Boffline; cần NetworkOnly/partition+purge"
+    },
+    {
+      "id": "D09.1",
+      "title": "Tái lập môi trường/dependencies",
+      "score": 2,
+      "evidence": "operations.md",
+      "confidence": "Vừa",
+      "scope": "CI/manifests + local build/seed",
+      "observed": "Node22/pnpm lock + audit môi trường mới đạt",
+      "gap": "AI Docker runtime tsx candidate chưa build để xác nhận"
+    },
+    {
+      "id": "D09.2",
+      "title": "CI gates/skip/evidence",
+      "score": 1,
+      "evidence": "operations.md",
+      "confidence": "Cao config; vừa current CI",
+      "scope": "Workflow + gh historical reads",
+      "observed": "Có gates;fail quick kéo skipped;lint/bundle gaps",
+      "gap": "HEAD3217ea0 chưa có run; lịch sử không thay current evidence"
+    },
+    {
+      "id": "D09.3",
+      "title": "Deploy,rollback,backup,incident",
+      "score": 1,
+      "evidence": "operations.md",
+      "confidence": "Vừa",
+      "scope": "Runbooks/config",
+      "observed": "Có runbook và owner theo vai;deploy/restore evidence thiếu",
+      "gap": "Chưa diễn tập RPO/RTO,rollback current build hoặc production restore"
+    },
+    {
+      "id": "D09.4",
+      "title": "Backlog,tài liệu,truy vết thay đổi",
+      "score": 2,
+      "evidence": "operations.md",
+      "confidence": "Vừa",
+      "scope": "Git+docs+snapshot",
+      "observed": "Role gate,roadmap,baseline và artifact cụ thể",
+      "gap": "Dirty tree không phải lỗi; cần release manifest/tag/owner acceptance"
+    },
+    {
+      "id": "D10.1",
+      "title": "Metric definition/window/cohort/dedup",
+      "score": 1,
+      "evidence": "product-ux-analytics.md",
+      "confidence": "Cao",
+      "scope": "6synthetic reproduction",
+      "observed": "Weekly bất kỳ range,D7/cohort maturity và unit lệch",
+      "gap": "Không dùng readout hiện tại làm số liệu tăng trưởng"
+    },
+    {
+      "id": "D10.2",
+      "title": "UI→event→readout,loại test/trùng",
+      "score": 1,
+      "evidence": "product-ux-analytics.md",
+      "confidence": "Cao",
+      "scope": "Source + UIevent paths",
+      "observed": "Dashboardclick thiếu;SRS/session actionId gộp sai",
+      "gap": "Chưa đối soát real events/test-account exclusion"
+    },
+    {
+      "id": "D10.3",
+      "title": "Activation,retention,recall,transfer",
+      "score": "U",
+      "evidence": "product-ux-analytics.md",
+      "confidence": "Thiếu bằng chứng",
+      "scope": "Beta docs waiting,N/A",
+      "observed": "Không có cohort thật đủ tuổi hoặc paired learning study",
+      "gap": "Không gọi completion/XP là tăngCEFR"
+    },
+    {
+      "id": "D10.4",
+      "title": "Chi phí,doanh thu,khả thi vận hành",
+      "score": 1,
+      "evidence": "product-ux-analytics.md",
+      "confidence": "Vừa",
+      "scope": "Costreader/schema/budgetdocs",
+      "observed": "Có estimate nhưng thiếuwriter usage,denominator thật",
+      "gap": "Invoices/revenue/support workload/active learner U"
+    }
+  ]
+}

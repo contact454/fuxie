@@ -6,7 +6,7 @@ import { generateVocabularyPractice, VocabPracticeError, VOCAB_PRACTICE_TYPES, t
 
 interface PageProps {
     params: Promise<{ type: string }>
-    searchParams: Promise<{ theme?: string; level?: string }>
+    searchParams: Promise<{ theme?: string; level?: string; fixture?: string; showResults?: string }>
 }
 
 const TYPE_TITLES: Record<string, string> = {
@@ -28,11 +28,62 @@ export async function generateMetadata({ params }: PageProps) {
 }
 
 export default async function ExerciseTypePage({ params, searchParams }: PageProps) {
+    const { type } = await params
+    const { theme, level, fixture, showResults } = await searchParams
+
+    const isVisualQa = process.env.NODE_ENV !== 'production' && fixture === 'visual-qa'
+
+    if (isVisualQa) {
+        const mockExerciseData = {
+            exerciseType: type,
+            theme: {
+                slug: theme || '06-essen-trinken',
+                name: 'Essen und Trinken',
+                translations: { vi: 'Ăn uống', en: 'Eating and Drinking', de: 'Essen und Trinken' },
+                imageUrl: null,
+                cefrLevel: level || 'A1'
+            },
+            cefrLevel: level || 'A1',
+            totalQuestions: 4,
+            questions: [
+                {
+                    id: 'q1',
+                    type: 'de_to_native',
+                    prompt: 'der Apfel',
+                    promptImage: null,
+                    promptAudio: '/audio/apfel.mp3',
+                    options: ['quả táo', 'quả chuối', 'quả cam', 'quả lê'],
+                    wordId: 'w1',
+                    word: 'der Apfel',
+                    meaningNative: 'quả táo'
+                },
+                {
+                    id: 'q2',
+                    type: 'native_to_de',
+                    prompt: 'quả chuối',
+                    promptImage: null,
+                    promptAudio: null,
+                    options: ['die Banane', 'der Apfel', 'die Birne', 'die Orange'],
+                    wordId: 'w2',
+                    word: 'die Banane',
+                    meaningNative: 'quả chuối'
+                }
+            ]
+        }
+        return (
+            <ExercisePlayerWrapperDynamic
+                type={type}
+                theme={theme || '06-essen-trinken'}
+                level={level || 'A1'}
+                initialExerciseData={mockExerciseData}
+                initialError={null}
+                showResults={showResults === 'true'}
+            />
+        )
+    }
+
     const serverUser = await getServerUser()
     if (!serverUser) redirect('/login')
-
-    const { type } = await params
-    const { theme, level } = await searchParams
 
     if (!VOCAB_PRACTICE_TYPES.includes(type as VocabPracticeType)) redirect('/vocabulary/practice')
     if (!theme) redirect('/vocabulary/practice')
@@ -65,6 +116,7 @@ export default async function ExerciseTypePage({ params, searchParams }: PagePro
             level={level || 'A1'}
             initialExerciseData={initialExerciseData}
             initialError={initialError}
+            showResults={showResults === 'true'}
         />
     )
 }

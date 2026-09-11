@@ -45,6 +45,14 @@
 | RV-Er3 | Retry rate-limit (>3 in 60s → disable 30s) | Req 11.6 | PASS — `createRetryGuard` | n/a |
 | RV-Er4 | No reward amber | Req 11.7 | PASS — Property 9 | `screenshots/review/review-error-mobile.png` (PASS — captured 2026-05-16) |
 
+## Review Session state checklist
+
+| # | Item | Spec ref | Status | Evidence |
+| --- | --- | --- | --- | --- |
+| RV-S1 | Flashcard mặt trước (Mobile) | Ticket-B1 | PASS | `screenshots/review/review-srs-front-mobile.png` |
+| RV-S2 | Flashcard mặt sau + Rating (Mobile) | Ticket-B1 | PASS | `screenshots/review/review-srs-back-mobile.png` |
+| RV-S3 | Flashcard tổng kết (Mobile) | Ticket-B1 | PASS | `screenshots/review/review-srs-complete-mobile.png` |
+
 ## Cross-cutting
 
 | Item | Spec ref | Status |
@@ -58,4 +66,4 @@
 ## Result
 
 - **Failing items**: 0
-- **Pending items**: screenshot capture (default, empty, error).
+- **Pending items**: None.

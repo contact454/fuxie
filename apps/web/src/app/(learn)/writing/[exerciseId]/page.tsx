@@ -46,7 +46,13 @@ import {
     type Slice2VisualQaParams,
 } from '@/components/visual-fixtures/slice-2-skill-fixtures'
 
-export async function generateMetadata({ params }: { params: Promise<{ exerciseId: string }> }) {
+export async function generateMetadata({
+    params,
+    searchParams,
+}: {
+    params: Promise<{ exerciseId: string }>
+    searchParams?: Promise<{ fixture?: string }>
+}) {
     const { exerciseId } = await params
     return {
         title: `Fuxie 🦊 — Schreiben ${exerciseId}`,
@@ -58,12 +64,84 @@ export default async function WritingExercisePage({
     searchParams,
 }: {
     params: Promise<{ exerciseId: string }>
-    searchParams?: Promise<Slice2VisualQaParams>
+    searchParams?: Promise<{ fixture?: string; state?: string }>
 }) {
     const visualParams = await searchParams
+    const isVisualQa = visualParams?.fixture === 'visual-qa'
 
-    if (isSlice2VisualQaFixture(visualParams, 'error')) {
-        return <Slice2WritingErrorFixture />
+    if (isVisualQa) {
+        const tSkill = await getTranslations('SkillPlayer')
+        const mockExercise = {
+            exerciseId: 'W-A1-GOETHE-001',
+            cefrLevel: 'A1' as const,
+            teil: 1,
+            teilName: 'Viết thư cá nhân',
+            topic: 'Einladung zur Party',
+            textType: 'E-Mail',
+            register: 'informal',
+            instruction: 'Schreiben Sie eine E-Mail an Ihren Freund Peter. Laden Sie ihn zu Ihrer Geburtstagsparty am Samstag ein. Sagen Sie, wann die Party anfängt und was er mitbringen soll.',
+            translations: {
+                vi: 'Hãy viết một email cho người bạn Peter. Mời anh ấy đến bữa tiệc sinh nhật của bạn vào thứ Bảy. Hãy cho biết khi nào bữa tiệc bắt đầu và anh ấy nên mang theo thứ gì.',
+                en: 'Write an email to your friend Peter. Invite him to your birthday party on Saturday. Say when the party starts and what he should bring.'
+            },
+            situation: 'Sie haben am Samstag Geburtstag und feiern eine Party.',
+            contentPoints: [
+                'Mời Peter đến bữa tiệc sinh nhật',
+                'Thời gian bắt đầu bữa tiệc',
+                ' PETER nên mang theo đồ ăn hoặc thức uống gì'
+            ],
+            formFields: null,
+            sourceText: null,
+            sourceTextType: null,
+            grafikDesc: null,
+            minWords: 30,
+            maxWords: 40,
+            timeMinutes: 15,
+            maxScore: 25,
+            rubricJson: null
+        }
+
+        const checkpoints = buildWritingQuestCheckpoints(mockExercise.minWords)
+        const totalCheckpoints = checkpoints.length
+
+        return (
+            <div className="max-w-6xl mx-auto px-4 py-6">
+                <WritingSkillShell
+                    player={{
+                        exerciseId: mockExercise.exerciseId,
+                        cefrLevel: mockExercise.cefrLevel,
+                        teil: mockExercise.teil,
+                        teilName: mockExercise.teilName,
+                        textType: mockExercise.textType,
+                        register: mockExercise.register,
+                        topic: mockExercise.topic,
+                        instruction: mockExercise.instruction,
+                        instructionNative: mockExercise.translations.vi,
+                        situation: mockExercise.situation,
+                        contentPoints: mockExercise.contentPoints,
+                        formFields: mockExercise.formFields,
+                        sourceText: mockExercise.sourceText,
+                        sourceTextType: mockExercise.sourceTextType,
+                        grafikDesc: mockExercise.grafikDesc,
+                        minWords: mockExercise.minWords,
+                        maxWords: mockExercise.maxWords,
+                        timeMinutes: mockExercise.timeMinutes,
+                        maxScore: mockExercise.maxScore,
+                        rubricJson: mockExercise.rubricJson as any,
+                        isVisualQa: true,
+                        mockState: visualParams?.state || '',
+                    } as any}
+                    primaryCtaHref="/writing"
+                    totalCheckpoints={totalCheckpoints}
+                    labels={{
+                        primaryCtaLabel: tSkill('continueLabel'),
+                        primaryCtaAriaLabel: tSkill('writingContinueAriaLabel'),
+                        retryCtaLabel: tSkill('retryLabel'),
+                        fallbackMessage: tSkill('writingFallbackMessage'),
+                    }}
+                />
+            </div>
+        )
     }
 
     const serverUser = await getServerUser()

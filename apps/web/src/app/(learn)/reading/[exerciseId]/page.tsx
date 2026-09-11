@@ -35,7 +35,23 @@ import {
     type Slice2VisualQaParams,
 } from '@/components/visual-fixtures/slice-2-skill-fixtures'
 
-export async function generateMetadata({ params }: { params: Promise<{ exerciseId: string }> }) {
+export async function generateMetadata({
+    params,
+    searchParams,
+}: {
+    params: Promise<{ exerciseId: string }>
+    searchParams?: Promise<{ fixture?: string }>
+}) {
+    const visualParams = await searchParams
+    const isVisualQa = visualParams?.fixture === 'visual-qa'
+
+    if (isVisualQa) {
+        return {
+            title: 'Fuxie - Luyện đọc Visual QA',
+            description: 'Mock bài đọc tiếng Đức',
+        }
+    }
+
     const { exerciseId } = await params
     return {
         title: `Fuxie - Luyện đọc ${exerciseId}`,
@@ -47,12 +63,88 @@ export default async function ReadingExercisePage({
     searchParams,
 }: {
     params: Promise<{ exerciseId: string }>
-    searchParams?: Promise<Slice2VisualQaParams>
+    searchParams?: Promise<{ fixture?: string; state?: string }>
 }) {
     const visualParams = await searchParams
+    const isVisualQa = visualParams?.fixture === 'visual-qa'
 
-    if (isSlice2VisualQaFixture(visualParams, 'success')) {
-        return <Slice2ReadingSuccessFixture />
+    if (isVisualQa) {
+        const tSkill = await getTranslations('SkillPlayer')
+        const mockExercise = {
+            exerciseId: 'R-A1-GOETHE-001',
+            cefrLevel: 'A1' as const,
+            teil: 1,
+            teilName: 'Đọc hiểu hội thoại ngắn',
+            topic: 'Eine E-Mail von Maria',
+            textsJson: {
+                title: 'Eine E-Mail von Maria',
+                titleNative: 'Một email từ Maria',
+                paragraphs: [
+                    'Hallo Peter,\nwie geht es dir? Ich bin jetzt in Berlin. Meine neue Wohnung ist sehr schön. Sie liegt im Zentrum. Ich arbeite bei Siemens als Sekretärin. Meine Kollegen sind sehr nett.\nAm Wochenende habe ich Zeit. Wollen wir uns treffen?\nLiebe Grüße\nMaria',
+                ],
+                paragraphsNative: [
+                    'Chào Peter,\nbạn khỏe không? Hiện tại mình đang ở Berlin. Căn hộ mới của mình rất đẹp. Nó nằm ở trung tâm. Mình làm việc tại Siemens với tư cách là thư ký. Các đồng nghiệp của mình rất tốt bụng.\nVào cuối tuần mình có thời gian rảnh. Chúng ta gặp nhau nhé?\nThân ái\nMaria'
+                ]
+            },
+            imagesJson: [],
+            questions: [
+                {
+                    id: 'q1',
+                    questionNumber: 1,
+                    questionType: 'multiple_choice',
+                    linkedText: null,
+                    statement: 'Maria wohnt jetzt in Berlin.',
+                    options: ['Richtig', 'Falsch'],
+                    correctAnswer: 'a',
+                    sortOrder: 1,
+                },
+                {
+                    id: 'q2',
+                    questionNumber: 2,
+                    questionType: 'multiple_choice',
+                    linkedText: null,
+                    statement: 'Maria hat am Wochenende keine Zeit.',
+                    options: ['Richtig', 'Falsch'],
+                    correctAnswer: 'b',
+                    sortOrder: 2,
+                }
+            ]
+        }
+
+        return (
+            <div className="max-w-5xl mx-auto px-4 py-6">
+                <ReadingSkillShell
+                    player={{
+                        exerciseId: mockExercise.exerciseId,
+                        cefrLevel: mockExercise.cefrLevel,
+                        teil: mockExercise.teil,
+                        teilName: mockExercise.teilName,
+                        topic: mockExercise.topic,
+                        textsJson: mockExercise.textsJson as any,
+                        imagesJson: mockExercise.imagesJson as any,
+                        questions: mockExercise.questions.map(q => ({
+                            id: q.id,
+                            questionNumber: q.questionNumber,
+                            questionType: q.questionType,
+                            linkedText: q.linkedText,
+                            statement: q.statement,
+                            options: q.options as string[] | null,
+                            sortOrder: q.sortOrder,
+                            correctAnswer: q.correctAnswer,
+                        })),
+                        isVisualQa: true,
+                        mockState: visualParams?.state || '',
+                    } as any}
+                    primaryCtaHref="/reading"
+                    labels={{
+                        primaryCtaLabel: tSkill('continueLabel'),
+                        primaryCtaAriaLabel: tSkill('readingContinueAriaLabel'),
+                        retryCtaLabel: tSkill('retryLabel'),
+                        fallbackMessage: tSkill('readingFallbackMessage'),
+                    }}
+                />
+            </div>
+        )
     }
 
     const serverUser = await getServerUser()
@@ -103,6 +195,7 @@ export default async function ReadingExercisePage({
                         statement: q.statement,
                         options: q.options as string[] | null,
                         sortOrder: q.sortOrder,
+                        correctAnswer: q.correctAnswer,
                     })),
                 }}
                 primaryCtaHref="/reading"

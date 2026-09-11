@@ -2,6 +2,8 @@
 
 import { useState, useCallback, useEffect, useMemo, useRef } from 'react'
 import { useTranslations } from 'next-intl'
+import { useSuppressLearnerMainChrome } from '@/hooks/use-suppress-chrome'
+import { FrostedPanel } from '@fuxie/ui/components'
 import { ExerciseProgress } from './exercise-progress'
 import { ExerciseResults } from './exercise-results'
 import { useExerciseTimer } from '@/hooks/use-exercise-timer'
@@ -66,6 +68,8 @@ export function MatchingExercise({ pairs, cefrLevel, themeName: _themeName, them
         cefrLevel,
         xpPerCorrect: 5,
     })
+
+    useSuppressLearnerMainChrome(phase !== 'results')
 
     const shuffledWords = useMemo(() => stableShuffle(pairs, 'words'), [pairs])
     const shuffledMeanings = useMemo(() => stableShuffle(pairs, 'meanings'), [pairs])
@@ -188,14 +192,14 @@ export function MatchingExercise({ pairs, cefrLevel, themeName: _themeName, them
 
             <div className={exerciseCenterStageClass}>
                 <div className={exerciseStageInnerClass}>
-                    {/* Title */}
-                    <div className="text-center mb-6">
+                    {/* Briefing Card wrapped in FrostedPanel */}
+                    <FrostedPanel className="mb-6 p-4 text-center shadow-[var(--fuxie-shadow-iso)] border-2 border-[var(--fuxie-blue-200)]/70">
                         <h2 className="text-xl font-black text-slate-950">{t('findPairs')}</h2>
                         <p className="mt-1 text-sm font-semibold text-slate-500">
                             {t('foundPairsProgress', { matched: matchedPairs.size, total: pairs.length })}
                             {mistakes > 0 && <span className="text-red-400 ml-2">• {t('mistakesCount', { count: mistakes })}</span>}
                         </p>
-                    </div>
+                    </FrostedPanel>
 
                     {/* Two columns */}
                     <div className="grid grid-cols-2 gap-4">

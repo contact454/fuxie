@@ -23,6 +23,9 @@ import {
 import { renderTexts, renderSchilderCards, renderAnzeigenCards, renderImages } from './reading-text-renderers'
 import { useReadingTranslate } from './use-reading-translate'
 import { useTranslations } from 'next-intl'
+import { OptionTile, PrimaryCta } from '@fuxie/ui/components'
+import { BottomFeedback } from '@/components/vocabulary/exercises/bottom-feedback'
+import { useSuppressLearnerMainChrome } from '@/hooks/use-suppress-chrome'
 
 // Types, constants, helpers, and renderers extracted to:
 // - ./reading-types.ts
@@ -57,10 +60,17 @@ const CELEBRATION_CONFETTI_PALETTE = [
 export function ReadingPlayer({
     exerciseId, cefrLevel, teil, teilName, topic,
     textsJson, imagesJson, questions,
-}: ReadingPlayerProps) {
+    isVisualQa = false,
+    mockState = '',
+}: ReadingPlayerProps & { isVisualQa?: boolean; mockState?: string }) {
     const router = useRouter()
     const t = useTranslations('Reading')
     const [phase, setPhase] = useState<Phase>('intro')
+    const [selectedOption, setSelectedOption] = useState<string | null>(null)
+    const [isChecked, setIsChecked] = useState(false)
+    const [isCurrentAnswerCorrect, setIsCurrentAnswerCorrect] = useState(false)
+
+    useSuppressLearnerMainChrome(phase === 'exercise' || phase === 'warmup')
     const [warmupStep, setWarmupStep] = useState(0)
     const [currentQuestion, setCurrentQuestion] = useState(0)
     const [answers, setAnswers] = useState<Record<string, string>>({})
@@ -86,6 +96,62 @@ export function ReadingPlayer({
         ? TEIL_DESCRIPTIONS.beginner?.[teil]
         : TEIL_DESCRIPTIONS.advanced?.[teil]
     const heroImage = useMemo(() => getHeroImage(imagesJson, cefrLevel), [imagesJson, cefrLevel])
+
+    useEffect(() => {
+        if (isVisualQa) {
+            if (mockState === 'results') {
+                setPhase('results')
+                setResults({
+                    score: 1,
+                    totalQuestions: 2,
+                    percentage: 50,
+                    xpEarned: 15,
+                    fucoinEarned: 5,
+                    timeTaken: 120,
+                    questionResults: [
+                        {
+                            questionId: 'q1',
+                            questionNumber: 1,
+                            questionType: 'MC',
+                            linkedText: null,
+                            statement: 'Maria wohnt jetzt in Berlin.',
+                            options: ['Richtig', 'Falsch'],
+                            userAnswer: 'a',
+                            correctAnswer: 'a',
+                            isCorrect: true,
+                            explanation: null
+                        },
+                        {
+                            questionId: 'q2',
+                            questionNumber: 2,
+                            questionType: 'MC',
+                            linkedText: null,
+                            statement: 'Maria hat am Wochenende keine Zeit.',
+                            options: ['Richtig', 'Falsch'],
+                            userAnswer: 'a',
+                            correctAnswer: 'b',
+                            isCorrect: false,
+                            explanation: null
+                        }
+                    ]
+                })
+            } else {
+                setPhase('exercise')
+                if (mockState === 'selected') {
+                    setSelectedOption('a')
+                    setIsChecked(false)
+                } else if (mockState === 'correct') {
+                    setSelectedOption('a')
+                    setIsChecked(true)
+                    setIsCurrentAnswerCorrect(true)
+                } else if (mockState === 'wrong') {
+                    setSelectedOption('b')
+                    setIsChecked(true)
+                    setIsCurrentAnswerCorrect(false)
+                }
+            }
+        }
+    }, [isVisualQa, mockState])
 
     // ─── Cloze exercise detection ─────────
     const clozeData = useMemo(() => {
@@ -204,7 +270,28 @@ export function ReadingPlayer({
     }
 
     const selectAnswer = (questionId: string, answer: string) => {
-        setAnswers(prev => ({ ...prev, [questionId]: answer }))
+        if (isChecked) return
+        setSelectedOption(answer)
+    }
+
+    const handleCheck = () => {
+        const q = questions[currentQuestion]
+        if (!q || !selectedOption) return
+        const isCorrect = selectedOption.toLowerCase() === q.correctAnswer.toLowerCase()
+        setIsCurrentAnswerCorrect(isCorrect)
+        setIsChecked(true)
+        setAnswers(prev => ({ ...prev, [q.id]: selectedOption }))
+    }
+
+    const handleContinue = () => {
+        if (currentQuestion < questions.length - 1) {
+            setSelectedOption(null)
+            setIsChecked(false)
+            setIsCurrentAnswerCorrect(false)
+            setCurrentQuestion(c => c + 1)
+        } else {
+            submitAnswers()
+        }
     }
 
     const submitAnswers = useCallback(async () => {
@@ -308,6 +395,9 @@ export function ReadingPlayer({
         setStartTime(Date.now())
         trackedCheckpoints.current = new Set()
         completionTracked.current = false
+        setSelectedOption(null)
+        setIsChecked(false)
+        setIsCurrentAnswerCorrect(false)
     }
 
     // ═══════════════════════════════════════════
@@ -922,8 +1012,20 @@ export function ReadingPlayer({
         // NORMAL EXERCISE MODE — per-question navigation
         // ═══════════════════════════════════════════
         const q = questions[currentQuestion]
+        if (!q) return null
         const progress = questions.length > 0 ? ((currentQuestion + 1) / questions.length) * 100 : 0
         const elapsed = Math.round((Date.now() - startTime) / 1000)
+
+        const getOptionStatus = (optionValue: string, correctAnswer: string) => {
+            const isSelected = selectedOption === optionValue
+            if (!isChecked) {
+                return isSelected ? 'selected' as const : 'idle' as const
+            }
+            const isCorrectOpt = optionValue.toLowerCase() === correctAnswer.toLowerCase()
+            if (isCorrectOpt) return 'correct' as const
+            if (isSelected) return 'incorrect' as const
+            return 'idle' as const
+        }
 
 
         // Shared question panel JSX
@@ -955,25 +1057,19 @@ export function ReadingPlayer({
                 {/* Answer buttons */}
                 {q.questionType === 'true_false' || q.questionType === 'richtig_falsch' ? (
                     /* ── Richtig/Falsch ── */
-                    <div className="flex gap-3">
-                        <button
+                    <div className="space-y-3">
+                        <OptionTile
+                            text="Richtig (Đúng)"
+                            status={getOptionStatus('richtig', q.correctAnswer)}
                             onClick={() => selectAnswer(q.id, 'richtig')}
-                            className={`${styles.rfButton} ${styles.richtig} ${answers[q.id] === 'richtig' ? styles.selected : ''}`}
-                        >
-                            <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}>
-                                <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
-                            </svg>
-                            Đúng
-                        </button>
-                        <button
+                            disabled={isChecked}
+                        />
+                        <OptionTile
+                            text="Falsch (Sai)"
+                            status={getOptionStatus('falsch', q.correctAnswer)}
                             onClick={() => selectAnswer(q.id, 'falsch')}
-                            className={`${styles.rfButton} ${styles.falsch} ${answers[q.id] === 'falsch' ? styles.selected : ''}`}
-                        >
-                            <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}>
-                                <path strokeLinecap="round" strokeLinejoin="round" d="M6 18L18 6M6 6l12 12" />
-                            </svg>
-                            Sai
-                        </button>
+                            disabled={isChecked}
+                        />
                     </div>
 
                 ) : q.questionType === 'matching_ab' || q.questionType === 'matching' ? (
@@ -984,19 +1080,17 @@ export function ReadingPlayer({
                             t.label || t.title || `Text ${String.fromCharCode(65 + i)}`
                         )
                         return (
-                            <div className="flex gap-2 flex-wrap">
+                            <div className="space-y-3">
                                 {labels.map((label: string, i: number) => {
                                     const key = String.fromCharCode(65 + i) // A, B, C...
-                                    const isSelected = answers[q.id]?.toUpperCase() === key
                                     return (
-                                        <button
+                                        <OptionTile
                                             key={key}
+                                            text={`${key}. ${label}`}
+                                            status={getOptionStatus(key, q.correctAnswer)}
                                             onClick={() => selectAnswer(q.id, key)}
-                                            className={`${styles.matchingButton} ${isSelected ? styles.selected : ''}`}
-                                        >
-                                            <span className={styles.matchingLetter}>{key}</span>
-                                            <span className="text-xs truncate max-w-[140px]">{label}</span>
-                                        </button>
+                                            disabled={isChecked}
+                                        />
                                     )
                                 })}
                             </div>
@@ -1005,43 +1099,41 @@ export function ReadingPlayer({
 
                 ) : q.questionType === 'ja_nein' ? (
                     /* ── Ja / Nein / Nicht im Text ── */
-                    <div className="flex gap-2 flex-wrap">
-                        {[
-                            { value: 'ja', label: 'Có', icon: '✓' },
-                            { value: 'nein', label: 'Không', icon: '×' },
-                            { value: 'nicht_im_text', label: 'Không có trong bài', icon: '-' },
-                        ].map((opt) => (
-                            <button
-                                key={opt.value}
-                                onClick={() => selectAnswer(q.id, opt.value)}
-                                className={`${styles.janeinButton} ${answers[q.id] === opt.value ? styles.selected : ''}`}
-                            >
-                                <span className="text-base">{opt.icon}</span>
-                                <span className="text-sm font-medium">{opt.label}</span>
-                            </button>
-                        ))}
+                    <div className="space-y-3">
+                        <OptionTile
+                            text="Ja (Có)"
+                            status={getOptionStatus('ja', q.correctAnswer)}
+                            onClick={() => selectAnswer(q.id, 'ja')}
+                            disabled={isChecked}
+                        />
+                        <OptionTile
+                            text="Nein (Không)"
+                            status={getOptionStatus('nein', q.correctAnswer)}
+                            onClick={() => selectAnswer(q.id, 'nein')}
+                            disabled={isChecked}
+                        />
+                        <OptionTile
+                            text="Nicht im Text (Không có trong bài)"
+                            status={getOptionStatus('nicht_im_text', q.correctAnswer)}
+                            onClick={() => selectAnswer(q.id, 'nicht_im_text')}
+                            disabled={isChecked}
+                        />
                     </div>
 
                 ) : q.options && q.options.length > 0 ? (
                     /* ── Multiple Choice / Detail Extraction ── */
-                    <div className="space-y-2.5">
+                    <div className="space-y-3">
                         {q.options.map((opt, i) => {
                             const optionKey = String.fromCharCode(97 + i)
-                            const isSelected = answers[q.id] === optionKey
+                            const labelLetter = String.fromCharCode(65 + i)
                             return (
-                                <button
+                                <OptionTile
                                     key={i}
+                                    text={`${labelLetter}. ${opt}`}
+                                    status={getOptionStatus(optionKey, q.correctAnswer)}
                                     onClick={() => selectAnswer(q.id, optionKey)}
-                                    className={`${styles.answerOption} ${isSelected ? styles.selected : ''}`}
-                                >
-                                    <div className={`w-7 h-7 rounded-lg border-2 shrink-0 flex items-center justify-center text-xs font-bold transition-all ${isSelected ? 'border-[#60A8E4] bg-[#60A8E4] text-white' : 'border-gray-300 text-gray-500'
-                                        }`}>
-                                        {String.fromCharCode(65 + i)}
-                                    </div>
-                                    <span className={`text-sm ${isSelected ? 'font-semibold text-gray-900' : 'text-gray-700'}`}>
-                                        {opt}
-                                    </span>
-                                </button>
+                                    disabled={isChecked}
+                                />
                             )
                         })}
                     </div>
@@ -1049,7 +1141,8 @@ export function ReadingPlayer({
                     /* ── Fallback: text input ── */
                     <input
                         type="text"
-                        value={answers[q.id] || ''}
+                        value={selectedOption || ''}
+                        disabled={isChecked}
                         onChange={(e) => selectAnswer(q.id, e.target.value)}
                         placeholder={t('inputAnswerPlaceholder')}
                         className="w-full p-3.5 rounded-xl border-2 border-gray-200 text-sm focus:border-[#60A8E4] focus:ring-2 focus:ring-[#60A8E4]/20 outline-none transition-all"
@@ -1063,34 +1156,6 @@ export function ReadingPlayer({
                     </div>
                 )}
 
-                {/* Navigation */}
-                <div className="flex gap-3 mt-6">
-                    {currentQuestion > 0 && (
-                        <button
-                            onClick={() => setCurrentQuestion(c => c - 1)}
-                            className={styles.navButton}
-                        >
-                            {t('previousQuestion')}
-                        </button>
-                    )}
-                    {currentQuestion < questions.length - 1 ? (
-                        <button
-                            onClick={() => setCurrentQuestion(c => c + 1)}
-                            className={`${styles.navButton} ${styles.primary}`}
-                        >
-                            {t('nextQuestion')}
-                        </button>
-                    ) : (
-                        <button
-                            onClick={submitAnswers}
-                            disabled={!allAnswered || isSubmitting}
-                            className={`${styles.navButton} ${styles.submit}`}
-                        >
-                            {isSubmitting ? t('submitting') : t('submitButton', { answered: Object.keys(answers).length, total: questions.length })}
-                        </button>
-                    )}
-                </div>
-
                 {/* Mascot peek */}
                 <div className="flex justify-center mt-4 opacity-60">
                     <Mascot variant="thinking" size={40} />
@@ -1099,7 +1164,7 @@ export function ReadingPlayer({
         )
 
         return (
-            <div className="relative">
+            <div className={`relative ${!isClozeExercise ? 'pb-28' : ''}`}>
                 {/* ── Top Progress Bar ── */}
                 <div className="flex items-center gap-4 mb-5">
                     <button onClick={() => router.push('/reading')} className="text-gray-400 hover:text-gray-600 shrink-0 transition-colors">
@@ -1266,6 +1331,33 @@ export function ReadingPlayer({
                         )}
                     </div>
                 )}
+
+                {/* ── Fixed Bottom Feedback / Checker Bar ── */}
+                {!isChecked ? (
+                    <div className="fixed bottom-0 left-0 right-0 z-[100] bg-white border-t border-gray-200 p-5 shadow-[0_-4px_16px_rgba(0,0,0,0.06)]">
+                        <div className="max-w-5xl mx-auto flex justify-end px-4">
+                            <PrimaryCta
+                                disabled={!selectedOption || isSubmitting}
+                                onClick={handleCheck}
+                                className="w-full sm:w-auto min-w-[160px]"
+                            >
+                                Kiểm tra
+                            </PrimaryCta>
+                        </div>
+                    </div>
+                ) : (
+                    <BottomFeedback
+                        isCorrect={isCurrentAnswerCorrect}
+                        correctAnswer={
+                            isCurrentAnswerCorrect
+                                ? null
+                                : q.options
+                                    ? (q.options[q.correctAnswer.charCodeAt(0) - 97] || q.correctAnswer)
+                                    : q.correctAnswer
+                        }
+                        onContinue={handleContinue}
+                    />
+                )}
             </div>
         )
     }
@@ -1389,16 +1481,22 @@ export function ReadingPlayer({
                 </div>
 
                 {/* Action buttons */}
-                <div className="flex gap-3 mt-6 justify-center">
-                    <button onClick={() => router.push('/reading')} className={styles.navButton}>
+                <div className="flex gap-3 mt-6 flex-col sm:flex-row">
+                    <PrimaryCta
+                        onClick={() => router.push('/reading')}
+                        className="flex-1"
+                    >
                         {t('backToList')}
-                    </button>
-                    <button onClick={() => {
-                        setClozeAnswers({})
-                        setClozeResults(null)
-                        setStartTime(Date.now())
-                        setPhase('exercise')
-                    }} className={`${styles.navButton} ${styles.primary}`}>
+                    </PrimaryCta>
+                    <button
+                        onClick={() => {
+                            setClozeAnswers({})
+                            setClozeResults(null)
+                            setStartTime(Date.now())
+                            setPhase('exercise')
+                        }}
+                        className="flex-1 py-3.5 px-6 rounded-xl border-2 border-gray-200 text-sm font-bold text-gray-600 hover:bg-gray-50 active:translate-y-[2px] border-b-4 transition-all"
+                    >
                         Luyện lại
                     </button>
                 </div>
@@ -1715,17 +1813,17 @@ export function ReadingPlayer({
                     </div>
                 </div>
 
-                {/* ── Action buttons — level-colored ── */}
-                <div className="flex gap-3 mt-5">
-                    <button
+                {/* ── Action buttons ── */}
+                <div className="flex gap-3 mt-5 flex-col sm:flex-row">
+                    <PrimaryCta
                         onClick={() => router.push('/reading')}
-                        className={styles.navButton}
+                        className="flex-1"
                     >
                         {t('backToList')}
-                    </button>
+                    </PrimaryCta>
                     <button
                         onClick={resetExercise}
-                        className={`${styles.navButton} ${styles.primary}`}
+                        className="flex-1 py-3.5 px-6 rounded-xl border-2 border-gray-200 text-sm font-bold text-gray-600 hover:bg-gray-50 active:translate-y-[2px] border-b-4 transition-all"
                     >
                         {t('readAgain')}
                     </button>
