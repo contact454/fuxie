@@ -1,0 +1,304 @@
+{
+  "schema_version": "1.1",
+  "status": "bootstrap_in_progress",
+  "prepared_at": "2026-09-11",
+  "timezone": "Asia/Ho_Chi_Minh",
+  "repository": "contact454/fuxie",
+  "rules": {
+    "search_is_not_evidence": true,
+    "exact_ref_required_for_critical_decisions": true,
+    "old_green_run_does_not_cover_changed_tree": true,
+    "machine_clean_does_not_equal_academic_signoff": true,
+    "merged_does_not_equal_deployed": true,
+    "unmerged_spec_is_not_default_branch_authority": true,
+    "secret_values_must_not_be_stored_here": true
+  },
+  "sources": [
+    {
+      "id": "GOV-001",
+      "domain": "governance",
+      "location": "AGENTS.md",
+      "authority": "startup_gate",
+      "verification": "read_and_modified_on_control_plane_branch",
+      "refresh": "every task or blob change"
+    },
+    {
+      "id": "GOV-002",
+      "domain": "governance",
+      "location": ".agents/workflows/task-role-router.md",
+      "authority": "role_routing",
+      "verification": "read",
+      "refresh": "every task"
+    },
+    {
+      "id": "GOV-003",
+      "domain": "governance",
+      "location": ".agents/workflows/task-startup-checklist.md",
+      "authority": "startup_sop",
+      "verification": "read_and_modified_on_control_plane_branch"
+    },
+    {
+      "id": "GOV-004",
+      "domain": "governance",
+      "location": ".agents/workflows/company-operating-model.md",
+      "authority": "operating_model",
+      "verification": "read_and_modified_on_control_plane_branch"
+    },
+    {
+      "id": "GOV-005",
+      "domain": "governance",
+      "location": ".agents/workflows/three-agent-delivery-model.md",
+      "authority": "delivery_model",
+      "verification": "read_and_modified_on_control_plane_branch",
+      "note": "generalized to capability-based orchestration"
+    },
+    {
+      "id": "GOV-006",
+      "domain": "governance",
+      "location": ".agents/personnel/",
+      "authority": "domain_role_profiles",
+      "verification": "partial_read",
+      "refresh": "when a role is selected"
+    },
+    {
+      "id": "MGT-001",
+      "domain": "management",
+      "location": "docs/management/README.md",
+      "authority": "management_entrypoint",
+      "verification": "created_on_control_plane_branch"
+    },
+    {
+      "id": "MGT-002",
+      "domain": "management",
+      "location": "docs/management/source-registry.json",
+      "authority": "source_catalog",
+      "verification": "created_on_control_plane_branch"
+    },
+    {
+      "id": "MGT-003",
+      "domain": "management",
+      "location": "docs/management/quality-gates.md",
+      "authority": "acceptance_and_evidence_semantics",
+      "verification": "created_on_control_plane_branch"
+    },
+    {
+      "id": "MGT-004",
+      "domain": "management",
+      "location": "docs/management/spec-and-work-source-inventory-2026-09-11.md",
+      "authority": "dated_spec_overlay_and_work_source_inventory",
+      "verification": "created_on_control_plane_branch"
+    },
+    {
+      "id": "WORK-001",
+      "domain": "delivery",
+      "location": "GitHub Issues",
+      "authority": "live_cross_cutting_task_and_blocker_tracker",
+      "verification": "read_write_verified",
+      "observed_bootstrap_tracker": "Issue #23",
+      "rule": "use exact-ref Kiro specs for substantial requirements; do not duplicate their task state in management docs"
+    },
+    {
+      "id": "WORK-002",
+      "domain": "delivery",
+      "location": "GitHub Projects/board",
+      "authority": "none_selected_during_bootstrap",
+      "verification": "NOT_VERIFIED",
+      "note": "no project-board connector action was exposed; do not create a second board solely for takeover"
+    },
+    {
+      "id": "SPEC-001",
+      "domain": "product_delivery",
+      "location": "master@c83760fadf57dae9319ebe8f4c64233602230ff0:.kiro/specs/",
+      "authority": "default_branch_requirements_design_tasks",
+      "verification": "top_level_tree_inventory_read",
+      "observed_top_level_spec_count": 9,
+      "observed_tree": "7987341da1f90983ea1bdb538b80f2b79b2117c8"
+    },
+    {
+      "id": "SPEC-002",
+      "domain": "release",
+      "location": "PR#21@bdf7fd10780bd57397b8ac3944e8c9c35a68ed01:.kiro/specs/fuxie-public-launch-readiness/",
+      "authority": "candidate_public_launch_program_in_unmerged_overlay",
+      "verification": "read",
+      "warning": "path is not present on master at the takeover baseline",
+      "rule": "reuse/map this candidate program at its exact ref; do not create a competing launch plan; do not claim it is default-branch authority until integrated"
+    },
+    {
+      "id": "SPEC-003",
+      "domain": "product_delivery",
+      "location": "PR#21@bdf7fd10780bd57397b8ac3944e8c9c35a68ed01:.kiro/specs/",
+      "authority": "unmerged_spec_overlay",
+      "verification": "top_level_tree_inventory_read",
+      "observed_top_level_spec_count": 25,
+      "observed_added_vs_master": 16,
+      "observed_tree": "21f659432c779adf3f9839ad2260013063c17afd"
+    },
+    {
+      "id": "PROD-001",
+      "domain": "product",
+      "location": "docs/intake/product-north-star-roadmap.md",
+      "authority": "north_star_and_product_focus",
+      "verification": "read",
+      "observed_decision": "B2C Vietnamese self-study learners first; teacher/admin supporting surface"
+    },
+    {
+      "id": "RISK-001",
+      "domain": "risk",
+      "location": "docs/intake/risk-register.md",
+      "authority": "risk_register",
+      "verification": "read_partial_current_master",
+      "warning": "historical evidence must be revalidated against the selected current tree/environment"
+    },
+    {
+      "id": "DEL-001",
+      "domain": "delivery",
+      "location": "docs/delivery/",
+      "authority": "work_orders",
+      "verification": "known_partial_inventory"
+    },
+    {
+      "id": "DEL-002",
+      "domain": "qa",
+      "location": "docs/delivery/qc-log.md",
+      "authority": "qc_history",
+      "verification": "known_history_only_until_ref_revalidated"
+    },
+    {
+      "id": "CONTENT-001",
+      "domain": "academic_content",
+      "location": "docs/content-quality/",
+      "authority": "content_quality_evidence",
+      "verification": "partial_read"
+    },
+    {
+      "id": "CONTENT-002",
+      "domain": "academic_content",
+      "location": "PR#21@bdf7fd10780bd57397b8ac3944e8c9c35a68ed01:docs/content-quality/audit-2026-06/STATUS.md",
+      "authority": "reported_content_status_in_unmerged_overlay",
+      "verification": "read",
+      "warning": "reported machine state is not independent rerun or human/native signoff"
+    },
+    {
+      "id": "DESIGN-001",
+      "domain": "design",
+      "location": "docs/design/asset-reuse-map.md",
+      "authority": "asset_reuse_map",
+      "verification": "discovered",
+      "rule": "reuse before render"
+    },
+    {
+      "id": "DESIGN-002",
+      "domain": "design",
+      "location": "apps/web/src/lib/mascot/fuxie-assets.ts",
+      "authority": "typed_mascot_asset_registry",
+      "verification": "referenced_by_existing_operating_model"
+    },
+    {
+      "id": "CODE-001",
+      "domain": "runtime",
+      "location": "apps/ packages/ content/ scripts/ tests/",
+      "authority": "implementation_at_exact_ref",
+      "verification": "repository_present"
+    },
+    {
+      "id": "CI-001",
+      "domain": "qa_release",
+      "location": ".github/workflows/ci.yml",
+      "authority": "ci_definition",
+      "verification": "read",
+      "warning": "workflow definition does not prove current run passed"
+    },
+    {
+      "id": "GIT-001",
+      "domain": "repository_state",
+      "location": "master",
+      "authority": "default_branch",
+      "verification": "read",
+      "observed_commit": "c83760fadf57dae9319ebe8f4c64233602230ff0",
+      "observed_protected": false,
+      "observed_at": "2026-09-11"
+    },
+    {
+      "id": "GIT-002",
+      "domain": "repository_state",
+      "location": "PR #21 chore/content-audit-remediation-2026-06",
+      "authority": "active_large_unmerged_change_set",
+      "verification": "read",
+      "observed_head": "bdf7fd10780bd57397b8ac3944e8c9c35a68ed01",
+      "observed_state": "open_not_merged",
+      "observed_at": "2026-09-11"
+    },
+    {
+      "id": "GIT-003",
+      "domain": "management",
+      "location": "chore/management-control-plane-2026-09-11 / PR #22",
+      "authority": "management_bootstrap_change_set",
+      "verification": "write_verified",
+      "base": "master@c83760fadf57dae9319ebe8f4c64233602230ff0",
+      "observed_head_after_inventory": "d9e8a01789704587f5a77691011439534c31a693"
+    },
+    {
+      "id": "CI-002",
+      "domain": "qa_release",
+      "location": "GitHub Actions run 34578063503",
+      "authority": "observed_pr21_ci_run",
+      "verification": "read",
+      "observed_result": "FAIL at Install dependencies; downstream verify and smoke skipped",
+      "observed_at": "2026-09-11"
+    },
+    {
+      "id": "CI-003",
+      "domain": "qa_release",
+      "location": "GitHub Actions run 34581517347",
+      "authority": "historical_pr22_ci_for_sha_84de569ff1237c83a3be2e554a5fe29a5715c63f",
+      "verification": "read",
+      "observed_result": "Quick checks PASS; full verify and production-hardening smoke were still running when observed",
+      "warning": "branch advanced after this SHA; do not reuse this run as full evidence for later head"
+    },
+    {
+      "id": "DEPLOY-001",
+      "domain": "deployment",
+      "location": "Vercel project fuxie-web / prj_jxTRrBqdN2qZBc2wqMgVrh1DQgzD",
+      "authority": "deployment_platform_metadata",
+      "verification": "read_verified",
+      "observed_latest_deployment": "dpl_BV5Ku2dQYMtP115YvnWcG21g8heM",
+      "observed_latest_state": "ERROR",
+      "observed_latest_target": null,
+      "warning": "no deployment, promotion, or rollback was executed"
+    },
+    {
+      "id": "DB-001",
+      "domain": "database",
+      "location": "Neon connector",
+      "authority": "database_platform_when_project_is_identified",
+      "verification": "BLOCKED",
+      "observed_blocker": "list_projects requires org_id; search returned no Fuxie resource",
+      "rule": "do not assume production database identity from env names"
+    },
+    {
+      "id": "ENV-001",
+      "domain": "configuration",
+      "location": ".env.example",
+      "authority": "configuration_contract_only",
+      "verification": "known",
+      "warning": "variable names do not prove the service/provider is currently active"
+    }
+  ],
+  "sensitive_material_policy": {
+    "never_store_secret_values_in_repo": true,
+    "learner_personal_data": "restricted",
+    "learner_audio": "restricted",
+    "contracts_financials": "restricted_private_store",
+    "provider_keys": "secret_manager_only"
+  },
+  "next_inventory_targets": [
+    "rebaseline current P0/P1 risks against a selected current tree",
+    "classify high-impact active specs by done/open/obsolete instead of directory presence",
+    "production and preview deployed commit mapping",
+    "database project/branch identity and restore path",
+    "Firebase project/environment map",
+    "Redis/queue provider map",
+    "AI/STT/TTS provider/model/cost map",
+    "private document/media stores and ACL owners"
+  ]
+}

@@ -1,46 +1,82 @@
 ---
-description: Mandatory short SOP before Codex starts any Fuxie task.
+description: Mandatory short SOP before Fuxie task work starts.
 ---
 
-# Task Startup Checklist
+# Fuxie Task Startup Checklist
 
-This checklist must be completed before Codex analyzes, plans, edits, reviews, writes content, runs implementation commands, or makes decisions.
+Complete this checklist before analysis, planning, edits, review, content work, implementation commands or project decisions.
 
 ## Mandatory Gate
 
-1. Read `.agents/workflows/task-role-router.md`.
-2. Identify the task domain.
-3. Select exactly one primary role.
-4. Select zero to three support roles.
-5. Read the primary role profile in `.agents/personnel/`.
-6. Read support role profiles when the task crosses domains.
-7. Start the response with:
+1. Read `docs/management/README.md`.
+2. Use `docs/management/source-registry.json` to find the authoritative source for the task.
+3. Identify the exact repo ref and environment relevant to the work.
+4. Read `.agents/workflows/task-role-router.md`.
+5. Identify the task domain.
+6. Select exactly one primary role.
+7. Select zero to three support roles.
+8. Read the primary role profile in `.agents/personnel/`.
+9. Read support profiles when their constraints materially affect the work.
+10. Start user-facing work with:
 
 ```text
 Vai chinh: <role>
 Vai phoi hop: <roles or none>
 ```
 
-8. Work from the primary role's mission, authority, standard deliverables, response style, and quality checklist.
-9. Before finalizing, apply the primary role's quality checklist.
-10. After completing the task, propose the next concrete step.
-11. If handing work to Antigravity or Anti, include a ready-to-use prompt for that agent.
+11. Reuse/map an existing `.kiro/specs` or `docs/delivery` source before creating parallel work.
+12. Work from the primary role's mission, authority, deliverables and checklist.
+13. Apply the applicable checks in `docs/management/quality-gates.md` before closeout.
+14. Read back writes/evidence.
+15. Close with verification status and one concrete next step.
 
 ## Reroute Rule
 
-Stop and rerun the gate when:
+Stop and rerun the role gate when:
 
-- The task changes domain.
-- The selected primary role does not own the requested decision or deliverable.
-- A support role becomes the actual owner of the work.
-- The task introduces production, legal, security, data, or learning-quality risk not covered by the selected role.
+- task domain changes;
+- the selected primary role no longer owns the requested decision/deliverable;
+- a support role becomes the actual owner;
+- production, legal, security, data or learning-quality risk appears outside the selected role coverage.
 
-## Support Role Rules
+## Evidence Check
 
-- Use at most three support roles.
-- Support roles advise; the primary role owns the final deliverable.
-- Read support profiles only when their constraints materially affect the work.
+Before saying `done`, confirm what state is actually proved:
+
+- code/content changed;
+- tests/evals passed on the exact ref;
+- merged;
+- deployed;
+- released/healthy.
+
+Do not collapse these states. `BLOCKED`, `NOT_RUN`, skipped or provider-unavailable are not PASS.
+
+## Handoff Check
+
+If work is assigned to an executor/renderer, the handoff must include:
+
+- capability + primary role;
+- objective;
+- repo/ref/workspace;
+- exact scope/files/surfaces;
+- source/spec references;
+- acceptance criteria;
+- required tests/gates;
+- non-goals and risk constraints;
+- expected evidence/report format.
+
+Do not assume a named agent/tool is connected until its capability state has been verified.
 
 ## Compliance Smoke Test
 
-A compliant task response begins with role context, reflects the selected profile's checklist, proposes the next step after the task is complete, and includes an Antigravity/Anti prompt whenever work is assigned to that agent. A non-compliant response starts doing the work before selecting and reading the role profile, omits the closeout next step, or hands off to Antigravity/Anti without a prompt.
+A compliant task:
+
+- starts from management/source + role gates;
+- uses the right authoritative source/ref;
+- has one clear owner role;
+- avoids duplicate specs/work;
+- records evidence honestly;
+- applies applicable quality gates;
+- proposes the next concrete step.
+
+A non-compliant task starts work before the gate, uses stale evidence as live truth, bypasses required checks, fabricates independent/human sign-off, or hands off work without a bounded evidence-producing contract.
