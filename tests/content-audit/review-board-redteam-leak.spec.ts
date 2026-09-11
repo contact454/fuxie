@@ -23,7 +23,13 @@ describe('red-team leak detector provenance semantics', () => {
     expect(findRedTeamLeaks(prompt, 'Berlin')).toEqual([])
   })
 
-  it('flags a stored answer absent from blind inputs if it is interpolated elsewhere into the rendered prompt', () => {
+  it('does not flag a stored answer that merely overlaps fixed prompt prose', () => {
+    const prompt = buildRedTeamPrompt({ answer: 'key' })
+
+    expect(findRedTeamLeaks(prompt, 'key')).toEqual([])
+  })
+
+  it('flags a stored answer absent from blind inputs if it is interpolated outside the canonical prompt', () => {
     const secret = 'SECRET_ANSWER_TOKEN_XYZ'
     const clean = buildRedTeamPrompt({
       stem: 'Welche Antwort passt?',
@@ -35,6 +41,6 @@ describe('red-team leak detector provenance semantics', () => {
       prompt: `${clean.prompt}\nINTERNAL STORED ANSWER: ${secret}`,
     }
 
-    expect(findRedTeamLeaks(leaked, secret)).toContain('stored-answer-value-outside-blind-payload')
+    expect(findRedTeamLeaks(leaked, secret)).toContain('stored-answer-value-outside-canonical-prompt')
   })
 })
