@@ -1,240 +1,103 @@
-import { afterEach, beforeEach, describe, expect, it, vi } from 'vitest'
+import { beforeEach, describe, expect, it, vi } from 'vitest'
 
-const {
-    withAuthMock,
-    getDbUserByFirebaseUidMock,
-    transactionMock,
-    srsCardUpdateMock,
-    srsCardFindFirstMock,
-    srsCardCreateMock,
-    grammarProgressUpdateManyMock,
-    recordLearningActivityMock,
-    invalidateLearnerProgressCachesMock,
-    invalidateLearnerSrsCachesMock,
-} = vi.hoisted(() => ({
-    withAuthMock: vi.fn(),
-    getDbUserByFirebaseUidMock: vi.fn(),
-    transactionMock: vi.fn(),
-    srsCardUpdateMock: vi.fn(),
-    srsCardFindFirstMock: vi.fn(),
-    srsCardCreateMock: vi.fn(),
-    grammarProgressUpdateManyMock: vi.fn(),
-    recordLearningActivityMock: vi.fn(),
-    invalidateLearnerProgressCachesMock: vi.fn(),
-    invalidateLearnerSrsCachesMock: vi.fn(),
+const { withDbAuthMock, completeSessionMock } = vi.hoisted(() => ({
+    withDbAuthMock: vi.fn(),
+    completeSessionMock: vi.fn(),
 }))
 
 vi.mock('@/lib/auth/middleware', () => ({
-    withAuth: withAuthMock,
+    withDbAuth: withDbAuthMock,
     AuthError: class AuthError extends Error {},
     NotFoundError: class NotFoundError extends Error {},
 }))
 
-vi.mock('@/lib/auth/db-user', () => ({
-    getDbUserByFirebaseUid: getDbUserByFirebaseUidMock,
+vi.mock('@/lib/session/attempt-service', () => ({
+    completeSession: completeSessionMock,
 }))
 
-vi.mock('@/lib/progress/learning-activity', () => ({
-    recordLearningActivity: recordLearningActivityMock,
-}))
-
-vi.mock('@/lib/progress/cache-invalidation', () => ({
-    invalidateLearnerProgressCaches: invalidateLearnerProgressCachesMock,
-    invalidateLearnerSrsCaches: invalidateLearnerSrsCachesMock,
-}))
-
-vi.mock('@fuxie/database', () => ({
-    prisma: {
-        $transaction: transactionMock,
-    },
-}))
-
+import { SessionError } from '@/lib/session/errors'
 import { POST } from './route'
 
-const now = new Date('2026-09-11T07:00:00.000Z')
-const review = (data: unknown, correct = true) => ({ type: 'VOCAB_REVIEW', correct, data })
-const complete = (results: unknown[], extra: Record<string, unknown> = {}) => POST({
-    json: async () => ({ totalXp: 40, heartsRemaining: 4, level: 'A1', results, ...extra }),
-} as any)
-const cardNotFound = { success: false, error: { code: 'NOT_FOUND', message: 'Card not found' } }
-
-function expectNoCompletionEffects() {
-    expect(srsCardFindFirstMock).not.toHaveBeenCalled()
-    expect(srsCardCreateMock).not.toHaveBeenCalled()
-    expect(grammarProgressUpdateManyMock).not.toHaveBeenCalled()
-    expect(recordLearningActivityMock).not.toHaveBeenCalled()
-    expect(invalidateLearnerSrsCachesMock).not.toHaveBeenCalled()
-    expect(invalidateLearnerProgressCachesMock).not.toHaveBeenCalled()
+const attemptId = '11111111-1111-4111-8111-111111111111'
+const publicRevision = '22222222-2222-4222-8222-222222222222'
+const receipt = {
+    attemptId,
+    status: 'COMPLETED',
+    reason: 'all_answered',
+    level: 'A1',
+    gradedCount: 1,
+    correctCount: 1,
+    acknowledgedCount: 0,
+    baseXpEarned: 10,
+    streakBonusXp: 0,
+    xpEarned: 10,
+    heartsRemaining: 5,
+    completionEligible: true,
+    wordsLearned: 0,
+    srsReviewed: 1,
+    savedAt: '2026-09-11T10:00:00.000Z',
+    contractVersion: 2,
+    gradingVersion: 'session-v2',
 }
 
-describe('POST /api/v1/session/complete', () => {
+const request = (body: unknown) => ({ json: async () => body }) as any
+
+describe('POST /api/v1/session/complete — v2 contract', () => {
     beforeEach(() => {
         vi.resetAllMocks()
-        vi.useFakeTimers({ toFake: ['Date'] })
-        vi.setSystemTime(now)
-        withAuthMock.mockResolvedValue({ userId: 'firebase-user-1' })
-        getDbUserByFirebaseUidMock.mockResolvedValue({ id: 'db-user-1' })
-        srsCardUpdateMock.mockResolvedValue({ count: 1 })
-        srsCardFindFirstMock.mockResolvedValue(null)
-        srsCardCreateMock.mockResolvedValue({})
-        grammarProgressUpdateManyMock.mockResolvedValue({ count: 1 })
-        recordLearningActivityMock.mockResolvedValue({
-            xpEarned: 40,
-            baseXpEarned: 40,
-            streakBonusXp: 0,
-            streak: {
-                currentStreak: 2,
-                isNewDay: false,
-            },
-        })
-        invalidateLearnerProgressCachesMock.mockResolvedValue(undefined)
-        invalidateLearnerSrsCachesMock.mockResolvedValue(undefined)
-        transactionMock.mockImplementation(async (callback: (tx: any) => Promise<any>) =>
-            callback({
-                srsCard: {
-                    updateMany: srsCardUpdateMock,
-                    findFirst: srsCardFindFirstMock,
-                    create: srsCardCreateMock,
-                },
-                grammarProgress: {
-                    updateMany: grammarProgressUpdateManyMock,
-                },
-            })
-        )
+        withDbAuthMock.mockResolvedValue({ userId: 'db-user-1', firebaseUid: 'firebase-1', email: 'learner@example.test', role: 'LEARNER' })
+        completeSessionMock.mockResolvedValue(receipt)
     })
 
-    afterEach(() => vi.useRealTimers())
-
-    it.each([true, false])('schedules an owned card with correct=%s using the authenticated DB owner', async (correct) => {
-        const response = await complete(
-            [review({ cardId: 'owned-card', userId: 'victim-user' }, correct)],
-            { userId: 'victim-user' },
-        )
+    it('delegates completion to the server-authoritative attempt service for the authenticated DB user', async () => {
+        const response = await POST(request({ contractVersion: 2, attemptId, publicRevision }))
 
         expect(response.status).toBe(200)
-        expect(srsCardUpdateMock).toHaveBeenCalledExactlyOnceWith({
-            where: { id: 'owned-card', userId: 'db-user-1' },
-            data: { nextReviewAt: new Date(now.getTime() + (correct ? 86400000 : 0)) },
+        await expect(response.json()).resolves.toEqual({ success: true, data: { receipt } })
+        expect(completeSessionMock).toHaveBeenCalledExactlyOnceWith('db-user-1', {
+            contractVersion: 2,
+            attemptId,
+            publicRevision,
         })
-        expect(recordLearningActivityMock).toHaveBeenCalledOnce()
-        expect(invalidateLearnerSrsCachesMock).toHaveBeenCalledWith('db-user-1')
     })
-
-    it.each(['foreign-card', 'missing-card', 'not-a-uuid', ' owned-card '])(
-        'returns the same generic 404 for an unavailable raw card ID: %s', async (cardId) => {
-            srsCardUpdateMock.mockResolvedValue({ count: 0 })
-            const response = await complete([review({ cardId })])
-
-            expect(response.status).toBe(404)
-            await expect(response.json()).resolves.toEqual(cardNotFound)
-            expect(srsCardUpdateMock).toHaveBeenCalledWith(expect.objectContaining({
-                where: { id: cardId, userId: 'db-user-1' },
-            }))
-            expectNoCompletionEffects()
-        },
-    )
 
     it.each([
-        ['missing data', undefined],
-        ['null data', null],
-        ['missing card ID', {}],
-        ['null card ID', { cardId: null }],
-        ['empty card ID', { cardId: '' }],
-        ['whitespace card ID', { cardId: ' \t\n ' }],
-        ['numeric card ID', { cardId: 1 }],
-        ['boolean card ID', { cardId: true }],
-        ['array card ID', { cardId: ['owned-card'] }],
-        ['object card ID', { cardId: { not: '' } }],
-    ])('rejects %s before any database mutation', async (_label, data) => {
-        const response = await complete([review(data)])
+        { contractVersion: 1, attemptId, publicRevision },
+        { contractVersion: 2, attemptId: 'not-a-uuid', publicRevision },
+        { contractVersion: 2, attemptId, publicRevision: 'not-a-uuid' },
+        { contractVersion: 2, attemptId },
+    ])('rejects an invalid v2 completion payload before calling the service', async (body) => {
+        const response = await POST(request(body))
 
-        expect(response.status).toBe(404)
-        await expect(response.json()).resolves.toEqual(cardNotFound)
-        expect(srsCardUpdateMock).not.toHaveBeenCalled()
-        expectNoCompletionEffects()
+        expect(response.status).toBe(400)
+        await expect(response.json()).resolves.toMatchObject({
+            success: false,
+            error: { code: 'VALIDATION_ERROR' },
+        })
+        expect(completeSessionMock).not.toHaveBeenCalled()
     })
 
-    it.each(['foreign', 'malformed'])('rejects a mixed batch when a later card is %s', async (kind) => {
-        srsCardUpdateMock.mockResolvedValueOnce({ count: 1 }).mockResolvedValueOnce({ count: 0 })
-        const response = await complete([
-            review({ cardId: 'owned-card' }),
-            review(kind === 'foreign' ? { cardId: 'foreign-card' } : {}),
-            { type: 'VOCAB_NEW', correct: true, data: { itemId: 'word-1' } },
-            { type: 'GRAMMAR', correct: true, data: { lessonId: 'grammar-1' } },
-        ])
+    it('preserves a session-domain conflict code from the service', async () => {
+        completeSessionMock.mockRejectedValue(new SessionError(409, 'SESSION_INCOMPLETE', 'Session is not ready to complete'))
 
-        expect(response.status).toBe(404)
-        await expect(response.json()).resolves.toEqual(cardNotFound)
-        expect(srsCardUpdateMock).toHaveBeenCalledTimes(kind === 'foreign' ? 2 : 1)
-        expectNoCompletionEffects()
-        // The isolated PostgreSQL probe, rather than this callback mock, proves rollback.
-    })
+        const response = await POST(request({ contractVersion: 2, attemptId, publicRevision }))
 
-    it('preserves progress-cache invalidation for a grammar-only session', async () => {
-        const response = await complete([
-            { type: 'GRAMMAR', correct: true, data: { lessonId: 'grammar-1' } },
-        ])
-
-        expect(response.status).toBe(200)
-        expect(srsCardUpdateMock).not.toHaveBeenCalled()
-        expect(recordLearningActivityMock).toHaveBeenCalledOnce()
-        expect(invalidateLearnerProgressCachesMock).toHaveBeenCalledWith('db-user-1')
-        expect(invalidateLearnerSrsCachesMock).not.toHaveBeenCalled()
-    })
-
-    it('maps mixed session results into the shared activity model', async () => {
-        const response = await POST({
-            json: async () => ({
-                totalXp: 40,
-                heartsRemaining: 4,
-                level: 'A1',
-                results: [
-                    { type: 'VOCAB_REVIEW', correct: true, data: { cardId: 'card-1' } },
-                    { type: 'VOCAB_NEW', correct: true, data: { itemId: 'word-1' } },
-                    { type: 'GRAMMAR', correct: true, data: { lessonId: 'grammar-1' } },
-                ],
-            }),
-        } as any)
-
-        expect(response.status).toBe(200)
+        expect(response.status).toBe(409)
         await expect(response.json()).resolves.toEqual({
-            success: true,
-            data: {
-                heartsRemaining: 4,
-                level: 'A1',
-            },
+            success: false,
+            error: { code: 'SESSION_INCOMPLETE', message: 'Session is not ready to complete' },
         })
+    })
 
-        expect(srsCardFindFirstMock).toHaveBeenCalledWith({
-            where: { userId: 'db-user-1', vocabularyItemId: 'word-1' },
-        })
-        expect(grammarProgressUpdateManyMock).toHaveBeenCalledWith({
-            where: { userId: 'db-user-1', lessonId: 'grammar-1' },
-            data: { completed: true, stars: 3 },
-        })
-        expect(recordLearningActivityMock).toHaveBeenCalledWith(
-            expect.anything(),
-            expect.objectContaining({
-                userId: 'db-user-1',
-                exerciseId: 'session:A1',
-                xpEarned: 40,
-                lessonsCompleted: 1,
-                srsReviewed: 1,
-                wordsLearned: 1,
-                analytics: {
-                    actionId: 'session:A1',
-                    actionType: 'lesson_session',
-                    level: 'A1',
-                    source: 'session.complete',
-                    metadata: {
-                        review_count: 1,
-                        new_vocab_count: 1,
-                        grammar_count: 1,
-                    },
-                },
-            })
-        )
-        expect(invalidateLearnerSrsCachesMock).toHaveBeenCalledWith('db-user-1')
-        expect(invalidateLearnerProgressCachesMock).not.toHaveBeenCalled()
+    it('never accepts legacy client-supplied XP/results as a completion contract', async () => {
+        const response = await POST(request({
+            results: [],
+            totalXp: 999999,
+            heartsRemaining: 5,
+            level: 'A1',
+        }))
+
+        expect(response.status).toBe(400)
+        expect(completeSessionMock).not.toHaveBeenCalled()
     })
 })
