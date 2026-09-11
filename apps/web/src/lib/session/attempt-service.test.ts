@@ -130,10 +130,10 @@ describe('completeSession v2 integrity', () => {
         vi.resetAllMocks()
         vi.useFakeTimers({ toFake: ['Date'] })
         vi.setSystemTime(now)
-        process.env.NODE_ENV = 'test'
-        delete process.env.FUXIE_SESSION_V2_ENABLED
-        delete process.env.FUXIE_SESSION_CATALOG_IDS
-        delete process.env.FUXIE_SESSION_CATALOG_REVISION
+        vi.stubEnv('NODE_ENV', 'test')
+        vi.stubEnv('FUXIE_SESSION_V2_ENABLED', '')
+        vi.stubEnv('FUXIE_SESSION_CATALOG_IDS', '')
+        vi.stubEnv('FUXIE_SESSION_CATALOG_REVISION', '')
 
         queryRawMock.mockResolvedValue([{ id: 'db-user-1' }])
         attemptFindFirstMock.mockResolvedValue(attempt())
@@ -149,9 +149,7 @@ describe('completeSession v2 integrity', () => {
 
     afterEach(() => {
         vi.useRealTimers()
-        delete process.env.FUXIE_SESSION_V2_ENABLED
-        delete process.env.FUXIE_SESSION_CATALOG_IDS
-        delete process.env.FUXIE_SESSION_CATALOG_REVISION
+        vi.unstubAllEnvs()
     })
 
     it.each([
