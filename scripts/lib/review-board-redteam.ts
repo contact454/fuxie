@@ -22,10 +22,9 @@
  * provider credit and is fully testable with the deterministic mock below.
  *
  * Property 2 (Red-team Answer Isolation): the blind payload/rendered prompt
- * must never contain answer-bearing keys. A stored-answer value that is absent
- * from the legitimate blind payload must also never be interpolated elsewhere
- * into the rendered prompt. Value overlap with stem/options is not itself proof
- * of a leak because those fields are intentionally visible to the reviewer.
+ * must never contain answer-bearing keys. Value-level leak detection compares
+ * the actual prompt with the canonical prompt rendered from the blind payload;
+ * ordinary overlap with stem/options or fixed template prose is not a leak.
  */
 import {
   type Confidence,
@@ -66,6 +65,8 @@ export interface RedTeamOutput {
 
 const CONFIDENCE_VALUES: readonly Confidence[] = ['high', 'medium', 'low'] as const
 
+type RedTeamPayload = { stem: string; options?: string[] }
+
 // ---------------------------------------------------------------------------
 // Blind prompt builder (Req 3.1, 3.2, 3.5)
 // ---------------------------------------------------------------------------
@@ -78,7 +79,7 @@ export interface RedTeamPrompt {
   /** Model the reviewer runs on (validated to differ, if configured). */
   model?: string
   /** The blind payload this prompt was built from (audit surface). */
-  payload: { stem: string; options?: string[] }
+  payload: RedTeamPayload
   prompt: string
 }
 
@@ -88,23 +89,11 @@ export interface BuildRedTeamPromptOptions {
 }
 
 /**
- * Build the red-team prompt for one reading question.
- *
- * CRITICAL (Property 2 / Req 3.5): the prompt is constructed ONLY from
- * `buildRedTeamPayload(q)` — i.e. the stem + options. It never references the
- * stored answer, correctIndex, solution, explanation, or key_evidence. The
- * model is instructed to solve the question itself and return strict JSON.
+ * Render the canonical reviewer prompt from the already-blind payload only.
+ * Keeping rendering separate lets the leak detector distinguish fixed template
+ * text from any unexpected interpolation without consulting the stored answer.
  */
-export function buildRedTeamPrompt(
-  q: ReadingQuestion,
-  opts: BuildRedTeamPromptOptions = {},
-): RedTeamPrompt {
-  if (opts.model) assertReviewerModelDiffers(opts.model)
-
-  // The ONLY data crossing into the prompt context. Building from this payload
-  // (not from `q`) is what guarantees no answer-bearing field can leak.
-  const payload = buildRedTeamPayload(q)
-
+function renderRedTeamPrompt(payload: RedTeamPayload): string {
   const optionLines =
     payload.options && payload.options.length > 0
       ? payload.options
@@ -112,7 +101,7 @@ export function buildRedTeamPrompt(
           .join('\n')
       : '  (no options provided — answer in your own words)'
 
-  const prompt = [
+  return [
     `# Fuxie Content Review Board — Red-Team (blind answer check)`,
     `# prompt_version: ${REDTEAM_PROMPT_VERSION}`,
     '',
@@ -139,6 +128,26 @@ export function buildRedTeamPrompt(
     'what YOU concluded from the stem and options. Do not return any text',
     'outside the JSON object.',
   ].join('\n')
+}
+
+/**
+ * Build the red-team prompt for one reading question.
+ *
+ * CRITICAL (Property 2 / Req 3.5): the prompt is constructed ONLY from
+ * `buildRedTeamPayload(q)` — i.e. the stem + options. It never references the
+ * stored answer, correctIndex, solution, explanation, or key_evidence. The
+ * model is instructed to solve the question itself and return strict JSON.
+ */
+export function buildRedTeamPrompt(
+  q: ReadingQuestion,
+  opts: BuildRedTeamPromptOptions = {},
+): RedTeamPrompt {
+  if (opts.model) assertReviewerModelDiffers(opts.model)
+
+  // The ONLY data crossing into the prompt context. Building from this payload
+  // (not from `q`) is what guarantees no answer-bearing field can leak.
+  const payload = buildRedTeamPayload(q)
+  const prompt = renderRedTeamPrompt(payload)
 
   const out: RedTeamPrompt = {
     reviewer: REDTEAM_REVIEWER_ID,
@@ -158,11 +167,11 @@ function stringifyField(value: string): string {
 
 /**
  * Defense-in-depth assertion (Property 2): a built red-team prompt must NOT
- * contain any forbidden answer-bearing key. When a stored answer value is
- * known, it is only a value-level leak if it is absent from the legitimate
- * blind payload but appears elsewhere in the rendered prompt. If the same value
- * already occurs in stem/options, provenance cannot be inferred from equality
- * and it must not be reported as a leak. Returns the list of leaks found.
+ * contain forbidden answer-bearing keys. For value-level checking, compare the
+ * actual prompt with the canonical rendering of the same blind payload. A value
+ * is a leak only if it is absent from the blind payload and canonical prompt,
+ * but appears in a non-canonical rendered prompt. This avoids false positives
+ * when an answer happens to equal stem/options or ordinary template prose.
  */
 export function findRedTeamLeaks(
   prompt: RedTeamPrompt,
@@ -174,13 +183,18 @@ export function findRedTeamLeaks(
   for (const key of FORBIDDEN_REDTEAM_KEYS) {
     if (haystack.includes(`"${key}"`)) leaks.push(`forbidden-key:${key}`)
   }
+
   if (storedAnswerValue != null) {
-    const v = String(storedAnswerValue).trim()
-    // Ignore short/common values and any value legitimately supplied through
-    // stem/options. A value absent from the blind payload must never appear in
-    // any other rendered prompt text.
-    if (v.length >= 3 && !payloadSerialized.includes(v) && prompt.prompt.includes(v)) {
-      leaks.push('stored-answer-value-outside-blind-payload')
+    const value = String(storedAnswerValue).trim()
+    const canonicalPrompt = renderRedTeamPrompt(prompt.payload)
+    if (
+      value.length >= 3 &&
+      !payloadSerialized.includes(value) &&
+      !canonicalPrompt.includes(value) &&
+      prompt.prompt !== canonicalPrompt &&
+      prompt.prompt.includes(value)
+    ) {
+      leaks.push('stored-answer-value-outside-canonical-prompt')
     }
   }
   return leaks
