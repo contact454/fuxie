@@ -213,4 +213,8 @@ Before the project is considered fully handed over to the management control pla
 
 ## 15. Public launch relationship
 
-The existing `.kiro/specs/fuxie-public-launch-readiness/` program remains the launch authority. This document supplies reusable gate semantics and evidence rules. It must be mapped into the existing R/M milestones rather than replacing them.
+At the 2026-09-11 takeover baseline, the public-launch readiness program is present in **PR #21**, not on `master`:
+
+`PR #21 @ bdf7fd10780bd57397b8ac3944e8c9c35a68ed01 : .kiro/specs/fuxie-public-launch-readiness/`
+
+Treat it as the current **candidate** launch program at that exact ref and map these reusable gate semantics into its R/M milestones. Do not create a competing launch plan. Do not claim the path is default-branch authority until it is deliberately integrated into `master` (whether by PR #21, a split PR, or an explicit successor decision).
