@@ -28,6 +28,8 @@
     "content:pilot-feedback": "tsx scripts/analyze-pilot-feedback.ts",
     "env:audit": "tsx scripts/env-audit.ts",
     "env:audit:services": "tsx scripts/env-audit.ts --check-services",
+    "env:audit:runtime": "tsx scripts/env-audit.ts --runtime",
+    "env:audit:runtime:services": "tsx scripts/env-audit.ts --runtime --check-services",
     "security:secrets": "tsx scripts/secret-audit.ts",
     "smoke:local": "tsx scripts/smoke-local.ts",
     "smoke:production": "tsx scripts/smoke-local.ts --db",
