@@ -20,6 +20,7 @@ const STATUS_BOARD = path.join(AUDIT, 'status-board.json')
 const SIGNOFF_MANIFEST = path.join(AUDIT, 'signoff-manifest.json')
 const HUMAN_SPOT_CHECK = path.join(DOCS, 'human-spot-check-samples.md')
 const VOCABULARY_D7_REVIEW_PACK = path.join(AUDIT, 'vocabulary-d7-review-pack.json')
+const MANUAL_SAMPLES_DIR = path.join(AUDIT, 'manual-samples')
 const OUTPUT_JSON = path.join(AUDIT, 'd7-signoff-register.json')
 const OUTPUT_MD = path.join(AUDIT, 'd7-signoff-register.md')
 
@@ -27,17 +28,17 @@ const MANUAL_SAMPLE_FILES = [
   {
     source: 'd2-manual-sample',
     dimension: 'D2 level-fit deep review',
-    path: path.join(REPO_ROOT, 'tmp', 'd2-manual-sample.json'),
+    path: path.join(MANUAL_SAMPLES_DIR, 'd2-manual-sample.json'),
   },
   {
     source: 'd3-manual-sample',
     dimension: 'D3 semantic answer/distractor review',
-    path: path.join(REPO_ROOT, 'tmp', 'd3-manual-sample.json'),
+    path: path.join(MANUAL_SAMPLES_DIR, 'd3-manual-sample.json'),
   },
   {
     source: 'd4-manual-sample',
     dimension: 'D4 Vietnamese naturalness review',
-    path: path.join(REPO_ROOT, 'tmp', 'd4-manual-sample.json'),
+    path: path.join(MANUAL_SAMPLES_DIR, 'd4-manual-sample.json'),
   },
 ] as const
 
@@ -211,9 +212,9 @@ function buildRegister(now = new Date().toISOString()): D7Register {
       signoffManifest: rel(SIGNOFF_MANIFEST),
       humanSpotCheckSamples: rel(HUMAN_SPOT_CHECK),
       vocabularyD7ReviewPack: rel(VOCABULARY_D7_REVIEW_PACK),
-      d2ManualSample: 'tmp/d2-manual-sample.json',
-      d3ManualSample: 'tmp/d3-manual-sample.json',
-      d4ManualSample: 'tmp/d4-manual-sample.json',
+      d2ManualSample: rel(MANUAL_SAMPLE_FILES[0].path),
+      d3ManualSample: rel(MANUAL_SAMPLE_FILES[1].path),
+      d4ManualSample: rel(MANUAL_SAMPLE_FILES[2].path),
     },
     summary: {
       totalCells: cells.length,
