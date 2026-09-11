@@ -1,12 +1,13 @@
 # D7 Academic Signoff Register
 
-Generated: 2026-06-13T06:31:16.178Z
+Generated: 2026-09-11 (provenance correction on top of 2026-06 register)
 
 ## Summary
 
 - Cells: 36; tracked content files: 1187.
 - Machine pass: 36/36; D3 pass/n-a: 36/36.
-- Academic signed: 1/36; pending: 35/36.
+- Human/native academic signed: **0/36**; pending: **36/36**.
+- `reading/C2` has AI/Kiro advisory evidence, but this is **not** human/native signoff.
 - Listening audio pending: 6/6.
 - Review inputs: human=60, D2=24, D3=24, D4=12.
 - Vocabulary D7 review queue: 914 rows, including 40 P1 rows.
@@ -15,9 +16,9 @@ Generated: 2026-06-13T06:31:16.178Z
 ## Rules
 
 - D1-D6 machine pass is necessary but not sufficient for release-grade content.
-- D7 signoff must be recorded in signoff-manifest.json by an accountable reviewer.
-- Listening cells also require audio parity/restub state to be non-pending before Done (du).
-- AI advisory review may prepare evidence, but native/human signoff remains pending until explicitly recorded.
+- D7 signoff must be recorded in signoff-manifest.json by an accountable human/native reviewer.
+- AI role/advisory review may prepare evidence, but it is not human/native academic signoff.
+- Listening cells also require audio parity/restub state to be non-pending before Done (đủ).
 
 ## Cell Decisions
 
@@ -53,7 +54,7 @@ Generated: 2026-06-13T06:31:16.178Z
 | speaking/C1 | 8 | pass | n/a | pending | n/a | pending_native_review | human-spot-check:1 | Run D7 academic/native review and record decision in signoff-manifest.json. |
 | vocabulary/C1 | 75 | pass | n/a | pending | n/a | pending_native_review | human-spot-check:1, d4-manual-sample:2 | Run D7 academic/native review and record decision in signoff-manifest.json. |
 | grammar/C1 | 1 | pass | n/a | pending | n/a | pending_native_review | human-spot-check:1 | Run D7 academic/native review and record decision in signoff-manifest.json. |
-| reading/C2 | 48 | pass | pass | signed | n/a | signed | human-spot-check:3, d2-manual-sample:2, d3-manual-sample:2 | Optional native spot-check; keep evidence attached. |
+| reading/C2 | 48 | pass | pass | pending | n/a | pending_native_review | human-spot-check:3, d2-manual-sample:2, d3-manual-sample:2 | AI/Kiro advisory evidence exists; run accountable human/native academic review before signoff. |
 | listening/C2 | 52 | pass | pass | pending | pending | pending_native_review | human-spot-check:2, d2-manual-sample:2, d3-manual-sample:2 | Run D7 academic review, then Audio_Restubbing/parity before final signoff. |
 | writing/C2 | 35 | pass | pass | pending | n/a | pending_native_review | human-spot-check:1 | Run D7 academic/native review and record decision in signoff-manifest.json. |
 | speaking/C2 | 6 | pass | n/a | pending | n/a | pending_native_review | human-spot-check:1 | Run D7 academic/native review and record decision in signoff-manifest.json. |
@@ -66,6 +67,6 @@ Generated: 2026-06-13T06:31:16.178Z
 - signoffManifest: `docs/content-quality/audit-2026-06/signoff-manifest.json`
 - humanSpotCheckSamples: `docs/content-quality/human-spot-check-samples.md`
 - vocabularyD7ReviewPack: `docs/content-quality/audit-2026-06/vocabulary-d7-review-pack.json`
-- d2ManualSample: `tmp/d2-manual-sample.json`
-- d3ManualSample: `tmp/d3-manual-sample.json`
-- d4ManualSample: `tmp/d4-manual-sample.json`
+- d2ManualSample: `docs/content-quality/audit-2026-06/manual-samples/d2-manual-sample.json`
+- d3ManualSample: `docs/content-quality/audit-2026-06/manual-samples/d3-manual-sample.json`
+- d4ManualSample: `docs/content-quality/audit-2026-06/manual-samples/d4-manual-sample.json`

@@ -29,10 +29,10 @@ describe('D7 academic signoff register', () => {
   it('keeps machine-clean cells separate from academic/native signoff', () => {
     const register = buildRegister('2026-06-10T00:00:00.000Z')
     expect(register.summary.qaMachinePassCells).toBe(36)
-    expect(register.summary.academicSignedCells).toBe(1)
-    expect(register.summary.academicPendingCells).toBe(35)
+    expect(register.summary.academicSignedCells).toBe(0)
+    expect(register.summary.academicPendingCells).toBe(36)
     expect(register.summary.audioPendingCells).toBe(6)
-    expect(register.cells.filter((cell) => cell.decisionState !== 'signed').length).toBe(35)
+    expect(register.cells.filter((cell) => cell.decisionState !== 'signed').length).toBe(36)
   })
 
   it('checks the committed register artifact shape', () => {
