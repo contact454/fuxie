@@ -1,116 +1,163 @@
 ---
-description: How Codex operates as Fuxie's internal software company with role-based personnel profiles.
+description: How Fuxie operates with a single management control plane plus role-based professional ownership.
 ---
 
-# Fuxie Software Company Operating Model
+# Fuxie Operating Model
 
 ## Purpose
 
-Codex must operate like an internal software company for Fuxie. Each task is owned by a defined virtual staff role with a written capability profile. The role profile is the source of truth for scope, seniority, decision rights, deliverables, quality checklist, and collaboration style.
+Fuxie must operate like an internal software/product company with one management control plane, explicit professional ownership, evidence-based delivery and clear release authority.
+
+The management control plane coordinates the work. The role profiles in `.agents/personnel/` remain the source of truth for professional scope, seniority, decision rights, deliverables, quality checklist and collaboration style.
+
+## Management Layer
+
+The **Fuxie Project Orchestrator** owns day-to-day coordination:
+
+- discover and reconcile authoritative sources;
+- maintain priority/risk/dependency visibility;
+- map new requests to existing specs/work orders before creating duplicates;
+- prepare or refine requirements, tech design, task lists and acceptance criteria;
+- route work to the right domain role and available executor;
+- collect commit-tied evidence and coordinate QC;
+- distinguish code-fixed, tested, merged, deployed and released states;
+- report blockers and the next concrete step.
+
+The project owner retains final authority over product-positioning changes, public launch, legal commitments, billing/major spend, destructive production operations and sensitive access unless an explicit standing policy delegates a narrower action.
 
 ## Mandatory Task Startup
 
-The role gate must be completed before any task work begins. Codex must not analyze, plan, code, edit files, review, write learning content, or make decisions until these checks are complete:
+Before task work begins:
 
-- Task domain is identified.
-- `.agents/workflows/task-role-router.md` has been read.
-- Exactly one primary role is selected.
-- Zero to three support roles are selected.
-- The primary role profile has been read from `.agents/personnel/`.
-- Support role profiles have been read when the task crosses domains.
-- The response starts with `Vai chinh` and `Vai phoi hop`.
-- The primary role's quality checklist is applied before finalizing.
-- The closeout proposes the next concrete step after the task is complete.
-- Any handoff that assigns work to Antigravity or Anti includes a ready-to-use prompt for that agent.
+1. Read `docs/management/README.md`.
+2. Use `docs/management/source-registry.json` to locate the relevant authoritative source.
+3. Identify the exact repo ref/environment and read live state where freshness matters.
+4. Read `.agents/workflows/task-role-router.md`.
+5. Select exactly one primary role and zero to three support roles.
+6. Read the primary role profile; read support profiles when their constraints materially affect the task.
+7. Start user-facing work with `Vai chinh` and `Vai phoi hop`.
+8. Execute using the primary role's mission, authority, deliverables and checklist.
+9. Apply applicable `docs/management/quality-gates.md` before finalizing.
+10. Read back writes/evidence and propose one concrete next step.
 
-If the task scope changes during the work, stop and rerun the role gate. If the task exceeds the primary role's authority, switch to the correct primary role or explicitly coordinate with a support role.
+If scope changes materially, rerun the gate.
 
-## Required Protocol
-
-For every task:
-
-1. Classify the task domain: product, engineering, AI, speech/audio, content, design, QA, ops, growth, sales, support, legal, finance, security, data, or HR.
-2. Open `.agents/workflows/task-role-router.md`.
-3. Select exactly one primary role.
-4. Select zero to three support roles when the task crosses domains.
-5. Open the primary role profile under `.agents/personnel/`.
-6. Open support role profiles when their constraints materially affect the work.
-7. Start the response with:
-   - `Vai chinh: <role>`
-   - `Vai phoi hop: <roles or none>`
-8. Execute the task using the primary role's mission, authority, deliverables, and checklist.
-9. If the task exceeds the primary role's authority, switch primary roles or coordinate explicitly with the correct support role.
-10. Before finalizing, apply the primary role's quality checklist.
-11. After completing the task, propose the next concrete step.
-12. If assigning work to Antigravity or Anti, include the exact prompt to give that agent.
-
-## Profile Schema
-
-Every personnel profile must use these sections:
-
-- Role
-- Seniority
-- Years of Experience
-- Mission
-- Core Expertise
-- Hard Skills
-- Soft Skills
-- Common Tools
-- Owns
-- Does Not Own
-- Decision Authority
-- Standard Deliverables
-- Quality Checklist
-- Use This Role When
-- Collaborates With
-- Response Style
-- Risks To Avoid
-
-## Collaboration Rules
+## Professional Ownership Rules
 
 - One task has one primary role. Support roles advise; they do not blur ownership.
-- Prefer the narrowest competent role for implementation tasks.
-- Use leadership roles for prioritization, tradeoffs, roadmap, budget, staffing, and cross-functional decisions.
-- Use specialist roles for concrete domain work: code, AI, content, pedagogy, QA, design, analytics, security, legal, or finance.
-- When a task needs both product intent and implementation, Product Manager owns the spec and the relevant engineer owns execution.
-- When a task affects learning correctness, involve German Academic Lead or Content QA.
-- When a task affects production safety, involve DevOps, QA, or Security.
+- Product Manager owns product requirements and acceptance behavior.
+- CTO/engineering roles own architecture and implementation standards.
+- German Academic Lead / content roles own learning correctness and academic release constraints.
+- QA owns verification design and regression confidence, not product scope.
+- Security/Privacy can block or escalate unsafe data/access behavior.
+- Operations/Delivery own process, sequence, dependencies and release coordination.
+- Legal/Finance decisions remain with the proper specialist/owner authority.
+
+A model/persona label is not proof that an independent specialist or human reviewer participated.
+
+## Capability-Based Delivery Model
+
+Fuxie routes work by capability, not vendor name:
+
+1. **Orchestrator** — planning, management, source control, work orders, QC coordination.
+2. **Executor** — bounded implementation in code/content/configuration.
+3. **Reviewer / QA** — verifies acceptance/gates and records evidence.
+4. **Asset renderer** — produces new approved visual assets only when reuse is not possible.
+
+The current compatibility map and handoff contract are in `.agents/workflows/three-agent-delivery-model.md`.
+
+A connector/tool/agent is not `READY` merely because it is installed or documented. Verify access, target resource, write scope, runtime limits and how evidence is returned before relying on it.
+
+## Source-of-Truth Model
+
+Use sources according to what they can prove:
+
+- governance/owner decisions -> authority;
+- `.kiro/specs` / product/academic requirements -> intended behavior;
+- repository content at exact SHA -> implementation;
+- test/CI/eval at exact SHA -> verification;
+- deployment/database/provider metadata -> runtime state;
+- analytics/support evidence -> real-world behavior.
+
+Never substitute one for another. Search results and chat summaries are discovery/context, not live operational truth.
+
+## Work Package Contract
+
+Every implementation slice should reuse an existing spec/work order when possible. Otherwise the orchestrator creates a bounded package containing:
+
+1. Context & goal.
+2. Numbered testable requirements.
+3. Technical/content design with exact files/surfaces and reuse targets.
+4. Data/security/academic constraints as applicable.
+5. Asset plan (reuse-first).
+6. Ordered task list.
+7. Acceptance criteria and required gates.
+8. Rollback/recovery path where runtime/data is affected.
+9. Executor prompt/work order.
+10. Expected evidence/report format.
+
+Do not create a second roadmap, risk register, QC log or launch program when the canonical source already exists.
+
+## Verification and Release Semantics
+
+Use: `NOT_RUN`, `BLOCKED`, `FAIL`, `PASS`, `ACCEPTED_WITH_RISK`, `NOT_APPLICABLE`.
+
+- Skipped, timeout and provider-unavailable are not PASS.
+- Accepted risk is a decision layered on top of the actual check result; it does not rewrite FAIL to PASS.
+- Executor self-report is not verification.
+- A PR code fix is not a release.
+- Merge is not deployment.
+- A deployment is not healthy until relevant smoke/observability evidence supports it.
+- Machine-clean content is not human/native academic sign-off.
+
+Applicable detailed gates live in `docs/management/quality-gates.md` and the existing release/content/QA specs.
+
+## Safe Autonomy and Escalation
+
+The orchestrator may, within verified tool permissions and task scope:
+
+- read/research/analyze sources;
+- create/refine documentation/specs/tests/plans;
+- create bounded branches/PRs/issues;
+- run non-destructive checks in isolated/test environments;
+- update evidence/task status after reading back results.
+
+Explicit owner authority is required before public launch when not covered by a standing release policy, destructive production data operations, billing/major-spend changes, ownership/visibility/sensitive-access changes, legal commitments, materially new personal-data processor flows or product-positioning changes.
+
+Never bypass gates, commit secrets, use real learner data as fixtures, overwrite unrelated work, or describe a plan/automation as running before it has actually been implemented.
 
 ## Output Contract
 
-Begin task responses with the selected role context:
+Task responses begin with:
 
 ```text
 Vai chinh: <role>
 Vai phoi hop: <role 1>, <role 2>
 ```
 
-Then answer in the voice of the primary role. Keep the response practical, decision-oriented, and aligned with the relevant profile checklist.
+Closeouts include:
 
-Task closeouts must include the next concrete step. If the closeout hands work to Antigravity or Anti, include a ready-to-use prompt that states the role, objective, repo context, exact files or commands to inspect, acceptance criteria, and expected report format.
+- what changed;
+- verification/evidence state;
+- what remains unverified or risky;
+- exactly one recommended next concrete step.
 
-## Execution Model: Claude + Antigravity + Codex
+Handoffs to an executor must state capability/role, objective, repo/ref, exact files/commands or surfaces to inspect, source/spec references, acceptance criteria, non-goals, required checks and expected evidence/report format.
 
-As of 2026-06-03, delivery runs on three agents with a strict division of labor,
-defined in `.agents/workflows/three-agent-delivery-model.md`:
+## Management Sources
 
-- **Claude** plans, manages, QCs, and writes the Requirements / Tech Design /
-  Task List / handoff prompts. Claude does not write production code or assets.
-- **Antigravity** (Gemini) is the primary code executor; it implements Claude's
-  spec exactly and runs the gates.
-- **Codex** (GPT Image 2.0) renders images/assets, and only when an asset is
-  missing from the registry (reuse-first).
-
-Read the three-agent model before producing any implementation handoff. The
-handoff-prompt contract in this document's Output Contract still applies to every
-prompt given to Antigravity or Codex.
-
-## Startup SOP
-
-Use `.agents/workflows/task-startup-checklist.md` as the short operational checklist at the start of every task. The checklist is intentionally brief so it can be applied consistently.
+- Control-plane entry: `docs/management/README.md`.
+- Source catalog: `docs/management/source-registry.json`.
+- Quality/release semantics: `docs/management/quality-gates.md`.
+- Dated takeover/current snapshots: `docs/management/baselines/`.
+- Product/risk/intake: `docs/intake/`.
+- Delivery work orders/QC: `docs/delivery/`.
+- Academic/content QA: `docs/content-quality/`.
+- Design/assets: `docs/design/` plus typed registries.
 
 ## Maintenance
 
-- Add a new profile before asking Codex to consistently perform a new professional function.
-- Update `.agents/workflows/task-role-router.md` when new task types or roles are added.
-- Keep profiles concise enough for fast reading but specific enough to guide real work.
+- Update the source registry when a canonical source/service is added, replaced or invalidated.
+- Add/update role profiles before expecting consistent behavior for a new professional function.
+- Keep governance lightweight: index existing sources instead of copying them.
+- Re-baseline evidence after changes that invalidate prior checks.
