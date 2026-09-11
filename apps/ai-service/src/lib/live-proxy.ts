@@ -2,7 +2,7 @@ import type { IncomingMessage } from 'node:http'
 import type { Socket } from 'node:net'
 import { createHmac, timingSafeEqual } from 'node:crypto'
 import { WebSocket, WebSocketServer, type RawData } from 'ws'
-import { getGeminiApiKey } from './gemini.js'
+import { getGeminiLiveApiKey } from './env.js'
 import {
     recordLiveProxyAccepted,
     recordLiveProxyClosed,
@@ -71,7 +71,7 @@ function bridgeLiveConnection(client: WebSocket) {
 
     let upstream: WebSocket
     try {
-        const apiKey = getGeminiApiKey()
+        const apiKey = getGeminiLiveApiKey()
         upstream = new WebSocket(`${GEMINI_LIVE_URL}?key=${encodeURIComponent(apiKey)}`)
     } catch (error) {
         recordLiveProxyError('upstream', error instanceof Error ? error.message : 'Gemini Live configuration error')
