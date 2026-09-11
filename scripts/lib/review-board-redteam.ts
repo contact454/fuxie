@@ -21,9 +21,11 @@
  * through an injectable `RedTeamRunner`. This module therefore spends NO real
  * provider credit and is fully testable with the deterministic mock below.
  *
- * Property 2 (Red-team Answer Isolation): the payload AND the rendered prompt
- * string built here must never contain an answer-bearing key NOR the stored
- * answer value. The unit suite asserts both surfaces.
+ * Property 2 (Red-team Answer Isolation): the blind payload/rendered prompt
+ * must never contain answer-bearing keys. A stored-answer value that is absent
+ * from the legitimate blind payload must also never be interpolated elsewhere
+ * into the rendered prompt. Value overlap with stem/options is not itself proof
+ * of a leak because those fields are intentionally visible to the reviewer.
  */
 import {
   type Confidence,
@@ -156,29 +158,29 @@ function stringifyField(value: string): string {
 
 /**
  * Defense-in-depth assertion (Property 2): a built red-team prompt must NOT
- * contain any forbidden answer-bearing key, and — when a stored answer value is
- * known — must NOT contain that value verbatim. Returns the list of leaks found
- * (empty = clean). Pure; callers decide whether to throw.
+ * contain any forbidden answer-bearing key. When a stored answer value is
+ * known, it is only a value-level leak if it is absent from the legitimate
+ * blind payload but appears elsewhere in the rendered prompt. If the same value
+ * already occurs in stem/options, provenance cannot be inferred from equality
+ * and it must not be reported as a leak. Returns the list of leaks found.
  */
 export function findRedTeamLeaks(
   prompt: RedTeamPrompt,
   storedAnswerValue?: unknown,
 ): string[] {
   const leaks: string[] = []
-  const haystack = `${prompt.prompt}\n${JSON.stringify(prompt.payload)}`
+  const payloadSerialized = JSON.stringify(prompt.payload)
+  const haystack = `${prompt.prompt}\n${payloadSerialized}`
   for (const key of FORBIDDEN_REDTEAM_KEYS) {
-    // The prompt legitimately never serialises these object keys.
     if (haystack.includes(`"${key}"`)) leaks.push(`forbidden-key:${key}`)
   }
   if (storedAnswerValue != null) {
     const v = String(storedAnswerValue).trim()
-    // Skip trivial values that could coincide with normal prose / option text.
-    if (v.length >= 3 && JSON.stringify(prompt.payload).includes(v)) {
-      // Only flag if the stored answer value appears in the PAYLOAD surface;
-      // option text legitimately appears in the prompt, but the payload is
-      // stem+options only, so a stored-answer string there is the leak signal.
-      // (We intentionally check the payload, not the rendered options block.)
-      leaks.push('stored-answer-value-in-payload')
+    // Ignore short/common values and any value legitimately supplied through
+    // stem/options. A value absent from the blind payload must never appear in
+    // any other rendered prompt text.
+    if (v.length >= 3 && !payloadSerialized.includes(v) && prompt.prompt.includes(v)) {
+      leaks.push('stored-answer-value-outside-blind-payload')
     }
   }
   return leaks
